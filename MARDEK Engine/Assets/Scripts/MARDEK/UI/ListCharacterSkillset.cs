@@ -10,49 +10,56 @@ namespace MARDEK.UI
 {
     public class ListCharacterSkillset : ListActions
     {
-        [SerializeField] ActionSkillset characterSkillset;
+        Skillset skillsetToShow;
         [SerializeField] TextMeshProUGUI skillsetNameLabel = null;
         [SerializeField] Image skillsetIcon = null; 
+        [SerializeField] List<Skillset> possibleSkillsets;
 
         private void OnEnable()
         {
-               var character = Battle.BattleManager.characterActing;
-               if (character is null)
-               {
-                    Debug.Log("Attempted to list character skill with no character acting");
-                    return;
-               }
-               characterSkillset = character.Profile.ActionSkillset;
-               
-               if (characterSkillset)
-               {
-                    skillsetNameLabel.text = characterSkillset.SkillsetName;
-                    skillsetIcon.sprite = characterSkillset.Sprite;
-               }
-               else
-               {
-                    skillsetNameLabel.text = " - ";
-                    skillsetIcon.sprite = null;
-               }
-          }
+            var character = Battle.BattleManager.characterActing;
+            skillsetToShow = null;
+            foreach (var slot in character.Character.SkillSlots)
+            {
+                foreach (var set in possibleSkillsets)
+                {
+                    if (set.Skills.Contains(slot.Skill))
+                        skillsetToShow = set;
+                }
+                if (skillsetToShow)
+                    break;
+            }
+            if (skillsetToShow)
+            {
+                skillsetNameLabel.text = skillsetToShow.name;
+                skillsetIcon.sprite = skillsetToShow.Sprite;
+            }
+            else
+            {
+                skillsetNameLabel.text = " - ";
+                skillsetIcon.sprite = null;
+            }
+        }
 
         public void SetSlots()
         {
-               ClearSlots();
-               if (!characterSkillset)
-                    return;
-
-               ListSkills();               
-               UpdateLayout();
+            ClearSlots();
+            if (skillsetToShow)
+            {
+                var character = Battle.BattleManager.characterActing;
+                foreach (var skill in skillsetToShow.Skills)
+                {
+                    foreach (var skillSlot in character.Character.SkillSlots)
+                    {
+                        if (skill == skillSlot.Skill)
+                        {
+                            SetNextSlot(skillSlot);
+                            break;
+                        }
+                    }
+                }
+            }
+            UpdateLayout();
         }
-        void ListSkills()
-        {
-               foreach (var skill in characterSkillset.Skills)
-               {
-                    SkillSlot slot = new SkillSlot();
-                    slot.Skill = skill;
-                    SetNextSlot(slot);
-               }
-          }
     }
 }

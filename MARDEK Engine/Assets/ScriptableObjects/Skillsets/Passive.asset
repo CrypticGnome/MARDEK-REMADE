@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5f9b78a1b11dfe4e8985855911c0551, type: 3}
-  m_Name: Dragon Lair Dragon
+  m_Script: {fileID: 11500000, guid: 198ceacb83c8ca54ca4170700dcafc35, type: 3}
+  m_Name: Passive
   m_EditorClassIdentifier: 
-  <Description>k__BackingField: 
-  <Sprite>k__BackingField: {fileID: 0}
+  <Description>k__BackingField: Passive Skills
+  <Sprite>k__BackingField: {fileID: 3286163911610860551, guid: 1c51b87ee537f6f4aa4886e17151c8be, type: 3}
   <Skills>k__BackingField:
-  - {fileID: 11400000, guid: b71d26a843935224cbb9bd96661a0a90, type: 2}
-  <SkillsetName>k__BackingField: 
+  - {fileID: 11400000, guid: 26bcfdc1d48632a42b14c402e9957b5b, type: 2}

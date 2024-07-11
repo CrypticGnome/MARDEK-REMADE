@@ -4,27 +4,25 @@ using UnityEngine.UI;
 using MARDEK.CharacterSystem;
 using MARDEK.Skill;
 using MARDEK.Stats;
-using System;
 
 namespace MARDEK.UI
 {
     public class SkillsCategorySelect : Selectable
     {
+        [SerializeField] Skillset category;
         [SerializeField] Image categoryIcon;
         [SerializeField] GridLayoutGroup skillEntriesLayout;
         [SerializeField] GameObject skillEntryPrefab;
         [SerializeField] Text skillCategoryLabel;
         [SerializeField] Text skillCategoryName;
         [SerializeField] Text skillSetDescription;
-
-        Type skillType;
+        Skillset lastCategory = null;
 
         private void Update()
         {
             CheckCategoryUpdate();
         }
 
-        // Not working properly, return to this when relevant.
         void CheckCategoryUpdate()
         {
             var character = CharacterSelectable.currentSelected.Character;
@@ -32,20 +30,20 @@ namespace MARDEK.UI
             {
                 return;
             }
-               CharacterProfile profile = character.Profile;
 
-               // This currently only displays the action skills, will need to fix this in the future.
-               if (skillType == null)
-                    skillType = profile.ActionSkillset.GetType();
-
-               if (skillType == typeof(ActionSkill))
-                    UpdateCategory(profile.ActionSkillset.Sprite, profile.ActionSkillset.Description);
-            
+            var categoryToUse = category;
+            if (categoryToUse == null)
+                categoryToUse = character.Profile.ActionSkillset;
+            if (categoryToUse != lastCategory)
+            {
+                UpdateCategory(categoryToUse);
+                lastCategory = categoryToUse;
+            }
         }
 
-        void UpdateCategory(Sprite icon, string description)
+        void UpdateCategory(Skillset category)
         {
-               categoryIcon.sprite = icon;
+            categoryIcon.sprite = category.Sprite;
         }
 
         public override void Select(bool playSFX = true)
@@ -53,11 +51,11 @@ namespace MARDEK.UI
             base.Select(playSFX);
             skillCategoryLabel.text = gameObject.name;
         }
-        // Not currently needed, gonna ignore for now. Pretty easy to implement back in I just dont want to rn.
-        //void UpdateCategoryInfo()
-        //{
-        //    skillCategoryName.text = lastCategory?.name;
-        //    skillSetDescription.text = lastCategory?.Description;
-        //}
+
+        void UpdateCategoryInfo()
+        {
+            skillCategoryName.text = lastCategory?.name;
+            skillSetDescription.text = lastCategory?.Description;
+        }
     }
 }
