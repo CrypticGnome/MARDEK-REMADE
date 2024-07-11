@@ -13,7 +13,6 @@ namespace MARDEK.CharacterSystem
         [field: SerializeField] public CharacterProfile Profile { get; private set; }
         [field: SerializeField] public Inventory EquippedItems { get; private set; } = new Inventory();
         [field: SerializeField] public Inventory Inventory { get; private set; } = new Inventory();
-        [field: SerializeField] public List<SkillSlot> SkillSlots { get; private set; } = new List<SkillSlot>();
         [Header("Stats")]
         [SerializeField] StatsSet volatileStats = new StatsSet(true);
 

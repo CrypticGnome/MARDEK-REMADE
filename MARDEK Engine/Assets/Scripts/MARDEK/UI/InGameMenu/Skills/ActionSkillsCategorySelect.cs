@@ -7,16 +7,16 @@ using MARDEK.Stats;
 
 namespace MARDEK.UI
 {
-    public class SkillsCategorySelect : Selectable
+    public class ActionSkillsCategorySelect : Selectable
     {
-        [SerializeField] Skillset category;
+        [SerializeField] ActionSkillset category;
         [SerializeField] Image categoryIcon;
         [SerializeField] GridLayoutGroup skillEntriesLayout;
         [SerializeField] GameObject skillEntryPrefab;
         [SerializeField] Text skillCategoryLabel;
         [SerializeField] Text skillCategoryName;
         [SerializeField] Text skillSetDescription;
-        Skillset lastCategory = null;
+          ActionSkillset lastCategory = null;
 
         private void Update()
         {
@@ -41,7 +41,7 @@ namespace MARDEK.UI
             }
         }
 
-        void UpdateCategory(Skillset category)
+        void UpdateCategory(ActionSkillset category)
         {
             categoryIcon.sprite = category.Sprite;
         }
