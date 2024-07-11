@@ -41,7 +41,7 @@ namespace MARDEK.Inventory
             }
             var statATK = new StatHolder(stat);
             statATK.Value = value;
-            item.statBoosts.intStats.Add(statATK);
+            //item.statBoosts.intStats.Add(statATK);
         }
         [ContextMenu("Deserialize")]
         void setIntStatExp(int value, IntegerStat stat, ExpendableItem item)
@@ -52,7 +52,7 @@ namespace MARDEK.Inventory
             }
             var statATK = new StatHolder(stat);
             statATK.Value = value;
-            item.statsSet.intStats.Add(statATK);
+            //item.statsSet.intStats.Add(statATK);
         }
 
         void DeserializeItems()

@@ -18,18 +18,8 @@ MonoBehaviour:
   <portrait>k__BackingField: {fileID: 11400000, guid: 3352fe56a7f1ff54f8a6c2ff8c4680db, type: 2}
   <WalkSprites>k__BackingField: {fileID: 11400000, guid: a021fb592bdaa2c4a9a3a368a58456ae, type: 2}
   <BattleModelPrefab>k__BackingField: {fileID: 6298310975210123530, guid: 4f019a7cdf452bd4299de7b40cecc970, type: 3}
-  <ActionSkillset>k__BackingField: {fileID: 11400000, guid: 97d3ee5c53530fc4082df7991eda06e4, type: 2}
-  <StartingStats>k__BackingField:
-    intStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: d4f1cafaf7b523f429957c26727de920, type: 2}
-      _value: 50
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: b126ec105431be84db0d5e0d2a1d55cc, type: 2}
-      _value: 16
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 7179e0b7f3f17f44bbe9be5b7802b8db, type: 2}
-      _value: 16
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 6194235459af05c4c9cbd04f733ace49, type: 2}
-      _value: 12
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 608b897aad047cc4fa85eaa65f2cc2ec, type: 2}
-      _value: 15
+  <ActionSkillset>k__BackingField: {fileID: 11400000, guid: 6314eeac06ade6349896d9a2a1d3a606, type: 2}
+  <ReactionSkillset>k__BackingField: {fileID: 11400000, guid: 5f5a6daef41172049ad0d64cfa2ccafe, type: 2}
+  <PassiveSkillset>k__BackingField: {fileID: 11400000, guid: 08c05ec9b4d641641bb5a3f66eafc90c, type: 2}
   MaxHPExpressionOveride: {fileID: 0}
   MaxMPExpressionOveride: {fileID: 0}

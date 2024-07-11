@@ -12,7 +12,7 @@ namespace MARDEK.UI
         private void OnEnable()
         {
             characterName.text = BattleUIManager.Instance.characterBeingInspected.Profile.displayName;
-            var level = BattleUIManager.Instance.characterBeingInspected.GetStat(Stats.StatsGlobals.Instance.Level);
+            var level = BattleUIManager.Instance.characterBeingInspected.Stats.CurrentLevel;
             characterLevel.text = $"Level {level}";
         }
     }

@@ -5,16 +5,16 @@ namespace MARDEK.CharacterSystem
 {
     using Core;
     using Inventory;
-    using Stats;
-    [System.Serializable]
-    public class Character : IStats, IActor
+     using log4net.Core;
+     using Stats;
+     [System.Serializable]
+    public class Character : IActor
     {
         [SerializeField] public bool isRequired;
         [field: SerializeField] public CharacterProfile Profile { get; private set; }
         [field: SerializeField] public Inventory EquippedItems { get; private set; } = new Inventory();
         [field: SerializeField] public Inventory Inventory { get; private set; } = new Inventory();
         [Header("Stats")]
-        [SerializeField] StatsSet volatileStats = new StatsSet(true);
 
         [SerializeField] int _level = 1;
         [SerializeField] int _exp = 0;
@@ -29,21 +29,22 @@ namespace MARDEK.CharacterSystem
                 _exp = value;
             }
         }
-
+        public StatsClass Stats { get { return Profile.Stats; } }
         [SerializeField] int _currentHP = -1;
+
         int CurrentHP
         {
             get
             {
-                var maxHP = GetStat(StatsGlobals.Instance.MaxHP);
-                if (_currentHP == -1 || _currentHP > maxHP)
+                if (_currentHP == -1 || _currentHP > MaxHP)
                 {
-                    _currentHP = maxHP;
+                    _currentHP = MaxHP;
                 }
                 return _currentHP;
             }
             set
             {
+               Stats.CurrentHP = value;
                 _currentHP = value;
             }
         }
@@ -51,7 +52,9 @@ namespace MARDEK.CharacterSystem
         {
             get
             {
-                return (int)Profile.MaxHPExpression.Evaluate(this, null);
+                    int VIT = Stats.Vitality;
+                    int LVL = Stats.CurrentLevel;
+                    return (3 * VIT) + (2 * VIT * LVL);
             }
         }
         
@@ -60,13 +63,13 @@ namespace MARDEK.CharacterSystem
         {
             get
             {
-                var maxMP = GetStat(StatsGlobals.Instance.MaxMP);
-                if (_currentMP == -1 || _currentMP > maxMP)
-                    _currentMP = maxMP;
+                if (_currentMP == -1 || _currentMP > MaxMP)
+                    _currentMP = MaxMP;
                 return _currentMP;
             }
             set
             {
+                    Stats.CurrentMP = value;
                 _currentMP = value;
             }
         }
@@ -74,7 +77,9 @@ namespace MARDEK.CharacterSystem
         {
             get
             {
-                return (int)Profile.MaxMPExpression.Evaluate(this, null);
+                    int SPR = Stats.Spirit;
+                    int LVL = Stats.CurrentLevel;
+                    return SPR * (17 + LVL) / 6;
             }
         }
 
@@ -82,50 +87,13 @@ namespace MARDEK.CharacterSystem
         {
             var clone = new Character();
             clone.Profile = Profile;
-            clone.ModifyStat(StatsGlobals.Instance.Level, level);
+            clone.Stats.CurrentLevel = level;
             return clone;
         }
 
         public int GetStat(IntegerStat desiredStat)
         {
-            if (desiredStat == StatsGlobals.Instance.Level)
-                return _level;
-            if (desiredStat == StatsGlobals.Instance.Experience)
-                return Exp;
-            if (desiredStat == StatsGlobals.Instance.CurrentHP)
-                return CurrentHP;
-            if (desiredStat == StatsGlobals.Instance.CurrentMP)
-                return CurrentMP;
-
-            var resultHolder = new StatHolder(desiredStat);
-            if (desiredStat == StatsGlobals.Instance.MaxHP)
-                resultHolder.Value = MaxHP;
-            if (desiredStat == StatsGlobals.Instance.MaxMP)
-                resultHolder.Value = MaxMP;
-
-            resultHolder.Value += Profile.StartingStats.GetStat(desiredStat);
-            resultHolder.Value += volatileStats.GetStat(desiredStat);
-            foreach(var slot in EquippedItems.Slots)
-            {
-                var equippableItem = slot.item as EquippableItem;
-                if(equippableItem != null)
-                    resultHolder.Value += equippableItem.statBoosts.GetStat(desiredStat);
-            }
-            return resultHolder.Value;
-        }
-        public void ModifyStat(IntegerStat stat, int delta)
-        {
-            //Debug.Log($"Modify stat {stat.name} by {delta}");
-            if (stat == StatsGlobals.Instance.Level)
-                _level += delta;
-            else if (stat == StatsGlobals.Instance.Experience)
-                Exp += delta;
-            else if (stat == StatsGlobals.Instance.CurrentHP)
-                CurrentHP += delta;
-            else if (stat == StatsGlobals.Instance.CurrentMP)
-                CurrentMP += delta;
-            else
-                volatileStats.ModifyStat(stat, delta);
+           return 0;
         }
     }
 }

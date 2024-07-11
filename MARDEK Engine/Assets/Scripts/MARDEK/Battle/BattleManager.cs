@@ -61,33 +61,34 @@ namespace MARDEK.Battle
                 {
                     characterActionUI.SetActive(true);
                 }
+                    return;
             }
-            else
+            
+            
+            if (selectedAction != null)
             {
-                if (selectedAction != null)
-                {
-                    // pick random target for now
-                    BattleCharacter target;
-                    if (EnemyBattleParty.Contains(characterActing))
-                        target = PlayerBattleParty[Random.Range(0, PlayerBattleParty.Count-1)];
-                    else
-                        target = EnemyBattleParty[Random.Range(0, EnemyBattleParty.Count-1)];
+                // pick random target for now
+                BattleCharacter target;
+                if (EnemyBattleParty.Contains(characterActing))
+                    target = PlayerBattleParty[Random.Range(0, PlayerBattleParty.Count-1)];
+                else
+                    target = EnemyBattleParty[Random.Range(0, EnemyBattleParty.Count-1)];
 
-                    Debug.Log($"{characterActing.Name} targets {target.Name}");
-                    selectedAction.ApplyAction(characterActing, target);
-                    selectedAction = null;
-                    characterActing = null;
-                    characterActionUI.SetActive(false);
-                }
+                Debug.Log($"{characterActing.Name} targets {target.Name}");
+                selectedAction.ApplyAction(characterActing, target);
+                selectedAction = null;
+                characterActing = null;
+                characterActionUI.SetActive(false);
             }
+            
         }
         BattleCharacter StepActCycleTryGetNextCharacter()
         {
             var charactersInBattle = GetCharactersInOrder();
             AddTickRateToACT(ref charactersInBattle, Time.deltaTime);
             var readyToAct = GetNextCharacterReadyToAct(charactersInBattle);
-            if (readyToAct != null)
-                readyToAct.ModifyStat(ACTStat, -(int)actResolution); // "reset" charact ACT
+               if (readyToAct != null)
+                    readyToAct.Character.Profile.Stats.ACT -= actResolution;
             return readyToAct;
         }
         List<BattleCharacter> GetCharactersInOrder()
@@ -108,9 +109,10 @@ namespace MARDEK.Battle
         {
             foreach(var c in characters)
             {
-                var tickRate = 1 + 0.05f * c.GetStat(AGLStat);
+                    StatsClass stats = c.Character.Profile.Stats;
+                var tickRate = 1 + 0.05f * stats.Agility;
                 tickRate *= 1000 * deltatime;
-                c.ModifyStat(ACTStat, (int)tickRate);
+               stats.ACT += (int)tickRate;
             }
         }
         BattleCharacter GetNextCharacterReadyToAct(List<BattleCharacter> characters)
@@ -118,14 +120,14 @@ namespace MARDEK.Battle
             float maxAct = 0;
             foreach(var c in characters)
             {
-                var act = c.GetStat(ACTStat);
+                var act = c.Stats.ACT;
                 if (act > maxAct)
                     maxAct = act;
             }
             if (maxAct < actResolution)
                 return null;
             foreach (var c in characters)
-                if (c.GetStat(ACTStat) == maxAct)
+                if (c.Stats.ACT == maxAct)
                     return c;
             throw new System.Exception("A character had enough ACT to take a turn but wasn't returned by this method");
         }
@@ -140,7 +142,7 @@ namespace MARDEK.Battle
             for (int i = EnemyBattleParty.Count - 1; i >= 0; i--)
             {
                 var enemy = EnemyBattleParty[i];
-                var health = enemy.GetStat(StatsGlobals.Instance.CurrentHP);
+                var health = enemy.Stats.CurrentHP;
                 if (health <= 0)
                     EnemyBattleParty.Remove(enemy);
             }

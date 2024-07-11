@@ -18,7 +18,7 @@ namespace MARDEK.Inventory
         [SerializeField] bool _canResurrect;
         [SerializeField] bool _canPotionSpray;
         [SerializeField] bool _grantUnderwaterBreathing;
-        [SerializeField] StatsSet _statsSet;
+        //[SerializeField] StatsC _statsSet;
 
         // TODO Giving and curing status effects
         public int percentHealthRestore { get { return _percentHealthRestore; } }
@@ -33,10 +33,10 @@ namespace MARDEK.Inventory
         public bool canResurrect { get { return _canResurrect; } }
         public bool canPotionSpray { get { return _canPotionSpray; } }
         public bool grantUnderwaterBreathing { get { return _grantUnderwaterBreathing; } }
-        public StatsSet statsSet { get { return _statsSet; } private set{_statsSet = value;} }
-
+       // public StatsSet statsSet { get { return _statsSet; } private set{_statsSet = value;} }
+          
         public ExpendableItem(){
-            statsSet = new StatsSet();
+            //statsSet = new StatsSet();
         }
 
         override public Color GetInventorySpaceColor()

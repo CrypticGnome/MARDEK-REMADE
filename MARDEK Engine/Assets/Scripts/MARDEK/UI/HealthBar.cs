@@ -5,7 +5,7 @@ using MARDEK.Stats;
 
 namespace MARDEK.UI
 {
-    public class UIStatBar : MonoBehaviour
+    public class HealthBar : MonoBehaviour
     {
         [SerializeField] CharacterUI characterUI = null;
         [SerializeField] IntegerStat stat;
@@ -30,8 +30,8 @@ namespace MARDEK.UI
             if (characterUI.character == null)
                 return;
 
-            var statValue = (float)characterUI.character.GetStat(stat);
-            var maxStatValue = (float)characterUI.character.GetStat(maxStat);
+            var statValue = (float)characterUI.character.Stats.CurrentHP;
+            var maxStatValue = (float)characterUI.character.Stats.MaxHP;
             if (statText)
                 statText.text = statValue.ToString();
             if (maxStatText) 
