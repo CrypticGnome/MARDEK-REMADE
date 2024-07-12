@@ -76,7 +76,7 @@ namespace MARDEK.Battle
                    target = EnemyBattleParty[Random.Range(0, EnemyBattleParty.Count-1)];
 
                Debug.Log($"{characterActing.Name} targets {target.Name}");
-               selectedAction.ApplyAction(characterActing, target);
+               selectedAction.ApplyAction(characterActing.Character, target.Character);
                selectedAction = null;
                characterActing = null;
                characterActionUI.SetActive(false);

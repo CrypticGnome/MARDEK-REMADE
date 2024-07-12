@@ -17,16 +17,13 @@ namespace MARDEK.Skill
                            Debug.LogAssertion(effectType + " does not have an implemented effect");
                            break;
                       case EffectType.DealDamage:
-                         throw new NotImplementedException();
-                         break;
-                           
+                         throw new NotImplementedException(); 
                  }
           }
           public enum EffectType
           {
                  DealDamage,
                  Heal,
-
           }
      }
 }

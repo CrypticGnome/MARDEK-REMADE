@@ -4,7 +4,9 @@ using System.Collections.Generic;
 namespace MARDEK.Inventory
 {
     using Core;
-    [System.Serializable]
+     using MARDEK.CharacterSystem;
+
+     [System.Serializable]
     public class Slot : IActionSlot
     {
         public Item currentItem;
@@ -101,7 +103,7 @@ namespace MARDEK.Inventory
             return takenItem;
         }
 
-        public void ApplyAction(IActor user, IActor target)
+        public void ApplyAction(Character user, Character target)
         {
             throw new System.NotImplementedException();
         }

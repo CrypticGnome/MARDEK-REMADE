@@ -50,6 +50,7 @@ namespace MARDEK.Stats
      {
           public int Fire, Earth, Water, Air, Light, Dark, Aether, Fig, Physical, Thauma;
      }
+     [Serializable]
      public class CoreStats
      {
           public int Strength, Vitality, Spirit, Agility;

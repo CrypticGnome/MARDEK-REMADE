@@ -22,12 +22,26 @@ namespace MARDEK.CharacterSystem
                     for (int itemIndex = 0; itemIndex < EquippedItems.Slots.Count; itemIndex++)
                     {
                          EquippableItem item = EquippedItems.Slots[itemIndex].item as EquippableItem;
+                         if (item is null)
+                              continue;
                          attack += item.Stats.Attack;
                     }
                     return attack;
                }
         }
-         
+          public int Defense
+          {
+               get
+               {
+                    int defense = 0;
+                    for (int itemIndex = 0; itemIndex < EquippedItems.Slots.Count; itemIndex++)
+                    {
+                         EquippableItem item = EquippedItems.Slots[itemIndex].item as EquippableItem;
+                         defense += item.Stats.Defense;
+                    }
+                    return defense;
+               }
+          }
 
           public Character Clone(int level)
         {

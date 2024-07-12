@@ -6,7 +6,9 @@ using MARDEK.Stats;
 namespace MARDEK.Skill
 {
     using Core;
-    public abstract class Skill : AddressableScriptableObject
+     using MARDEK.CharacterSystem;
+
+     public abstract class Skill : AddressableScriptableObject
     {
         [field: SerializeField] public string DisplayName { get; private set; }
         [field: SerializeField] public string Description { get; private set; }
@@ -14,6 +16,6 @@ namespace MARDEK.Skill
         [field: SerializeField] public int PointsRequiredToMaster { get; private set; }
         [field: SerializeField] public Element Element { get; private set; }
 
-        public abstract void Apply(IActor user, IActor target);
+        public abstract void Apply(Character user, Character target);
     }
 }
