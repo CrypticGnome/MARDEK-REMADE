@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f130efc2865500b45b296bb5f69404d6, type: 3}
   m_Name: Monster Max HP
   m_EditorClassIdentifier: 
-  calculatorType: 0
+  calculatorType: 1

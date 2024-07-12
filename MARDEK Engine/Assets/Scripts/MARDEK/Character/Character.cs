@@ -1,11 +1,9 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 namespace MARDEK.CharacterSystem
 {
     using Core;
     using Inventory;
-     using log4net.Core;
      using Stats;
      [System.Serializable]
     public class Character : IActor, IStats

@@ -21,5 +21,20 @@ MonoBehaviour:
   <ActionSkillset>k__BackingField: {fileID: 11400000, guid: 6314eeac06ade6349896d9a2a1d3a606, type: 2}
   <ReactionSkillset>k__BackingField: {fileID: 11400000, guid: 5f5a6daef41172049ad0d64cfa2ccafe, type: 2}
   <PassiveSkillset>k__BackingField: {fileID: 11400000, guid: 08c05ec9b4d641641bb5a3f66eafc90c, type: 2}
-  MaxHPExpressionOveride: {fileID: 0}
-  MaxMPExpressionOveride: {fileID: 0}
+  <Stats>k__BackingField:
+    Level: 50
+    Experience: 0
+    Absorbtions:
+      Fire: 0
+      Earth: 0
+      Water: 0
+      Air: 0
+      Light: 0
+      Dark: 0
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+    ACT: 388
+    MaxHP: {fileID: 11400000, guid: 689fb7d58c51ad8419744587e211860e, type: 2}
+    MaxMP: {fileID: 11400000, guid: b430bbf3c625229499a5257b4b7dcb62, type: 2}

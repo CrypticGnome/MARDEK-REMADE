@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using MARDEK.Core;
 using MARDEK.Stats;
-using MARDEK.Skill;
 
 namespace MARDEK.Inventory
 {
@@ -30,7 +29,7 @@ namespace MARDEK.Inventory
         public int price { get { return _price; } }
         public string properties { get { return CreateProperties(); } }
 
-        [field: SerializeField] public List<Skill.Skill> SkillsToEquip { get; private set; }
+        //[field: SerializeField] public List<Skill.Skill> SkillsToEquip { get; private set; }
 
         public virtual bool CanStack()
         {
