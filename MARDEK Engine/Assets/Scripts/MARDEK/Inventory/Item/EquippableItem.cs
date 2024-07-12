@@ -1,6 +1,7 @@
 using UnityEngine;
 using MARDEK.Stats;
 using System.Collections.Generic;
+using System;
 //using MARDEK.CharacterSystem;
 
 namespace MARDEK.Inventory
@@ -60,7 +61,7 @@ namespace MARDEK.Inventory
         {
             return category.color.ToColor();
         }
-
+        [Serializable]
         public class ItemStats
         {
                public int Attack, Defense, MagicDefense;
