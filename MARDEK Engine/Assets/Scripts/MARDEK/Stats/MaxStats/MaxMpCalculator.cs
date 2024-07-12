@@ -6,12 +6,12 @@ namespace MARDEK.Stats
      public class MaxMpCalculator : ScriptableObject
      {
           [SerializeField] CalculatorType calculatorType;
-          public int GetMaxMP(StatsClass stats)
+          public int GetMaxMP(CharacterStats stats)
           {
                switch (calculatorType)
                {
                     default:
-                         return stats.Spirit * (17 + stats.Level)/6;
+                         return stats.CoreStats.Spirit * (17 + stats.Level)/6;
                }
           }
 

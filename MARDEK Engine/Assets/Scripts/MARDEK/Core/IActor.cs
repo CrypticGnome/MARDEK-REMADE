@@ -6,6 +6,5 @@ namespace MARDEK.Core
 {
     public interface IActor
     {
-
     }
 }

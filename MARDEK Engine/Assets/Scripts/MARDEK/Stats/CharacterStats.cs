@@ -1,11 +1,13 @@
 using System;
+using UnityEngine.TextCore.Text;
 
 namespace MARDEK.Stats
 {
+
      [Serializable]
-     public class StatsClass
+     public class CharacterStats
      {
-          public int Vitality, Strength, Spirit, Agility;
+          public CoreStats CoreStats;
           public int Level, Experience;
           public Absorbtions Absorbtions;
           public float ACT;
@@ -47,6 +49,10 @@ namespace MARDEK.Stats
      public class Absorbtions
      {
           public int Fire, Earth, Water, Air, Light, Dark, Aether, Fig, Physical, Thauma;
+     }
+     public class CoreStats
+     {
+          public int Strength, Vitality, Spirit, Agility;
      }
 }
 

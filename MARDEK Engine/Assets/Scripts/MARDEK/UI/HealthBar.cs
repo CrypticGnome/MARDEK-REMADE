@@ -29,7 +29,7 @@ namespace MARDEK.UI
         {
             if (characterUI.character == null)
                 return;
-           StatsClass stats = characterUI.character.Stats;
+           CharacterStats stats = characterUI.character.Stats;
            var statValue = (float)stats.CurrentHP;
             var maxStatValue = (float)stats.MaxHP.GetMaxHP(stats);
             if (statText)

@@ -63,23 +63,24 @@ namespace MARDEK.Battle
                 }
                     return;
             }
-            
-            
-            if (selectedAction != null)
-            {
-                // pick random target for now
-                BattleCharacter target;
-                if (EnemyBattleParty.Contains(characterActing))
-                    target = PlayerBattleParty[Random.Range(0, PlayerBattleParty.Count-1)];
-                else
-                    target = EnemyBattleParty[Random.Range(0, EnemyBattleParty.Count-1)];
 
-                Debug.Log($"{characterActing.Name} targets {target.Name}");
-                selectedAction.ApplyAction(characterActing, target);
-                selectedAction = null;
-                characterActing = null;
-                characterActionUI.SetActive(false);
-            }
+
+               if (selectedAction is null)
+                    return;
+               
+               // pick random target for now
+               BattleCharacter target;
+               if (EnemyBattleParty.Contains(characterActing))
+                   target = PlayerBattleParty[Random.Range(0, PlayerBattleParty.Count-1)];
+               else
+                   target = EnemyBattleParty[Random.Range(0, EnemyBattleParty.Count-1)];
+
+               Debug.Log($"{characterActing.Name} targets {target.Name}");
+               selectedAction.ApplyAction(characterActing, target);
+               selectedAction = null;
+               characterActing = null;
+               characterActionUI.SetActive(false);
+               
             
         }
         BattleCharacter StepActCycleTryGetNextCharacter()
@@ -109,8 +110,8 @@ namespace MARDEK.Battle
         {
             foreach(var c in characters)
             {
-                    StatsClass stats = c.Character.Profile.Stats;
-                var tickRate = 1 + 0.05f * stats.Agility;
+                    CharacterStats stats = c.Character.Profile.Stats;
+                var tickRate = 1 + 0.05f * stats.CoreStats.Agility;
                 tickRate *= 1000 * deltatime;
                stats.ACT += (int)tickRate;
             }

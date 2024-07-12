@@ -1,7 +1,6 @@
 using UnityEngine;
 using MARDEK.Stats;
 using System.Collections.Generic;
-using MARDEK.Stats;
 //using MARDEK.CharacterSystem;
 
 namespace MARDEK.Inventory
@@ -10,8 +9,8 @@ namespace MARDEK.Inventory
     public class EquippableItem : Item
     {
         [SerializeField] EquipmentCategory _category;
-       // [SerializeField] StatsSet _statsSet;
-        
+        [SerializeField] ItemStats statBoosts;
+        public ItemStats Stats { get { return statBoosts; } }
         // TODO Skills
         // TODO Status effects
 
@@ -47,10 +46,9 @@ namespace MARDEK.Inventory
 
         public EquipmentCategory category { get { return _category; } set{_category=value;} }
 
-        //public StatsSet statBoosts { get { return _statsSet; } private set{_statsSet = value;} }
         
-        public EquippableItem(){
-            //statBoosts = new StatsSet();
+        public EquippableItem()
+        {
         }
 
         public override bool CanStack()
@@ -61,6 +59,13 @@ namespace MARDEK.Inventory
         override public Color GetInventorySpaceColor()
         {
             return category.color.ToColor();
+        }
+
+        public class ItemStats
+        {
+               public int Attack, Defense, MagicDefense;
+               public Absorbtions Absorbtions;
+               public CoreStats CoreStats;
         }
     }
 }

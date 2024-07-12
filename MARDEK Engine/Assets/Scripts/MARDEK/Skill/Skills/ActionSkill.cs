@@ -12,8 +12,8 @@ namespace MARDEK.Skill
 
         public override void Apply(IActor user, IActor target)
         {
-            foreach (var effect in effects)
-                effect.Apply(user, target);
+            //foreach (var effect in effects)
+            //    effect.Apply(user, target);
         }
     }
 }

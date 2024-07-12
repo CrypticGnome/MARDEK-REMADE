@@ -8,82 +8,34 @@ namespace MARDEK.CharacterSystem
      using log4net.Core;
      using Stats;
      [System.Serializable]
-    public class Character : IActor
+    public class Character : IActor, IStats
     {
         [SerializeField] public bool isRequired;
         [field: SerializeField] public CharacterProfile Profile { get; private set; }
         [field: SerializeField] public Inventory EquippedItems { get; private set; } = new Inventory();
         [field: SerializeField] public Inventory Inventory { get; private set; } = new Inventory();
-        [Header("Stats")]
+        public CharacterStats BaseStats { get { return Profile.Stats;} set { Profile.Stats = value; } }
 
-        [SerializeField] int _level = 1;
-        [SerializeField] int _exp = 0;
-        int Exp
+        public int Attack 
         {
-            get
-            {
-                return _exp;
-            }
-            set
-            {
-                _exp = value;
-            }
+               get 
+               {
+                    int attack = 0;
+                    for (int itemIndex = 0; itemIndex < EquippedItems.Slots.Count; itemIndex++)
+                    {
+                         EquippableItem item = EquippedItems.Slots[itemIndex].item as EquippableItem;
+                         attack += item.Stats.Attack;
+                    }
+                    return attack;
+               }
         }
-        public StatsClass Stats { get { return Profile.Stats; } }
-        [SerializeField] int _currentHP = -1;
+         
 
-        int CurrentHP
-        {
-            get
-            {
-                if (_currentHP == -1 || _currentHP > MaxHP)
-                {
-                    _currentHP = MaxHP;
-                }
-                return _currentHP;
-            }
-            set
-            {
-               Stats.CurrentHP = value;
-                _currentHP = value;
-            }
-        }
-        int MaxHP
-        {
-            get
-            {
-                    return Stats.MaxHP.GetMaxHP(Stats);
-            }
-        }
-        
-        [SerializeField] int _currentMP = -1;
-        int CurrentMP
-        {
-            get
-            {
-                if (_currentMP == -1 || _currentMP > MaxMP)
-                    _currentMP = MaxMP;
-                return _currentMP;
-            }
-            set
-            {
-                    Stats.CurrentMP = value;
-                _currentMP = value;
-            }
-        }
-        int MaxMP
-        {
-            get
-            {
-                    return Stats.MaxMP.GetMaxMP(Stats);
-            }
-        }
-
-        public Character Clone(int level)
+          public Character Clone(int level)
         {
             var clone = new Character();
             clone.Profile = Profile;
-            clone.Stats.Level = level;
+            clone.BaseStats.Level = level;
             return clone;
         }
 
