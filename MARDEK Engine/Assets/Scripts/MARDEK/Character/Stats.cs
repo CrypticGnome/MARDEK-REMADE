@@ -18,3 +18,4 @@ namespace MARDEK.Stats
           public int Fire, Earth, Water, Air, Light, Dark, Aether, Fig, Physical, Thauma;
      }
 }
+
