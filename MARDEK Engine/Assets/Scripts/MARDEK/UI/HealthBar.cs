@@ -29,9 +29,9 @@ namespace MARDEK.UI
         {
             if (characterUI.character == null)
                 return;
-
-            var statValue = (float)characterUI.character.Stats.CurrentHP;
-            var maxStatValue = (float)characterUI.character.Stats.MaxHP;
+           StatsClass stats = characterUI.character.Stats;
+           var statValue = (float)stats.CurrentHP;
+            var maxStatValue = (float)stats.MaxHP.GetMaxHP(stats);
             if (statText)
                 statText.text = statValue.ToString();
             if (maxStatText) 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using MARDEK.Stats;
 using System.Collections.Generic;
+using MARDEK.Stats;
 //using MARDEK.CharacterSystem;
 
 namespace MARDEK.Inventory

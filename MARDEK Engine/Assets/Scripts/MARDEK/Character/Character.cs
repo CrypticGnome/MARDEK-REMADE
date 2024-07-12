@@ -52,9 +52,7 @@ namespace MARDEK.CharacterSystem
         {
             get
             {
-                    int VIT = Stats.Vitality;
-                    int LVL = Stats.CurrentLevel;
-                    return (3 * VIT) + (2 * VIT * LVL);
+                    return Stats.MaxHP.GetMaxHP(Stats);
             }
         }
         
@@ -77,9 +75,7 @@ namespace MARDEK.CharacterSystem
         {
             get
             {
-                    int SPR = Stats.Spirit;
-                    int LVL = Stats.CurrentLevel;
-                    return SPR * (17 + LVL) / 6;
+                    return Stats.MaxMP.GetMaxMP(Stats);
             }
         }
 
@@ -87,7 +83,7 @@ namespace MARDEK.CharacterSystem
         {
             var clone = new Character();
             clone.Profile = Profile;
-            clone.Stats.CurrentLevel = level;
+            clone.Stats.Level = level;
             return clone;
         }
 
