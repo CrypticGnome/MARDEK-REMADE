@@ -1,132 +1,149 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 namespace MARDEK.CharacterSystem
 {
     using Core;
     using Inventory;
-    using Stats;
-    [System.Serializable]
-    public class Character : IStats, IActor
+     using Stats;
+     using System;
+     using System.Collections;
+     using System.Threading;
+
+     [CreateAssetMenu(menuName = "MARDEK/Character/Character")]
+     public class Character : ScriptableObject, IActionStats
     {
-        [SerializeField] public bool isRequired;
-        [field: SerializeField] public CharacterProfile Profile { get; private set; }
-        [field: SerializeField] public Inventory EquippedItems { get; private set; } = new Inventory();
-        [field: SerializeField] public Inventory Inventory { get; private set; } = new Inventory();
-        [field: SerializeField] public List<SkillSlot> SkillSlots { get; private set; } = new List<SkillSlot>();
-        [Header("Stats")]
-        [SerializeField] StatsSet volatileStats = new StatsSet(true);
+          [SerializeField] public bool isRequired;
+          [field: SerializeField] public CharacterProfile Profile { get; private set; }
+          [field: SerializeField] public EquippedItems ItemsEquipped { get; private set; }
+          [field: SerializeField] public Inventory Inventory { get; private set; } 
+          public CoreStats BaseStats { get { return Profile.Stats;} }
 
-        [SerializeField] int _level = 1;
-        [SerializeField] int _exp = 0;
-        int Exp
-        {
-            get
-            {
-                return _exp;
-            }
-            set
-            {
-                _exp = value;
-            }
-        }
+          public Character()
+          {
+               Inventory = new Inventory();
+          }
 
-        [SerializeField] int _currentHP = -1;
-        int CurrentHP
-        {
-            get
-            {
-                var maxHP = GetStat(StatsGlobals.Instance.MaxHP);
-                if (_currentHP == -1 || _currentHP > maxHP)
-                {
-                    _currentHP = maxHP;
-                }
-                return _currentHP;
-            }
-            set
-            {
-                _currentHP = value;
-            }
-        }
-        int MaxHP
-        {
-            get
-            {
-                return (int)Profile.MaxHPExpression.Evaluate(this, null);
-            }
-        }
-        
-        [SerializeField] int _currentMP = -1;
-        int CurrentMP
-        {
-            get
-            {
-                var maxMP = GetStat(StatsGlobals.Instance.MaxMP);
-                if (_currentMP == -1 || _currentMP > maxMP)
-                    _currentMP = maxMP;
-                return _currentMP;
-            }
-            set
-            {
-                _currentMP = value;
-            }
-        }
-        int MaxMP
-        {
-            get
-            {
-                return (int)Profile.MaxMPExpression.Evaluate(this, null);
-            }
-        }
+          [SerializeField] int attack;
+          public int Attack 
+          {
+               get 
+               {
+                    attack = BaseStats.Attack;
+                    for (int itemIndex = 0; itemIndex < EquippedItems.Count; itemIndex++)
+                    {
+                         EquippableItem item = ItemsEquipped.ItemsEquipped[itemIndex];
+                         if (item is null)
+                              continue;
+                         attack += item.Stats.Attack;
+                    }
+                    return attack;
+               }
+          }
 
-        public Character Clone(int level)
-        {
+          [SerializeField] int defense;
+          public int Defense
+          {
+               get
+               {
+                    defense = BaseStats.Defense;
+                    for (int itemIndex = 0; itemIndex < EquippedItems.Count; itemIndex++)
+                    {
+                         EquippableItem item = ItemsEquipped.ItemsEquipped[itemIndex];
+                         if (item is null)
+                              continue;
+                         defense += item.Stats.Defense;
+                    }
+                    return defense;
+               }
+               set {
+                    throw new NotImplementedException();
+               }
+          }
+          [SerializeField] int magicDefense;
+          public int MagicDefense
+          {
+               get
+               {
+                    magicDefense = BaseStats.MagicDefense;
+                    for (int itemIndex = 0; itemIndex < EquippedItems.Count; itemIndex++)
+                    {
+                         EquippableItem item = ItemsEquipped.ItemsEquipped[itemIndex];
+                         if (item is null)
+                              continue;
+                         magicDefense += item.Stats.MagicDefense;
+                    }
+                    return magicDefense;
+               }
+               set
+               {
+                    throw new NotImplementedException();
+               }
+          }
+          [SerializeField]int _currentHP;
+          public int CurrentHP
+          {
+               get
+               {
+                    if (_currentHP == -1 || _currentHP > MaxHP)
+                    {
+                         _currentHP = MaxHP;
+                    }
+                    return _currentHP;
+               }
+               set
+               {
+                    _currentHP = value;
+               }
+          }
+
+          [SerializeField] int _currentMP;
+          public int CurrentMP
+          {
+               get
+               {
+                    if (_currentMP == -1 || _currentMP > MaxMP)
+                         _currentMP = MaxMP;
+                    return _currentMP;
+               }
+               set
+               {
+                    _currentMP = value;
+               }
+          }
+          public int MaxHP{get{ return BaseStats.MaxHP.GetMaxHP(this);}}
+          public int MaxMP { get { return BaseStats.MaxMP.GetMaxMP(this); } }
+
+
+          public Absorbtions Absorbtions { get => BaseStats.Absorbtions; set => throw new NotImplementedException(); }
+          public Resistances Resistances { get => BaseStats.Resistances; set => throw new NotImplementedException(); }
+          public int Agility { get => BaseStats.Agility; set => throw new NotImplementedException(); }
+          public float ACT { get; set; }
+          public int Accuracy  { get => BaseStats.Accuracy; set => throw new NotImplementedException(); }
+          public int CritRate  { get => BaseStats.Crit; set => throw new NotImplementedException(); }
+          public int Strength  { get => BaseStats.Strength; set => throw new NotImplementedException(); }
+          public int Vitality { get => BaseStats.Vitality; set => throw new NotImplementedException(); }
+          public int Spirit { get => BaseStats.Spirit; set => throw new NotImplementedException(); }
+
+          public int Level;
+          public int Experience;
+          public Character Clone(int level)
+          {
             var clone = new Character();
             clone.Profile = Profile;
-            clone.ModifyStat(StatsGlobals.Instance.Level, level);
+            clone.Level = level;
             return clone;
-        }
+          }
 
         public int GetStat(IntegerStat desiredStat)
         {
-            if (desiredStat == StatsGlobals.Instance.Level)
-                return _level;
-            if (desiredStat == StatsGlobals.Instance.Experience)
-                return Exp;
-            if (desiredStat == StatsGlobals.Instance.CurrentHP)
-                return CurrentHP;
-            if (desiredStat == StatsGlobals.Instance.CurrentMP)
-                return CurrentMP;
-
-            var resultHolder = new StatHolder(desiredStat);
-            if (desiredStat == StatsGlobals.Instance.MaxHP)
-                resultHolder.Value = MaxHP;
-            if (desiredStat == StatsGlobals.Instance.MaxMP)
-                resultHolder.Value = MaxMP;
-
-            resultHolder.Value += Profile.StartingStats.GetStat(desiredStat);
-            resultHolder.Value += volatileStats.GetStat(desiredStat);
-            foreach(var slot in EquippedItems.Slots)
-            {
-                var equippableItem = slot.item as EquippableItem;
-                if(equippableItem != null)
-                    resultHolder.Value += equippableItem.statBoosts.GetStat(desiredStat);
-            }
-            return resultHolder.Value;
+           return 0;
         }
-        public void ModifyStat(IntegerStat stat, int delta)
-        {
-            //Debug.Log($"Modify stat {stat.name} by {delta}");
-            if (stat == StatsGlobals.Instance.Level)
-                _level += delta;
-            else if (stat == StatsGlobals.Instance.Experience)
-                Exp += delta;
-            else if (stat == StatsGlobals.Instance.CurrentHP)
-                CurrentHP += delta;
-            else if (stat == StatsGlobals.Instance.CurrentMP)
-                CurrentMP += delta;
-            else
-                volatileStats.ModifyStat(stat, delta);
-        }
-    }
+        [Serializable]
+          public class EquippedItems
+          {
+               public EquippableItem MainHand, OffHand, Head, Body, Accessory1, Accessory2;
+               public EquippableItem[] ItemsEquipped { get { return new EquippableItem[] { MainHand, OffHand, Head, Body, Accessory1, Accessory2 }; } }
+               public static int Count = 6;
+          }
+     }
 }

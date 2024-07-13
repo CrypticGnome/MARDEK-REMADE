@@ -9,26 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6535e70ab9379f549ba89d16ecdce68d, type: 3}
+  m_Script: {fileID: 11500000, guid: 79269e430f884874cb450033efb5e2dc, type: 3}
   m_Name: Mirrilixir
   m_EditorClassIdentifier: 
-  _displayName: Mirrilixir
-  _elementText: Light
-  _description: A potent potion with a silvery, reflective texture, like liquid mercury.
-    Drinking it gives the imbiber P.Shield and M.Shield status effects.
-  _sprite: {fileID: 21300000, guid: c4aee3d02c1c10b42a903cb9b3dd7812, type: 3}
-  _element: {fileID: 11400000, guid: 57ae7927a13bd1b479f4301ce3b69221, type: 2}
-  _price: 5000
-  <SkillsToEquip>k__BackingField: []
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
+  _price: 0
   _percentHealthRestore: 0
   _percentManaRestore: 0
-  _colorHexCode: DCDCDC
-  _pfx: shield
+  _colorHexCode: 
+  _pfx: 
   _canResurrect: 0
   _canPotionSpray: 0
   _grantUnderwaterBreathing: 0
-  _statsSet:
-    intStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 6194235459af05c4c9cbd04f733ace49, type: 2}
-      _value: 15
-    floatStats: []

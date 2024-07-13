@@ -9,26 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6535e70ab9379f549ba89d16ecdce68d, type: 3}
+  m_Script: {fileID: 11500000, guid: 79269e430f884874cb450033efb5e2dc, type: 3}
   m_Name: Potion
   m_EditorClassIdentifier: 
-  _displayName: Potion
-  _description: A concoction made from bleach, vinegar, urine, and a pinch of brown
-    sugar. Its aroma alone can melt steel, but fortunately for you, all it does in
-    this game is restore 100HP.
-  _sprite: {fileID: 21300000, guid: 21b7fce786808fb40b4d11a8382816c1, type: 3}
-  _element: {fileID: 11400000, guid: ce9c718638458254ca7d5945b2b79f0a, type: 2}
-  _price: 30
-  <SkillsToEquip>k__BackingField: []
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
+  _price: 0
   _percentHealthRestore: 0
   _percentManaRestore: 0
-  _colorHexCode: DCA064
-  _pfx: potion
+  _colorHexCode: 
+  _pfx: 
   _canResurrect: 0
   _canPotionSpray: 0
   _grantUnderwaterBreathing: 0
-  _statsSet:
-    intStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 09d38a9ba80723242aff585ba0915607, type: 2}
-      _value: 100
-    floatStats: []

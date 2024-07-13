@@ -10,25 +10,17 @@ namespace MARDEK.UI
 {
     public class ListCharacterSkillset : ListActions
     {
-        Skillset skillsetToShow;
+        ActionSkillset skillsetToShow;
         [SerializeField] TextMeshProUGUI skillsetNameLabel = null;
         [SerializeField] Image skillsetIcon = null; 
-        [SerializeField] List<Skillset> possibleSkillsets;
+        [SerializeField] List<ActionSkillset> possibleSkillsets;
 
         private void OnEnable()
         {
             var character = Battle.BattleManager.characterActing;
             skillsetToShow = null;
-            foreach (var slot in character.Character.SkillSlots)
-            {
-                foreach (var set in possibleSkillsets)
-                {
-                    if (set.Skills.Contains(slot.Skill))
-                        skillsetToShow = set;
-                }
-                if (skillsetToShow)
-                    break;
-            }
+            skillsetToShow = character.Character.Profile.ActionSkillset;
+
             if (skillsetToShow)
             {
                 skillsetNameLabel.text = skillsetToShow.name;
@@ -41,25 +33,20 @@ namespace MARDEK.UI
             }
         }
 
-        public void SetSlots()
-        {
-            ClearSlots();
-            if (skillsetToShow)
-            {
-                var character = Battle.BattleManager.characterActing;
-                foreach (var skill in skillsetToShow.Skills)
-                {
-                    foreach (var skillSlot in character.Character.SkillSlots)
-                    {
-                        if (skill == skillSlot.Skill)
-                        {
-                            SetNextSlot(skillSlot);
-                            break;
-                        }
-                    }
-                }
-            }
-            UpdateLayout();
-        }
+          public void SetSlots()
+          {
+               ClearSlots();
+               if (!skillsetToShow)
+                    return;
+
+               foreach (var skill in skillsetToShow.Skills)
+               {
+                   SkillSlot slot = new SkillSlot();
+                   slot.Skill = skill;
+
+                   SetNextSlot(slot);
+               }
+               UpdateLayout();
+          }
     }
 }

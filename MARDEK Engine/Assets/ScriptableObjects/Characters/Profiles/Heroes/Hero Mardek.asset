@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b47544976d9994d818ec74436e5528, type: 3}
+  m_Name: Hero Mardek
+  m_EditorClassIdentifier: 
+  <displayName>k__BackingField: Mardek
+  <displayClass>k__BackingField: 
+  <element>k__BackingField: {fileID: 11400000, guid: 57ae7927a13bd1b479f4301ce3b69221, type: 2}
+  <portrait>k__BackingField: {fileID: 11400000, guid: 4ad3a9aab74c9d046ab7ea6201b62db6, type: 2}
+  <WalkSprites>k__BackingField: {fileID: 11400000, guid: 2bfcf26a6a3c20846bbe75c6526f1515, type: 2}
+  <BattleModelPrefab>k__BackingField: {fileID: 6477166618577748535, guid: 3ffacb44af2dcaa479644d3d3b5edb3b, type: 3}
+  <ActionSkillset>k__BackingField: {fileID: 0}
+  <ReactionSkillset>k__BackingField: {fileID: 11400000, guid: 1dbdeaed0f5633d4b918b1ce50228deb, type: 2}
+  <PassiveSkillset>k__BackingField: {fileID: 11400000, guid: 77492aa8e45566d47b106420388acb81, type: 2}
+  <Stats>k__BackingField:
+    Strength: 16
+    Vitality: 12
+    Spirit: 12
+    Agility: 15
+    Absorbtions:
+      Fire: 0
+      Earth: 0
+      Water: 0
+      Air: 0
+      Light: 20
+      Dark: -20
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+    Resistances:
+      Sleep: 0
+    Attack: 0
+    Defense: 0
+    MagicDefense: 0
+    Crit: 0
+    Accuracy: 100
+    MaxHP: {fileID: 11400000, guid: 689fb7d58c51ad8419744587e211860e, type: 2}
+    MaxMP: {fileID: 11400000, guid: b430bbf3c625229499a5257b4b7dcb62, type: 2}

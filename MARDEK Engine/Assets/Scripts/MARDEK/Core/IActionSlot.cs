@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using MARDEK.CharacterSystem;
 namespace MARDEK.Core
 {
     public interface IActionSlot
@@ -10,6 +10,6 @@ namespace MARDEK.Core
         public Sprite Sprite { get; }
         public int Number { get; }
         public string Description { get; }
-        public void ApplyAction(IActor user, IActor target);
+        public void ApplyAction(Character user, Character target);
     }
 }

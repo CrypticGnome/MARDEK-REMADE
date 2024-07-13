@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using MARDEK.Core;
 using MARDEK.Stats;
-using MARDEK.Skill;
 
 namespace MARDEK.Inventory
 {
@@ -10,9 +9,11 @@ namespace MARDEK.Inventory
     public class Item : AddressableScriptableObject
     {
         public void OnValidate(){
-            if(element == null){
-                Debug.LogError("ELEMENT IS MISSING IN " + this.displayName);
-            }
+               // Will be useful when an incomplete item is the exception and not the rule
+            //if(element == null)
+            //{
+            //    Debug.LogError("ELEMENT IS MISSING IN " + this.displayName);
+            //}
         }
         [SerializeField] string _displayName;
         public string displayName { get { return _displayName; } }
@@ -30,7 +31,7 @@ namespace MARDEK.Inventory
         public int price { get { return _price; } }
         public string properties { get { return CreateProperties(); } }
 
-        [field: SerializeField] public List<Skill.Skill> SkillsToEquip { get; private set; }
+        //[field: SerializeField] public List<Skill.Skill> SkillsToEquip { get; private set; }
 
         public virtual bool CanStack()
         {

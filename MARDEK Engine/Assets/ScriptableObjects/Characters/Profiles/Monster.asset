@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b47544976d9994d818ec74436e5528, type: 3}
+  m_Name: Monster
+  m_EditorClassIdentifier: 
+  <displayName>k__BackingField: Monster
+  <displayClass>k__BackingField: 
+  <element>k__BackingField: {fileID: 11400000, guid: b58053569349d314892770b43156bfd2, type: 2}
+  <portrait>k__BackingField: {fileID: 0}
+  <WalkSprites>k__BackingField: {fileID: 0}
+  <BattleModelPrefab>k__BackingField: {fileID: 541649454727450239, guid: 753b4f4c394586b409582fd403ce7a0b, type: 3}
+  <ActionSkillset>k__BackingField: {fileID: 0}
+  <ReactionSkillset>k__BackingField: {fileID: 0}
+  <PassiveSkillset>k__BackingField: {fileID: 0}
+  <Stats>k__BackingField:
+    Strength: 0
+    Vitality: 0
+    Spirit: 0
+    Agility: 0
+    Absorbtions:
+      Fire: 0
+      Earth: 0
+      Water: 0
+      Air: 0
+      Light: -100
+      Dark: 50
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+    Resistances:
+      Sleep: 0
+    Attack: 30
+    Defense: 0
+    MagicDefense: 0
+    Crit: 0
+    Accuracy: 100
+    MaxHP: {fileID: 11400000, guid: 00f082784459f934b9585adeb067270e, type: 2}
+    MaxMP: {fileID: 11400000, guid: b430bbf3c625229499a5257b4b7dcb62, type: 2}

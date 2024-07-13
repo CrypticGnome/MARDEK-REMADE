@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b47544976d9994d818ec74436e5528, type: 3}
+  m_Name: Hero Deugan
+  m_EditorClassIdentifier: 
+  <displayName>k__BackingField: Deugan
+  <displayClass>k__BackingField: Hero
+  <element>k__BackingField: {fileID: 11400000, guid: 96b7bd01ebbf64840a070d9ed9321b4c, type: 2}
+  <portrait>k__BackingField: {fileID: 11400000, guid: 3352fe56a7f1ff54f8a6c2ff8c4680db, type: 2}
+  <WalkSprites>k__BackingField: {fileID: 11400000, guid: a021fb592bdaa2c4a9a3a368a58456ae, type: 2}
+  <BattleModelPrefab>k__BackingField: {fileID: 6298310975210123530, guid: 4f019a7cdf452bd4299de7b40cecc970, type: 3}
+  <ActionSkillset>k__BackingField: {fileID: 0}
+  <ReactionSkillset>k__BackingField: {fileID: 11400000, guid: 5f5a6daef41172049ad0d64cfa2ccafe, type: 2}
+  <PassiveSkillset>k__BackingField: {fileID: 11400000, guid: 08c05ec9b4d641641bb5a3f66eafc90c, type: 2}
+  <Stats>k__BackingField:
+    Strength: 16
+    Vitality: 12
+    Spirit: 12
+    Agility: 12
+    Absorbtions:
+      Fire: 0
+      Earth: 20
+      Water: 0
+      Air: -20
+      Light: 0
+      Dark: 0
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+    Resistances:
+      Sleep: 0
+    Attack: 0
+    Defense: 0
+    MagicDefense: 0
+    Crit: 0
+    Accuracy: 100
+    MaxHP: {fileID: 11400000, guid: 689fb7d58c51ad8419744587e211860e, type: 2}
+    MaxMP: {fileID: 11400000, guid: b430bbf3c625229499a5257b4b7dcb62, type: 2}

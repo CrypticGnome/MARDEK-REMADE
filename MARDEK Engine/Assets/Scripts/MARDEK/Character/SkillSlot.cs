@@ -10,16 +10,7 @@ namespace MARDEK.CharacterSystem
     public class SkillSlot : IActionSlot
     {
         [field: SerializeField] public Skill.Skill Skill {get;set;}
-        [field: SerializeField] public int MasteryPoints { get; set; }
-        public bool IsMastered
-        {
-            get
-            {
-                var points = MasteryPoints;
-                var requiredPoints = Skill.PointsRequiredToMaster;
-                return ((points >= requiredPoints) || (points == -1));
-            }
-        }
+
 
         public string DisplayName
         {
@@ -41,7 +32,7 @@ namespace MARDEK.CharacterSystem
         public int Number => Skill.Cost;
         public string Description => Skill.Description;
 
-        public void ApplyAction(IActor user, IActor target)
+        public void ApplyAction(Character user, Character target)
         {
             Debug.Log($"Used {Skill.name}");
             Skill.Apply(user, target);
