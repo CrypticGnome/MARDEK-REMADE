@@ -15,17 +15,6 @@ MonoBehaviour:
   possibleEncounters:
   - encounterWeight: 1
     encounterEnemies:
-    - enemy:
-        isRequired: 0
-        <Profile>k__BackingField: {fileID: 11400000, guid: e333cc4476c16844a9f1d2a98f28a46f, type: 2}
-        <EquippedItems>k__BackingField:
-          slots: []
-        <Inventory>k__BackingField:
-          slots: []
-        <SkillSlots>k__BackingField: []
-        volatileStats:
-          intStats: []
-        _currentHP: -1
-        _currentMP: -1
+    - enemy: {fileID: 11400000, guid: 9df719ae051989b468d617bbe0b00ad9, type: 2}
       minLevel: 40
       maxLevel: 40

@@ -18,6 +18,6 @@ namespace MARDEK.CharacterSystem
           [field: SerializeField] public ActionSkillset ActionSkillset { get; private set; }
           [field: SerializeField] public ReactionSkillset ReactionSkillset { get; private set; }
           [field: SerializeField] public PassiveSkillset PassiveSkillset { get; private set; }
-          [field: SerializeField] public CharacterStats Stats { get; set; } = new CharacterStats();  // Stats namespace needs to be removed
+          [field: SerializeField] public CoreStats Stats { get; private set; } 
     }
 }

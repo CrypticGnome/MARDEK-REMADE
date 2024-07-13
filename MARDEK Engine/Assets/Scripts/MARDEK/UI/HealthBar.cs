@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using MARDEK.Stats;
+using MARDEK.CharacterSystem;
 
 namespace MARDEK.UI
 {
@@ -29,9 +30,9 @@ namespace MARDEK.UI
         {
             if (characterUI.character == null)
                 return;
-           CharacterStats stats = characterUI.character.Stats;
-           var statValue = (float)stats.CurrentHP;
-            var maxStatValue = (float)stats.MaxHP.GetMaxHP(stats);
+           Character character = characterUI.character.Character;
+           var statValue = (float)character.CurrentHP;
+            var maxStatValue = (float)character.MaxHP;
             if (statText)
                 statText.text = statValue.ToString();
             if (maxStatText) 

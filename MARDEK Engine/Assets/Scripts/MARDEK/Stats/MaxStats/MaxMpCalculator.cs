@@ -1,3 +1,4 @@
+using MARDEK.CharacterSystem;
 using UnityEngine;
 
 namespace MARDEK.Stats
@@ -6,18 +7,22 @@ namespace MARDEK.Stats
      public class MaxMpCalculator : ScriptableObject
      {
           [SerializeField] CalculatorType calculatorType;
-          public int GetMaxMP(CharacterStats stats)
+          [SerializeField] int constantValue;
+          public int GetMaxMP(Character character)
           {
                switch (calculatorType)
                {
                     default:
-                         return stats.CoreStats.Spirit * (17 + stats.Level)/6;
+                         return character.BaseStats.Spirit * (17 + character.Level)/6;
+                    case CalculatorType.Constant:
+                         return constantValue;
                }
           }
 
           public enum CalculatorType
           {
                Default,
+               Constant,
                Monster,
           }
      }

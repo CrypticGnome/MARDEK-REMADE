@@ -9,9 +9,11 @@ namespace MARDEK.Inventory
     public class Item : AddressableScriptableObject
     {
         public void OnValidate(){
-            if(element == null){
-                Debug.LogError("ELEMENT IS MISSING IN " + this.displayName);
-            }
+               // Will be useful when an incomplete item is the exception and not the rule
+            //if(element == null)
+            //{
+            //    Debug.LogError("ELEMENT IS MISSING IN " + this.displayName);
+            //}
         }
         [SerializeField] string _displayName;
         public string displayName { get { return _displayName; } }

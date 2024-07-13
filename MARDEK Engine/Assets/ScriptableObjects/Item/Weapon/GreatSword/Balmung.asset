@@ -9,37 +9,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f13698c79568447a0b3862945c868a, type: 3}
+  m_Script: {fileID: 11500000, guid: 42835d9f816510946974f97e25505c64, type: 3}
   m_Name: Balmung
   m_EditorClassIdentifier: 
   _displayName: Balmung
-  _elementText: Earth
   _description: The sword of a legendary hero.
   _sprite: {fileID: 21300000, guid: 2cb5cdeebfd9b94488a95690ac08e299, type: 3}
   _element: {fileID: 11400000, guid: 96b7bd01ebbf64840a070d9ed9321b4c, type: 2}
-  _price: 1
-  <SkillsToEquip>k__BackingField: []
+  _price: 1000000
   _category: {fileID: 11400000, guid: 726dae6e8135e0d4bb57b31773ff3078, type: 2}
-  _statsSet:
-    intStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 328a9b0db2868104aabffa0df1e57c22, type: 2}
-      _value: 100
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 4f2c3d936438bae4ab846e1a1fa6d660, type: 2}
-      _value: 8
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 77120450b1dbcbb439277ad129dd1bf4, type: 2}
-      _value: 95
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: b126ec105431be84db0d5e0d2a1d55cc, type: 2}
-      _value: 5
-    floatStats: []
-  _hitSFX: 0
-  _ATK: 100
-  _CRIT: 8
-  _DEF: 0
-  _EVA: 0
-  _HIT: 95
-  _MDEF: 0
-  _SPR: 0
-  _STR: 0
-  _VIT: 0
-  _categoryText: Greatsword
-  <OnlyUsers>k__BackingField: []
+  statBoosts:
+    Attack: 100
+    Defense: 0
+    MagicDefense: 0
+    Absorbtions:
+      Fire: 0
+      Earth: 0
+      Water: 0
+      Air: 0
+      Light: 0
+      Dark: 0
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+    CoreStats: {fileID: 0}
+    Crit: 8
+    Accuracy: 100
+  _hitSFX: 

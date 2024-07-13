@@ -9,26 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6535e70ab9379f549ba89d16ecdce68d, type: 3}
+  m_Script: {fileID: 11500000, guid: 79269e430f884874cb450033efb5e2dc, type: 3}
   m_Name: Healthy Juice
   m_EditorClassIdentifier: 
-  _displayName: Healthy Juice
-  _elementText: Earth
-  _description: A great new energy drink from JuiceCorp! With this juice, you won't
-    need medical attention ever again! It gives you REGEN.
-  _sprite: {fileID: 21300000, guid: 37cfca33955375f41bde777db6a9fe48, type: 3}
-  _element: {fileID: 11400000, guid: 96b7bd01ebbf64840a070d9ed9321b4c, type: 2}
-  _price: 2500
-  <SkillsToEquip>k__BackingField: []
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
+  _price: 0
   _percentHealthRestore: 0
   _percentManaRestore: 0
-  _colorHexCode: 14FF78
-  _pfx: regen
+  _colorHexCode: 
+  _pfx: 
   _canResurrect: 0
   _canPotionSpray: 0
   _grantUnderwaterBreathing: 0
-  _statsSet:
-    intStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 6194235459af05c4c9cbd04f733ace49, type: 2}
-      _value: 15
-    floatStats: []

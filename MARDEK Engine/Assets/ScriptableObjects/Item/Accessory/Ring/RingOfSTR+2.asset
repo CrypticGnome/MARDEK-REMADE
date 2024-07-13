@@ -9,20 +9,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f13698c79568447a0b3862945c868a, type: 3}
+  m_Script: {fileID: 11500000, guid: 42835d9f816510946974f97e25505c64, type: 3}
   m_Name: RingOfSTR+2
   m_EditorClassIdentifier: 
-  _displayName: RingOfSTR+2
-  _description: This little ring, set with a red gem, magically enhances its wearer's
-    physical strength.
-  _sprite: {fileID: 21300000, guid: dcad6f9e611443e4eb8672a9197b55ee, type: 3}
-  _element: {fileID: 11400000, guid: ce9c718638458254ca7d5945b2b79f0a, type: 2}
-  _price: 400
-  <SkillsToEquip>k__BackingField: []
-  _category: {fileID: 11400000, guid: cc10574bbb211d2459008f7b3458f955, type: 2}
-  _statsSet:
-    intStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: b126ec105431be84db0d5e0d2a1d55cc, type: 2}
-      _value: 2
-    floatStats: []
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
+  _price: 0
+  _category: {fileID: 0}
+  statBoosts:
+    Attack: 0
+    Defense: 0
+    MagicDefense: 0
+    Absorbtions:
+      Fire: 0
+      Earth: 0
+      Water: 0
+      Air: 0
+      Light: 0
+      Dark: 0
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+    CoreStats: {fileID: 0}
+    Crit: 0
+    Accuracy: 100
   _hitSFX: 

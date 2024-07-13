@@ -2,8 +2,9 @@ namespace MARDEK.UI
 {
     using Progress;
     using CharacterSystem;
+     using System;
 
-    public class CharacterEquipmentUI : InventoryUI
+     public class CharacterEquipmentUI : InventoryUI
     {
         public Character Character
         {
@@ -18,8 +19,9 @@ namespace MARDEK.UI
         private void OnEnable()
         {
             var index = transform.GetSiblingIndex();
-            if(Character != null)
-                AssignInventoryToUI(Character.EquippedItems);
+               if (Character != null)
+                    throw new NotImplementedException();
+                //AssignInventoryToUI(Character.ItemsEquipped);
         }
     }
 }

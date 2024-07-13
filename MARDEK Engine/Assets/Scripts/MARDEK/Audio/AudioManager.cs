@@ -53,19 +53,27 @@ namespace MARDEK.Audio
             return instance.musicAudioSource;
         }
 
-        private void UpdateCurrentMusic()
-        {
-            Music desiredMusic = null;
-            if (musicStack.Count > 0)
-                desiredMusic = musicStack.Peek();
-            if (desiredMusic == null)
-                desiredMusic = defaultMusic;
-            if (currentMusic != desiredMusic)
-            {
+          private void UpdateCurrentMusic()
+          {
+               Music desiredMusic = null;
+               if (musicStack.Count > 0)
+                    desiredMusic = musicStack.Peek();
+               if (desiredMusic == null)
+               {
+                    Debug.LogWarning("No music queued. Playing default. WIP, this is a bandaid fix");
+                    desiredMusic = defaultMusic;
+               }
+               if (desiredMusic == currentMusic)
+                    return;
+
+               currentMusic = desiredMusic;
+
+               if (currentMusic is null)
+                    return;
+
                 currentMusic = desiredMusic;
                 currentMusic.PlayOnSource(musicAudioSource);
-            }
-        }
+          }
 
         /// <summary>
         ///     Pushes a new music on top of the background music stack. The given music will be played right away and

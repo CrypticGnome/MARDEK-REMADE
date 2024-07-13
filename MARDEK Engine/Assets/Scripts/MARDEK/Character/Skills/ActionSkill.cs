@@ -29,10 +29,10 @@ namespace MARDEK.Skill
                     case EffectType.DealDamage:
                          int ATK = user.Attack;
                          int DEF = target.Defense;
-                         int STR = user.BaseStats.CoreStats.Strength;
-                         int level = user.BaseStats.Level;
+                         int STR = user.BaseStats.Strength;
+                         int level = user.Level;
                          int damage = Math.Clamp(ATK - DEF, 0, int.MaxValue) * STR * (level + 5) / 50;
-                         target.BaseStats.CurrentHP -= damage;
+                         target.CurrentHP -= damage;
                          break;
 
                }

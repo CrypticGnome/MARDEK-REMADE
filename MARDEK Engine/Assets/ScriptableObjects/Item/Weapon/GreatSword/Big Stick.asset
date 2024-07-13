@@ -9,25 +9,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f13698c79568447a0b3862945c868a, type: 3}
+  m_Script: {fileID: 11500000, guid: 42835d9f816510946974f97e25505c64, type: 3}
   m_Name: Big Stick
   m_EditorClassIdentifier: 
-  _displayName: Big Stick
-  _description: A large, sturdy stick, found on the gr- no! It's a Mighty Hero's
-    Magic Sword, of course! This one is large enough for a child to wield in both
-    hands, like a greatsword.
-  _sprite: {fileID: 21300000, guid: 051839d7e3fca9d4d9c56d942f51e7c5, type: 3}
-  _element: {fileID: 11400000, guid: ce9c718638458254ca7d5945b2b79f0a, type: 2}
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
   _price: 0
-  <SkillsToEquip>k__BackingField: []
-  _category: {fileID: 11400000, guid: 726dae6e8135e0d4bb57b31773ff3078, type: 2}
-  _statsSet:
-    intStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 328a9b0db2868104aabffa0df1e57c22, type: 2}
-      _value: 3
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 4f2c3d936438bae4ab846e1a1fa6d660, type: 2}
-      _value: 1
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 77120450b1dbcbb439277ad129dd1bf4, type: 2}
-      _value: 95
-    floatStats: []
-  _hitSFX: 0
+  _category: {fileID: 0}
+  statBoosts:
+    Attack: 0
+    Defense: 0
+    MagicDefense: 0
+    Absorbtions:
+      Fire: 0
+      Earth: 0
+      Water: 0
+      Air: 0
+      Light: 0
+      Dark: 0
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+    CoreStats: {fileID: 0}
+    Crit: 0
+    Accuracy: 100
+  _hitSFX: 

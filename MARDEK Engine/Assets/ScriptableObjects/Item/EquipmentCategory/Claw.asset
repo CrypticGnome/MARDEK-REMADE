@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26060c64e3a2c9642b9821f762b4465a, type: 3}
+  m_Script: {fileID: 11500000, guid: a98ca2036f654174597f8e53821e2b9e, type: 3}
   m_Name: Claw
   m_EditorClassIdentifier: 
-  _slot: {fileID: 11400000, guid: fb5091468df24c943a0b1c0d77c42f1c, type: 2}
-  _color: {fileID: 11400000, guid: db4c3476124480f42a1117ad97325cf6, type: 2}
-  _classification: 'WEAPON: CLAW'
+  _slot: 0
+  _classification: 

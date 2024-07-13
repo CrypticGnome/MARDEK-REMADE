@@ -18,10 +18,11 @@ namespace MARDEK.UI
         [SerializeField] Image mouseCharacterImage;
 
         Party Party { get { return Party.Instance; } }
-        Character mouseCharacter = new();
+        Character mouseCharacter;
 
         void OnEnable()
         {
+               mouseCharacter = new();
             PlayerLocks.UISystemLock += 1;
             SetClickActions();
             RefreshSlots();

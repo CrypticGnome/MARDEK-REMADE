@@ -9,37 +9,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f13698c79568447a0b3862945c868a, type: 3}
+  m_Script: {fileID: 11500000, guid: 42835d9f816510946974f97e25505c64, type: 3}
   m_Name: M Blade
   m_EditorClassIdentifier: 
   _displayName: M Blade
-  _elementText: Light
   _description: A mighty sword wielded by heroes.
   _sprite: {fileID: 21300000, guid: 20f3fc044fff5e444b24faa7c65cba12, type: 3}
   _element: {fileID: 11400000, guid: 57ae7927a13bd1b479f4301ce3b69221, type: 2}
-  _price: 1
-  <SkillsToEquip>k__BackingField: []
+  _price: 1000000
   _category: {fileID: 11400000, guid: 1078b8d8773998a4cb1043d7bc7975bc, type: 2}
-  _statsSet:
-    intStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 328a9b0db2868104aabffa0df1e57c22, type: 2}
-      _value: 100
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 4f2c3d936438bae4ab846e1a1fa6d660, type: 2}
-      _value: 10
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 77120450b1dbcbb439277ad129dd1bf4, type: 2}
-      _value: 255
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: b126ec105431be84db0d5e0d2a1d55cc, type: 2}
-      _value: 5
-    floatStats: []
-  _hitSFX: 0
-  _ATK: 100
-  _CRIT: 10
-  _DEF: 0
-  _EVA: 0
-  _HIT: 255
-  _MDEF: 0
-  _SPR: 0
-  _STR: 0
-  _VIT: 0
-  _categoryText: Sword
-  <OnlyUsers>k__BackingField: []
+  statBoosts:
+    Attack: 100
+    Defense: 0
+    MagicDefense: 0
+    Absorbtions:
+      Fire: 0
+      Earth: 0
+      Water: 0
+      Air: 0
+      Light: 0
+      Dark: 0
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+    CoreStats: {fileID: 0}
+    Crit: 10
+    Accuracy: 100
+  _hitSFX: 

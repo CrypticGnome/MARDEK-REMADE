@@ -12,8 +12,6 @@ namespace MARDEK.Battle
 
     public class BattleManager : MonoBehaviour
     {
-        [SerializeField] IntegerStat ACTStat = null;
-        [SerializeField] IntegerStat AGLStat = null;
         [SerializeField] Party playerParty;
         [SerializeField] List<Character> DummyEnemies;
         [SerializeField] GameObject characterActionUI = null;
@@ -27,18 +25,22 @@ namespace MARDEK.Battle
         public List<BattleCharacter> EnemyBattleParty { get; private set; } = new();
         public List<BattleCharacter> PlayerBattleParty { get; private set; } = new();
 
-        private void Awake()
-        {
-            List<Character> enemyCharacters;
-            if (encounter)
-                enemyCharacters = encounter.InstantiateEncounter();
-            else
-                enemyCharacters = DummyEnemies;
-            foreach (var c in enemyCharacters)
-                SpawnEnemyBattleCharacter(c);
-            foreach (var c in playerParty.Characters)
-                SpawnPlayerBattleCharacter(c);
-        }
+          private void Awake()
+          {
+               if (!encounter)
+               {
+                    Debug.LogAssertion("Encounter is null");
+                    CheckVictory();
+                    return;
+               }
+
+               List<Character> enemyCharacters = encounter.InstantiateEncounter();
+               
+               foreach (var c in enemyCharacters)
+                    SpawnEnemyBattleCharacter(c);
+               foreach (var c in playerParty.Characters)
+                    SpawnPlayerBattleCharacter(c);
+          }
 
         void SpawnEnemyBattleCharacter(Character c)
         {
@@ -89,7 +91,7 @@ namespace MARDEK.Battle
             AddTickRateToACT(ref charactersInBattle, Time.deltaTime);
             var readyToAct = GetNextCharacterReadyToAct(charactersInBattle);
                if (readyToAct != null)
-                    readyToAct.Character.Profile.Stats.ACT -= actResolution;
+                    readyToAct.Character.ACT -= actResolution;
             return readyToAct;
         }
         List<BattleCharacter> GetCharactersInOrder()
@@ -108,12 +110,12 @@ namespace MARDEK.Battle
         
         void AddTickRateToACT(ref List<BattleCharacter> characters, float deltatime)
         {
-            foreach(var c in characters)
+            foreach(var character in characters)
             {
-                    CharacterStats stats = c.Character.Profile.Stats;
-                var tickRate = 1 + 0.05f * stats.CoreStats.Agility;
-                tickRate *= 1000 * deltatime;
-               stats.ACT += (int)tickRate;
+                    CoreStats stats = character.Character.Profile.Stats;
+                    var tickRate = 1 + 0.05f * stats.Agility;
+                    tickRate *= 1000 * deltatime;
+                    character.Character.ACT += (int)tickRate;
             }
         }
         BattleCharacter GetNextCharacterReadyToAct(List<BattleCharacter> characters)
@@ -121,14 +123,15 @@ namespace MARDEK.Battle
             float maxAct = 0;
             foreach(var c in characters)
             {
-                var act = c.Stats.ACT;
+                var act = c.Character.ACT;
                 if (act > maxAct)
                     maxAct = act;
             }
             if (maxAct < actResolution)
                 return null;
+
             foreach (var c in characters)
-                if (c.Stats.ACT == maxAct)
+                if (c.Character.ACT == maxAct)
                     return c;
             throw new System.Exception("A character had enough ACT to take a turn but wasn't returned by this method");
         }
@@ -143,7 +146,7 @@ namespace MARDEK.Battle
             for (int i = EnemyBattleParty.Count - 1; i >= 0; i--)
             {
                 var enemy = EnemyBattleParty[i];
-                var health = enemy.Stats.CurrentHP;
+                var health = enemy.Character.CurrentHP;
                 if (health <= 0)
                     EnemyBattleParty.Remove(enemy);
             }

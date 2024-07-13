@@ -9,25 +9,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 858e30d3888cc6e4ba8ef0b97c869e8e, type: 3}
+  m_Script: {fileID: 11500000, guid: 42835d9f816510946974f97e25505c64, type: 3}
   m_Name: Aquamarine
   m_EditorClassIdentifier: 
-  _displayName: Aquamarine
-  _elementText: Water
-  _description: Being a form of beryl, aquamarine is related to emeralds. However,
-    whereas emeralds contain earth-elemental essence, aquamarine is brimming with
-    the essence of the water element. It feels somehow wet...
-  _sprite: {fileID: 21300000, guid: 8a806b71bfc1a5b46ac4d8364efc853b, type: 3}
-  _element: {fileID: 11400000, guid: ef2aacb5c0629b644a8e1df0f9abf2fc, type: 2}
-  _price: 800
-  <SkillsToEquip>k__BackingField: []
-  _category: {fileID: 11400000, guid: 05877571ee16f9648838210e2d4696c4, type: 2}
-  _statsSet:
-    intStats: []
-    floatStats: []
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
+  _price: 0
+  _category: {fileID: 0}
+  statBoosts:
+    Attack: 0
+    Defense: 0
+    MagicDefense: 0
+    Absorbtions:
+      Fire: 0
+      Earth: 0
+      Water: 0
+      Air: 0
+      Light: 0
+      Dark: 0
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+    CoreStats: {fileID: 0}
+    Crit: 0
+    Accuracy: 100
   _hitSFX: 
-  <OnlyUsers>k__BackingField: []
-  _pfx: _turquoise
-  _spellDMG: 30
-  _STFX: 
-  _STFXStrength: 0

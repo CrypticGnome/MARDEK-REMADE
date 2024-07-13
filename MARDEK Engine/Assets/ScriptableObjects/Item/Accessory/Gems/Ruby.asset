@@ -9,26 +9,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 858e30d3888cc6e4ba8ef0b97c869e8e, type: 3}
+  m_Script: {fileID: 11500000, guid: 42835d9f816510946974f97e25505c64, type: 3}
   m_Name: Ruby
   m_EditorClassIdentifier: 
-  _displayName: Ruby
-  _elementText: Fire
-  _description: Rubies are extremely valuable red gemstones, a variety of the mineral
-    corundum. They're mystically associated with strength, passion, power, fire.
-  _sprite: {fileID: 21300000, guid: 5221665cc72d8ca4699deeabae9d66d5, type: 3}
-  _element: {fileID: 11400000, guid: e179fa6b43e015742b42814e32864e49, type: 2}
-  _price: 20000
-  <SkillsToEquip>k__BackingField: []
-  _category: {fileID: 11400000, guid: 05877571ee16f9648838210e2d4696c4, type: 2}
-  _statsSet:
-    intStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: b126ec105431be84db0d5e0d2a1d55cc, type: 2}
-      _value: 3
-    floatStats: []
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
+  _price: 0
+  _category: {fileID: 0}
+  statBoosts:
+    Attack: 0
+    Defense: 0
+    MagicDefense: 0
+    Absorbtions:
+      Fire: 0
+      Earth: 0
+      Water: 0
+      Air: 0
+      Light: 0
+      Dark: 0
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+    CoreStats: {fileID: 0}
+    Crit: 0
+    Accuracy: 100
   _hitSFX: 
-  <OnlyUsers>k__BackingField: []
-  _pfx: _ruby
-  _spellDMG: 60
-  _STFX: 
-  _STFXStrength: 0

@@ -1,3 +1,4 @@
+using MARDEK.CharacterSystem;
 using UnityEditor.Search;
 using UnityEngine;
 
@@ -7,22 +8,26 @@ namespace MARDEK.Stats
      public class MaxHpCalculator : ScriptableObject
      {
           [SerializeField] CalculatorType calculatorType;
-          public int GetMaxHP(CharacterStats stats)
+          [SerializeField] int constantValue;
+          public int GetMaxHP(Character character)
           {
-               int vitality = stats.CoreStats.Vitality;
+               int vitality = character.BaseStats.Vitality;
                switch (calculatorType)
                {
                     default:
-                         return 3 * vitality + (2 * vitality * stats.Level);
+                         return 3 * vitality + (2 * vitality * character.Level);
+                    case CalculatorType.Constant:
+                         return constantValue;
                     case CalculatorType.Monster:
-                         return 28 * stats.Level + 1172;
+                         return 28 * character.Level + 1172;
                }
           }
 
           public enum CalculatorType
           {
-          Default,
-          Monster,
+               Default,
+               Constant,
+               Monster,
           }
      }
 }

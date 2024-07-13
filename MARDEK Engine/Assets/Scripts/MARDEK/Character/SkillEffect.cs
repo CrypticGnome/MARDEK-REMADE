@@ -10,7 +10,7 @@ namespace MARDEK.Skill
      {
           [SerializeField] EffectType effectType;
           // This is incredibly dumb. Ideally,this function would take 2 characters but the way the project is set up doesnt allow that
-          public void Apply(Character user, IStats target)
+          public void Apply(Character user, Character target)
           {
                  switch (effectType) {
                       default:
