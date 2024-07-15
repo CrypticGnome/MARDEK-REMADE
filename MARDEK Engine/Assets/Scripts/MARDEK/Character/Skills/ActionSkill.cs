@@ -4,21 +4,22 @@ using UnityEngine;
 
 namespace MARDEK.Skill
 {
+     using MARDEK.Battle;
      using MARDEK.CharacterSystem;
      using MARDEK.Core;
      using MARDEK.Stats;
      using System;
 
      [CreateAssetMenu(menuName = "MARDEK/Skill/ActionSkill")]
-    public class ActionSkill : Skill
+    public class ActionSkill : Skill, IAction
      {
-        [SerializeField] List<EffectType> effects = new List<EffectType>();
+          [SerializeField] List<EffectType> effects = new List<EffectType>();
           [field:SerializeField] public Element Element;
-        public void Apply(Character user, Character target)
-        {
-               foreach (var effect in effects)
-                    ApplyEffect(user, target, effect);
-        }
+          public void Apply(Character user, Character target)
+          {
+                 foreach (var effect in effects)
+                      ApplyEffect(user, target, effect);
+          }
 
           public void ApplyEffect(Character user, Character target, EffectType effectType)
           {

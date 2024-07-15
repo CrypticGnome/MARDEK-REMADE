@@ -133,6 +133,7 @@ namespace MARDEK.CharacterSystem
                var clone = new Character();
                clone.Profile = Profile;
                clone.Level = level;
+               clone.ActionSkillset = Profile.LearnableSkillset;
                return clone;
           }
 

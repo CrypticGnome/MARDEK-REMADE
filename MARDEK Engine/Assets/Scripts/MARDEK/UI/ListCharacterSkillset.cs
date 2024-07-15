@@ -36,7 +36,10 @@ namespace MARDEK.UI
           {
                ClearSlots();
                if (!skillsetToShow)
+               {
+                    Debug.LogWarning("No skillset to show");
                     return;
+               }
 
                foreach (var skill in skillsetToShow.Skills)
                {

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79269e430f884874cb450033efb5e2dc, type: 3}
   m_Name: Elixir
   m_EditorClassIdentifier: 
-  _displayName: 
+  _displayName: Elixir
   _description: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: 21300000, guid: f6fc356502bdb4846afebff28719c7fd, type: 3}
   _element: {fileID: 0}
   _price: 0
   _percentHealthRestore: 0

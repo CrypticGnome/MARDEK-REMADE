@@ -22,7 +22,15 @@ MonoBehaviour:
     Accessory1: {fileID: 0}
     Accessory2: {fileID: 0}
   <Inventory>k__BackingField:
-    slots: []
+    slots:
+    - currentItem: {fileID: 11400000, guid: 3071228e88047bf4295c85c047f12146, type: 2}
+      currentAmount: 10
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+  <ActionSkillset>k__BackingField: {fileID: 11400000, guid: 19642d204816fc84194541b655801204, type: 2}
+  <ReactionSkillset>k__BackingField: {fileID: 0}
+  <PassiveSkillset>k__BackingField: {fileID: 0}
   attack: 100
   defense: 0
   magicDefense: 0

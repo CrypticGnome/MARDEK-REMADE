@@ -1,10 +1,12 @@
 using UnityEngine;
 using MARDEK.Stats;
+using MARDEK.Battle;
+using MARDEK.CharacterSystem;
 
 namespace MARDEK.Inventory
 {
     [CreateAssetMenu(menuName = "MARDEK/Inventory/ExpendableItem")]
-    public class ExpendableItem : Item
+    public class ExpendableItem : Item, IAction
     {
         [SerializeField] int _percentHealthRestore;
         [SerializeField] int _percentManaRestore;
@@ -43,5 +45,10 @@ namespace MARDEK.Inventory
         {
             return new Color(81f / 255f, 113f / 255f, 217f / 255f);
         }
-    }
+
+          public void Apply(Character user, Character target)
+          {
+               throw new System.NotImplementedException();
+          }
+     }
 }

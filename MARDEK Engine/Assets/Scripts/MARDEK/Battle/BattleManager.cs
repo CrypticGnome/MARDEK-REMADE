@@ -7,7 +7,8 @@ using MARDEK.Stats;
 namespace MARDEK.Battle
 {
     using Core;
-    using Progress;
+     using MARDEK.Skill;
+     using Progress;
     using UnityEngine.Events;
 
     public class BattleManager : MonoBehaviour
@@ -24,9 +25,10 @@ namespace MARDEK.Battle
           const float actResolution = 1000;
           static public List<BattleCharacter> EnemyBattleParty { get; private set; } = new();
           static public List<BattleCharacter> PlayerBattleParty { get; private set; } = new();
-
+          static BattleManager instance;
           private void Awake()
           {
+               instance = this;
                if (!encounter)
                {
                     Debug.LogAssertion("Encounter is null");
@@ -35,9 +37,12 @@ namespace MARDEK.Battle
                }
 
                List<Character> enemyCharacters = encounter.InstantiateEncounter();
-               
+
+               EnemyBattleParty.Clear();
                foreach (var c in enemyCharacters)
                     SpawnEnemyBattleCharacter(c);
+
+               PlayerBattleParty.Clear();
                foreach (var c in playerParty.Characters)
                     SpawnPlayerBattleCharacter(c);
 
@@ -60,18 +65,35 @@ namespace MARDEK.Battle
                CheckVictory();
                if (characterActing == null)
                {
-                    if (characterActionUI.activeSelf)
-                         characterActionUI.SetActive(false);
-
-                    characterActing = StepActCycleTryGetNextCharacter();
-                   if (characterActing != null)
-                   {
-                       characterActionUI.SetActive(true);
-                   }
+                    WaitForNextCharacter();
                     return;
                }
 
-
+               void WaitForNextCharacter()
+               {    
+                    characterActing = StepActCycleTryGetNextCharacter();
+                    if (characterActing == null)
+                         return;
+                    
+                    characterActionUI.SetActive(true);
+                    bool characterIsEnemy = EnemyBattleParty.Contains(characterActing);
+                    if (characterIsEnemy)
+                         PerformEnemyMove();
+                    
+               }
+               void PerformEnemyMove()
+               {
+                    ActionSkillset enemyMoveset = characterActing.Character.ActionSkillset;
+                    if (enemyMoveset is null)
+                    {
+                         Debug.LogWarning("Enemy moveset is null");
+                         characterActing = null;
+                         instance.characterActionUI.SetActive(false);
+                         return;
+                    }
+                    ActionSkill move = enemyMoveset.Skills[Random.Range(0, enemyMoveset.Skills.Count)];
+                    PerformAction(move.Apply);
+               }
                BattleCharacter StepActCycleTryGetNextCharacter()
                {
                     var charactersInBattle = GetCharactersInOrder();
@@ -83,6 +105,7 @@ namespace MARDEK.Battle
 
                     
                }
+
                List<BattleCharacter> GetCharactersInOrder()
                {
                     // order by Position (p1 e1 p2 e2 p3 e3 p4 e4)
@@ -96,6 +119,7 @@ namespace MARDEK.Battle
                     }
                     return returnList;
                }
+
                BattleCharacter GetNextCharacterReadyToAct(List<BattleCharacter> characters)
                {
                     float maxAct = 0;
@@ -113,6 +137,7 @@ namespace MARDEK.Battle
                               return c;
                     throw new System.Exception("A character had enough ACT to take a turn but wasn't returned by this method");
                }
+
                void AddTickRateToACT(ref List<BattleCharacter> characters, float deltatime)
                {
                     foreach (var character in characters)
@@ -141,6 +166,7 @@ namespace MARDEK.Battle
                action.Invoke(characterActing.Character, target.Character);
 
                characterActing = null;
+               instance.characterActionUI.SetActive(false);
           }
           
           public void SkipCurrentCharacterTurn()
@@ -150,23 +176,23 @@ namespace MARDEK.Battle
           }
     
           void CheckVictory()
-        {
-            for (int i = EnemyBattleParty.Count - 1; i >= 0; i--)
-            {
-                var enemy = EnemyBattleParty[i];
-                var health = enemy.Character.CurrentHP;
-                if (health <= 0)
-                    EnemyBattleParty.Remove(enemy);
-            }
+          {
+               for (int i = EnemyBattleParty.Count - 1; i >= 0; i--)
+               {
+                   var enemy = EnemyBattleParty[i];
+                   var health = enemy.Character.CurrentHP;
+                   if (health <= 0)
+                       EnemyBattleParty.Remove(enemy);
+               }
 
-            var victory = EnemyBattleParty.Count == 0;
-            if (victory)
-            {
-                print("victory!!");
-                OnVictory.Invoke();
-                enabled = false;
-            }
-        }
+               var victory = EnemyBattleParty.Count == 0;
+               if (victory)
+               {
+                   print("victory!!");
+                   OnVictory.Invoke();
+                   enabled = false;
+               }
+          }
     }
      public delegate void ApplyAction(Character user, Character target);
 
