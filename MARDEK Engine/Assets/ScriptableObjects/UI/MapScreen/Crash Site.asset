@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb47767b2f6f72345bceecd46e0c0041, type: 3}
+  m_Name: Crash Site
+  m_EditorClassIdentifier: 
+  nameSprite: {fileID: 0}
+  defaultIcon: {fileID: 3286163911610860551, guid: 1a88fcbfd28c5404e8d46a523fad7016, type: 3}
+  activeIcon: {fileID: 3286163911610860551, guid: bc5e6e607ed8e344a8b3fbdd4f4c76dd, type: 3}
+  disabledIcon: {fileID: 3286163911610860551, guid: f24222ee8e2c80c42b3b0551a7577c55, type: 3}
+  path: {fileID: 21300000, guid: 6ec37d48769d47b4c8ac59a335f5a328, type: 3}
+  Scene:
+    sceneAsset: {fileID: 102900000, guid: afac950c96e40ca448d457075149f04f, type: 3}
+    scenePath: Assets/Scenes/Maps/Crash Site/crashsite.unity
+  Discovered: 1

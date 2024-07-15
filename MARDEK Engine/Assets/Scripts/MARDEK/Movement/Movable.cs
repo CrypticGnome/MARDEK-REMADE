@@ -70,39 +70,40 @@ namespace MARDEK.Movement
 
         private void Update()
         {
-            if (isMoving)
-            {
-                isMoving = !MoveToPosition(transform, targetPosition, movementSpeed, Time.deltaTime);
-                if(isMoving == false)
-                {
-                    var snappedTargetPosition = Utilities2D.SnapPositionToGrid(targetPosition);
-                    Utilities2D.SetTransformPosition(transform, snappedTargetPosition);
-                    OnEndMove.Invoke();
-                }
-                UpdateMoveStatus();
-            }
+               if (!isMoving)
+                    return;
+               
+               isMoving = !MoveToPosition(transform, targetPosition, movementSpeed, Time.deltaTime);
+               if(isMoving == false)
+               {
+                   var snappedTargetPosition = Utilities2D.SnapPositionToGrid(targetPosition);
+                   Utilities2D.SetTransformPosition(transform, snappedTargetPosition);
+                   OnEndMove.Invoke();
+               }
+               UpdateMoveStatus();
         }
 
         void UpdateMoveStatus()
         {            
-            if (isMoving == false)
-            {
-                bool shouldMove = ShouldMove();
-                if (shouldMove)
-                {
-                    lastPosition = transform.position;
-                    isMoving = true;
-                    OnStartMove.Invoke();
-                }
-                else
-                {
-                    if (colliderHelper) colliderHelper.OffsetCollider(Vector2.zero);
-                    FaceDirection(currentDirection);
-                }
-            }
-            else
-                if(colliderHelper)
-                    colliderHelper.OffsetCollider(targetPosition - (Vector2)transform.position);
+               if (isMoving)
+               {
+                    if (colliderHelper)
+                         colliderHelper.OffsetCollider(targetPosition - (Vector2)transform.position);
+                    return;
+               }
+            
+               bool shouldMove = ShouldMove();
+               if (shouldMove)
+               {
+                   lastPosition = transform.position;
+                   isMoving = true;
+                   OnStartMove.Invoke();
+               }
+               else
+               {
+                   if (colliderHelper) colliderHelper.OffsetCollider(Vector2.zero);
+                   FaceDirection(currentDirection);
+               }   
         }
 
         bool ShouldMove()
@@ -126,15 +127,16 @@ namespace MARDEK.Movement
 
         bool GetNextTargetPosition()
         {
-            if(queuedMoves.Count > 0)
-            {
-                currentDirection = queuedMoves.Dequeue();
-                if (currentDirection == null)
+               if(queuedMoves.Count <= 0)
                     return false;
-                targetPosition = (Vector2)transform.position + currentDirection.value;
-                return true;
-            }
-            return false;
+
+               
+               currentDirection = queuedMoves.Dequeue();
+               if (currentDirection == null)
+                   return false;
+
+               targetPosition = (Vector2)transform.position + currentDirection.value;
+               return true;
         }
 
         private void UpdateAnimatorWithCurrentDirection()

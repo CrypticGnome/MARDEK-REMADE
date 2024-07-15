@@ -10483,12 +10483,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8727420034804483783, guid: 3284b133489cd044ba5bc20aa422972a, type: 3}
       propertyPath: scene.scenePath
-      value: Assets/Scenes/Maps/Goznor/Overworld/goznor.unity
+      value: Assets/Scenes/MapScreen.unity
       objectReference: {fileID: 0}
     - target: {fileID: 8727420034804483783, guid: 3284b133489cd044ba5bc20aa422972a, type: 3}
       propertyPath: scene.sceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: aed8ff46ba00ea143af7333f26460bef, type: 3}
+      objectReference: {fileID: 102900000, guid: ee6f1f6442c2da745ab61ff059ee721d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3284b133489cd044ba5bc20aa422972a, type: 3}
 --- !u!1001 &2028940307

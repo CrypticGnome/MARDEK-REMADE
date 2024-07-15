@@ -59,16 +59,17 @@ namespace MARDEK.Movement
             for (int i = 0; i < inMapCharacters.Count; i++)
             {
                 GameObject character = inMapCharacters[i];
-                if (character != null)
+                if (character == null)
+                    continue;
+                
+                var position = i < positions.Count ? positions[i] : positions[positions.Count - 1];
+                Utilities2D.SetTransformPosition(character.transform, position);
+                if (directions != null && directions.Count > 0)
                 {
-                    var position = i < positions.Count ? positions[i] : positions[positions.Count - 1];
-                    Utilities2D.SetTransformPosition(character.transform, position);
-                    if (directions != null && directions.Count > 0)
-                    {
-                        var direction = i < directions.Count ? directions[i] : directions[directions.Count - 1];
-                        character.GetComponent<Movable>().FaceDirection(direction);
-                    }
+                    var direction = i < directions.Count ? directions[i] : directions[directions.Count - 1];
+                    character.GetComponent<Movable>().FaceDirection(direction);
                 }
+                
             }
         }
 
