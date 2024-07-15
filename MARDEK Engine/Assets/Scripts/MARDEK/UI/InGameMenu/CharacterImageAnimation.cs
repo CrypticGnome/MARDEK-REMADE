@@ -11,7 +11,7 @@ namespace MARDEK.UI
     {
         [SerializeField] CharacterSelectable characterSelectable;
         [SerializeField] Image characterImage;
-        [SerializeField] MoveDirection movementSpriteAnimationDirection;
+        public MoveDirection movementSpriteAnimationDirection;
         [SerializeField] Sprite disabledSprite;
 
         public void Update()

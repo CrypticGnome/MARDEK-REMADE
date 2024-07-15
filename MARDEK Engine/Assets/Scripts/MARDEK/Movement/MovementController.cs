@@ -18,19 +18,19 @@ namespace MARDEK.Movement
         {
             if(Utilities2D.AreCloseEnough(vector, Vector2.zero))
                 return null;
-            if (allowedDirections.Count > 0)
+            if (allowedDirections.Count == 0)
+               return null;
+
+            
+            MoveDirection result = allowedDirections[0];
+            foreach (MoveDirection dir in allowedDirections)
             {
-                MoveDirection result = allowedDirections[0];
-                foreach (MoveDirection dir in allowedDirections)
+                if (Vector2.Distance(result.value, vector) > Vector2.Distance(dir.value, vector))
                 {
-                    if (Vector2.Distance(result.value, vector) > Vector2.Distance(dir.value, vector))
-                    {
-                        result = dir;
-                    }
+                    result = dir;
                 }
-                return result;
             }
-            return null;
+            return result;
         }
     }
 }

@@ -89,4 +89,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Maps/Crash Site/saucer.unity
     guid: 379c267f5de3bee41ae2f8edfca27161
+  - enabled: 1
+    path: Assets/Scenes/MapScreen.unity
+    guid: ee6f1f6442c2da745ab61ff059ee721d
   m_configObjects: {}

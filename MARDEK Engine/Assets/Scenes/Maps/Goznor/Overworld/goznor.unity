@@ -3984,7 +3984,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3265152173036777289, guid: 3284b133489cd044ba5bc20aa422972a, type: 3}
       propertyPath: m_Name
-      value: Map Screen - CURRENTLY SOOTHWOOD
+      value: 'Map Screen '
       objectReference: {fileID: 0}
     - target: {fileID: 4698576466535043288, guid: 3284b133489cd044ba5bc20aa422972a, type: 3}
       propertyPath: m_RootOrder
@@ -4036,12 +4036,12 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 9b4c0380040f8e640869bd9f6470c82c, type: 2}
     - target: {fileID: 8727420034804483783, guid: 3284b133489cd044ba5bc20aa422972a, type: 3}
       propertyPath: scene.scenePath
-      value: Assets/Scenes/Maps/Soothwood/soothwood.unity
+      value: Assets/Scenes/MapScreen.unity
       objectReference: {fileID: 0}
     - target: {fileID: 8727420034804483783, guid: 3284b133489cd044ba5bc20aa422972a, type: 3}
       propertyPath: scene.sceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: 02a11c75a34ee0243b9aa0cccbce409d, type: 3}
+      objectReference: {fileID: 102900000, guid: ee6f1f6442c2da745ab61ff059ee721d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3284b133489cd044ba5bc20aa422972a, type: 3}
 --- !u!1001 &653447615

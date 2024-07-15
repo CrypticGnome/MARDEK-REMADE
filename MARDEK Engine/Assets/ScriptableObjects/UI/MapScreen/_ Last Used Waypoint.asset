@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f130efc2865500b45b296bb5f69404d6, type: 3}
-  m_Name: The Dragon
+  m_Script: {fileID: 11500000, guid: 89af512ddaef2c3488159c4bb8febbcc, type: 3}
+  m_Name: _ Last Used Waypoint
   m_EditorClassIdentifier: 
-  calculatorType: 1
-  constantValue: 40000
+  waypoint: {fileID: 0}
