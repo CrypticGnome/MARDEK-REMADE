@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using MARDEK.CharacterSystem;
 using MARDEK.Skill;
+using Codice.Client.Common;
 
 namespace MARDEK.UI
 {
@@ -83,15 +84,8 @@ namespace MARDEK.UI
 
             this.selectedSkillName.text = this.skill.DisplayName;
             this.selectedSkillDescription.text = this.skill.Description;
-            this.selectedSkillElement.sprite = this.skill.Element.thinSprite;
-
-            // TODO: remove this hardcoding
-            // Since the normal element icon doesn't have a translucent aura, the SVG renderer considers it to be smaller...
-            if (this.skill.Element.name.Equals("Normal")) {
-                this.selectedSkillElement.transform.localScale = new Vector3(0.85f, 0.85f, 1f);
-            } else {
-                this.selectedSkillElement.transform.localScale = new Vector3(1f, 1f, 1f);
-            }
+               this.selectedSkillElement.sprite = null;
+               Debug.LogAssertion("SkillMenuSkillSlotUI is not functional");
         }
 
         public void Init(Text selectedSkillName, Text selectedSkillDescription, Image selectedSkillElement, GameObject selectedSkillPointer)

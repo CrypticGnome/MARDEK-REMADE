@@ -5,8 +5,9 @@ using UnityEngine;
 namespace MARDEK.UI
 {
     using Core;
-    public abstract class ListActions : MonoBehaviour
-    {
+    using MARDEK.CharacterSystem;
+     public abstract class ListActions : MonoBehaviour
+     {
         [SerializeField] SelectableLayout listUI;
         List<BattleActionSlotUI> actionSlotUIs = new();
         int index = 0;
@@ -23,7 +24,7 @@ namespace MARDEK.UI
             index = 0;
         }
 
-        protected void SetNextSlot(IActionSlot action)
+        protected void SetNextSlot(BattleActionSlot action)
         {
             actionSlotUIs[index].SetSlot(action);
             index++;

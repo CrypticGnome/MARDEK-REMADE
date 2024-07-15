@@ -17,7 +17,9 @@ namespace MARDEK.CharacterSystem
           [field: SerializeField] public EquippedItems ItemsEquipped { get; private set; }
           [field: SerializeField] public Inventory Inventory { get; private set; } 
           public CoreStats BaseStats { get { return Profile.Stats;} }
-
+          [field: SerializeField] public ActionSkillset ActionSkillset { get; private set; }
+          [field: SerializeField] public ReactionSkillset ReactionSkillset { get; private set; }
+          [field: SerializeField] public PassiveSkillset PassiveSkillset { get; private set; }
           public Character()
           {
                Inventory = new Inventory();
@@ -128,10 +130,10 @@ namespace MARDEK.CharacterSystem
           public int Experience;
           public Character Clone(int level)
           {
-            var clone = new Character();
-            clone.Profile = Profile;
-            clone.Level = level;
-            return clone;
+               var clone = new Character();
+               clone.Profile = Profile;
+               clone.Level = level;
+               return clone;
           }
 
         public int GetStat(IntegerStat desiredStat)

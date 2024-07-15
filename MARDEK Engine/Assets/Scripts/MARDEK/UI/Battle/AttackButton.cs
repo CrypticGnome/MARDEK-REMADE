@@ -8,11 +8,11 @@ namespace MARDEK.UI
     public class AttackButton : MonoBehaviour
     {
         //[SerializeField] Image sprite;
-        [SerializeField] CharacterSystem.SkillSlot attackSkillSlot;
+        [SerializeField] CharacterSystem.BattleActionSlot attackSkillSlot;
 
         public void SelectAction()
         {
-            Battle.BattleManager.selectedAction = attackSkillSlot;
+            Battle.BattleManager.PerformAction(attackSkillSlot.PerformAction);
         }
     }
 }

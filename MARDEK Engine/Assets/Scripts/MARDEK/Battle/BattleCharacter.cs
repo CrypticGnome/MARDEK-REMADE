@@ -21,7 +21,6 @@ namespace MARDEK.Battle
                battleModel.SetBattlePosition(position);
                Character.CurrentHP = character.MaxHP;
                Character.CurrentMP = character.MaxMP;
-
           }
      }
 }

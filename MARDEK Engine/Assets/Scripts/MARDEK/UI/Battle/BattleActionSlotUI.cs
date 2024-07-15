@@ -9,14 +9,14 @@ namespace MARDEK.UI
     using Core;
     public class BattleActionSlotUI : Selectable
     {
-        public delegate void UpdateSelectedSlot(IActionSlot slot);
+        public delegate void UpdateSelectedSlot(BattleActionSlot slot);
         public static UpdateSelectedSlot UpdateSelected { get; set; }
         [SerializeField] Image sprite;
         [SerializeField] Text nameLabel;
         [SerializeField] Text number;
-        IActionSlot slot;
+          BattleActionSlot slot;
 
-        public void SetSlot(IActionSlot _slot)
+        public void SetSlot(BattleActionSlot _slot)
         {
             slot = _slot;
             if (slot == null)
@@ -30,10 +30,6 @@ namespace MARDEK.UI
             }
         }
 
-        public void SelectAction()
-        {
-            Battle.BattleManager.selectedAction = slot;
-        }
 
         public override void Select(bool playSFX = true)
         {

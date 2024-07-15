@@ -33,7 +33,7 @@ namespace MARDEK.UI
 
             var categoryToUse = category;
             if (categoryToUse == null)
-                categoryToUse = character.Profile.ActionSkillset;
+                categoryToUse = character.Profile.LearnableSkillset;
             if (categoryToUse != lastCategory)
             {
                 UpdateCategory(categoryToUse);

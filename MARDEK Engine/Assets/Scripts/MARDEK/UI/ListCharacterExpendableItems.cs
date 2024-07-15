@@ -14,7 +14,7 @@ namespace MARDEK.UI
             {
                 if (slot.item is Inventory.ExpendableItem)
                 {
-                    SetNextSlot(slot);
+                    SetNextSlot( new CharacterSystem.BattleActionSlot(slot));
                 }
             }
             UpdateLayout();
