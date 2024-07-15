@@ -30,8 +30,12 @@ namespace MARDEK.UI
             }
         }
 
+          public void SelectAction()
+          {
+               slot.ApplyAction();
+          }
 
-        public override void Select(bool playSFX = true)
+          public override void Select(bool playSFX = true)
         {
             base.Select(playSFX);
             UpdateSelected?.Invoke(slot);

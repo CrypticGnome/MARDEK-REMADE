@@ -10,16 +10,20 @@ namespace MARDEK.CharacterSystem
      using Stats;
      using System;
      using MARDEK.Inventory;
+     using static PlasticPipe.Server.MonitorStats;
 
      [Serializable]
-    public class BattleActionSlot
+    public class BattleActionSlot 
     {
           public string DisplayName;
           public Sprite Sprite;
           public int Number;
           public string Description;
           public ApplyAction PerformAction;
-
+          public void ApplyAction()
+          {
+              BattleManager.PerformAction(PerformAction);
+          }
           public BattleActionSlot(ActionSkill skill)
           {
                try

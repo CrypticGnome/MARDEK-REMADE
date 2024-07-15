@@ -26,13 +26,16 @@ namespace MARDEK.Battle
           static public List<BattleCharacter> EnemyBattleParty { get; private set; } = new();
           static public List<BattleCharacter> PlayerBattleParty { get; private set; } = new();
           static BattleManager instance;
+          BattleState state;
+
+
           private void Awake()
           {
                instance = this;
                if (!encounter)
                {
                     Debug.LogAssertion("Encounter is null");
-                    CheckVictory();
+                    CheckBattleEnd();
                     return;
                }
 
@@ -46,7 +49,7 @@ namespace MARDEK.Battle
                foreach (var c in playerParty.Characters)
                     SpawnPlayerBattleCharacter(c);
 
-
+               state = BattleState.Idle;
 
                void SpawnEnemyBattleCharacter(Character c)
                {
@@ -59,11 +62,9 @@ namespace MARDEK.Battle
                     PlayerBattleParty.Add(new BattleCharacter(c, position));
                }
           }
-
           private void Update()
           {
-               CheckVictory();
-               if (characterActing == null)
+               if (state == BattleState.Idle)
                {
                     WaitForNextCharacter();
                     return;
@@ -75,11 +76,16 @@ namespace MARDEK.Battle
                     if (characterActing == null)
                          return;
                     
-                    characterActionUI.SetActive(true);
                     bool characterIsEnemy = EnemyBattleParty.Contains(characterActing);
                     if (characterIsEnemy)
+                    {
                          PerformEnemyMove();
-                    
+                         return;
+                    }
+
+                    characterActionUI.SetActive(true);
+                    state = BattleState.ChoosingAction;
+
                }
                void PerformEnemyMove()
                {
@@ -151,6 +157,7 @@ namespace MARDEK.Battle
           }
           public static void PerformAction(ApplyAction action)
           {
+
                BattleCharacter target;
                if (EnemyBattleParty.Contains(characterActing))
                     target = PlayerBattleParty[Random.Range(0, PlayerBattleParty.Count - 1)];
@@ -161,12 +168,40 @@ namespace MARDEK.Battle
                if (action is null)
                {
                     Debug.LogAssertion("Attempted action was null");
+                    EndTurn();
                     return;
                }
+
+               instance.state = BattleState.ActionPerforming;
                action.Invoke(characterActing.Character, target.Character);
 
-               characterActing = null;
-               instance.characterActionUI.SetActive(false);
+               EndTurn();
+
+               void EndTurn()
+               {
+                    for (int i = EnemyBattleParty.Count - 1; i >= 0; i--)
+                    {
+                         var enemy = EnemyBattleParty[i];
+                         var health = enemy.Character.CurrentHP;
+                         if (health > 0)
+                              continue;
+                         
+                          EnemyBattleParty.Remove(enemy);
+                         Destroy(enemy.battleModel.gameObject);
+                    }
+
+                    for (int i = PlayerBattleParty.Count - 1; i >= 0; i--)
+                    {
+                         var hero = PlayerBattleParty[i];
+                         var health = hero.Character.CurrentHP;
+                         if (health <= 0)
+                              PlayerBattleParty.Remove(hero);
+                    }
+                    characterActing = null;
+                    instance.state = BattleState.Idle;
+                    instance.characterActionUI.SetActive(false);
+                    instance.CheckBattleEnd();
+               }
           }
           
           public void SkipCurrentCharacterTurn()
@@ -175,23 +210,37 @@ namespace MARDEK.Battle
               characterActionUI.SetActive(false);
           }
     
-          void CheckVictory()
+          void CheckBattleEnd()
           {
-               for (int i = EnemyBattleParty.Count - 1; i >= 0; i--)
+               bool defeat = PlayerBattleParty.Count == 0;
+               if (defeat)
                {
-                   var enemy = EnemyBattleParty[i];
-                   var health = enemy.Character.CurrentHP;
-                   if (health <= 0)
-                       EnemyBattleParty.Remove(enemy);
+                    print("defeat!!");
+                    Debug.LogAssertion("Defeat not implemented yet");
+                    instance.state = BattleState.Concluding;
                }
-
                var victory = EnemyBattleParty.Count == 0;
                if (victory)
                {
-                   print("victory!!");
-                   OnVictory.Invoke();
-                   enabled = false;
+                    instance.state = BattleState.Concluding;
+                    StartCoroutine(Victory());
                }
+          }
+
+          IEnumerator Victory()
+          {
+               print("victory!!");
+               yield return new WaitForSeconds(2);
+               instance.OnVictory.Invoke();
+               instance.enabled = false;
+          }
+
+          enum BattleState
+          {
+               Idle,
+               ChoosingAction,
+               ActionPerforming,
+               Concluding
           }
     }
      public delegate void ApplyAction(Character user, Character target);

@@ -11,7 +11,7 @@ namespace MARDEK.Battle
     public class BattleCharacter
     {
           public Character Character { get; private set; }
-          BattleModel battleModel = null;
+          public BattleModel battleModel = null;
           public string Name { get { return Character.Profile.displayName; } }
           public CoreStats Stats { get { return Character.Profile.Stats; } }
           public BattleCharacter(Character character, Vector3 position)
@@ -22,5 +22,10 @@ namespace MARDEK.Battle
                Character.CurrentHP = character.MaxHP;
                Character.CurrentMP = character.MaxMP;
           }
+          public void PlayAction(IAction action)
+          {
+               // battleModel.Animate(action.Animation);
+          }
+          
      }
 }
