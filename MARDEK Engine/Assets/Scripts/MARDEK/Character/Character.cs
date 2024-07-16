@@ -2,7 +2,8 @@ using UnityEngine;
 
 namespace MARDEK.CharacterSystem
 {
-    using Core;
+     using Codice.Client.GameUI.Status;
+     using Core;
     using Inventory;
      using Stats;
      using System;
@@ -20,6 +21,8 @@ namespace MARDEK.CharacterSystem
           [field: SerializeField] public ActionSkillset ActionSkillset { get; private set; }
           [field: SerializeField] public ReactionSkillset ReactionSkillset { get; private set; }
           [field: SerializeField] public PassiveSkillset PassiveSkillset { get; private set; }
+          public delegate void StatChanged();
+          public event StatChanged OnStatChanged;
           public Character()
           {
                Inventory = new Inventory();
@@ -95,6 +98,7 @@ namespace MARDEK.CharacterSystem
                set
                {
                     _currentHP = value;
+                    OnStatChanged?.Invoke();
                }
           }
 
@@ -110,6 +114,7 @@ namespace MARDEK.CharacterSystem
                set
                {
                     _currentMP = value;
+                    OnStatChanged?.Invoke();
                }
           }
           public int MaxHP{get{ return BaseStats.MaxHP.GetMaxHP(this);}}

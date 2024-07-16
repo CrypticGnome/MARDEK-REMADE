@@ -34,7 +34,7 @@ namespace MARDEK.UI
             else
             {
                 character = null;
-                basePanel.SetActive(false);
+                    basePanel.SetActive(false);
             }
         }
 

@@ -9,21 +9,15 @@ namespace MARDEK.UI
     public class HealthBar : MonoBehaviour
     {
         [SerializeField] CharacterUI characterUI = null;
-        [SerializeField] IntegerStat stat;
-        [SerializeField] IntegerStat maxStat;
         [SerializeField] RectTransform barTransform;
         [SerializeField] TMPro.TMP_Text statText;
         [SerializeField] TMPro.TMP_Text maxStatText;
 
-        private void OnEnable()
-        {
-            UpdateBar();
-        }
-
-        private void LateUpdate()
-        {
-            UpdateBar();
-        }
+          private void OnEnable()
+          {
+               characterUI.character.Character.OnStatChanged += UpdateBar;
+               UpdateBar();
+          }
 
         [ContextMenu("Update Bar")]
         void UpdateBar()

@@ -26,32 +26,27 @@ namespace MARDEK.CharacterSystem
           }
           public BattleActionSlot(ActionSkill skill)
           {
-               try
+               Battle.Action action = skill.Action;
+               if (action.Element is null)
                {
-                    DisplayName = skill.DisplayName;
-                    Sprite = skill.Element.thickSprite;
-                    Number = skill.Cost;
-                    Description = skill.Description;
-                    PerformAction = skill.Apply;
+                    Debug.LogAssertion($"{skill.DisplayName} does not have an attatched element");
+                    return;
                }
-               catch
-               {
-                    Debug.LogAssertion($"{skill.name} failed to be displayed as a {this}");
-               }
+               DisplayName = skill.DisplayName;
+               Sprite = action.Element.thickSprite;
+               Number = skill.Cost;
+               Description = skill.Description;
+               PerformAction = action.Apply;
           }
 
           public BattleActionSlot(Slot inventorySlot)
           {
-               Item item = inventorySlot.item;
+               ExpendableItem item = inventorySlot.item as ExpendableItem;
                DisplayName = item.displayName;
                Sprite = item.sprite;
                Number = inventorySlot.Number;
                Description = item.description;
-               PerformAction = Action;
-               void Action(Character a, Character b)
-               {
-                    throw new NotImplementedException();
-               }
+               PerformAction = item.Action.Apply;
           }
      }
 }

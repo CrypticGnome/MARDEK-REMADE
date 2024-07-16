@@ -39,19 +39,19 @@ namespace MARDEK.UI
             {
                 itemImage.sprite = transparentSprite;
                 amountText.text = "";
+                    return;
             } 
-            else 
+            
+            itemImage.sprite = slot.item.sprite;
+            if (slot.amount == 1)
             {
-                itemImage.sprite = slot.item.sprite;
-                if (slot.amount == 1)
-                {
-                    amountText.text = "";
-                }
-                else
-                {
-                    amountText.text = slot.amount.ToString();
-                }
+                amountText.text = "";
             }
+            else
+            {
+                amountText.text = slot.amount.ToString();
+            }
+            
         }
 
         public void OnPointerClick(PointerEventData pointerEvent)

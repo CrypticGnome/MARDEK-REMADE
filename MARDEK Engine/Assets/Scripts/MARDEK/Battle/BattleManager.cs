@@ -19,6 +19,7 @@ namespace MARDEK.Battle
           [SerializeField] List<GameObject> enemyPartyPositions = new();
           [SerializeField] List<GameObject> playerPartyPositions = new();
           [SerializeField] UnityEvent OnVictory;
+          [SerializeField] EncounterSet dummyEncounter;
           public static EncounterSet encounter { private get; set; }
           public static BattleCharacter characterActing { get; private set; }
           public static ApplyAction ActionToPerform;
@@ -34,11 +35,14 @@ namespace MARDEK.Battle
                instance = this;
                if (!encounter)
                {
-                    Debug.LogAssertion("Encounter is null");
-                    CheckBattleEnd();
-                    return;
+                    if (!dummyEncounter)
+                    {
+                         Debug.LogAssertion("Encounter is null");
+                         CheckBattleEnd();
+                         return;
+                    }
+                    encounter = dummyEncounter;
                }
-
                List<Character> enemyCharacters = encounter.InstantiateEncounter();
 
                EnemyBattleParty.Clear();
@@ -97,7 +101,7 @@ namespace MARDEK.Battle
                          instance.characterActionUI.SetActive(false);
                          return;
                     }
-                    ActionSkill move = enemyMoveset.Skills[Random.Range(0, enemyMoveset.Skills.Count)];
+                    Action move = enemyMoveset.Skills[Random.Range(0, enemyMoveset.Skills.Count)].Action;
                     PerformAction(move.Apply);
                }
                BattleCharacter StepActCycleTryGetNextCharacter()
@@ -168,46 +172,45 @@ namespace MARDEK.Battle
                if (action is null)
                {
                     Debug.LogAssertion("Attempted action was null");
-                    EndTurn();
+                    instance.EndTurn();
                     return;
                }
 
                instance.state = BattleState.ActionPerforming;
                action.Invoke(characterActing.Character, target.Character);
 
-               EndTurn();
+               instance.EndTurn();
 
-               void EndTurn()
-               {
-                    for (int i = EnemyBattleParty.Count - 1; i >= 0; i--)
-                    {
-                         var enemy = EnemyBattleParty[i];
-                         var health = enemy.Character.CurrentHP;
-                         if (health > 0)
-                              continue;
-                         
-                          EnemyBattleParty.Remove(enemy);
-                         Destroy(enemy.battleModel.gameObject);
-                    }
-
-                    for (int i = PlayerBattleParty.Count - 1; i >= 0; i--)
-                    {
-                         var hero = PlayerBattleParty[i];
-                         var health = hero.Character.CurrentHP;
-                         if (health <= 0)
-                              PlayerBattleParty.Remove(hero);
-                    }
-                    characterActing = null;
-                    instance.state = BattleState.Idle;
-                    instance.characterActionUI.SetActive(false);
-                    instance.CheckBattleEnd();
-               }
+               
           }
-          
+          void EndTurn()
+          {
+               for (int i = EnemyBattleParty.Count - 1; i >= 0; i--)
+               {
+                    var enemy = EnemyBattleParty[i];
+                    var health = enemy.Character.CurrentHP;
+                    if (health > 0)
+                         continue;
+
+                    EnemyBattleParty.Remove(enemy);
+                    Destroy(enemy.battleModel.gameObject);
+               }
+
+               for (int i = PlayerBattleParty.Count - 1; i >= 0; i--)
+               {
+                    var hero = PlayerBattleParty[i];
+                    var health = hero.Character.CurrentHP;
+                    if (health <= 0)
+                         PlayerBattleParty.Remove(hero);
+               }
+               characterActing = null;
+               instance.state = BattleState.Idle;
+               instance.characterActionUI.SetActive(false);
+               instance.CheckBattleEnd();
+          }
           public void SkipCurrentCharacterTurn()
           {
-              characterActing = null;
-              characterActionUI.SetActive(false);
+               EndTurn();
           }
     
           void CheckBattleEnd()

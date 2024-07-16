@@ -303,6 +303,7 @@ MonoBehaviour:
   onStart: 0
   onInteractionKey: 0
   onTriggerEnter: 1
+  raiseEvent: 0
 --- !u!114 &203514840
 MonoBehaviour:
   m_ObjectHideFlags: 0

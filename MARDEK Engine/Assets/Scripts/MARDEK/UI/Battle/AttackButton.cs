@@ -13,7 +13,7 @@ namespace MARDEK.UI
 
         public void SelectAction()
         {
-            Battle.BattleManager.PerformAction(attack.Apply);
+            Battle.BattleManager.PerformAction(attack.Action.Apply);
         }
     }
 }

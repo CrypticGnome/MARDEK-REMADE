@@ -18,8 +18,8 @@ MonoBehaviour:
     MainHand: {fileID: 11400000, guid: 9f44d2ce67d4c63428b26c460a494c8e, type: 2}
     OffHand: {fileID: 0}
     Head: {fileID: 0}
-    Body: {fileID: 0}
-    Accessory1: {fileID: 0}
+    Body: {fileID: 11400000, guid: 7d545b6b019ef57499fd306d4bb86984, type: 2}
+    Accessory1: {fileID: 11400000, guid: 1a6088039ca4aff479c8f3002a92c2da, type: 2}
     Accessory2: {fileID: 0}
   <Inventory>k__BackingField:
     slots:

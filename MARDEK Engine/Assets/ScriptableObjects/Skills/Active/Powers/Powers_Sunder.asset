@@ -17,5 +17,8 @@ MonoBehaviour:
   <DisplayName>k__BackingField: Sunder
   <Description>k__BackingField: A mighty gash in the fabric of space that causes
     Earth elemental damage.
-  effects: 
-  Element: {fileID: 0}
+  action:
+    effects:
+    - effectType: 0
+      motionValue: 1
+    element: {fileID: 11400000, guid: 96b7bd01ebbf64840a070d9ed9321b4c, type: 2}

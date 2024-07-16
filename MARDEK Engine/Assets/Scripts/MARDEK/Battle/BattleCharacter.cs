@@ -22,10 +22,6 @@ namespace MARDEK.Battle
                Character.CurrentHP = character.MaxHP;
                Character.CurrentMP = character.MaxMP;
           }
-          public void PlayAction(IAction action)
-          {
-               // battleModel.Animate(action.Animation);
-          }
-          
+         
      }
 }

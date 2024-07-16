@@ -16,5 +16,8 @@ MonoBehaviour:
   <PointsRequiredToMaster>k__BackingField: 0
   <DisplayName>k__BackingField: Shock
   <Description>k__BackingField: 
-  effects: 
-  Element: {fileID: 0}
+  action:
+    effects:
+    - effectType: 0
+      motionValue: 1
+    element: {fileID: 11400000, guid: 3b3d471c2fd4e964bad27afb63ea5346, type: 2}

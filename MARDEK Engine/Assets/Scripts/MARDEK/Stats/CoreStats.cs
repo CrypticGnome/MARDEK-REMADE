@@ -38,9 +38,10 @@ namespace MARDEK.Stats
           public int Attack, Defense, MagicDefense;
           public Absorbtions Absorbtions;
           public Resistances Resistances;
-          public CoreStats CoreStats;
+          public int Strength, Vitality, Spirit, Agility;
           public int Crit;
           public int Accuracy = 100;
+          public int Health, Mana;
      }
 }
 

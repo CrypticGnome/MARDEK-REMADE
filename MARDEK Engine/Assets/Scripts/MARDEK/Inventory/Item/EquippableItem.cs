@@ -12,6 +12,8 @@ namespace MARDEK.Inventory
         [SerializeField] EquipmentCategory _category;
         [SerializeField] ItemStats statBoosts;
         public ItemStats Stats { get { return statBoosts; } }
+          [SerializeField] List<Skill.Skill> grantSkills;
+
 
         [SerializeField] string _hitSFX;
         public string hitSFX { get { return _hitSFX; } }

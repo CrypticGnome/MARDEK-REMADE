@@ -9,37 +9,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f13698c79568447a0b3862945c868a, type: 3}
+  m_Script: {fileID: 11500000, guid: 42835d9f816510946974f97e25505c64, type: 3}
   m_Name: Bandit Leather +5
   m_EditorClassIdentifier: 
-  _displayName: Bandit Leather +5
-  _elementText: Air
-  _description: A suit of armour made of leather, often worn by bandit leaders. It
-    is infused with the power of air, giving a bonus to agility, air resistance,
-    and resistance to paralysis. \nThis variation has enhanced enchantments.
-  _sprite: {fileID: 21300000, guid: 1a82040aa84bdc447addfd72751f5fe1, type: 3}
-  _element: {fileID: 11400000, guid: 3b3d471c2fd4e964bad27afb63ea5346, type: 2}
-  _price: 18000
-  <SkillsToEquip>k__BackingField: []
-  _category: {fileID: 11400000, guid: 8b4cab54519098d45956395e894afcd1, type: 2}
-  _statsSet:
-    intStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 46c026df8a249b74d8bcb5a7c1a50f02, type: 2}
-      _value: 7
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 1b22f71dbf2256c4e911d8c67c85b913, type: 2}
-      _value: 7
-    floatStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: ec557c6e575f0964aa9366e873e77086, type: 2}
-      _value: 100
-  _hitSFX: 0
-  _ATK: 0
-  _CRIT: 0
-  _DEF: 7
-  _EVA: 0
-  _HIT: 0
-  _MDEF: 7
-  _SPR: 0
-  _STR: 0
-  _VIT: 0
-  _categoryText: LightArmour
-  <OnlyUsers>k__BackingField: []
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
+  _price: 0
+  _category: {fileID: 0}
+  statBoosts:
+    Attack: 0
+    Defense: 0
+    MagicDefense: 0
+    Absorbtions:
+      Fire: 0
+      Earth: 0
+      Water: 0
+      Air: 0
+      Light: 0
+      Dark: 0
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+    Resistances:
+      Sleep: 0
+    Strength: 0
+    Vitality: 0
+    Spirit: 0
+    Agility: 0
+    Crit: 0
+    Accuracy: 100
+    Health: 0
+    Mana: 0
+  grantSkills: []
+  _hitSFX: 
