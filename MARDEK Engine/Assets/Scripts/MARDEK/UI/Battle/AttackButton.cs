@@ -1,3 +1,4 @@
+using MARDEK.Skill;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,11 @@ namespace MARDEK.UI
     public class AttackButton : MonoBehaviour
     {
         //[SerializeField] Image sprite;
-        [SerializeField] CharacterSystem.SkillSlot attackSkillSlot;
+        [SerializeField] ActionSkill attack;
 
         public void SelectAction()
         {
-            Battle.BattleManager.selectedAction = attackSkillSlot;
+            Battle.BattleManager.PerformAction(attack.Action.Apply);
         }
     }
 }

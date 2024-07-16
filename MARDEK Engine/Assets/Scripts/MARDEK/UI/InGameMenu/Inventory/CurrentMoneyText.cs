@@ -12,7 +12,7 @@ namespace MARDEK.UI
 
         void FixedUpdate()
         {
-            text.text = Party.Instance.money.ToString();
+               text.text = Party.Instance.money.ToString();
         }
     }
 }

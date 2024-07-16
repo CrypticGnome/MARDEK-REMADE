@@ -23,6 +23,9 @@ MonoBehaviour:
     Accessory2: {fileID: 0}
   <Inventory>k__BackingField:
     slots: []
+  <ActionSkillset>k__BackingField: {fileID: 11400000, guid: bdb91fdccc4422743ae6542c3e4eece4, type: 2}
+  <ReactionSkillset>k__BackingField: {fileID: 0}
+  <PassiveSkillset>k__BackingField: {fileID: 0}
   attack: 0
   defense: 0
   magicDefense: 0

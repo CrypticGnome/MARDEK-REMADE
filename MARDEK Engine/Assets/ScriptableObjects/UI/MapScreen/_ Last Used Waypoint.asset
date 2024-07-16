@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89af512ddaef2c3488159c4bb8febbcc, type: 3}
   m_Name: _ Last Used Waypoint
   m_EditorClassIdentifier: 
-  waypoint: {fileID: 0}
+  Location: {fileID: 11400000, guid: c67deff9d0c60ef4493f3aaa8924cda8, type: 2}
+  EnterWaypoint: {fileID: 11400000, guid: ff586c8d0686320458090021be35841e, type: 2}
+  OverrideFacingDirection: {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}

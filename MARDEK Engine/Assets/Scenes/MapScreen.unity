@@ -306,7 +306,7 @@ MonoBehaviour:
   upperLocation:
     Waypoint: {fileID: 2002347218}
     EnterWaypoint: {fileID: 11400000, guid: 1ff929c7174ce7647986037272d81263, type: 2}
-    OverrideFacingDirection: {fileID: 0}
+    OverrideFacingDirection: {fileID: 11400000, guid: a51fa9789f30cd14b903b94df523d503, type: 2}
   lowerLocation:
     Waypoint: {fileID: 0}
     EnterWaypoint: {fileID: 0}
@@ -314,12 +314,12 @@ MonoBehaviour:
   rightLocation:
     Waypoint: {fileID: 2002347218}
     EnterWaypoint: {fileID: 11400000, guid: 1ff929c7174ce7647986037272d81263, type: 2}
-    OverrideFacingDirection: {fileID: 0}
+    OverrideFacingDirection: {fileID: 11400000, guid: a51fa9789f30cd14b903b94df523d503, type: 2}
   leftLocation:
     Waypoint: {fileID: 0}
     EnterWaypoint: {fileID: 0}
     OverrideFacingDirection: {fileID: 0}
-  location: {fileID: 11400000, guid: 5791b5991a341df44add9971bc772232, type: 2}
+  location: {fileID: 11400000, guid: cadb5b8ae2e21884dac092e16bb17171, type: 2}
 --- !u!212 &347046693
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -725,7 +725,7 @@ MonoBehaviour:
   lowerLocation:
     Waypoint: {fileID: 1487060165}
     EnterWaypoint: {fileID: 11400000, guid: ff586c8d0686320458090021be35841e, type: 2}
-    OverrideFacingDirection: {fileID: 0}
+    OverrideFacingDirection: {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
   rightLocation:
     Waypoint: {fileID: 0}
     EnterWaypoint: {fileID: 0}
@@ -733,7 +733,7 @@ MonoBehaviour:
   leftLocation:
     Waypoint: {fileID: 2002347218}
     EnterWaypoint: {fileID: 11400000, guid: 9b4c0380040f8e640869bd9f6470c82c, type: 2}
-    OverrideFacingDirection: {fileID: 0}
+    OverrideFacingDirection: {fileID: 11400000, guid: b19d088da4eb0fe4c83aa92cbc400e36, type: 2}
   location: {fileID: 11400000, guid: c67deff9d0c60ef4493f3aaa8924cda8, type: 2}
 --- !u!114 &1483908467
 MonoBehaviour:
@@ -804,7 +804,7 @@ MonoBehaviour:
   upperLocation:
     Waypoint: {fileID: 1483908466}
     EnterWaypoint: {fileID: 11400000, guid: ff586c8d0686320458090021be35841e, type: 2}
-    OverrideFacingDirection: {fileID: 0}
+    OverrideFacingDirection: {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
   lowerLocation:
     Waypoint: {fileID: 0}
     EnterWaypoint: {fileID: 0}
@@ -919,6 +919,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cf66a914a47f684a93354b82dc24a5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentWaypoint: {fileID: 0}
+  lastUsedWaypoint: {fileID: 11400000, guid: cfbbc50d8aabce8468c4e4463bddb604, type: 2}
   defaultWaypoint: {fileID: 1483908466}
   inputReader: {fileID: 1611662191}
   sceneTransitionCommand: {fileID: 1611662192}
@@ -1120,15 +1122,15 @@ MonoBehaviour:
   lowerLocation:
     Waypoint: {fileID: 347046692}
     EnterWaypoint: {fileID: 11400000, guid: ff586c8d0686320458090021be35841e, type: 2}
-    OverrideFacingDirection: {fileID: 0}
+    OverrideFacingDirection: {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
   rightLocation:
     Waypoint: {fileID: 1483908466}
     EnterWaypoint: {fileID: 11400000, guid: ff586c8d0686320458090021be35841e, type: 2}
-    OverrideFacingDirection: {fileID: 0}
+    OverrideFacingDirection: {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
   leftLocation:
     Waypoint: {fileID: 347046692}
     EnterWaypoint: {fileID: 11400000, guid: ff586c8d0686320458090021be35841e, type: 2}
-    OverrideFacingDirection: {fileID: 0}
+    OverrideFacingDirection: {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
   location: {fileID: 11400000, guid: 5791b5991a341df44add9971bc772232, type: 2}
 --- !u!212 &2002347219
 SpriteRenderer:

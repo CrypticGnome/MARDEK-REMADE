@@ -8,7 +8,7 @@ namespace MARDEK.UI
     public class SlotCursor : MonoBehaviour
     {
         public static SlotCursor instance { get; private set; }
-        Slot slot = new Slot(null, 0, new System.Collections.Generic.List<EquipmentCategory>(), true, true);
+        InventorySlot slot = new InventorySlot(null, 0, new System.Collections.Generic.List<EquipmentCategory>(), true, true);
 
         [SerializeField] AudioObject pickupSound;
         [SerializeField] AudioObject placeSound;
@@ -33,12 +33,12 @@ namespace MARDEK.UI
         {
             return slot.amount;
         }
-        public static void InteractWithSlot(Slot slotInteracted)
+        public static void InteractWithSlot(InventorySlot slotInteracted)
         {
             instance.InteractWithSlotInternal(slotInteracted);
             instance.UpdateInputReadersHolding();
         }
-        void InteractWithSlotInternal(Slot slotInteracted)
+        void InteractWithSlotInternal(InventorySlot slotInteracted)
         { 
             if (slot.IsEmpty())
             {
@@ -56,7 +56,7 @@ namespace MARDEK.UI
                 }
             }
         }
-        void PlaceItemInSlot(Slot slotInteracted)
+        void PlaceItemInSlot(InventorySlot slotInteracted)
         {
             if (slotInteracted.IsEmpty())
             {
@@ -82,7 +82,7 @@ namespace MARDEK.UI
                 }
             }
         }
-        void SwapSlotItems(Slot slotInteracted)
+        void SwapSlotItems(InventorySlot slotInteracted)
         {
             Item newCursorItem = slotInteracted.currentItem;
             int newCursorAmount = slotInteracted.currentAmount;
@@ -92,7 +92,7 @@ namespace MARDEK.UI
             slot.currentAmount = newCursorAmount;
             AudioManager.PlaySoundEffect(pickupSound);
         }
-        void PickupItemFromSlot(Slot slotInteracted)
+        void PickupItemFromSlot(InventorySlot slotInteracted)
         {
             if (slotInteracted.canBeEmpty)
             {

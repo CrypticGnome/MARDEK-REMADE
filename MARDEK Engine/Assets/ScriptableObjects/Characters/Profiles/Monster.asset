@@ -18,14 +18,12 @@ MonoBehaviour:
   <portrait>k__BackingField: {fileID: 0}
   <WalkSprites>k__BackingField: {fileID: 0}
   <BattleModelPrefab>k__BackingField: {fileID: 541649454727450239, guid: 753b4f4c394586b409582fd403ce7a0b, type: 3}
-  <ActionSkillset>k__BackingField: {fileID: 0}
-  <ReactionSkillset>k__BackingField: {fileID: 0}
-  <PassiveSkillset>k__BackingField: {fileID: 0}
+  <LearnableSkillset>k__BackingField: {fileID: 11400000, guid: bdb91fdccc4422743ae6542c3e4eece4, type: 2}
   <Stats>k__BackingField:
-    Strength: 0
-    Vitality: 0
-    Spirit: 0
-    Agility: 0
+    Strength: 30
+    Vitality: 24
+    Spirit: 2
+    Agility: 8
     Absorbtions:
       Fire: 0
       Earth: 0
@@ -39,7 +37,7 @@ MonoBehaviour:
       Thauma: 0
     Resistances:
       Sleep: 0
-    Attack: 30
+    Attack: 50
     Defense: 0
     MagicDefense: 0
     Crit: 0

@@ -15,14 +15,52 @@ MonoBehaviour:
   isRequired: 0
   <Profile>k__BackingField: {fileID: 11400000, guid: 83695886c34656f4e9e9ae47c4858e6f, type: 2}
   <ItemsEquipped>k__BackingField:
-    MainHand: {fileID: 11400000, guid: 9f44d2ce67d4c63428b26c460a494c8e, type: 2}
-    OffHand: {fileID: 0}
-    Head: {fileID: 0}
-    Body: {fileID: 0}
-    Accessory1: {fileID: 0}
-    Accessory2: {fileID: 0}
+    MainHand:
+      currentItem: {fileID: 11400000, guid: 9f44d2ce67d4c63428b26c460a494c8e, type: 2}
+      currentAmount: 1
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    OffHand:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Head:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Body:
+      currentItem: {fileID: 11400000, guid: 7d545b6b019ef57499fd306d4bb86984, type: 2}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Accessory1:
+      currentItem: {fileID: 11400000, guid: 1a6088039ca4aff479c8f3002a92c2da, type: 2}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Accessory2:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
   <Inventory>k__BackingField:
-    slots: []
+    slots:
+    - currentItem: {fileID: 11400000, guid: 3071228e88047bf4295c85c047f12146, type: 2}
+      currentAmount: 10
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+  <ActionSkillset>k__BackingField: {fileID: 11400000, guid: 78bbd425c89cfb74e98cc0ffe2371e74, type: 2}
+  <ReactionSkillset>k__BackingField: {fileID: 0}
+  <PassiveSkillset>k__BackingField: {fileID: 0}
   attack: 100
   defense: 0
   magicDefense: 0

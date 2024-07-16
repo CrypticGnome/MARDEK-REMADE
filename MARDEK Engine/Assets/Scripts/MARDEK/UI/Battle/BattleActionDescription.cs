@@ -6,8 +6,9 @@ using UnityEngine.UI;
 namespace MARDEK.UI
 {
     using Core;
-    public class BattleActionDescription : MonoBehaviour
-    {
+     using MARDEK.CharacterSystem;
+     public class BattleActionDescription : MonoBehaviour
+     {
         [SerializeField] Text nameLabel;
         [SerializeField] Text description;
         [SerializeField] Image icon;
@@ -21,7 +22,7 @@ namespace MARDEK.UI
             UpdateDescription(null);
         }
 
-        public void UpdateDescription(IActionSlot action)
+        public void UpdateDescription(BattleActionSlot action)
         {
             if (action != null)
             {

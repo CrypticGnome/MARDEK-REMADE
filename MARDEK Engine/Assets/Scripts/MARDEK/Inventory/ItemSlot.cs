@@ -7,7 +7,7 @@ namespace MARDEK.Inventory
      using MARDEK.CharacterSystem;
 
      [System.Serializable]
-    public class Slot : IActionSlot
+    public class InventorySlot : IActionSlot
     {
         public Item currentItem;
         public int currentAmount;
@@ -39,7 +39,7 @@ namespace MARDEK.Inventory
         public int Number => amount;
         public string Description => item.description;
 
-        public Slot(Item initialItem, int initialAmount, List<EquipmentCategory> itemFilter, bool canBeEmpty, bool canPlayerPutItems)
+        public InventorySlot(Item initialItem, int initialAmount, List<EquipmentCategory> itemFilter, bool canBeEmpty, bool canPlayerPutItems)
         {
             this.currentItem = initialItem;
             this.currentAmount = initialAmount;

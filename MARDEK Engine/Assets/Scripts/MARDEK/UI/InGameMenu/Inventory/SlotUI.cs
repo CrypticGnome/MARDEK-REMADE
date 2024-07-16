@@ -18,10 +18,10 @@ namespace MARDEK.UI
 
         SubmenuLayoutController submenuController;
         SelectableLayout partyLayout;
-        Slot slot;
-        public static Slot selectedSlot { get; private set; }
+        InventorySlot slot;
+        public static InventorySlot selectedSlot { get; private set; }
 
-        public void SetSlot(Slot newSlot)
+        public void SetSlot(InventorySlot newSlot)
         {
             slot = newSlot;
             UpdateSprite();
@@ -37,21 +37,22 @@ namespace MARDEK.UI
         {
             if (slot.IsEmpty())
             {
-                itemImage.sprite = transparentSprite;
+                itemImage.enabled = false;
                 amountText.text = "";
-            } 
-            else 
-            {
-                itemImage.sprite = slot.item.sprite;
-                if (slot.amount == 1)
-                {
-                    amountText.text = "";
-                }
-                else
-                {
-                    amountText.text = slot.amount.ToString();
-                }
+                    return;
             }
+               itemImage.enabled = true;
+
+               itemImage.sprite = slot.item.sprite;
+            if (slot.amount == 1)
+            {
+                amountText.text = "";
+            }
+            else
+            {
+                amountText.text = slot.amount.ToString();
+            }
+            
         }
 
         public void OnPointerClick(PointerEventData pointerEvent)

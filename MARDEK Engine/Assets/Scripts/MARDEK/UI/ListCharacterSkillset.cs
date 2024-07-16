@@ -13,13 +13,12 @@ namespace MARDEK.UI
         ActionSkillset skillsetToShow;
         [SerializeField] TextMeshProUGUI skillsetNameLabel = null;
         [SerializeField] Image skillsetIcon = null; 
-        [SerializeField] List<ActionSkillset> possibleSkillsets;
 
         private void OnEnable()
         {
             var character = Battle.BattleManager.characterActing;
             skillsetToShow = null;
-            skillsetToShow = character.Character.Profile.ActionSkillset;
+            skillsetToShow = character.Character.ActionSkillset;
 
             if (skillsetToShow)
             {
@@ -37,12 +36,14 @@ namespace MARDEK.UI
           {
                ClearSlots();
                if (!skillsetToShow)
+               {
+                    Debug.LogWarning("No skillset to show");
                     return;
+               }
 
                foreach (var skill in skillsetToShow.Skills)
                {
-                   SkillSlot slot = new SkillSlot();
-                   slot.Skill = skill;
+                   BattleActionSlot slot = new BattleActionSlot(skill);
 
                    SetNextSlot(slot);
                }

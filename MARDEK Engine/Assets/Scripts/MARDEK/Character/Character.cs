@@ -2,7 +2,8 @@ using UnityEngine;
 
 namespace MARDEK.CharacterSystem
 {
-    using Core;
+     using Codice.Client.GameUI.Status;
+     using Core;
     using Inventory;
      using Stats;
      using System;
@@ -17,7 +18,11 @@ namespace MARDEK.CharacterSystem
           [field: SerializeField] public EquippedItems ItemsEquipped { get; private set; }
           [field: SerializeField] public Inventory Inventory { get; private set; } 
           public CoreStats BaseStats { get { return Profile.Stats;} }
-
+          [field: SerializeField] public ActionSkillset ActionSkillset { get; private set; }
+          [field: SerializeField] public ReactionSkillset ReactionSkillset { get; private set; }
+          [field: SerializeField] public PassiveSkillset PassiveSkillset { get; private set; }
+          public delegate void StatChanged();
+          public event StatChanged OnStatChanged;
           public Character()
           {
                Inventory = new Inventory();
@@ -31,7 +36,7 @@ namespace MARDEK.CharacterSystem
                     attack = BaseStats.Attack;
                     for (int itemIndex = 0; itemIndex < EquippedItems.Count; itemIndex++)
                     {
-                         EquippableItem item = ItemsEquipped.ItemsEquipped[itemIndex];
+                         EquippableItem item = ItemsEquipped.Slots[itemIndex].item as EquippableItem;
                          if (item is null)
                               continue;
                          attack += item.Stats.Attack;
@@ -48,7 +53,7 @@ namespace MARDEK.CharacterSystem
                     defense = BaseStats.Defense;
                     for (int itemIndex = 0; itemIndex < EquippedItems.Count; itemIndex++)
                     {
-                         EquippableItem item = ItemsEquipped.ItemsEquipped[itemIndex];
+                         EquippableItem item = ItemsEquipped.Slots[itemIndex].item as EquippableItem;
                          if (item is null)
                               continue;
                          defense += item.Stats.Defense;
@@ -67,7 +72,7 @@ namespace MARDEK.CharacterSystem
                     magicDefense = BaseStats.MagicDefense;
                     for (int itemIndex = 0; itemIndex < EquippedItems.Count; itemIndex++)
                     {
-                         EquippableItem item = ItemsEquipped.ItemsEquipped[itemIndex];
+                         EquippableItem item = ItemsEquipped.Slots[itemIndex].item as EquippableItem;
                          if (item is null)
                               continue;
                          magicDefense += item.Stats.MagicDefense;
@@ -93,6 +98,7 @@ namespace MARDEK.CharacterSystem
                set
                {
                     _currentHP = value;
+                    OnStatChanged?.Invoke();
                }
           }
 
@@ -108,6 +114,7 @@ namespace MARDEK.CharacterSystem
                set
                {
                     _currentMP = value;
+                    OnStatChanged?.Invoke();
                }
           }
           public int MaxHP{get{ return BaseStats.MaxHP.GetMaxHP(this);}}
@@ -128,10 +135,11 @@ namespace MARDEK.CharacterSystem
           public int Experience;
           public Character Clone(int level)
           {
-            var clone = new Character();
-            clone.Profile = Profile;
-            clone.Level = level;
-            return clone;
+               var clone = new Character();
+               clone.Profile = Profile;
+               clone.Level = level;
+               clone.ActionSkillset = Profile.LearnableSkillset;
+               return clone;
           }
 
         public int GetStat(IntegerStat desiredStat)
@@ -141,8 +149,8 @@ namespace MARDEK.CharacterSystem
         [Serializable]
           public class EquippedItems
           {
-               public EquippableItem MainHand, OffHand, Head, Body, Accessory1, Accessory2;
-               public EquippableItem[] ItemsEquipped { get { return new EquippableItem[] { MainHand, OffHand, Head, Body, Accessory1, Accessory2 }; } }
+               public InventorySlot MainHand, OffHand, Head, Body, Accessory1, Accessory2;
+               public InventorySlot[] Slots { get { return new InventorySlot[] { MainHand, OffHand, Head, Body, Accessory1, Accessory2 }; } }
                public static int Count = 6;
           }
      }

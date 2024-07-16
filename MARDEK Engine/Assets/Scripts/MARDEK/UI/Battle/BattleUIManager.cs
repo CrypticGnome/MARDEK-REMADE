@@ -19,11 +19,18 @@ namespace MARDEK.UI
             Instance = this;
         }
 
-        public void InspectCharacter(Character character)
-        {
-            CharacterInspectionCard.SetActive(false);
-            characterBeingInspected = character;
-            CharacterInspectionCard.SetActive(true);
-        }
+          public void InspectCharacter(Character character)
+          {
+               if (characterBeingInspected == character)
+               {
+                    characterBeingInspected = null;
+                    CharacterInspectionCard.SetActive(false);
+                    return;
+               }
+
+               characterBeingInspected = character;
+               CharacterInspectionCard.SetActive(false);
+               CharacterInspectionCard.SetActive(true);
+          }
     }
 }

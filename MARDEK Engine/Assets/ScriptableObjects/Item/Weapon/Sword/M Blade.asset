@@ -33,7 +33,15 @@ MonoBehaviour:
       Fig: 0
       Physical: 0
       Thauma: 0
-    CoreStats: {fileID: 0}
+    Resistances:
+      Sleep: 0
+    Strength: 5
+    Vitality: 0
+    Spirit: 0
+    Agility: 0
     Crit: 10
     Accuracy: 100
+    Health: 0
+    Mana: 0
+  grantSkills: []
   _hitSFX: 
