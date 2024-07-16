@@ -39,7 +39,7 @@ namespace MARDEK.CharacterSystem
                PerformAction = action.Apply;
           }
 
-          public BattleActionSlot(Slot inventorySlot)
+          public BattleActionSlot(InventorySlot inventorySlot)
           {
                ExpendableItem item = inventorySlot.item as ExpendableItem;
                DisplayName = item.displayName;

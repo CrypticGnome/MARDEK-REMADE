@@ -8,7 +8,7 @@ namespace MARDEK.UI
     {
         [SerializeField] Image image;
 
-        Color DetermineColor(Slot slot)
+        Color DetermineColor(InventorySlot slot)
         {
             if (slot.IsEmpty()) return new Color(0f, 0f, 0f, 0f);
             else return slot.currentItem.GetInventorySpaceColor();

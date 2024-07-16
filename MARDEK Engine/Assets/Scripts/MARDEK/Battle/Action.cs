@@ -28,23 +28,46 @@ namespace MARDEK.Battle
                float level = user.Level;
                EffectType effectType = effect.EffectType;
                float motionValue = effect.MotionValue;
+               int elementalAbsorbtion = target.Absorbtions.GetAbsorbtion(element.ElementID);
+               float elementalVulnerability = 1 - (float)elementalAbsorbtion / 100;
+
                switch (effectType)
                {
                     default:
                          Debug.LogAssertion(effectType + " does not have an implemented effect");
                          return;
-                    case EffectType.DefaultDamage:
+                    case EffectType.MeleeDamage:
 
                          ///// Helps smooth out the awkwardness of def being too weak at low values and too strong at high values (default: Clamp0(ATK - DEF))
-                         //float rawDamage = Clamp0(motionValue *ATK - DEF/2) * ATK / (ATK + DEF);
                          //
                          ///// Basing linearly of strength is not ideal. However, with strength raising potions in the game having non-linear scaling would be dangerous
                          //float power = STR * LevelDamageMultiplier(level); 
-                         float elementalResist = 1;
-                         float rawDamage = Clamp0(motionValue * ATK * elementalResist - DEF);
+                         if (element is null)
+                         {
+                              Debug.LogAssertion("Element cannot be null in a damage effect");
+                              return;
+                         }
+                         float finalAttack = motionValue * ATK * elementalVulnerability;
+                         //float rawDamage = Clamp0(finalAttack - DEF);
+                         float rawDamage = Clamp0(finalAttack - DEF / 2) * finalAttack / (finalAttack + DEF);
                          float power = STR * (level + 5) / 50;
-                         int damage = (int)(rawDamage * power);
+                         int damage = (int)(rawDamage * power * UnityEngine.Random.Range(0.9f,1.1f));
                          target.CurrentHP -= damage;
+                         Debug.Log($"{user.Profile.displayName} targets {target.Profile.displayName} for {damage} damage");
+                         return;
+                    case EffectType.MagicDamage:
+
+                         if (element is null)
+                         {
+                              Debug.LogAssertion("Element cannot be null in a damage effect");
+                              return;
+                         }
+                         finalAttack = motionValue * elementalVulnerability;
+                         rawDamage = Clamp0(finalAttack - DEF / 2) * finalAttack / (finalAttack + DEF);
+                         power = SPR * (level + 5) / 50;
+                         damage = (int)(rawDamage * power * UnityEngine.Random.Range(0.7f, 1.3f));
+                         target.CurrentHP -= damage;
+                         Debug.Log($"{user.Profile.displayName} targets {target.Profile.displayName} for {damage} damage");
                          return;
                     case EffectType.DefaultHeal:
                          // if target is undead damage them instead
@@ -62,17 +85,20 @@ namespace MARDEK.Battle
           }
           public enum EffectType
           {
-               DefaultDamage,
+               MeleeDamage,
+               MagicDamage,
                DefaultHeal,
                ManaRegen,
                ConstHeal,
-               Resurrect
+               Resurrect,
+               DealStatusDamage,
           }
           [System.Serializable]
           class Effect
           {
                [SerializeField] EffectType effectType;
                [SerializeField] float motionValue;
+               
                public EffectType EffectType { get { return effectType; }  }
                public float MotionValue { get {  return motionValue; } }
           }

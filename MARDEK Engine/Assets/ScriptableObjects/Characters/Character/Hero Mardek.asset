@@ -15,12 +15,42 @@ MonoBehaviour:
   isRequired: 0
   <Profile>k__BackingField: {fileID: 11400000, guid: 1b52e3af512408b48b3e3a6f23e95861, type: 2}
   <ItemsEquipped>k__BackingField:
-    MainHand: {fileID: 11400000, guid: 0366ff94fc3cd4240867624b0d8ca2ee, type: 2}
-    OffHand: {fileID: 11400000, guid: ebcad2eaae57c184f9acdadea91704c8, type: 2}
-    Head: {fileID: 0}
-    Body: {fileID: 11400000, guid: 43f9c1563af910a4d8949169e09553d5, type: 2}
-    Accessory1: {fileID: 11400000, guid: 1a6088039ca4aff479c8f3002a92c2da, type: 2}
-    Accessory2: {fileID: 0}
+    MainHand:
+      currentItem: {fileID: 11400000, guid: 0366ff94fc3cd4240867624b0d8ca2ee, type: 2}
+      currentAmount: 1
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    OffHand:
+      currentItem: {fileID: 11400000, guid: ebcad2eaae57c184f9acdadea91704c8, type: 2}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Head:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Body:
+      currentItem: {fileID: 11400000, guid: 43f9c1563af910a4d8949169e09553d5, type: 2}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Accessory1:
+      currentItem: {fileID: 11400000, guid: 1a6088039ca4aff479c8f3002a92c2da, type: 2}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Accessory2:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
   <Inventory>k__BackingField:
     slots:
     - currentItem: {fileID: 11400000, guid: 3071228e88047bf4295c85c047f12146, type: 2}

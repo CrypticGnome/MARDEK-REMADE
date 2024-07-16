@@ -101,7 +101,9 @@ namespace MARDEK.Battle
                          instance.characterActionUI.SetActive(false);
                          return;
                     }
-                    Action move = enemyMoveset.Skills[Random.Range(0, enemyMoveset.Skills.Count)].Action;
+                    ActionSkill skill = enemyMoveset.Skills[Random.Range(0, enemyMoveset.Skills.Count)];
+                    Action move = skill.Action;
+                    Debug.Log($"{characterActing.Name} uses {skill.DisplayName}");
                     PerformAction(move.Apply);
                }
                BattleCharacter StepActCycleTryGetNextCharacter()
@@ -168,7 +170,6 @@ namespace MARDEK.Battle
                else
                     target = EnemyBattleParty[Random.Range(0, EnemyBattleParty.Count - 1)];
 
-               Debug.Log($"{characterActing.Name} targets {target.Name}");
                if (action is null)
                {
                     Debug.LogAssertion("Attempted action was null");

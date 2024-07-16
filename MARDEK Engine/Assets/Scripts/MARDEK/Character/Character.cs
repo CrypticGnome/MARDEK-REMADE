@@ -36,7 +36,7 @@ namespace MARDEK.CharacterSystem
                     attack = BaseStats.Attack;
                     for (int itemIndex = 0; itemIndex < EquippedItems.Count; itemIndex++)
                     {
-                         EquippableItem item = ItemsEquipped.ItemsEquipped[itemIndex];
+                         EquippableItem item = ItemsEquipped.Slots[itemIndex].item as EquippableItem;
                          if (item is null)
                               continue;
                          attack += item.Stats.Attack;
@@ -53,7 +53,7 @@ namespace MARDEK.CharacterSystem
                     defense = BaseStats.Defense;
                     for (int itemIndex = 0; itemIndex < EquippedItems.Count; itemIndex++)
                     {
-                         EquippableItem item = ItemsEquipped.ItemsEquipped[itemIndex];
+                         EquippableItem item = ItemsEquipped.Slots[itemIndex].item as EquippableItem;
                          if (item is null)
                               continue;
                          defense += item.Stats.Defense;
@@ -72,7 +72,7 @@ namespace MARDEK.CharacterSystem
                     magicDefense = BaseStats.MagicDefense;
                     for (int itemIndex = 0; itemIndex < EquippedItems.Count; itemIndex++)
                     {
-                         EquippableItem item = ItemsEquipped.ItemsEquipped[itemIndex];
+                         EquippableItem item = ItemsEquipped.Slots[itemIndex].item as EquippableItem;
                          if (item is null)
                               continue;
                          magicDefense += item.Stats.MagicDefense;
@@ -149,8 +149,8 @@ namespace MARDEK.CharacterSystem
         [Serializable]
           public class EquippedItems
           {
-               public EquippableItem MainHand, OffHand, Head, Body, Accessory1, Accessory2;
-               public EquippableItem[] ItemsEquipped { get { return new EquippableItem[] { MainHand, OffHand, Head, Body, Accessory1, Accessory2 }; } }
+               public InventorySlot MainHand, OffHand, Head, Body, Accessory1, Accessory2;
+               public InventorySlot[] Slots { get { return new InventorySlot[] { MainHand, OffHand, Head, Body, Accessory1, Accessory2 }; } }
                public static int Count = 6;
           }
      }

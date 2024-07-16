@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b112895aff932dc45a6662e3c917d84f, type: 3}
-  m_Name: Divine
+  m_Script: {fileID: 11500000, guid: e97727b890c81574e9c60256ce51f687, type: 3}
+  m_Name: Fire Breath
   m_EditorClassIdentifier: 
-  _thinSprite: {fileID: 0}
-  _thickSprite: {fileID: 0}
-  _textColor: {r: 1, g: 0.8235294, b: 0.3529412, a: 1}
-  element: 10
+  <Cost>k__BackingField: 0
+  <PointsRequiredToMaster>k__BackingField: 0
+  <DisplayName>k__BackingField: 
+  <Description>k__BackingField: 
+  action:
+    effects: []
+    element: {fileID: 0}
