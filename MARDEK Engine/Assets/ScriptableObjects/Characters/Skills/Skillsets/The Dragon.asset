@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Description>k__BackingField: 
   <Sprite>k__BackingField: {fileID: 0}
-  <Skills>k__BackingField: []
+  <Skills>k__BackingField:
+  - {fileID: 11400000, guid: b71d26a843935224cbb9bd96661a0a90, type: 2}
+  - {fileID: 11400000, guid: 2bb99af98ff6ab44dafea12e5913e840, type: 2}
+  - {fileID: 11400000, guid: bad05fe63de41f74fa20a65ac0a425f9, type: 2}

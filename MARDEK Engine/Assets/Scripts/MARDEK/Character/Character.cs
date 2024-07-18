@@ -122,7 +122,7 @@ namespace MARDEK.CharacterSystem
 
 
           public Absorbtions Absorbtions { get => BaseStats.Absorbtions; set => throw new NotImplementedException(); }
-          public Resistances Resistances { get => BaseStats.Resistances; set => throw new NotImplementedException(); }
+          public StatusEffects Resistances { get => BaseStats.Resistances; set => throw new NotImplementedException(); }
           public int Agility { get => BaseStats.Agility; set => throw new NotImplementedException(); }
           public float ACT { get; set; }
           public int Accuracy  { get => BaseStats.Accuracy; set => throw new NotImplementedException(); }
@@ -130,23 +130,28 @@ namespace MARDEK.CharacterSystem
           public int Strength  { get => BaseStats.Strength; set => throw new NotImplementedException(); }
           public int Vitality { get => BaseStats.Vitality; set => throw new NotImplementedException(); }
           public int Spirit { get => BaseStats.Spirit; set => throw new NotImplementedException(); }
-
+          public StatusEffects StatusBuildup;
           public int Level;
           public int Experience;
           public Character Clone(int level)
           {
-               var clone = new Character();
+               var clone = CreateInstance<Character>();
                clone.Profile = Profile;
                clone.Level = level;
                clone.ActionSkillset = Profile.LearnableSkillset;
                return clone;
           }
+           public void TickStatusEffects()
+           {
+               if (StatusBuildup.Poison > 0)
+               {
+                    Debug.Log($"{Profile.displayName} is poisoned");
+                    StatusBuildup.Poison -= Resistances.Poison + 1;
+                    CurrentHP -= Mathf.RoundToInt((float)MaxHP / 20 + 0.5f);
+               }
+           }
 
-        public int GetStat(IntegerStat desiredStat)
-        {
-           return 0;
-        }
-        [Serializable]
+          [Serializable]
           public class EquippedItems
           {
                public InventorySlot MainHand, OffHand, Head, Body, Accessory1, Accessory2;

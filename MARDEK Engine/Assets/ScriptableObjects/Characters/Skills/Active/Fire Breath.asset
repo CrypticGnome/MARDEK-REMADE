@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Cost>k__BackingField: 0
   <PointsRequiredToMaster>k__BackingField: 0
-  <DisplayName>k__BackingField: 
+  <DisplayName>k__BackingField: Fire Breath
   <Description>k__BackingField: 
   action:
-    effects: []
-    element: {fileID: 0}
+    effects:
+    - effectType: 1
+      motionValue: 80
+    element: {fileID: 11400000, guid: e179fa6b43e015742b42814e32864e49, type: 2}

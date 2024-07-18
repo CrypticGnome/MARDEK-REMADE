@@ -18,14 +18,12 @@ MonoBehaviour:
   <portrait>k__BackingField: {fileID: 11400000, guid: 4ad3a9aab74c9d046ab7ea6201b62db6, type: 2}
   <WalkSprites>k__BackingField: {fileID: 11400000, guid: 2bfcf26a6a3c20846bbe75c6526f1515, type: 2}
   <BattleModelPrefab>k__BackingField: {fileID: 6477166618577748535, guid: 3ffacb44af2dcaa479644d3d3b5edb3b, type: 3}
-  <ActionSkillset>k__BackingField: {fileID: 0}
-  <ReactionSkillset>k__BackingField: {fileID: 11400000, guid: 1dbdeaed0f5633d4b918b1ce50228deb, type: 2}
-  <PassiveSkillset>k__BackingField: {fileID: 11400000, guid: 77492aa8e45566d47b106420388acb81, type: 2}
+  <LearnableSkillset>k__BackingField: {fileID: 0}
   <Stats>k__BackingField:
-    Strength: 16
-    Vitality: 12
-    Spirit: 12
-    Agility: 15
+    Strength: 20
+    Vitality: 18
+    Spirit: 10
+    Agility: 12
     Absorbtions:
       Fire: 0
       Earth: 0
@@ -37,8 +35,18 @@ MonoBehaviour:
       Fig: 0
       Physical: 0
       Thauma: 0
+      Divine: 0
     Resistances:
+      Poison: 0
       Sleep: 0
+      Paralysis: 0
+      Blindness: 0
+      Silence: 0
+      Numbness: 0
+      Curse: 0
+      Confusion: 0
+      Bleed: 0
+      Zombification: 0
     Attack: 0
     Defense: 0
     MagicDefense: 0

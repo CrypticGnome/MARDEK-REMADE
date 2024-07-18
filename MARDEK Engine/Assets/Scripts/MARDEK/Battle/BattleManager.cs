@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MARDEK.CharacterSystem;
 using MARDEK.Stats;
+using System.Linq;
 
 namespace MARDEK.Battle
 {
@@ -10,6 +11,7 @@ namespace MARDEK.Battle
      using MARDEK.Skill;
      using Progress;
     using UnityEngine.Events;
+     using static MARDEK.Battle.BattleManager;
 
     public class BattleManager : MonoBehaviour
     {
@@ -26,8 +28,12 @@ namespace MARDEK.Battle
           const float actResolution = 1000;
           static public List<BattleCharacter> EnemyBattleParty { get; private set; } = new();
           static public List<BattleCharacter> PlayerBattleParty { get; private set; } = new();
-          static BattleManager instance;
-          BattleState state;
+          public static BattleManager instance;
+          public delegate void TurnEnd();
+          public static event TurnEnd OnTurnEnd;
+          public delegate void TurnStart();
+          public static event TurnEnd OnTurnStart;
+          public BattleState state;
 
 
           private void Awake()
@@ -66,33 +72,108 @@ namespace MARDEK.Battle
                     PlayerBattleParty.Add(new BattleCharacter(c, position));
                }
           }
-          private void Update()
+          private void Start()
           {
-               if (state == BattleState.Idle)
-               {
-                    WaitForNextCharacter();
-                    return;
-               }
+               OnTurnEnd += WaitForTurn;
+               SetInitialACT();
+               OnTurnEnd?.Invoke();
+          }
+          private void OnDisable()
+          {
+               OnTurnEnd -= WaitForTurn;
+          }
+          void SetInitialACT()
+          {
+               bool partySurprised = false;
+               List<float> timesToTurn = new List<float>();
+               List<BattleCharacter> allCharacters = new List<BattleCharacter>();
+               allCharacters.AddRange(EnemyBattleParty);
+               allCharacters.AddRange(PlayerBattleParty);
 
-               void WaitForNextCharacter()
-               {    
-                    characterActing = StepActCycleTryGetNextCharacter();
-                    if (characterActing == null)
-                         return;
-                    
-                    bool characterIsEnemy = EnemyBattleParty.Contains(characterActing);
-                    if (characterIsEnemy)
+               foreach (BattleCharacter character in EnemyBattleParty)
+                    AddCharacterTime(character.Character, !partySurprised);
+               foreach (BattleCharacter character in PlayerBattleParty)
+                    AddCharacterTime(character.Character, partySurprised);
+
+               float minTime = timesToTurn.Min();
+               int listIndex = 0;
+               GetTempACT(out List<float> tempACT);
+               NormalizeBottomToZero(tempACT);
+               CompressListToCap(tempACT, actResolution); 
+
+               listIndex = 0;
+               allCharacters.ForEach(character => character.Character.ACT = tempACT[listIndex++]);
+
+
+               void AddCharacterTime (Character character, bool surprised)
+               {
+                    float speedMultiplier = surprised ? 1 : 2;
+                    speedMultiplier *= Random.Range(0.9f, 1.1f);
+                    float timeToTurn = TurnManager.TimeToTurn(character, speedMultiplier);
+                    timesToTurn.Add(timeToTurn);
+               }
+               void GetTempACT(out List<float> tempACT)
+               {
+                    tempACT = new List<float>();
+
+                    foreach (BattleCharacter battleCharacter in allCharacters)
+                    {
+                         float timeToTurn = timesToTurn[listIndex++];
+                         float temp_act = minTime / timeToTurn * actResolution;
+                         temp_act += Random.Range(-167, 167);
+                         tempACT.Add(temp_act);
+                    }
+               }
+               void NormalizeBottomToZero(List<float> input)
+               {
+                    float minValue = input.Min();
+
+                    for (int i = 0; i < allCharacters.Count; i++) 
+                    {
+                         tempACT[i] -= minValue;
+                    }
+               }
+               void CompressListToCap(List<float> input, float cap)
+               {
+                    float maxValue = input.Max();
+                    float compressionFactor = cap / maxValue;
+
+                    for (int i = 0; i < allCharacters.Count; i++)
+                    {
+                         tempACT[i] *= compressionFactor;
+                    }
+               }
+          }
+
+          void WaitForTurn()
+          {
+               StartCoroutine(WaitForNextTurn());
+               IEnumerator WaitForNextTurn()
+               {
+                    TurnManager.GetTimeToNextTurn(out float timeToTurn, out BattleCharacter nextActor);
+                    TurnManager.GetCharacterACTNextTurn(timeToTurn, out List<float> startACT, out List<float> finalACT);
+                    IEnumerator lerpCharacterACT = TurnManager.LerpCharacterACTs(timeToTurn, startACT, finalACT);
+                    yield return StartCoroutine(lerpCharacterACT);
+
+                    characterActing = nextActor;
+                    characterActing.Character.ACT -= actResolution;
+                    OnTurnStart?.Invoke();
+
+                    if (EnemyBattleParty.Contains(characterActing))
                     {
                          PerformEnemyMove();
-                         return;
+                         yield break;
                     }
 
                     characterActionUI.SetActive(true);
                     state = BattleState.ChoosingAction;
-
+                    characterActing.Character.TickStatusEffects();
                }
+
                void PerformEnemyMove()
                {
+                    characterActing.Character.TickStatusEffects();
+
                     ActionSkillset enemyMoveset = characterActing.Character.ActionSkillset;
                     if (enemyMoveset is null)
                     {
@@ -105,60 +186,6 @@ namespace MARDEK.Battle
                     Action move = skill.Action;
                     Debug.Log($"{characterActing.Name} uses {skill.DisplayName}");
                     PerformAction(move.Apply);
-               }
-               BattleCharacter StepActCycleTryGetNextCharacter()
-               {
-                    var charactersInBattle = GetCharactersInOrder();
-                    AddTickRateToACT(ref charactersInBattle, Time.deltaTime);
-                    var readyToAct = GetNextCharacterReadyToAct(charactersInBattle);
-                    if (readyToAct != null)
-                         readyToAct.Character.ACT -= actResolution;
-                    return readyToAct;
-
-                    
-               }
-
-               List<BattleCharacter> GetCharactersInOrder()
-               {
-                    // order by Position (p1 e1 p2 e2 p3 e3 p4 e4)
-                    List<BattleCharacter> returnList = new List<BattleCharacter>();
-                    for (int i = 0; i < 4; i++)
-                    {
-                         if (PlayerBattleParty.Count > i)
-                              returnList.Add(PlayerBattleParty[i]);
-                         if (EnemyBattleParty.Count > i)
-                              returnList.Add(EnemyBattleParty[i]);
-                    }
-                    return returnList;
-               }
-
-               BattleCharacter GetNextCharacterReadyToAct(List<BattleCharacter> characters)
-               {
-                    float maxAct = 0;
-                    foreach (var c in characters)
-                    {
-                         var act = c.Character.ACT;
-                         if (act > maxAct)
-                              maxAct = act;
-                    }
-                    if (maxAct < actResolution)
-                         return null;
-
-                    foreach (var c in characters)
-                         if (c.Character.ACT == maxAct)
-                              return c;
-                    throw new System.Exception("A character had enough ACT to take a turn but wasn't returned by this method");
-               }
-
-               void AddTickRateToACT(ref List<BattleCharacter> characters, float deltatime)
-               {
-                    foreach (var character in characters)
-                    {
-                         CoreStats stats = character.Character.Profile.Stats;
-                         var tickRate = 1 + 0.05f * stats.Agility;
-                         tickRate *= 1000 * deltatime;
-                         character.Character.ACT += (int)tickRate;
-                    }
                }
           }
           public static void PerformAction(ApplyAction action)
@@ -206,6 +233,7 @@ namespace MARDEK.Battle
                }
                characterActing = null;
                instance.state = BattleState.Idle;
+               OnTurnEnd?.Invoke();
                instance.characterActionUI.SetActive(false);
                instance.CheckBattleEnd();
           }
@@ -217,6 +245,7 @@ namespace MARDEK.Battle
           void CheckBattleEnd()
           {
                bool defeat = PlayerBattleParty.Count == 0;
+               instance.characterActionUI.SetActive(false);
                if (defeat)
                {
                     print("defeat!!");
@@ -239,7 +268,7 @@ namespace MARDEK.Battle
                instance.enabled = false;
           }
 
-          enum BattleState
+          public enum BattleState
           {
                Idle,
                ChoosingAction,

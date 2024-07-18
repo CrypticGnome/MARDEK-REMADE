@@ -33,7 +33,7 @@ namespace MARDEK.UI
 
         private void UpdateStat(Character character, IntegerStat stat, TextMeshProUGUI text)
         {
-            if (stat != null) text.text = character.GetStat(stat).ToString();
+               if (stat != null) text.text = "not implemented";
         }
     }
 }

@@ -80,8 +80,27 @@ namespace MARDEK.Battle
                     case EffectType.ConstHeal:
                          target.CurrentHP += (int)motionValue;
                          return;
+                    case EffectType.DealStatusDamage:
+                         DealStatusEffect(user, target, effect);
+                         return;
                }
 
+
+          }
+          void DealStatusEffect(Character user, Character target, Effect effect)
+          {
+               switch (effect.StatusEffect) 
+               {
+                    case StatusEffect.Poison:
+                         int resistance = target.Resistances.Poison;
+                         int decayRate = resistance + 1;
+                         if (effect.MotionValue <= decayRate)
+                              break;
+                         Debug.Log($"{user.Profile.displayName} inflicts poison on {target.Profile.displayName}");
+                         target.StatusBuildup.Poison += (int)effect.MotionValue;
+                         
+                         break;
+               }
           }
           public enum EffectType
           {
@@ -98,9 +117,11 @@ namespace MARDEK.Battle
           {
                [SerializeField] EffectType effectType;
                [SerializeField] float motionValue;
+               [SerializeField] StatusEffect statusEffect;
                
                public EffectType EffectType { get { return effectType; }  }
                public float MotionValue { get {  return motionValue; } }
+               public StatusEffect StatusEffect { get { return statusEffect; } }
           }
           float LevelDamageMultiplier(float level)
           {
