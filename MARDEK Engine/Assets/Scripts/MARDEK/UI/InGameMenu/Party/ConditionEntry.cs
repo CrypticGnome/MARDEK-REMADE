@@ -31,9 +31,9 @@ namespace MARDEK.UI
 
             elementImage.sprite = character.Profile.element.thickSprite;
             nameText.text = character.Profile.displayName;
-            levelAndClassText.text = "Lv " + character.GetStat(levelStat) + " " + character.Profile.displayClass;
-            hpBar.SetValues(character.GetStat(currentHpStat), character.GetStat(maxHpStat));
-            mpBar.SetValues(character.GetStat(currentMpStat), character.GetStat(maxMpStat));
+            levelAndClassText.text = "Lv " + character.Level + " " + character.Profile.displayClass;
+            hpBar.SetValues(character.CurrentHP, character.MaxHP);
+            mpBar.SetValues(character.CurrentMP, character.MaxMP);
             // TODO Update XP bar
         }
     }

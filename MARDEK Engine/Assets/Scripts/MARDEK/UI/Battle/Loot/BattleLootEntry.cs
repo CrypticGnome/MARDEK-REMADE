@@ -34,24 +34,24 @@ namespace MARDEK.UI
 
         void UpdateItem()
         {
-            if (amounts[entryIndex] > 0)
-            {
+               if (amounts[entryIndex] == 0)
+               {
+                    foreach (TMP_Text currentAmountText in currentAmountTexts) currentAmountText.text = "";
+                         gameObject.SetActive(false);
+                    return;
+               }
+               
                 itemImage.sprite = items[entryIndex].sprite;
                 itemName.text = items[entryIndex].displayName;
                 amountText.text = "x " + amounts[entryIndex];
-                for (int index = 0; index < currentAmountTexts.Count; index++) {
+                for (int index = 0; index < currentAmountTexts.Count; index++) 
+                {
                     if (index < Party.Instance.Characters.Count)
                     {
                         currentAmountTexts[index].text = Party.Instance.Characters[index].Inventory.CountItem(items[entryIndex]).ToString();
                     }
                     else currentAmountTexts[index].text = "";
                 }
-            }
-            else
-            {
-                foreach (TMP_Text currentAmountText in currentAmountTexts) currentAmountText.text = "";
-                this.gameObject.SetActive(false);
-            }
         }
 
         void UpdateCurrentAmountTexts()

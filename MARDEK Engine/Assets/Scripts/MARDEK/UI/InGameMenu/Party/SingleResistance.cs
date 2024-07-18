@@ -27,7 +27,7 @@ namespace MARDEK.UI
 
         public void SetCharacter(Character character)
         {
-            this.SetValue(resistanceStat == null ? 0f : character.GetStat(resistanceStat));
+            this.SetValue(resistanceStat == null ? 0f : character.Resistances.Poison);
         }
 
         void SetValue(float newValue)

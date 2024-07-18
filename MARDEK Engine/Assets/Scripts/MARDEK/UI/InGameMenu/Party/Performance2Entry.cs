@@ -15,13 +15,13 @@ namespace MARDEK.UI
 
         public void SetCharacter(Character character)
         {
-            damageDealtCount.text = character.GetStat(damageDealtStat).ToString();
-            damageReceivedCount.text = character.GetStat(damageReceivedStat).ToString();
-        }
+               damageDealtCount.text = "not implemenented";
+               damageReceivedCount.text = "not implemenented";
+          }
 
         private void UpdateStat(Character character, IntegerStat stat, TextMeshProUGUI text)
         {
-            if (stat != null) text.text = character.GetStat(stat).ToString();
+            if (stat != null) text.text = "not implemenented";
         }
     }
 }

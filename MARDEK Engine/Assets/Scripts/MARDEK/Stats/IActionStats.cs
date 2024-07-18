@@ -19,7 +19,7 @@ public interface IActionStats
      public int Spirit { get; set; }
      public int Agility { get; set; }
 
-     public Resistances Resistances { get; set; }
+     public StatusEffects Resistances { get; set; }
      public float ACT { get; set; } // I fucking hate this
      public int Accuracy { get; set; }
      public int CritRate { get; set; }

@@ -18,6 +18,6 @@ MonoBehaviour:
   <Description>k__BackingField: 
   action:
     effects:
-    - effectType: 0
-      motionValue: 1
+    - effectType: 1
+      motionValue: 150
     element: {fileID: 11400000, guid: e179fa6b43e015742b42814e32864e49, type: 2}

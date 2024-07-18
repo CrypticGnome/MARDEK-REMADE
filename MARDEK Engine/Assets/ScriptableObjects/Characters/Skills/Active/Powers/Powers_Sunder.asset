@@ -20,5 +20,9 @@ MonoBehaviour:
   action:
     effects:
     - effectType: 0
-      motionValue: 1
+      motionValue: 2.2
+      statusEffect: 0
+    - effectType: 6
+      motionValue: 30
+      statusEffect: 1
     element: {fileID: 11400000, guid: 96b7bd01ebbf64840a070d9ed9321b4c, type: 2}
