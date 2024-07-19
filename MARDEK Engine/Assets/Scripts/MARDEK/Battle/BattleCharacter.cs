@@ -7,74 +7,71 @@ namespace MARDEK.Battle
     using Core;
     using CharacterSystem;
     using MARDEK.Stats;
-     using static Codice.CM.Common.CmCallContext;
-     using UnityEngine.Profiling;
+     using MARDEK.UI;
 
-     public class BattleCharacter : IActionStats
+     public abstract class BattleCharacter : IActionStats
      {
-          public Character Character { get; private set; }
+          public CharacterProfile Profile { get; protected set; }
           public BattleModel battleModel = null;
-          public string Name { get { return Character.Profile.displayName; } }
+          public ActionSkillset Skillset { get; protected set; }
+          public string Name { get { return Profile.displayName; } }
 
-          public int CurrentHP { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-          public int CurrentMP { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+          public int CurrentHP { get; set; }
+          public int CurrentMP { get; set ; }
+          public float ACT { get; set; }
+          public CoreStats BaseStats { get;}
+          public CoreStats VolatileStats { get; protected set; }
 
-          public int MaxHP => throw new System.NotImplementedException();
+          public int MaxHP => VolatileStats.MaxHP;
 
-          public int MaxMP => throw new System.NotImplementedException();
+          public int MaxMP => VolatileStats.MaxMP;
 
-          public int Attack => throw new System.NotImplementedException();
+          public int Attack => VolatileStats.Attack;
 
-          public int Defense { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-          public int MagicDefense { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-          public Absorbtions Absorbtions { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-          public int Strength { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-          public int Vitality { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-          public int Spirit { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-          public int Agility { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-          public StatusEffects Resistances { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-          public float ACT { get ; set ;}
-          public int Accuracy { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-          public int CritRate { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+          public int Defense { get => VolatileStats.Defense; set => VolatileStats.Defense = value; }
+          public int MagicDefense { get => VolatileStats.MagicDefense; set => VolatileStats.MagicDefense = value; }
+          public Absorbtions Absorbtions { get => VolatileStats.Absorbtions; set => VolatileStats.Absorbtions = value; }
+          public int Strength { get => VolatileStats.Strength; set => VolatileStats.Strength = value; }
+          public int Vitality { get => VolatileStats.Vitality; set => VolatileStats.Vitality = value; }
+          public int Spirit { get => VolatileStats.Spirit; set => VolatileStats.Spirit = value; }
+          public int Agility { get => VolatileStats.Agility; set => VolatileStats.Agility = value; }
+          public StatusEffects Resistances { get => VolatileStats.Resistances; set => VolatileStats.Resistances = value; }
+          public int Accuracy { get => VolatileStats.Accuracy; set => VolatileStats.Accuracy = value; }
+          public int CritRate { get => VolatileStats.CritRate; set => VolatileStats.CritRate = value; }
 
+          public delegate void StatChanged();
+          public event StatChanged OnStatChanged;
+          public int Level;
 
-
-          StatusEffects StatusBuildup;
+          public StatusEffects StatusBuildup = new StatusEffects();
           public bool stunned;
 
 
 
 
-          public BattleCharacter(Character character, Vector3 position)
+          public float ActBuildRate()
           {
-               Character = Object.Instantiate(character);
-               battleModel = Object.Instantiate(Character.Profile.BattleModelPrefab).GetComponent<BattleModel>();
-               battleModel.SetBattlePosition(position);
-               Character.CurrentHP = character.MaxHP;
-               Character.CurrentMP = character.MaxMP;
-          }
-
-          public float GetActBuildRate()
-          {
-               return 2;
+               float actRate = 1 + 0.05f * VolatileStats.Agility;
+               actRate *= 1000;
+               return actRate;
           }
 
           public void OnTurnStart()
           {
                TickStatusEffects();
           }
-          void TickStatusEffects()
+          public void TickStatusEffects()
           {
-               StatusEffects resistances = Character.Resistances;
+               StatusEffects resistances = Profile.Stats.Resistances;
                if (StatusBuildup.Poison > 0)
                {
-                    Debug.Log($"{Character.Profile.displayName} is poisoned");
+                    Debug.Log($"{Profile.displayName} is poisoned");
                     StatusBuildup.Poison -= resistances.Poison + 1;
-                    Character.CurrentHP -= Mathf.RoundToInt((float)Character.MaxHP / 20 + 0.5f);
+                    CurrentHP -= Mathf.RoundToInt((float)BaseStats.MaxHP / 20 + 0.5f);
                }
                if (StatusBuildup.Paralysis > 0)
                {
-                    Debug.Log($"{Character.Profile.displayName} is paralysed");
+                    Debug.Log($"{Profile.displayName} is paralysed");
                     stunned = !stunned;
                     if (stunned)
                     {

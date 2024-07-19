@@ -1,3 +1,4 @@
+using MARDEK.Battle;
 using MARDEK.CharacterSystem;
 using UnityEditor.Search;
 using UnityEngine;
@@ -22,7 +23,19 @@ namespace MARDEK.Stats
                          return 28 * character.Level + 1172;
                }
           }
-
+          public int GetMaxHP(BattleCharacter character)
+          {
+               int vitality = character.Vitality;
+               switch (calculatorType)
+               {
+                    default:
+                         return 3 * vitality + (2 * vitality * character.Level);
+                    case CalculatorType.Constant:
+                         return constantValue;
+                    case CalculatorType.Monster:
+                         return 28 * character.Level + 1172;
+               }
+          }
           public enum CalculatorType
           {
                Default,

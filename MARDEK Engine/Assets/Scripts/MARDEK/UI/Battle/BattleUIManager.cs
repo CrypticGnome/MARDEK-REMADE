@@ -12,14 +12,14 @@ namespace MARDEK.UI
 
         [SerializeField] BattleManager battleManager;
         [SerializeField] GameObject CharacterInspectionCard;
-        public Character characterBeingInspected { get; private set; }
+        public BattleCharacter characterBeingInspected { get; private set; }
 
         private void Awake()
         {
             Instance = this;
         }
 
-          public void InspectCharacter(Character character)
+          public void InspectCharacter(BattleCharacter character)
           {
                if (characterBeingInspected == character)
                {

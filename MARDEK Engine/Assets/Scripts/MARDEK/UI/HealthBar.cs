@@ -4,6 +4,7 @@ using UnityEngine;
 using MARDEK.Stats;
 using MARDEK.CharacterSystem;
 using Newtonsoft.Json.Bson;
+using MARDEK.Battle;
 
 namespace MARDEK.UI
 {
@@ -22,7 +23,7 @@ namespace MARDEK.UI
           {
                if (characterUI.character is null)
                     return;
-               characterUI.character.Character.OnStatChanged += UpdateBar;
+               characterUI.character.OnStatChanged += UpdateBar;
                UpdateBar();
           }
 
@@ -31,7 +32,7 @@ namespace MARDEK.UI
           {
                if (characterUI.character == null)
                     return;
-               Character character = characterUI.character.Character;
+               BattleCharacter character = characterUI.character;
                var statValue = (float)character.CurrentHP;
                var maxStatValue = (float)character.MaxHP;
                if (statText)

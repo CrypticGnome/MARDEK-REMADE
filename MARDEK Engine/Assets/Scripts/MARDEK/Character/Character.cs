@@ -117,8 +117,8 @@ namespace MARDEK.CharacterSystem
                     OnStatChanged?.Invoke();
                }
           }
-          public int MaxHP{get{ return BaseStats.MaxHP.GetMaxHP(this);}}
-          public int MaxMP { get { return BaseStats.MaxMP.GetMaxMP(this); } }
+          public int MaxHP{get{ return BaseStats.MaxHPCalc.GetMaxHP(this);}}
+          public int MaxMP { get { return BaseStats.MaxMPCalc.GetMaxMP(this); } }
 
 
           public Absorbtions Absorbtions { get => BaseStats.Absorbtions; set => throw new NotImplementedException(); }
@@ -126,7 +126,7 @@ namespace MARDEK.CharacterSystem
           public int Agility { get => BaseStats.Agility; set => throw new NotImplementedException(); }
           public float ACT { get; set; }
           public int Accuracy  { get => BaseStats.Accuracy; set => throw new NotImplementedException(); }
-          public int CritRate  { get => BaseStats.Crit; set => throw new NotImplementedException(); }
+          public int CritRate  { get => BaseStats.CritRate; set => throw new NotImplementedException(); }
           public int Strength  { get => BaseStats.Strength; set => throw new NotImplementedException(); }
           public int Vitality { get => BaseStats.Vitality; set => throw new NotImplementedException(); }
           public int Spirit { get => BaseStats.Spirit; set => throw new NotImplementedException(); }
