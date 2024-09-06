@@ -35,12 +35,24 @@ MonoBehaviour:
       Fig: 0
       Physical: 0
       Thauma: 0
+      Divine: 0
     Resistances:
-      Sleep: 0
+      poison: 0
+      sleep: 0
+      paralysis: 0
+      blindness: 0
+      silence: 0
+      numbness: 0
+      curse: 0
+      confusion: 0
+      bleed: 0
+      zombification: 0
     Attack: 50
     Defense: 0
     MagicDefense: 0
-    Crit: 0
+    CritRate: 0
     Accuracy: 100
-    MaxHP: {fileID: 11400000, guid: 00f082784459f934b9585adeb067270e, type: 2}
-    MaxMP: {fileID: 11400000, guid: b430bbf3c625229499a5257b4b7dcb62, type: 2}
+    MaxHPCalc: {fileID: 11400000, guid: 00f082784459f934b9585adeb067270e, type: 2}
+    MaxMPCalc: {fileID: 11400000, guid: b430bbf3c625229499a5257b4b7dcb62, type: 2}
+    MaxHP: 0
+    MaxMP: 0

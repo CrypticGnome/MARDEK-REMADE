@@ -26,10 +26,15 @@ namespace MARDEK.Stats
           public int GetMaxHP(BattleCharacter character)
           {
                int vitality = character.Vitality;
+               const int LEVEL = 50;
+               int cLevel = character.Level;
                switch (calculatorType)
                {
                     default:
-                         return 3 * vitality + (2 * vitality * character.Level);
+                         int levelContribution = 2 * vitality * cLevel;
+                         int levelContribution2 = 2 * vitality * LEVEL;
+                         int returnVal = 3 * vitality + levelContribution;
+                         return returnVal;
                     case CalculatorType.Constant:
                          return constantValue;
                     case CalculatorType.Monster:

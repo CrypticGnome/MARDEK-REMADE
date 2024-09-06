@@ -20,7 +20,7 @@ namespace MARDEK.Battle
           public int CurrentMP { get; set ; }
           public float ACT { get; set; }
           public CoreStats BaseStats { get;}
-          public CoreStats VolatileStats { get; protected set; }
+          public CoreStats VolatileStats { get;  set; }
 
           public int MaxHP => VolatileStats.MaxHP;
 
@@ -41,7 +41,9 @@ namespace MARDEK.Battle
 
           public delegate void StatChanged();
           public event StatChanged OnStatChanged;
-          public int Level;
+          public int Level 
+          { get; 
+          protected set ; }
 
           public StatusEffects StatusBuildup = new StatusEffects();
           public bool stunned;

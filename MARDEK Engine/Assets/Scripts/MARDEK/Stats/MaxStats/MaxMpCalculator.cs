@@ -11,10 +11,11 @@ namespace MARDEK.Stats
           [SerializeField] int constantValue;
           public int GetMaxMP(Character character)
           {
+               int level = character.Level;
                switch (calculatorType)
                {
                     default:
-                         return character.BaseStats.Spirit * (17 + character.Level)/6;
+                         return character.BaseStats.Spirit * (17 + level) /6;
                     case CalculatorType.Constant:
                          return constantValue;
                }

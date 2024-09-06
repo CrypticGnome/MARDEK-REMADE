@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using MARDEK.Stats;
 using MARDEK.CharacterSystem;
-using Newtonsoft.Json.Bson;
 using MARDEK.Battle;
 
 namespace MARDEK.UI
@@ -26,7 +25,12 @@ namespace MARDEK.UI
                characterUI.character.OnStatChanged += UpdateBar;
                UpdateBar();
           }
-
+          private void Update()
+          {
+               // Currently when a stat changes the OnStatChanged delegate isn't fired. Therefore, the healthbar doesn't update.
+               // Instead of fixing that I'm just doing a quick band aid fix. Future work.
+               UpdateBar();
+          }
           [ContextMenu("Update Bar")]
           void UpdateBar()
           {
