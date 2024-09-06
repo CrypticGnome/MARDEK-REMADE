@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using MARDEK.Stats;
 using MARDEK.CharacterSystem;
-using Newtonsoft.Json.Bson;
 
 namespace MARDEK.UI
 {

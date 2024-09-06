@@ -1,7 +1,8 @@
-﻿using Newtonsoft.Json;
+﻿using FullSerializer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Plastic.Newtonsoft.Json;
 using UnityEditor;
 using UnityEngine;
 
@@ -45,8 +46,10 @@ namespace MARDEK.CharacterSystem
                fsJsonParser.Parse(jsonFile.text, out fsData data);
                serializer.TryDeserialize(data, ref list);
                */
-
                List<PortraitJSON> list = JsonConvert.DeserializeObject<List<PortraitJSON>>(jsonFile.text);
+               fsSerializer serializer = new();
+               fsJsonParser.Parse(jsonFile.text, out fsData data);
+               serializer.TryDeserialize(data, ref list);
 
                foreach (PortraitJSON p in list)
                {
