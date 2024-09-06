@@ -19,7 +19,7 @@ namespace MARDEK.Battle
           public int CurrentHP { get; set; }
           public int CurrentMP { get; set ; }
           public float ACT { get; set; }
-          public CoreStats BaseStats { get;}
+          public CoreStats BaseStats { get { return Profile.Stats; } }
           public CoreStats VolatileStats { get;  set; }
 
           public int MaxHP => VolatileStats.MaxHP;

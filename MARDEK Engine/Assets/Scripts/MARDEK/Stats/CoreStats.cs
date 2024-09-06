@@ -1,3 +1,4 @@
+using MARDEK.Battle;
 using System;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
@@ -43,6 +44,11 @@ namespace MARDEK.Stats
                MaxMPCalc = other.MaxMPCalc;
                MaxHP = other.MaxHP;
                MaxMP = other.MaxMP;
+          }
+          public void CalculateMaxValues(BattleCharacter battleCharacter)
+          {
+               MaxHP = MaxHPCalc.GetMaxHP(battleCharacter);
+               MaxMP = MaxHPCalc.GetMaxHP(battleCharacter);
           }
      }
      [Serializable]

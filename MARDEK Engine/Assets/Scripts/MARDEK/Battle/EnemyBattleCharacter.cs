@@ -9,15 +9,15 @@ namespace MARDEK.Battle
 
      public class EnemyBattleCharacter : BattleCharacter
      {
-          public new CoreStats BaseStats { get { return Profile.Stats; } }
           public EnemyBattleCharacter(CharacterProfile character, Vector3 position)
           {
                Profile = character;
+               VolatileStats = character.Stats;
                Skillset = character.LearnableSkillset;
                battleModel = Object.Instantiate(Profile.BattleModelPrefab).GetComponent<BattleModel>();
                battleModel.SetBattlePosition(position);
-
                VolatileStats = new CoreStats(character.Stats);
+               BaseStats.CalculateMaxValues(this);
 
                VolatileStats.MaxHP = VolatileStats.MaxHPCalc.GetMaxHP(this);
                VolatileStats.MaxMP = VolatileStats.MaxMPCalc.GetMaxMP(this); ;

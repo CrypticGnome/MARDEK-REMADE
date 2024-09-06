@@ -12,7 +12,6 @@ namespace MARDEK.Battle
      {
           public Character Character { get; private set; }
           public int Experience { get { return Character.Experience; } private set { Character.Experience = value; } }
-          public new CoreStats BaseStats { get { return Character.BaseStats; } }
           public HeroBattleCharacter(Character character, Vector3 position) 
           {
                Character = character;
@@ -23,6 +22,7 @@ namespace MARDEK.Battle
                battleModel.SetBattlePosition(position);
 
                VolatileStats = new CoreStats(BaseStats);
+               BaseStats.CalculateMaxValues(this);
 
                int maxHP = VolatileStats.MaxHPCalc.GetMaxHP(this);
                int bob = VolatileStats.MaxHPCalc.GetMaxHP(this);
