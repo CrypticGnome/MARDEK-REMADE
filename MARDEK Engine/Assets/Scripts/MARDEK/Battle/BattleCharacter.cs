@@ -67,9 +67,11 @@ namespace MARDEK.Battle
                StatusEffects resistances = Profile.Stats.Resistances;
                if (StatusBuildup.Poison > 0)
                {
-                    Debug.Log($"{Profile.displayName} is poisoned");
                     StatusBuildup.Poison -= resistances.Poison + 1;
-                    CurrentHP -= Mathf.RoundToInt((float)BaseStats.MaxHP / 20 + 0.5f);
+                    int damage = Mathf.RoundToInt((float)BaseStats.MaxHP / 20 + 0.5f);
+                    CurrentHP -= damage;
+                    Debug.Log($"{Profile.displayName} is poisoned and takes {damage} damage");
+
                }
                if (StatusBuildup.Paralysis > 0)
                {
