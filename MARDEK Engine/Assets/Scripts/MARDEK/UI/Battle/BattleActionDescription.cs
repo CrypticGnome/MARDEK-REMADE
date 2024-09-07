@@ -19,7 +19,6 @@ namespace MARDEK.UI
         }
         private void OnEnable()
         {
-            UpdateDescription(null);
         }
 
         public void UpdateDescription(BattleActionSlot action)

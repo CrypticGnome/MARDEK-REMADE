@@ -15,7 +15,7 @@ namespace MARDEK.Skill
      [CreateAssetMenu(menuName = "MARDEK/Skill/ActionSkill")]
     public class ActionSkill : Skill
      {
-          [SerializeField] Battle.Action action;
-          public Battle.Action Action { get { return action; } }
+          [SerializeField] Battle.BattleAction action;
+          public Battle.BattleAction Action { get { return action; } }
      }
 }

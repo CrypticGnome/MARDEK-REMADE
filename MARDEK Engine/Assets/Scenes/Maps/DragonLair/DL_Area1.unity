@@ -582,8 +582,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3149219438909688387, guid: 098dbe7dfc7936f43af8b5c4e18a2dde, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 06455bff922dd1644900fca3f922975e, type: 2}
+    - target: {fileID: 3149219438909688387, guid: 098dbe7dfc7936f43af8b5c4e18a2dde, type: 3}
       propertyPath: amount
-      value: 1000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3149219438909688387, guid: 098dbe7dfc7936f43af8b5c4e18a2dde, type: 3}
       propertyPath: localSwitch

@@ -11,8 +11,8 @@ namespace MARDEK.Inventory
         [SerializeField] string _colorHexCode;
         [SerializeField] string _pfx;
 
-          [SerializeField] Action action;
-          public Action Action { get{ return action; } }
+          [SerializeField] BattleAction action;
+          public BattleAction Action { get{ return action; } }
 
         public ExpendableItem(){
             //statsSet = new StatsSet();

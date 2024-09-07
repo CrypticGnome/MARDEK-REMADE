@@ -23,12 +23,12 @@ namespace MARDEK.Battle
                      waitCompletion = Mathf.Clamp01(timer / timeToTurn);
                      foreach (BattleCharacter character in EnemyBattleParty)
                      {
-                          character.Character.ACT = Mathf.Lerp(startACT[listIndex], finalACT[listIndex], waitCompletion);
+                          character.ACT = Mathf.Lerp(startACT[listIndex], finalACT[listIndex], waitCompletion);
                           listIndex++;
                      }
                      foreach (BattleCharacter character in PlayerBattleParty)
                      {
-                          character.Character.ACT = Mathf.Lerp(startACT[listIndex], finalACT[listIndex], waitCompletion);
+                          character.ACT = Mathf.Lerp(startACT[listIndex], finalACT[listIndex], waitCompletion);
                           listIndex++;
                      }
                      yield return null;
@@ -41,17 +41,15 @@ namespace MARDEK.Battle
                 List<BattleCharacter> characterList = new List<BattleCharacter>();
                 foreach (BattleCharacter character in EnemyBattleParty)
                 {
-                     float actRate = 1 + 0.05f * character.Character.Agility;
-                     actRate *= 1000;
-                     float characterTimeToTurn = (1000f - character.Character.ACT) / actRate;
+                    float actRate = character.ActBuildRate();
+                     float characterTimeToTurn = (1000f - character.ACT) / actRate;
                      timeToTurnList.Add(characterTimeToTurn);
                      characterList.Add(character);
                 }
                 foreach (BattleCharacter character in PlayerBattleParty)
                 {
-                     float actRate = 1 + 0.05f * character.Character.Agility;
-                     actRate *= 1000;
-                     float characterTimeToTurn = (1000f - character.Character.ACT) / actRate;
+                    float actRate = character.ActBuildRate();
+                     float characterTimeToTurn = (1000f - character.ACT) / actRate;
                      timeToTurnList.Add(characterTimeToTurn);
                      characterList.Add(character);
                 }
@@ -65,27 +63,25 @@ namespace MARDEK.Battle
                 finalACT = new List<float>();
                 foreach (BattleCharacter character in EnemyBattleParty)
                 {
-                     startACT.Add(character.Character.ACT);
+                     startACT.Add(character.ACT);
 
-                     float actRate = 1 + 0.05f * character.Character.Agility;
-                     actRate *= 1000;
-                     float characterACT = character.Character.ACT + actRate * timeToTurn;
+                    float actRate = character.ActBuildRate();
+                    float characterACT = character.ACT + actRate * timeToTurn;
                      finalACT.Add(characterACT);
                 }
                 foreach (BattleCharacter character in PlayerBattleParty)
                 {
-                     startACT.Add(character.Character.ACT);
+                     startACT.Add(character.ACT);
 
-                     float actRate = 1 + 0.05f * character.Character.Agility;
-                     actRate *= 1000;
-                     float characterACT = character.Character.ACT + actRate * timeToTurn;
+                    float actRate = character.ActBuildRate();
+                    float characterACT = character.ACT + actRate * timeToTurn;
                      finalACT.Add(characterACT);
                 }
            }
-           public static float TimeToTurn(Character character, float speedMultiplier)
+           public static float TimeToTurn(BattleCharacter character, float speedMultiplier)
            {
-               float actRate = 1 + 0.05f * character.Agility;
-               actRate *= 1000 * speedMultiplier;
+               float actRate = character.ActBuildRate();
+               actRate *= speedMultiplier;
                float characterTimeToTurn = (1000f - character.ACT) / actRate;
                return characterTimeToTurn;
           }

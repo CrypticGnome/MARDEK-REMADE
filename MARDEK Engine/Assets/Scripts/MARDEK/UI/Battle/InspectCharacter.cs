@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using MARDEK.CharacterSystem;
+using MARDEK.Battle;
 namespace MARDEK.UI
 {
     public class InspectCharacter : MonoBehaviour
@@ -26,7 +26,7 @@ namespace MARDEK.UI
           }
           public void Inspect()
           {
-               Character character = BattleUIManager.Instance.characterBeingInspected;
+               BattleCharacter character = BattleUIManager.Instance.characterBeingInspected;
                characterName.text = character.Profile.displayName;
                levelText.text = $"Level {character.Level}";
                strength.text = character.Strength.ToString();

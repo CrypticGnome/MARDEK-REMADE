@@ -24,7 +24,7 @@ namespace MARDEK.Battle
           [SerializeField] EncounterSet dummyEncounter;
           public static EncounterSet encounter { private get; set; }
           public static BattleCharacter characterActing { get; private set; }
-          public static ApplyAction ActionToPerform;
+          public static BattleAction ActionToPerform;
           const float actResolution = 1000;
           static public List<BattleCharacter> EnemyBattleParty { get; private set; } = new();
           static public List<BattleCharacter> PlayerBattleParty { get; private set; } = new();
@@ -64,12 +64,12 @@ namespace MARDEK.Battle
                void SpawnEnemyBattleCharacter(Character c)
                {
                     var position = enemyPartyPositions[EnemyBattleParty.Count].transform.position;
-                    EnemyBattleParty.Add(new BattleCharacter(c, position));
+                    EnemyBattleParty.Add(new EnemyBattleCharacter(c.Profile, position));
                }
                void SpawnPlayerBattleCharacter(Character c)
                {
                     var position = playerPartyPositions[PlayerBattleParty.Count].transform.position;
-                    PlayerBattleParty.Add(new BattleCharacter(c, position));
+                    PlayerBattleParty.Add(new HeroBattleCharacter(c, position));
                }
           }
           private void Start()
@@ -82,6 +82,7 @@ namespace MARDEK.Battle
           {
                OnTurnEnd -= WaitForTurn;
           }
+
           void SetInitialACT()
           {
                bool partySurprised = false;
@@ -91,9 +92,9 @@ namespace MARDEK.Battle
                allCharacters.AddRange(PlayerBattleParty);
 
                foreach (BattleCharacter character in EnemyBattleParty)
-                    AddCharacterTime(character.Character, !partySurprised);
+                    AddCharacterTime(character, !partySurprised);
                foreach (BattleCharacter character in PlayerBattleParty)
-                    AddCharacterTime(character.Character, partySurprised);
+                    AddCharacterTime(character, partySurprised);
 
                float minTime = timesToTurn.Min();
                int listIndex = 0;
@@ -102,10 +103,10 @@ namespace MARDEK.Battle
                CompressListToCap(tempACT, actResolution); 
 
                listIndex = 0;
-               allCharacters.ForEach(character => character.Character.ACT = tempACT[listIndex++]);
+               allCharacters.ForEach(character => character.ACT = tempACT[listIndex++]);
 
 
-               void AddCharacterTime (Character character, bool surprised)
+               void AddCharacterTime (BattleCharacter character, bool surprised)
                {
                     float speedMultiplier = surprised ? 1 : 2;
                     speedMultiplier *= Random.Range(0.9f, 1.1f);
@@ -156,7 +157,7 @@ namespace MARDEK.Battle
                     yield return StartCoroutine(lerpCharacterACT);
 
                     characterActing = nextActor;
-                    characterActing.Character.ACT -= actResolution;
+                    characterActing.ACT -= actResolution;
                     OnTurnStart?.Invoke();
 
                     if (EnemyBattleParty.Contains(characterActing))
@@ -167,14 +168,14 @@ namespace MARDEK.Battle
 
                     characterActionUI.SetActive(true);
                     state = BattleState.ChoosingAction;
-                    characterActing.Character.TickStatusEffects();
+                    characterActing.TickStatusEffects();
                }
 
                void PerformEnemyMove()
                {
-                    characterActing.Character.TickStatusEffects();
+                    characterActing.TickStatusEffects();
 
-                    ActionSkillset enemyMoveset = characterActing.Character.ActionSkillset;
+                    ActionSkillset enemyMoveset = characterActing.Skillset;
                     if (enemyMoveset is null)
                     {
                          Debug.LogWarning("Enemy moveset is null");
@@ -183,12 +184,12 @@ namespace MARDEK.Battle
                          return;
                     }
                     ActionSkill skill = enemyMoveset.Skills[Random.Range(0, enemyMoveset.Skills.Count)];
-                    Action move = skill.Action;
+                    BattleAction move = skill.Action;
                     Debug.Log($"{characterActing.Name} uses {skill.DisplayName}");
                     PerformAction(move.Apply);
                }
           }
-          public static void PerformAction(ApplyAction action)
+          public static void PerformAction(ApplyBattleAction action)
           {
 
                BattleCharacter target;
@@ -205,7 +206,7 @@ namespace MARDEK.Battle
                }
 
                instance.state = BattleState.ActionPerforming;
-               action.Invoke(characterActing.Character, target.Character);
+               action.Invoke(characterActing, target);
 
                instance.EndTurn();
 
@@ -216,7 +217,7 @@ namespace MARDEK.Battle
                for (int i = EnemyBattleParty.Count - 1; i >= 0; i--)
                {
                     var enemy = EnemyBattleParty[i];
-                    var health = enemy.Character.CurrentHP;
+                    var health = enemy.CurrentHP;
                     if (health > 0)
                          continue;
 
@@ -226,8 +227,8 @@ namespace MARDEK.Battle
 
                for (int i = PlayerBattleParty.Count - 1; i >= 0; i--)
                {
-                    var hero = PlayerBattleParty[i];
-                    var health = hero.Character.CurrentHP;
+                    BattleCharacter hero = PlayerBattleParty[i];
+                    int health = hero.CurrentHP;
                     if (health <= 0)
                          PlayerBattleParty.Remove(hero);
                }
@@ -276,6 +277,7 @@ namespace MARDEK.Battle
                Concluding
           }
     }
-     public delegate void ApplyAction(Character user, Character target);
+     //public delegate void ApplyAction(Character target);
+     public delegate void ApplyBattleAction(BattleCharacter user, BattleCharacter target);
 
 }

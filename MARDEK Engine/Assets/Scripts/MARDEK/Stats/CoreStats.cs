@@ -1,3 +1,4 @@
+using MARDEK.Battle;
 using System;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
@@ -15,16 +16,60 @@ namespace MARDEK.Stats
           [Space] 
           public int Attack;
           public int Defense, MagicDefense;
-          public int Crit;
+          public int CritRate;
           public int Accuracy = 100;
           [Space]
-          public MaxHpCalculator MaxHP;
-          public MaxMpCalculator MaxMP;
+          public MaxHpCalculator MaxHPCalc;
+          public MaxMpCalculator MaxMPCalc;
+          public int MaxHP,
+               MaxMP;
+
+          public CoreStats(CoreStats other)
+          {
+               Strength = other.Strength;
+               Vitality = other.Vitality;
+               Spirit = other.Spirit;
+               Agility = other.Agility;
+
+               Absorbtions = new Absorbtions(other.Absorbtions);
+               Resistances = other.Resistances;
+
+               Attack = other.Attack;
+               Defense = other.Defense;
+               MagicDefense = other.MagicDefense;
+               CritRate = other.CritRate;
+               Accuracy = other.Accuracy;
+
+               MaxHPCalc = other.MaxHPCalc;
+               MaxMPCalc = other.MaxMPCalc;
+               MaxHP = other.MaxHP;
+               MaxMP = other.MaxMP;
+          }
+          public void CalculateMaxValues(BattleCharacter battleCharacter)
+          {
+               MaxHP = MaxHPCalc.GetMaxHP(battleCharacter);
+               MaxMP = MaxHPCalc.GetMaxHP(battleCharacter);
+          }
      }
      [Serializable]
      public class Absorbtions
      {
           public int Fire, Earth, Water, Air, Light, Dark, Aether, Fig, Physical, Thauma, Divine;
+
+          public Absorbtions(Absorbtions other)
+          {
+               Fire = other.Fire;
+               Earth = other.Earth;
+               Water = other.Water;
+               Air = other.Air;
+               Light = other.Light;
+               Dark = other.Dark;
+               Aether = other.Aether;
+               Fig = other.Fig;
+               Physical = other.Physical;
+               Thauma = other.Thauma;
+               Divine = other.Divine;
+          }
 
           public int GetAbsorbtion(ElementID element)
           {

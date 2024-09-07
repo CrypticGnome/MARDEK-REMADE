@@ -39,7 +39,7 @@ namespace MARDEK.Movement
             if (_collider == null)
                 return results;
             System.Array.Clear(colliders, 0, colliders.Length);
-            _collider.OverlapCollider(filter, colliders);
+            _collider.Overlap(filter, colliders);
             foreach (Collider2D c in colliders)
                 if (c != null && c.isActiveAndEnabled)
                     results.Add(c);

@@ -58,13 +58,339 @@ MonoBehaviour:
       itemFilter: []
       canBeEmpty: 0
       canPlayerPutItems: 0
+    - currentItem: {fileID: 11400000, guid: 3306683e7ecd94b438774f91678b4d42, type: 2}
+      currentAmount: 10
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 11400000, guid: 06455bff922dd1644900fca3f922975e, type: 2}
+      currentAmount: 5
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
   <ActionSkillset>k__BackingField: {fileID: 11400000, guid: 19642d204816fc84194541b655801204, type: 2}
   <ReactionSkillset>k__BackingField: {fileID: 0}
   <PassiveSkillset>k__BackingField: {fileID: 0}
   attack: 100
-  defense: 0
-  magicDefense: 0
+  defense: 60
+  magicDefense: 60
   _currentHP: 1236
-  _currentMP: 134
+  _currentMP: 111
+  StatusBuildup:
+    poison: 0
+    sleep: 0
+    paralysis: 0
+    blindness: 0
+    silence: 0
+    numbness: 0
+    curse: 0
+    confusion: 0
+    bleed: 0
+    zombification: 0
   Level: 50
   Experience: 0

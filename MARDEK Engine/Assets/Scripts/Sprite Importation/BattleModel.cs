@@ -10,7 +10,7 @@ public class BattleModel : MonoBehaviour
      {
           ApplySkin();
      }
-
+      
      public void SetBattlePosition(Vector3 position)
      {
           gameObject.transform.position = position;
@@ -39,7 +39,10 @@ public class BattleModel : MonoBehaviour
      [ContextMenu("Apply Skin")]
      public void ApplySkin()
      {
-          foreach (var sprite in GetComponentsInChildren<SWFSprite>())
-               sprite.PlayAnimationByLabel(skin);
+          SWFSprite[] sprites = GetComponentsInChildren<SWFSprite>();
+          for (int index = 0; index < sprites.Length; index++)
+          {
+               sprites[index].PlayAnimationByLabel(skin);
+          }
      }
 }

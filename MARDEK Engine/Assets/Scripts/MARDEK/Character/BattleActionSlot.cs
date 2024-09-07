@@ -19,14 +19,14 @@ namespace MARDEK.CharacterSystem
           public Sprite Sprite;
           public int Number;
           public string Description;
-          public ApplyAction PerformAction;
+          public ApplyBattleAction PerformAction;
           public void ApplyAction()
           {
               BattleManager.PerformAction(PerformAction);
           }
           public BattleActionSlot(ActionSkill skill)
           {
-               Battle.Action action = skill.Action;
+               Battle.BattleAction action = skill.Action;
                if (action.Element is null)
                {
                     Debug.LogAssertion($"{skill.DisplayName} does not have an attatched element");

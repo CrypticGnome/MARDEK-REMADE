@@ -43,7 +43,7 @@ namespace MARDEK.UI
 
           public void OnPointerClick(PointerEventData eventData)
           {
-               BattleUIManager.Instance.InspectCharacter(character.Character);
+               BattleUIManager.Instance.InspectCharacter(character);
           }
     }
 }

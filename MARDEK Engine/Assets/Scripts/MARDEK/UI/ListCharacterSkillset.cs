@@ -26,8 +26,8 @@ namespace MARDEK.UI
           }
           void GetSkillset()
           {
-               Character character = Battle.BattleManager.characterActing.Character;
-               skillsetToShow = character.ActionSkillset;
+               BattleCharacter character = BattleManager.characterActing;
+               skillsetToShow = character.Skillset;
 
                if (skillsetToShow)
                {

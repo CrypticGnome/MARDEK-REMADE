@@ -12,14 +12,32 @@ namespace MARDEK.UI
 
         [SerializeField] BattleManager battleManager;
         [SerializeField] GameObject CharacterInspectionCard;
-        public Character characterBeingInspected { get; private set; }
+          [SerializeField] RectTransform actionPicker;
+        public BattleCharacter characterBeingInspected { get; private set; }
 
         private void Awake()
         {
             Instance = this;
         }
-
-          public void InspectCharacter(Character character)
+          private void OnEnable()
+          {
+               BattleManager.OnTurnEnd += OnTurnEnd;
+               BattleManager.OnTurnStart += OnTurnStart;
+          }
+          private void OnDisable()
+          {
+               BattleManager.OnTurnEnd -= OnTurnEnd;
+               BattleManager.OnTurnStart -= OnTurnStart;
+          }
+          void OnTurnEnd()
+          {
+               actionPicker.gameObject.SetActive(false);
+          }
+          void OnTurnStart()
+          {
+               actionPicker.gameObject.SetActive(true);
+          }
+          public void InspectCharacter(BattleCharacter character)
           {
                if (characterBeingInspected == character)
                {

@@ -24,6 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6298310975210123530}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,7 +32,6 @@ Transform:
   m_Children:
   - {fileID: 1734706238489793684}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8822779486079205079
 MonoBehaviour:
@@ -53,8 +53,13 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8738467400595063125}
     m_Modifications:
+    - target: {fileID: 2022804737859786045, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
+      propertyPath: 'innerSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2213076367684997453, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
       propertyPath: m_Name
       value: 2427
@@ -62,6 +67,14 @@ PrefabInstance:
     - target: {fileID: 2213076367684997453, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322769745511094320, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
+      propertyPath: 'innerSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503968638634639301, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
+      propertyPath: 'innerSprites.Array.data[0]'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6489855676341059430, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
       propertyPath: m_Color.b
@@ -132,6 +145,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 2700473862568709470, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
+    - {fileID: 2307774956371258027, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
+    - {fileID: 186302026446012499, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
 --- !u!4 &1734706238489793684 stripped
 Transform:

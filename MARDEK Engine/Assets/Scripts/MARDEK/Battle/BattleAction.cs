@@ -7,24 +7,24 @@ namespace MARDEK.Battle
      using MARDEK.Stats;
      using System;
      [Serializable]
-     public class Action
+     public class BattleAction
      {
           [SerializeField] List<Effect> effects = new List<Effect>();
           [SerializeField] Element element;
           public Element Element { get { return element; } }
-          public void Apply(Character user, Character target)
+          public void Apply(BattleCharacter user, BattleCharacter target)
           {
                for (int index = 0; index < effects.Count; index++) 
                     ApplyEffect(user, target, effects[index]);
           }
 
-          void ApplyEffect(Character user, Character target, Effect effect)
+          void ApplyEffect(BattleCharacter user, BattleCharacter target, Effect effect)
           {
                float ATK = user.Attack;
                float DEF = target.Defense;
                float MDEF = target.MagicDefense;
-               float STR = user.BaseStats.Strength;
-               float SPR = user.BaseStats.Spirit;
+               float STR = user.Strength;
+               float SPR = user.Spirit;
                float level = user.Level;
                EffectType effectType = effect.EffectType;
                float motionValue = effect.MotionValue;
@@ -49,7 +49,8 @@ namespace MARDEK.Battle
                          }
                          float finalAttack = motionValue * ATK * elementalVulnerability;
                          //float rawDamage = Clamp0(finalAttack - DEF);
-                         float rawDamage = Clamp0(finalAttack - DEF / 2) * finalAttack / (finalAttack + DEF);
+                         float rawDamage = Clamp0(finalAttack - DEF / 2) * finalAttack / (finalAttack + DEF); // if this is zero the results will be NaN
+                         rawDamage = rawDamage is float.NaN ? 0 : rawDamage;
                          float power = STR * (level + 5) / 50;
                          int damage = (int)(rawDamage * power * UnityEngine.Random.Range(0.9f,1.1f));
                          target.CurrentHP -= damage;
@@ -87,7 +88,7 @@ namespace MARDEK.Battle
 
 
           }
-          void DealStatusEffect(Character user, Character target, Effect effect)
+          void DealStatusEffect(BattleCharacter user, BattleCharacter target, Effect effect)
           {
                switch (effect.StatusEffect) 
                {

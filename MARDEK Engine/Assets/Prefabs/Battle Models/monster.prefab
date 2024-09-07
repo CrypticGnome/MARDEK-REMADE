@@ -24,6 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541649454727450239}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,7 +32,6 @@ Transform:
   m_Children:
   - {fileID: 1126532135872958423}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7870182058091645068
 MonoBehaviour:
@@ -53,6 +53,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2933176460648889494}
     m_Modifications:
     - target: {fileID: 329468248669177923, guid: 0635e540008134846b9cc6b8f04ecb8d, type: 3}
@@ -211,6 +212,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4642919849558370021, guid: 0635e540008134846b9cc6b8f04ecb8d, type: 3}
+      propertyPath: 'innerSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4744447399850727569, guid: 0635e540008134846b9cc6b8f04ecb8d, type: 3}
       propertyPath: m_Color.b
       value: 0.7529412
@@ -323,6 +328,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.7647059
       objectReference: {fileID: 0}
+    - target: {fileID: 7313714764114341653, guid: 0635e540008134846b9cc6b8f04ecb8d, type: 3}
+      propertyPath: 'innerSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7621537589506123794, guid: 0635e540008134846b9cc6b8f04ecb8d, type: 3}
       propertyPath: m_Color.b
       value: 0.7647059
@@ -358,6 +367,10 @@ PrefabInstance:
     - target: {fileID: 8353156725376196186, guid: 0635e540008134846b9cc6b8f04ecb8d, type: 3}
       propertyPath: m_Color.r
       value: 0.7529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 8432110745051242979, guid: 0635e540008134846b9cc6b8f04ecb8d, type: 3}
+      propertyPath: 'innerSprites.Array.data[0]'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8518082106190291963, guid: 0635e540008134846b9cc6b8f04ecb8d, type: 3}
       propertyPath: m_Color.b
@@ -372,6 +385,12 @@ PrefabInstance:
       value: 0.7647059
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6839109129447240587, guid: 0635e540008134846b9cc6b8f04ecb8d, type: 3}
+    - {fileID: 8932918798882486907, guid: 0635e540008134846b9cc6b8f04ecb8d, type: 3}
+    - {fileID: 7747161718904894605, guid: 0635e540008134846b9cc6b8f04ecb8d, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0635e540008134846b9cc6b8f04ecb8d, type: 3}
 --- !u!4 &1126532135872958423 stripped
 Transform:
