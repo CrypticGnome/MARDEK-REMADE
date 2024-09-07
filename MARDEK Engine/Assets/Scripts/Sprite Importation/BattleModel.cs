@@ -17,7 +17,7 @@ public class BattleModel : MonoBehaviour
           if (position.x < 0)
                gameObject.transform.localScale = new Vector3(-1, 1, 1);
           var layer = SortingLayer.NameToID($"BattleModel {(int)position.z}");
-          foreach (var r in GetComponentsInChildren<SpriteRenderer>())
+          foreach (var r in GetComponentsInChildren<SpriteRenderer>(includeInactive: true))
                r.sortingLayerID = layer;
      }
 

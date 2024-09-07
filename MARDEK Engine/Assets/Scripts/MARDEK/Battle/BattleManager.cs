@@ -82,6 +82,7 @@ namespace MARDEK.Battle
           {
                OnTurnEnd -= WaitForTurn;
           }
+
           void SetInitialACT()
           {
                bool partySurprised = false;
