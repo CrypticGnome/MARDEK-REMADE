@@ -19,7 +19,11 @@ namespace MARDEK.Battle
                 float waitCompletion = 0;
                 while (waitCompletion < 1)
                 {
-                     int listIndex = 0;
+                    if (instance.state == BattleState.Concluding)
+                    {
+                         yield break;
+                    }
+                    int listIndex = 0;
                      waitCompletion = Mathf.Clamp01(timer / timeToTurn);
                      foreach (BattleCharacter character in EnemyBattleParty)
                      {

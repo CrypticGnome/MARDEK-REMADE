@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MARDEK.Battle;
 using MARDEK.CharacterSystem;
+using UnityEngine.Events;
 
 namespace MARDEK.UI
 {
@@ -10,10 +11,12 @@ namespace MARDEK.UI
     {
         public static BattleUIManager Instance { get; private set; }
 
-        [SerializeField] BattleManager battleManager;
-        [SerializeField] GameObject CharacterInspectionCard;
+          [SerializeField] BattleManager battleManager;
+          [SerializeField] GameObject CharacterInspectionCard;
           [SerializeField] RectTransform actionPicker;
-        public BattleCharacter characterBeingInspected { get; private set; }
+          [SerializeField] UnityEvent OnVictoryUE;
+
+          public BattleCharacter characterBeingInspected { get; private set; }
 
         private void Awake()
         {
@@ -29,6 +32,7 @@ namespace MARDEK.UI
                BattleManager.OnTurnEnd -= OnTurnEnd;
                BattleManager.OnTurnStart -= OnTurnStart;
           }
+          
           void OnTurnEnd()
           {
                actionPicker.gameObject.SetActive(false);
@@ -49,6 +53,10 @@ namespace MARDEK.UI
                characterBeingInspected = character;
                CharacterInspectionCard.SetActive(false);
                CharacterInspectionCard.SetActive(true);
+          }
+          public void OnVictory()
+          {
+               OnVictoryUE.Invoke();
           }
     }
 }

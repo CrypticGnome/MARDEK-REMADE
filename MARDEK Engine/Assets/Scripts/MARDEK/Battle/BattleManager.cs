@@ -9,6 +9,7 @@ namespace MARDEK.Battle
 {
     using Core;
      using MARDEK.Skill;
+     using MARDEK.UI;
      using Progress;
     using UnityEngine.Events;
      using static MARDEK.Battle.BattleManager;
@@ -20,7 +21,6 @@ namespace MARDEK.Battle
           [SerializeField] GameObject characterActionUI = null;
           [SerializeField] List<GameObject> enemyPartyPositions = new();
           [SerializeField] List<GameObject> playerPartyPositions = new();
-          [SerializeField] UnityEvent OnVictory;
           [SerializeField] EncounterSet dummyEncounter;
           public static EncounterSet encounter { private get; set; }
           public static BattleCharacter characterActing { get; private set; }
@@ -155,6 +155,11 @@ namespace MARDEK.Battle
                     TurnManager.GetCharacterACTNextTurn(timeToTurn, out List<float> startACT, out List<float> finalACT);
                     IEnumerator lerpCharacterACT = TurnManager.LerpCharacterACTs(timeToTurn, startACT, finalACT);
                     yield return StartCoroutine(lerpCharacterACT);
+                    if (instance.state == BattleState.Concluding)
+                    {
+                         yield break;
+                    }
+                    
 
                     characterActing = nextActor;
                     characterActing.ACT -= actResolution;
@@ -265,7 +270,7 @@ namespace MARDEK.Battle
           {
                print("victory!!");
                yield return new WaitForSeconds(2);
-               instance.OnVictory.Invoke();
+               BattleUIManager.Instance.OnVictory();
                instance.enabled = false;
           }
 
