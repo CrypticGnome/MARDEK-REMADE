@@ -13,8 +13,5 @@ MonoBehaviour:
   m_Name: DragonBattle
   m_EditorClassIdentifier: 
   possibleEncounters:
-  - encounterWeight: 1
-    encounterEnemies:
-    - enemy: {fileID: 11400000, guid: 9df719ae051989b468d617bbe0b00ad9, type: 2}
-      minLevel: 40
-      maxLevel: 40
+  - EncounterWeight: 1
+    Encounter: {fileID: 11400000, guid: 58dad077d299cd04fa0d23742939eb56, type: 2}

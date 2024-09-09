@@ -22,6 +22,7 @@ namespace MARDEK.Battle
           [SerializeField] List<GameObject> enemyPartyPositions = new();
           [SerializeField] List<GameObject> playerPartyPositions = new();
           [SerializeField] EncounterSet dummyEncounter;
+          public Encounter Encounter;
           public static EncounterSet encounter { private get; set; }
           public static BattleCharacter characterActing { get; private set; }
           public static BattleAction ActionToPerform;
@@ -49,7 +50,7 @@ namespace MARDEK.Battle
                     }
                     encounter = dummyEncounter;
                }
-               List<Character> enemyCharacters = encounter.InstantiateEncounter();
+               List<Character> enemyCharacters = encounter.InstantiateEncounter(out Encounter);
 
                EnemyBattleParty.Clear();
                foreach (var c in enemyCharacters)

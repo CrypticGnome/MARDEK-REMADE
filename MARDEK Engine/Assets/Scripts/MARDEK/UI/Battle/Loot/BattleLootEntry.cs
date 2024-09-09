@@ -31,9 +31,22 @@ namespace MARDEK.UI
 
             UpdateItem();
         }
+        void DisableDIsplay()
+        {
+               gameObject.SetActive(false);
+               foreach (TMP_Text currentAmountText in currentAmountTexts) currentAmountText.text = "";
+                    gameObject.SetActive(false);
+          }
 
         void UpdateItem()
         {
+               if (entryIndex >= items.Length||items[entryIndex] is null)
+               {
+                    Debug.LogAssertion("Item cannot be null");
+                    DisableDIsplay();
+
+                    return;
+               }
                if (amounts[entryIndex] == 0)
                {
                     foreach (TMP_Text currentAmountText in currentAmountTexts) currentAmountText.text = "";

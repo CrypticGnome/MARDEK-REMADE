@@ -10,7 +10,7 @@ namespace MARDEK.UI
 
         Color DetermineColor(InventorySlot slot)
         {
-            if (slot.IsEmpty()) return new Color(0f, 0f, 0f, 0f);
+            if (slot.IsEmpty()) return new Color(1, 0.7f, 0, 0.02f);
             else return slot.currentItem.GetInventorySpaceColor();
         }
 

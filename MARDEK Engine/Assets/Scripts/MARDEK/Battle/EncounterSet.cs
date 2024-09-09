@@ -11,27 +11,21 @@ namespace MARDEK.Battle
     {
         [SerializeField] List<WeightedEncounter> possibleEncounters = new List<WeightedEncounter>();
 
-        [System.Serializable]
-        class WeightedEncounter
-        {
-            [Range(1, 10)]
-            public int encounterWeight = 1;
-            public List<EnemyWithLevelRange> encounterEnemies;
-        }
+          [System.Serializable]
+          class WeightedEncounter
+          {
+               [Range(1, 10)]
+               public int EncounterWeight = 1;
+               public Encounter Encounter;
+          }
 
-        [System.Serializable]
-        class EnemyWithLevelRange
-        {
-            public CharacterSystem.Character enemy;
-            public int minLevel = 0;
-            public int maxLevel = 0;
-        }
 
-        public List<Character> InstantiateEncounter()
+        public List<Character> InstantiateEncounter(out Encounter encounter)
         {
             List<Character> enemies = new List<Character>();
             var chosenEncounter = ChooseEncounter();
-            foreach(var enemyEntry in chosenEncounter.encounterEnemies)
+               encounter = chosenEncounter.Encounter;
+            foreach(var enemyEntry in encounter.Enemies)
             {
                 var enemyLevel = Random.Range(enemyEntry.minLevel, enemyEntry.maxLevel + 1);
                 var enemy = enemyEntry.enemy.Clone(enemyLevel);
@@ -51,7 +45,7 @@ namespace MARDEK.Battle
 
             foreach (var encounter in possibleEncounters)
             {
-                weight += encounter.encounterWeight;
+                weight += encounter.EncounterWeight;
                 if (desiredWeight < weight)
                     return encounter;
             }
@@ -62,7 +56,7 @@ namespace MARDEK.Battle
         {
             int totalWeight = 0;
             foreach (var encounter in possibleEncounters)
-                totalWeight += encounter.encounterWeight;
+                totalWeight += encounter.EncounterWeight;
             return totalWeight;
         }
     }

@@ -9,6 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 501583e5860402441a167b8de2f47550, type: 3}
   m_Name: Monster Fang
   m_EditorClassIdentifier: 
+  _displayName: Monster Fang
+  _description: A massive, sharp fang from the mouth of a Monster-type, uh, monster.
+    Useful as a reagent, as it retains some of the Monster's ferocity or something.
+  _sprite: {fileID: 21300000, guid: 364fe8b1011180d44ae6c8ebea58a8a1, type: 3}
+  _element: {fileID: 11400000, guid: b58053569349d314892770b43156bfd2, type: 2}
+  _price: 500
