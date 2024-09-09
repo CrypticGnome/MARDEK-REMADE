@@ -18,8 +18,7 @@ namespace MARDEK.Inventory
         [SerializeField] List<EquipmentCategory> itemFilter = new List<EquipmentCategory>();
         // Should only be `false` for weapon slots
         public bool canBeEmpty;
-        // Should only be `false` for loop slots
-        public bool canPlayerPutItems;
+
 
         public Item item { get { return this.currentItem; } }
 
@@ -46,7 +45,6 @@ namespace MARDEK.Inventory
             if (itemFilter == null) throw new System.ArgumentException("itemFilter is null");
             this.itemFilter = itemFilter;
             this.canBeEmpty = canBeEmpty;
-            this.canPlayerPutItems = canPlayerPutItems;
             this.Validate();
         }
 

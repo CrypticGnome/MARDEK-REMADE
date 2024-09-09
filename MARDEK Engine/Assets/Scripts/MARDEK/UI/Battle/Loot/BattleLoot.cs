@@ -109,10 +109,12 @@ namespace MARDEK.UI
             SetLoot(newItems, newAmounts);
         }
 
-        public void Interact()
-        {
-            BattleLootSelectable.currentlySelected.Interact(currentItems.ToArray(), currentAmounts.ToArray());
-            UpdateLoot();
-        }
+          public void Interact()
+          {
+               Debug.Log("INterasct");
+               BattleLootSelectable lootSelection = BattleLootSelectable.currentlySelected;
+               lootSelection.Interact(currentItems, currentAmounts);
+               UpdateLoot();
+          }
     }
 }

@@ -2,7 +2,7 @@ using MARDEK.Inventory;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.Collections.Generic;
 namespace MARDEK.UI
 {
     public class BattleLootButton : BattleLootSelectable
@@ -38,25 +38,29 @@ namespace MARDEK.UI
             SetUnselected();
         }
 
-        public override void Interact(Item[] items, int[] amounts)
+        public override void Interact(List<Item> items, List<int> amounts)
         {
-            if (getAll)
-            {
-                for (int index = 0; index < items.Length; index++)
-                {
-                    if (amounts[index] != 0)
-                    {
-                        if (CharacterSelectable.currentSelected.Character.Inventory.AddItem(items[index], amounts[index]))
-                        {
-                            amounts[index] = 0;
-                        }
-                    }
-                }
-            }
-            else
-            {
-                // TODO Close this menu I guess
-            }
+               if (getAll)
+               {
+                    TakeAll(items, amounts);
+               }
+               else
+               {
+                    // TODO Close this menu I guess
+               }
         }
+        void TakeAll(List<Item> items, List<int> amounts)
+          {
+               for (int index = 0; index < items.Count; index++)
+               {
+                    if (amounts[index] == 0)
+                         continue;
+                    Inventory.Inventory characterInventory = CharacterSelectable.currentSelected.Character.Inventory;
+                    if (characterInventory.AddItem(items[index], amounts[index]))
+                    {
+                         amounts[index] = 0;
+                    }
+               }
+          }
     }
 }

@@ -62,7 +62,7 @@ MonoBehaviour:
       currentAmount: 0
       itemFilter: []
       canBeEmpty: 0
-      canPlayerPutItems: 0
+      canPlayerPutItems: 1
     - currentItem: {fileID: 0}
       currentAmount: 0
       itemFilter: []

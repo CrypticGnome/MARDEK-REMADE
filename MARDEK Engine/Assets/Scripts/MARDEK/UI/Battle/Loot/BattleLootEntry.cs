@@ -102,11 +102,12 @@ namespace MARDEK.UI
             SetUnselected();
         }
 
-        public override void Interact(Item[] items, int[] amounts)
+        public override void Interact(List<Item> items, List<int> amounts)
         {
             if (CharacterSelectable.currentSelected.Character.Inventory.AddItem(items[entryIndex], amounts[entryIndex]))
             {
-                amounts[entryIndex] = 0;
+                    amounts.RemoveAt(entryIndex);
+                    items.RemoveAt(entryIndex);
             }
             else
             {
