@@ -11,6 +11,8 @@ namespace MARDEK.Battle
 {
      public class TurnManager
      {
+          public static float MaxTimeBetweenTurns = 2f;
+          public const float ActResolution = 1000f;
            public static IEnumerator LerpCharacterACTs(float timeToTurn, List<float> startACT, List<float> finalACT)
            {
                 if (timeToTurn <= 0)
@@ -45,16 +47,14 @@ namespace MARDEK.Battle
                 List<BattleCharacter> characterList = new List<BattleCharacter>();
                 foreach (BattleCharacter character in EnemyBattleParty)
                 {
-                    float actRate = character.ActBuildRate();
-                     float characterTimeToTurn = (1000f - character.ACT) / actRate;
+                    float characterTimeToTurn = TimeToTurn(character, 1);
                      timeToTurnList.Add(characterTimeToTurn);
                      characterList.Add(character);
                 }
                 foreach (BattleCharacter character in PlayerBattleParty)
                 {
-                    float actRate = character.ActBuildRate();
-                     float characterTimeToTurn = (1000f - character.ACT) / actRate;
-                     timeToTurnList.Add(characterTimeToTurn);
+                    float characterTimeToTurn = TimeToTurn(character, 1);
+                    timeToTurnList.Add(characterTimeToTurn);
                      characterList.Add(character);
                 }
                 timeToTurn = timeToTurnList.Min();
@@ -70,7 +70,7 @@ namespace MARDEK.Battle
                      startACT.Add(character.ACT);
 
                     float actRate = character.ActBuildRate();
-                    float characterACT = character.ACT + actRate * timeToTurn;
+                    float characterACT = character.ACT + actRate * timeToTurn / MaxTimeBetweenTurns;
                      finalACT.Add(characterACT);
                 }
                 foreach (BattleCharacter character in PlayerBattleParty)
@@ -78,7 +78,7 @@ namespace MARDEK.Battle
                      startACT.Add(character.ACT);
 
                     float actRate = character.ActBuildRate();
-                    float characterACT = character.ACT + actRate * timeToTurn;
+                    float characterACT = character.ACT + actRate * timeToTurn / MaxTimeBetweenTurns;
                      finalACT.Add(characterACT);
                 }
            }
@@ -86,7 +86,7 @@ namespace MARDEK.Battle
            {
                float actRate = character.ActBuildRate();
                actRate *= speedMultiplier;
-               float characterTimeToTurn = (1000f - character.ACT) / actRate;
+               float characterTimeToTurn = (ActResolution - character.ACT) / actRate * MaxTimeBetweenTurns;
                return characterTimeToTurn;
           }
       }

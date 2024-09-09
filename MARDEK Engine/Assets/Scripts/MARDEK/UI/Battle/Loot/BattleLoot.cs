@@ -111,7 +111,6 @@ namespace MARDEK.UI
 
           public void Interact()
           {
-               Debug.Log("INterasct");
                BattleLootSelectable lootSelection = BattleLootSelectable.currentlySelected;
                lootSelection.Interact(currentItems, currentAmounts);
                UpdateLoot();

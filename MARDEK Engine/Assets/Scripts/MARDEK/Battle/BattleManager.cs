@@ -26,7 +26,6 @@ namespace MARDEK.Battle
           public static EncounterSet encounter { private get; set; }
           public static BattleCharacter characterActing { get; private set; }
           public static BattleAction ActionToPerform;
-          const float actResolution = 1000;
           static public List<BattleCharacter> EnemyBattleParty { get; private set; } = new();
           static public List<BattleCharacter> PlayerBattleParty { get; private set; } = new();
           public static BattleManager instance;
@@ -101,7 +100,7 @@ namespace MARDEK.Battle
                int listIndex = 0;
                GetTempACT(out List<float> tempACT);
                NormalizeBottomToZero(tempACT);
-               CompressListToCap(tempACT, actResolution); 
+               CompressListToCap(tempACT); 
 
                listIndex = 0;
                allCharacters.ForEach(character => character.ACT = tempACT[listIndex++]);
@@ -121,7 +120,7 @@ namespace MARDEK.Battle
                     foreach (BattleCharacter battleCharacter in allCharacters)
                     {
                          float timeToTurn = timesToTurn[listIndex++];
-                         float temp_act = minTime / timeToTurn * actResolution;
+                         float temp_act = minTime / timeToTurn * TurnManager.ActResolution;
                          temp_act += Random.Range(-167, 167);
                          tempACT.Add(temp_act);
                     }
@@ -135,10 +134,10 @@ namespace MARDEK.Battle
                          tempACT[i] -= minValue;
                     }
                }
-               void CompressListToCap(List<float> input, float cap)
+               void CompressListToCap(List<float> input)
                {
                     float maxValue = input.Max();
-                    float compressionFactor = cap / maxValue;
+                    float compressionFactor = TurnManager.ActResolution / maxValue;
 
                     for (int i = 0; i < allCharacters.Count; i++)
                     {
@@ -163,7 +162,7 @@ namespace MARDEK.Battle
                     
 
                     characterActing = nextActor;
-                    characterActing.ACT -= actResolution;
+                    characterActing.ACT -= TurnManager.ActResolution;
                     OnTurnStart?.Invoke();
 
                     if (EnemyBattleParty.Contains(characterActing))

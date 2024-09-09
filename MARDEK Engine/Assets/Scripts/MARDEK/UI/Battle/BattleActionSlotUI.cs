@@ -10,6 +10,7 @@ namespace MARDEK.UI
     public class BattleActionSlotUI : Selectable
     {
         public delegate void UpdateSelectedSlot(BattleActionSlot slot);
+          public static BattleActionSlot selectedInstance;
         public static UpdateSelectedSlot UpdateSelected { get; set; }
         [SerializeField] Image sprite;
         [SerializeField] Text nameLabel;
@@ -36,9 +37,10 @@ namespace MARDEK.UI
           }
 
           public override void Select(bool playSFX = true)
-        {
-            base.Select(playSFX);
-            UpdateSelected?.Invoke(slot);
-        }
+          {
+               base.Select(playSFX);
+               selectedInstance = slot;
+               UpdateSelected?.Invoke(slot);
+          }
     }
 }
