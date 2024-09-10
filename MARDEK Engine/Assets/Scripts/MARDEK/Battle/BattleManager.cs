@@ -163,7 +163,16 @@ namespace MARDEK.Battle
 
                     characterActing = nextActor;
                     characterActing.ACT -= TurnManager.ActResolution;
+
+                   
                     OnTurnStart?.Invoke();
+                    if (characterActing.stunned)
+                    {
+                         Debug.Log($"{characterActing.Name} is stunned");
+                         characterActing.TickStatusEffects();
+                         instance.EndTurn();
+                         yield break;
+                    }
 
                     if (EnemyBattleParty.Contains(characterActing))
                     {

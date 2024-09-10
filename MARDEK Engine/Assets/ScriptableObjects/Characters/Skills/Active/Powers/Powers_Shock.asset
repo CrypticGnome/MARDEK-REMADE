@@ -21,4 +21,7 @@ MonoBehaviour:
     - effectType: 0
       motionValue: 2
       statusEffect: 0
+    - effectType: 6
+      motionValue: 2
+      statusEffect: 3
     element: {fileID: 11400000, guid: 3b3d471c2fd4e964bad27afb63ea5346, type: 2}
