@@ -46,7 +46,7 @@ namespace MARDEK.UI
             }
             else
             {
-                if (slotInteracted.ApplyItemFilter(slot.currentItem) && slotInteracted.canPlayerPutItems)
+                if (slotInteracted.ApplyItemFilter(slot.currentItem))
                 {
                     PlaceItemInSlot(slotInteracted);
                 }

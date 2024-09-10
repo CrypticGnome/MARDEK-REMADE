@@ -24,7 +24,7 @@ namespace MARDEK.Inventory
             // First try to fill slots that already have the right item
             foreach (var slot in slots)
             {
-                if (slot.canPlayerPutItems && !slot.IsEmpty() && slot.currentItem == item)
+                if (!slot.IsEmpty() && slot.currentItem == item)
                 {
                     slot.currentAmount += amount;
                     return true;
@@ -34,7 +34,7 @@ namespace MARDEK.Inventory
             // Then try to fill empty slots
             foreach (var slot in slots)
             {
-                if (slot.canPlayerPutItems && slot.IsEmpty())
+                if (slot.IsEmpty())
                 {
                     slot.currentItem = item;
                     slot.currentAmount = amount;

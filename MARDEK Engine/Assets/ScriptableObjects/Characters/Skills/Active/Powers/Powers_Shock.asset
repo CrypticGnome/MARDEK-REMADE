@@ -15,9 +15,13 @@ MonoBehaviour:
   <Cost>k__BackingField: 10
   <PointsRequiredToMaster>k__BackingField: 0
   <DisplayName>k__BackingField: Shock
-  <Description>k__BackingField: 
+  <Description>k__BackingField: Thunderous slash that causes Air elemental damage.
   action:
     effects:
     - effectType: 0
       motionValue: 2
+      statusEffect: 0
+    - effectType: 6
+      motionValue: 2
+      statusEffect: 3
     element: {fileID: 11400000, guid: 3b3d471c2fd4e964bad27afb63ea5346, type: 2}

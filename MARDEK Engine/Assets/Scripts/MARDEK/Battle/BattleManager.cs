@@ -9,6 +9,7 @@ namespace MARDEK.Battle
 {
     using Core;
      using MARDEK.Skill;
+     using MARDEK.UI;
      using Progress;
     using UnityEngine.Events;
      using static MARDEK.Battle.BattleManager;
@@ -20,12 +21,11 @@ namespace MARDEK.Battle
           [SerializeField] GameObject characterActionUI = null;
           [SerializeField] List<GameObject> enemyPartyPositions = new();
           [SerializeField] List<GameObject> playerPartyPositions = new();
-          [SerializeField] UnityEvent OnVictory;
           [SerializeField] EncounterSet dummyEncounter;
+          public Encounter Encounter;
           public static EncounterSet encounter { private get; set; }
           public static BattleCharacter characterActing { get; private set; }
           public static BattleAction ActionToPerform;
-          const float actResolution = 1000;
           static public List<BattleCharacter> EnemyBattleParty { get; private set; } = new();
           static public List<BattleCharacter> PlayerBattleParty { get; private set; } = new();
           public static BattleManager instance;
@@ -49,7 +49,7 @@ namespace MARDEK.Battle
                     }
                     encounter = dummyEncounter;
                }
-               List<Character> enemyCharacters = encounter.InstantiateEncounter();
+               List<Character> enemyCharacters = encounter.InstantiateEncounter(out Encounter);
 
                EnemyBattleParty.Clear();
                foreach (var c in enemyCharacters)
@@ -100,7 +100,7 @@ namespace MARDEK.Battle
                int listIndex = 0;
                GetTempACT(out List<float> tempACT);
                NormalizeBottomToZero(tempACT);
-               CompressListToCap(tempACT, actResolution); 
+               CompressListToCap(tempACT); 
 
                listIndex = 0;
                allCharacters.ForEach(character => character.ACT = tempACT[listIndex++]);
@@ -120,7 +120,7 @@ namespace MARDEK.Battle
                     foreach (BattleCharacter battleCharacter in allCharacters)
                     {
                          float timeToTurn = timesToTurn[listIndex++];
-                         float temp_act = minTime / timeToTurn * actResolution;
+                         float temp_act = minTime / timeToTurn * TurnManager.ActResolution;
                          temp_act += Random.Range(-167, 167);
                          tempACT.Add(temp_act);
                     }
@@ -134,10 +134,10 @@ namespace MARDEK.Battle
                          tempACT[i] -= minValue;
                     }
                }
-               void CompressListToCap(List<float> input, float cap)
+               void CompressListToCap(List<float> input)
                {
                     float maxValue = input.Max();
-                    float compressionFactor = cap / maxValue;
+                    float compressionFactor = TurnManager.ActResolution / maxValue;
 
                     for (int i = 0; i < allCharacters.Count; i++)
                     {
@@ -155,10 +155,24 @@ namespace MARDEK.Battle
                     TurnManager.GetCharacterACTNextTurn(timeToTurn, out List<float> startACT, out List<float> finalACT);
                     IEnumerator lerpCharacterACT = TurnManager.LerpCharacterACTs(timeToTurn, startACT, finalACT);
                     yield return StartCoroutine(lerpCharacterACT);
+                    if (instance.state == BattleState.Concluding)
+                    {
+                         yield break;
+                    }
+                    
 
                     characterActing = nextActor;
-                    characterActing.ACT -= actResolution;
+                    characterActing.ACT -= TurnManager.ActResolution;
+
+                   
                     OnTurnStart?.Invoke();
+                    if (characterActing.stunned)
+                    {
+                         Debug.Log($"{characterActing.Name} is stunned");
+                         characterActing.TickStatusEffects();
+                         instance.EndTurn();
+                         yield break;
+                    }
 
                     if (EnemyBattleParty.Contains(characterActing))
                     {
@@ -265,7 +279,7 @@ namespace MARDEK.Battle
           {
                print("victory!!");
                yield return new WaitForSeconds(2);
-               instance.OnVictory.Invoke();
+               BattleUIManager.Instance.OnVictory();
                instance.enabled = false;
           }
 

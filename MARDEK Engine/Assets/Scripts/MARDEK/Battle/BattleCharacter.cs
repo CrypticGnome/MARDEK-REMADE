@@ -75,12 +75,10 @@ namespace MARDEK.Battle
                }
                if (StatusBuildup.Paralysis > 0)
                {
-                    Debug.Log($"{Profile.displayName} is paralysed");
                     stunned = !stunned;
-                    if (stunned)
-                    {
-                         StatusBuildup.Paralysis -= resistances.Paralysis + 1;
-                    }
+                    StatusBuildup.Paralysis -= resistances.Paralysis + 1;
+                    Debug.Log($"{Profile.displayName} is paralysed and has {StatusBuildup.Paralysis} paralysis build up");
+
                }
                else
                     stunned = false;

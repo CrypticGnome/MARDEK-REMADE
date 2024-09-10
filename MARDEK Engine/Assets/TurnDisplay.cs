@@ -10,25 +10,15 @@ namespace MARDEK.UI
      public class TurnDisplay : MonoBehaviour
      {
           [SerializeField] GameObject[] heroIcons, enemyIcons;
-          List<RectTransform> heroTransforms = new List<RectTransform>(), 
-               enemyTransforms = new List<RectTransform>();
+          [SerializeField] RectTransform[] heroTransforms, enemyTransforms;
+          [SerializeField] RectTransform displayTransform;
           List<BattleCharacter> playerParty { get => BattleManager.PlayerBattleParty; }
           List<BattleCharacter> enemyParty { get => BattleManager.EnemyBattleParty; }
           float displayWidth;
           private void Awake()
           {
-               RectTransform rectTransform = GetComponent<RectTransform>();
-               displayWidth = rectTransform.rect.width;
+               displayWidth = displayTransform.rect.width;
                Debug.LogWarning("Setting the sprites of the turn display is not yet implemented");
-               for (int i = 0; i < playerParty.Count; i++)
-               {
-                    heroTransforms.Add(heroIcons[i].GetComponent<RectTransform>());
-                    //heroIcons[i].GetComponent<Image>().sprite = inPlayCharacters[i].;
-               }
-               for (int i = 0; i < enemyParty.Count; i++)
-               {
-                    enemyTransforms.Add(enemyIcons[i].GetComponent<RectTransform>());
-               }
                BattleManager.OnTurnEnd += TrackDisplay;
           }
 
@@ -36,8 +26,11 @@ namespace MARDEK.UI
           {
                BattleManager.OnTurnEnd -= TrackDisplay;
           }
+          [ContextMenu("Set display")]
           void TrackDisplay()
           {
+               displayWidth = displayTransform.rect.width;
+
                for (int i = 0; i < heroIcons.Length; i++)
                {
                     if (i < playerParty.Count)
@@ -52,6 +45,7 @@ namespace MARDEK.UI
                     else
                          enemyIcons[i].SetActive(false);
                }
+               SetTurnDisplay();
                StartCoroutine(UpdateDisplay());
 
                IEnumerator UpdateDisplay()
@@ -66,13 +60,13 @@ namespace MARDEK.UI
                {
                     for (int i = 0; i < playerParty.Count; i++)
                     {
-                         float completion = (float)playerParty[i].ACT / 1000;
+                         float completion = (float)playerParty[i].ACT / TurnManager.ActResolution;
                          heroTransforms[i].anchoredPosition = new Vector2(completion * displayWidth, 0);
                     }
 
                     for (int i = 0; i < enemyParty.Count; i++)
                     {
-                         float completion = (float)enemyParty[i].ACT / 1000;
+                         float completion = (float)enemyParty[i].ACT / TurnManager.ActResolution;
                          enemyTransforms[i].anchoredPosition = new Vector2(completion * displayWidth, 0);
                     }
                }

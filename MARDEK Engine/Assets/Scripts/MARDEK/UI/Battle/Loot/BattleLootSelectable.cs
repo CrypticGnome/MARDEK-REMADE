@@ -1,4 +1,7 @@
 using MARDEK.Inventory;
+using System;
+using System.Collections.Generic;
+
 
 namespace MARDEK.UI
 {
@@ -6,7 +9,7 @@ namespace MARDEK.UI
     {
         public static BattleLootSelectable currentlySelected;
 
-        public abstract void Interact(Item[] items, int[] amounts);
+        public abstract void Interact(List<Item> items, List<int> amounts);
 
         override public void Select(bool playSFX = true)
         {

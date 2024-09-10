@@ -11,6 +11,7 @@ namespace MARDEK.CharacterSystem
      using System;
      using MARDEK.Inventory;
      using static PlasticPipe.Server.MonitorStats;
+     using static Codice.CM.Common.CmCallContext;
 
      [Serializable]
     public class BattleActionSlot 
@@ -20,12 +21,23 @@ namespace MARDEK.CharacterSystem
           public int Number;
           public string Description;
           public ApplyBattleAction PerformAction;
+          public ActionSkill ActionSkill;
           public void ApplyAction()
           {
-              BattleManager.PerformAction(PerformAction);
+               if (ActionSkill.Cost > BattleManager.characterActing.CurrentMP)
+               {
+                    Debug.LogWarning("Cannot afford skill");
+                    return;
+               }
+               int currentMP = BattleManager.characterActing.CurrentMP;
+               int newMP = currentMP - ActionSkill.Cost;
+               BattleManager.characterActing.CurrentMP = newMP;
+
+               BattleManager.PerformAction(PerformAction);
           }
           public BattleActionSlot(ActionSkill skill)
           {
+               ActionSkill = skill;
                Battle.BattleAction action = skill.Action;
                if (action.Element is null)
                {

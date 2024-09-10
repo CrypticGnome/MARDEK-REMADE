@@ -19,8 +19,6 @@ namespace MARDEK.CharacterSystem
           [field: SerializeField] public Inventory Inventory { get; private set; } 
           public CoreStats BaseStats { get { return Profile.Stats;} }
           [field: SerializeField] public ActionSkillset ActionSkillset { get; private set; }
-          [field: SerializeField] public ReactionSkillset ReactionSkillset { get; private set; }
-          [field: SerializeField] public PassiveSkillset PassiveSkillset { get; private set; }
           public delegate void StatChanged();
           public event StatChanged OnStatChanged;
           public Character()

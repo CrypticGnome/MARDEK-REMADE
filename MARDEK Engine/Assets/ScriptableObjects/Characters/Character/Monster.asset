@@ -9,27 +9,69 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e926f53c4efbed945ad3f5f9fd8e0d5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b59e0c2031d0ad4e9bd972e9d389b2b, type: 3}
   m_Name: Monster
   m_EditorClassIdentifier: 
   isRequired: 0
   <Profile>k__BackingField: {fileID: 11400000, guid: a5ffa13b48131f34481c948e163e06bd, type: 2}
   <ItemsEquipped>k__BackingField:
-    MainHand: {fileID: 0}
-    OffHand: {fileID: 0}
-    Head: {fileID: 0}
-    Body: {fileID: 0}
-    Accessory1: {fileID: 0}
-    Accessory2: {fileID: 0}
+    MainHand:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    OffHand:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Head:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Body:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Accessory1:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Accessory2:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
   <Inventory>k__BackingField:
     slots: []
   <ActionSkillset>k__BackingField: {fileID: 11400000, guid: bdb91fdccc4422743ae6542c3e4eece4, type: 2}
-  <ReactionSkillset>k__BackingField: {fileID: 0}
-  <PassiveSkillset>k__BackingField: {fileID: 0}
   attack: 30
   defense: 0
   magicDefense: 0
   _currentHP: 0
   _currentMP: 0
-  Level: 0
+  StatusBuildup:
+    poison: 0
+    sleep: 0
+    paralysis: 0
+    blindness: 0
+    silence: 0
+    numbness: 0
+    curse: 0
+    confusion: 0
+    bleed: 0
+    zombification: 0
+  Level: 1
   Experience: 0
+  Drops:
+  - Item: {fileID: 11400000, guid: 58a73960626202d479ea67eee86863a7, type: 2}
+    Chance: 1

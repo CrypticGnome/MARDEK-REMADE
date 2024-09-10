@@ -54,6 +54,7 @@ namespace MARDEK.Battle
                          float power = STR * (level + 5) / 50;
                          int damage = (int)(rawDamage * power * UnityEngine.Random.Range(0.9f,1.1f));
                          target.CurrentHP -= damage;
+                         target.CurrentMP = Mathf.Clamp(target.CurrentHP, 0, target.MaxHP);
                          Debug.Log($"{user.Profile.displayName} targets {target.Profile.displayName} for {damage} damage");
                          return;
                     case EffectType.MagicDamage:
@@ -74,6 +75,7 @@ namespace MARDEK.Battle
                          // if target is undead damage them instead
                          float heal = (motionValue + MDEF) * SPR * level;
                          user.CurrentHP += (int)heal;
+                         user.CurrentHP = Mathf.Clamp(user.CurrentHP, 0, user.MaxHP);
                          return;
                     case EffectType.ManaRegen:
                          target.CurrentMP += (int)motionValue;
@@ -101,6 +103,20 @@ namespace MARDEK.Battle
                          target.StatusBuildup.Poison += (int)effect.MotionValue;
                          
                          break;
+               
+               case StatusEffect.Paralysis:
+                    resistance = target.Resistances.Paralysis;
+                    decayRate = resistance + 1;
+                    if (effect.MotionValue <= decayRate)
+                         break;
+                    Debug.Log($"{user.Profile.displayName} inflicts poison on {target.Profile.displayName}");
+                    if (target.StatusBuildup.Paralysis == 0)
+                    {
+                              target.stunned = true;
+                    }
+                    target.StatusBuildup.Paralysis += (int)effect.MotionValue;
+
+                    break;
                }
           }
           public enum EffectType
