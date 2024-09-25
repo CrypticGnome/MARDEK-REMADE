@@ -40,8 +40,6 @@ namespace MARDEK.Battle
             var desiredWeight = Random.Range(0, totalWeight);
             var weight = 0;
 
-            // 0 1 2 3 4 5  (desiredWeight)
-            // [2] [4] [6]  (weight)
 
             foreach (var encounter in possibleEncounters)
             {
