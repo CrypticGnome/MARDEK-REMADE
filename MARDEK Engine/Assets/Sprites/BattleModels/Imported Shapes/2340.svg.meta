@@ -11,18 +11,18 @@ ScriptedImporter:
   svgType: 1
   texturedSpriteMeshType: 0
   svgPixelsPerUnit: 1
-  gradientResolution: 64
+  gradientResolution: 128
   alignment: 10
   customPivot: {x: 0, y: 0}
   generatePhysicsShape: 0
-  viewportOptions: 0
+  viewportOptions: 1
   preserveViewport: 0
   advancedMode: 0
   predefinedResolutionIndex: 1
   targetResolution: 1080
-  resolutionMultiplier: 10
-  stepDistance: 10
-  samplingStepDistance: 100
+  resolutionMultiplier: 100
+  stepDistance: 0.1
+  samplingStepDistance: 1000
   maxCordDeviationEnabled: 0
   maxCordDeviation: 1
   maxTangentAngleEnabled: 0
@@ -33,23 +33,23 @@ ScriptedImporter:
   textureHeight: 256
   wrapMode: 1
   filterMode: 0
-  sampleCount: 4
+  sampleCount: 1
   preserveSVGImageAspect: 0
   useSVGPixelsPerUnit: 1
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: 
+      name: 2340
       originalName: 
-      pivot: {x: 0, y: 0}
-      alignment: 0
+      pivot: {x: -0.9985654, y: 49.97506}
+      alignment: 9
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 0
-        height: 0
+        width: 10
+        height: 20
       spriteID: 78aab2045fb75cf47a874fdb8d591ef4
     PhysicsOutlines: []
