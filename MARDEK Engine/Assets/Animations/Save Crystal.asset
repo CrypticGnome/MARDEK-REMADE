@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Save Crystal
   m_EditorClassIdentifier: 
   clips:
-  - indexBySOReference: {fileID: 0}
+  - indexBySOReference: {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
     _loop: 1
     durationMultiplier: 1
     spriteSequence:
