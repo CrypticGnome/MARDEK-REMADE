@@ -13,11 +13,34 @@ MonoBehaviour:
   m_Name: sewer_water
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -4400644427685314254, guid: ef6e22046d536ed43b77ff003899f224, type: 3}
-  m_MinSpeed: 8
-  m_MaxSpeed: 8
+  - {fileID: 21300000, guid: d63054b4af4b2a442987d9e023c26e00, type: 2}
+  - {fileID: 21300000, guid: 526cf5fcf0ace5e479f90a4f0260b381, type: 2}
+  - {fileID: 21300000, guid: d48d3e6a0ee6fb649bf22c6c55e85b87, type: 2}
+  - {fileID: 21300000, guid: db17249d4c494b946af05591c16958fb, type: 2}
+  - {fileID: 21300000, guid: 2e0b9019f1772834bb0bba12e3da7e70, type: 2}
+  - {fileID: 21300000, guid: 3dd4c3a3a3cce2b46afb3af3db357cea, type: 2}
+  - {fileID: 21300000, guid: 1dc1bfe634250ac48aba3ac0177e07ba, type: 2}
+  - {fileID: 21300000, guid: 49d54f9962eece14f80aaa6f403fcbe9, type: 2}
+  - {fileID: 21300000, guid: c9c67f97697d4b248b1fdf07998053c1, type: 2}
+  - {fileID: 21300000, guid: 4347540adb5379b488b03af02543cd87, type: 2}
+  - {fileID: 21300000, guid: 5c3f2b60a6789574db929b9503fea56f, type: 2}
+  - {fileID: 21300000, guid: 95155fb2846a10d499e942a6a11e904b, type: 2}
+  - {fileID: 21300000, guid: f60601fe6e2e15741b6b919b1206fefc, type: 2}
+  - {fileID: 21300000, guid: b174427c5e755ae4a97f8cf01d814675, type: 2}
+  - {fileID: 21300000, guid: 13eb72c42c2b2b448ad1ae82186b1c1b, type: 2}
+  - {fileID: 21300000, guid: 48dcfdc238de9744198643c239928d90, type: 2}
+  - {fileID: 21300000, guid: 7a65a9b5d8af8494a98ebf03488be83d, type: 2}
+  - {fileID: 21300000, guid: e5d3085e30ec85c45876d8d6421490e2, type: 2}
+  - {fileID: 21300000, guid: 92e640b2729a1dc49a125bafaf1d2b23, type: 2}
+  - {fileID: 21300000, guid: e5faee2a23e126249a46b94ce87256e0, type: 2}
+  - {fileID: 21300000, guid: 5a71a57698dcb594ba55b1ec29510225, type: 2}
+  - {fileID: 21300000, guid: 364eb9414b2326142a6dead2d9c7b024, type: 2}
+  - {fileID: 21300000, guid: 169bf3007e6a47641ac97b5251fd74db, type: 2}
+  m_MinSpeed: 6
+  m_MaxSpeed: 10
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 0
-  deltasByFrame: 0100000001000000010000000f0000000f0000000f000000
+  m_TileAnimationFlags: 0
+  deltasByFrame: 010000000100000001000000
   yOffeset: 0
