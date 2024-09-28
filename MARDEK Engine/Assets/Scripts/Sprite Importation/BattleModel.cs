@@ -20,7 +20,7 @@ public class BattleModel : MonoBehaviour
           foreach (var r in GetComponentsInChildren<SpriteRenderer>(includeInactive: true))
                r.sortingLayerID = layer;
      }
-
+ 
      public void Create(string name, int spriteID, string skin)
      {
           nameFrom5118 = name;
