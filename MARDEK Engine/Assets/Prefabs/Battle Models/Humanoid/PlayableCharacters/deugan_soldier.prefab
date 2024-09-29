@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6298310975210123530
+--- !u!1 &3930671114961309038
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,53 +8,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8738467400595063125}
-  - component: {fileID: 8822779486079205079}
+  - component: {fileID: 5074630112347917778}
+  - component: {fileID: 1064408776254481839}
   m_Layer: 0
-  m_Name: deugan_hero
+  m_Name: deugan_soldier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8738467400595063125
+--- !u!4 &5074630112347917778
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6298310975210123530}
+  m_GameObject: {fileID: 3930671114961309038}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1734706238489793684}
+  - {fileID: 3437817980925657971}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8822779486079205079
+--- !u!114 &1064408776254481839
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6298310975210123530}
+  m_GameObject: {fileID: 3930671114961309038}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7f072f0ac821df4aa1e830ce1cfd872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameFrom5118: deugan_hero
+  nameFrom5118: deugan_soldier
   spriteID: 2427
-  skin: hero
---- !u!1001 &8570574438169950345
+  skin: soldier
+--- !u!1001 &4708428840923918190
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8738467400595063125}
+    m_TransformParent: {fileID: 5074630112347917778}
     m_Modifications:
     - target: {fileID: 2022804737859786045, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
       propertyPath: 'innerSprites.Array.data[0]'
@@ -64,10 +64,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2427
       objectReference: {fileID: 0}
-    - target: {fileID: 2213076367684997453, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4322769745511094320, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
       propertyPath: 'innerSprites.Array.data[0]'
       value: 
@@ -76,16 +72,16 @@ PrefabInstance:
       propertyPath: 'innerSprites.Array.data[0]'
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4769454275934638702, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6489855676341059430, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6489855676341059430, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
       propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989990645957602333, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7989990645957602333, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
@@ -147,13 +143,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2700473862568709470, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
-    - {fileID: 2307774956371258027, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
     - {fileID: 186302026446012499, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
+    - {fileID: 2307774956371258027, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
---- !u!4 &1734706238489793684 stripped
+--- !u!4 &3437817980925657971 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7989990645957602333, guid: 381d2746a6bb93744973d48268f5c6c1, type: 3}
-  m_PrefabInstance: {fileID: 8570574438169950345}
+  m_PrefabInstance: {fileID: 4708428840923918190}
   m_PrefabAsset: {fileID: 0}

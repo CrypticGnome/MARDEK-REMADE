@@ -20,8 +20,8 @@ ScriptedImporter:
   advancedMode: 0
   predefinedResolutionIndex: 1
   targetResolution: 1080
-  resolutionMultiplier: 3
-  stepDistance: 10
+  resolutionMultiplier: 100
+  stepDistance: 1
   samplingStepDistance: 100
   maxCordDeviationEnabled: 0
   maxCordDeviation: 1
@@ -33,7 +33,7 @@ ScriptedImporter:
   textureHeight: 256
   wrapMode: 0
   filterMode: 1
-  sampleCount: 4
+  sampleCount: 8
   preserveSVGImageAspect: 0
   useSVGPixelsPerUnit: 0
   spriteData:
