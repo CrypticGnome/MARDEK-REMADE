@@ -20,7 +20,6 @@ namespace MARDEK.CharacterSystem
           public Sprite Sprite;
           public int Number;
           public string Description;
-          public ApplyBattleAction PerformAction;
           public ActionSkill ActionSkill;
           public void ApplyAction()
           {
@@ -33,7 +32,7 @@ namespace MARDEK.CharacterSystem
                int newMP = currentMP - ActionSkill.Cost;
                BattleManager.characterActing.CurrentMP = newMP;
 
-               BattleManager.PerformAction(PerformAction);
+               BattleManager.PerformAction(ActionSkill);
           }
           public BattleActionSlot(ActionSkill skill)
           {
@@ -48,7 +47,6 @@ namespace MARDEK.CharacterSystem
                Sprite = action.Element.thickSprite;
                Number = skill.Cost;
                Description = skill.Description;
-               PerformAction = action.Apply;
           }
 
           public BattleActionSlot(InventorySlot inventorySlot)
@@ -58,7 +56,6 @@ namespace MARDEK.CharacterSystem
                Sprite = item.sprite;
                Number = inventorySlot.Number;
                Description = item.description;
-               PerformAction = item.Action.Apply;
           }
      }
 }

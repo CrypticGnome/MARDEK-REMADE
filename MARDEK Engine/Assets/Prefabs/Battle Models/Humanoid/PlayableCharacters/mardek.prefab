@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8464375157307427012}
   - component: {fileID: 8792948319285855853}
+  - component: {fileID: 4171942419098179305}
   m_Layer: 0
   m_Name: mardek
   m_TagString: Untagged
@@ -48,6 +49,29 @@ MonoBehaviour:
   nameFrom5118: mardek
   spriteID: 2364
   skin: knight
+--- !u!114 &4171942419098179305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841649930220714766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd873b51a6e91b4384fd85ea7659340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation: {fileID: 3657114098155252510}
+  idle: {fileID: 7400000, guid: ed0228a33aace48418cecbcb23391b3d, type: 2}
+  moveTo: {fileID: 7400000, guid: 51795e0bb8fc39143811a17b30d8a371, type: 2}
+  strike: {fileID: 7400000, guid: 82f72e409e09f8c4cafab81e65c6dcae, type: 2}
+  jumpback: {fileID: 7400000, guid: cffaaf90d8d469947bf4e908e3d7a563, type: 2}
+  hurt: {fileID: 7400000, guid: f34df2a59060691479f922824e1207e3, type: 2}
+  die: {fileID: 7400000, guid: c10d5fddd3368714aa585ddbe2a58e24, type: 2}
+  dead: {fileID: 7400000, guid: ae23de6b6be15b841a92b294ac6accda, type: 2}
+  spellcast: {fileID: 7400000, guid: 6189f4be7c6f0bf44827e616c9c083db, type: 2}
+  useItem: {fileID: 7400000, guid: f5561de797f8bb24ebcb301efb24fdcf, type: 2}
+  victory: {fileID: 7400000, guid: 1600360ebebb7ef4ba54a787c2508286, type: 2}
 --- !u!1001 &746999840807315463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,6 +167,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32f0fa85f03949f4294ea4c3b4626113, type: 3}
+--- !u!111 &3657114098155252510 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 4079502053327110937, guid: 32f0fa85f03949f4294ea4c3b4626113, type: 3}
+  m_PrefabInstance: {fileID: 746999840807315463}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8307695004381895606 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8725509815699223473, guid: 32f0fa85f03949f4294ea4c3b4626113, type: 3}

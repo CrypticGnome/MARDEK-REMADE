@@ -10392,6 +10392,7 @@ GameObject:
   - component: {fileID: 8738467400595063125}
   - component: {fileID: 8822779486079205079}
   - component: {fileID: 6294617872326119236}
+  - component: {fileID: 5521376620884184844}
   m_Layer: 0
   m_Name: deugan_hero
   m_TagString: Untagged
@@ -10444,6 +10445,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Animation: {fileID: 737029243022034162}
   spriteMaterial: {fileID: 2100000, guid: 825422472f38d704f9e29a745cfdcf4d, type: 2}
+  spriteScale: {x: 0, y: 0, z: 0}
+--- !u!114 &5521376620884184844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6298310975210123530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd873b51a6e91b4384fd85ea7659340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation: {fileID: 737029243022034162}
+  idle: {fileID: 7400000, guid: fa48aa357e67de140a2a477f50c411fe, type: 2}
+  moveTo: {fileID: 7400000, guid: 87fdab2c475608e4da9fb6fadb2fe2ca, type: 2}
+  strike: {fileID: 7400000, guid: 8da68e58124785e4bb776b6f40c55f66, type: 2}
+  jumpback: {fileID: 7400000, guid: d1d91ebef0423ce4a93ec85f83fe2c7b, type: 2}
+  hurt: {fileID: 7400000, guid: 6b853e41538ef9144a20966f7cba9bf0, type: 2}
+  die: {fileID: 7400000, guid: ae40a92abc985484e81f705680866cc5, type: 2}
+  dead: {fileID: 7400000, guid: 28f8bde155fd4134ba5589d7f833a51d, type: 2}
+  spellcast: {fileID: 7400000, guid: e326a28d9207b914e8c27414b2ac8937, type: 2}
+  useItem: {fileID: 7400000, guid: 2bc66164d1fcfd74b8a11165f5c4c3a8, type: 2}
+  victory: {fileID: 7400000, guid: 4918108ebed24fd469ff517167cb612e, type: 2}
 --- !u!1 &6303219519788753358
 GameObject:
   m_ObjectHideFlags: 0

@@ -34087,6 +34087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2598609266677395371}
   - component: {fileID: 7860743206927192371}
+  - component: {fileID: 240759988755557514}
   m_Layer: 0
   m_Name: monster
   m_TagString: Untagged
@@ -34125,6 +34126,29 @@ MonoBehaviour:
   nameFrom5118: monster
   spriteID: 3173
   skin: D
+--- !u!114 &240759988755557514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8112922429028912400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd873b51a6e91b4384fd85ea7659340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation: {fileID: 2221255770807505416}
+  idle: {fileID: 7400000, guid: 4d666b323f7e0954ab2831d882077017, type: 2}
+  moveTo: {fileID: 7400000, guid: f31e8444f881bd04b867139c8b47ff2c, type: 2}
+  strike: {fileID: 7400000, guid: d378d37884cc3a446b4e63f424aa7316, type: 2}
+  jumpback: {fileID: 7400000, guid: 73e3ffa17085f414585e27fc266552e2, type: 2}
+  hurt: {fileID: 7400000, guid: b72b5488bd288014390a2b2ec9bfa2dd, type: 2}
+  die: {fileID: 7400000, guid: 7145cf8126ef2cc439cc2af0efbd6f27, type: 2}
+  dead: {fileID: 0}
+  spellcast: {fileID: 0}
+  useItem: {fileID: 0}
+  victory: {fileID: 0}
 --- !u!1 &8234336966689910616
 GameObject:
   m_ObjectHideFlags: 0

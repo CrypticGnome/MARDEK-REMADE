@@ -15,8 +15,15 @@ namespace MARDEK.Battle
           public BattleModel battleModel = null;
           public ActionSkillset Skillset { get; protected set; }
           public string Name { get { return Profile.displayName; } }
-
-          public int CurrentHP { get; set; }
+          int currentHP;
+          public int CurrentHP { get { return currentHP; } 
+               set 
+               {
+                    if (value < currentHP)
+                         battleModel.PlayAnimation(BattleModel.AnimationType.hurt);
+                    currentHP = value; 
+               } 
+          }
           public int CurrentMP { get; set ; }
           public float ACT { get; set; }
           public CoreStats BaseStats { get { return Profile.Stats; } }

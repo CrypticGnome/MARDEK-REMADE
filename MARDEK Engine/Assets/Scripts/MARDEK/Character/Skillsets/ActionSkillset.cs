@@ -8,4 +8,5 @@ public class ActionSkillset : ScriptableObject
      [field: SerializeField] public string Description { get; private set; }
      [field: SerializeField] public Sprite Sprite { get; private set; }
      [field: SerializeField] public List<ActionSkill> Skills { get; private set; }
+
 }

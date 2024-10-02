@@ -39,7 +39,7 @@ public class Import5118 : MonoBehaviour
 
                var go = new GameObject(frame.label);
                go.transform.parent = transform;
-               var bm = go.AddComponent<BattleModel>();
+               var bm = go.AddComponent<BattleModelImporter>();
                bm.Create(frame.label, placedObject.id, placedObject.skin);
                var prefabPath = $"Assets/Prefabs/Battle Models/{frame.label}.prefab";
                //PrefabUtility.SaveAsPrefabAsset(go, prefabPath);

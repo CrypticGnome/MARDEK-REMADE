@@ -16,6 +16,13 @@ namespace MARDEK.Skill
     public class ActionSkill : Skill
      {
           [SerializeField] Battle.BattleAction action;
+          [SerializeField] public ActionType TypeOfAction;
           public Battle.BattleAction Action { get { return action; } }
+          public enum ActionType
+          {
+               Melee,
+               Spell,
+               ItemUsage,
+          }
      }
 }

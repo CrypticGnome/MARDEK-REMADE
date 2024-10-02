@@ -18,9 +18,12 @@ namespace MARDEK.CharacterSystem
 
         public void SetPortrait(CharacterPortrait portrait)
         {
-            if (portrait != null)
-            {
-                gameObject.SetActive(true);
+               if (portrait == null)
+               {
+                    gameObject.SetActive(false);
+               }
+
+               gameObject.SetActive(true);
 
                 foreach (var portraitPrefab in portraitPrefabs) {
                     if ( ((PortraitPrefab) portraitPrefab).PortraitType == portrait.PortraitType )
@@ -34,11 +37,9 @@ namespace MARDEK.CharacterSystem
                         portraitPrefab.gameObject.SetActive(false);
                     }
                 }
-            }
-            else
-            {
-                gameObject.SetActive(false);
-            }
+               
+
+            
         }
 
         public void SetExpression(PortraitExpressionEnum expression)

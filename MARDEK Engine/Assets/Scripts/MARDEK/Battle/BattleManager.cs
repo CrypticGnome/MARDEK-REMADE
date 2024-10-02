@@ -11,7 +11,8 @@ namespace MARDEK.Battle
      using MARDEK.Skill;
      using MARDEK.UI;
      using Progress;
-    using UnityEngine.Events;
+     using System.Diagnostics.Eventing.Reader;
+     using UnityEngine.Events;
      using static MARDEK.Battle.BattleManager;
 
     public class BattleManager : MonoBehaviour
@@ -198,12 +199,11 @@ namespace MARDEK.Battle
                          return;
                     }
                     ActionSkill skill = enemyMoveset.Skills[Random.Range(0, enemyMoveset.Skills.Count)];
-                    BattleAction move = skill.Action;
                     Debug.Log($"{characterActing.Name} uses {skill.DisplayName}");
-                    PerformAction(move.Apply);
+                    PerformAction(skill);
                }
           }
-          public static void PerformAction(ApplyBattleAction action)
+          public static void PerformAction(ActionSkill action)
           {
 
                BattleCharacter target;
@@ -219,12 +219,18 @@ namespace MARDEK.Battle
                     return;
                }
 
+               if (action.TypeOfAction == ActionSkill.ActionType.Melee)
+                    characterActing.battleModel.PlayAnimation(BattleModel.AnimationType.strike);
+               else if (action.TypeOfAction == ActionSkill.ActionType.Spell)
+                    characterActing.battleModel.PlayAnimation(BattleModel.AnimationType.spellcast);
+               else if (action.TypeOfAction == ActionSkill.ActionType.ItemUsage)
+                    characterActing.battleModel.PlayAnimation(BattleModel.AnimationType.useItem);
+               else
+                    Debug.LogAssertion($"Action type of {action.name} has not been applied");
+
                instance.state = BattleState.ActionPerforming;
-               action.Invoke(characterActing, target);
-
+               action.Action.Apply(characterActing, target);
                instance.EndTurn();
-
-               
           }
           void EndTurn()
           {
