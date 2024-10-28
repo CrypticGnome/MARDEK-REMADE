@@ -3,7 +3,7 @@ using MARDEK.Event;
 
 namespace MARDEK.Audio
 {
-    public class PlaySFXCommand : CommandBase
+    public class PlaySFXCommand : Command
     {
         [SerializeField] SoundEffect sound;
 

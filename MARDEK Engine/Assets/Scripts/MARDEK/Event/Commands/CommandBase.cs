@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace MARDEK.Event
 {
-    public abstract class CommandBase : MonoBehaviour
+    public abstract class Command : MonoBehaviour
     {
         public abstract void Trigger();
     }

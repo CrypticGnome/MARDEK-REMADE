@@ -4,7 +4,7 @@ namespace MARDEK.Progress
 {
     using Event;
     using Inventory;
-    public class RemovePlotItem : CommandBase
+    public class RemovePlotItem : Command
     {
         [SerializeField] PlotItem item;
 

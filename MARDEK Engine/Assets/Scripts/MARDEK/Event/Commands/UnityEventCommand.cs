@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 namespace MARDEK.Event
 {
-    public class UnityEventCommand : CommandBase
+    public class UnityEventCommand : Command
     {
         [SerializeField] UnityEvent _event = default;
 

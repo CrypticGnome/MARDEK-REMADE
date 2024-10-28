@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace MARDEK.Event
 {
-    public class SetBoolCommand : CommandBase
+    public class SetBoolCommand : Command
     {
         [SerializeField] Object boolObject;
         [SerializeField] bool setValue;

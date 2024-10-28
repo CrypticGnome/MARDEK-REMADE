@@ -3,7 +3,7 @@ using MARDEK.Event;
 
 namespace MARDEK.Audio
 {
-    public class PushBGMCommand : CommandBase
+    public class PushBGMCommand : Command
     {
         [SerializeField] Music music;
 
