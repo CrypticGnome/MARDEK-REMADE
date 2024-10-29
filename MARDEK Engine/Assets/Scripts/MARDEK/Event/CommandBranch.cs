@@ -39,9 +39,8 @@ public class CommandBranch : Command
                if (command is null)
                     continue;
 
-               ///GetAndTriggerNextCommand()
                command.Trigger();
-               // Lock shit up and UpdateCurrentCommand()
+
                if (command is OngoingCommand)
                {
                     IEnumerator waitForCommandToFinish = WaitForOnGoingCommand(command as OngoingCommand);

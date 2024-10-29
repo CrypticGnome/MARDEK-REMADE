@@ -491,11 +491,11 @@ PrefabInstance:
     - target: {fileID: 7970277371122817805, guid: 4524198ac264da046815598c35039adc, type: 3}
       propertyPath: '<Characters>k__BackingField.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: fbf393415b12fb34ca6192f930e22e4a, type: 2}
+      objectReference: {fileID: 11400000, guid: 19129f02b8770584bb5d8e4c0a73211f, type: 2}
     - target: {fileID: 7970277371122817805, guid: 4524198ac264da046815598c35039adc, type: 3}
       propertyPath: '<Characters>k__BackingField.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: b110375e7b309954c85f2c6972d11e13, type: 2}
+      objectReference: {fileID: 11400000, guid: 19129f02b8770584bb5d8e4c0a73211f, type: 2}
     - target: {fileID: 8102137957874746363, guid: 4524198ac264da046815598c35039adc, type: 3}
       propertyPath: Body
       value: 
@@ -1400,9 +1400,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1611162748}
+  - component: {fileID: 1611162751}
+  - component: {fileID: 1611162750}
   - component: {fileID: 1611162749}
-  - component: {fileID: 1611162746}
-  - component: {fileID: 1611162753}
   m_Layer: 0
   m_Name: CutsceneCheck
   m_TagString: Untagged
@@ -1410,25 +1410,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1611162746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611162745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e455390153c9954cb98e17a844085e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  commands:
-    commandsGameObject: {fileID: 1611162745}
-    commands: []
-  onStart: 1
-  onInteractionKey: 0
-  onTriggerEnter: 0
-  raiseEvent: 0
 --- !u!4 &1611162748
 Transform:
   m_ObjectHideFlags: 0
@@ -1463,7 +1444,7 @@ MonoBehaviour:
     saveOnDisable: 1
   serializedGuid: c2dea570ad90504b938402012e3d93f9
   value: 0
---- !u!114 &1611162753
+--- !u!114 &1611162750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1472,17 +1453,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 1611162745}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7835b8f48a278474fbc8b6a2881c1313, type: 3}
+  m_Script: {fileID: 11500000, guid: d8f38bdcc0525ae4d8b3607290d3d8bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
-  check: {fileID: 1611162749}
-  ifTrueCommands:
-    commandsGameObject: {fileID: 0}
-    commands: []
-  ifFalseCommands:
-    commandsGameObject: {fileID: 1366511936}
-    commands: []
+  OnTrue: []
+  OnFalse:
+  - {fileID: 1366511941}
+  - {fileID: 1366511940}
+  - {fileID: 1366511940}
+  - {fileID: 1366511939}
+  - {fileID: 1366511938}
+  - {fileID: 1366511937}
+  boolean: {fileID: 1611162749}
+--- !u!114 &1611162751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611162745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb37cef4635aaca4da15e2a207a12ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commands:
+  - {fileID: 1611162750}
+  onStart: 1
+  onInteractionKey: 0
+  onTriggerEnter: 0
+  raiseEvent: 0
 --- !u!1001 &1624301143
 PrefabInstance:
   m_ObjectHideFlags: 0
