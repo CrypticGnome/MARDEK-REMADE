@@ -11,9 +11,9 @@ namespace MARDEK.Event
     {
           [SerializeField] GameObject commandsGameObject;
           [SerializeField] Command[] commands;
-        public bool isOngoing { get; private set; } = false;
-        Queue<Command> commandQueue = new Queue<Command>();
-        Command currentCommand = null;
+          public bool isOngoing { get; private set; } = false;
+          Queue<Command> commandQueue = new Queue<Command>();
+          Command currentCommand = null;
           public void TriggerSecond()
           {
                if (isOngoing)
@@ -25,7 +25,6 @@ namespace MARDEK.Event
 
                
                isOngoing = false;
-
           }
           void Trigger()
           {
@@ -61,7 +60,7 @@ namespace MARDEK.Event
           IEnumerator WaitForOnGoingCommand(OngoingCommand ongoingCommand)
           {
                // Lock player actions until command has finished
-               if (ongoingCommand.waitForExecutionEnd)
+               if (ongoingCommand.WaitForExecutionEnd)
                { 
                     PlayerLocks.EventSystemLock++;
                     yield return new WaitUntil(() => ongoingCommand.IsOngoing() == false);
@@ -108,7 +107,7 @@ namespace MARDEK.Event
                }
                // check ongoing (current event is non-null and can be converted to OngoingCommand)
                OngoingCommand command = currentCommand as OngoingCommand;
-               if (command.IsOngoing() || command.waitForExecutionEnd)
+               if (command.IsOngoing() || command.WaitForExecutionEnd)
                {
                     command.UpdateCommand();
                     return;
@@ -136,7 +135,7 @@ namespace MARDEK.Event
         void SetPlayerLockByCurrentEventType(bool setValue)
         {
             OngoingCommand cmd = currentCommand as OngoingCommand;
-            if (cmd != null && cmd.waitForExecutionEnd)
+            if (cmd != null && cmd.WaitForExecutionEnd)
             {
                 if (setValue == true)
                     PlayerLocks.EventSystemLock++;

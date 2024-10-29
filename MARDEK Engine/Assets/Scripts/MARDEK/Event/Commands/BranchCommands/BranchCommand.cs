@@ -12,7 +12,7 @@ namespace MARDEK.Event
 
         public override bool IsOngoing()
         {
-            return waitForExecutionEnd && commandsBeingExecuted != null && commandsBeingExecuted.isOngoing;
+            return WaitForExecutionEnd && commandsBeingExecuted != null && commandsBeingExecuted.isOngoing;
         }
 
         public override void Trigger()
