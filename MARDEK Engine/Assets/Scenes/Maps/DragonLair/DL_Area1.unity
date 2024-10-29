@@ -289,6 +289,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 69186623529443827, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69186623529443827, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69186623529443827, guid: 4524198ac264da046815598c35039adc, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -302,6 +310,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 69186624502337848, guid: 4524198ac264da046815598c35039adc, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69186624502337848, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69186624502337848, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 69186624502337848, guid: 4524198ac264da046815598c35039adc, type: 3}
@@ -329,6 +345,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 69186624757488653, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69186624757488653, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69186624757488653, guid: 4524198ac264da046815598c35039adc, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -338,6 +362,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484328419042534593, guid: 4524198ac264da046815598c35039adc, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484328419042534593, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484328419042534593, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 484328419042534593, guid: 4524198ac264da046815598c35039adc, type: 3}
@@ -357,8 +389,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1967828192807274310, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967828192807274310, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967828192807274310, guid: 4524198ac264da046815598c35039adc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496987687117061538, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496987687117061538, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MARDEK.DialogueSystem.ChoicesManager, MARDEK
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496987687117061538, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3852037752956552090, guid: 4524198ac264da046815598c35039adc, type: 3}
       propertyPath: Body
@@ -408,6 +460,18 @@ PrefabInstance:
       propertyPath: Accessory2
       value: 
       objectReference: {fileID: 557530807}
+    - target: {fileID: 4053336189573608347, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053336189573608347, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MARDEK.DialogueSystem.ChoicesManager, MARDEK
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053336189573608347, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4442850479637034710, guid: 4524198ac264da046815598c35039adc, type: 3}
       propertyPath: defaultMusic
       value: 
@@ -419,6 +483,62 @@ PrefabInstance:
     - target: {fileID: 5388210907319822896, guid: 4524198ac264da046815598c35039adc, type: 3}
       propertyPath: m_Name
       value: MapScenePrefabPack
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505699944932680983, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505699944932680983, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505699944932680983, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505699944932680983, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1410941384}
+    - target: {fileID: 5505699944932680983, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505699944932680983, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Choose
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505699944932680983, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChooseIndex
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505699944932680983, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MARDEK.DialogueSystem.ChoicesManager, MARDEK
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505699944932680983, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MARDEK.DialogueSystem.ChoicesManager, MARDEK
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505699944932680983, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505699944932680983, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580841092755573927, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580841092755573927, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MARDEK.DialogueSystem.ChoicesManager, MARDEK
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580841092755573927, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6588332110720249636, guid: 4524198ac264da046815598c35039adc, type: 3}
       propertyPath: Body
@@ -520,6 +640,18 @@ PrefabInstance:
       propertyPath: Accessory2
       value: 
       objectReference: {fileID: 113790326}
+    - target: {fileID: 8691749627592484228, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8691749627592484228, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MARDEK.DialogueSystem.ChoicesManager, MARDEK
+      objectReference: {fileID: 0}
+    - target: {fileID: 8691749627592484228, guid: 4524198ac264da046815598c35039adc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1336,6 +1468,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1611162748}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1410941384 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 894919897002464220, guid: 4524198ac264da046815598c35039adc, type: 3}
+  m_PrefabInstance: {fileID: 349475482}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eaa6a5191ea88c43870c24dd0379d4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1413994042 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6456975718736488869, guid: 4524198ac264da046815598c35039adc, type: 3}

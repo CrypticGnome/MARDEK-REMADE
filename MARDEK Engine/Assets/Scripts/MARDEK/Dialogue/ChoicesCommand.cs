@@ -9,9 +9,9 @@ namespace MARDEK.DialogueSystem
 {
     public class ChoicesCommand : OngoingCommand
      {
-        [SerializeField] Dialogue choicesDialogue = null;
+          [SerializeField] Dialogue choicesDialogue = null;
           [SerializeField] CommandChain[] commandsByChoice;
-
+          Action OnDecision = null;
           bool isOngoing = false;
 
           public override bool IsOngoing()
@@ -27,25 +27,21 @@ namespace MARDEK.DialogueSystem
                     Debug.LogWarning("Trying to trigger event, but this event is already ongoing");
                     return;
                }
-               ChoicesManager.TriggerChoices(choicesDialogue);
-               StartCoroutine(WaitForChoice());
-
-          }
-          IEnumerator WaitForChoice()
-          {
-               // Currently, the choosing is done through the choice manager and we wait until it gives a value not equal to the default.
-               // This is dogshit, but currently no reason to rework it.
-               int index = -1;
                isOngoing = true;
-               yield return new WaitUntil(() =>
-               {
-                    index = ChoicesManager.GetChosenIndex();
-                    return index != -1;
-               });
+
+               ChoicesManager.TriggerChoices(choicesDialogue);
+               ChoicesManager.SetChoices(OnChoice);
+          }
+
+          void OnChoice(int index)
+          {
                isOngoing = false;
 
                if (index >= commandsByChoice.Length)
-                    throw new IndexOutOfRangeException();
+               {
+                    Debug.LogWarning("No command given for the chosen index");
+                    return;
+               }
                CommandChain commands = commandsByChoice[index];
                commands.Trigger();
           }

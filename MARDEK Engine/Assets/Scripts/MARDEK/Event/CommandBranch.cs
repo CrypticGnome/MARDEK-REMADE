@@ -4,18 +4,23 @@ using MARDEK.Save;
 using UnityEngine;
 using System.Collections;
 
-public class CommandBranch : Command
+public class CommandBranch : OngoingCommand
 {
      [SerializeField] Command[] OnTrue;
      [SerializeField] Command[] OnFalse;
      [SerializeField] LocalSwitchBool boolean;
 
-     public bool IsOngoing { get; private set; } = false;
+      bool isOngoing = false;
+
+     public override bool IsOngoing()
+     {
+          return isOngoing;
+     }
 
      [ContextMenu("Trigger")]
      public override void Trigger()
      {
-          if (IsOngoing)
+          if (isOngoing)
           {
                Debug.LogWarning("Trying to trigger event, but this event is already ongoing");
                return;
@@ -31,7 +36,7 @@ public class CommandBranch : Command
 
      IEnumerator PerformCommandChain(Command[] commands)
      {
-          IsOngoing = true;
+          isOngoing = true;
 
           for (int i = 0; i < commands.Length; i++)
           {
@@ -47,7 +52,7 @@ public class CommandBranch : Command
                     yield return command.StartCoroutine(waitForCommandToFinish);
                }
           }
-          IsOngoing = false;
+          isOngoing = false;
      }
 
      IEnumerator WaitForOnGoingCommand(OngoingCommand ongoingCommand)
