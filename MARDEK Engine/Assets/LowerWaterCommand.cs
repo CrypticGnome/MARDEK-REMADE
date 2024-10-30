@@ -9,7 +9,8 @@ namespace MARDEK
     public class LowerWaterCommand : OngoingCommand
     {
           [SerializeField] Tilemap tileMap;
-          [SerializeField] LocalSwitchBool raise;
+          [SerializeField] bool raiseOnTrue;
+          [SerializeField] LocalSwitchBool boolVariable;
           [SerializeField] float duration;
           [SerializeField] Vector3 loweredPosition;
           [SerializeField] float raisedTransparency, loweredTransparency;
@@ -34,7 +35,7 @@ namespace MARDEK
 
           public override void Trigger()
           {
-               if (raise.GetBoolValue())
+               if (boolVariable.GetBoolValue() == raiseOnTrue)
                     StartCoroutine(Raise());
                else
                     StartCoroutine(Lower());
@@ -42,7 +43,7 @@ namespace MARDEK
           IEnumerator Lower()
           {
                Color color = tileMap.color;
-
+               Debug.Log("LOWERING WATER");
                while (lowered < 1)
                {
                     lowered += Time.deltaTime / duration;
@@ -61,6 +62,8 @@ namespace MARDEK
           IEnumerator Raise()
           {
                Color color = tileMap.color;
+               Debug.Log("RAISING WATER");
+
                while (lowered > 0)
                {
                     lowered -= Time.deltaTime / duration;
