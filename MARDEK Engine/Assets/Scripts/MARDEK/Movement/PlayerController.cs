@@ -41,15 +41,12 @@ namespace MARDEK.Movement
             if(movement == null || movement.isMoving || movement.currentDirection == null)
                 return;
 
-            movement.colliderHelper.OffsetCollider(movement.currentDirection.value);
-
-            List<Collider2D> collidersHit = movement.colliderHelper.Overlaping();
-            foreach(Collider2D c in collidersHit)
-            {
-                EventTrigger ev = c.GetComponent<EventTrigger>();
-                if (ev) ev.Interact();
-            }
-            movement.colliderHelper.OffsetCollider(Vector2.zero);
+               List<Collider2D> collidersHit = movement.colliderHelper.Overlaping(movement.currentDirection.value);
+               foreach(Collider2D c in collidersHit)
+               {
+                    if (c.TryGetComponent(out CommandChain commandChain))
+                         commandChain.Trigger();
+               }
         }
         
         public void OnMovementInput(InputAction.CallbackContext ctx)

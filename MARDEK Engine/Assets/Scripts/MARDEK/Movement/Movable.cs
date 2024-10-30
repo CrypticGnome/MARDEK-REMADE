@@ -115,8 +115,8 @@ namespace MARDEK.Movement
                 UpdateAnimatorWithCurrentDirection();
                 if (colliderHelper == null)
                     return true;
-                colliderHelper.OffsetCollider(targetPosition - (Vector2)transform.position);
-                if (colliderHelper.Overlaping().Count == 0)
+                Vector2 offset = targetPosition - (Vector2)transform.position;
+                if (colliderHelper.LineCast(offset).Count == 0)
                 {
                     return true;
                 }

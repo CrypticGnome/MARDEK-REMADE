@@ -3,7 +3,7 @@ using UnityEngine;
 namespace MARDEK.Progress
 {
     using Inventory;
-    public class AddPlotItem : Event.CommandBase
+    public class AddPlotItem : Event.Command
     {
         [SerializeField] PlotItem item;
 

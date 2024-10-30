@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace MARDEK.DialogueSystem
@@ -10,11 +12,11 @@ namespace MARDEK.DialogueSystem
     public class ChoicesManager : MonoBehaviour
     {
         static ChoicesManager instance;
-        int chosenIndex = -1;
 
         [SerializeField] GameObject canvas = null;
         [SerializeField] RectTransform layoutGroup = null;
         [SerializeField] List<GameObject> choicesUIObjects = new List<GameObject>();
+        static Action<int> choiceDecision = null;
 
         private void Awake()
         {
@@ -40,31 +42,18 @@ namespace MARDEK.DialogueSystem
             choicesUIObjects[0].GetComponent<Button>().Select();
         }
         
-        public void Choose()
+        public void Choose(int index) 
         {
-            for(int i = 0; i < choicesUIObjects.Count; i++)
-            {                
-                if(EventSystem.current.currentSelectedGameObject == choicesUIObjects[i])
-                {
-                    chosenIndex = i;
-                    break;
-                }
-            }
+               choiceDecision?.Invoke(index);
+               ResetChoiceManager();
         }
-
-        public static int GetChosenIndex()
-        {
-            int value = instance.chosenIndex;
-            if(value > -1)
-            {
-                ResetChoiceManager();
-            }
-            return value;
-        }
+          public static void SetChoices(Action<int> action)
+          {
+               choiceDecision = action;
+          }
 
         public static void ResetChoiceManager()
         {
-            instance.chosenIndex = -1;
             foreach (var choice in instance.choicesUIObjects)
                 choice.SetActive(false);
             instance.canvas.SetActive(false);

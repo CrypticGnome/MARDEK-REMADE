@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 namespace MARDEK.Battle
 {
-    public class StartBattleCommand : CommandBase
+    public class StartBattleCommand : Command
     {
         [SerializeField] EncounterSet encounter = null;
         [SerializeField] SceneReference battleScene = default;

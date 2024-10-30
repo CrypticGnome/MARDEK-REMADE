@@ -5,7 +5,7 @@ using UnityEngine;
 namespace MARDEK.Animation
 {
     using Event;
-    public class StopSpriteAnimationCommand : CommandBase
+    public class StopSpriteAnimationCommand : Command
     {
         [SerializeField] SpriteAnimator targetAnimator;
         [SerializeField] bool sendStopRate = false;

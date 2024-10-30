@@ -5,7 +5,7 @@ using MARDEK.Event;
 
 namespace MARDEK.Movement
 {
-    public class SceneTransitionCommand : CommandBase
+    public class SceneTransitionCommand : Command
     {
         public static WaypointEnum usedWaypoint { get; private set; }
         public static MoveDirection transitionFacingDirection { get; private set; }
