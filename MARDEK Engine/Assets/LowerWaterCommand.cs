@@ -11,6 +11,7 @@ namespace MARDEK
           [SerializeField] Tilemap tileMap;
           [SerializeField] bool raiseOnTrue;
           [SerializeField] LocalSwitchBool boolVariable;
+          [SerializeField] bool defaultValue;
           [SerializeField] float duration;
           [SerializeField] Vector3 loweredPosition;
           [SerializeField] float raisedTransparency, loweredTransparency;
@@ -31,7 +32,15 @@ namespace MARDEK
                tileMap.color = color;
           }
 #endif
-
+          private void Start()
+          {
+               if (boolVariable == null)
+                    return;
+               if (boolVariable.GetBoolValue() == defaultValue)
+                    Raised();
+               else
+                    Lowered();
+          }
 
           public override void Trigger()
           {
@@ -54,10 +63,7 @@ namespace MARDEK
                     yield return null;
                }
 
-               lowered = 1;
-               transform.localPosition =  loweredPosition;
-               color.a = loweredTransparency / 255;
-               tileMap.color = color;
+               Lowered();
           }
           IEnumerator Raise()
           {
@@ -72,14 +78,27 @@ namespace MARDEK
                     tileMap.color = color;
                     yield return null;
                }
-               lowered = 0;
-               transform.localPosition = Vector3.zero;
-               color.a = raisedTransparency/255;
-               tileMap.color = color;
+               Raised();
           }
           public override bool IsOngoing()
           {
                return lowered != 0 && lowered != 1;
+          }
+          void Lowered()
+          {
+               Color color = tileMap.color;
+               lowered = 1;
+               transform.localPosition = loweredPosition;
+               color.a = loweredTransparency / 255;
+               tileMap.color = color;
+          }
+          void Raised()
+          {
+               Color color = tileMap.color;
+               lowered = 0;
+               transform.localPosition = Vector3.zero;
+               color.a = raisedTransparency / 255;
+               tileMap.color = color;
           }
      }
 }

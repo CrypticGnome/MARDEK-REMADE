@@ -35,6 +35,7 @@ namespace MARDEK.Battle
             GenerateRequiredSteps();
             TriggerBattle();
         }
+        [ContextMenu("Trigger Battle")]
         void TriggerBattle()
         {
             BattleManager.encounter = areaEncounterSet;
