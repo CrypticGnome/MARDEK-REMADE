@@ -9,6 +9,7 @@ namespace MARDEK.Event
           [SerializeField] UnityEvent _event = default;
           [SerializeField] LocalSwitchBool @bool;
           [SerializeField] bool activationValue;
+          
           private void Start()
           {
                if (@bool != null) 

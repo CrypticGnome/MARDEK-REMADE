@@ -60,6 +60,7 @@ namespace MARDEK.Event
                     Command command = commands[i];
                     if (command is null)
                          continue;
+                    Debug.Log($"Running {command} on {command.transform.parent.name}");
 
                     ///GetAndTriggerNextCommand()
                     command.Trigger();
