@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using MARDEK.Core;
+using UnityEditor;
+using UnityEditor.UIElements;
 
 namespace MARDEK.Event
 {
@@ -13,7 +15,8 @@ namespace MARDEK.Event
           [SerializeField] bool onStart = false;
           [SerializeField] bool onInteractionKey = false;
           [SerializeField] bool onTriggerEnter = false;
-
+          [SerializeField] bool onTriggerExit = false;
+          [SerializeField] string tagName = "Player";
 
 #if UNITY_EDITOR
           [Header("Debugging")]
@@ -29,7 +32,20 @@ namespace MARDEK.Event
 
           private void OnTriggerEnter2D(Collider2D collision)
           {
-               if (onTriggerEnter)
+               if (!string.IsNullOrEmpty(tagName) && tagName != string.Empty)   // Don't know why I need to see if it's empty twice, but it doesn't work with null or empty
+               {
+                    if (collision.gameObject.CompareTag(tagName))
+                    {
+                         Trigger();
+                    }
+                    return;
+               }
+               Trigger();
+
+          }
+               private void OnTriggerExit2D(Collider2D collision)
+          {
+               if (onTriggerExit)
                     if (collision.gameObject.CompareTag("Player"))
                          Trigger();
           }
