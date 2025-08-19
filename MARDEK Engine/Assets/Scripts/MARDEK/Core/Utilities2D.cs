@@ -1,28 +1,17 @@
+using System;
 using UnityEngine;
 
 namespace MARDEK
 {
     public class Utilities2D
     {
-        static Grid _grid = null;
-        public static Grid grid
-        {
-            get
-            {
-                if (_grid == null)
-                    _grid = Object.FindObjectOfType<Grid>();
-                return _grid;
-            }
-        }
 
         public static Vector3 SnapPositionToGrid(Vector3 pos)
         {
-            if (grid)
-            {
-                pos = grid.WorldToCell(pos);
-                pos += grid.cellSize / 2;
-            }
-            return pos;
+               pos = Vector3Int.FloorToInt(pos);
+               pos += Vector3.one / 2;
+
+               return pos;
         }
 
         public static void SetTransformPosition(Transform transform, Vector2 position)

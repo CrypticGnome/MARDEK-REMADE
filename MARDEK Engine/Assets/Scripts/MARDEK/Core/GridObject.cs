@@ -22,9 +22,8 @@ namespace MARDEK
 
         private void OnDrawGizmos()
         {
-            Grid grid = Utilities2D.grid;
-            if (grid)
-                Gizmos.DrawWireCube(transform.position, grid.cellSize);
+
+                Gizmos.DrawWireCube(transform.position, Vector3.one);
         }
     }
 }

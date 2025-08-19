@@ -42,14 +42,21 @@ namespace MARDEK.Movement
             targetPosition = transform.position;            
         }
 
-        public void EnqueueMoves(List<MoveDirection> directions)
+        public void EnqueueMoves(ICollection<MoveDirection> directions)
         {
             foreach (MoveDirection direction in directions)
                 queuedMoves.Enqueue(direction);
             UpdateMoveStatus();
         }
+          public void EnqueueMoves(ICollection<Moves> moves)
+          {
+               foreach (Moves move in moves)
+                    for (int i = 0; i < move.Count;i++)
+                         queuedMoves.Enqueue(move.Direction);
+               UpdateMoveStatus();
+          }
 
-        public void MoveInDirectionOnce(MoveDirection direction)
+          public void MoveInDirectionOnce(MoveDirection direction)
         {
             if (isMoving)
                 return;
@@ -152,17 +159,18 @@ namespace MARDEK.Movement
         bool MoveToPosition(Transform transform, Vector2 targetPosition, float movementSpeed, float deltaTime)
         {
             // returns true if movement has reached the target
-            if (Utilities2D.AreCloseEnough(transform.position, targetPosition) == false)
-            {
-                Vector2 positionDifferece = targetPosition - (Vector2)transform.position;
-                Vector2 increment = positionDifferece.normalized * deltaTime * movementSpeed;
-                if (increment.sqrMagnitude < positionDifferece.sqrMagnitude)
-                {
-                    Utilities2D.SetTransformPosition(transform, (Vector2)transform.position + increment);
-                    return (Utilities2D.AreCloseEnough(transform.position, targetPosition));
-                }
-            }
-            return true;
+            if (Utilities2D.AreCloseEnough(transform.position, targetPosition)) return true;
+
+
+               Vector2 positionDifferece = targetPosition - (Vector2)transform.position;
+               Vector2 increment = positionDifferece.normalized * deltaTime * movementSpeed;
+               if (increment.sqrMagnitude < positionDifferece.sqrMagnitude)
+               {
+                   Utilities2D.SetTransformPosition(transform, (Vector2)transform.position + increment);
+                   return (Utilities2D.AreCloseEnough(transform.position, targetPosition));
+               }
+
+               return true;
         }
     }
 }
