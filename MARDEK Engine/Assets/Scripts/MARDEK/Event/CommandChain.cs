@@ -32,6 +32,8 @@ namespace MARDEK.Event
 
           private void OnTriggerEnter2D(Collider2D collision)
           {
+               if (!onTriggerEnter) return;
+
                if (!string.IsNullOrEmpty(tagName) && tagName != string.Empty)   // Don't know why I need to see if it's empty twice, but it doesn't work with null or empty
                {
                     if (collision.gameObject.CompareTag(tagName))
@@ -43,11 +45,12 @@ namespace MARDEK.Event
                Trigger();
 
           }
-               private void OnTriggerExit2D(Collider2D collision)
+          private void OnTriggerExit2D(Collider2D collision)
           {
-               if (onTriggerExit)
-                    if (collision.gameObject.CompareTag("Player"))
-                         Trigger();
+               if (!onTriggerExit) return;
+
+               if (collision.gameObject.CompareTag("Player"))
+                    Trigger();
           }
           public void Interact()
           {
@@ -94,7 +97,7 @@ namespace MARDEK.Event
           IEnumerator WaitForOnGoingCommand(OngoingCommand ongoingCommand)
           {
                // Lock player actions until command has finished
-               if (ongoingCommand.WaitForExecutionEnd)
+               if (ongoingCommand.LockPlayerActions)
                {
                     PlayerLocks.EventSystemLock++;
                     yield return new WaitUntil(() => ongoingCommand.IsOngoing() == false);

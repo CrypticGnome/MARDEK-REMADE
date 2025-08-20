@@ -58,7 +58,7 @@ public class CommandBranch : OngoingCommand
      IEnumerator WaitForOnGoingCommand(OngoingCommand ongoingCommand)
      {
           // Lock player actions until command has finished
-          if (ongoingCommand.WaitForExecutionEnd)
+          if (ongoingCommand.LockPlayerActions)
           {
                PlayerLocks.EventSystemLock++;
                yield return new WaitUntil(() => ongoingCommand.IsOngoing() == false);

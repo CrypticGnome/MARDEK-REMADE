@@ -24,7 +24,7 @@ namespace MARDEK.Progress
         {
             if (localSwitch == null && UnityEditor.PrefabUtility.IsPartOfNonAssetPrefabInstance(gameObject))
                 localSwitch = gameObject.AddComponent<LocalSwitchBool>();
-            _waitExcecutionEnd = true;
+            lockPlayerActions = true;
         }
 #endif
 

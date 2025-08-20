@@ -4,8 +4,8 @@ namespace MARDEK.Event
 {
     public abstract class OngoingCommand : Command
     {
-        [SerializeField] protected bool _waitExcecutionEnd = true;
-        public bool WaitForExecutionEnd { get { return _waitExcecutionEnd; } }
+        [SerializeField] protected bool lockPlayerActions = true;
+        public bool LockPlayerActions { get { return lockPlayerActions; } }
         public abstract bool IsOngoing();
         public virtual void UpdateCommand() { }
     }
