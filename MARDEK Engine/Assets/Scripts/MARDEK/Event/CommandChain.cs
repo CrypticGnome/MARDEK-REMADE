@@ -100,6 +100,7 @@ namespace MARDEK.Event
                     yield return new WaitUntil(() => ongoingCommand.IsOngoing() == false);
                     PlayerLocks.EventSystemLock--;
                }
+               else yield return new WaitUntil(() => ongoingCommand.IsOngoing() == false);
           }
 
      }
