@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 946864481000588583, guid: cebde8a71b5d92b449f312c784ae012b, type: 3}
@@ -79,7 +80,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brazier
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 93526961, guid: cebde8a71b5d92b449f312c784ae012b, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2376157961937866309, guid: cebde8a71b5d92b449f312c784ae012b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6520901146247484453}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cebde8a71b5d92b449f312c784ae012b, type: 3}
 --- !u!4 &2462801993700775999 stripped
 Transform:
@@ -91,6 +99,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2462801993700775999}
     m_Modifications:
     - target: {fileID: 1355223890505821267, guid: 0a738309b12c87249b41c3be7584c098, type: 3}
@@ -142,4 +151,12 @@ PrefabInstance:
       value: Dragon's lair light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a738309b12c87249b41c3be7584c098, type: 3}
+--- !u!4 &6520901146247484453 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1355223890505821267, guid: 0a738309b12c87249b41c3be7584c098, type: 3}
+  m_PrefabInstance: {fileID: 5237789693566531702}
+  m_PrefabAsset: {fileID: 0}
