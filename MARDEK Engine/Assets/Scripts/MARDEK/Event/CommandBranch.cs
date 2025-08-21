@@ -3,13 +3,15 @@ using MARDEK.Event;
 using MARDEK.Save;
 using UnityEngine;
 using System.Collections;
+using MARDEK.Core.LevelDesign;
 
+[RequireComponent(typeof(ConditionComponent))]
 public class CommandBranch : OngoingCommand
 {
      [SerializeField] Command[] OnTrue;
      [SerializeField] Command[] OnFalse;
      [SerializeField] LocalSwitchBool boolean;
-
+     [SerializeField] ConditionComponent Condition;
       bool isOngoing = false;
 
      public override bool IsOngoing()

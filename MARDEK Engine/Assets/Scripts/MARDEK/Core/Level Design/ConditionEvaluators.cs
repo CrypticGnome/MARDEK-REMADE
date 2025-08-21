@@ -4,33 +4,35 @@ using UnityEngine;
 namespace MARDEK.Core.LevelDesign
 {
      [Serializable]
-     public class ANDCondition : ICondition
+     public class ANDCondition : Condition
      {
-          public bool Condition => ConditionA.Condition && ConditionB.Condition; 
-          public ICondition ConditionA;
-          public ICondition ConditionB;
+          public override bool Value => ConditionA.Value && ConditionB.Value;
+
+          [SerializeReference, SubclassSelector] public Condition ConditionA;
+          [SerializeReference, SubclassSelector] public Condition ConditionB;
+          
      }
 
      [Serializable]
-     public class ORCondition : ICondition
+     public class ORCondition : Condition
      {
-          public bool Condition => ConditionA.Condition || ConditionB.Condition;
-          public ICondition ConditionA;
-          public ICondition ConditionB;
+          public override bool Value => ConditionA.Value || ConditionB.Value;
+          [SerializeReference, SubclassSelector] public Condition ConditionA;
+          [SerializeReference, SubclassSelector] public Condition ConditionB;
      }
 
      [Serializable]
-     public class NOTCondition : ICondition
+     public class NOTCondition : Condition
      {
-          public bool Condition => !InCondition.Condition;
-          public ICondition InCondition;
+          public override bool Value => !InCondition.Value;
+          [SerializeReference, SubclassSelector] public Condition InCondition;
      }
 
      [Serializable]
-     public class XORCondition : ICondition
+     public class XORCondition : Condition
      {
-          public bool Condition => ConditionA.Condition ^ ConditionB.Condition;
-          public ICondition ConditionA;
-          public ICondition ConditionB;
+          public override bool Value => ConditionA.Value ^ ConditionB.Value;
+          [SerializeReference, SubclassSelector] public Condition ConditionA;
+          [SerializeReference, SubclassSelector] public Condition ConditionB;
      }
 }
