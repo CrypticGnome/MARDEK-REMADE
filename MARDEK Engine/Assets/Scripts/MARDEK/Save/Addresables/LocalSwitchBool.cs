@@ -4,7 +4,7 @@ using MARDEK.Event;
 namespace MARDEK.Save
 {
     [System.Serializable]
-    public class LocalSwitchBool : AddressableMonoBehaviour, IBoolCheck
+    public class LocalSwitchBool : AddressableMonoBehaviour
     {
         [SerializeField] protected bool value = false;
 
