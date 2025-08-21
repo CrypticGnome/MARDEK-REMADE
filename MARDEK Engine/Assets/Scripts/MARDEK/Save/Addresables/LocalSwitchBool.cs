@@ -7,7 +7,9 @@ namespace MARDEK.Save
     public class LocalSwitchBool : AddressableMonoBehaviour
     {
         [SerializeField] protected bool value = false;
-
+#if UNITY_EDITOR
+          [SerializeField, Multiline] string Description;
+        #endif
         public bool GetBoolValue()
         {
             return value;

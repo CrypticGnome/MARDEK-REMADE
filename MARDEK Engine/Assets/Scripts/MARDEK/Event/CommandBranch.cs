@@ -28,7 +28,7 @@ public class CommandBranch : OngoingCommand
                return;
           }
 
-          if (boolean.GetBoolValue())
+          if (Condition.Condition.Value)
                StartCoroutine(PerformCommandChain(OnTrue));
           else
                StartCoroutine(PerformCommandChain(OnFalse));
