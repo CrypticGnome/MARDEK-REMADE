@@ -27,6 +27,12 @@ public class CommandBranch : OngoingCommand
                Debug.LogWarning("Trying to trigger event, but this event is already ongoing");
                return;
           }
+          if ((Condition is null) && (boolean is null)) 
+          {
+               StartCoroutine(PerformCommandChain(OnTrue));
+               Debug.LogWarning($"Condition and local boolean are null in {name}");
+               return;
+          }
 
           if (Condition.Condition.Value)
                StartCoroutine(PerformCommandChain(OnTrue));
