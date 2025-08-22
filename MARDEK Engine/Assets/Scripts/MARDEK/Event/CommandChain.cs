@@ -77,15 +77,12 @@ namespace MARDEK.Event
                     Debug.Log($"Running {command} on {name}");
 
                     command.Trigger();
-                    // Lock shit up and UpdateCurrentCommand()
-                    if (command is OngoingCommand ongoingCommand)
-                    {
-                         IEnumerator waitForCommandToFinish = WaitForOnGoingCommand(ongoingCommand);
-                         yield return command.StartCoroutine(waitForCommandToFinish);
-                    }
+
+                    
+                    if (command is OngoingCommand ongoingCommand) 
+                         yield return WaitForOnGoingCommand(ongoingCommand);
                }
                IsOngoing = false;
-
           }
 
           IEnumerator WaitForOnGoingCommand(OngoingCommand ongoingCommand)

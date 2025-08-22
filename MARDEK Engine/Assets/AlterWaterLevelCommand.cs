@@ -6,37 +6,19 @@ using UnityEngine.Tilemaps;
 
 namespace MARDEK
 {
-    public class LowerWaterCommand : OngoingCommand
+    public class AlterWaterLevelCommand : OngoingCommand
     {
-          [SerializeField] Tilemap tileMap;
-          [SerializeField] bool raiseOnTrue;
-          [SerializeField] BoolComponent boolVariable;
-          [SerializeField] bool defaultValue;
+          [SerializeField] Tilemap raisedTileMap, loweredTileMap;
+          [SerializeField] ConditionComponent raisedCondition;
           [SerializeField] float duration;
           [SerializeField] Vector3 loweredPosition;
           [SerializeField] float raisedTransparency, loweredTransparency;
 
           float lowered;
-#if UNITY_EDITOR
-          private void OnValidate()
-          {
-               if (tileMap is null)
-               {
-                    if (!TryGetComponent(out tileMap))
-                    {
-                         gameObject.AddComponent<SpriteRenderer>();
-                    }
-               }
-               Color color = tileMap.color;
-               color.a = raisedTransparency / 255;
-               tileMap.color = color;
-          }
-#endif
+
           private void Start()
           {
-               if (boolVariable == null)
-                    return;
-               if (boolVariable.Value == defaultValue)
+               if (raisedCondition.Condition.Value)
                     Raised();
                else
                     Lowered();
@@ -44,22 +26,24 @@ namespace MARDEK
 
           public override void Trigger()
           {
-               if (boolVariable.Value == raiseOnTrue)
+               if (raisedCondition.Condition.Value)
                     StartCoroutine(Raise());
                else
                     StartCoroutine(Lower());
           }
           IEnumerator Lower()
           {
-               Color color = tileMap.color;
+               raisedTileMap.gameObject.SetActive(true);
+               loweredTileMap.gameObject.SetActive(false);
+               Color color = raisedTileMap.color;
                Debug.Log("LOWERING WATER");
                while (lowered < 1)
                {
                     lowered += Time.deltaTime / duration;
                     transform.localPosition = loweredPosition * lowered;
-                    color = tileMap.color;
+                    color = raisedTileMap.color;
                     color.a = Mathf.Lerp(raisedTransparency, loweredTransparency, lowered)/255;
-                    tileMap.color = color;
+                    raisedTileMap.color = color;
                     yield return null;
                }
 
@@ -67,7 +51,10 @@ namespace MARDEK
           }
           IEnumerator Raise()
           {
-               Color color = tileMap.color;
+               raisedTileMap.gameObject.SetActive(true);
+               loweredTileMap.gameObject.SetActive(false);
+
+               Color color = raisedTileMap.color;
                Debug.Log("RAISING WATER");
 
                while (lowered > 0)
@@ -75,7 +62,7 @@ namespace MARDEK
                     lowered -= Time.deltaTime / duration;
                     transform.localPosition = loweredPosition * lowered;
                     color.a = Mathf.Lerp(raisedTransparency, loweredTransparency, lowered)/255;
-                    tileMap.color = color;
+                    raisedTileMap.color = color;
                     yield return null;
                }
                Raised();
@@ -86,19 +73,23 @@ namespace MARDEK
           }
           void Lowered()
           {
-               Color color = tileMap.color;
+               raisedTileMap.gameObject.SetActive(false);
+               loweredTileMap.gameObject.SetActive(true);
+               Color color = raisedTileMap.color;
                lowered = 1;
                transform.localPosition = loweredPosition;
                color.a = loweredTransparency / 255;
-               tileMap.color = color;
+               raisedTileMap.color = color;
           }
           void Raised()
           {
-               Color color = tileMap.color;
+               raisedTileMap.gameObject.SetActive(true);
+               loweredTileMap.gameObject.SetActive(false);
+               Color color = raisedTileMap.color;
                lowered = 0;
                transform.localPosition = Vector3.zero;
                color.a = raisedTransparency / 255;
-               tileMap.color = color;
+               raisedTileMap.color = color;
           }
      }
 }
