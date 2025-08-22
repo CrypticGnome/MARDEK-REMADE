@@ -261,6 +261,7 @@ MonoBehaviour:
     saveOnDisable: 1
   serializedGuid: 8cc74d5c7d1d9242a3ac9926ad008905
   value: 0
+  Description: 
 --- !u!114 &224751091 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7535945017526095558, guid: 4524198ac264da046815598c35039adc, type: 3}
@@ -767,6 +768,7 @@ MonoBehaviour:
     saveOnDisable: 1
   serializedGuid: ff81313972c34644a8f0aa66248e4096
   value: 0
+  Description: 
 --- !u!114 &557530807 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4921777150158061773, guid: 4524198ac264da046815598c35039adc, type: 3}
@@ -1354,6 +1356,7 @@ MonoBehaviour:
     saveOnDisable: 1
   serializedGuid: ce6b1b2b77f2d44dae74977db36e022d
   value: 0
+  Description: 
 --- !u!1 &1366511936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,7 +1404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e31ad1e34f546c340bf85a02096374f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
+  lockPlayerActions: 1
   dialogue: {fileID: 11400000, guid: e455d0732ca59ff42a6c51340b7d565c, type: 2}
 --- !u!114 &1366511939
 MonoBehaviour:
@@ -1430,7 +1433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334ae38223212ba4cb4d694be64d0959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
+  lockPlayerActions: 1
   targetAnimator: {fileID: 0}
   animationDirection: {fileID: 11400000, guid: ea6556b4aef89a245b8056a40173133b, type: 2}
 --- !u!114 &1366511941
@@ -1445,14 +1448,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4eb8959f8228364e99a75252fac3c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
+  lockPlayerActions: 1
   target: {fileID: 0}
   moves:
-  - {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
-  - {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
-  - {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
-  - {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
-  - {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
+  - Direction: {fileID: 0}
+    Count: 0
+  - Direction: {fileID: 0}
+    Count: 0
+  - Direction: {fileID: 0}
+    Count: 0
+  - Direction: {fileID: 0}
+    Count: 0
+  - Direction: {fileID: 0}
+    Count: 0
 --- !u!4 &1366511942
 Transform:
   m_ObjectHideFlags: 0
@@ -1587,6 +1595,7 @@ MonoBehaviour:
     saveOnDisable: 1
   serializedGuid: c2dea570ad90504b938402012e3d93f9
   value: 0
+  Description: 
 --- !u!114 &1611162750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1599,6 +1608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f38bdcc0525ae4d8b3607290d3d8bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lockPlayerActions: 1
   OnTrue: []
   OnFalse:
   - {fileID: 1366511941}
@@ -1607,7 +1617,12 @@ MonoBehaviour:
   - {fileID: 1366511939}
   - {fileID: 1366511938}
   - {fileID: 1366511937}
-  boolean: {fileID: 1611162749}
+  boolean: {fileID: 0}
+  Condition: {fileID: 0}
+  branchCondition:
+    UsingSwitchBool: 1
+    LocalSwitchBool: {fileID: 1611162749}
+    ConditionComponent: {fileID: 0}
 --- !u!114 &1611162751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1625,7 +1640,8 @@ MonoBehaviour:
   onStart: 1
   onInteractionKey: 0
   onTriggerEnter: 0
-  raiseEvent: 0
+  onTriggerExit: 0
+  tagName: Player
 --- !u!1001 &1624301143
 PrefabInstance:
   m_ObjectHideFlags: 0

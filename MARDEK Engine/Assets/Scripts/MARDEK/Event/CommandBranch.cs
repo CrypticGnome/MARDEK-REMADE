@@ -4,14 +4,13 @@ using MARDEK.Save;
 using UnityEngine;
 using System.Collections;
 using MARDEK.Core.LevelDesign;
+using System;
 
-[RequireComponent(typeof(ConditionComponent))]
 public class CommandBranch : OngoingCommand
 {
      [SerializeField] Command[] OnTrue;
      [SerializeField] Command[] OnFalse;
-     [SerializeField] LocalSwitchBool boolean;
-     [SerializeField] ConditionComponent Condition;
+     [SerializeField] CommandBranchCondition branchCondition;
       bool isOngoing = false;
 
      public override bool IsOngoing()
@@ -27,14 +26,8 @@ public class CommandBranch : OngoingCommand
                Debug.LogWarning("Trying to trigger event, but this event is already ongoing");
                return;
           }
-          if ((Condition is null) && (boolean is null)) 
-          {
-               StartCoroutine(PerformCommandChain(OnTrue));
-               Debug.LogWarning($"Condition and local boolean are null in {name}");
-               return;
-          }
 
-          if (Condition.Condition.Value)
+          if (GetValue(branchCondition))
                StartCoroutine(PerformCommandChain(OnTrue));
           else
                StartCoroutine(PerformCommandChain(OnFalse));
@@ -73,4 +66,32 @@ public class CommandBranch : OngoingCommand
                PlayerLocks.EventSystemLock--;
           }
      }
+     public bool GetValue(CommandBranchCondition condition)
+     {
+          if (condition.UsingSwitchBool)
+          {
+               if (condition.LocalSwitchBool is null)
+               {
+                    Debug.LogWarning($"Switch bool is null in {name}");
+                    return false;
+               }
+               return condition.LocalSwitchBool.GetBoolValue();
+          }
+
+          if (condition.ConditionComponent is null || condition.ConditionComponent.Condition is null)
+          {
+               Debug.LogWarning($"Null exception in Condition component of {name}");
+               return false;
+          }
+
+          return condition.ConditionComponent.Condition.Value;
+     }
+     [Serializable]
+     public class CommandBranchCondition
+     {
+          public bool UsingSwitchBool = true;
+          public LocalSwitchBool LocalSwitchBool;
+          public ConditionComponent ConditionComponent;          
+     }
 }
+
