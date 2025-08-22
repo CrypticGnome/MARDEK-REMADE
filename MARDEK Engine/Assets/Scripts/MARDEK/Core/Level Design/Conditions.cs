@@ -7,8 +7,8 @@ namespace MARDEK.Core.LevelDesign
      [Serializable]
      public class LocalBoolCondition : Condition
      {
-          public override bool Value => BoolCondition.GetBoolValue();
+          public override bool Value => BoolCondition.Value;
 
-          public LocalSwitchBool BoolCondition;
+          public BoolComponent BoolCondition;
      }
 }

@@ -4,20 +4,12 @@ using MARDEK.Event;
 namespace MARDEK.Save
 {
     [System.Serializable]
-    public class LocalSwitchBool : AddressableMonoBehaviour
+    public class BoolComponent : AddressableMonoBehaviour
     {
         [SerializeField] protected bool value = false;
 #if UNITY_EDITOR
           [SerializeField, Multiline] string Description;
         #endif
-        public bool GetBoolValue()
-        {
-            return value;
-        }
-
-        public virtual void SetBoolValue(bool setValue)
-        {
-            value = setValue;
-        }
+          public bool Value { get { return value; } set { this.value = value; } }
     }
 }

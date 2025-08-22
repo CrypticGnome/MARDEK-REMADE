@@ -54,7 +54,7 @@ namespace MARDEK.Movement
         {
             Vector2 direction = ctx.ReadValue<Vector2>();
             if (direction.x == 0 || direction.y == 0)
-                desiredDirection = ApproximanteDirectionByVector2(direction);
+                desiredDirection = GetMoveDirection(direction);
             else
                 desiredDirection = null;
         }

@@ -63,7 +63,7 @@ namespace MARDEK.Movement
                     continue;
                 
                 var position = i < positions.Count ? positions[i] : positions[positions.Count - 1];
-                Utilities2D.SetTransformPosition(character.transform, position);
+                character.transform.Set2DPosition(position);
                 if (directions != null && directions.Count > 0)
                 {
                     var direction = i < directions.Count ? directions[i] : directions[directions.Count - 1];

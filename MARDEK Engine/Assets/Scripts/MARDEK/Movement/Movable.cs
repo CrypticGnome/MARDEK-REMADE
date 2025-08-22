@@ -1,7 +1,8 @@
+using MARDEK.Animation;
+using MARDEK.Core;
 using System.Collections.Generic;
 using UnityEngine;
-using MARDEK.Core;
-using MARDEK.Animation;
+using UnityEngine.UIElements;
 
 namespace MARDEK.Movement
 {
@@ -83,8 +84,7 @@ namespace MARDEK.Movement
                isMoving = !MoveToPosition(transform, targetPosition, movementSpeed, Time.deltaTime);
                if(isMoving == false)
                {
-                   var snappedTargetPosition = Utilities2D.SnapPositionToGrid(targetPosition);
-                   Utilities2D.SetTransformPosition(transform, snappedTargetPosition);
+                   transform.Set2DPosition(targetPosition.SnapToGrid());
                    OnEndMove.Invoke();
                }
                UpdateMoveStatus();
@@ -159,15 +159,15 @@ namespace MARDEK.Movement
         bool MoveToPosition(Transform transform, Vector2 targetPosition, float movementSpeed, float deltaTime)
         {
             // returns true if movement has reached the target
-            if (Utilities2D.AreCloseEnough(transform.position, targetPosition)) return true;
+            if (targetPosition.IsApproximately(transform.position)) return true;
 
 
                Vector2 positionDifferece = targetPosition - (Vector2)transform.position;
                Vector2 increment = positionDifferece.normalized * deltaTime * movementSpeed;
                if (increment.sqrMagnitude < positionDifferece.sqrMagnitude)
                {
-                   Utilities2D.SetTransformPosition(transform, (Vector2)transform.position + increment);
-                   return (Utilities2D.AreCloseEnough(transform.position, targetPosition));
+                   transform.Set2DPosition((Vector2)transform.position + increment);
+                   return targetPosition.IsApproximately(transform.position);
                }
 
                return true;

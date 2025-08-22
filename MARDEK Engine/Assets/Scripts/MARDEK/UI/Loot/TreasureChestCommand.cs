@@ -12,7 +12,7 @@ namespace MARDEK.Progress
 
     public class TreasureChestCommand : OngoingCommand
     {
-        [SerializeField, HideInInspector] LocalSwitchBool localSwitch;
+        [SerializeField, HideInInspector] BoolComponent localSwitch;
         [Tooltip("Leave null for gold")]
         [SerializeField] Item item;
         [SerializeField] int amount = 1;
@@ -23,20 +23,20 @@ namespace MARDEK.Progress
         private void OnValidate()
         {
             if (localSwitch == null && UnityEditor.PrefabUtility.IsPartOfNonAssetPrefabInstance(gameObject))
-                localSwitch = gameObject.AddComponent<LocalSwitchBool>();
+                localSwitch = gameObject.AddComponent<BoolComponent>();
             lockPlayerActions = true;
         }
 #endif
 
         private void Start()
         {
-            if (localSwitch.GetBoolValue())
+            if (localSwitch.Value)
                 SetOpenChestSprite();
         }
 
         public override void Trigger()
         {
-            if (localSwitch.GetBoolValue())
+            if (localSwitch.Value)
                 return;
 
             AudioManager.PlaySoundEffect(openSound);
@@ -62,7 +62,7 @@ namespace MARDEK.Progress
 
         void SetChestAsOpen()
         {
-            localSwitch.SetBoolValue(true);
+            localSwitch.Value = true;
             SetOpenChestSprite();
         }
 

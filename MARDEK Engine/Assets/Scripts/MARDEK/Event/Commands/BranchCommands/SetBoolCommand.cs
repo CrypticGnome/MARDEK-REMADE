@@ -5,14 +5,12 @@ namespace MARDEK.Event
 {
     public class SetBoolCommand : Command
     {
-        [SerializeField] LocalSwitchBool boolObject;
+        [SerializeField] BoolComponent boolObject;
         [SerializeField] bool setValue;
 
         public override void Trigger()
         {
-
-               boolObject.SetBoolValue(setValue);
-
+               boolObject.Value = setValue;
         }
     }
 }

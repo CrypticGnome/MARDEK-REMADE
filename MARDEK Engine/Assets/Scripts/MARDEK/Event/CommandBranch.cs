@@ -75,7 +75,7 @@ public class CommandBranch : OngoingCommand
                     Debug.LogWarning($"Switch bool is null in {name}");
                     return false;
                }
-               return condition.LocalSwitchBool.GetBoolValue();
+               return condition.LocalSwitchBool.Value;
           }
 
           if (condition.ConditionComponent is null || condition.ConditionComponent.Condition is null)
@@ -90,7 +90,7 @@ public class CommandBranch : OngoingCommand
      public class CommandBranchCondition
      {
           public bool UsingSwitchBool = true;
-          public LocalSwitchBool LocalSwitchBool;
+          public BoolComponent LocalSwitchBool;
           public ConditionComponent ConditionComponent;          
      }
 }
