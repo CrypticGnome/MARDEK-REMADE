@@ -18,10 +18,6 @@ namespace MARDEK.Event
           [SerializeField] bool onTriggerExit = false;
           [SerializeField] string tagName = "Player";
 
-#if UNITY_EDITOR
-          [Header("Debugging")]
-          [SerializeField] bool raiseEvent;
-#endif
           public bool IsOngoing { get; private set; } = false;
 
           void Start()
@@ -43,7 +39,6 @@ namespace MARDEK.Event
                     return;
                }
                Trigger();
-
           }
           private void OnTriggerExit2D(Collider2D collision)
           {
@@ -79,14 +74,13 @@ namespace MARDEK.Event
                     Command command = commands[i];
                     if (command is null)
                          continue;
-                    Debug.Log($"Running {command} on {command.transform.parent.name}");
+                    Debug.Log($"Running {command} on {name}");
 
-                    ///GetAndTriggerNextCommand()
                     command.Trigger();
                     // Lock shit up and UpdateCurrentCommand()
-                    if (command is OngoingCommand)
+                    if (command is OngoingCommand ongoingCommand)
                     {
-                         IEnumerator waitForCommandToFinish = WaitForOnGoingCommand(command as OngoingCommand);
+                         IEnumerator waitForCommandToFinish = WaitForOnGoingCommand(ongoingCommand);
                          yield return command.StartCoroutine(waitForCommandToFinish);
                     }
                }
