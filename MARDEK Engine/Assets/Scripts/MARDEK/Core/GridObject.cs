@@ -10,12 +10,9 @@ namespace MARDEK
           void Update()
           {
                if (Application.isPlaying) return;
-
-               float z = transform.position.z;
-               Vector3 pos = transform.position.ToGridCentre();
-               pos.z = z;
-               if (transform.position != pos)
-                    transform.position = pos;
+               Vector2 centredGridPos = transform.position.ToGridCentre();
+               if (centredGridPos != (Vector2)transform.position)
+                    transform.Set2DPosition(centredGridPos);
           }
 
 
