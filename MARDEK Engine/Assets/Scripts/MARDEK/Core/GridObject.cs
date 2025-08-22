@@ -1,30 +1,23 @@
+using MARDEK.Core;
 using UnityEngine;
 
 namespace MARDEK
 {
+     #if UNITY_EDITOR
     [ExecuteInEditMode, SelectionBase]
     public class GridObject : MonoBehaviour
     {
-        void Update()
-        {
-            if (!Application.isPlaying)
-                EditorUpdate();
-        }
+          void Update()
+          {
+               if (Application.isPlaying) return;
+               Vector2 centredGridPos = transform.position.ToGridCentre();
+               if (centredGridPos != (Vector2)transform.position)
+                    transform.Set2DPosition(centredGridPos);
+          }
 
-        void EditorUpdate()
-        {
-            float z = transform.position.z;
-            Vector3 pos = Utilities2D.SnapPositionToGrid(transform.position);
-            pos.z = z;
-            if (transform.position != pos)
-                transform.position = pos;
-        }
 
-        private void OnDrawGizmos()
-        {
-            Grid grid = Utilities2D.grid;
-            if (grid)
-                Gizmos.DrawWireCube(transform.position, grid.cellSize);
-        }
+        private void OnDrawGizmos() => Gizmos.DrawWireCube(transform.position, Vector3.one);
+
     }
+    #endif
 }

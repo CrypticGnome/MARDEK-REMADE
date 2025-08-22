@@ -38,7 +38,7 @@ namespace MARDEK.Movement
         void MoveToFollowed()
         {
             Vector2 desiredDelta = followedMovement.lastPosition - (Vector2)transform.position;
-            MoveDirection followDirection = ApproximanteDirectionByVector2(desiredDelta);
+            MoveDirection followDirection = GetMoveDirection(desiredDelta);
             if (followDirection)
             {
                 SendDirection(followDirection);
@@ -49,7 +49,7 @@ namespace MARDEK.Movement
         {
             if (movement.isMoving == false && shouldFollow)
             {                
-                if (Utilities2D.AreCloseEnough(followedMovement.lastPosition, transform.position))
+                if (followedMovement.lastPosition.IsApproximately(transform.position))
                     shouldFollow = false;
                 else
                     MoveToFollowed();

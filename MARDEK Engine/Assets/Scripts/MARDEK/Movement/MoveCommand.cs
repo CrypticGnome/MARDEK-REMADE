@@ -2,13 +2,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using MARDEK.Core;
 using MARDEK.Event;
+using System;
 
 namespace MARDEK.Movement
 {
     public class MoveCommand : OngoingCommand
     {
         [SerializeField] Movable target = null;
-        [SerializeField] List<MoveDirection> moves;
+        [SerializeField] List<Moves> moves;
+
 
         public override bool IsOngoing()
         {
@@ -23,4 +25,10 @@ namespace MARDEK.Movement
                 target.EnqueueMoves(moves);
         }
     }
+     [Serializable]
+     public class Moves
+     {
+          public MoveDirection Direction;
+          public int Count;
+     }
 }

@@ -61,7 +61,7 @@ namespace MARDEK.UI
 
           Vector2Int GetMoveDirection(Vector2 inputDirection)
           {
-               if (Utilities2D.AreCloseEnough(inputDirection, Vector2.zero))
+               if (inputDirection.IsApproximately(Vector2.zero))
                     return Vector2Int.zero;
 
                Vector2Int[] allowedDirections = GetAllowedDirections();

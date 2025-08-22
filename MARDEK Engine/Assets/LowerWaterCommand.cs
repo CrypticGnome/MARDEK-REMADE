@@ -10,7 +10,7 @@ namespace MARDEK
     {
           [SerializeField] Tilemap tileMap;
           [SerializeField] bool raiseOnTrue;
-          [SerializeField] LocalSwitchBool boolVariable;
+          [SerializeField] BoolComponent boolVariable;
           [SerializeField] bool defaultValue;
           [SerializeField] float duration;
           [SerializeField] Vector3 loweredPosition;
@@ -36,7 +36,7 @@ namespace MARDEK
           {
                if (boolVariable == null)
                     return;
-               if (boolVariable.GetBoolValue() == defaultValue)
+               if (boolVariable.Value == defaultValue)
                     Raised();
                else
                     Lowered();
@@ -44,7 +44,7 @@ namespace MARDEK
 
           public override void Trigger()
           {
-               if (boolVariable.GetBoolValue() == raiseOnTrue)
+               if (boolVariable.Value == raiseOnTrue)
                     StartCoroutine(Raise());
                else
                     StartCoroutine(Lower());

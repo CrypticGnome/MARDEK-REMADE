@@ -299,6 +299,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4524198ac264da046815598c35039adc, type: 3}
+--- !u!114 &41952382 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2851085400319536289, guid: 4524198ac264da046815598c35039adc, type: 3}
+  m_PrefabInstance: {fileID: 41952381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18e7e3814c881b488b18c5e62bdd2b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &107479241
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,14 +700,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4eb8959f8228364e99a75252fac3c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
-  target: {fileID: 0}
+  lockPlayerActions: 1
+  target: {fileID: 41952382}
   moves:
-  - {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
-  - {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
-  - {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
-  - {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
-  - {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
+  - Direction: {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
+    Count: 5
 --- !u!61 &701255232
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -782,7 +790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e31ad1e34f546c340bf85a02096374f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
+  lockPlayerActions: 1
   dialogue: {fileID: 11400000, guid: b592cdf00c934e14092ef0e79c15734d, type: 2}
 --- !u!114 &701255236
 MonoBehaviour:
@@ -834,7 +842,8 @@ MonoBehaviour:
   onStart: 0
   onInteractionKey: 0
   onTriggerEnter: 1
-  raiseEvent: 0
+  onTriggerExit: 0
+  tagName: Player
 --- !u!1 &882989146
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,6 +881,7 @@ MonoBehaviour:
     saveOnDisable: 1
   serializedGuid: 01f7221e917e404abb09db44fa53dd2f
   value: 0
+  Description: 
 --- !u!4 &882989150
 Transform:
   m_ObjectHideFlags: 0
@@ -900,11 +910,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f38bdcc0525ae4d8b3607290d3d8bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lockPlayerActions: 1
   OnTrue:
   - {fileID: 1594461492}
   - {fileID: 1594461493}
   OnFalse: []
-  boolean: {fileID: 882989149}
+  boolean: {fileID: 0}
+  Condition: {fileID: 0}
+  branchCondition:
+    UsingSwitchBool: 1
+    LocalSwitchBool: {fileID: 882989149}
+    ConditionComponent: {fileID: 0}
 --- !u!114 &882989152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -922,7 +938,8 @@ MonoBehaviour:
   onStart: 1
   onInteractionKey: 0
   onTriggerEnter: 0
-  raiseEvent: 0
+  onTriggerExit: 0
+  tagName: Player
 --- !u!1001 &915142664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14684,7 +14701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e31ad1e34f546c340bf85a02096374f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
+  lockPlayerActions: 1
   dialogue: {fileID: 11400000, guid: 40d46e4ee376574448265b932fa262d0, type: 2}
 --- !u!114 &1594461493
 MonoBehaviour:

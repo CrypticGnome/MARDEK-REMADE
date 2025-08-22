@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using MARDEK.Core;
+using UnityEditor;
+using UnityEditor.UIElements;
 
 namespace MARDEK.Event
 {
@@ -13,12 +15,9 @@ namespace MARDEK.Event
           [SerializeField] bool onStart = false;
           [SerializeField] bool onInteractionKey = false;
           [SerializeField] bool onTriggerEnter = false;
+          [SerializeField] bool onTriggerExit = false;
+          [SerializeField] string tagName = "Player";
 
-
-#if UNITY_EDITOR
-          [Header("Debugging")]
-          [SerializeField] bool raiseEvent;
-#endif
           public bool IsOngoing { get; private set; } = false;
 
           void Start()
@@ -29,9 +28,24 @@ namespace MARDEK.Event
 
           private void OnTriggerEnter2D(Collider2D collision)
           {
-               if (onTriggerEnter)
-                    if (collision.gameObject.CompareTag("Player"))
+               if (!onTriggerEnter) return;
+
+               if (!string.IsNullOrEmpty(tagName) && tagName != string.Empty)   // Don't know why I need to see if it's empty twice, but it doesn't work with null or empty
+               {
+                    if (collision.gameObject.CompareTag(tagName))
+                    {
                          Trigger();
+                    }
+                    return;
+               }
+               Trigger();
+          }
+          private void OnTriggerExit2D(Collider2D collision)
+          {
+               if (!onTriggerExit) return;
+
+               if (collision.gameObject.CompareTag("Player"))
+                    Trigger();
           }
           public void Interact()
           {
@@ -60,13 +74,13 @@ namespace MARDEK.Event
                     Command command = commands[i];
                     if (command is null)
                          continue;
+                    Debug.Log($"Running {command} on {name}");
 
-                    ///GetAndTriggerNextCommand()
                     command.Trigger();
                     // Lock shit up and UpdateCurrentCommand()
-                    if (command is OngoingCommand)
+                    if (command is OngoingCommand ongoingCommand)
                     {
-                         IEnumerator waitForCommandToFinish = WaitForOnGoingCommand(command as OngoingCommand);
+                         IEnumerator waitForCommandToFinish = WaitForOnGoingCommand(ongoingCommand);
                          yield return command.StartCoroutine(waitForCommandToFinish);
                     }
                }
@@ -77,12 +91,13 @@ namespace MARDEK.Event
           IEnumerator WaitForOnGoingCommand(OngoingCommand ongoingCommand)
           {
                // Lock player actions until command has finished
-               if (ongoingCommand.WaitForExecutionEnd)
+               if (ongoingCommand.LockPlayerActions)
                {
                     PlayerLocks.EventSystemLock++;
                     yield return new WaitUntil(() => ongoingCommand.IsOngoing() == false);
                     PlayerLocks.EventSystemLock--;
                }
+               else yield return new WaitUntil(() => ongoingCommand.IsOngoing() == false);
           }
 
      }

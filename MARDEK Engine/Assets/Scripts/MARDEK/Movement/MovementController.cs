@@ -14,9 +14,9 @@ namespace MARDEK.Movement
             if (movement) movement.MoveInDirectionOnce(direction);
         }
 
-        public MoveDirection ApproximanteDirectionByVector2(Vector2 vector)
+        public MoveDirection GetMoveDirection(Vector2 vector)
         {
-            if(Utilities2D.AreCloseEnough(vector, Vector2.zero))
+            if(vector.IsApproximately(Vector2.zero))
                 return null;
             if (allowedDirections.Count == 0)
                return null;

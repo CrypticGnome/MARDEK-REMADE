@@ -289,6 +289,7 @@ MonoBehaviour:
     saveOnDisable: 1
   serializedGuid: 0af23c5fd171a148af0dc29549e2e65b
   value: 0
+  Description: 
 --- !u!4 &203514841
 Transform:
   m_ObjectHideFlags: 0
@@ -375,6 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f38bdcc0525ae4d8b3607290d3d8bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lockPlayerActions: 1
   OnTrue: []
   OnFalse:
   - {fileID: 1332648965}
@@ -382,7 +384,12 @@ MonoBehaviour:
   - {fileID: 1332648967}
   - {fileID: 1332648962}
   - {fileID: 1332648963}
-  boolean: {fileID: 203514840}
+  boolean: {fileID: 0}
+  Condition: {fileID: 0}
+  branchCondition:
+    UsingSwitchBool: 1
+    LocalSwitchBool: {fileID: 203514840}
+    ConditionComponent: {fileID: 0}
 --- !u!114 &203514845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,7 +407,8 @@ MonoBehaviour:
   onStart: 0
   onInteractionKey: 0
   onTriggerEnter: 1
-  raiseEvent: 0
+  onTriggerExit: 0
+  tagName: Player
 --- !u!1 &208188709
 GameObject:
   m_ObjectHideFlags: 0
@@ -16751,7 +16759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e31ad1e34f546c340bf85a02096374f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
+  lockPlayerActions: 1
   dialogue: {fileID: 11400000, guid: a35d2e8b545f54d4babcc2f378e75245, type: 2}
 --- !u!114 &1332648963
 MonoBehaviour:
@@ -16794,11 +16802,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4eb8959f8228364e99a75252fac3c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
+  lockPlayerActions: 1
   target: {fileID: 0}
   moves:
-  - {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
-  - {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
+  - Direction: {fileID: 0}
+    Count: 0
+  - Direction: {fileID: 0}
+    Count: 0
 --- !u!114 &1332648966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16811,7 +16821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334ae38223212ba4cb4d694be64d0959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
+  lockPlayerActions: 1
   targetAnimator: {fileID: 1803016139}
   animationDirection: {fileID: 11400000, guid: ea6556b4aef89a245b8056a40173133b, type: 2}
 --- !u!114 &1332648967

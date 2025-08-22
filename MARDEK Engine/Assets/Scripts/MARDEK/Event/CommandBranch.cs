@@ -3,13 +3,14 @@ using MARDEK.Event;
 using MARDEK.Save;
 using UnityEngine;
 using System.Collections;
+using MARDEK.Core.LevelDesign;
+using System;
 
 public class CommandBranch : OngoingCommand
 {
      [SerializeField] Command[] OnTrue;
      [SerializeField] Command[] OnFalse;
-     [SerializeField] LocalSwitchBool boolean;
-
+     [SerializeField] CommandBranchCondition branchCondition;
       bool isOngoing = false;
 
      public override bool IsOngoing()
@@ -26,7 +27,7 @@ public class CommandBranch : OngoingCommand
                return;
           }
 
-          if (boolean.GetBoolValue())
+          if (GetValue(branchCondition))
                StartCoroutine(PerformCommandChain(OnTrue));
           else
                StartCoroutine(PerformCommandChain(OnFalse));
@@ -58,11 +59,39 @@ public class CommandBranch : OngoingCommand
      IEnumerator WaitForOnGoingCommand(OngoingCommand ongoingCommand)
      {
           // Lock player actions until command has finished
-          if (ongoingCommand.WaitForExecutionEnd)
+          if (ongoingCommand.LockPlayerActions)
           {
                PlayerLocks.EventSystemLock++;
                yield return new WaitUntil(() => ongoingCommand.IsOngoing() == false);
                PlayerLocks.EventSystemLock--;
           }
      }
+     public bool GetValue(CommandBranchCondition condition)
+     {
+          if (condition.UsingSwitchBool)
+          {
+               if (condition.LocalSwitchBool is null)
+               {
+                    Debug.LogWarning($"Switch bool is null in {name}");
+                    return false;
+               }
+               return condition.LocalSwitchBool.Value;
+          }
+
+          if (condition.ConditionComponent is null || condition.ConditionComponent.Condition is null)
+          {
+               Debug.LogWarning($"Null exception in Condition component of {name}");
+               return false;
+          }
+
+          return condition.ConditionComponent.Condition.Value;
+     }
+     [Serializable]
+     public class CommandBranchCondition
+     {
+          public bool UsingSwitchBool = true;
+          public BoolComponent LocalSwitchBool;
+          public ConditionComponent ConditionComponent;          
+     }
 }
+
