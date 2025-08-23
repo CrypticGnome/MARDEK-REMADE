@@ -262,8 +262,8 @@ GameObject:
   - component: {fileID: 203514842}
   - component: {fileID: 203514843}
   - component: {fileID: 203514840}
-  - component: {fileID: 203514845}
   - component: {fileID: 203514844}
+  - component: {fileID: 203514845}
   m_Layer: 0
   m_Name: CutsceneCheck
   m_TagString: Untagged
@@ -289,7 +289,7 @@ MonoBehaviour:
     saveOnDisable: 1
   serializedGuid: 0af23c5fd171a148af0dc29549e2e65b
   value: 0
-  Description: 
+  Description: Cutscene has played
 --- !u!4 &203514841
 Transform:
   m_ObjectHideFlags: 0
@@ -377,15 +377,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockPlayerActions: 1
-  OnTrue: []
-  OnFalse:
-  - {fileID: 1332648965}
-  - {fileID: 1332648966}
-  - {fileID: 1332648967}
-  - {fileID: 1332648962}
-  - {fileID: 1332648963}
-  boolean: {fileID: 0}
-  Condition: {fileID: 0}
+  OnTrue: {fileID: 0}
+  OnFalse: {fileID: 1332648968}
   branchCondition:
     UsingSwitchBool: 1
     LocalSwitchBool: {fileID: 203514840}
@@ -399,16 +392,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 203514837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb37cef4635aaca4da15e2a207a12ac7, type: 3}
+  m_Script: {fileID: 11500000, guid: d20c3704debe8fb4680b6a7245018806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commands:
-  - {fileID: 203514844}
   onStart: 0
   onInteractionKey: 0
-  onTriggerEnter: 1
+  onTriggerEnter: 0
   onTriggerExit: 0
   tagName: Player
+  command: {fileID: 203514844}
 --- !u!1 &208188709
 GameObject:
   m_ObjectHideFlags: 0
@@ -16735,6 +16727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1332648964}
+  - component: {fileID: 1332648968}
   - component: {fileID: 1332648965}
   - component: {fileID: 1332648966}
   - component: {fileID: 1332648967}
@@ -16805,10 +16798,8 @@ MonoBehaviour:
   lockPlayerActions: 1
   target: {fileID: 0}
   moves:
-  - Direction: {fileID: 0}
-    Count: 0
-  - Direction: {fileID: 0}
-    Count: 0
+  - Direction: {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
+    Count: 2
 --- !u!114 &1332648966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16839,6 +16830,24 @@ MonoBehaviour:
   targetAnimator: {fileID: 1803016139}
   sendStopRate: 1
   animationStopRate: 0
+--- !u!114 &1332648968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332648961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb37cef4635aaca4da15e2a207a12ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commands:
+  - {fileID: 1332648965}
+  - {fileID: 1332648966}
+  - {fileID: 1332648967}
+  - {fileID: 1332648962}
+  - {fileID: 1332648963}
 --- !u!1001 &1429795061
 PrefabInstance:
   m_ObjectHideFlags: 0

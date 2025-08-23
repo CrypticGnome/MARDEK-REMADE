@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 191298848209693701}
   - component: {fileID: 6964008879963650592}
   - component: {fileID: 5869425465240627123}
-  - component: {fileID: 4190982903213151969}
   - component: {fileID: 1719714826713496561}
-  - component: {fileID: 8180397041933860171}
   - component: {fileID: 3346317240775575002}
+  - component: {fileID: 3014966794139026698}
+  - component: {fileID: 8599293060105338271}
+  - component: {fileID: 8180397041933860171}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Untagged
@@ -57,6 +58,7 @@ MonoBehaviour:
     saveOnDisable: 1
   serializedGuid: 74e0b18af253b643b74a56ec1fd7b11c
   value: 0
+  Description: 
 --- !u!212 &5869425465240627123
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -112,25 +114,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4190982903213151969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2487932713024082515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb37cef4635aaca4da15e2a207a12ac7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  commands:
-  - {fileID: 8180397041933860171}
-  - {fileID: 0}
-  onStart: 0
-  onInteractionKey: 1
-  onTriggerEnter: 0
-  raiseEvent: 0
 --- !u!61 &1719714826713496561
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -177,26 +160,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8180397041933860171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2487932713024082515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f38bdcc0525ae4d8b3607290d3d8bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
-  OnTrue:
-  - {fileID: 6250710372690806945}
-  - {fileID: 8944275744257896058}
-  OnFalse:
-  - {fileID: 251871520722433496}
-  - {fileID: 6593015591001747198}
-  boolean: {fileID: 6964008879963650592}
 --- !u!114 &3346317240775575002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +172,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271d59cc9c1d57944b15fb4357da0e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3014966794139026698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2487932713024082515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20c3704debe8fb4680b6a7245018806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onStart: 0
+  onInteractionKey: 1
+  onTriggerEnter: 0
+  onTriggerExit: 0
+  tagName: Player
+  command: {fileID: 8599293060105338271}
+--- !u!114 &8599293060105338271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2487932713024082515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb37cef4635aaca4da15e2a207a12ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commands:
+  - {fileID: 8180397041933860171}
+--- !u!114 &8180397041933860171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2487932713024082515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f38bdcc0525ae4d8b3607290d3d8bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockPlayerActions: 1
+  OnTrue: {fileID: 8010646420670385080}
+  OnFalse: {fileID: 1783828729010230388}
+  branchCondition:
+    UsingSwitchBool: 1
+    LocalSwitchBool: {fileID: 6964008879963650592}
+    ConditionComponent: {fileID: 0}
 --- !u!1 &3234250262520715399
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,10 +232,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2559780900779409566}
+  - component: {fileID: 1783828729010230388}
   - component: {fileID: 251871520722433496}
   - component: {fileID: 6593015591001747198}
   m_Layer: 0
-  m_Name: SetOn-LowerWater
+  m_Name: Lever Set On
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -242,6 +257,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 191298848209693701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1783828729010230388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3234250262520715399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb37cef4635aaca4da15e2a207a12ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commands:
+  - {fileID: 251871520722433496}
+  - {fileID: 6593015591001747198}
 --- !u!114 &251871520722433496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,18 +301,6 @@ MonoBehaviour:
   _event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 5869425465240627123}
         m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
         m_MethodName: set_sprite
@@ -295,8 +313,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  bool: {fileID: 6964008879963650592}
-  activationValue: 1
 --- !u!1 &7243152253211071115
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,10 +322,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8622906343306340857}
+  - component: {fileID: 8010646420670385080}
   - component: {fileID: 6250710372690806945}
   - component: {fileID: 8944275744257896058}
   m_Layer: 0
-  m_Name: SetOff-RaiseWater
+  m_Name: Lever Set Off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -330,6 +347,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 191298848209693701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8010646420670385080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7243152253211071115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb37cef4635aaca4da15e2a207a12ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commands:
+  - {fileID: 6250710372690806945}
+  - {fileID: 8944275744257896058}
 --- !u!114 &6250710372690806945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,18 +391,6 @@ MonoBehaviour:
   _event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 5869425465240627123}
         m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
         m_MethodName: set_sprite
@@ -383,5 +403,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  bool: {fileID: 6964008879963650592}
-  activationValue: 0

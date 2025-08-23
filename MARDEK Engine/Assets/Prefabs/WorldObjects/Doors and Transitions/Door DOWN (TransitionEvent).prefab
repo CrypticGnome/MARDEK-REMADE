@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4698576466535043288}
   - component: {fileID: 456518216473489393}
   - component: {fileID: 9058375522306014262}
+  - component: {fileID: 4577981516661534056}
   - component: {fileID: 8620198742758084164}
   - component: {fileID: 5677862630884637018}
   - component: {fileID: 722377953957177653}
@@ -98,6 +99,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &4577981516661534056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3265152173036777289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20c3704debe8fb4680b6a7245018806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onStart: 0
+  onInteractionKey: 1
+  onTriggerEnter: 0
+  onTriggerExit: 0
+  tagName: Player
+  command: {fileID: 8620198742758084164}
 --- !u!114 &8620198742758084164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,10 +135,6 @@ MonoBehaviour:
   - {fileID: 1895420968590908282}
   - {fileID: 5960133987480585342}
   - {fileID: 8727420034804483783}
-  onStart: 0
-  onInteractionKey: 1
-  onTriggerEnter: 0
-  raiseEvent: 0
 --- !u!114 &5677862630884637018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334ae38223212ba4cb4d694be64d0959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
+  lockPlayerActions: 1
   targetAnimator: {fileID: 1273908073927580688}
   animationDirection: {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
 --- !u!114 &722377953957177653
@@ -174,10 +189,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4eb8959f8228364e99a75252fac3c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
+  lockPlayerActions: 1
   target: {fileID: 0}
   moves:
-  - {fileID: 11400000, guid: ea6556b4aef89a245b8056a40173133b, type: 2}
+  - Direction: {fileID: 11400000, guid: ea6556b4aef89a245b8056a40173133b, type: 2}
+    Count: 1
 --- !u!114 &5960133987480585342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2c0d1f513548141bd524af5880add3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
+  lockPlayerActions: 1
   type: 1
 --- !u!114 &8727420034804483783
 MonoBehaviour:

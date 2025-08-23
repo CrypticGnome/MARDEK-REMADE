@@ -680,6 +680,7 @@ GameObject:
   - component: {fileID: 701255235}
   - component: {fileID: 701255236}
   - component: {fileID: 701255237}
+  - component: {fileID: 701255239}
   - component: {fileID: 701255238}
   m_Layer: 0
   m_Name: BeforeDragonBattleCutscene
@@ -804,7 +805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05544c8efff06734fb1990f8d0620431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boolObject: {fileID: 882989149}
+  boolObject: {fileID: 1229291631}
   setValue: 1
 --- !u!114 &701255237
 MonoBehaviour:
@@ -839,11 +840,24 @@ MonoBehaviour:
   - {fileID: 701255235}
   - {fileID: 701255236}
   - {fileID: 701255237}
+--- !u!114 &701255239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701255229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20c3704debe8fb4680b6a7245018806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   onStart: 0
   onInteractionKey: 0
   onTriggerEnter: 1
   onTriggerExit: 0
   tagName: Player
+  command: {fileID: 701255238}
 --- !u!1 &882989146
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,9 +867,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 882989150}
-  - component: {fileID: 882989149}
-  - component: {fileID: 882989152}
   - component: {fileID: 882989151}
+  - component: {fileID: 882989152}
   m_Layer: 0
   m_Name: AfterDragonBattleCutscene
   m_TagString: Untagged
@@ -863,25 +876,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &882989149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882989146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f6ecbffdd9440c42a9358a66b7b068c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saveOptions:
-    loadOnAwake: 1
-    autoSave: 1
-    saveOnDisable: 1
-  serializedGuid: 01f7221e917e404abb09db44fa53dd2f
-  value: 0
-  Description: 
 --- !u!4 &882989150
 Transform:
   m_ObjectHideFlags: 0
@@ -911,15 +905,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockPlayerActions: 1
-  OnTrue:
-  - {fileID: 1594461492}
-  - {fileID: 1594461493}
-  OnFalse: []
-  boolean: {fileID: 0}
-  Condition: {fileID: 0}
+  OnTrue: {fileID: 1594461494}
+  OnFalse: {fileID: 0}
   branchCondition:
     UsingSwitchBool: 1
-    LocalSwitchBool: {fileID: 882989149}
+    LocalSwitchBool: {fileID: 1229291631}
     ConditionComponent: {fileID: 0}
 --- !u!114 &882989152
 MonoBehaviour:
@@ -930,16 +920,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 882989146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb37cef4635aaca4da15e2a207a12ac7, type: 3}
+  m_Script: {fileID: 11500000, guid: d20c3704debe8fb4680b6a7245018806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commands:
-  - {fileID: 882989151}
   onStart: 1
   onInteractionKey: 0
   onTriggerEnter: 0
   onTriggerExit: 0
   tagName: Player
+  command: {fileID: 882989151}
 --- !u!1001 &915142664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1071,6 +1060,57 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6596d43268899347a1a39df54914f58, type: 3}
+--- !u!1 &1229291630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1229291632}
+  - component: {fileID: 1229291631}
+  m_Layer: 0
+  m_Name: Dragon Fought
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1229291631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229291630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6ecbffdd9440c42a9358a66b7b068c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveOptions:
+    loadOnAwake: 1
+    autoSave: 1
+    saveOnDisable: 1
+  serializedGuid: 182c4cb3c6fa04468026269a6d4e2566
+  value: 0
+  Description: 
+--- !u!4 &1229291632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229291630}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.1003072, y: 25.962603, z: -0.4794359}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1359478748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14665,6 +14705,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1594461491}
+  - component: {fileID: 1594461494}
   - component: {fileID: 1594461492}
   - component: {fileID: 1594461493}
   m_Layer: 0
@@ -14720,6 +14761,21 @@ MonoBehaviour:
     scenePath: Assets/Scenes/Maps/Heroes' Den/heroes_den.unity
   waypoint: {fileID: 11400000, guid: b97c98569b4a08d41bac07a51d3cb57f, type: 2}
   overrideFacingDirection: {fileID: 0}
+--- !u!114 &1594461494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594461490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb37cef4635aaca4da15e2a207a12ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commands:
+  - {fileID: 1594461492}
+  - {fileID: 1594461493}
 --- !u!1001 &1986284545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14863,3 +14919,4 @@ SceneRoots:
   - {fileID: 882989150}
   - {fileID: 1554591845}
   - {fileID: 1026024413}
+  - {fileID: 1229291632}
