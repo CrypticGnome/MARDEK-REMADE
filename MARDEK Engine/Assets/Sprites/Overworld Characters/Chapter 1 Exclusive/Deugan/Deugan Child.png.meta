@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 115_spritesheet_deugan_child_0
+      name: Deugan Child_0
       rect:
         serializedVersion: 2
         x: 0
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 499cd0421b95c0549bf0432af835d405
-      internalID: -1450228889
+      spriteID: 8db484efca552e948b808824ee44625a
+      internalID: 1208976418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 115_spritesheet_deugan_child_1
+      name: Deugan Child_1
       rect:
         serializedVersion: 2
         x: 16
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80c7941c8c7b26144aa98e708ac898af
-      internalID: 1183438108
+      spriteID: aaebfff2686714548a548c0f33ab1e1a
+      internalID: -1992880769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 115_spritesheet_deugan_child_2
+      name: Deugan Child_2
       rect:
         serializedVersion: 2
         x: 32
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f40d91d6856fcb447922623833b06432
-      internalID: 2066132571
+      spriteID: dfcb5272352073e499e458508a64a809
+      internalID: -60688777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 115_spritesheet_deugan_child_3
+      name: Deugan Child_3
       rect:
         serializedVersion: 2
         x: 48
@@ -217,14 +217,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ee96b97807101148a7b3176e04abc7a
-      internalID: 1376123
+      spriteID: 4d25bbae9f358de4dbc50645c9fea68d
+      internalID: -1893118648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 115_spritesheet_deugan_child_4
+      name: Deugan Child_4
       rect:
         serializedVersion: 2
         x: 64
@@ -239,14 +239,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32e41a221bb1376479c374062d574130
-      internalID: 1867495559
+      spriteID: 224fd3b07114f3d40868cc423b9ea345
+      internalID: 1472924422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 115_spritesheet_deugan_child_5
+      name: Deugan Child_5
       rect:
         serializedVersion: 2
         x: 80
@@ -261,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 242ee1cf564b245439ae85de8869ad47
-      internalID: -1277681112
+      spriteID: 5845470d31b4f7a4bb6dc2feafc5796b
+      internalID: -1560193497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 115_spritesheet_deugan_child_6
+      name: Deugan Child_6
       rect:
         serializedVersion: 2
         x: 96
@@ -283,14 +283,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a9261a205e92c941b5de4224b6dd573
-      internalID: -300003226
+      spriteID: 6a87172593435bc49a1b6af641fbddaf
+      internalID: -1331498162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 115_spritesheet_deugan_child_7
+      name: Deugan Child_7
       rect:
         serializedVersion: 2
         x: 112
@@ -305,8 +305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6886c415ed137c544b58165698d59461
-      internalID: -1949196387
+      spriteID: d2360cb1d873cc346935be99fbd9a75a
+      internalID: 2133131461
       vertices: []
       indices: 
       edges: []
@@ -325,14 +325,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      115_spritesheet_deugan_child_0: -1450228889
-      115_spritesheet_deugan_child_1: 1183438108
-      115_spritesheet_deugan_child_2: 2066132571
-      115_spritesheet_deugan_child_3: 1376123
-      115_spritesheet_deugan_child_4: 1867495559
-      115_spritesheet_deugan_child_5: -1277681112
-      115_spritesheet_deugan_child_6: -300003226
-      115_spritesheet_deugan_child_7: -1949196387
+      Deugan Child_0: 1208976418
+      Deugan Child_1: -1992880769
+      Deugan Child_2: -60688777
+      Deugan Child_3: -1893118648
+      Deugan Child_4: 1472924422
+      Deugan Child_5: -1560193497
+      Deugan Child_6: -1331498162
+      Deugan Child_7: 2133131461
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
