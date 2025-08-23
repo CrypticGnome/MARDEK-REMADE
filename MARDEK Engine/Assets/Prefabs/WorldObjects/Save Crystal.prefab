@@ -74,10 +74,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   commands:
   - {fileID: 4510607182530160795}
-  onStart: 0
-  onInteractionKey: 0
-  onTriggerEnter: 0
-  raiseEvent: 0
 --- !u!1 &4510285572471907587
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,10 +148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   commands:
   - {fileID: 6388731754314406395}
-  onStart: 0
-  onInteractionKey: 0
-  onTriggerEnter: 0
-  raiseEvent: 0
 --- !u!1 &6880118188401107836
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e31ad1e34f546c340bf85a02096374f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
+  lockPlayerActions: 1
   dialogue: {fileID: 11400000, guid: abd929fe3ecc85f4f9480a0f4eaa847f, type: 2}
 --- !u!114 &3359174326725782249
 MonoBehaviour:
@@ -218,6 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf72d7e23f0a2604cb40a36da718d3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lockPlayerActions: 1
   choicesDialogue: {fileID: 11400000, guid: 0c95ba83c6c9fbe45ac1598761862397, type: 2}
   commandsByChoice:
   - {fileID: 6897305755164523084}
@@ -297,10 +290,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   commands:
   - {fileID: 1618168392850973757}
-  onStart: 0
-  onInteractionKey: 0
-  onTriggerEnter: 0
-  raiseEvent: 0
 --- !u!1001 &3153002801420167085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -420,6 +409,9 @@ PrefabInstance:
       addedObject: {fileID: 327541495938276611}
     - targetCorrespondingSourceObject: {fileID: 7009682148586093238, guid: cebde8a71b5d92b449f312c784ae012b, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 6591362040827367160}
+    - targetCorrespondingSourceObject: {fileID: 7009682148586093238, guid: cebde8a71b5d92b449f312c784ae012b, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 2980909744804465560}
   m_SourcePrefab: {fileID: 100100000, guid: cebde8a71b5d92b449f312c784ae012b, type: 3}
 --- !u!4 &2801880452226114186 stripped
@@ -444,6 +436,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30e5ccaf95a1f74096638f95e743da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6591362040827367160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5370212228709162267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20c3704debe8fb4680b6a7245018806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onStart: 0
+  onInteractionKey: 1
+  onTriggerEnter: 0
+  onTriggerExit: 0
+  tagName: Player
+  command: {fileID: 2980909744804465560}
 --- !u!114 &2980909744804465560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,10 +469,6 @@ MonoBehaviour:
   commands:
   - {fileID: 4522179854928091129}
   - {fileID: 3359174326725782249}
-  onStart: 0
-  onInteractionKey: 1
-  onTriggerEnter: 0
-  raiseEvent: 0
 --- !u!1001 &4230825238689170407
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -33,8 +33,8 @@ namespace MARDEK
           }
           IEnumerator Lower()
           {
-               raisedTileMap.gameObject.SetActive(true);
-               loweredTileMap.gameObject.SetActive(false);
+               EnableTileMap(raisedTileMap: true);
+
                Color color = raisedTileMap.color;
                Debug.Log("LOWERING WATER");
                while (lowered < 1)
@@ -51,8 +51,7 @@ namespace MARDEK
           }
           IEnumerator Raise()
           {
-               raisedTileMap.gameObject.SetActive(true);
-               loweredTileMap.gameObject.SetActive(false);
+               EnableTileMap(raisedTileMap: true);
 
                Color color = raisedTileMap.color;
                Debug.Log("RAISING WATER");
@@ -71,10 +70,19 @@ namespace MARDEK
           {
                return lowered != 0 && lowered != 1;
           }
+          void EnableTileMap(bool raisedTileMap)
+          {
+               if (this.raisedTileMap == loweredTileMap)
+               {
+                    // Do not disable the tile maps as there is no other tile map to replace it
+                    return;
+               }
+               loweredTileMap.gameObject.SetActive(!raisedTileMap);
+               this.raisedTileMap.gameObject.SetActive(raisedTileMap);
+          }
           void Lowered()
           {
-               raisedTileMap.gameObject.SetActive(false);
-               loweredTileMap.gameObject.SetActive(true);
+               EnableTileMap(raisedTileMap: false);
                Color color = raisedTileMap.color;
                lowered = 1;
                transform.localPosition = loweredPosition;
@@ -83,8 +91,8 @@ namespace MARDEK
           }
           void Raised()
           {
-               raisedTileMap.gameObject.SetActive(true);
-               loweredTileMap.gameObject.SetActive(false);
+               EnableTileMap(raisedTileMap: true);
+
                Color color = raisedTileMap.color;
                lowered = 0;
                transform.localPosition = Vector3.zero;

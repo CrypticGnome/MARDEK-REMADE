@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3149219438909688389}
   - component: {fileID: 3149219438909688388}
   - component: {fileID: 3149219438909688391}
-  - component: {fileID: 4181326734569957068}
   - component: {fileID: 3149219438909688387}
+  - component: {fileID: 2277819486025226920}
   m_Layer: 0
   m_Name: TreasureChest
   m_TagString: Untagged
@@ -149,24 +149,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4181326734569957068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3149219438909688395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb37cef4635aaca4da15e2a207a12ac7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  commands:
-  - {fileID: 3149219438909688387}
-  onStart: 0
-  onInteractionKey: 1
-  onTriggerEnter: 0
-  raiseEvent: 0
 --- !u!114 &3149219438909688387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,9 +161,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96699c3650cfdad4a8b13b7851638986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitExcecutionEnd: 1
+  lockPlayerActions: 1
   localSwitch: {fileID: 0}
   item: {fileID: 0}
   amount: 1
   openSound: {fileID: 11400000, guid: 4941fd1d96ec4b54da8c49428e3cbeab, type: 2}
   openChestSprite: {fileID: 21300000, guid: 1de38682d0828ee4a9d0eecd905407c8, type: 3}
+--- !u!114 &2277819486025226920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3149219438909688395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20c3704debe8fb4680b6a7245018806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onStart: 0
+  onInteractionKey: 1
+  onTriggerEnter: 0
+  onTriggerExit: 0
+  tagName: Player
+  command: {fileID: 3149219438909688387}
