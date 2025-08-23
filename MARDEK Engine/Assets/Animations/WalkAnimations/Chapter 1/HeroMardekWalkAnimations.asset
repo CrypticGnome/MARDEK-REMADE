@@ -10,30 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdbda093b0e7f8459fd56b3b67d8276, type: 3}
-  m_Name: DeuganWalkAnimations
+  m_Name: HeroMardekWalkAnimations
   m_EditorClassIdentifier: 
   clips:
   - indexBySOReference: {fileID: 11400000, guid: ea6556b4aef89a245b8056a40173133b, type: 2}
     _loop: 1
     durationMultiplier: 1
     spriteSequence:
-    - {fileID: 21300000, guid: c8157d756f012b2429963df2f0cbc57f, type: 3}
-    - {fileID: 21300000, guid: a9ef7d402f246144e931e066c7290b65, type: 3}
+    - {fileID: 21300000, guid: 78c22bcfd9296fa4f9b9f8a36b339c8b, type: 3}
+    - {fileID: 21300000, guid: 8c695fa65494e3b4c8d0cfde09e93ed0, type: 3}
   - indexBySOReference: {fileID: 11400000, guid: b19d088da4eb0fe4c83aa92cbc400e36, type: 2}
     _loop: 1
     durationMultiplier: 1
     spriteSequence:
-    - {fileID: 21300000, guid: 97819ea34cec488438207edea3c81d32, type: 3}
-    - {fileID: 21300000, guid: 0d273cdda6e37584cb3f46553cc26a99, type: 3}
+    - {fileID: 21300000, guid: 1f652167201b86243810979e128b57cd, type: 3}
+    - {fileID: 21300000, guid: 42572ef827cead149aa74f0fdbf6a4b1, type: 3}
   - indexBySOReference: {fileID: 11400000, guid: a51fa9789f30cd14b903b94df523d503, type: 2}
     _loop: 1
     durationMultiplier: 1
     spriteSequence:
-    - {fileID: 21300000, guid: 60ee67e1c42e0264abfc9241f2d28cb9, type: 3}
-    - {fileID: 21300000, guid: 9fe3d3a93e0441a4eadc73d82bd20569, type: 3}
+    - {fileID: 21300000, guid: c565dc97ebd97de4a9fa8536ccc23370, type: 3}
+    - {fileID: 21300000, guid: 4d0796f522203c4489260779e3be464d, type: 3}
   - indexBySOReference: {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
     _loop: 1
     durationMultiplier: 1
     spriteSequence:
-    - {fileID: 21300000, guid: 14fe80202304a8f4aa76b43945f2fd51, type: 3}
-    - {fileID: 21300000, guid: c5944fd0e0d0c9444960bd093711bc25, type: 3}
+    - {fileID: 21300000, guid: eef0f32c6b81284468842c6adbf66e10, type: 3}
+    - {fileID: 21300000, guid: c7ec6eb2fe44c7d46be6eb2f5b897598, type: 3}

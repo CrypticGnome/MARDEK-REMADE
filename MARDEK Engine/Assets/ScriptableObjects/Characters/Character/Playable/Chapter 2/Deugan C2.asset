@@ -1,0 +1,396 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a631644fc3ba61f4eab5372b9e230cc1, type: 3}
+  m_Name: Deugan C2
+  m_EditorClassIdentifier: 
+  isRequired: 0
+  <Profile>k__BackingField: {fileID: 11400000, guid: 83695886c34656f4e9e9ae47c4858e6f, type: 2}
+  <ItemsEquipped>k__BackingField:
+    MainHand:
+      currentItem: {fileID: 11400000, guid: 9f44d2ce67d4c63428b26c460a494c8e, type: 2}
+      currentAmount: 1
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    OffHand:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Head:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Body:
+      currentItem: {fileID: 11400000, guid: 7d545b6b019ef57499fd306d4bb86984, type: 2}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Accessory1:
+      currentItem: {fileID: 11400000, guid: 1a6088039ca4aff479c8f3002a92c2da, type: 2}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    Accessory2:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+  <Inventory>k__BackingField:
+    slots:
+    - currentItem: {fileID: 11400000, guid: 3071228e88047bf4295c85c047f12146, type: 2}
+      currentAmount: 10
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+      canPlayerPutItems: 0
+  <ActionSkillset>k__BackingField: {fileID: 11400000, guid: 78bbd425c89cfb74e98cc0ffe2371e74, type: 2}
+  attack: 100
+  defense: 45
+  magicDefense: 90
+  _currentHP: 0
+  _currentMP: 0
+  StatusBuildup:
+    poison: 0
+    sleep: 0
+    paralysis: 0
+    blindness: 0
+    silence: 0
+    numbness: 0
+    curse: 0
+    confusion: 0
+    bleed: 0
+    zombification: 0
+  Level: 50
+  Experience: 0
+  <ReactionSkillset>k__BackingField: {fileID: 0}
+  <PassiveSkillset>k__BackingField: {fileID: 0}

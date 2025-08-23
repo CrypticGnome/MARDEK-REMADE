@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdbda093b0e7f8459fd56b3b67d8276, type: 3}
-  m_Name: MardekWalkAnimations
+  m_Name: HeroMardekWalkAnimations 1
   m_EditorClassIdentifier: 
   clips:
   - indexBySOReference: {fileID: 11400000, guid: ea6556b4aef89a245b8056a40173133b, type: 2}
