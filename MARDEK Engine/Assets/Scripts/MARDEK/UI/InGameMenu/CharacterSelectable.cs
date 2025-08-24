@@ -13,13 +13,14 @@ namespace MARDEK.UI
     {
         [SerializeField] TextMeshProUGUI characterNameText;
         [SerializeField] GameObject wrapper;
+          [SerializeField] PartySO party;
         public Character Character { 
             get
             {
                 var index = transform.GetSiblingIndex();
-                if (Party.Instance == null || Party.Instance.Characters.Count <= index)
+                if (party is null || party.Count <= index)
                     return null;
-                return Party.Instance.Characters[index];
+                return party[index];
             }
         }
 

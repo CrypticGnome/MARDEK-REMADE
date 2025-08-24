@@ -3,7 +3,19 @@ guid: 83929a6950a4e304684664287909c165
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - container: {instanceID: 0}
+  - itemName: {instanceID: 0}
+  - itemDescription: {instanceID: 0}
+  - itemImage: {instanceID: 0}
+  - itemNameBackground: {instanceID: 0}
+  - amountText: {instanceID: 0}
+  - keyName: {instanceID: 0}
+  - interactInput: {instanceID: 0}
+  - takeSound: {instanceID: 0}
+  - cancelSound: {instanceID: 0}
+  - rejectSound: {instanceID: 0}
+  - party: {fileID: 11400000, guid: 2054544f8dc27184587c0b2e27e6d3f5, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

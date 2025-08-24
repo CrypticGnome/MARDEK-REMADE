@@ -16,8 +16,8 @@ namespace MARDEK.UI
         [SerializeField] AudioObject rejectSound;
         [SerializeField] Sprite transparentSprite;
         [SerializeField] Image mouseCharacterImage;
+          [SerializeField] PlayableCharacters playableCharacters;
 
-        Party Party { get { return Party.Instance; } }
         Character mouseCharacter;
 
         void OnEnable()
@@ -43,14 +43,18 @@ namespace MARDEK.UI
 
         void HandleClick(int index, bool isSelected)
         {
-            Character characterAtIndex = (isSelected ? Party.Characters : Party.BenchedCharacters)[index];
+            var onfieldCharacters = playableCharacters.Party.OnFieldCharacters;
+            Character characterAtIndex = (isSelected ? onfieldCharacters : playableCharacters.BenchedCharacters)[index];
             if (characterAtIndex.isRequired)
             {
                 AudioManager.PlaySoundEffect(rejectSound);
                 return;
             }
+            if (isSelected)
+                onfieldCharacters[index] = characterAtIndex;
+            else
+                playableCharacters.BenchedCharacters[index] = characterAtIndex;
 
-            Party.SetCharacterAtIndex(mouseCharacter, index, !isSelected);
             mouseCharacter = characterAtIndex;
         }
 
@@ -70,17 +74,18 @@ namespace MARDEK.UI
         }
         public void RefreshSlots()
         {
+               PartySO party = playableCharacters.Party;
             for (int index = 0; index < selectedCharacterSlots.Count; index++)
             {
-                if(index < Party.Characters.Count)
-                    selectedCharacterSlots[index].SetCharacter(Party.Characters[index]);
+                if(index < party.Count)
+                    selectedCharacterSlots[index].SetCharacter(party[index]);
                 else
                     selectedCharacterSlots[index].SetCharacter(null);
             }
             for (int index = 0; index < unselectedCharacterSlots.Count; index++)
             {
-                if(index < Party.BenchedCharacters.Count)
-                    unselectedCharacterSlots[index].SetCharacter(Party.BenchedCharacters[index]);
+                if(index < playableCharacters.BenchedCharacters.Count)
+                    unselectedCharacterSlots[index].SetCharacter(playableCharacters.BenchedCharacters[index]);
                 else
                     unselectedCharacterSlots[index].SetCharacter(null);
             }

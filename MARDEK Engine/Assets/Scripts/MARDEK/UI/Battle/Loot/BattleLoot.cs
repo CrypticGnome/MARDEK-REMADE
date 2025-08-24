@@ -16,7 +16,7 @@ namespace MARDEK.UI
 
         [SerializeField] List<BattleLootEntry> entries;
         [SerializeField] List<InventorySpace> inventorySpaces;
-
+          [SerializeField] PartySO party;
           void Start()
           {
                currentItems.Clear();
@@ -83,10 +83,10 @@ namespace MARDEK.UI
         {
             for (int index = 0; index < inventorySpaces.Count; index++)
             {
-                if (index < Party.Instance.Characters.Count)
+                if (index < party.Count)
                 {
                     inventorySpaces[index].gameObject.SetActive(true);
-                    inventorySpaces[index].UpdateImage(Party.Instance.Characters[index].Inventory);
+                    inventorySpaces[index].UpdateImage(party[index].Inventory);
                 }
                 else inventorySpaces[index].gameObject.SetActive(false);
             }

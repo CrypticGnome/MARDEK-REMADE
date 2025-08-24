@@ -3,7 +3,11 @@ guid: f9feba03784d905499100622890e3e49
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - selectionSFX: {instanceID: 0}
+  - characterNameText: {instanceID: 0}
+  - wrapper: {instanceID: 0}
+  - party: {fileID: 11400000, guid: 2054544f8dc27184587c0b2e27e6d3f5, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

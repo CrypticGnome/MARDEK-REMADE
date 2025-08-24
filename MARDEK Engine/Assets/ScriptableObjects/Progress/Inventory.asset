@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 485800d95a0d64f4488b258f1b7c0f15, type: 3}
-  m_Name: Current Party
+  m_Script: {fileID: 11500000, guid: b524ea455ac3a76489cc3a6beccd06d3, type: 3}
+  m_Name: Inventory
   m_EditorClassIdentifier: 
-  OnFieldCharacters:
-  - {fileID: 11400000, guid: 6285f002e20157e4189c2544839a454b, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  RequiredSetup: []
+  PlotItems: {fileID: 11400000, guid: 65ef18d25f98cf848a6d7a5cb8c5bfec, type: 2}
+  Money: 0
+  Characters: {fileID: 0}

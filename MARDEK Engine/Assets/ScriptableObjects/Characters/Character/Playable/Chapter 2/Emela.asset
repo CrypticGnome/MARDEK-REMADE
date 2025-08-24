@@ -303,7 +303,7 @@ MonoBehaviour:
       currentAmount: 0
       itemFilter: []
       canBeEmpty: 0
-  <ActionSkillset>k__BackingField: {fileID: 11400000, guid: 19642d204816fc84194541b655801204, type: 2}
+  <ActionSkillset>k__BackingField: {fileID: 11400000, guid: 4f912a471e8772946bd5286eceaee2cd, type: 2}
   attack: 100
   defense: 60
   magicDefense: 60

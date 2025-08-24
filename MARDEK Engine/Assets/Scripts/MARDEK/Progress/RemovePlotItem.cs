@@ -7,10 +7,10 @@ namespace MARDEK.Progress
     public class RemovePlotItem : Command
     {
         [SerializeField] PlotItem item;
-
+        [SerializeField] PlotItems plotItems;
         public override void Trigger()
         {
-            Party.Instance.plotItems.Remove(item);
+            plotItems.Remove(item);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace MARDEK.UI
     using Battle;
      public class CharacterUI : MonoBehaviour, IPointerClickHandler
      {
-          [SerializeField] bool playableOrEnemy;
+          [SerializeField] bool isPlayer;
           public BattleCharacter character { get; private set; }
           [SerializeField] GameObject basePanel;
           public delegate void Initialised();
@@ -26,9 +26,8 @@ namespace MARDEK.UI
           {
                basePanel.SetActive(false);
                var index = transform.GetSiblingIndex();
-               List<BattleCharacter> list = BattleManager.EnemyBattleParty;
-               if (playableOrEnemy)
-                    list = BattleManager.PlayerBattleParty;
+               List<BattleCharacter> list = isPlayer ? BattleManager.PlayerBattleParty : BattleManager.EnemyBattleParty;
+
                if (index < list.Count)
                {
                     character = list[index];

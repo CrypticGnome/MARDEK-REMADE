@@ -13,7 +13,7 @@ namespace MARDEK.UI
         [SerializeField] TMP_Text selectedItemHeader;
         [SerializeField] TMP_Text selectedItemDescription;
         [SerializeField] GameObject plotItemSlotPrefab;
-
+          [SerializeField] PlotItems plotItems;
         void Awake()
         {
             UpdateEntries();
@@ -36,7 +36,7 @@ namespace MARDEK.UI
         void UpdateEntries()
         {
             ClearOldEntries();
-            foreach (var plotItem in Party.Instance.plotItems)
+            foreach (var plotItem in plotItems)
             {
                 PlotItemSlot itemSlot = Instantiate(this.plotItemSlotPrefab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<PlotItemSlot>();
                 itemSlot.Init(plotItem, selectedItemHeaderColor, selectedItemHeader, selectedItemDescription);

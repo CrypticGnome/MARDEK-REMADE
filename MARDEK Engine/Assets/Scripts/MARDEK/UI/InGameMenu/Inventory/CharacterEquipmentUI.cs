@@ -9,14 +9,15 @@ namespace MARDEK.UI
      public class CharacterEquipmentUI : MonoBehaviour
     {
         [SerializeField]  SlotUI MainHand, OffHand, Head, Body, Accessory1, Accessory2;
+          [SerializeField] PartySO party;
         public Character Character
         {
             get
             {
                 var index = transform.GetSiblingIndex();
-                if (Party.Instance.Characters.Count <= index)
+                if (party.Count <= index)
                     return null;
-                return Party.Instance.Characters[index];
+                return party[index];
             }
         }
         private void OnEnable()
