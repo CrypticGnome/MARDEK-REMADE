@@ -5,7 +5,7 @@
     <path d="M0.6 -2.4 L0.6 4.55 0.1 4.7 -0.3 4.55 -0.3 -2.4 0.6 -2.4" fill="#acacac" fill-rule="evenodd" stroke="none"/>
     <path d="M1.4 -4.3 L2.2 -5.2 5.3 -5.2 2.25 -1.8 Q1.4 -2.3 0.6 -2.4 L-0.3 -2.4 Q-1.15 -2.3 -2.0 -1.75 L-4.6 -5.2 -2.15 -5.2 -1.2 -4.05 -0.85 -3.7 -0.85 -5.2 -0.55 -5.2 1.05 -5.2 1.05 -3.9 1.4 -4.3 M0.0 -2.7 L0.0 -4.85 0.0 -2.7 M4.2 -4.75 L2.1 -2.4 4.2 -4.75 M-3.7 -4.75 L-1.8 -2.5 -3.7 -4.75" fill="url(#gradient1)" fill-rule="evenodd" stroke="none"/>
     <path d="M0.6 4.55 L0.85 4.35 1.85 6.15 0.8 6.15 0.45 5.45 0.45 6.15 -0.15 6.15 -0.15 5.35 -0.6 6.15 -1.35 6.15 -0.55 4.35 -0.3 4.55 0.1 4.7 0.6 4.55" fill="url(#gradient2)" fill-rule="evenodd" stroke="none"/>
-    <path d="M-0.55 -5.2 L-0.75 -29.15 0.8 -33.25 M2.1 -2.4 L4.2 -4.75 M0.0 -4.85 L0.0 -2.7 M-1.8 -2.5 L-3.7 -4.75" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.05"/>
+    <path d="M-0.55 -5.2 L-0.75 -29.15 0.8 -33.25 M2.1 -2.4 L4.2 -4.75 M0.0 -4.85 L0.0 -2.7 M-1.8 -2.5 L-3.7 -4.75" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
   </g>
   <defs>
     <linearGradient gradientTransform="matrix(0.0016, 0.0, 0.0, 0.0184, 0.1, -18.7)" gradientUnits="userSpaceOnUse" id="gradient0" spreadMethod="pad" x1="-819.2" x2="819.2">

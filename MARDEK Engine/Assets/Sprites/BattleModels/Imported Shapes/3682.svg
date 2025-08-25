@@ -2,10 +2,10 @@
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" height="12.95px" width="14.55px" xmlns="http://www.w3.org/2000/svg">
   <g transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
     <path d="M10.6 2.55 L10.4 2.9 Q7.95 6.3 4.05 4.3 L5.85 0.8 Q8.6 0.7 10.6 2.55" fill="url(#gradient0)" fill-rule="evenodd" stroke="none"/>
-    <path d="M10.6 2.55 Q8.6 0.7 5.85 0.8 L4.05 4.3 Q7.95 6.3 10.4 2.9 L10.6 2.55 Z" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.05"/>
+    <path d="M10.6 2.55 Q8.6 0.7 5.85 0.8 L4.05 4.3 Q7.95 6.3 10.4 2.9 L10.6 2.55 Z" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
     <path d="M8.0 -3.35 L8.55 -4.05 8.7 -4.15 Q7.95 -0.5 5.45 2.3 L5.0 2.5 3.95 5.2 4.9 6.8 4.35 8.5 3.75 8.7 Q2.15 9.15 1.55 7.55 L-3.8 4.05 -3.95 3.65 -3.6 2.75 -3.0 2.7 -0.85 4.3 2.1 4.35 2.65 3.45 5.3 0.45 8.0 -3.35" fill="url(#gradient1)" fill-rule="evenodd" stroke="none"/>
     <path d="M-3.0 2.7 L-0.9 0.4 Q0.85 -0.85 2.7 -2.85 L8.0 -3.35 5.3 0.45 2.65 3.45 2.1 4.35 -0.85 4.3 -3.0 2.7 M-0.85 4.3 L2.2 0.45 5.3 0.45 2.2 0.45 -0.85 4.3" fill="url(#gradient2)" fill-rule="evenodd" stroke="none"/>
-    <path d="M8.0 -3.35 L8.55 -4.05 8.7 -4.15 Q7.95 -0.5 5.45 2.3 L5.0 2.5 3.95 5.2 4.9 6.8 4.35 8.5 3.75 8.7 Q2.15 9.15 1.55 7.55 L-3.8 4.05 -3.95 3.65 -3.6 2.75 -3.0 2.7 -0.9 0.4 Q0.85 -0.85 2.7 -2.85 L8.0 -3.35 5.3 0.45 2.65 3.45 2.1 4.35 -0.85 4.3 -3.0 2.7 M5.3 0.45 L2.2 0.45 -0.85 4.3" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.05"/>
+    <path d="M8.0 -3.35 L8.55 -4.05 8.7 -4.15 Q7.95 -0.5 5.45 2.3 L5.0 2.5 3.95 5.2 4.9 6.8 4.35 8.5 3.75 8.7 Q2.15 9.15 1.55 7.55 L-3.8 4.05 -3.95 3.65 -3.6 2.75 -3.0 2.7 -0.9 0.4 Q0.85 -0.85 2.7 -2.85 L8.0 -3.35 5.3 0.45 2.65 3.45 2.1 4.35 -0.85 4.3 -3.0 2.7 M5.3 0.45 L2.2 0.45 -0.85 4.3" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
   </g>
   <defs>
     <linearGradient gradientTransform="matrix(6.0E-4, -0.0025, 0.0053, 0.0012, 7.45, 2.3)" gradientUnits="userSpaceOnUse" id="gradient0" spreadMethod="pad" x1="-819.2" x2="819.2">
