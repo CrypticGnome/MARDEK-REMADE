@@ -12,7 +12,6 @@ namespace MARDEK.Animation
 
         Vector3 startingScale = Vector3.one;
         float timer = 0;
-
         private void Start()
         {
             startingScale = transform.localScale;
@@ -23,15 +22,13 @@ namespace MARDEK.Animation
             float flickerMultiplier;
 
             if (smoothAnimation)
-                flickerMultiplier = Mathf.Sin(timer * flicksCyclesPerSecond * 2 * Mathf.PI);
+                flickerMultiplier = Mathf.Sin(Time.time * flicksCyclesPerSecond * 2 * Mathf.PI);
             else
                 flickerMultiplier = 1 - 2 * Mathf.FloorToInt(flicksCyclesPerSecond * timer % 2);
 
             Vector2 fickerAmout = flickerAmplitude * flickerMultiplier;
             Vector3 newScale = startingScale + (Vector3)fickerAmout;
             transform.localScale = newScale;
-
-            timer += Time.deltaTime;
         }
     }
 }
