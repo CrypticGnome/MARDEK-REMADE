@@ -11,5 +11,10 @@ namespace MARDEK.Save
           [SerializeField, Multiline] string Description;
         #endif
           public bool Value { get { return value; } set { this.value = value; } }
-    }
+
+          private void OnDestroy()
+          {
+               Save();
+          }
+     }
 }
