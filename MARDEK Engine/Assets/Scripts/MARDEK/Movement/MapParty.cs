@@ -1,7 +1,10 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using MARDEK.Animation;
+using MARDEK.CharacterSystem;
 using MARDEK.Core;
+using MARDEK.Progress;
 using MARDEK.Save;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace MARDEK.Movement
 {
@@ -14,6 +17,10 @@ namespace MARDEK.Movement
 
         [SerializeField] List<Vector2> partyPositions = new List<Vector2>();
         [SerializeField] List<MoveDirection> partyDirections = new List<MoveDirection>();
+        [SerializeField] SpriteRenderer[] renderers;
+        [SerializeField] SpriteAnimator[] animators;
+        [SerializeField] Movable[] movables;
+        [SerializeField] PartySO currentParty;
 
         List<Vector2> GetPartyPosition()
         {
@@ -27,8 +34,8 @@ namespace MARDEK.Movement
         {
             if (instance == null) return null;
             List<MoveDirection> directions = new List<MoveDirection>();
-            foreach (var character in instance.inMapCharacters)
-                directions.Add(character.GetComponent<Movable>().currentDirection);
+            for (int i = 0; i < 4; i++)
+                directions.Add(movables[i].currentDirection);
             return directions;
         }
 
@@ -41,8 +48,6 @@ namespace MARDEK.Movement
 
         override protected void Awake()
         {
-            if (instance)
-                Destroy(instance);
             instance = this;
 
             if (forceLoadOnNextAwake)
@@ -52,7 +57,25 @@ namespace MARDEK.Movement
             }
             if (partyPositions.Count > 0)
                 PositionCharactersAt(partyPositions, partyDirections);
-        }
+            
+            for (int i = 0; i < 4; i++)
+            {
+                 Character character = i < currentParty.Count ? currentParty[i] : null;
+            
+                 if (character == null)
+                 {
+                      inMapCharacters[i].SetActive(false);
+                      continue;
+                 }
+                 inMapCharacters[i].SetActive(true);
+            
+                 SpriteAnimationClipList animationClips = character.Profile.WalkSprites;
+                 MoveDirection direction = movables[i].currentDirection;
+                 SpriteAnimationClip clip = direction == null ? animationClips.GetClipByIndex(0) : animationClips.GetClipByReference(direction);
+                 renderers[i].sprite = clip.GetSprite(0);
+                 animators[i].ClipList = animationClips;
+            }
+          }
 
         void PositionCharactersAt(List<Vector2> positions, List<MoveDirection> directions)
         {
@@ -67,7 +90,7 @@ namespace MARDEK.Movement
                 if (directions != null && directions.Count > 0)
                 {
                     var direction = i < directions.Count ? directions[i] : directions[directions.Count - 1];
-                    character.GetComponent<Movable>().FaceDirection(direction);
+                    movables[i].FaceDirection(direction);
                 }
                 
             }

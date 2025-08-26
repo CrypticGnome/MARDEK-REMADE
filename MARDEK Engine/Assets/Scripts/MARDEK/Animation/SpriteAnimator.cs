@@ -9,7 +9,7 @@ namespace MARDEK.Animation
         public static SpriteAnimator PlayerSpriteAnimator { get; private set; }
         [SerializeField] float animationSpeed = 1f;
         [SerializeField] bool _isAnimating = false;
-        [SerializeField] SpriteAnimationClipList clipList = null;
+        public SpriteAnimationClipList ClipList = null;
         
         public bool isAnimating { get { return _isAnimating; } private set { _isAnimating = value; } }
         public bool currentClipLoops
@@ -38,13 +38,13 @@ namespace MARDEK.Animation
 
         private void Awake()
         {
-            InitializeFields();
+            
         }
 
         void InitializeFields()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
-            currentClip = clipList?.GetClipByIndex(0);
+            currentClip = ClipList?.GetClipByIndex(0);
             if (currentClip == null)
                 spriteRenderer.sprite = null;
             else
@@ -53,6 +53,7 @@ namespace MARDEK.Animation
         }
           private void Start()
           {
+               InitializeFields();
                if (currentClip is null)
                {
                     Debug.LogWarning($"Null current clip on {name}");
@@ -61,7 +62,6 @@ namespace MARDEK.Animation
           }
           private void Update()
           {
-
                if (!isAnimating) return;
                
                animationRatio += animationSpeed * Time.deltaTime;
@@ -103,7 +103,7 @@ namespace MARDEK.Animation
                 StopCurrentAnimation(1);
                 return;
             }
-            SpriteAnimationClip nextClip = clipList.GetClipByReference(reference);
+            SpriteAnimationClip nextClip = ClipList.GetClipByReference(reference);
             currentClip = nextClip;
             isAnimating = true;                    
             animationRatio = 0;

@@ -63,7 +63,7 @@ PrefabInstance:
     - target: {fileID: 3189322718074030912, guid: cebde8a71b5d92b449f312c784ae012b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1982921060, guid: 3e80040802c505840b46ef3732a6fabb, type: 3}
+      objectReference: {fileID: 21300000, guid: aa162cea18c3b4443b3241935df03c67, type: 2}
     - target: {fileID: 3189322718074030912, guid: cebde8a71b5d92b449f312c784ae012b, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6753876585966324207, guid: cebde8a71b5d92b449f312c784ae012b, type: 3}
+      propertyPath: ClipList
+      value: 
+      objectReference: {fileID: 11400000, guid: 8327385bdec881d46afa42f7d22a6810, type: 2}
     - target: {fileID: 6753876585966324207, guid: cebde8a71b5d92b449f312c784ae012b, type: 3}
       propertyPath: clipList
       value: 
@@ -154,6 +158,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4158513598093115839, guid: 0a738309b12c87249b41c3be7584c098, type: 3}
+      propertyPath: smoothAnimation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4158513598093115839, guid: 0a738309b12c87249b41c3be7584c098, type: 3}
+      propertyPath: flicksCyclesPerSecond
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5965006659329005950, guid: 0a738309b12c87249b41c3be7584c098, type: 3}
       propertyPath: m_Color.a
       value: 0.13333334
@@ -185,6 +197,26 @@ PrefabInstance:
     - target: {fileID: 6756502184650761517, guid: 0a738309b12c87249b41c3be7584c098, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929660599172433828, guid: 0a738309b12c87249b41c3be7584c098, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929660599172433828, guid: 0a738309b12c87249b41c3be7584c098, type: 3}
+      propertyPath: smoothAnimation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929660599172433828, guid: 0a738309b12c87249b41c3be7584c098, type: 3}
+      propertyPath: flickerAmplitude.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929660599172433828, guid: 0a738309b12c87249b41c3be7584c098, type: 3}
+      propertyPath: flickerAmplitude.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929660599172433828, guid: 0a738309b12c87249b41c3be7584c098, type: 3}
+      propertyPath: flicksCyclesPerSecond
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7178519458991605256, guid: 0a738309b12c87249b41c3be7584c098, type: 3}
       propertyPath: m_Name
