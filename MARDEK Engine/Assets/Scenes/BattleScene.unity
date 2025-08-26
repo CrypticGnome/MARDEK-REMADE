@@ -318,6 +318,10 @@ PrefabInstance:
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
       objectReference: {fileID: 0}
+    - target: {fileID: 245498975804031056, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: parentLayout
+      value: 
+      objectReference: {fileID: 1334175356}
     - target: {fileID: 292352149450216741, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -454,6 +458,10 @@ PrefabInstance:
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
       objectReference: {fileID: 0}
+    - target: {fileID: 880502229140194124, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: party
+      value: 
+      objectReference: {fileID: 11400000, guid: 2054544f8dc27184587c0b2e27e6d3f5, type: 2}
     - target: {fileID: 963869964802676933, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
@@ -678,6 +686,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2972131092257890688, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: party
+      value: 
+      objectReference: {fileID: 11400000, guid: 2054544f8dc27184587c0b2e27e6d3f5, type: 2}
     - target: {fileID: 2986791277880602659, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: selectionSFX
       value: 
@@ -1134,6 +1146,10 @@ PrefabInstance:
       propertyPath: OnVictoryUE.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4140111140656545417, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: parentLayout
+      value: 
+      objectReference: {fileID: 1334175356}
     - target: {fileID: 4190878026170170856, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1218,6 +1234,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4418012558773829309, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: party
+      value: 
+      objectReference: {fileID: 11400000, guid: 2054544f8dc27184587c0b2e27e6d3f5, type: 2}
     - target: {fileID: 4475267623241392938, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1470,6 +1490,10 @@ PrefabInstance:
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
       objectReference: {fileID: 0}
+    - target: {fileID: 6892702207451010038, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: party
+      value: 
+      objectReference: {fileID: 11400000, guid: 2054544f8dc27184587c0b2e27e6d3f5, type: 2}
     - target: {fileID: 6952605414032880269, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1554,6 +1578,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7390048411990193000, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: parentLayout
+      value: 
+      objectReference: {fileID: 1334175356}
     - target: {fileID: 7510759816845000611, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1826,6 +1854,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8597082777494503545, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: parentLayout
+      value: 
+      objectReference: {fileID: 1334175356}
     - target: {fileID: 8673186173132115637, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -49.99994
@@ -2440,6 +2472,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1591433212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1334175356 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7807353756366384516, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+  m_PrefabInstance: {fileID: 968278958}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9e5b830b45a5941abb99866fcde26c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1396922456
 PrefabInstance:
   m_ObjectHideFlags: 0

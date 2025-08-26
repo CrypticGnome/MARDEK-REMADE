@@ -14,7 +14,8 @@ namespace MARDEK.UI
         [SerializeField] TextMeshProUGUI characterNameText;
         [SerializeField] GameObject wrapper;
           [SerializeField] PartySO party;
-        public Character Character { 
+        public Character Character
+        { 
             get
             {
                 var index = transform.GetSiblingIndex();
@@ -24,10 +25,8 @@ namespace MARDEK.UI
             }
         }
 
-        public override bool IsValid()
-        {
-            return Character != null;
-        }
+        public override bool IsValid() => Character != null;
+
 
         private void OnEnable()
         {

@@ -19,7 +19,7 @@ namespace MARDEK.Inventory
             return result;
         }
 
-        public bool AddItem(Item item, int amount)
+        public bool TryAddItem(Item item, int amount)
         {
             // First try to fill slots that already have the right item
             foreach (var slot in slots)

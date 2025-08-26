@@ -17,7 +17,7 @@ namespace MARDEK.UI
         [SerializeField] bool invertHorizontalInput = false;
         int currentScrollIndex = 0;
         int _index = 0;
-        int Index
+        public int Index
         {
             get
             {
@@ -27,12 +27,18 @@ namespace MARDEK.UI
             }
             set
             {
-                if(_index == 0 && value == -1)
+                    if (_index == value)
+                         return;
+
+               if (value < 0)
                 {
                     _index = Selectables.Count - 1;
+                    UpdateSelectionAtIndex();
                     return;
                 }
+                
                 _index = value;
+
                 if (constraintCount != 0)
                 {
                     var constraintShift = (_index % constraintCount + constraintCount) % constraintCount;
@@ -49,6 +55,8 @@ namespace MARDEK.UI
                     _index = 0;
                 if (_index < 0)
                     _index = Selectables.Count - 1;
+
+                    UpdateSelectionAtIndex();
             }
         }
 
@@ -102,11 +110,11 @@ namespace MARDEK.UI
             var prevIndex = Index;
 
             var value = ctx.ReadValue<Vector2>();
-            HandleHorizontalInput(value.x);
-            HandleVerticalInput(value.y);
-
-            if(Index != prevIndex)
-                UpdateSelectionAtIndex();
+           if (value.Equals(Vector2.zero)) return;
+           if (startAxis == GridLayoutGroup.Axis.Horizontal)
+               HandleHorizontalInput(value.x);
+           else  
+               HandleVerticalInput(value.y);              
         }
         private void HandleHorizontalInput(float x)
         {
@@ -128,14 +136,11 @@ namespace MARDEK.UI
                 return;
 
             var amount = x < 0 ? 1 : -1;
+            Index += amount;
 
-            if (startAxis == GridLayoutGroup.Axis.Vertical)
-                Index += amount;
-            else
-                Index += amount * constraintCount;
-        }
+          }
 
-        public void UpdateSelectionAtIndex(bool playSFX = true)
+          public void UpdateSelectionAtIndex(bool playSFX = true)
         {
             if (currentlySelected)
                 currentlySelected.Deselect();

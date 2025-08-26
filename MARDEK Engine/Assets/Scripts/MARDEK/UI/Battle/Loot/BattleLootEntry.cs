@@ -18,8 +18,8 @@ namespace MARDEK.UI
         [SerializeField] TMP_Text itemName;
         [SerializeField] TMP_Text amountText;
         [SerializeField] List<TMP_Text> currentAmountTexts;
-          [SerializeField] PartySO party;
-
+        [SerializeField] PartySO party;
+          [SerializeField] SelectableLayout parentLayout;
         int entryIndex;
         Item[] items;
         int[] amounts;
@@ -103,10 +103,11 @@ namespace MARDEK.UI
 
         public override void Interact(List<Item> items, List<int> amounts)
         {
-            if (CharacterSelectable.currentSelected.Character.Inventory.AddItem(items[entryIndex], amounts[entryIndex]))
+            if (CharacterSelectable.currentSelected.Character.Inventory.TryAddItem(items[entryIndex], amounts[entryIndex]))
             {
                     amounts.RemoveAt(entryIndex);
                     items.RemoveAt(entryIndex);
+                    parentLayout.Index++;
             }
             else
             {
