@@ -12,28 +12,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42835d9f816510946974f97e25505c64, type: 3}
   m_Name: MoonstoneRing
   m_EditorClassIdentifier: 
-  _displayName: 
-  _description: 
-  _sprite: {fileID: 0}
-  _element: {fileID: 0}
+  _displayName: Moonstone Ring
+  _description: A ring set with a moonstone. It channels the power of light, protecting
+    the wearer from offensive light-elemental spells, and the status ailment Sleep,
+    for some reason.
+  _sprite: {fileID: 21300000, guid: 9bc408d05fa48cb4ea90925789af4a81, type: 3}
+  _element: {fileID: 11400000, guid: 57ae7927a13bd1b479f4301ce3b69221, type: 2}
   _price: 0
   _category: {fileID: 0}
   statBoosts:
     Attack: 0
     Defense: 0
-    MagicDefense: 0
+    MagicDefense: 3
     Absorbtions:
       Fire: 0
       Earth: 0
       Water: 0
       Air: 0
-      Light: 0
+      Light: 40
       Dark: 0
       Aether: 0
       Fig: 0
       Physical: 0
       Thauma: 0
-    CoreStats: {fileID: 0}
+      Divine: 0
+    Resistances:
+      poison: 0
+      sleep: 80
+      paralysis: 0
+      blindness: 0
+      silence: 0
+      numbness: 0
+      curse: 0
+      confusion: 0
+      bleed: 0
+      zombification: 0
+    Strength: 0
+    Vitality: 0
+    Spirit: 1
+    Agility: 0
     Crit: 0
     Accuracy: 100
+    Health: 0
+    Mana: 0
+  grantSkills: []
   _hitSFX: 

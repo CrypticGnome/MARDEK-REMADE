@@ -59,7 +59,7 @@ namespace MARDEK.UI
             itemName.text = item.displayName;
             itemDescription.text = item.description;
             itemImage.sprite = item.sprite;
-            itemNameBackground.color = item.element.textColor;
+            itemNameBackground.color = item.element == null ? Color.clear :item.element.textColor;
             characters[0].Select(false);
             for (int index = 0; index < 4; index++)
             {

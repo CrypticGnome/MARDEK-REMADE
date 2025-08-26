@@ -48,11 +48,12 @@ namespace MARDEK.Progress
             {
                 inventory.Money += amount;
                 MoneyPopup.instance.Show(amount);
-                SetChestAsOpen();
             }
-        }
+               SetChestAsOpen();
 
-        public override bool IsOngoing()
+          }
+
+          public override bool IsOngoing()
         {
             if (TreasureChestMenuUI.instance.IsOpen)
                 return true;
