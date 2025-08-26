@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlotItems: {fileID: 11400000, guid: 65ef18d25f98cf848a6d7a5cb8c5bfec, type: 2}
   Money: 0
-  Characters: {fileID: 0}
+  Characters: {fileID: 11400000, guid: febf7fbe15a095d4690eef85539cb60d, type: 2}

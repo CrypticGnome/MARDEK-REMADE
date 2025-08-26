@@ -43,9 +43,7 @@ namespace MARDEK.UI
         {
                if (entryIndex >= items.Length||items[entryIndex] is null)
                {
-                    Debug.LogAssertion("Item cannot be null");
                     DisableDIsplay();
-
                     return;
                }
                if (amounts[entryIndex] == 0)

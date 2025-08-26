@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace MARDEK.Progress
 {
-     [CreateAssetMenu(fileName = "UnlockedCharacters", menuName = "Scriptable Objects/UnlockedCharacters")]
+     [CreateAssetMenu(fileName = "UnlockedCharacters", menuName = "MARDEK/Progress/UnlockedCharacters")]
      public class PlayableCharacters : AddressableScriptableObject
      {
           public PartySO Party;
