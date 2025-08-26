@@ -45,15 +45,13 @@ namespace MARDEK.Animation
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
             currentClip = ClipList?.GetClipByIndex(0);
-            if (currentClip == null)
-                spriteRenderer.sprite = null;
-            else
-                if(spriteRenderer.sprite == null)
+
+            if (currentClip != null && spriteRenderer.sprite == null)
                     UpdateSprite(0);
         }
           private void Start()
           {
-               InitializeFields();
+               //InitializeFields();
                if (currentClip is null)
                {
                     Debug.LogWarning($"Null current clip on {name}");
