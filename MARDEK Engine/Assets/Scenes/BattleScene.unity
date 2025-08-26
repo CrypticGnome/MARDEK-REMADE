@@ -149,7 +149,7 @@ Transform:
   m_Children:
   - {fileID: 2119703468}
   - {fileID: 1591433212}
-  - {fileID: 1564928239}
+  - {fileID: 1449439738}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &238744016
@@ -1689,6 +1689,53 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa3fe0d71594de0469974abd74714a00, type: 3}
+--- !u!1 &1449439737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1449439738}
+  - component: {fileID: 1449439739}
+  m_Layer: 0
+  m_Name: Battlefield Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1449439738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449439737}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -198, y: -164, z: 0}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 196057596}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1449439739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449439737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a856e7e7a6420c41a1243f0a8ada674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentBackground: {fileID: 11400000, guid: c62a2aa6b49a218459d4a19e5115e24e, type: 2}
+  fallbackBackground: {fileID: 7685087882489146876, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
+  battlefieldBackgroundParent: {fileID: 1449439738}
 --- !u!1 &1455505437 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5311210985052739887, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
@@ -1766,11 +1813,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5d2ba7faf01dd4f8b8930a280d6ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1564928239 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7452090828320321151, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
-  m_PrefabInstance: {fileID: 3466673748249910860}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1582626339 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3616391506792010230, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
@@ -1976,71 +2018,6 @@ Transform:
   - {fileID: 1937149085}
   m_Father: {fileID: 196057596}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3466673748249910860
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 196057596}
-    m_Modifications:
-    - target: {fileID: 7452090828320321151, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7452090828320321151, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7452090828320321151, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -194.73026
-      objectReference: {fileID: 0}
-    - target: {fileID: 7452090828320321151, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -162.79062
-      objectReference: {fileID: 0}
-    - target: {fileID: 7452090828320321151, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7452090828320321151, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7452090828320321151, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7452090828320321151, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7452090828320321151, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7452090828320321151, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7452090828320321151, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7452090828320321151, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7685087882489146876, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
-      propertyPath: m_Name
-      value: Battlefield Background
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5c3deacee916a4943ae25ffc4494b477, type: 3}
 --- !u!1001 &8523473284503139032
 PrefabInstance:
   m_ObjectHideFlags: 0
