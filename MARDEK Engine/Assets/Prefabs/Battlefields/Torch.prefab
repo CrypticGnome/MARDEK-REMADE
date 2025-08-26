@@ -130,7 +130,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -101, y: 106, z: -6.941269}
-  m_LocalScale: {x: 0.90909094, y: 0.90909094, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 195287682450798976}
@@ -244,6 +244,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flicksCyclesPerSecond: 8
-  flickerAmplitude: {x: 0.1, y: 0.1}
+  flickerAmplitude: {x: 0.02, y: 0.02}
   smoothAnimation: 1
-  GLOBAL_ANIMATION_RATE: 4

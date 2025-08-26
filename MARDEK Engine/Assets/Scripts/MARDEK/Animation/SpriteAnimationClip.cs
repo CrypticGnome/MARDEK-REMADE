@@ -15,7 +15,7 @@ namespace MARDEK.Animation
 
         public Sprite GetSprite(float animationRatio)
         {
-            int index = Mathf.FloorToInt((spriteSequence.Count-1) * animationRatio);
+            int index = Mathf.FloorToInt(spriteSequence.Count * animationRatio);
                index = Mathf.Clamp(index, 0, spriteSequence.Count - 1);
             return spriteSequence[index];
         }
