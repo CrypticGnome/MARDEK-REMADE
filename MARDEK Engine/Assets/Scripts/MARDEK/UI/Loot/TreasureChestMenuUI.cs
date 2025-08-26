@@ -31,6 +31,7 @@ namespace MARDEK.UI
         [SerializeField] AudioObject cancelSound;
         [SerializeField] AudioObject rejectSound;
 
+          [SerializeField] PartySO party;
         Item currentItem;
         int currentAmount;
 
@@ -62,9 +63,9 @@ namespace MARDEK.UI
             characters[0].Select(false);
             for (int index = 0; index < 4; index++)
             {
-                if (index < Party.Instance.Characters.Count)
+                if (index < party.Count)
                 {
-                    var inventory = Party.Instance.Characters[index].Inventory;
+                    var inventory = party[index].Inventory;
                     alreadyHasLabels[index].text = inventory.CountItem(item).ToString();
                     inventorySpaces[index].gameObject.SetActive(true);
                     inventorySpaces[index].UpdateImage(inventory);
@@ -123,7 +124,7 @@ namespace MARDEK.UI
 
         public void TryGiveItemToSelectedCharacter()
         {
-            var character = Party.Instance.Characters[getSelectedCharacterIndex()];
+            var character = party[getSelectedCharacterIndex()];
             if (character.Inventory.AddItem(currentItem, currentAmount))
             {
                 SuccessfullyTookItem = true;

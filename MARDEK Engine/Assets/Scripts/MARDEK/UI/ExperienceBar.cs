@@ -36,10 +36,12 @@ namespace MARDEK.UI
                BattleCharacter bCharacter = characterUI.character;
                if (bCharacter == null)
                     return;
-               if (!(bCharacter is HeroBattleCharacter))
+               if (!(bCharacter is HeroBattleCharacter heroCharacter))
+               {
                     Debug.LogAssertion("Experience bars must only be placed on hero characters, i think, needs checking");
-               Character character = ((HeroBattleCharacter)bCharacter).Character;
-               var statValue = (float)character.Experience;
+                    return;
+               }
+               var statValue = (float)heroCharacter.Experience;
                var maxStatValue = 100;
                if (statText)
                     statText.text = statValue.ToString();

@@ -51,34 +51,37 @@ namespace MARDEK.Animation
                 if(spriteRenderer.sprite == null)
                     UpdateSprite(0);
         }
+          private void Start()
+          {
+               if (currentClip is null)
+               {
+                    Debug.LogWarning($"Null current clip on {name}");
+                    enabled = false;
+               }
+          }
+          private void Update()
+          {
 
-        private void Update()
-        {
-            if (currentClip != null)
-            {
-                if (isAnimating)
-                {
-                    animationRatio += animationSpeed * Time.deltaTime;
-                    bool endAnimation = !currentClip.loop && animationRatio > 1;
-                    if (endAnimation)
-                    {
-                        isAnimating = false;
-                        animationRatio = 0;
-                    }
-                    else
-                    {
-                        UpdateSprite(animationRatio);
-                        while (animationRatio > 1)
-                            animationRatio = 0;
-                    }
-                }                
-            }
-        }
+               if (!isAnimating) return;
+               
+               animationRatio += animationSpeed * Time.deltaTime;
+               bool endAnimation = !currentClip.loop && animationRatio > 1;
+               if (endAnimation)
+               {
+                   isAnimating = false;
+                   animationRatio = 0;
+               }
+               else
+               {
+                   UpdateSprite(animationRatio);
+                   if (animationRatio > 1)
+                       animationRatio = 0;
+               }
+          }
 
         void UpdateSprite(float _animationRatio)
         {
-            if(currentClip != null)
-                spriteRenderer.sprite = currentClip.GetSprite(_animationRatio);
+               spriteRenderer.sprite = currentClip.GetSprite(_animationRatio);
         }
 
         public void StopCurrentAnimation(float forceAnimationRatio)

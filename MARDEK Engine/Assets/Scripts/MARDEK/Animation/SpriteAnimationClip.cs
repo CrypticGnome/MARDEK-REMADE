@@ -11,13 +11,12 @@ namespace MARDEK.Animation
         public MoveDirection indexBySOReference = null;
         public bool loop { get { return _loop; } }
         [SerializeField] bool _loop = true;
-        [SerializeField] float durationMultiplier = 1f;
         [SerializeField] List<Sprite> spriteSequence = new List<Sprite>();
 
         public Sprite GetSprite(float animationRatio)
         {
-            int index = Mathf.FloorToInt(spriteSequence.Count * animationRatio / durationMultiplier);
-            index = Mathf.Clamp(index, 0, spriteSequence.Count - 1);
+            int index = Mathf.FloorToInt(spriteSequence.Count * animationRatio);
+               index = Mathf.Clamp(index, 0, spriteSequence.Count - 1);
             return spriteSequence[index];
         }
     }

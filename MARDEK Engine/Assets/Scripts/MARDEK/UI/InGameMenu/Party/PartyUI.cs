@@ -16,7 +16,7 @@ namespace MARDEK.UI
         [SerializeField] List<GrowthEntry> growthEntries;
         [SerializeField] List<Performance1Entry> performance1Entries;
         [SerializeField] List<Performance2Entry> performance2Entries;
-
+          [SerializeField] PartySO party;
         void OnEnable()
         {
             List<PartyEntry>[] entriesList = new List<PartyEntry>[]{
@@ -34,10 +34,10 @@ namespace MARDEK.UI
                 for (int index = 0; index < entries.Count; index++)
                 {
                     var entry = entries[index];
-                    if (index < Party.Instance.Characters.Count)
+                    if (index < party.Count)
                     {
                         entry.gameObject.SetActive(true);
-                        entry.SetCharacter(Party.Instance.Characters[index]);
+                        entry.SetCharacter(party[index]);
                     }
                     else entry.gameObject.SetActive(false);
                 }

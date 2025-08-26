@@ -18,6 +18,7 @@ namespace MARDEK.Progress
         [SerializeField] int amount = 1;
         [SerializeField] AudioObject openSound;
         [SerializeField] Sprite openChestSprite;
+          [SerializeField] InventorySO inventory;
 
 #if UNITY_EDITOR
         private void OnValidate()
@@ -45,7 +46,7 @@ namespace MARDEK.Progress
                 TreasureChestMenuUI.instance.Open(item, amount);
             else
             {
-                Party.Instance.money += amount;
+                inventory.Money += amount;
                 MoneyPopup.instance.Show(amount);
                 SetChestAsOpen();
             }

@@ -34,7 +34,7 @@ namespace MARDEK.Core
 
         public void OnValidate()
         {
-            SceneInfo checkDuplicate = SceneInfo.FindObjectOfType<SceneInfo>();
+            SceneInfo checkDuplicate = FindFirstObjectByType<SceneInfo>();
             if (checkDuplicate != this)
             {
                 throw new System.ApplicationException("Duplicated SceneInfo: " + this.id + " vs " + checkDuplicate.id);

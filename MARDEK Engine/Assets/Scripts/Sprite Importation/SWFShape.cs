@@ -1,7 +1,19 @@
+using UnityEditor;
 using UnityEngine;
 
 public class SWFShape : MonoBehaviour
 {
+     private void OnValidate()
+     {
+
+#if UNITY_EDITOR
+          // Option 2 (editor-only): load by GUID/Asset path
+           Material mat = AssetDatabase.LoadAssetAtPath<Material>("Assets/Sprites/Unlit_VectorGradient.mat");
+#endif
+          GetComponent<SpriteRenderer>().material = mat;
+
+
+     }
      public void Create(Sprite sprite)
      {
           gameObject.name = sprite.name;

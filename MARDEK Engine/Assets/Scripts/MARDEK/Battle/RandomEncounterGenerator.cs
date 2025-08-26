@@ -14,11 +14,14 @@ namespace MARDEK.Battle
         [SerializeField] int minSteps = 20;
         [SerializeField] int maxSteps = 30;
         [SerializeField] UnityEvent onTriggerBattle;
+        [SerializeField] GameObject battleBackground;
+        [SerializeField] PrefabSO currentBattleFieldBackground;
         int stepsTaken = 0;
         int requiredSteps;
 
         private void Start()
         {
+            currentBattleFieldBackground.CurrentPrefab = battleBackground;
             if (areaEncounterSet == null)
             {
                 enabled = false;

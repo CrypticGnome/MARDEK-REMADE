@@ -16,7 +16,7 @@ namespace MARDEK.Battle
 
     public class BattleManager : MonoBehaviour
     {
-          [SerializeField] Party playerParty;
+          [SerializeField] PartySO playerParty;
           [SerializeField] List<Character> DummyEnemies;
           [SerializeField] GameObject characterActionUI = null;
           [SerializeField] List<GameObject> enemyPartyPositions = new();
@@ -56,18 +56,20 @@ namespace MARDEK.Battle
                     SpawnEnemyBattleCharacter(c);
 
                PlayerBattleParty.Clear();
-               foreach (var c in playerParty.Characters)
+               foreach (var c in playerParty)
                     SpawnPlayerBattleCharacter(c);
 
                state = BattleState.Idle;
 
                void SpawnEnemyBattleCharacter(Character c)
                {
+                    if (c is null) return;
                     var position = enemyPartyPositions[EnemyBattleParty.Count].transform.position;
                     EnemyBattleParty.Add(new EnemyBattleCharacter(c.Profile, position));
                }
                void SpawnPlayerBattleCharacter(Character c)
                {
+                    if (c is null) return;
                     var position = playerPartyPositions[PlayerBattleParty.Count].transform.position;
                     PlayerBattleParty.Add(new HeroBattleCharacter(c, position));
                }

@@ -4,15 +4,16 @@ using UnityEngine;
 
 namespace MARDEK.UI
 {
-    using Progress;
+     using MARDEK.Inventory;
+     using Progress;
 
     public class CurrentMoneyText : MonoBehaviour
     {
-        [SerializeField] TMP_Text text;
-
+         [SerializeField] TMP_Text text;
+          [SerializeField] InventorySO inventory;
         void FixedUpdate()
         {
-               text.text = Party.Instance.money.ToString();
+               text.text = inventory.Money.ToString();
         }
     }
 }

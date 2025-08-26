@@ -18,6 +18,7 @@ namespace MARDEK.UI
         [SerializeField] TMP_Text itemName;
         [SerializeField] TMP_Text amountText;
         [SerializeField] List<TMP_Text> currentAmountTexts;
+          [SerializeField] PartySO party;
 
         int entryIndex;
         Item[] items;
@@ -59,9 +60,9 @@ namespace MARDEK.UI
                 amountText.text = "x " + amounts[entryIndex];
                 for (int index = 0; index < currentAmountTexts.Count; index++) 
                 {
-                    if (index < Party.Instance.Characters.Count)
+                    if (index < party.Count)
                     {
-                        currentAmountTexts[index].text = Party.Instance.Characters[index].Inventory.CountItem(items[entryIndex]).ToString();
+                        currentAmountTexts[index].text = party[index].Inventory.CountItem(items[entryIndex]).ToString();
                     }
                     else currentAmountTexts[index].text = "";
                 }
