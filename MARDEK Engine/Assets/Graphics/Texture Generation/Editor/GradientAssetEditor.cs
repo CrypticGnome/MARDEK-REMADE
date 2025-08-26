@@ -1,7 +1,6 @@
 using MARDEK.Editor;
 using UnityEditor;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 namespace MARDEK
 {

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using MARDEK.Core;
+using MARDEK.Progress;
 
 namespace MARDEK.Movement
 {
@@ -8,7 +9,7 @@ namespace MARDEK.Movement
     public class SceneWaypoint : MonoBehaviour
     {
         [SerializeField] WaypointEnum thisWaypoint = null;
-
+        [SerializeField] CharacterPositions characterPositions;
         private void Awake()
         {
                if (SceneTransitionCommand.usedWaypoint == null)
@@ -16,13 +17,7 @@ namespace MARDEK.Movement
                
                if (thisWaypoint == SceneTransitionCommand.usedWaypoint)
                {
-                   var pos = new List<Vector2>();
-                   var directions = new List<MoveDirection>();
-
-                   pos.Add(transform.position);
-                   directions.Add(SceneTransitionCommand.transitionFacingDirection);
-
-                   MapParty.OverrideAfterTransition(pos, directions);
+                   MapParty.OverrideAfterTransition(transform.position, SceneTransitionCommand.transitionFacingDirection);
                    SceneTransitionCommand.ClearUsedWaypoint();
                }
                
