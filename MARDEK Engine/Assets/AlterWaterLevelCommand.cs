@@ -27,9 +27,9 @@ namespace MARDEK
           public override void Trigger()
           {
                if (raisedCondition.Condition.Value)
-                    StartCoroutine(Raise());
+                    Raised();
                else
-                    StartCoroutine(Lower());
+                    Lowered();
           }
           IEnumerator Lower()
           {
@@ -98,6 +98,14 @@ namespace MARDEK
                transform.localPosition = Vector3.zero;
                color.a = raisedTransparency / 255;
                raisedTileMap.color = color;
+          }
+
+          public override IEnumerator TriggerAsync()
+          {
+               if (raisedCondition.Condition.Value)
+                    yield return Raise();
+               else
+                    yield return Lower();
           }
      }
 }

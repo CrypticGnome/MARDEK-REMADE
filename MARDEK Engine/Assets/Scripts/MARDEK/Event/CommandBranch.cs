@@ -1,79 +1,106 @@
 using MARDEK.Core;
+using MARDEK.Core.LevelDesign;
 using MARDEK.Event;
 using MARDEK.Save;
-using UnityEngine;
-using System.Collections;
-using MARDEK.Core.LevelDesign;
 using System;
+using System.Collections;
+using UnityEngine;
+using static PlasticPipe.PlasticProtocol.Messages.NegotiationCommand;
 
-public class CommandBranch : OngoingCommand
-{
-     [SerializeField] Command OnTrue;
-     [SerializeField] Command OnFalse;
-     [SerializeField] CommandBranchCondition branchCondition;
-      bool isOngoing = false;
-
-     public override bool IsOngoing()
+namespace MARDEK.Event
+{ 
+     public class CommandBranch : OngoingCommand
      {
-          return isOngoing;
-     }
+          [SerializeField] Command OnTrue;
+          [SerializeField] Command OnFalse;
+          [SerializeField] CommandBranchCondition branchCondition;
+           bool isOngoing = false;
 
-     [ContextMenu("Trigger")]
-     public override void Trigger()
-     {
-          if (isOngoing)
+          public override bool IsOngoing()
           {
-               Debug.LogWarning("Trying to trigger event, but this event is already ongoing");
-               return;
+               return isOngoing;
           }
 
-          if (branchCondition.GetValue(this))
+          [ContextMenu("Trigger")]
+          public override void Trigger()
           {
-               if (OnTrue is null)
+               if (isOngoing)
+               {
+                    Debug.LogWarning("Trying to trigger event, but this event is already ongoing");
+                    return;
+               }
+               Command command = branchCondition.GetValue(this) ? OnTrue : OnFalse;
+
+               if (command is null)
                {
                     Debug.LogError($"Null exception in {name} of type Command Branch");
                     return;
                }
-               OnTrue.Trigger();
+               command.Trigger();
+
           }
-          else
+
+          public override IEnumerator TriggerAsync()
           {
-               if (OnFalse is null)
+               if (LockPlayerActions) PlayerLocks.EventSystemLock++;
+               if (isOngoing)
+               {
+                    Debug.LogWarning("Trying to trigger event, but this event is already ongoing");
+                    yield break;
+               }
+               Command command = branchCondition.GetValue(this) ? OnTrue : OnFalse;
+    
+               if (command is null)
                {
                     Debug.LogError($"Null exception in {name} of type Command Branch");
-                    return;
+                    yield break;
                }
-               OnFalse.Trigger();
-          }
-     }
+               isOngoing = true;
 
-     [Serializable]
-     public class CommandBranchCondition
-     {
-          public bool UsingSwitchBool = true;
-          public BoolComponent LocalSwitchBool;
-          public ConditionComponent ConditionComponent; 
-          
-          public bool GetValue(MonoBehaviour behaviour)
-          {
-               if (UsingSwitchBool)
+               if (command is OngoingCommand ongoing && RunParallel)
                {
-                    if (LocalSwitchBool is null)
+                    StartCoroutine(ongoing.TriggerAsync());
+                    isOngoing = false;
+                    if (LockPlayerActions) PlayerLocks.EventSystemLock--;
+                    yield break;
+               }
+               command.Trigger();
+               isOngoing = false;
+               if (LockPlayerActions) PlayerLocks.EventSystemLock--;
+
+          }
+
+
+          [Serializable]
+          public class CommandBranchCondition
+          {
+               public bool UsingSwitchBool = true;
+               public BoolComponent LocalSwitchBool;
+               public ConditionComponent ConditionComponent;
+
+               public bool GetValue(MonoBehaviour behaviour)
+               {
+                    if (UsingSwitchBool)
                     {
-                         Debug.LogWarning($"Switch bool is null in {behaviour.name}");
+                         if (LocalSwitchBool is null)
+                         {
+                              Debug.LogWarning($"Switch bool is null in {behaviour.name}");
+                              return false;
+                         }
+                         return LocalSwitchBool.Value;
+                    }
+
+                    if (ConditionComponent is null || ConditionComponent.Condition is null)
+                    {
+                         Debug.LogWarning($"Null exception in Condition component of {behaviour.name}");
                          return false;
                     }
-                    return LocalSwitchBool.Value;
-               }
 
-               if (ConditionComponent is null || ConditionComponent.Condition is null)
-               {
-                    Debug.LogWarning($"Null exception in Condition component of {behaviour.name}");
-                    return false;
+                    return ConditionComponent.Condition.Value;
                }
-
-               return ConditionComponent.Condition.Value;
           }
      }
+
+
 }
 

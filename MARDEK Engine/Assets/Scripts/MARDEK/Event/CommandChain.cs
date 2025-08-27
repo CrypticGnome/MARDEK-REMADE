@@ -1,32 +1,36 @@
-using UnityEngine;
+using MARDEK.Core;
 using System.Collections;
 using System.Collections.Generic;
-using MARDEK.Core;
 using UnityEditor;
 using UnityEditor.UIElements;
+using UnityEngine;
+using static PlasticPipe.PlasticProtocol.Messages.NegotiationCommand;
 
 namespace MARDEK.Event
 {
-     public class CommandChain : Command
+     public class CommandChain : OngoingCommand
      {
           [SerializeField] Command[] commands;
 
-          public bool IsOngoing { get; private set; } = false;
-
+          public override bool IsOngoing() => ongoing;
+          bool ongoing = false;
           [ContextMenu("Trigger")]
           public override void Trigger()
           {
-               if (IsOngoing)
+               if (IsOngoing())
                {
                     Debug.LogWarning("Trying to trigger event, but this event is already ongoing");
                     return;
                }
-               StartCoroutine(PerformCommandChain());
+               for (int i = 0; i < commands.Length; i++) 
+               {
+                    commands[i].Trigger();
+               }
           }    
 
           IEnumerator PerformCommandChain()
           {
-               IsOngoing = true;
+               if (LockPlayerActions) PlayerLocks.EventSystemLock++;
 
                for (int i = 0; i < commands.Length; i++)
                {
@@ -35,26 +39,19 @@ namespace MARDEK.Event
                          continue;
                     Debug.Log($"Running {command} on {name}");
 
-                    command.Trigger();
-
-                    
-                    if (command is OngoingCommand ongoingCommand) 
-                         yield return WaitForOnGoingCommand(ongoingCommand);
+                    if ((command is OngoingCommand ongoingCommand) && RunParallel) 
+                         StartCoroutine(ongoingCommand.TriggerAsync());
+                    else 
+                         command.Trigger();
                }
-               IsOngoing = false;
+               if (LockPlayerActions) PlayerLocks.EventSystemLock--;
+               yield break;
           }
 
-          IEnumerator WaitForOnGoingCommand(OngoingCommand ongoingCommand)
+
+          public override IEnumerator TriggerAsync()
           {
-               // Lock player actions until command has finished
-               if (ongoingCommand.LockPlayerActions)
-               {
-                    PlayerLocks.EventSystemLock++;
-                    yield return new WaitUntil(() => ongoingCommand.IsOngoing() == false);
-                    PlayerLocks.EventSystemLock--;
-               }
-               else yield return new WaitUntil(() => ongoingCommand.IsOngoing() == false);
+               yield return PerformCommandChain();
           }
-
      }
 }

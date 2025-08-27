@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
-using static CommandBranch;
+using static MARDEK.Event.CommandBranch;
 
 [CustomPropertyDrawer(typeof(CommandBranchCondition))]
 public class CommandBranchConditionPropertyDrawer : PropertyDrawer

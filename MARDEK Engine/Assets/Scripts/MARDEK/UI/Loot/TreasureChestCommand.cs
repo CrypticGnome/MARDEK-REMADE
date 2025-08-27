@@ -74,5 +74,5 @@ namespace MARDEK.Progress
             if (spriteRenderer)
                 spriteRenderer.sprite = openChestSprite;
         }
-    }
+     }
 }
