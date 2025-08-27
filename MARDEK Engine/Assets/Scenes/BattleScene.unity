@@ -526,6 +526,22 @@ PrefabInstance:
       propertyPath: magicDefense
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1071462339108523758, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071462339108523758, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: startAxis
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071462339108523758, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: constraintCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071462339108523758, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: invertHorizontalInput
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1114743552901456415, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: characterUI
       value: 
@@ -598,6 +614,10 @@ PrefabInstance:
       propertyPath: binds.Array.data[0]._event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 972056221}
+    - target: {fileID: 2254977137156218970, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: m_StartAxis
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2268087733597629591, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
