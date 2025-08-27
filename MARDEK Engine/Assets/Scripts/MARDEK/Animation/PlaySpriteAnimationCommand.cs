@@ -4,7 +4,9 @@ using MARDEK.Core;
 namespace MARDEK.Animation
 {
     using Event;
-    public class PlaySpriteAnimationCommand : OngoingCommand
+     using System.Collections;
+
+     public class PlaySpriteAnimationCommand : OngoingCommand
     {
         [SerializeField] SpriteAnimator targetAnimator;
         [SerializeField] MoveDirection animationDirection = null;

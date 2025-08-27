@@ -1,4 +1,5 @@
 using MARDEK.Event;
+using System.Collections;
 using UnityEngine;
 
 public class WaitCommand : OngoingCommand
@@ -15,4 +16,8 @@ public class WaitCommand : OngoingCommand
           endWaitTime = Time.time + waitTime;
      }
 
+     public override IEnumerator TriggerAsync()
+     {
+          yield return new WaitForSeconds(waitTime);
+     }
 }

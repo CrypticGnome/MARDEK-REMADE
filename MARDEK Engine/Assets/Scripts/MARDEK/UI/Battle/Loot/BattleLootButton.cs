@@ -10,8 +10,7 @@ namespace MARDEK.UI
         [SerializeField] Image buttonImage;
         [SerializeField] TMP_Text text;
         [SerializeField] Image crystalPointer;
-        [SerializeField] bool getAll;
-
+          [SerializeField] int index;
         void SetUnselected()
         {
             buttonImage.color = new Color(159f / 255f, 95f / 255f, 55f / 255f);
@@ -40,26 +39,14 @@ namespace MARDEK.UI
 
         public override void Interact(List<Item> items, List<int> amounts)
         {
-               if (getAll)
+               if (index >= items.Count || index >= amounts.Count)  return;
+
+               if (amounts[index] == 0) return;
+
+               Inventory.Inventory characterInventory = CharacterSelectable.currentSelected.Character.Inventory;
+               if (characterInventory.TryAddItem(items[index], amounts[index]))
                {
-                    TakeAll(items, amounts);
-               }
-               else
-               {
-                    // TODO Close this menu I guess
-               }
-        }
-        void TakeAll(List<Item> items, List<int> amounts)
-          {
-               for (int index = 0; index < items.Count; index++)
-               {
-                    if (amounts[index] == 0)
-                         continue;
-                    Inventory.Inventory characterInventory = CharacterSelectable.currentSelected.Character.Inventory;
-                    if (characterInventory.AddItem(items[index], amounts[index]))
-                    {
-                         amounts[index] = 0;
-                    }
+                    amounts[index] = 0;
                }
           }
     }

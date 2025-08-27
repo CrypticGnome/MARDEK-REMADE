@@ -10,11 +10,11 @@ public class CommandTrigger : MonoBehaviour
      [SerializeField] string tagName = "Player";
 
      [SerializeField] Command command;
-
+     [SerializeField] bool performOngoinCommandsAsync = true;
      void Start()
      {
           if (onStart)
-               command.Trigger();
+               Trigger();
      }
 
      private void OnTriggerEnter2D(Collider2D collision)
@@ -25,23 +25,29 @@ public class CommandTrigger : MonoBehaviour
           {
                if (collision.gameObject.CompareTag(tagName))
                {
-                    command.Trigger();
+                    Trigger();
                }
                return;
           }
-          command.Trigger();
+          Trigger();
      }
      private void OnTriggerExit2D(Collider2D collision)
      {
           if (!onTriggerExit) return;
 
           if (collision.gameObject.CompareTag("Player"))
-               command.Trigger();
+               Trigger();
      }
      public void Interact()
      {
           if (onInteractionKey)
+               Trigger();
+     }
+     void Trigger()
+     {
+          if (performOngoinCommandsAsync && command is OngoingCommand ongoingCommand)
+               StartCoroutine(ongoingCommand.TriggerAsync());
+          else
                command.Trigger();
      }
-
 }

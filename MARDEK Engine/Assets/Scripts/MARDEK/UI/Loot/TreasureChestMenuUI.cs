@@ -125,7 +125,7 @@ namespace MARDEK.UI
         public void TryGiveItemToSelectedCharacter()
         {
             var character = party[getSelectedCharacterIndex()];
-            if (character.Inventory.AddItem(currentItem, currentAmount))
+            if (character.Inventory.TryAddItem(currentItem, currentAmount))
             {
                 SuccessfullyTookItem = true;
                 container.SetActive(false);

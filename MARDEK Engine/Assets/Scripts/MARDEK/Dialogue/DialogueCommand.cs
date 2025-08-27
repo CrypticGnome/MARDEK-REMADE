@@ -1,5 +1,6 @@
 using UnityEngine;
 using MARDEK.Event;
+using System.Collections;
 
 namespace MARDEK.DialogueSystem
 {
@@ -16,5 +17,6 @@ namespace MARDEK.DialogueSystem
         {
             DialogueManager.EnqueueDialogue(dialogue);
         }
-    }
+
+     }
 }

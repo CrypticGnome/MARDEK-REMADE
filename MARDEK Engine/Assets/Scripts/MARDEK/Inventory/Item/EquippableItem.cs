@@ -32,6 +32,11 @@ namespace MARDEK.Inventory
 
         override public Color GetInventorySpaceColor()
         {
+            if (category == null)
+            {
+                    UnityEngine.Debug.LogAssertion($"Null reference exception in {name}");
+                    return Color.red;
+            }
             return category.color;
         }
         

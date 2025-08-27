@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98ca2036f654174597f8e53821e2b9e, type: 3}
   m_Name: Accessory
   m_EditorClassIdentifier: 
-  _slot: 0
+  _slot: 4
   _classification: 

@@ -17,5 +17,6 @@ namespace MARDEK.Animation
         {
             TransitionEffectManager.PlayEffect(type);
         }
-    }
+
+     }
 }
