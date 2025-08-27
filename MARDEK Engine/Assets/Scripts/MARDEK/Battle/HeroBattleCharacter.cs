@@ -18,8 +18,13 @@ namespace MARDEK.Battle
                Level = character.Level;
                Profile = character.Profile;
                Skillset = character.ActionSkillset;
-               battleModel = Object.Instantiate(Profile.BattleModelPrefab).GetComponent<BattleModel>();
-               battleModel.SetBattlePosition(position);
+               GameObject prefabInstance = Object.Instantiate(Profile.BattleModelPrefab);
+               if (prefabInstance.TryGetComponent<BattleModel>(out var battleModel))
+                    battleModel.SetBattlePosition(position);
+              else if (prefabInstance.TryGetComponent<BattleModelComponent>(out var battleModelComponent))
+                    battleModelComponent.SetBattlePosition(position);
+               else
+                    prefabInstance.transform.position = position;
 
                VolatileStats = new CoreStats(BaseStats);
                BaseStats.CalculateMaxValues(this);

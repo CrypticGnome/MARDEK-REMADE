@@ -17,7 +17,7 @@ MonoBehaviour:
   <element>k__BackingField: {fileID: 11400000, guid: 96b7bd01ebbf64840a070d9ed9321b4c, type: 2}
   <portrait>k__BackingField: {fileID: 11400000, guid: 188c013727e3612469ed22987a5c90b4, type: 2}
   <WalkSprites>k__BackingField: {fileID: 11400000, guid: 60ff16266576bf94dba7f59cc9897269, type: 2}
-  <BattleModelPrefab>k__BackingField: {fileID: 6298310975210123530, guid: 4f019a7cdf452bd4299de7b40cecc970, type: 3}
+  <BattleModelPrefab>k__BackingField: {fileID: 1426953165218317120, guid: bf3bb6523720eaa4bb7e3b31b5e82edf, type: 3}
   <LearnableSkillset>k__BackingField: {fileID: 0}
   <Stats>k__BackingField:
     Strength: 16
@@ -54,5 +54,5 @@ MonoBehaviour:
     Accuracy: 100
     MaxHPCalc: {fileID: 11400000, guid: 689fb7d58c51ad8419744587e211860e, type: 2}
     MaxMPCalc: {fileID: 11400000, guid: b430bbf3c625229499a5257b4b7dcb62, type: 2}
-    MaxHP: 0
-    MaxMP: 0
+    MaxHP: 1648
+    MaxMP: 1648

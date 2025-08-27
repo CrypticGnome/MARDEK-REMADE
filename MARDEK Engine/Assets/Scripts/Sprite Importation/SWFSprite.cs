@@ -154,7 +154,7 @@ public class SWFSprite : MonoBehaviour
                          var innerPath = $"{path}/{obj.name}";
                          if (initializeCurves)
                          {
-                              isActive.Add(innerPath, new AnimationCurve());
+                              isActive.TryAdd(innerPath, new AnimationCurve());
                          }
                          isActive[innerPath].AddKey(KeyFrame(timeKey, obj.gameObject.activeSelf ? 1f : 0f));
                     }
