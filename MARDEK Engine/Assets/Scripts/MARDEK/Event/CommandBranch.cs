@@ -52,7 +52,9 @@ namespace MARDEK.Event
     
                if (command is null)
                {
-                    Debug.LogError($"Null exception in {name} of type Command Branch");
+                    Debug.LogAssertion($"Null exception in {transform.parent} {name} of type Command Branch");
+                    isOngoing = false;
+                    if (LockPlayerActions) PlayerLocks.EventSystemLock--;
                     yield break;
                }
                isOngoing = true;

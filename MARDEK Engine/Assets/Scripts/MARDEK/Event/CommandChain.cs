@@ -39,10 +39,12 @@ namespace MARDEK.Event
                          continue;
                     Debug.Log($"Running {command} on {name}");
 
-                    if ((command is OngoingCommand ongoingCommand) && RunParallel) 
-                         StartCoroutine(ongoingCommand.TriggerAsync());
-                    else 
-                         command.Trigger();
+                    if ((command is OngoingCommand ongoingCommand))
+                    {
+                         if (runParallel) StartCoroutine(ongoingCommand.TriggerAsync());
+                         else yield return ongoingCommand.TriggerAsync();
+                    }
+                    else command.Trigger();
                }
                if (LockPlayerActions) PlayerLocks.EventSystemLock--;
                yield break;
