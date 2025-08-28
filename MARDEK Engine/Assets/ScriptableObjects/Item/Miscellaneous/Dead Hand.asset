@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 501583e5860402441a167b8de2f47550, type: 3}
   m_Name: Dead Hand
   m_EditorClassIdentifier: 
-  _displayName: 
+  _displayName: Dead Hand
   _description: 
-  _sprite: {fileID: 0}
-  _element: {fileID: 0}
-  _price: 0
+  _sprite: {fileID: 21300000, guid: 2fe778801d0ea1241ad2ca59d69fb885, type: 3}
+  _element: {fileID: 11400000, guid: b58053569349d314892770b43156bfd2, type: 2}
+  _price: 5
