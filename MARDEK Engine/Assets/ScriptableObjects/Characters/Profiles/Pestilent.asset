@@ -20,18 +20,18 @@ MonoBehaviour:
   <BattleModelPrefab>k__BackingField: {fileID: 1426953165218317120, guid: 973000f1157281c40959c55ab09ea813, type: 3}
   <LearnableSkillset>k__BackingField: {fileID: 11400000, guid: bdb91fdccc4422743ae6542c3e4eece4, type: 2}
   <Stats>k__BackingField:
-    Strength: 30
-    Vitality: 24
-    Spirit: 2
+    Strength: 12
+    Vitality: 17
+    Spirit: 5
     Agility: 8
     Absorbtions:
-      Fire: 0
+      Fire: -40
       Earth: 0
       Water: 0
       Air: 0
       Light: -100
-      Dark: 50
-      Aether: 0
+      Dark: 200
+      Aether: -50
       Fig: 0
       Physical: 0
       Thauma: 0
@@ -47,12 +47,12 @@ MonoBehaviour:
       confusion: 0
       bleed: 0
       zombification: 0
-    Attack: 50
+    Attack: 15
     Defense: 0
     MagicDefense: 0
     CritRate: 0
     Accuracy: 100
-    MaxHPCalc: {fileID: 11400000, guid: 00f082784459f934b9585adeb067270e, type: 2}
+    MaxHPCalc: {fileID: 11400000, guid: 45d95fb83c9ab224dbf8ce2163938b18, type: 2}
     MaxMPCalc: {fileID: 11400000, guid: b430bbf3c625229499a5257b4b7dcb62, type: 2}
     MaxHP: 1172
     MaxMP: 1172

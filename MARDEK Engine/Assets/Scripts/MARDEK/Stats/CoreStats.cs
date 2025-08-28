@@ -1,7 +1,6 @@
 using MARDEK.Battle;
 using System;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
 namespace MARDEK.Stats
 {
@@ -19,10 +18,9 @@ namespace MARDEK.Stats
           public int CritRate;
           public int Accuracy = 100;
           [Space]
-          public MaxHpCalculator MaxHPCalc;
-          public MaxMpCalculator MaxMPCalc;
-          public int MaxHP,
-               MaxMP;
+          [SerializeField] MaxHpCalculator MaxHPCalc;
+          [SerializeField] MaxMpCalculator MaxMPCalc;
+          [HideInInspector] public int MaxHP, MaxMP;
 
           public CoreStats(CoreStats other)
           {
@@ -50,6 +48,9 @@ namespace MARDEK.Stats
                MaxHP = MaxHPCalc.GetMaxHP(battleCharacter);
                MaxMP = MaxHPCalc.GetMaxHP(battleCharacter);
           }
+          public int GetMaxHP(CharacterSystem.Character character) => MaxHPCalc.GetMaxHP(character);
+          public int GetMaxMP(CharacterSystem.Character character) => MaxMPCalc.GetMaxMP(character);
+
      }
      [Serializable]
      public class Absorbtions

@@ -115,8 +115,8 @@ namespace MARDEK.CharacterSystem
                     OnStatChanged?.Invoke();
                }
           }
-          public int MaxHP{get{ return BaseStats.MaxHPCalc.GetMaxHP(this);}}
-          public int MaxMP { get { return BaseStats.MaxMPCalc.GetMaxMP(this); } }
+          public int MaxHP{get{ return BaseStats.GetMaxHP(this);}}
+          public int MaxMP { get { return BaseStats.GetMaxMP(this); } }
 
 
           public Absorbtions Absorbtions { get => BaseStats.Absorbtions; set => throw new NotImplementedException(); }

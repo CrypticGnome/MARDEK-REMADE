@@ -28,13 +28,10 @@ namespace MARDEK.Battle
 
                VolatileStats = new CoreStats(BaseStats);
                BaseStats.CalculateMaxValues(this);
+               VolatileStats.CalculateMaxValues(this);
 
-               int maxHP = VolatileStats.MaxHPCalc.GetMaxHP(this);
-               int bob = VolatileStats.MaxHPCalc.GetMaxHP(this);
-               VolatileStats.MaxHP = maxHP;
-               VolatileStats.MaxMP = VolatileStats.MaxMPCalc.GetMaxMP(this); ;
-               CurrentHP = character.MaxHP;
-               CurrentMP = character.MaxMP;
+               CurrentHP = VolatileStats.MaxHP;
+               CurrentMP = VolatileStats.MaxMP;
 
                VolatileStats.Attack = character.Attack;
                VolatileStats.Defense = character.Defense;
