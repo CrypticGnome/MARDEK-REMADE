@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b59e0c2031d0ad4e9bd972e9d389b2b, type: 3}
+  m_Name: Rot Rat
+  m_EditorClassIdentifier: 
+  isRequired: 0
+  <Profile>k__BackingField: {fileID: 11400000, guid: e33197a3b2f4b42418028f6f07774095, type: 2}
+  <ItemsEquipped>k__BackingField:
+    MainHand:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    OffHand:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    Head:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    Body:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    Accessory1:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    Accessory2:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+  <Inventory>k__BackingField:
+    slots: []
+  <ActionSkillset>k__BackingField: {fileID: 11400000, guid: bdb91fdccc4422743ae6542c3e4eece4, type: 2}
+  attack: 20
+  defense: 0
+  magicDefense: 0
+  _currentHP: 0
+  _currentMP: 0
+  StatusBuildup:
+    poison: 0
+    sleep: 0
+    paralysis: 0
+    blindness: 0
+    silence: 0
+    numbness: 0
+    curse: 0
+    confusion: 0
+    bleed: 0
+    zombification: 0
+  Level: 1
+  Experience: 0
+  Drops:
+  - Item: {fileID: 11400000, guid: d21b34bf0c4f1d642a1331bd3da836c9, type: 2}
+    Chance: 0.6

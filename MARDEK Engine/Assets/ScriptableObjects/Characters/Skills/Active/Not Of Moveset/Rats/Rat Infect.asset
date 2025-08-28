@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97727b890c81574e9c60256ce51f687, type: 3}
+  m_Name: Rat Infect
+  m_EditorClassIdentifier: 
+  <Cost>k__BackingField: 0
+  <PointsRequiredToMaster>k__BackingField: 0
+  <DisplayName>k__BackingField: Infect
+  <Description>k__BackingField: 
+  action:
+    effects:
+    - effectType: 0
+      motionValue: 0.5
+      statusEffect: 0
+    - effectType: 6
+      motionValue: 100
+      statusEffect: 1
+    element: {fileID: 11400000, guid: 96b7bd01ebbf64840a070d9ed9321b4c, type: 2}

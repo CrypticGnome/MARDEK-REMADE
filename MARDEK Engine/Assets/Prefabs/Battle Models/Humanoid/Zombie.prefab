@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155f0924c8446b546a2a043a61438e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idle: {fileID: 7400000, guid: 7c1fae7d726ac3b4eb919f262a2cfb5e, type: 2}
+  idle: {fileID: 7400000, guid: 9cee7ace8a0981142b8602501ca650fb, type: 2}
   moveto: {fileID: 0}
   strike: {fileID: 0}
   jumpback: {fileID: 0}

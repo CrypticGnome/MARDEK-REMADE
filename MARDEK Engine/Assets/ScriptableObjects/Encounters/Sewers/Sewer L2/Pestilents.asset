@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 342da52ecca283f43b1b635dd203f1a3, type: 3}
+  m_Name: Pestilents
+  m_EditorClassIdentifier: 
+  Enemies:
+  - enemy: {fileID: 11400000, guid: c35f4aa7cae8f994b9f8ca547b8a1f9d, type: 2}
+    minLevel: 4
+    maxLevel: 6
+  - enemy: {fileID: 11400000, guid: c35f4aa7cae8f994b9f8ca547b8a1f9d, type: 2}
+    minLevel: 4
+    maxLevel: 6
+  - enemy: {fileID: 11400000, guid: 9e36a576e37568940a9a50b6058c2208, type: 2}
+    minLevel: 4
+    maxLevel: 6
+  - enemy: {fileID: 11400000, guid: 9e36a576e37568940a9a50b6058c2208, type: 2}
+    minLevel: 4
+    maxLevel: 6
+  UniqueRewards: []

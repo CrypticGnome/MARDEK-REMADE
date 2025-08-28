@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b47544976d9994d818ec74436e5528, type: 3}
+  m_Name: Rot Rat
+  m_EditorClassIdentifier: 
+  <displayName>k__BackingField: Rot Rat
+  <displayClass>k__BackingField: 
+  <element>k__BackingField: {fileID: 11400000, guid: b58053569349d314892770b43156bfd2, type: 2}
+  <portrait>k__BackingField: {fileID: 0}
+  <WalkSprites>k__BackingField: {fileID: 0}
+  <BattleModelPrefab>k__BackingField: {fileID: 9020027069811176367, guid: 655ead155edba454f80134c0f46c9d74, type: 3}
+  <LearnableSkillset>k__BackingField: {fileID: 11400000, guid: bdb91fdccc4422743ae6542c3e4eece4, type: 2}
+  <Stats>k__BackingField:
+    Strength: 13
+    Vitality: 16
+    Spirit: 3
+    Agility: 17
+    Absorbtions:
+      Fire: -80
+      Earth: 0
+      Water: 0
+      Air: -40
+      Light: -100
+      Dark: 200
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+      Divine: 0
+    Resistances:
+      poison: 100
+      sleep: 100
+      paralysis: 100
+      blindness: 100
+      silence: 100
+      numbness: 100
+      curse: 100
+      confusion: 100
+      bleed: 100
+      zombification: 100
+    Attack: 24
+    Defense: 0
+    MagicDefense: 0
+    CritRate: 0
+    Accuracy: 100
+    MaxHPCalc: {fileID: 11400000, guid: 9a3503a18331b5943a074d2b92c9820c, type: 2}
+    MaxMPCalc: {fileID: 11400000, guid: 194054632bb03254199cf38de6c77bf0, type: 2}
+    MaxHP: 1172
+    MaxMP: 1172
