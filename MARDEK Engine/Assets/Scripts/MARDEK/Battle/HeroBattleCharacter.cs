@@ -12,19 +12,15 @@ namespace MARDEK.Battle
      {
           public Character Character { get; private set; }
           public int Experience { get { return Character.Experience; } private set { Character.Experience = value; } }
-          public HeroBattleCharacter(Character character, Vector3 position) 
+          public HeroBattleCharacter(Character character, Transform parent) 
           {
                Character = character;
                Level = character.Level;
                Profile = character.Profile;
                Skillset = character.ActionSkillset;
-               GameObject prefabInstance = Object.Instantiate(Profile.BattleModelPrefab);
-               if (prefabInstance.TryGetComponent<BattleModel>(out var battleModel))
-                    battleModel.SetBattlePosition(position);
-              else if (prefabInstance.TryGetComponent<BattleModelComponent>(out var battleModelComponent))
-                    battleModelComponent.SetBattlePosition(position);
-               else
-                    prefabInstance.transform.position = position;
+               GameObject prefabInstance = Object.Instantiate(Profile.BattleModelPrefab, parent);
+               battleModel = prefabInstance.GetComponent<BattleModelComponent>();
+
 
                VolatileStats = new CoreStats(BaseStats);
                BaseStats.CalculateMaxValues(this);

@@ -52,27 +52,19 @@ namespace MARDEK.Battle
                List<Character> enemyCharacters = encounter.InstantiateEncounter(out Encounter);
 
                EnemyBattleParty.Clear();
-               foreach (var c in enemyCharacters)
-                    SpawnEnemyBattleCharacter(c);
-
+               for (int i = 0; i < enemyCharacters.Count; i++)
+               {
+                    EnemyBattleCharacter enemyCharacter = new EnemyBattleCharacter(enemyCharacters[i], enemyPartyPositions[i].transform);
+                    EnemyBattleParty.Add(enemyCharacter);
+               }
                PlayerBattleParty.Clear();
-               foreach (var c in playerParty)
-                    SpawnPlayerBattleCharacter(c);
+               for (int i = 0; i < playerParty.Count; i++)
+               {
+                    HeroBattleCharacter playerCharacter = new HeroBattleCharacter(playerParty[i], playerPartyPositions[i].transform);
+                    PlayerBattleParty.Add(playerCharacter);
+               }
 
                state = BattleState.Idle;
-
-               void SpawnEnemyBattleCharacter(Character c)
-               {
-                    if (c is null) return;
-                    var position = enemyPartyPositions[EnemyBattleParty.Count].transform.position;
-                    EnemyBattleParty.Add(new EnemyBattleCharacter(c.Profile, position));
-               }
-               void SpawnPlayerBattleCharacter(Character c)
-               {
-                    if (c is null) return;
-                    var position = playerPartyPositions[PlayerBattleParty.Count].transform.position;
-                    PlayerBattleParty.Add(new HeroBattleCharacter(c, position));
-               }
           }
           private void Start()
           {

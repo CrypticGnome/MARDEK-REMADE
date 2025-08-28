@@ -5484,7 +5484,7 @@ MonoBehaviour:
   spellcast: {fileID: 0}
   useItem: {fileID: 0}
   victory: {fileID: 0}
-  animation: {fileID: 0}
+  animation: {fileID: 308869589324411901}
   transform: {fileID: 979944342599019653}
 --- !u!1 &7846622617128209928
 GameObject:

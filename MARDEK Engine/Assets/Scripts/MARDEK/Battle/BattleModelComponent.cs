@@ -14,17 +14,13 @@ namespace MARDEK.Battle
                animation.clip = idle;
                animation.Play(idle.name);
                animation.wrapMode = WrapMode.Loop;
-          }
 
-          public void SetBattlePosition(Vector3 position)
-          {
-               transform.position = position;
-               if (position.x < 0)
-                    transform.localScale = new Vector3(-1, 1, 1);
-               var layer = SortingLayer.NameToID($"BattleModel {(int)position.z}");
+               var layer = SortingLayer.NameToID($"BattleModel {(int)transform.position.z}");
                foreach (var r in GetComponentsInChildren<SpriteRenderer>())
                     r.sortingLayerID = layer;
           }
+
+
 
      }
 

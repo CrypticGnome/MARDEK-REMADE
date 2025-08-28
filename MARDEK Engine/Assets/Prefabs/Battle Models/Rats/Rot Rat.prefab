@@ -5696,5 +5696,5 @@ MonoBehaviour:
   spellcast: {fileID: 0}
   useItem: {fileID: 0}
   victory: {fileID: 0}
-  animation: {fileID: 0}
+  animation: {fileID: 8355327515341086947}
   transform: {fileID: 7210699039223521631}
