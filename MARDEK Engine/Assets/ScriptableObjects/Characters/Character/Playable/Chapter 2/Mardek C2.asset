@@ -16,27 +16,27 @@ MonoBehaviour:
   <Profile>k__BackingField: {fileID: 11400000, guid: d51dce4019205fa4b82b049e7b35a111, type: 2}
   <ItemsEquipped>k__BackingField:
     MainHand:
-      currentItem: {fileID: 11400000, guid: 0366ff94fc3cd4240867624b0d8ca2ee, type: 2}
+      currentItem: {fileID: 11400000, guid: d0ec58391cc5f5d40a5762737fdc0cb6, type: 2}
       currentAmount: 1
       itemFilter: []
       canBeEmpty: 0
     OffHand:
-      currentItem: {fileID: 11400000, guid: ebcad2eaae57c184f9acdadea91704c8, type: 2}
+      currentItem: {fileID: 11400000, guid: e11427f3795e6a24cbf9ec6bf3fa480b, type: 2}
       currentAmount: 1
       itemFilter: []
       canBeEmpty: 0
     Head:
-      currentItem: {fileID: 0}
+      currentItem: {fileID: 11400000, guid: e7d85f108dd82d541985e619648e71bb, type: 2}
       currentAmount: 0
       itemFilter: []
       canBeEmpty: 0
     Body:
-      currentItem: {fileID: 11400000, guid: 43f9c1563af910a4d8949169e09553d5, type: 2}
+      currentItem: {fileID: 11400000, guid: 2c8a4fab5f5616946920ba5667232c84, type: 2}
       currentAmount: 1
       itemFilter: []
       canBeEmpty: 0
     Accessory1:
-      currentItem: {fileID: 11400000, guid: 1a6088039ca4aff479c8f3002a92c2da, type: 2}
+      currentItem: {fileID: 0}
       currentAmount: 1
       itemFilter: []
       canBeEmpty: 0
@@ -51,12 +51,12 @@ MonoBehaviour:
       currentAmount: 10
       itemFilter: []
       canBeEmpty: 0
-    - currentItem: {fileID: 0}
-      currentAmount: 0
+    - currentItem: {fileID: 11400000, guid: d21b34bf0c4f1d642a1331bd3da836c9, type: 2}
+      currentAmount: 23
       itemFilter: []
       canBeEmpty: 0
-    - currentItem: {fileID: 0}
-      currentAmount: 0
+    - currentItem: {fileID: 11400000, guid: 22997cf129bc56b49b0cdaaac62391fc, type: 2}
+      currentAmount: 8
       itemFilter: []
       canBeEmpty: 0
     - currentItem: {fileID: 0}
@@ -304,7 +304,7 @@ MonoBehaviour:
       itemFilter: []
       canBeEmpty: 0
   <ActionSkillset>k__BackingField: {fileID: 11400000, guid: ec852a198fcf34c438b2edd1b8125b98, type: 2}
-  attack: 100
+  attack: 20
   defense: 60
   magicDefense: 60
   _currentHP: 0
@@ -320,7 +320,7 @@ MonoBehaviour:
     confusion: 0
     bleed: 0
     zombification: 0
-  Level: 50
+  Level: 8
   Experience: 0
   <ReactionSkillset>k__BackingField: {fileID: 0}
   <PassiveSkillset>k__BackingField: {fileID: 0}

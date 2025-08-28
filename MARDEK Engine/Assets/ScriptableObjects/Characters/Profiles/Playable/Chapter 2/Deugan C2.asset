@@ -21,9 +21,9 @@ MonoBehaviour:
   <LearnableSkillset>k__BackingField: {fileID: 0}
   <Stats>k__BackingField:
     Strength: 16
-    Vitality: 16
-    Spirit: 12
-    Agility: 15
+    Vitality: 14
+    Spirit: 14
+    Agility: 12
     Absorbtions:
       Fire: 0
       Earth: 20
@@ -54,5 +54,5 @@ MonoBehaviour:
     Accuracy: 100
     MaxHPCalc: {fileID: 11400000, guid: 689fb7d58c51ad8419744587e211860e, type: 2}
     MaxMPCalc: {fileID: 11400000, guid: b430bbf3c625229499a5257b4b7dcb62, type: 2}
-    MaxHP: 1648
-    MaxMP: 1648
+    MaxHP: 1442
+    MaxMP: 1442

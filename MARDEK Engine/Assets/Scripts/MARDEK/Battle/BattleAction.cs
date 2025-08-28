@@ -54,7 +54,7 @@ namespace MARDEK.Battle
                          float power = STR * (level + 5) / 50;
                          int damage = (int)(rawDamage * power * UnityEngine.Random.Range(0.9f,1.1f));
                          target.CurrentHP -= damage;
-                         target.CurrentMP = Mathf.Clamp(target.CurrentHP, 0, target.MaxHP);
+                         target.CurrentHP = Mathf.Clamp(target.CurrentHP, 0, target.MaxHP);
                          Debug.Log($"{user.Profile.displayName} targets {target.Profile.displayName} for {damage} damage");
                          return;
                     case EffectType.MagicDamage:

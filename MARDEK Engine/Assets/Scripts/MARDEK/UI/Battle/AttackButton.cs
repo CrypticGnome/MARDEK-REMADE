@@ -1,3 +1,4 @@
+using MARDEK.Battle;
 using MARDEK.Skill;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,10 +11,11 @@ namespace MARDEK.UI
     {
         //[SerializeField] Image sprite;
         [SerializeField] ActionSkill attack;
-
+          [SerializeField] BattleCharacterPicker targetPicker;
         public void SelectAction()
         {
-            Battle.BattleManager.PerformAction(attack.Action.Apply);
+            //Battle.BattleManager.PerformAction(attack.Action.Apply);
+               targetPicker.EnableWithAction(attack.Action.Apply);
         }
     }
 }

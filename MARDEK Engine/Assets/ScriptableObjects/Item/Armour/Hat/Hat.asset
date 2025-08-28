@@ -9,19 +9,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f13698c79568447a0b3862945c868a, type: 3}
+  m_Script: {fileID: 11500000, guid: 42835d9f816510946974f97e25505c64, type: 3}
   m_Name: Hat
   m_EditorClassIdentifier: 
   _displayName: Hat
   _description: This seems to be some sort of hat.
   _sprite: {fileID: 21300000, guid: 4edf9929eaed28742ab3ec12cfaaa775, type: 3}
-  _element: {fileID: 11400000, guid: ce9c718638458254ca7d5945b2b79f0a, type: 2}
+  _element: {fileID: 0}
   _price: 90
-  <SkillsToEquip>k__BackingField: []
   _category: {fileID: 11400000, guid: 679b1c6c225d8c244bf083d50292d4a3, type: 2}
-  _statsSet:
-    intStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 46c026df8a249b74d8bcb5a7c1a50f02, type: 2}
-      _value: 1
-    floatStats: []
+  statBoosts:
+    Attack: 0
+    Defense: 1
+    MagicDefense: 0
+    Absorbtions:
+      Fire: 0
+      Earth: 0
+      Water: 0
+      Air: 0
+      Light: 0
+      Dark: 0
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+      Divine: 0
+    Resistances:
+      poison: 0
+      sleep: 0
+      paralysis: 0
+      blindness: 0
+      silence: 0
+      numbness: 0
+      curse: 0
+      confusion: 0
+      bleed: 0
+      zombification: 0
+    Strength: 0
+    Vitality: 0
+    Spirit: 0
+    Agility: 0
+    Crit: 0
+    Accuracy: 100
+    Health: 0
+    Mana: 0
+  grantSkills: []
   _hitSFX: 

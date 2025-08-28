@@ -16,27 +16,27 @@ MonoBehaviour:
   <Profile>k__BackingField: {fileID: 11400000, guid: 04476a24882406447907748dbd6c8699, type: 2}
   <ItemsEquipped>k__BackingField:
     MainHand:
-      currentItem: {fileID: 11400000, guid: 0366ff94fc3cd4240867624b0d8ca2ee, type: 2}
+      currentItem: {fileID: 11400000, guid: aed0948ee05718f469ab6b41bfdea098, type: 2}
       currentAmount: 1
       itemFilter: []
       canBeEmpty: 0
     OffHand:
-      currentItem: {fileID: 11400000, guid: ebcad2eaae57c184f9acdadea91704c8, type: 2}
+      currentItem: {fileID: 11400000, guid: e11427f3795e6a24cbf9ec6bf3fa480b, type: 2}
       currentAmount: 1
       itemFilter: []
       canBeEmpty: 0
     Head:
-      currentItem: {fileID: 0}
+      currentItem: {fileID: 11400000, guid: 3d7ab4a3d17f1d54b8ea06821ff77117, type: 2}
       currentAmount: 0
       itemFilter: []
       canBeEmpty: 0
     Body:
-      currentItem: {fileID: 11400000, guid: 43f9c1563af910a4d8949169e09553d5, type: 2}
+      currentItem: {fileID: 11400000, guid: 739231b7e137cdf4393444261ae52cd3, type: 2}
       currentAmount: 1
       itemFilter: []
       canBeEmpty: 0
     Accessory1:
-      currentItem: {fileID: 11400000, guid: 1a6088039ca4aff479c8f3002a92c2da, type: 2}
+      currentItem: {fileID: 0}
       currentAmount: 1
       itemFilter: []
       canBeEmpty: 0
@@ -304,7 +304,7 @@ MonoBehaviour:
       itemFilter: []
       canBeEmpty: 0
   <ActionSkillset>k__BackingField: {fileID: 11400000, guid: 4f912a471e8772946bd5286eceaee2cd, type: 2}
-  attack: 100
+  attack: 5
   defense: 60
   magicDefense: 60
   _currentHP: 0
@@ -320,7 +320,7 @@ MonoBehaviour:
     confusion: 0
     bleed: 0
     zombification: 0
-  Level: 50
+  Level: 8
   Experience: 0
   <ReactionSkillset>k__BackingField: {fileID: 0}
   <PassiveSkillset>k__BackingField: {fileID: 0}

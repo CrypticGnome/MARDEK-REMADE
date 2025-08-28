@@ -22,6 +22,7 @@ namespace MARDEK.Battle
           [SerializeField] List<GameObject> enemyPartyPositions = new();
           [SerializeField] List<GameObject> playerPartyPositions = new();
           [SerializeField] EncounterSet dummyEncounter;
+          [SerializeField] BattleCharacterPicker characterPicker;
           public Encounter Encounter;
           public static EncounterSet encounter { private get; set; }
           public static BattleCharacter characterActing { get; private set; }
@@ -49,6 +50,24 @@ namespace MARDEK.Battle
                     }
                     encounter = dummyEncounter;
                }
+               InstantiateEncounter();
+
+               state = BattleState.Idle;
+          }
+
+         
+          private void Start()
+          {
+               OnTurnEnd += WaitForTurn;
+               SetInitialACT();
+               OnTurnEnd?.Invoke();
+          }
+          private void OnDisable()
+          {
+               OnTurnEnd -= WaitForTurn;
+          }
+          void InstantiateEncounter()
+          {
                List<Character> enemyCharacters = encounter.InstantiateEncounter(out Encounter);
 
                EnemyBattleParty.Clear();
@@ -63,20 +82,7 @@ namespace MARDEK.Battle
                     HeroBattleCharacter playerCharacter = new HeroBattleCharacter(playerParty[i], playerPartyPositions[i].transform);
                     PlayerBattleParty.Add(playerCharacter);
                }
-
-               state = BattleState.Idle;
           }
-          private void Start()
-          {
-               OnTurnEnd += WaitForTurn;
-               SetInitialACT();
-               OnTurnEnd?.Invoke();
-          }
-          private void OnDisable()
-          {
-               OnTurnEnd -= WaitForTurn;
-          }
-
           void SetInitialACT()
           {
                bool partySurprised = false;
@@ -197,15 +203,8 @@ namespace MARDEK.Battle
                     PerformAction(move.Apply);
                }
           }
-          public static void PerformAction(ApplyBattleAction action)
+          public static void PerformActionToTarget(ApplyBattleAction action, BattleCharacter target)
           {
-
-               BattleCharacter target;
-               if (EnemyBattleParty.Contains(characterActing))
-                    target = PlayerBattleParty[Random.Range(0, PlayerBattleParty.Count - 1)];
-               else
-                    target = EnemyBattleParty[Random.Range(0, EnemyBattleParty.Count - 1)];
-
                if (action is null)
                {
                     Debug.LogAssertion("Attempted action was null");
@@ -217,8 +216,17 @@ namespace MARDEK.Battle
                action.Invoke(characterActing, target);
 
                instance.EndTurn();
+          }
+          public static void PerformAction(ApplyBattleAction action)
+          {
 
-               
+               BattleCharacter target;
+               if (EnemyBattleParty.Contains(characterActing))
+                    target = PlayerBattleParty[Random.Range(0, PlayerBattleParty.Count - 1)];
+               else
+                    target = EnemyBattleParty[Random.Range(0, EnemyBattleParty.Count - 1)];
+
+               PerformActionToTarget(action, target);
           }
           void EndTurn()
           {
@@ -238,12 +246,15 @@ namespace MARDEK.Battle
                     BattleCharacter hero = PlayerBattleParty[i];
                     int health = hero.CurrentHP;
                     if (health <= 0)
-                         PlayerBattleParty.Remove(hero);
+                    {
+                         //die
+                    }
                }
                characterActing = null;
                instance.state = BattleState.Idle;
                OnTurnEnd?.Invoke();
                instance.characterActionUI.SetActive(false);
+               characterPicker.enabled = false;
                instance.CheckBattleEnd();
           }
           public void SkipCurrentCharacterTurn()
@@ -274,6 +285,14 @@ namespace MARDEK.Battle
                print("victory!!");
                yield return new WaitForSeconds(2);
                BattleUIManager.Instance.OnVictory();
+
+               for (int i = 0; i < playerParty.Count; i++)
+               {
+                    if (playerParty[i] == null) continue;
+
+                    playerParty[i].CurrentHP = PlayerBattleParty[i].CurrentHP;
+                    playerParty[i].CurrentMP = PlayerBattleParty[i].CurrentMP;
+               }
                instance.enabled = false;
           }
 

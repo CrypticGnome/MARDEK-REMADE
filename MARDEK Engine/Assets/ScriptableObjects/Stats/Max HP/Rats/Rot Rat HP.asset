@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Rot Rat HP
   m_EditorClassIdentifier: 
   calculatorType: 2
-  constantValue: 24
-  levelMultiplier: 6
+  constantValue: 88
+  levelMultiplier: 5

@@ -20,10 +20,10 @@ MonoBehaviour:
   <BattleModelPrefab>k__BackingField: {fileID: 1426953165218317120, guid: 833ffe83cadf07b4b82188780382351f, type: 3}
   <LearnableSkillset>k__BackingField: {fileID: 0}
   <Stats>k__BackingField:
-    Strength: 20
-    Vitality: 18
-    Spirit: 10
-    Agility: 12
+    Strength: 17
+    Vitality: 15
+    Spirit: 12
+    Agility: 9
     Absorbtions:
       Fire: 0
       Earth: 0
@@ -54,5 +54,5 @@ MonoBehaviour:
     Accuracy: 100
     MaxHPCalc: {fileID: 11400000, guid: 689fb7d58c51ad8419744587e211860e, type: 2}
     MaxMPCalc: {fileID: 11400000, guid: b430bbf3c625229499a5257b4b7dcb62, type: 2}
-    MaxHP: 1854
-    MaxMP: 1854
+    MaxHP: 1545
+    MaxMP: 1545

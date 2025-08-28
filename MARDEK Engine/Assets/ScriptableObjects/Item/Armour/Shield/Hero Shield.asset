@@ -33,8 +33,18 @@ MonoBehaviour:
       Fig: 0
       Physical: 0
       Thauma: 0
+      Divine: 0
     Resistances:
-      Sleep: 0
+      poison: 0
+      sleep: 0
+      paralysis: 0
+      blindness: 0
+      silence: 0
+      numbness: 0
+      curse: 0
+      confusion: 0
+      bleed: 0
+      zombification: 0
     Strength: 0
     Vitality: 0
     Spirit: 0

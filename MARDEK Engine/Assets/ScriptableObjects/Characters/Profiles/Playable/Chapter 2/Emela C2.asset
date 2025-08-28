@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86b47544976d9994d818ec74436e5528, type: 3}
   m_Name: Emela C2
   m_EditorClassIdentifier: 
-  <displayName>k__BackingField: Mardek
+  <displayName>k__BackingField: Emela
   <displayClass>k__BackingField: 
   <element>k__BackingField: {fileID: 11400000, guid: ef2aacb5c0629b644a8e1df0f9abf2fc, type: 2}
   <portrait>k__BackingField: {fileID: 11400000, guid: dc797bfc0901ab34fb72d9c68c1aa638, type: 2}
@@ -20,10 +20,10 @@ MonoBehaviour:
   <BattleModelPrefab>k__BackingField: {fileID: 1426953165218317120, guid: 73dbe5f211dd47445938125711478da3, type: 3}
   <LearnableSkillset>k__BackingField: {fileID: 0}
   <Stats>k__BackingField:
-    Strength: 20
-    Vitality: 18
-    Spirit: 10
-    Agility: 12
+    Strength: 9
+    Vitality: 11
+    Spirit: 20
+    Agility: 16
     Absorbtions:
       Fire: 0
       Earth: 0
@@ -54,5 +54,5 @@ MonoBehaviour:
     Accuracy: 100
     MaxHPCalc: {fileID: 11400000, guid: 689fb7d58c51ad8419744587e211860e, type: 2}
     MaxMPCalc: {fileID: 11400000, guid: b430bbf3c625229499a5257b4b7dcb62, type: 2}
-    MaxHP: 1854
-    MaxMP: 1854
+    MaxHP: 1133
+    MaxMP: 1133

@@ -46,7 +46,7 @@ namespace MARDEK.Stats
           public void CalculateMaxValues(BattleCharacter battleCharacter)
           {
                MaxHP = MaxHPCalc.GetMaxHP(battleCharacter);
-               MaxMP = MaxHPCalc.GetMaxHP(battleCharacter);
+               MaxMP = MaxMPCalc.GetMaxMP(battleCharacter);
           }
           public int GetMaxHP(CharacterSystem.Character character) => MaxHPCalc.GetMaxHP(character);
           public int GetMaxMP(CharacterSystem.Character character) => MaxMPCalc.GetMaxMP(character);
