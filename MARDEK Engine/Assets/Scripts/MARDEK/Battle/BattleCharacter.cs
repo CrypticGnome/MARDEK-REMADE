@@ -12,7 +12,7 @@ namespace MARDEK.Battle
      public abstract class BattleCharacter : IActionStats
      {
           public CharacterProfile Profile { get; protected set; }
-          public BattleModel battleModel = null;
+          public BattleModelComponent battleModel = null;
           public ActionSkillset Skillset { get; protected set; }
           public string Name { get { return Profile.displayName; } }
 

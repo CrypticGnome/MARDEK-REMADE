@@ -14,8 +14,11 @@ namespace MARDEK.Battle
                Profile = character;
                VolatileStats = character.Stats;
                Skillset = character.LearnableSkillset;
-               battleModel = Object.Instantiate(Profile.BattleModelPrefab).GetComponent<BattleModel>();
-               battleModel.SetBattlePosition(position);
+               GameObject prefabInstance = Object.Instantiate(Profile.BattleModelPrefab);
+
+               if (prefabInstance.TryGetComponent<BattleModelComponent>(out battleModel))
+                    battleModel.SetBattlePosition(position);
+
                VolatileStats = new CoreStats(character.Stats);
                BaseStats.CalculateMaxValues(this);
 

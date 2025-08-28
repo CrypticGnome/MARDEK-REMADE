@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdbda093b0e7f8459fd56b3b67d8276, type: 3}
+  m_Name: Deugan Soldier
+  m_EditorClassIdentifier: 
+  clips:
+  - indexBySOReference: {fileID: 11400000, guid: ea6556b4aef89a245b8056a40173133b, type: 2}
+    _loop: 1
+    durationMultiplier: 1
+    spriteSequence:
+    - {fileID: -1263520576, guid: a6aa403fc58a6ad41b3aa15d85e0823d, type: 3}
+    - {fileID: 1571462949, guid: a6aa403fc58a6ad41b3aa15d85e0823d, type: 3}
+  - indexBySOReference: {fileID: 11400000, guid: b19d088da4eb0fe4c83aa92cbc400e36, type: 2}
+    _loop: 1
+    durationMultiplier: 1
+    spriteSequence:
+    - {fileID: 821624495, guid: a6aa403fc58a6ad41b3aa15d85e0823d, type: 3}
+    - {fileID: 1473932717, guid: a6aa403fc58a6ad41b3aa15d85e0823d, type: 3}
+  - indexBySOReference: {fileID: 11400000, guid: a51fa9789f30cd14b903b94df523d503, type: 2}
+    _loop: 1
+    durationMultiplier: 1
+    spriteSequence:
+    - {fileID: 1171236034, guid: a6aa403fc58a6ad41b3aa15d85e0823d, type: 3}
+    - {fileID: 490305347, guid: a6aa403fc58a6ad41b3aa15d85e0823d, type: 3}
+  - indexBySOReference: {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
+    _loop: 1
+    durationMultiplier: 1
+    spriteSequence:
+    - {fileID: 307515890, guid: a6aa403fc58a6ad41b3aa15d85e0823d, type: 3}
+    - {fileID: 305057373, guid: a6aa403fc58a6ad41b3aa15d85e0823d, type: 3}
