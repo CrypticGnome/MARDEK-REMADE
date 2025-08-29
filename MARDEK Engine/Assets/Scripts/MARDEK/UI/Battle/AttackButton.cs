@@ -9,12 +9,14 @@ namespace MARDEK.UI
 {
     public class AttackButton : MonoBehaviour
     {
-        //[SerializeField] Image sprite;
-        [SerializeField] ActionSkill attack;
+          [SerializeField] ActionSkill attack;
           [SerializeField] BattleCharacterPicker targetPicker;
-        public void SelectAction()
+          private void OnEnable()
+          {
+               // Set sprite to character specific attack sprite
+          }
+          public void SelectAction()
         {
-            //Battle.BattleManager.PerformAction(attack.Action.Apply);
                targetPicker.EnableWithAction(attack.Action.Apply);
         }
     }

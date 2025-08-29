@@ -132,8 +132,7 @@ namespace MARDEK.Battle
                if (target.Profile.Type == CharacterSystem.CharacterType.Undead)
                     heal *= -1;
 
-               user.CurrentHP += heal;
-               user.CurrentHP = Mathf.Clamp(user.CurrentHP, 0, user.MaxHP);
+               target.CurrentHP = Mathf.Clamp(target.CurrentHP + heal, 0, target.MaxHP);
                Debug.Log($"{user.Profile.displayName} heals {target.Profile.displayName} for {heal} hp");
           }
      }
