@@ -254,7 +254,6 @@ namespace MARDEK.Battle
                instance.state = BattleState.Idle;
                OnTurnEnd?.Invoke();
                instance.characterActionUI.SetActive(false);
-               characterPicker.enabled = false;
                instance.CheckBattleEnd();
           }
           public void SkipCurrentCharacterTurn()
