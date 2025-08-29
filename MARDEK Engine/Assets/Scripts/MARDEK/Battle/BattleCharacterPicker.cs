@@ -18,7 +18,7 @@ namespace MARDEK.UI
           [SerializeField] Transform pointersPoint;
           [SerializeField] SpriteRenderer crystalPointerRenderer;
           [SerializeField] GameObject lowerBar;
-          [SerializeField] UnityEvent onCancellation;
+          [SerializeField] GameObject turnDisplay;
           PlayerControls playerControls;
           static List<BattleCharacter> Heroes => BattleManager.PlayerBattleParty;
           static List<BattleCharacter> Enemies => BattleManager.EnemyBattleParty;
@@ -46,7 +46,7 @@ namespace MARDEK.UI
                invokeCancellation = context => HandleCancellation();
                void HandleCancellation()
                {
-                    onCancellation.Invoke();
+                    lowerBar.SetActive(true);
                     gameObject.SetActive(false);
                }
           }
@@ -59,6 +59,7 @@ namespace MARDEK.UI
                playerControls.DefaultMap.Movement.started -= HandleSelection;
                playerControls.DefaultMap.Interact.started -= invokeActionOnTargetAction;
                playerControls.DefaultMap.Cancel.performed -= invokeCancellation;
+               turnDisplay.SetActive(true);
 
                action = null;
           }
@@ -128,6 +129,7 @@ namespace MARDEK.UI
                EnemiesSelected = true;
                SelectedCharacter = Enemies[0];
                SetPosition();
+               turnDisplay.SetActive(false);
           }
 
           int ClampHeroesIndex(int index) => Mathf.Clamp(index, 0, Heroes.Count - 1);
