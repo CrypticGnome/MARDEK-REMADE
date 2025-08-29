@@ -8,6 +8,8 @@ namespace MARDEK.Battle
           [SerializeField] AnimationClip idle, moveto, strike, jumpback, hit, die, dead, spellcast, useItem, victory;
           [SerializeField] new UnityEngine.Animation animation;
           [SerializeField] new Transform transform;
+          [SerializeField] Transform crystalPointerGoToPosition;
+          public Transform CrystalPointerGoToPosition => crystalPointerGoToPosition;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {

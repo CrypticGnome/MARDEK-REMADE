@@ -4,6 +4,7 @@ using MARDEK.Skill;
 using MARDEK.UI;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -25,15 +26,6 @@ namespace MARDEK.UI
           /// Used to ensure that the action isn't invoked on a target on the same frame as an action is picked, as they both use the "interact" key
           /// </summary>
           float enabledTime;
-          static int SelectedCharacterIndex
-          {
-               get { return index; }
-               set
-               {
-                    index = value;
-                    SelectedCharacter = EnemiesSelected ? Enemies[index] : Heroes[index];
-               }
-          }
           static int PositionIndex;
           public static bool EnemiesSelected;
           public static BattleCharacter SelectedCharacter { get; private set; }
@@ -82,19 +74,26 @@ namespace MARDEK.UI
                if (value.x == -1 && !EnemiesSelected)
                {
                     EnemiesSelected = true;
-                    SelectedCharacterIndex = ClampEnemiesIndex(SelectedCharacterIndex);
+                    PositionIndex = ClampEnemiesIndex(PositionIndex);
                }
                else if (value.x == 1 && EnemiesSelected)
                {
                     EnemiesSelected = false;
-                    SelectedCharacterIndex = ClampHeroesIndex(SelectedCharacterIndex);
+                    PositionIndex = ClampHeroesIndex(PositionIndex);
                }
 
-               // Handle verticle input
-               if (value.y == 1)
-                    SelectedCharacterIndex = EnemiesSelected ? ClampEnemiesIndex(SelectedCharacterIndex + 1) : ClampHeroesIndex(SelectedCharacterIndex + 1);
-               else if (value.y == -1)
-                    SelectedCharacterIndex = EnemiesSelected ? ClampEnemiesIndex(SelectedCharacterIndex - 1) : ClampHeroesIndex(SelectedCharacterIndex - 1);
+               // Handle verticle input (ordered from top to bottom)
+               int previousIndex = PositionIndex;
+               if (value.y == -1)
+                    PositionIndex = EnemiesSelected ? ClampEnemiesIndex(PositionIndex + 1) : ClampHeroesIndex(PositionIndex + 1);
+               else if (value.y == 1)
+                    PositionIndex = EnemiesSelected ? ClampEnemiesIndex(PositionIndex - 1) : ClampHeroesIndex(PositionIndex - 1);
+
+
+               SelectedCharacter = EnemiesSelected ? 
+                    Enemies.OrderByDescending(e => e.battleModel.transform.position.y).ElementAt(PositionIndex) :
+                    Heroes.OrderByDescending(e => e.battleModel.transform.position.y).ElementAt(PositionIndex);
+
 
                SetPosition();
           }
@@ -113,7 +112,7 @@ namespace MARDEK.UI
                gameObject.SetActive(true);
                this.action = action;
                EnemiesSelected = true;
-               SelectedCharacterIndex = 0;
+               SelectedCharacter = Enemies[0];
                SetPosition();
           }
 
@@ -121,11 +120,10 @@ namespace MARDEK.UI
           int ClampEnemiesIndex(int index) => Mathf.Clamp(index, 0, Enemies.Count - 1);
           void SetPosition()
           {
+               BattleModelComponent target = SelectedCharacter.battleModel;
+               transform.Set2DPosition(target.CrystalPointerGoToPosition.position);
                transform.localScale = EnemiesSelected ? new Vector3(-0.1f, 0.1f, 1f) : new Vector3(0.1f, 0.1f, 1f);
-               Vector3 targetsPosition = SelectedCharacter.battleModel.transform.position;
-               Vector3 scale = transform.localScale;
-               Vector2 targetOffset = new Vector2(pointersPoint.localPosition.x * scale.x, pointersPoint.localPosition.y * scale.y);
-               transform.Set2DPosition((Vector2)targetsPosition - targetOffset);
+
           }
      }
 }

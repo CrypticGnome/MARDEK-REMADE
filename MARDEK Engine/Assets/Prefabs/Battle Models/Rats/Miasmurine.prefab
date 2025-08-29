@@ -5377,6 +5377,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5049254251117800534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5628367700654756258}
+  m_Layer: 0
+  m_Name: Crystal Pointer Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5628367700654756258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5049254251117800534}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -54.2, y: 11.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 979944342599019653}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5190024202791961237
 GameObject:
   m_ObjectHideFlags: 0
@@ -5441,6 +5472,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5628367700654756258}
   - {fileID: 6630829357233038501}
   - {fileID: 2946508777527755358}
   m_Father: {fileID: 0}
@@ -5486,6 +5518,7 @@ MonoBehaviour:
   victory: {fileID: 0}
   animation: {fileID: 308869589324411901}
   transform: {fileID: 979944342599019653}
+  crystalPointerGoToPosition: {fileID: 5628367700654756258}
 --- !u!1 &7846622617128209928
 GameObject:
   m_ObjectHideFlags: 0
