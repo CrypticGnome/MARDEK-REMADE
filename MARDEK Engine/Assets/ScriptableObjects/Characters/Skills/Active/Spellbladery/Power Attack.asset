@@ -12,11 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97727b890c81574e9c60256ce51f687, type: 3}
   m_Name: Power Attack
   m_EditorClassIdentifier: 
-  <Cost>k__BackingField: 0
   <PointsRequiredToMaster>k__BackingField: 0
   <DisplayName>k__BackingField: Power Attack
   <Description>k__BackingField: Attack fiercely. 50% more powerful than an average
     attack, but less accurate.
+  <Cost>k__BackingField: 0
   action:
-    effects: []
     element: {fileID: 11400000, guid: ce9c718638458254ca7d5945b2b79f0a, type: 2}
+    actionEffects:
+    - rid: 595661094312214603
+  references:
+    version: 2
+    RefIds:
+    - rid: 595661094312214603
+      type: {class: DealMeleeDamageStandard, ns: MARDEK.Battle, asm: MARDEK}
+      data:
+        motionValue: 1.5
+        AccuracyRating: 0.75

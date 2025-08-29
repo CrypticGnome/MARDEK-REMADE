@@ -17,5 +17,8 @@ MonoBehaviour:
   <DisplayName>k__BackingField: Heal
   <Description>k__BackingField: Use Rohoph's magic to restore the HP of a target(s).
   action:
-    effects: []
+    effects:
+    - effectType: 2
+      motionValue: 0
+      statusEffect: 0
     element: {fileID: 11400000, guid: 57ae7927a13bd1b479f4301ce3b69221, type: 2}

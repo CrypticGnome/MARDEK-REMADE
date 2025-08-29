@@ -96,7 +96,8 @@ public sealed class SubclassSelectorPropertyDrawer : PropertyDrawer
 
           if (isCollection == true)
           {
-               baseType = fieldType.GetGenericArguments()[0];
+               Type[] genericArguments = fieldType.GetGenericArguments();
+               baseType = genericArguments.Length == 0 ? fieldType.GetElementType() : genericArguments[0];
                if (baseType.IsAbstract == false)
                {
                     types.Add(baseType);

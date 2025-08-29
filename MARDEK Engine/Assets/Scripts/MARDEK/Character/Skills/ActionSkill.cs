@@ -15,6 +15,7 @@ namespace MARDEK.Skill
      [CreateAssetMenu(menuName = "MARDEK/Skill/ActionSkill")]
     public class ActionSkill : Skill
      {
+          [field: SerializeField] public int Cost { get; private set; }
           [SerializeField] Battle.BattleAction action;
           public Battle.BattleAction Action { get { return action; } }
      }
