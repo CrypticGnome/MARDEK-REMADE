@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -17,6 +18,7 @@ namespace MARDEK.UI
           [SerializeField] Transform pointersPoint;
           [SerializeField] SpriteRenderer crystalPointerRenderer;
           [SerializeField] GameObject lowerBar;
+          [SerializeField] UnityEvent onCancellation;
           PlayerControls playerControls;
           static List<BattleCharacter> Heroes => BattleManager.PlayerBattleParty;
           static List<BattleCharacter> Enemies => BattleManager.EnemyBattleParty;
@@ -34,11 +36,19 @@ namespace MARDEK.UI
           int frameTimer;
           const int WaitForFramesToInitialise = 1;
           Action<InputAction.CallbackContext> invokeActionOnTargetAction;
+          Action<InputAction.CallbackContext> invokeCancellation;
+
           private void Awake()
           {
                playerControls = new PlayerControls();
                playerControls.Enable();
                invokeActionOnTargetAction = context => InvokeActionOnTarget();
+               invokeCancellation = context => HandleCancellation();
+               void HandleCancellation()
+               {
+                    onCancellation.Invoke();
+                    gameObject.SetActive(false);
+               }
           }
           private void OnEnable()
           {
@@ -48,6 +58,8 @@ namespace MARDEK.UI
           {
                playerControls.DefaultMap.Movement.started -= HandleSelection;
                playerControls.DefaultMap.Interact.started -= invokeActionOnTargetAction;
+               playerControls.DefaultMap.Cancel.performed -= invokeCancellation;
+
                action = null;
           }
           private void Update()
@@ -56,6 +68,8 @@ namespace MARDEK.UI
                // Delay the hooking up of events be one frame to ensure target selection isn't done on the same frame as the picker being enabled
                playerControls.DefaultMap.Movement.started += HandleSelection;
                playerControls.DefaultMap.Interact.started += invokeActionOnTargetAction;
+               playerControls.DefaultMap.Cancel.performed += invokeCancellation;
+
           }
           private void OnDestroy()
           {

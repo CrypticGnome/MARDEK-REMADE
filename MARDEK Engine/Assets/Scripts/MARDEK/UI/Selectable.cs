@@ -1,8 +1,9 @@
+using MARDEK.Audio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using MARDEK.Audio;
+using static Codice.Client.BaseCommands.Import.Commit;
 
 namespace MARDEK.UI
 {
@@ -12,13 +13,15 @@ namespace MARDEK.UI
         [SerializeField] UnityEvent OnDeselected = new UnityEvent();
         [SerializeField] bool deselectOnDisable = false;
         [SerializeField] AudioObject selectionSFX;
-        
+          bool selected;
+          public bool Selected => selected;
         public virtual bool IsValid()
         {
             return gameObject.activeSelf;
         }
         public virtual void Select(bool playSFX = true)
         {
+               selected = true;
             OnSelected.Invoke();
             if(playSFX && selectionSFX)
                 AudioManager.PlaySoundEffect(selectionSFX);
@@ -26,6 +29,7 @@ namespace MARDEK.UI
 
         public virtual void Deselect()
         {
+               selected = false;
             OnDeselected.Invoke();
         }
 

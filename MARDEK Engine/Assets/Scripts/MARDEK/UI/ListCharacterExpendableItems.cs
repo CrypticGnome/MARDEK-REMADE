@@ -7,8 +7,11 @@ namespace MARDEK.UI
     using Battle;
     public class ListCharacterExpendableItems : ListActions
     {
+          [SerializeField] Selectable thisSelectable;
           public void SetSlots()
           {
+               if (!thisSelectable.Selected) return;
+
                if (BattleManager.characterActing is not HeroBattleCharacter)
                     return;
                HeroBattleCharacter actingHero = BattleManager.characterActing as HeroBattleCharacter;
