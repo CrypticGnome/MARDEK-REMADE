@@ -56,3 +56,4 @@ MonoBehaviour:
     MaxMPCalc: {fileID: 11400000, guid: 194054632bb03254199cf38de6c77bf0, type: 2}
     MaxHP: 1172
     MaxMP: 1172
+  <Type>k__BackingField: 2

@@ -26,4 +26,4 @@ MonoBehaviour:
     - rid: 595661094312214605
       type: {class: DealMagicDamageStandard, ns: MARDEK.Battle, asm: MARDEK}
       data:
-        motionValue: 1.1
+        motionValue: 1.25

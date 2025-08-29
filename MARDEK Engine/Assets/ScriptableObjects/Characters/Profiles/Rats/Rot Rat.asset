@@ -54,5 +54,6 @@ MonoBehaviour:
     Accuracy: 100
     MaxHPCalc: {fileID: 11400000, guid: 9a3503a18331b5943a074d2b92c9820c, type: 2}
     MaxMPCalc: {fileID: 11400000, guid: 194054632bb03254199cf38de6c77bf0, type: 2}
-    MaxHP: 1172
-    MaxMP: 1172
+    MaxHP: 113
+    MaxMP: 11
+  <Type>k__BackingField: 1

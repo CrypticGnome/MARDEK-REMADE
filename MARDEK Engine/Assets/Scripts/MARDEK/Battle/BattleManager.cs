@@ -17,13 +17,12 @@ namespace MARDEK.Battle
     public class BattleManager : MonoBehaviour
     {
           [SerializeField] PartySO playerParty;
-          [SerializeField] List<Character> DummyEnemies;
           [SerializeField] GameObject characterActionUI = null;
           [SerializeField] List<GameObject> enemyPartyPositions = new();
           [SerializeField] List<GameObject> playerPartyPositions = new();
           [SerializeField] EncounterSet dummyEncounter;
           [SerializeField] BattleCharacterPicker characterPicker;
-          public Encounter Encounter;
+          public static Encounter Encounter;
           public static EncounterSet encounter { private get; set; }
           public static BattleCharacter characterActing { get; private set; }
           public static BattleAction ActionToPerform;
