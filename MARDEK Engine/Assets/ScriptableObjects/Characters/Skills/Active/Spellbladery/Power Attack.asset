@@ -19,6 +19,8 @@ MonoBehaviour:
   <Cost>k__BackingField: 0
   action:
     element: {fileID: 11400000, guid: ce9c718638458254ca7d5945b2b79f0a, type: 2}
+    soundEffects:
+    - {fileID: 11400000, guid: c58966fd900c3844a8cd6dd2c1cb8c98, type: 2}
     actionEffects:
     - rid: 595661094312214603
   references:

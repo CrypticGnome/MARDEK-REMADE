@@ -11,14 +11,14 @@ namespace MARDEK.Battle
      public class BattleAction
      {
           [SerializeField] Element element;
-          [SerializeField] SoundEffect soundEffect;
+          [SerializeField] SoundEffect[] soundEffects;
           [SerializeReference, SubclassSelector] ActionEffects[] actionEffects;
           public Element Element { get { return element; } }
           public void Apply(BattleCharacter user, BattleCharacter target)
           {
                for (int index = 0; index < actionEffects.Length; index++)
                     actionEffects[index].ApplyEffect(user, target, element);
-               AudioManager.PlaySoundEffect(soundEffect);
+               AudioManager.PlayEffectString(soundEffects);
           }
 
   
