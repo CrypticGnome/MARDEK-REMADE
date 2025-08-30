@@ -21,30 +21,8 @@ namespace MARDEK.UI
                Debug.LogWarning("Setting the sprites of the turn display is not yet implemented");
                BattleManager.OnTurnEnd += TrackDisplay;
           }
-
-          private void OnDisable()
+          private void OnEnable()
           {
-               BattleManager.OnTurnEnd -= TrackDisplay;
-          }
-          [ContextMenu("Set display")]
-          void TrackDisplay()
-          {
-               displayWidth = displayTransform.rect.width;
-
-               for (int i = 0; i < heroIcons.Length; i++)
-               {
-                    if (i < playerParty.Count)
-                         heroIcons[i].SetActive(true);
-                    else
-                         heroIcons[i].SetActive(false);
-               }
-               for (int i = 0; i < enemyIcons.Length; i++)
-               {
-                    if (i < enemyParty.Count)
-                         enemyIcons[i].SetActive(true);
-                    else
-                         enemyIcons[i].SetActive(false);
-               }
                SetTurnDisplay();
                StartCoroutine(UpdateDisplay());
 
@@ -70,6 +48,34 @@ namespace MARDEK.UI
                          enemyTransforms[i].anchoredPosition = new Vector2(completion * displayWidth, 0);
                     }
                }
+          }
+          private void OnDestroy()
+          {
+               BattleManager.OnTurnEnd -= TrackDisplay;
+          }
+          [ContextMenu("Set display")]
+          void TrackDisplay()
+          {
+               displayWidth = displayTransform.rect.width;
+
+               for (int i = 0; i < heroIcons.Length; i++)
+               {
+                    if (i < playerParty.Count)
+                         heroIcons[i].SetActive(true);
+                    else
+                         heroIcons[i].SetActive(false);
+               }
+               for (int i = 0; i < enemyIcons.Length; i++)
+               {
+                    if (i < enemyParty.Count)
+                         enemyIcons[i].SetActive(true);
+                    else
+                         enemyIcons[i].SetActive(false);
+               }
+               if (!gameObject.activeSelf)
+                    gameObject.SetActive(true);
+               else OnEnable();
+               
           }
           
      }

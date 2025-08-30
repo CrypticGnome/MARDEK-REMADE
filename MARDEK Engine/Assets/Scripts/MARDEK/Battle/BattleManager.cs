@@ -213,9 +213,17 @@ namespace MARDEK.Battle
 
                instance.state = BattleState.ActionPerforming;
                action.Invoke(characterActing, target);
+               instance.StartCoroutine(PlayAttack());
 
-               instance.EndTurn();
+               IEnumerator PlayAttack()
+               {
+                    WaitForSeconds waitForAnimationPlaceholder = new WaitForSeconds(1);
+                    yield return waitForAnimationPlaceholder;
+                    instance.EndTurn();
+
+               }
           }
+
           public static void PerformAction(ApplyBattleAction action)
           {
 

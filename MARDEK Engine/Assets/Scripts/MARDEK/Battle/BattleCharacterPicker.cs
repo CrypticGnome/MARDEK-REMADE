@@ -48,6 +48,7 @@ namespace MARDEK.UI
                {
                     lowerBar.SetActive(true);
                     gameObject.SetActive(false);
+                    turnDisplay.SetActive(true);
                }
           }
           private void OnEnable()
@@ -59,7 +60,6 @@ namespace MARDEK.UI
                playerControls.DefaultMap.Movement.started -= HandleSelection;
                playerControls.DefaultMap.Interact.started -= invokeActionOnTargetAction;
                playerControls.DefaultMap.Cancel.performed -= invokeCancellation;
-               turnDisplay.SetActive(true);
 
                action = null;
           }
