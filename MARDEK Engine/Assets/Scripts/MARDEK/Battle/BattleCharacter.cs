@@ -8,6 +8,7 @@ namespace MARDEK.Battle
     using CharacterSystem;
     using MARDEK.Stats;
      using MARDEK.UI;
+     using MARDEK.Animation;
 
      public abstract class BattleCharacter : IActionStats
      {
@@ -96,6 +97,20 @@ namespace MARDEK.Battle
                if (StatusBuildup.Bleed > 0)
                     StatusBuildup.Bleed -= resistances.Bleed + 1;
                // Do not tick zombification
+          }
+
+          public Sprite GetBattleIcon()
+          {
+               if (Profile.WalkSprites != null)
+               {
+                    SpriteAnimationClip clip = Profile.WalkSprites.GetClipByDirection(Vector2.down);
+                    if (clip != null)
+                    {
+                         Sprite sprite = clip.GetSprite(0);
+                         if (sprite != null) return sprite;
+                    }
+               }
+               return CharacterTypePortraits.CharacterTypeSprites[Profile.Type];
           }
      }
 }

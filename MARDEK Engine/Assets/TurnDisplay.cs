@@ -10,11 +10,33 @@ namespace MARDEK.UI
      public class TurnDisplay : MonoBehaviour
      {
           [SerializeField] GameObject[] heroIcons, enemyIcons;
-          [SerializeField] RectTransform[] heroTransforms, enemyTransforms;
+          RectTransform[] heroTransforms, enemyTransforms;
+          Image[] heroImages, enemyImages;
+
           [SerializeField] RectTransform displayTransform;
+
           List<BattleCharacter> playerParty { get => BattleManager.PlayerBattleParty; }
           List<BattleCharacter> enemyParty { get => BattleManager.EnemyBattleParty; }
           float displayWidth;
+
+          private void OnValidate()
+          {
+               heroTransforms = new RectTransform[heroIcons.Length];
+               enemyTransforms = new RectTransform[enemyIcons.Length];
+               heroImages = new Image[heroIcons.Length];
+               enemyImages = new Image[enemyIcons.Length];
+
+               for (int i = 0; i< heroIcons.Length; i++)
+               {
+                    if (heroIcons[i].TryGetComponent(out heroTransforms[i])) Debug.LogError($"Failure to validate {name}");
+                    if (heroIcons[i].TryGetComponent(out heroImages[i])) Debug.LogError($"Failure to validate {name}");
+               }
+               for (int i = 0; i < enemyIcons.Length; i++)
+               {
+                    if (enemyIcons[i].TryGetComponent(out enemyTransforms[i])) Debug.LogError($"Failure to validate {name}");
+                    if (enemyIcons[i].TryGetComponent(out enemyImages[i])) Debug.LogError($"Failure to validate {name}");
+               }
+          }
           private void Awake()
           {
                displayWidth = displayTransform.rect.width;
@@ -25,6 +47,13 @@ namespace MARDEK.UI
           {
                SetTurnDisplay();
                StartCoroutine(UpdateDisplay());
+
+               for (int i = 0; i < playerParty.Count; i++)
+                    heroImages[i].sprite = playerParty[i].GetBattleIcon();
+
+               for (int i = 0; i < enemyParty.Count; i++)
+                    enemyImages[i].sprite = enemyParty[i].GetBattleIcon();
+
 
                IEnumerator UpdateDisplay()
                {

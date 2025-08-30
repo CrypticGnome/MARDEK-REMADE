@@ -31,7 +31,7 @@ public class PlayerCharacterUI : MonoBehaviour, IPointerClickHandler
           characterName.text = character.Name;
           elementImage.sprite = character.Profile.element.thinSprite;
           characterAnimator.ClipList = character.Profile.WalkSprites;
-          if (!characterAnimator.enabled) characterAnimator.enabled = true;
+          characterAnimator.gameObject.SetActive(true);
      }
 
      void UpdateCharacter()

@@ -27,5 +27,14 @@ namespace MARDEK.Animation
             }                    
             return null;
         }
-    }
+          public SpriteAnimationClip GetClipByDirection(Vector2 direction)
+          {
+               foreach (SpriteAnimationClip clip in clips)
+               {
+                    if (clip.indexBySOReference.value == direction)
+                         return clip;
+               }
+               return null;
+          }
+     }
 }
