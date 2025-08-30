@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b112895aff932dc45a6662e3c917d84f, type: 3}
   m_Name: Non-Elemental
   m_EditorClassIdentifier: 
-  _thinSprite: {fileID: 3286163911610860551, guid: f26f2b10f00d2604c93a9ba723f6f1aa, type: 3}
-  _thickSprite: {fileID: 3286163911610860551, guid: cc13cd0006fad8441873a8b8809a6ebf, type: 3}
+  _thinSprite: {fileID: 3286163911610860551, guid: a6c274a32fd3f9c43b76e1d43a583806, type: 3}
+  _thickSprite: {fileID: 3286163911610860551, guid: db841783966c2c14fa18e14154585fa8, type: 3}
   _textColor: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
   element: 0

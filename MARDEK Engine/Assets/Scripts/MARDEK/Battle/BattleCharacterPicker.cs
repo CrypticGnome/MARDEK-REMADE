@@ -32,7 +32,7 @@ namespace MARDEK.UI
           public static bool EnemiesSelected;
           public static BattleCharacter SelectedCharacter { get; private set; }
           ApplyBattleAction action;
-
+          
           int frameTimer;
           const int WaitForFramesToInitialise = 1;
           Action<InputAction.CallbackContext> invokeActionOnTargetAction;

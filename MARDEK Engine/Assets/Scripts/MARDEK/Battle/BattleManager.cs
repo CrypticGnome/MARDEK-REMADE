@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using MARDEK.CharacterSystem;
 using MARDEK.Stats;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 namespace MARDEK.Battle
 {
@@ -22,6 +22,7 @@ namespace MARDEK.Battle
           [SerializeField] List<GameObject> playerPartyPositions = new();
           [SerializeField] EncounterSet dummyEncounter;
           [SerializeField] BattleCharacterPicker characterPicker;
+          [SerializeField] ActionDisplay actionDisplay;
           public static Encounter Encounter;
           public static EncounterSet encounter { private get; set; }
           public static BattleCharacter characterActing { get; private set; }
@@ -200,6 +201,8 @@ namespace MARDEK.Battle
                     BattleAction move = skill.Action;
                     Debug.Log($"{characterActing.Name} uses {skill.DisplayName}");
                     PerformAction(move.Apply);
+                    instance.actionDisplay.DisplayAction(skill);
+
                }
           }
           public static void PerformActionToTarget(ApplyBattleAction action, BattleCharacter target)
@@ -226,7 +229,6 @@ namespace MARDEK.Battle
 
           public static void PerformAction(ApplyBattleAction action)
           {
-
                BattleCharacter target;
                if (EnemyBattleParty.Contains(characterActing))
                     target = PlayerBattleParty[Random.Range(0, PlayerBattleParty.Count - 1)];

@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 namespace MARDEK.UI
 {
     public class CharacterNameUI : MonoBehaviour
     {
-        [SerializeField] CharacterUI characterUI;
-        [SerializeField] TextMeshProUGUI characteName;
+        [SerializeField] EnemyCharacterUI characterUI;
+        [SerializeField] Text characteName;
 
         void OnEnable()
         {

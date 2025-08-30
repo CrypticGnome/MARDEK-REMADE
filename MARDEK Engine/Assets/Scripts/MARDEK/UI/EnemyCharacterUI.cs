@@ -8,29 +8,37 @@ using UnityEngine.EventSystems;
 namespace MARDEK.UI
 {
     using Battle;
-     public class CharacterUI : MonoBehaviour, IPointerClickHandler
+     public class EnemyCharacterUI : MonoBehaviour, IPointerClickHandler
      {
-          [SerializeField] bool isPlayer;
           public BattleCharacter character { get; private set; }
           [SerializeField] GameObject basePanel;
-          public delegate void Initialised();
-          public Initialised OnInitialisation;
+          [SerializeField] EnemyHealthBar healthBar;
+          [SerializeField] Text characterName;
+          [SerializeField] Image elementImage;
+          [SerializeField] Text levelText;
 
           private void Start()
           {
                UpdateCharacter();
-               OnInitialisation?.Invoke();
+               if (character == null)
+               {
+                    basePanel.SetActive(false);
+                    return;
+               }
+               healthBar.SetCharacter(character);
+               characterName.text = character.Name;
+               elementImage.sprite = character.Profile.element.thickSprite;
+               levelText.text = "Lv " + character.Level.ToString();
           }
 
           void UpdateCharacter()
           {
                basePanel.SetActive(false);
                var index = transform.GetSiblingIndex();
-               List<BattleCharacter> list = isPlayer ? BattleManager.PlayerBattleParty : BattleManager.EnemyBattleParty;
 
-               if (index < list.Count)
+               if (index < BattleManager.EnemyBattleParty.Count)
                {
-                    character = list[index];
+                    character = BattleManager.EnemyBattleParty[index];
                     basePanel.SetActive(true);
                }
                else

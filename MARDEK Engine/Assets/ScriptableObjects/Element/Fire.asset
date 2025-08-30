@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b112895aff932dc45a6662e3c917d84f, type: 3}
   m_Name: Fire
   m_EditorClassIdentifier: 
-  _thinSprite: {fileID: 3286163911610860551, guid: e45636761f73b4640b5e33588e056efd, type: 3}
-  _thickSprite: {fileID: 3286163911610860551, guid: 75ca6cef1f0347148b7d0afdd5c1c2c0, type: 3}
+  _thinSprite: {fileID: 3286163911610860551, guid: ed842c2948349de488f70fbe597026ef, type: 3}
+  _thickSprite: {fileID: 3286163911610860551, guid: 5fcec01883c087942ae5a7dc5e851fd9, type: 3}
   _textColor: {r: 0.98039216, g: 0.39215687, b: 0, a: 1}
   element: 1

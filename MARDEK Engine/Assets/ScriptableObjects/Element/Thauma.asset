@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b112895aff932dc45a6662e3c917d84f, type: 3}
   m_Name: Thauma
   m_EditorClassIdentifier: 
-  _thinSprite: {fileID: 3286163911610860551, guid: edaded33481e48442bdccad756633418, type: 3}
-  _thickSprite: {fileID: 3286163911610860551, guid: 3e62bdf1d580b2740ab670015c4d0c13, type: 3}
+  _thinSprite: {fileID: 3286163911610860551, guid: 6dc236f0a7b30c849877fd6dea458ace, type: 3}
+  _thickSprite: {fileID: 3286163911610860551, guid: 99111108a0d9b1f4581d653c48d955a8, type: 3}
   _textColor: {r: 0.7058824, g: 0, b: 0.98039216, a: 1}
   element: 9

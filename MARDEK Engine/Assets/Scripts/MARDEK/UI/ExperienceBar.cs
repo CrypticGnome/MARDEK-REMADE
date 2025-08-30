@@ -4,24 +4,22 @@ using UnityEngine;
 using MARDEK.Stats;
 using MARDEK.CharacterSystem;
 using MARDEK.Battle;
+using UnityEngine.UI;
 
 namespace MARDEK.UI
 {
     public class ExperienceBar : MonoBehaviour
     {
-          [SerializeField] CharacterUI characterUI = null;
           [SerializeField] RectTransform barTransform;
-          [SerializeField] TMPro.TMP_Text statText;
+          [SerializeField] Text statText;
+          HeroBattleCharacter character;
 
-          private void Awake()
+          public void SetCharacter(HeroBattleCharacter character)
           {
-               characterUI.OnInitialisation += Initialise;
-          }
-          void Initialise()
-          {
-               if (characterUI.character is null)
+               if (character is null)
                     return;
-               characterUI.character.OnStatChanged += UpdateBar;
+               this.character = character;
+               character.OnStatChanged += UpdateBar;
                UpdateBar();
           }
           private void Update()
@@ -33,18 +31,13 @@ namespace MARDEK.UI
           [ContextMenu("Update Bar")]
           void UpdateBar()
           {
-               BattleCharacter bCharacter = characterUI.character;
-               if (bCharacter == null)
+               if (character == null)
                     return;
-               if (!(bCharacter is HeroBattleCharacter heroCharacter))
-               {
-                    Debug.LogAssertion("Experience bars must only be placed on hero characters, i think, needs checking");
-                    return;
-               }
-               var statValue = (float)heroCharacter.Experience;
+
+               var statValue = (float)character.Experience;
                var maxStatValue = 100;
                if (statText)
-                    statText.text = statValue.ToString();
+                    statText.text = "Lv " + character.Level.ToString();
                if (barTransform)
                {
                     float xScale = Mathf.Clamp(statValue / maxStatValue , 0f, 1f);
