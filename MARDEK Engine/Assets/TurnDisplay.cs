@@ -10,9 +10,8 @@ namespace MARDEK.UI
      public class TurnDisplay : MonoBehaviour
      {
           [SerializeField] GameObject[] heroIcons, enemyIcons;
-          RectTransform[] heroTransforms, enemyTransforms;
-          Image[] heroImages, enemyImages;
-
+          [SerializeField, HideInInspector] RectTransform[] heroTransforms = new RectTransform[4], enemyTransforms = new RectTransform[5];
+          [SerializeField, HideInInspector] Image[] heroImages = new Image[4], enemyImages = new Image[5];
           [SerializeField] RectTransform displayTransform;
 
           List<BattleCharacter> playerParty { get => BattleManager.PlayerBattleParty; }
@@ -21,20 +20,23 @@ namespace MARDEK.UI
 
           private void OnValidate()
           {
-               heroTransforms = new RectTransform[heroIcons.Length];
-               enemyTransforms = new RectTransform[enemyIcons.Length];
-               heroImages = new Image[heroIcons.Length];
-               enemyImages = new Image[enemyIcons.Length];
-
                for (int i = 0; i< heroIcons.Length; i++)
                {
-                    if (heroIcons[i].TryGetComponent(out heroTransforms[i])) Debug.LogError($"Failure to validate {name}");
-                    if (heroIcons[i].TryGetComponent(out heroImages[i])) Debug.LogError($"Failure to validate {name}");
+                    if (!heroTransforms[i])
+                         if (heroIcons[i].TryGetComponent(out heroTransforms[i])) 
+                              Debug.LogError($"Failure to validate {heroTransforms[i].name}");
+                    if (!heroImages[i]) 
+                         if (heroIcons[i].TryGetComponent(out heroImages[i])) 
+                         Debug.LogError($"Failure to validate {heroTransforms[i].name}");
                }
                for (int i = 0; i < enemyIcons.Length; i++)
                {
-                    if (enemyIcons[i].TryGetComponent(out enemyTransforms[i])) Debug.LogError($"Failure to validate {name}");
-                    if (enemyIcons[i].TryGetComponent(out enemyImages[i])) Debug.LogError($"Failure to validate {name}");
+                    if (!enemyTransforms[i])
+                         if(enemyIcons[i].TryGetComponent(out enemyTransforms[i])) 
+                              Debug.LogError($"Failure to validate {enemyTransforms[i].name}");
+                    if (!enemyImages[i])
+                         if (enemyIcons[i].TryGetComponent(out enemyImages[i])) 
+                              Debug.LogError($"Failure to validate {enemyTransforms[i].name}");
                }
           }
           private void Awake()
