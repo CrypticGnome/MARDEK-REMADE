@@ -9,7 +9,7 @@ namespace MARDEK.UI
     public class SetCurrentCharacterInfo : MonoBehaviour
     {
         [SerializeField] Text nameLabel = null;
-        //[SerializeField] Image elementIcon = null;
+        [SerializeField] Image elementIcon = null;
 
         private void OnEnable()
         {
@@ -17,10 +17,12 @@ namespace MARDEK.UI
             if (character != null)
             {
                 nameLabel.text = character.Profile.displayName;
+                    elementIcon.sprite = character.Profile.element.thickSprite;
             }
             else
             {
                 nameLabel.text = " - ";
+                    elementIcon.sprite = null;
             }
         }
     }

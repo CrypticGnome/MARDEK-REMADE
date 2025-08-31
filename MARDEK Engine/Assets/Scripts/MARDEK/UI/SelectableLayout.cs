@@ -96,7 +96,7 @@ namespace MARDEK.UI
                 Index = 0;
             foreach (var s in Selectables)
                 s.Deselect();
-            //UpdateSelectionAtIndex();
+            UpdateSelectionAtIndex();
         }
         private void Update()
         {
