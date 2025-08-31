@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationSpeed: 5
   _isAnimating: 1
-  clipList: {fileID: 11400000, guid: 4ab9a87a397039344a6538cbdac2b70f, type: 2}
+  ClipList: {fileID: 11400000, guid: 8327385bdec881d46afa42f7d22a6810, type: 2}
   spriteRenderer: {fileID: 1569606400167429447}
 --- !u!1 &7855472329115548052
 GameObject:

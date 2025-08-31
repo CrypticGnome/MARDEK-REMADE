@@ -15,7 +15,6 @@ MonoBehaviour:
   clips:
   - indexBySOReference: {fileID: 0}
     _loop: 1
-    durationMultiplier: 0.77
     spriteSequence:
     - {fileID: 3286163911610860551, guid: 5cd8b2bc72bacc840bfd50e1b4119a22, type: 3}
     - {fileID: 3286163911610860551, guid: 4f76b6c9a4bb6cc43b020ae4ad7188c2, type: 3}
