@@ -23,7 +23,6 @@ namespace MARDEK.UI
           static List<BattleCharacter> Heroes => BattleManager.PlayerBattleParty;
           static List<BattleCharacter> Enemies => BattleManager.EnemyBattleParty;
 
-          static int index = 0;
           /// <summary>
           /// Used to ensure that the action isn't invoked on a target on the same frame as an action is picked, as they both use the "interact" key
           /// </summary>

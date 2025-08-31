@@ -17,12 +17,11 @@ namespace MARDEK.UI
         {
             BattleActionSlotUI.UpdateSelected += UpdateDescription;
         }
-        private void OnEnable()
-        {
-               UpdateDescription(BattleActionSlotUI.selectedInstance);
-        }
-
-        public void UpdateDescription(BattleActionSlot action)
+          private void OnDestroy()
+          {
+               BattleActionSlotUI.UpdateSelected -= UpdateDescription;
+          }
+          public void UpdateDescription(BattleActionSlot action)
         {
             if (action != null)
             {

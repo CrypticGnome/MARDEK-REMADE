@@ -22,14 +22,15 @@ namespace MARDEK.UI
           {
                slot = _slot;
                if (slot == null)
-                   gameObject.SetActive(false);
-               else
                {
-                   nameLabel.text = slot.DisplayName;
-                   sprite.sprite = slot.Sprite;
-                   number.text = slot.Number.ToString();
-                   gameObject.SetActive(true);
+                    gameObject.SetActive(false);
+                    return;
                }
+
+               nameLabel.text = slot.DisplayName;
+               sprite.sprite = slot.Sprite;
+               number.text = slot.Number.ToString();
+               gameObject.SetActive(true);
           }
 
           public void SelectAction() => targetPicker.EnableWithAction(slot.ActionSkill.Action.Apply);

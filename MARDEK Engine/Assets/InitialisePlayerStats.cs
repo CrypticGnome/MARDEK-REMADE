@@ -8,18 +8,13 @@ namespace MARDEK.Temp
           [RuntimeInitializeOnLoadMethod]
           public static void OnStartUp()
           {
-               PartySO[] partySO = Resources.LoadAll<PartySO>("");
-               if (partySO.Length == 0) 
+               PartySO party = Resources.Load<PartySO>("Current Party");
+               if (!party) 
                {
                     Debug.LogError("No party object found");
                     return;
                }
-               if (partySO.Length > 1)
-               {
-                    Debug.LogError("Only one party object can exist");
-                    return;
-               }
-               var party = partySO[0];
+
                foreach (var character in party)
                {
                     character.CurrentHP = character.MaxHP;

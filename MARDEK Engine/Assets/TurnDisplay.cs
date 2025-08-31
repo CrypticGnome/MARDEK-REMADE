@@ -27,7 +27,7 @@ namespace MARDEK.UI
                               Debug.LogError($"Failure to validate {heroTransforms[i].name}");
                     if (!heroImages[i]) 
                          if (heroIcons[i].TryGetComponent(out heroImages[i])) 
-                         Debug.LogError($"Failure to validate {heroTransforms[i].name}");
+                              Debug.LogError($"Failure to validate {heroTransforms[i].name}");
                }
                for (int i = 0; i < enemyIcons.Length; i++)
                {
