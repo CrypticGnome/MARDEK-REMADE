@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97727b890c81574e9c60256ce51f687, type: 3}
+  m_Name: Flame
+  m_EditorClassIdentifier: 
+  <PointsRequiredToMaster>k__BackingField: 0
+  <DisplayName>k__BackingField: Flame
+  <Description>k__BackingField: Makes a target erupt in flames, inflicting fire damage.
+  <Cost>k__BackingField: 6
+  action:
+    element: {fileID: 11400000, guid: e179fa6b43e015742b42814e32864e49, type: 2}
+    soundEffects:
+    - {fileID: 11400000, guid: a52d5f2d380e08643a82317651600218, type: 2}
+    - {fileID: 11400000, guid: 73384767b9df8d04c9ba1b4fa47c5af6, type: 2}
+    actionEffects:
+    - rid: 3818642394809368646
+  references:
+    version: 2
+    RefIds:
+    - rid: 3818642394809368646
+      type: {class: DealMagicDamageStandard, ns: MARDEK.Battle, asm: MARDEK}
+      data:
+        motionValue: 2.5

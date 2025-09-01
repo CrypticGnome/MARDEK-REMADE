@@ -22,12 +22,11 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a52d5f2d380e08643a82317651600218, type: 2}
     - {fileID: 11400000, guid: 56d931c1a2bd99e42b21c6e216d0b9b9, type: 2}
     actionEffects:
-    - rid: 595661094312214606
+    - rid: 3818642394809368645
   references:
     version: 2
     RefIds:
-    - rid: 595661094312214606
-      type: {class: DealMeleeDamageStandard, ns: MARDEK.Battle, asm: MARDEK}
+    - rid: 3818642394809368645
+      type: {class: DealMagicDamageStandard, ns: MARDEK.Battle, asm: MARDEK}
       data:
-        motionValue: 1.1
-        AccuracyRating: 1
+        motionValue: 2.5
