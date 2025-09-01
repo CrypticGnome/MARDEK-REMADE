@@ -9,10 +9,10 @@ namespace MARDEK.Battle
     public class ActionDisplay : MonoBehaviour
     {
           [SerializeField] Image image;
-          [SerializeField] TextMeshProUGUI text;
-        public void DisplayAction(ActionSkill skill)
+          [SerializeField] Text text;
+        public void DisplayAction(IBattleAction skill)
         {
-               image.sprite = skill.Action.Element.thickSprite;
+               image.sprite = skill.ActionIcon;
                text.text = skill.DisplayName;
                gameObject.SetActive(true);
                StartCoroutine(DisplayAction());

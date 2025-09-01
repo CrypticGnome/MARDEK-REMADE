@@ -6,7 +6,7 @@ using MARDEK.CharacterSystem;
 namespace MARDEK.Inventory
 {
     [CreateAssetMenu(menuName = "MARDEK/Inventory/ExpendableItem")]
-    public class ExpendableItem : Item
+    public class ExpendableItem : Item, IBattleAction
      { 
         [SerializeField] string _colorHexCode;
         [SerializeField] string _pfx;
@@ -14,7 +14,11 @@ namespace MARDEK.Inventory
           [SerializeField] BattleAction action;
           public BattleAction Action { get{ return action; } }
 
-        public ExpendableItem(){
+          public Sprite ActionIcon => sprite;
+
+          public string DisplayName => displayName;
+
+          public ExpendableItem(){
             //statsSet = new StatsSet();
         }
 
@@ -22,5 +26,11 @@ namespace MARDEK.Inventory
         {
             return new Color(81f / 255f, 113f / 255f, 217f / 255f);
         }
+
+          public bool TryPerformAction(BattleCharacter user, BattleCharacter target)
+          {
+               action.Apply(user, target);
+               return true;
+          }
      }
 }

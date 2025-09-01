@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using MARDEK.Battle;
 using MARDEK.CharacterSystem;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace MARDEK.UI
 {
-    using Core;
-    public class BattleActionSlotUI : Selectable
-    {
+     public class BattleActionUI : Selectable
+     {
           public delegate void UpdateSelectedSlot(BattleActionSlot slot);
           public static BattleActionSlot selectedInstance;
           public static UpdateSelectedSlot UpdateSelected { get; set; }
@@ -17,7 +15,7 @@ namespace MARDEK.UI
           [SerializeField] Text number;
           BattleActionSlot slot;
           [SerializeField] BattleCharacterPicker targetPicker;
-
+          [SerializeField] BattleActionDescription actionDescription;
           public void SetSlot(BattleActionSlot _slot)
           {
                slot = _slot;
@@ -33,13 +31,14 @@ namespace MARDEK.UI
                gameObject.SetActive(true);
           }
 
-          public void SelectAction() => targetPicker.EnableWithAction(slot.ActionSkill.Action.Apply);
+          public void SelectAction() => targetPicker.EnableWithAction(slot.Action);
 
           public override void Select(bool playSFX = true)
           {
                base.Select(playSFX);
                selectedInstance = slot;
                UpdateSelected?.Invoke(slot);
+               actionDescription.UpdateDescription(slot);
           }
-    }
+     }
 }

@@ -9,7 +9,7 @@ using MARDEK.Battle;
 
 namespace MARDEK.UI
 {
-     public class ListCharacterSkillset : ListActions
+     public class ListCharacterSkillset : ListBattleActions
      {
           ActionSkillset skillsetToShow;
           [SerializeField] TextMeshProUGUI skillsetNameLabel = null;

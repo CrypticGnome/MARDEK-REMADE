@@ -13,14 +13,7 @@ namespace MARDEK.UI
         [SerializeField] Text description;
         [SerializeField] Image icon;
 
-        private void Awake()
-        {
-            BattleActionSlotUI.UpdateSelected += UpdateDescription;
-        }
-          private void OnDestroy()
-          {
-               BattleActionSlotUI.UpdateSelected -= UpdateDescription;
-          }
+
           public void UpdateDescription(BattleActionSlot action)
         {
             if (action != null)

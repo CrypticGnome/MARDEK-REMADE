@@ -116,6 +116,8 @@ namespace MARDEK.Battle
                     varianceDecimal: 0.1f);
 
                target.CurrentHP -= damage;
+               target.CurrentHP = Mathf.Clamp(target.CurrentHP, 0, target.MaxHP);
+
                Debug.Log($"{user.Profile.displayName} targets {target.Profile.displayName} for {damage} damage");
           }
      }

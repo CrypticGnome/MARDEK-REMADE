@@ -17,7 +17,7 @@ namespace MARDEK.UI
           }
           public void SelectAction()
         {
-               targetPicker.EnableWithAction(attack.Action.Apply);
+               targetPicker.EnableWithAction(attack);
         }
     }
 }

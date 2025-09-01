@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 658911157897665740}
   - component: {fileID: 7917111169692507689}
   - component: {fileID: 6834639815672687872}
-  - component: {fileID: 5881335801273842901}
   - component: {fileID: 7622678203982319639}
+  - component: {fileID: 5650361143393850422}
   m_Layer: 5
   m_Name: Battle Action Entry
   m_TagString: Untagged
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5881335801273842901
+--- !u!114 &7622678203982319639
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,7 +91,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 1896099190278172460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5614e30826b2fe4cb9a1550dd20fd3b, type: 3}
+  m_Script: {fileID: 11500000, guid: a4372188b3f0cda4e84043ba4bd429b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  binds:
+  - action:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Action
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: 681da35d-308d-4958-a1d1-2511b7441eff
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: 663451883571341888, guid: 842e31e9d541ad04c8c2cd7997d79b05, type: 3}
+    bindStarted: 0
+    bindPerformed: 1
+    bindCanceled: 0
+    _event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5650361143393850422}
+          m_TargetAssemblyTypeName: MARDEK.UI.BattleActionSlotUI, MARDEK.UI
+          m_MethodName: SelectAction
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &5650361143393850422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896099190278172460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7fed25569ca4cd4585b1b7e9ffc68fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OnSelected:
@@ -153,49 +196,7 @@ MonoBehaviour:
   sprite: {fileID: 3149030348064922398}
   nameLabel: {fileID: 982494469663131347}
   number: {fileID: 1815818204629277127}
---- !u!114 &7622678203982319639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896099190278172460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4372188b3f0cda4e84043ba4bd429b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  binds:
-  - action:
-      m_UseReference: 1
-      m_Action:
-        m_Name: Action
-        m_Type: 0
-        m_ExpectedControlType: 
-        m_Id: 681da35d-308d-4958-a1d1-2511b7441eff
-        m_Processors: 
-        m_Interactions: 
-        m_SingletonActionBindings: []
-        m_Flags: 0
-      m_Reference: {fileID: 663451883571341888, guid: 842e31e9d541ad04c8c2cd7997d79b05, type: 3}
-    bindStarted: 0
-    bindPerformed: 1
-    bindCanceled: 0
-    _event:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 5881335801273842901}
-          m_TargetAssemblyTypeName: MARDEK.UI.BattleActionSlotUI, MARDEK.UI
-          m_MethodName: SelectAction
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  targetPicker: {fileID: 0}
 --- !u!1 &3406485571224901814
 GameObject:
   m_ObjectHideFlags: 0

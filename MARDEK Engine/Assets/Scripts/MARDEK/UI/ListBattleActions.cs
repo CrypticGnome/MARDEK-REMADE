@@ -6,15 +6,15 @@ namespace MARDEK.UI
 {
     using Core;
     using MARDEK.CharacterSystem;
-     public abstract class ListActions : MonoBehaviour
+     public abstract class ListBattleActions : MonoBehaviour
      {
         [SerializeField] SelectableLayout listUI;
-        List<BattleActionSlotUI> actionSlotUIs = new();
+        List<BattleActionUI> actionSlotUIs = new();
         int index = 0;
 
         private void Awake()
         {
-            actionSlotUIs = new List<BattleActionSlotUI>(listUI.GetComponentsInChildren<BattleActionSlotUI>());
+            actionSlotUIs = new List<BattleActionUI>(listUI.GetComponentsInChildren<BattleActionUI>());
         }
 
         protected void ClearSlots()

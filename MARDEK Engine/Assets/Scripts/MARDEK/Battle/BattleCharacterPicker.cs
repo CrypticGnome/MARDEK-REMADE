@@ -19,6 +19,7 @@ namespace MARDEK.UI
           [SerializeField] SpriteRenderer crystalPointerRenderer;
           [SerializeField] GameObject lowerBar;
           [SerializeField] GameObject turnDisplay;
+          [SerializeField] ActionDisplay actionDisplay;
           PlayerControls playerControls;
           static List<BattleCharacter> Heroes => BattleManager.PlayerBattleParty;
           static List<BattleCharacter> Enemies => BattleManager.EnemyBattleParty;
@@ -30,7 +31,7 @@ namespace MARDEK.UI
           static int PositionIndex;
           public static bool EnemiesSelected;
           public static BattleCharacter SelectedCharacter { get; private set; }
-          ApplyBattleAction action;
+          IBattleAction action;
           
           int frameTimer;
           const int WaitForFramesToInitialise = 1;
@@ -115,9 +116,11 @@ namespace MARDEK.UI
           {
                if (Time.time == enabledTime) return;
                BattleManager.PerformActionToTarget(action, SelectedCharacter);
+               actionDisplay.DisplayAction(action);
                gameObject.SetActive(false);
+
           }
-          public void EnableWithAction(ApplyBattleAction action)
+          public void EnableWithAction(IBattleAction action)
           {
                // Currently assume that the target is the enemy, may want to pass in a parameter to say which team the action should default to at some point
                enabledTime = Time.time;

@@ -16,25 +16,14 @@ namespace MARDEK.CharacterSystem
           public Sprite Sprite;
           public int Number;
           public string Description;
-          public ApplyBattleAction PerformAction;
-          public ActionSkill ActionSkill;
-          public void ApplyAction()
-          {
-               if (ActionSkill.Cost > BattleManager.characterActing.CurrentMP)
-               {
-                    Debug.LogWarning("Cannot afford skill");
-                    return;
-               }
-               int currentMP = BattleManager.characterActing.CurrentMP;
-               int newMP = currentMP - ActionSkill.Cost;
-               BattleManager.characterActing.CurrentMP = newMP;
+          public IBattleAction Action;
 
-               BattleManager.PerformAction(PerformAction);
-          }
+          public void ApplyAction(BattleCharacter target) => BattleManager.PerformActionToTarget(Action, target);
+
+
           public BattleActionSlot(ActionSkill skill)
           {
-               ActionSkill = skill;
-               Battle.BattleAction action = skill.Action;
+               BattleAction action = skill.Action;
                if (action.Element is null)
                {
                     Debug.LogAssertion($"{skill.DisplayName} does not have an attatched element");
@@ -44,7 +33,7 @@ namespace MARDEK.CharacterSystem
                Sprite = action.Element.thickSprite;
                Number = skill.Cost;
                Description = skill.Description;
-               PerformAction = action.Apply;
+               Action = skill;
           }
 
           public BattleActionSlot(InventorySlot inventorySlot)
@@ -54,7 +43,7 @@ namespace MARDEK.CharacterSystem
                Sprite = item.sprite;
                Number = inventorySlot.Number;
                Description = item.description;
-               PerformAction = item.Action.Apply;
+               Action = item;
           }
      }
 }

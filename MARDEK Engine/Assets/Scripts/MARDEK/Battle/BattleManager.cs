@@ -11,8 +11,7 @@ namespace MARDEK.Battle
      using MARDEK.Skill;
      using MARDEK.UI;
      using Progress;
-    using UnityEngine.Events;
-     using static MARDEK.Battle.BattleManager;
+
 
     public class BattleManager : MonoBehaviour
     {
@@ -184,14 +183,12 @@ namespace MARDEK.Battle
                          return;
                     }
                     ActionSkill skill = enemyMoveset.Skills[Random.Range(0, enemyMoveset.Skills.Count)];
-                    BattleAction move = skill.Action;
                     Debug.Log($"{characterActing.Name} uses {skill.DisplayName}");
-                    PerformAction(move.Apply);
+                    PerformActionToTarget(skill, PlayerBattleParty[Random.Range(0, playerParty.Count)]);
                     instance.actionDisplay.DisplayAction(skill);
-
                }
           }
-          public static void PerformActionToTarget(ApplyBattleAction action, BattleCharacter target)
+          public static void PerformActionToTarget(IBattleAction action, BattleCharacter target)
           {
                if (action is null)
                {
@@ -201,28 +198,17 @@ namespace MARDEK.Battle
                }
 
                instance.state = BattleState.ActionPerforming;
-               action.Invoke(characterActing, target);
+               action.TryPerformAction(characterActing, target);
                instance.StartCoroutine(PlayAttack());
 
                IEnumerator PlayAttack()
                {
-                    WaitForSeconds waitForAnimationPlaceholder = new WaitForSeconds(1);
+                    WaitForSeconds waitForAnimationPlaceholder = new WaitForSeconds(1.5f);
                     yield return waitForAnimationPlaceholder;
                     instance.EndTurn();
-
                }
           }
 
-          public static void PerformAction(ApplyBattleAction action)
-          {
-               BattleCharacter target;
-               if (EnemyBattleParty.Contains(characterActing))
-                    target = PlayerBattleParty[Random.Range(0, PlayerBattleParty.Count - 1)];
-               else
-                    target = EnemyBattleParty[Random.Range(0, EnemyBattleParty.Count - 1)];
-
-               PerformActionToTarget(action, target);
-          }
           void EndTurn()
           {
                for (int i = EnemyBattleParty.Count - 1; i >= 0; i--)
@@ -251,10 +237,7 @@ namespace MARDEK.Battle
                instance.characterActionUI.SetActive(false);
                instance.CheckBattleEnd();
           }
-          public void SkipCurrentCharacterTurn()
-          {
-               EndTurn();
-          }
+          public void SkipCurrentCharacterTurn() => EndTurn();
     
           void CheckBattleEnd()
           {
@@ -277,7 +260,7 @@ namespace MARDEK.Battle
           IEnumerator Victory()
           {
                print("victory!!");
-               yield return new WaitForSeconds(2);
+               yield return new WaitForSeconds(1);
                BattleUIManager.Instance.OnVictory();
 
                for (int i = 0; i < playerParty.Count; i++)
@@ -298,6 +281,4 @@ namespace MARDEK.Battle
                Concluding
           }
     }
-     public delegate void ApplyBattleAction(BattleCharacter user, BattleCharacter target);
-
 }
