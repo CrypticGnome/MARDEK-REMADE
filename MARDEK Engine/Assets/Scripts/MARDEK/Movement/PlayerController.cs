@@ -22,7 +22,6 @@ namespace MARDEK.Movement
             else
                 Debug.LogError("there was already a PlayerController instance when a new PlayerController awoke");
         }
-
         public static Movable GetPlayerMovement()
         {
             if (instance)
@@ -52,6 +51,7 @@ namespace MARDEK.Movement
         public void OnMovementInput(InputAction.CallbackContext ctx)
         {
             Vector2 direction = ctx.ReadValue<Vector2>();
+               Debug.Log(direction);
             if (direction.x == 0 || direction.y == 0)
                 desiredDirection = GetMoveDirection(direction);
             else
