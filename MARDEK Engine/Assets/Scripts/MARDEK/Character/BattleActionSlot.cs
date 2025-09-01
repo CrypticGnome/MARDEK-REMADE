@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 namespace MARDEK.CharacterSystem
@@ -7,11 +6,8 @@ namespace MARDEK.CharacterSystem
     using Core;
      using MARDEK.Skill;
      using MARDEK.Battle;
-     using Stats;
      using System;
      using MARDEK.Inventory;
-     using static PlasticPipe.Server.MonitorStats;
-     using static Codice.CM.Common.CmCallContext;
 
      [Serializable]
     public class BattleActionSlot 

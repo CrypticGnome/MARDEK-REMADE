@@ -470,7 +470,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6136541777059094979}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 61.929}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.449}
 --- !u!212 &7834523099881904865
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -819,7 +819,7 @@ Transform:
   m_Children:
   - {fileID: 5188334098851609046}
   m_Father: {fileID: 6136541777059094979}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 33.585}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 8.646}
 --- !u!212 &5821673579715455231
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1287,7 +1287,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8814976127099528109}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -85.966}
 --- !u!212 &6091156035253408538
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1353,6 +1353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6136541777059094979}
   - component: {fileID: 5547780620332828856}
+  - component: {fileID: 9183369141929729552}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -1399,11 +1400,109 @@ Animation:
   m_Animation: {fileID: 7400000, guid: ff4ed23f294b70741b70efde52def734, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: ff4ed23f294b70741b70efde52def734, type: 2}
+  - {fileID: 7400000, guid: 3ce11f1278367d947a5eb2834764a2d6, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!82 &9183369141929729552
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315171882359351003}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7604156753898284007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,7 +1534,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6136541777059094979}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -55.632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -57.04}
 --- !u!212 &1652914888600637083
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1523,7 +1622,7 @@ Transform:
   m_Children:
   - {fileID: 2882911011184659488}
   m_Father: {fileID: 6136541777059094979}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -55.632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -58.348}
 --- !u!212 &8408781944551382552
 SpriteRenderer:
   m_ObjectHideFlags: 0

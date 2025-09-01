@@ -40,18 +40,8 @@ namespace MARDEK.Battle
           private void Awake()
           {
                instance = this;
-               if (!encounter)
-               {
-                    if (!dummyEncounter)
-                    {
-                         Debug.LogAssertion("Encounter is null");
-                         CheckBattleEnd();
-                         return;
-                    }
-                    encounter = dummyEncounter;
-               }
+               if (!encounter) encounter = dummyEncounter;
                InstantiateEncounter();
-
                state = BattleState.Idle;
           }
 
@@ -85,6 +75,8 @@ namespace MARDEK.Battle
           }
           void SetInitialACT()
           {
+               // Maybe have it so that if you press interact quickly your party gets an initial act bonus?
+               // Sort of like how currently if you press x currentyl you can just skip the battle
                bool partySurprised = false;
                List<float> timesToTurn = new List<float>();
                List<BattleCharacter> allCharacters = new List<BattleCharacter>();
@@ -129,20 +121,14 @@ namespace MARDEK.Battle
                {
                     float minValue = input.Min();
 
-                    for (int i = 0; i < allCharacters.Count; i++) 
-                    {
-                         tempACT[i] -= minValue;
-                    }
+                    for (int i = 0; i < allCharacters.Count; i++) tempACT[i] -= minValue;
                }
                void CompressListToCap(List<float> input)
                {
                     float maxValue = input.Max();
                     float compressionFactor = TurnManager.ActResolution / maxValue;
 
-                    for (int i = 0; i < allCharacters.Count; i++)
-                    {
-                         tempACT[i] *= compressionFactor;
-                    }
+                    for (int i = 0; i < allCharacters.Count; i++) tempACT[i] *= compressionFactor;
                }
           }
 
@@ -312,7 +298,6 @@ namespace MARDEK.Battle
                Concluding
           }
     }
-     //public delegate void ApplyAction(Character target);
      public delegate void ApplyBattleAction(BattleCharacter user, BattleCharacter target);
 
 }
