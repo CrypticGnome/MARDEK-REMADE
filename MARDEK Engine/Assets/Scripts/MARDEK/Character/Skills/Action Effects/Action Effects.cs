@@ -90,6 +90,7 @@ namespace MARDEK.Battle
 
                target.CurrentHP -= damage;
                target.CurrentHP = Mathf.Clamp(target.CurrentHP, 0, target.MaxHP);
+               target.battleModel.DamageDisplay.DisplayHPChange(-damage);
                Debug.Log($"{user.Profile.displayName} targets {target.Profile.displayName} for {damage} damage");
           }
      }
@@ -117,6 +118,7 @@ namespace MARDEK.Battle
 
                target.CurrentHP -= damage;
                target.CurrentHP = Mathf.Clamp(target.CurrentHP, 0, target.MaxHP);
+               target.battleModel.DamageDisplay.DisplayHPChange(-damage);
 
                Debug.Log($"{user.Profile.displayName} targets {target.Profile.displayName} for {damage} damage");
           }
@@ -135,18 +137,30 @@ namespace MARDEK.Battle
                     heal *= -1;
 
                target.CurrentHP = Mathf.Clamp(target.CurrentHP + heal, 0, target.MaxHP);
+               target.battleModel.DamageDisplay.DisplayHPChange(heal);
                Debug.Log($"{user.Profile.displayName} heals {target.Profile.displayName} for {heal} hp");
           }
      }
      public class ManaHeal: ActionEffects
      {
           public float MotionValue;
-          public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element) => target.CurrentMP += (int)MotionValue;
+          public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element)
+          {
+               int manaHeal = (int)MotionValue;
+               target.CurrentMP += manaHeal;
+               target.battleModel.DamageDisplay.DisplayMPChange(manaHeal);
+
+          }
      }
      public class ConstHeal : ActionEffects
      {
           public float MotionValue;
-          public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element) => target.CurrentHP += (int)MotionValue;
+          public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element)
+          {
+               int heal = (int)MotionValue;
+               target.CurrentHP += heal;
+               target.battleModel.DamageDisplay.DisplayHPChange(heal);
+          }
      }
      public class DealStatusDamage : ActionEffects
      {

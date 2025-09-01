@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   calculatorType: 2
   constantValue: 88
-  levelMultiplier: 5
+  levelMultiplier: 6

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemies:
   - enemy: {fileID: 11400000, guid: ce12f4c252a22df43ae3d3cc02e3dde3, type: 2}
-    minLevel: 3
-    maxLevel: 4
+    minLevel: 4
+    maxLevel: 5
   - enemy: {fileID: 11400000, guid: ce12f4c252a22df43ae3d3cc02e3dde3, type: 2}
     minLevel: 4
     maxLevel: 5
