@@ -5592,11 +5592,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155f0924c8446b546a2a043a61438e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idle: {fileID: 7400000, guid: d060ccb275e99d84c9120c9eb4a5a955, type: 2}
+  idle: {fileID: 7400000, guid: d4421d985610eec49ae6e5e6ed608441, type: 2}
   moveto: {fileID: 0}
   strike: {fileID: 0}
   jumpback: {fileID: 0}
-  hit: {fileID: 0}
+  hurt: {fileID: 7400000, guid: d060ccb275e99d84c9120c9eb4a5a955, type: 2}
   die: {fileID: 0}
   dead: {fileID: 0}
   spellcast: {fileID: 0}
@@ -5617,6 +5617,7 @@ Animation:
   serializedVersion: 4
   m_Animation: {fileID: 7400000, guid: d060ccb275e99d84c9120c9eb4a5a955, type: 2}
   m_Animations:
+  - {fileID: 7400000, guid: d4421d985610eec49ae6e5e6ed608441, type: 2}
   - {fileID: 7400000, guid: d060ccb275e99d84c9120c9eb4a5a955, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1

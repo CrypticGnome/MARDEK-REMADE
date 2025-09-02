@@ -225,7 +225,7 @@ MonoBehaviour:
   moveto: {fileID: 0}
   strike: {fileID: 0}
   jumpback: {fileID: 0}
-  hit: {fileID: 0}
+  hurt: {fileID: 7400000, guid: 08e54f2ab7be9f444bfa36da5294f8be, type: 2}
   die: {fileID: 0}
   dead: {fileID: 0}
   spellcast: {fileID: 0}
@@ -1415,7 +1415,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cd6b278794edcd943899806335859b8d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1436,7 +1436,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3286163911610860551, guid: 22d3cfdff5262cb43aa1063eb574f27f, type: 3}
+  m_Sprite: {fileID: 3286163911610860551, guid: 95055bc359963a846b19d6945405b144, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1503,6 +1503,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 9cee7ace8a0981142b8602501ca650fb, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 9cee7ace8a0981142b8602501ca650fb, type: 2}
+  - {fileID: 7400000, guid: 08e54f2ab7be9f444bfa36da5294f8be, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0

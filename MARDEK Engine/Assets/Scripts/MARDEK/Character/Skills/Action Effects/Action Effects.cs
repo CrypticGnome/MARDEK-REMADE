@@ -90,7 +90,9 @@ namespace MARDEK.Battle
 
                target.CurrentHP -= damage;
                target.CurrentHP = Mathf.Clamp(target.CurrentHP, 0, target.MaxHP);
+
                target.battleModel.DamageDisplay.DisplayHPChange(-damage);
+               target.battleModel.PlayAnimation(BattleAnimationType.Hurt);
                Debug.Log($"{user.Profile.displayName} targets {target.Profile.displayName} for {damage} damage");
           }
      }
@@ -119,6 +121,7 @@ namespace MARDEK.Battle
                target.CurrentHP -= damage;
                target.CurrentHP = Mathf.Clamp(target.CurrentHP, 0, target.MaxHP);
                target.battleModel.DamageDisplay.DisplayHPChange(-damage);
+               target.battleModel.PlayAnimation(BattleAnimationType.Hurt);
 
                Debug.Log($"{user.Profile.displayName} targets {target.Profile.displayName} for {damage} damage");
           }

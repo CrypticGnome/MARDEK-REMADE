@@ -327,7 +327,7 @@ MonoBehaviour:
   moveto: {fileID: 0}
   strike: {fileID: 0}
   jumpback: {fileID: 0}
-  hit: {fileID: 0}
+  hurt: {fileID: 7400000, guid: a4b6b2b6ddef4cc428240bc225ea0653, type: 2}
   die: {fileID: 0}
   dead: {fileID: 0}
   spellcast: {fileID: 0}
@@ -973,13 +973,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5702147440084701946}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -2.6, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.07547265, w: 0.9971479}
+  m_LocalPosition: {x: 0.9, y: -1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4812485022595274836}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -8.657}
 --- !u!212 &6063983261896032935
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1472,6 +1472,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 227291c00814ad24b9db4fa458b302a8, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 227291c00814ad24b9db4fa458b302a8, type: 2}
+  - {fileID: 7400000, guid: a4b6b2b6ddef4cc428240bc225ea0653, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0

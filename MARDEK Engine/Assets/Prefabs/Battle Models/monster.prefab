@@ -67,7 +67,7 @@ MonoBehaviour:
   moveto: {fileID: 0}
   strike: {fileID: 0}
   jumpback: {fileID: 0}
-  hit: {fileID: 0}
+  hurt: {fileID: 0}
   die: {fileID: 0}
   dead: {fileID: 0}
   spellcast: {fileID: 0}
