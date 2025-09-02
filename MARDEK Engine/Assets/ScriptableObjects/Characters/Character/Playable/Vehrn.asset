@@ -1,0 +1,326 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a631644fc3ba61f4eab5372b9e230cc1, type: 3}
+  m_Name: Vehrn
+  m_EditorClassIdentifier: 
+  isRequired: 0
+  <Profile>k__BackingField: {fileID: 11400000, guid: 71901701634692746b59bdb92110b14d, type: 2}
+  <ItemsEquipped>k__BackingField:
+    MainHand:
+      currentItem: {fileID: 11400000, guid: d0ec58391cc5f5d40a5762737fdc0cb6, type: 2}
+      currentAmount: 1
+      itemFilter: []
+      canBeEmpty: 0
+    OffHand:
+      currentItem: {fileID: 11400000, guid: e11427f3795e6a24cbf9ec6bf3fa480b, type: 2}
+      currentAmount: 1
+      itemFilter: []
+      canBeEmpty: 0
+    Head:
+      currentItem: {fileID: 11400000, guid: e7d85f108dd82d541985e619648e71bb, type: 2}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    Body:
+      currentItem: {fileID: 11400000, guid: 2c8a4fab5f5616946920ba5667232c84, type: 2}
+      currentAmount: 1
+      itemFilter: []
+      canBeEmpty: 0
+    Accessory1:
+      currentItem: {fileID: 0}
+      currentAmount: 1
+      itemFilter: []
+      canBeEmpty: 0
+    Accessory2:
+      currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+  <Inventory>k__BackingField:
+    slots:
+    - currentItem: {fileID: 11400000, guid: 3071228e88047bf4295c85c047f12146, type: 2}
+      currentAmount: 10
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 11400000, guid: d21b34bf0c4f1d642a1331bd3da836c9, type: 2}
+      currentAmount: 23
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 11400000, guid: 22997cf129bc56b49b0cdaaac62391fc, type: 2}
+      currentAmount: 8
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+    - currentItem: {fileID: 0}
+      currentAmount: 0
+      itemFilter: []
+      canBeEmpty: 0
+  <ActionSkillset>k__BackingField: {fileID: 11400000, guid: 0b186b3e1c66e2748938b2bd069b7f32, type: 2}
+  attack: 20
+  defense: 7
+  magicDefense: 0
+  _currentHP: 285
+  _currentMP: 50
+  StatusBuildup:
+    poison: 0
+    sleep: 0
+    paralysis: 0
+    blindness: 0
+    silence: 0
+    numbness: 0
+    curse: 0
+    confusion: 0
+    bleed: 0
+    zombification: 0
+  Level: 8
+  Experience: 0
+  <ReactionSkillset>k__BackingField: {fileID: 0}
+  <PassiveSkillset>k__BackingField: {fileID: 0}
