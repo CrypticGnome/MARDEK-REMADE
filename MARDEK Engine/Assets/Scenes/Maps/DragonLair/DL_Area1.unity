@@ -1406,6 +1406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockPlayerActions: 1
+  runParallel: 0
   dialogue: {fileID: 11400000, guid: e455d0732ca59ff42a6c51340b7d565c, type: 2}
 --- !u!114 &1366511939
 MonoBehaviour:
@@ -1435,6 +1436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockPlayerActions: 1
+  runParallel: 0
   targetAnimator: {fileID: 0}
   animationDirection: {fileID: 11400000, guid: ea6556b4aef89a245b8056a40173133b, type: 2}
 --- !u!114 &1366511941
@@ -1450,6 +1452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockPlayerActions: 1
+  runParallel: 0
   target: {fileID: 0}
   moves:
   - Direction: {fileID: 11400000, guid: 68156aea096e65743afea262fcebc62c, type: 2}
@@ -1481,6 +1484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb37cef4635aaca4da15e2a207a12ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lockPlayerActions: 1
+  runParallel: 0
   commands:
   - {fileID: 1366511941}
   - {fileID: 1366511940}
@@ -1620,6 +1625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockPlayerActions: 1
+  runParallel: 0
   OnTrue: {fileID: 0}
   OnFalse: {fileID: 1366511943}
   branchCondition:
@@ -1644,6 +1650,7 @@ MonoBehaviour:
   onTriggerExit: 0
   tagName: Player
   command: {fileID: 1611162750}
+  performOngoinCommandsAsync: 1
 --- !u!1001 &1624301143
 PrefabInstance:
   m_ObjectHideFlags: 0

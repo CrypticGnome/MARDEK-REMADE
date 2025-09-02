@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a031303ea2aef449977b03a24ac196, type: 3}
+  m_Script: {fileID: 11500000, guid: 43064799601f10d4cb58142a74826df5, type: 3}
   m_Name: DamageDealtCounter
   m_EditorClassIdentifier: 
+  Value: 0
