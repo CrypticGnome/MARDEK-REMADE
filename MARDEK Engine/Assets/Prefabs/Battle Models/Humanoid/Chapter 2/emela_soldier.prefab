@@ -189,7 +189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8600752376040989071
 Transform:
   m_ObjectHideFlags: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
   moveto: {fileID: 0}
   strike: {fileID: 0}
   jumpback: {fileID: 0}
-  hit: {fileID: 0}
+  hurt: {fileID: 7400000, guid: ec3689074265810418f6a4d49339adf6, type: 2}
   die: {fileID: 0}
   dead: {fileID: 0}
   spellcast: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6019501163229811441
 RectTransform:
   m_ObjectHideFlags: 0

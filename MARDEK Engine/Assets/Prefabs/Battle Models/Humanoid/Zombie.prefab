@@ -225,7 +225,7 @@ MonoBehaviour:
   moveto: {fileID: 0}
   strike: {fileID: 0}
   jumpback: {fileID: 0}
-  hit: {fileID: 0}
+  hurt: {fileID: 7400000, guid: 08e54f2ab7be9f444bfa36da5294f8be, type: 2}
   die: {fileID: 0}
   dead: {fileID: 0}
   spellcast: {fileID: 0}
@@ -512,7 +512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5755439526001895567
 Transform:
   m_ObjectHideFlags: 0
@@ -1363,7 +1363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9138580329033642672
 RectTransform:
   m_ObjectHideFlags: 0

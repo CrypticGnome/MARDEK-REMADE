@@ -225,7 +225,7 @@ MonoBehaviour:
   moveto: {fileID: 0}
   strike: {fileID: 0}
   jumpback: {fileID: 0}
-  hit: {fileID: 0}
+  hurt: {fileID: 7400000, guid: 08e54f2ab7be9f444bfa36da5294f8be, type: 2}
   die: {fileID: 0}
   dead: {fileID: 0}
   spellcast: {fileID: 0}
@@ -1503,6 +1503,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 9cee7ace8a0981142b8602501ca650fb, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 9cee7ace8a0981142b8602501ca650fb, type: 2}
+  - {fileID: 7400000, guid: 08e54f2ab7be9f444bfa36da5294f8be, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
