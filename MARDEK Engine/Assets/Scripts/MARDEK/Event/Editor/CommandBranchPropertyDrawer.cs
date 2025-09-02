@@ -1,8 +1,9 @@
+
+
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEditor.UIElements;
-using UnityEngine;
 using UnityEngine.UIElements;
-
 namespace MARDEK.Event
 {
      [CustomPropertyDrawer(typeof(CommandBranch))]
@@ -25,3 +26,4 @@ namespace MARDEK.Event
           #endregion Overrides
      }
 }
+#endif

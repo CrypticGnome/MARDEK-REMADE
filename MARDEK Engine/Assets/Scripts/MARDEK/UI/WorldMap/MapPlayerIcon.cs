@@ -1,12 +1,8 @@
 using MARDEK.Core;
 using MARDEK.Movement;
-using MARDEK.UI;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.MemoryProfiler;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 namespace MARDEK.UI
 {

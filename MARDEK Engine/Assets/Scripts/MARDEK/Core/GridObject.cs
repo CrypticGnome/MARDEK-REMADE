@@ -7,15 +7,14 @@ namespace MARDEK
     [ExecuteInEditMode, SelectionBase]
     public class GridObject : MonoBehaviour
     {
-          void Update()
+          private void OnValidate()
           {
-               if (Application.isPlaying) return;
                Vector2 centredGridPos = transform.position.ToGridCentre();
                if (centredGridPos != (Vector2)transform.position)
                     transform.Set2DPosition(centredGridPos);
+
           }
-
-
+          
         private void OnDrawGizmos() => Gizmos.DrawWireCube(transform.position, Vector3.one);
 
     }

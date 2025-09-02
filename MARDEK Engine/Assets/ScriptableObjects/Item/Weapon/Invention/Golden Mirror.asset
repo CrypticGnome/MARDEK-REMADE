@@ -9,34 +9,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f13698c79568447a0b3862945c868a, type: 3}
+  m_Script: {fileID: 11500000, guid: 42835d9f816510946974f97e25505c64, type: 3}
   m_Name: Golden Mirror
   m_EditorClassIdentifier: 
-  _displayName: Golden Mirror
-  _elementText: Light
-  _description: An Invention for use by an Inventor. It's a mirror made from magical
-    crystal, which can be used to give the entire party the Magical Shield status.
-  _sprite: {fileID: 21300000, guid: 40c263a386853f149bf79400836267f5, type: 3}
-  _element: {fileID: 11400000, guid: 57ae7927a13bd1b479f4301ce3b69221, type: 2}
-  _price: 1000
-  <SkillsToEquip>k__BackingField: []
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
+  _price: 0
   _category: {fileID: 0}
-  _statsSet:
-    intStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 1b22f71dbf2256c4e911d8c67c85b913, type: 2}
-      _value: 5
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 6194235459af05c4c9cbd04f733ace49, type: 2}
-      _value: 2
-    floatStats: []
-  _hitSFX: 0
-  _ATK: 0
-  _CRIT: 0
-  _DEF: 0
-  _EVA: 0
-  _HIT: 0
-  _MDEF: 5
-  _SPR: 0
-  _STR: 0
-  _VIT: 0
-  _categoryText: 
-  <OnlyUsers>k__BackingField: []
+  statBoosts:
+    Attack: 0
+    Defense: 0
+    MagicDefense: 0
+    Absorbtions:
+      Fire: 0
+      Earth: 0
+      Water: 0
+      Air: 0
+      Light: 0
+      Dark: 0
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+      Divine: 0
+    Resistances:
+      poison: 0
+      sleep: 0
+      paralysis: 0
+      blindness: 0
+      silence: 0
+      numbness: 0
+      curse: 0
+      confusion: 0
+      bleed: 0
+      zombification: 0
+    Strength: 0
+    Vitality: 0
+    Spirit: 0
+    Agility: 0
+    Crit: 0
+    Accuracy: 100
+    Health: 0
+    Mana: 0
+  grantSkills: []
+  _hitSFX: 

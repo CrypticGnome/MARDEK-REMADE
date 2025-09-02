@@ -9,15 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c375ea2ef087174388e96bad2feb1eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c67bdc9ba38ff241a08fd0a5ab3551f, type: 3}
   m_Name: Light Crystal of Belfan
   m_EditorClassIdentifier: 
-  _displayName: Light Crystal of Belfan
-  _elementText: Light
-  _description: An Artefact of the Gods. It is essentially crystalised elemental
-    energy, and one of the planet's 'organs', of a sort. This particular crystal
-    is the source of all justice and kindess on Belfan.
-  _sprite: {fileID: 21300000, guid: 876267125856ac84eaf2ad02f442a834, type: 3}
-  _element: {fileID: 11400000, guid: 57ae7927a13bd1b479f4301ce3b69221, type: 2}
-  _price: -1
-  <SkillsToEquip>k__BackingField: []
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
+  _price: 0

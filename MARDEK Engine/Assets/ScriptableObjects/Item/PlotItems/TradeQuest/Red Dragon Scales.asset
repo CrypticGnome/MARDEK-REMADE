@@ -9,15 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c375ea2ef087174388e96bad2feb1eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c67bdc9ba38ff241a08fd0a5ab3551f, type: 3}
   m_Name: Red Dragon Scales
   m_EditorClassIdentifier: 
-  _displayName: Red Dragon Scales
-  _elementText: Fire
-  _description: The scales from a Red Dragon. They're extremely durable - harder
-    than many metals - and are great to use as a material when forging weapons or
-    armour.
-  _sprite: {fileID: 21300000, guid: 83ce48a996ae5be48bb80caf77660363, type: 3}
-  _element: {fileID: 11400000, guid: e179fa6b43e015742b42814e32864e49, type: 2}
-  _price: -1
-  <SkillsToEquip>k__BackingField: []
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
+  _price: 0

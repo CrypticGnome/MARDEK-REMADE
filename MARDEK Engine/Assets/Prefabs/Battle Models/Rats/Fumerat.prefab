@@ -325,7 +325,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1797058295965299320}
-  - component: {fileID: 1668498670405845878}
   - component: {fileID: 5070096225410965222}
   m_Layer: 0
   m_Name: Shadow
@@ -349,18 +348,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4819169270998066147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1668498670405845878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2752071609247102511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c52b53bd2479a0044851407fc5c637b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &5070096225410965222
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -9,23 +9,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f13698c79568447a0b3862945c868a, type: 3}
+  m_Script: {fileID: 11500000, guid: 42835d9f816510946974f97e25505c64, type: 3}
   m_Name: Drill-O-Matic
   m_EditorClassIdentifier: 
-  _displayName: Drill-O-Matic
-  _description: An Invention for use by an Inventor. It's a drill mounted on a spear,
-    which can be used to inflict defence-ignoring non-elemental damage on a single
-    foe.
-  _sprite: {fileID: 21300000, guid: 837e978ad8b7e8f429bb9e572b9ddac7, type: 3}
-  _element: {fileID: 11400000, guid: ce9c718638458254ca7d5945b2b79f0a, type: 2}
-  _price: 1000
-  <SkillsToEquip>k__BackingField: []
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
+  _price: 0
   _category: {fileID: 0}
-  _statsSet:
-    intStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 46c026df8a249b74d8bcb5a7c1a50f02, type: 2}
-      _value: 2
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: b126ec105431be84db0d5e0d2a1d55cc, type: 2}
-      _value: 1
-    floatStats: []
-  _hitSFX: 0
+  statBoosts:
+    Attack: 0
+    Defense: 0
+    MagicDefense: 0
+    Absorbtions:
+      Fire: 0
+      Earth: 0
+      Water: 0
+      Air: 0
+      Light: 0
+      Dark: 0
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+      Divine: 0
+    Resistances:
+      poison: 0
+      sleep: 0
+      paralysis: 0
+      blindness: 0
+      silence: 0
+      numbness: 0
+      curse: 0
+      confusion: 0
+      bleed: 0
+      zombification: 0
+    Strength: 0
+    Vitality: 0
+    Spirit: 0
+    Agility: 0
+    Crit: 0
+    Accuracy: 100
+    Health: 0
+    Mana: 0
+  grantSkills: []
+  _hitSFX: 

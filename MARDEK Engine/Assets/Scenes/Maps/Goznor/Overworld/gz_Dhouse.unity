@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,13 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
-  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -67,9 +65,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -104,7 +99,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +112,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -148,13 +143,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76455183}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1178651517}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &76455185
 TilemapRenderer:
@@ -173,6 +168,9 @@ TilemapRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -268,13 +266,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86980537}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1178651517}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &86980539
 TilemapRenderer:
@@ -293,6 +291,9 @@ TilemapRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -368,6 +369,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2603034590301548656, guid: e6596d43268899347a1a39df54914f58, type: 3}
@@ -423,100 +425,10 @@ PrefabInstance:
       value: Waypoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6596d43268899347a1a39df54914f58, type: 3}
---- !u!1 &847096875
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 847096877}
-  - component: {fileID: 847096876}
-  m_Layer: 0
-  m_Name: Importer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &847096876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847096875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 213c65687814b064795eaed6434e2b8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilesetImporter: {fileID: 11400000, guid: 8c547f292acf27344b81decd37ff5923, type: 2}
-  mapInfo: "map = [[17,12,27,27,12,12,12],[11,11,11,11,11,22,22],[11,24,25,23,11,11,22],[11,11,11,11,11,11,11],[11,11,11,11,11,11,11],[11,11,11,11,11,11,11],[22,11,11,11,11,11,11]];\r\ntileset
-    = \"interior1\";\r\narea = \"gz_Dhouse\";\r\nareaname = \"Deugan\\'s House\";\r\nambience
-    = null;\r\ndungeon = null;\r\nA_sprites = [{name:\"Geography of Belfan\",model:\"object\",x:2,y:0,type:\"examine\",conv:[[\"\",\"There
-    are four main continents on Belfan, as well as numerous smaller continents and
-    archipelagos.\"],[\"\",\"The continent of Hadris is the largest in the world,
-    and most of the human cities and nations are here. Goznor is located at the southernmost
-    point, on the northern shore of the gulf connecting Hadris and Fengue.\"],[\"\",\"Fengue
-    is south of Hadris, separated by only a small channel of water at the northernmost
-    point. It is scarcely inhabited and the majority of its terrain is desert. Aeropolis
-    is its capital.\"],[\"\",\"Nole\\'Oth is a continent to the north, known colloquially
-    as the \\'Northern Wastes\\'. It is perpetually covered in snow and is largely
-    unexplored.\"],[\"\",\"The continent of Tharadia is said to exist across the
-    oceans to the west, but to this date no expeditions have returned from there
-    to verify its existence or detail its composition or population, if any.\"]]},{name:\"The
-    Crystals\",model:\"object\",x:3,y:0,type:\"examine\",conv:[[\"\",\"The elemental
-    crystals were created by YALORT when He made the world, and they provide Belfan
-    with all of its magical energy and keep it alive. They consist of pure elemental
-    magical energy, and as such have the power to grant people extreme power; for
-    this reason, they have been sought by Adventurers and Villains alike.\"],[\"\",\"All
-    of the crystals are located around the gulf separating Hadris and Fengue; it
-    is said that this general area is where YALORT came down to the newly-crafted
-    Belfan and breathed the gift of life into it.\"],[\"\",\"The Fire Crystal possesses
-    the power of heat and flames. It keeps the world warm so that things can grow
-    and thrive, and its power is harnessed every time a flame burns, magical or natural.
-    It is located in a temple in Fengue.\"],[\"\",\"The Water Crystal keeps the waters
-    pure and flowing and the rains pouring. It is vital for life on Belfan. It is
-    also responsible for Man\\'s rational thoughts, or so it has been said. It can
-    be found in Hadris.\"],[\"\",\"The Air Crystal keeps the winds blowing, and the
-    air clean. The city of Aeropolis was built around the temple in which it can
-    still be found.\"],[\"\",\"The Earth Crystal is responsible for the lives of
-    beasts and plants on Belfan. Its energy keeps them growing and breeding. It is
-    held in a sacred temple within the Lifewood in Fengue.\"],[\"\",\"The Light Crystal,
-    being the physical manifestation of the Goodness in Man\\'s heart, is the greatest
-    treasure of Goznor, kept within the Castle of Goznor.\"],[\"\",\"The location
-    of the Dark Crystal is unknown; this is probably for the best, since it is the
-    crystal most often sought by those who wish to inflict evil on the world.\"],Do
-    = function()\r\n{\r\n   EN_ADD(\"Artefacts\",\"Fire Crystal\");\r\n   EN_ADD(\"Artefacts\",\"Water
-    Crystal\");\r\n   EN_ADD(\"Artefacts\",\"Air Crystal\");\r\n   EN_ADD(\"Artefacts\",\"Earth
-    Crystal\");\r\n   EN_ADD(\"Artefacts\",\"Light Crystal\");\r\n   EN_ADD(\"Artefacts\",\"Dark
-    Crystal\");\r\n   return 1;\r\n}]},{name:\"EXIT\",model:\"DOOR0\",x:3,y:7,dest:[\"goznor\",9,21]}];\r\nif(GameData.CHAPTER
-    == 1)\r\n{\r\n   A_sprites.push({name:\"Polly\",model:\"polly\",x:1,y:2,walkspeed:-2,dir:\"e\",elem:\"EARTH\",EN:[\"People\",\"Polly\"],conv:\"c_polly\"});\r\n}\r\nif(GameData.CHAPTER
-    == 3)\r\n{\r\n   A_sprites.push({name:\"Polly\",model:\"polly\",x:1,y:2,walkspeed:-2,dir:\"e\",elem:\"EARTH\",EN:[\"People\",\"Polly\"],conv:\"c_polly\"},{name:\"Derek\",model:\"derek\",x:3,y:2,walkspeed:-2,dir:\"w\",elem:\"FIRE\",EN:[\"People\",\"Derek\"],conv:\"c_derek\"});\r\n}\r\nareaLoot
-    = [];\r\nfoes = [];\r\nbtlChance = 0;\r\nlevelrange = [1,1];\r\nmusicTrack =
-    !GameData.plotVars.SUNSET?\"Goznor\":\"none\";\r\nAreaSetup({clearmap:1});\r\n"
-  waterTilemap: {fileID: 76455186}
-  waterBackgroundTilemap: {fileID: 86980540}
-  terrainTilemap: {fileID: 1076898754}
-  objectsTilemap: {fileID: 1840068283}
---- !u!4 &847096877
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847096875}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0.02, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1076898750
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,13 +454,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076898750}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1178651517}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1076898753
 TilemapRenderer:
@@ -567,6 +479,9 @@ TilemapRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1076,6 +991,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178651515}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1086,7 +1002,6 @@ Transform:
   - {fileID: 1076898751}
   - {fileID: 1840068281}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &1178651518
 Tilemap:
@@ -1131,6 +1046,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 69186623529443827, guid: 4524198ac264da046815598c35039adc, type: 3}
@@ -1262,6 +1178,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4524198ac264da046815598c35039adc, type: 3}
 --- !u!1 &1840068280
 GameObject:
@@ -1289,13 +1208,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840068280}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1178651517}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1840068282
 TilemapRenderer:
@@ -1314,6 +1233,9 @@ TilemapRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1552,19 +1474,42 @@ TilemapCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840068280}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+  m_UseDelaunayMesh: 0
 --- !u!1001 &1894523827
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3265152173036777289, guid: 53b4e9f23c6e15741adc62672b0cd30f, type: 3}
@@ -1628,4 +1573,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 102900000, guid: aed8ff46ba00ea143af7333f26460bef, type: 3}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53b4e9f23c6e15741adc62672b0cd30f, type: 3}
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 1894523827}
+  - {fileID: 730718375}
+  - {fileID: 1818384217}
+  - {fileID: 1178651517}

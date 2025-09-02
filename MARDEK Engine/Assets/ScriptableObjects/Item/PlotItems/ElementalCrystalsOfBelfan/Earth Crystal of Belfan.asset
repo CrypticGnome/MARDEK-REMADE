@@ -9,15 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c375ea2ef087174388e96bad2feb1eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c67bdc9ba38ff241a08fd0a5ab3551f, type: 3}
   m_Name: Earth Crystal of Belfan
   m_EditorClassIdentifier: 
-  _displayName: Earth Crystal of Belfan
-  _elementText: Earth
-  _description: An Artefact of the Gods. It is essentially crystalised elemental
-    energy, and one of the planet's 'organs', of a sort. This particular crystal
-    is the source of all plant and animal life on Belfan, so handle it with care!
-  _sprite: {fileID: 21300000, guid: ba9de6622abec5a41b3c88faed417aff, type: 3}
-  _element: {fileID: 11400000, guid: 96b7bd01ebbf64840a070d9ed9321b4c, type: 2}
-  _price: -1
-  <SkillsToEquip>k__BackingField: []
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
+  _price: 0

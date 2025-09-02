@@ -1,9 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using MARDEK.CharacterSystem;
-using MARDEK.Skill;
-using Codice.Client.Common;
-
 namespace MARDEK.UI
 {
     public class SkillMenuSkillSlotUI : SelectableWithCurrentSelected<SkillMenuSkillSlotUI>
