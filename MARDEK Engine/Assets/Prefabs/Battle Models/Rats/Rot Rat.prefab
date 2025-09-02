@@ -276,7 +276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9158617073485794482
 Transform:
   m_ObjectHideFlags: 0
@@ -310,7 +310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2610920690656799358
 RectTransform:
   m_ObjectHideFlags: 0
@@ -594,7 +594,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 3286163911610860551, guid: 980ed67bc1d0eaa42982c58453327cde, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5803,6 +5803,7 @@ Animation:
   serializedVersion: 4
   m_Animation: {fileID: 7400000, guid: d060ccb275e99d84c9120c9eb4a5a955, type: 2}
   m_Animations:
+  - {fileID: 7400000, guid: d060ccb275e99d84c9120c9eb4a5a955, type: 2}
   - {fileID: 7400000, guid: d060ccb275e99d84c9120c9eb4a5a955, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
