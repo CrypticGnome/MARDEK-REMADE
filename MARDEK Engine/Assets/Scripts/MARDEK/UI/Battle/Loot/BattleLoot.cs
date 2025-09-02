@@ -31,7 +31,7 @@ namespace MARDEK.UI
           }
           public void SetLoot(List<Item> items, List<int> amounts)
           {
-               Encounter encounter = BattleManager.instance.Encounter;
+               Encounter encounter = BattleManager.Encounter;
                items.AddRange(encounter.UniqueRewards);
                for (int index = 0; index < encounter.Enemies.Length; index++)
                {

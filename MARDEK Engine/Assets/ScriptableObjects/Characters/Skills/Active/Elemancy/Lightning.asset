@@ -12,10 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97727b890c81574e9c60256ce51f687, type: 3}
   m_Name: Lightning
   m_EditorClassIdentifier: 
-  <Cost>k__BackingField: 6
   <PointsRequiredToMaster>k__BackingField: 0
   <DisplayName>k__BackingField: Lightning
   <Description>k__BackingField: 'An electric heavenly zap that inflicts air damage. '
+  <Cost>k__BackingField: 6
   action:
-    effects: []
     element: {fileID: 11400000, guid: 3b3d471c2fd4e964bad27afb63ea5346, type: 2}
+    soundEffects:
+    - {fileID: 11400000, guid: a52d5f2d380e08643a82317651600218, type: 2}
+    - {fileID: 11400000, guid: 916bb401d9bb3b24093d725b0a5661c9, type: 2}
+    actionEffects:
+    - rid: 595661094312214605
+  references:
+    version: 2
+    RefIds:
+    - rid: 595661094312214605
+      type: {class: DealMagicDamageStandard, ns: MARDEK.Battle, asm: MARDEK}
+      data:
+        motionValue: 2.5

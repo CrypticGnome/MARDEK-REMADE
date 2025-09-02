@@ -12,6 +12,7 @@ namespace MARDEK.Animation
         public bool loop { get { return _loop; } }
         [SerializeField] bool _loop = true;
         [SerializeField] List<Sprite> spriteSequence = new List<Sprite>();
+        public int Length => spriteSequence.Count;
 
         public Sprite GetSprite(float animationRatio)
         {
@@ -19,5 +20,6 @@ namespace MARDEK.Animation
                index = Mathf.Clamp(index, 0, spriteSequence.Count - 1);
             return spriteSequence[index];
         }
+        public Sprite GetSprite(int index) => spriteSequence[index];
     }
 }

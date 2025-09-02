@@ -12,10 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97727b890c81574e9c60256ce51f687, type: 3}
   m_Name: Stonesplosion
   m_EditorClassIdentifier: 
-  <Cost>k__BackingField: 6
   <PointsRequiredToMaster>k__BackingField: 0
   <DisplayName>k__BackingField: Stonesplosion
   <Description>k__BackingField: An explosion of stones that inflicts earth damage.
+  <Cost>k__BackingField: 6
   action:
-    effects: []
     element: {fileID: 11400000, guid: 96b7bd01ebbf64840a070d9ed9321b4c, type: 2}
+    soundEffects:
+    - {fileID: 11400000, guid: a52d5f2d380e08643a82317651600218, type: 2}
+    - {fileID: 11400000, guid: 56d931c1a2bd99e42b21c6e216d0b9b9, type: 2}
+    actionEffects:
+    - rid: 3818642394809368645
+  references:
+    version: 2
+    RefIds:
+    - rid: 3818642394809368645
+      type: {class: DealMagicDamageStandard, ns: MARDEK.Battle, asm: MARDEK}
+      data:
+        motionValue: 2.5

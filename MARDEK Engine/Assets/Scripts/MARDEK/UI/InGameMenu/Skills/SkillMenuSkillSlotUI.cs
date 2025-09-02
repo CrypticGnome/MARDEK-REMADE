@@ -44,7 +44,7 @@ namespace MARDEK.UI
         void UpdateAppearance()
         {
             this.skillNameText.text = this.skill.DisplayName;
-            this.mpOrRp.text = this.skill.Cost.ToString();
+            //this.mpOrRp.text = this.skill.Cost.ToString();
 
             Color textColor = this.isSelected ? SELECTED_TEXT_COLOR : DEFAULT_TEXT_COLOR;
             this.skillNameText.color = textColor;

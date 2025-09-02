@@ -9,28 +9,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f13698c79568447a0b3862945c868a, type: 3}
+  m_Script: {fileID: 11500000, guid: 42835d9f816510946974f97e25505c64, type: 3}
   m_Name: Inventing Coat
   m_EditorClassIdentifier: 
-  _displayName: Inventing Coat
-  _description: A sturdy longcoat made from leather, perfect for use in a laboratory
-    but also adequate as protection in battle too.
-  _sprite: {fileID: 21300000, guid: 80ee6506b304ab84eb81a355828264f2, type: 3}
-  _element: {fileID: 11400000, guid: ce9c718638458254ca7d5945b2b79f0a, type: 2}
-  _price: 10000
-  <SkillsToEquip>k__BackingField: []
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
+  _price: 0
   _category: {fileID: 11400000, guid: 4b5cbd7a1d559264cb6d32296f589841, type: 2}
-  _statsSet:
-    intStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 46c026df8a249b74d8bcb5a7c1a50f02, type: 2}
-      _value: 5
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 1b22f71dbf2256c4e911d8c67c85b913, type: 2}
-      _value: 2
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 66e6bfc20ad436f4f91096bcd539b6f0, type: 2}
-      _value: 50
-    floatStats:
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: 61647842abc8e09409c8e2ba72a78f42, type: 2}
-      _value: 100
-    - <statusEnum>k__BackingField: {fileID: 11400000, guid: f68c8ec8816407b42ab3609b22036c52, type: 2}
-      _value: 50
-  _hitSFX: 0
+  statBoosts:
+    Attack: 0
+    Defense: 0
+    MagicDefense: 0
+    Absorbtions:
+      Fire: 0
+      Earth: 0
+      Water: 0
+      Air: 0
+      Light: 0
+      Dark: 0
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+      Divine: 0
+    Resistances:
+      poison: 0
+      sleep: 0
+      paralysis: 0
+      blindness: 0
+      silence: 0
+      numbness: 0
+      curse: 0
+      confusion: 0
+      bleed: 0
+      zombification: 0
+    Strength: 0
+    Vitality: 0
+    Spirit: 0
+    Agility: 0
+    Crit: 0
+    Accuracy: 100
+    Health: 0
+    Mana: 0
+  grantSkills: []
+  _hitSFX: 

@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using MARDEK.CharacterSystem;
 using MARDEK.Stats;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 namespace MARDEK.Battle
 {
@@ -11,18 +11,18 @@ namespace MARDEK.Battle
      using MARDEK.Skill;
      using MARDEK.UI;
      using Progress;
-    using UnityEngine.Events;
-     using static MARDEK.Battle.BattleManager;
+
 
     public class BattleManager : MonoBehaviour
     {
           [SerializeField] PartySO playerParty;
-          [SerializeField] List<Character> DummyEnemies;
           [SerializeField] GameObject characterActionUI = null;
           [SerializeField] List<GameObject> enemyPartyPositions = new();
           [SerializeField] List<GameObject> playerPartyPositions = new();
           [SerializeField] EncounterSet dummyEncounter;
-          public Encounter Encounter;
+          [SerializeField] BattleCharacterPicker characterPicker;
+          [SerializeField] ActionDisplay actionDisplay;
+          public static Encounter Encounter;
           public static EncounterSet encounter { private get; set; }
           public static BattleCharacter characterActing { get; private set; }
           public static BattleAction ActionToPerform;
@@ -39,41 +39,12 @@ namespace MARDEK.Battle
           private void Awake()
           {
                instance = this;
-               if (!encounter)
-               {
-                    if (!dummyEncounter)
-                    {
-                         Debug.LogAssertion("Encounter is null");
-                         CheckBattleEnd();
-                         return;
-                    }
-                    encounter = dummyEncounter;
-               }
-               List<Character> enemyCharacters = encounter.InstantiateEncounter(out Encounter);
-
-               EnemyBattleParty.Clear();
-               foreach (var c in enemyCharacters)
-                    SpawnEnemyBattleCharacter(c);
-
-               PlayerBattleParty.Clear();
-               foreach (var c in playerParty)
-                    SpawnPlayerBattleCharacter(c);
-
+               if (!encounter) encounter = dummyEncounter;
+               InstantiateEncounter();
                state = BattleState.Idle;
-
-               void SpawnEnemyBattleCharacter(Character c)
-               {
-                    if (c is null) return;
-                    var position = enemyPartyPositions[EnemyBattleParty.Count].transform.position;
-                    EnemyBattleParty.Add(new EnemyBattleCharacter(c.Profile, position));
-               }
-               void SpawnPlayerBattleCharacter(Character c)
-               {
-                    if (c is null) return;
-                    var position = playerPartyPositions[PlayerBattleParty.Count].transform.position;
-                    PlayerBattleParty.Add(new HeroBattleCharacter(c, position));
-               }
           }
+
+         
           private void Start()
           {
                OnTurnEnd += WaitForTurn;
@@ -84,9 +55,27 @@ namespace MARDEK.Battle
           {
                OnTurnEnd -= WaitForTurn;
           }
+          void InstantiateEncounter()
+          {
+               List<Character> enemyCharacters = encounter.InstantiateEncounter(out Encounter);
 
+               EnemyBattleParty.Clear();
+               for (int i = 0; i < enemyCharacters.Count; i++)
+               {
+                    EnemyBattleCharacter enemyCharacter = new EnemyBattleCharacter(enemyCharacters[i], enemyPartyPositions[i].transform);
+                    EnemyBattleParty.Add(enemyCharacter);
+               }
+               PlayerBattleParty.Clear();
+               for (int i = 0; i < playerParty.Count; i++)
+               {
+                    HeroBattleCharacter playerCharacter = new HeroBattleCharacter(playerParty[i], playerPartyPositions[i].transform);
+                    PlayerBattleParty.Add(playerCharacter);
+               }
+          }
           void SetInitialACT()
           {
+               // Maybe have it so that if you press interact quickly your party gets an initial act bonus?
+               // Sort of like how currently if you press x currentyl you can just skip the battle
                bool partySurprised = false;
                List<float> timesToTurn = new List<float>();
                List<BattleCharacter> allCharacters = new List<BattleCharacter>();
@@ -131,20 +120,14 @@ namespace MARDEK.Battle
                {
                     float minValue = input.Min();
 
-                    for (int i = 0; i < allCharacters.Count; i++) 
-                    {
-                         tempACT[i] -= minValue;
-                    }
+                    for (int i = 0; i < allCharacters.Count; i++) tempACT[i] -= minValue;
                }
                void CompressListToCap(List<float> input)
                {
                     float maxValue = input.Max();
                     float compressionFactor = TurnManager.ActResolution / maxValue;
 
-                    for (int i = 0; i < allCharacters.Count; i++)
-                    {
-                         tempACT[i] *= compressionFactor;
-                    }
+                    for (int i = 0; i < allCharacters.Count; i++) tempACT[i] *= compressionFactor;
                }
           }
 
@@ -200,20 +183,13 @@ namespace MARDEK.Battle
                          return;
                     }
                     ActionSkill skill = enemyMoveset.Skills[Random.Range(0, enemyMoveset.Skills.Count)];
-                    BattleAction move = skill.Action;
                     Debug.Log($"{characterActing.Name} uses {skill.DisplayName}");
-                    PerformAction(move.Apply);
+                    PerformActionToTarget(skill, PlayerBattleParty[Random.Range(0, playerParty.Count)]);
+                    instance.actionDisplay.DisplayAction(skill);
                }
           }
-          public static void PerformAction(ApplyBattleAction action)
+          public static void PerformActionToTarget(IBattleAction action, BattleCharacter target)
           {
-
-               BattleCharacter target;
-               if (EnemyBattleParty.Contains(characterActing))
-                    target = PlayerBattleParty[Random.Range(0, PlayerBattleParty.Count - 1)];
-               else
-                    target = EnemyBattleParty[Random.Range(0, EnemyBattleParty.Count - 1)];
-
                if (action is null)
                {
                     Debug.LogAssertion("Attempted action was null");
@@ -222,12 +198,17 @@ namespace MARDEK.Battle
                }
 
                instance.state = BattleState.ActionPerforming;
-               action.Invoke(characterActing, target);
+               action.TryPerformAction(characterActing, target);
+               instance.StartCoroutine(PlayAttack());
 
-               instance.EndTurn();
-
-               
+               IEnumerator PlayAttack()
+               {
+                    WaitForSeconds waitForAnimationPlaceholder = new WaitForSeconds(1.5f);
+                    yield return waitForAnimationPlaceholder;
+                    instance.EndTurn();
+               }
           }
+
           void EndTurn()
           {
                for (int i = EnemyBattleParty.Count - 1; i >= 0; i--)
@@ -246,7 +227,9 @@ namespace MARDEK.Battle
                     BattleCharacter hero = PlayerBattleParty[i];
                     int health = hero.CurrentHP;
                     if (health <= 0)
-                         PlayerBattleParty.Remove(hero);
+                    {
+                         //die
+                    }
                }
                characterActing = null;
                instance.state = BattleState.Idle;
@@ -254,10 +237,7 @@ namespace MARDEK.Battle
                instance.characterActionUI.SetActive(false);
                instance.CheckBattleEnd();
           }
-          public void SkipCurrentCharacterTurn()
-          {
-               EndTurn();
-          }
+          public void SkipCurrentCharacterTurn() => EndTurn();
     
           void CheckBattleEnd()
           {
@@ -280,8 +260,16 @@ namespace MARDEK.Battle
           IEnumerator Victory()
           {
                print("victory!!");
-               yield return new WaitForSeconds(2);
+               yield return new WaitForSeconds(1);
                BattleUIManager.Instance.OnVictory();
+
+               for (int i = 0; i < playerParty.Count; i++)
+               {
+                    if (playerParty[i] == null) continue;
+
+                    playerParty[i].CurrentHP = PlayerBattleParty[i].CurrentHP;
+                    playerParty[i].CurrentMP = PlayerBattleParty[i].CurrentMP;
+               }
                instance.enabled = false;
           }
 
@@ -293,7 +281,4 @@ namespace MARDEK.Battle
                Concluding
           }
     }
-     //public delegate void ApplyAction(Character target);
-     public delegate void ApplyBattleAction(BattleCharacter user, BattleCharacter target);
-
 }

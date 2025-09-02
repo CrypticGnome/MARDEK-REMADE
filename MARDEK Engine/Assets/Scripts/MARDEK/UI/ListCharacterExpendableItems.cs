@@ -5,13 +5,16 @@ using UnityEngine;
 namespace MARDEK.UI
 {
     using Battle;
-    public class ListCharacterExpendableItems : ListActions
+    public class ListCharacterExpendableItems : ListBattleActions
     {
+          [SerializeField] Selectable thisSelectable;
           public void SetSlots()
           {
-               if (BattleManager.characterActing is not HeroBattleCharacter)
+               if (!thisSelectable.Selected) return;
+
+               if (BattleManager.characterActing is not HeroBattleCharacter actingHero)
                     return;
-               HeroBattleCharacter actingHero = BattleManager.characterActing as HeroBattleCharacter;
+
                ClearSlots();
                foreach (var slot in actingHero.Character.Inventory.Slots)
                {

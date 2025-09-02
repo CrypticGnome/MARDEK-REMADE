@@ -12,11 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97727b890c81574e9c60256ce51f687, type: 3}
   m_Name: Bubble
   m_EditorClassIdentifier: 
-  <Cost>k__BackingField: 8
   <PointsRequiredToMaster>k__BackingField: 6
   <DisplayName>k__BackingField: Bubble
   <Description>k__BackingField: The target is barraged with bubbles of water, which
     inflicts water damage.
+  <Cost>k__BackingField: 8
   action:
-    effects: []
     element: {fileID: 11400000, guid: ef2aacb5c0629b644a8e1df0f9abf2fc, type: 2}
+    soundEffects:
+    - {fileID: 11400000, guid: a52d5f2d380e08643a82317651600218, type: 2}
+    - {fileID: 11400000, guid: 66937ce237acdbb43b212b4509ebdccc, type: 2}
+    actionEffects:
+    - rid: 595661094312214602
+  references:
+    version: 2
+    RefIds:
+    - rid: 595661094312214602
+      type: {class: DealMagicDamageStandard, ns: MARDEK.Battle, asm: MARDEK}
+      data:
+        motionValue: 2.5

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b112895aff932dc45a6662e3c917d84f, type: 3}
   m_Name: Earth
   m_EditorClassIdentifier: 
-  _thinSprite: {fileID: 3286163911610860551, guid: 3c21bf94ee8c8a940b56919769adda80, type: 3}
-  _thickSprite: {fileID: 3286163911610860551, guid: 69e5abb968ecd6f4da5548971d18340a, type: 3}
+  _thinSprite: {fileID: 3286163911610860551, guid: b4d6551a6f776ff4b8b328bcb9a7719a, type: 3}
+  _thickSprite: {fileID: 3286163911610860551, guid: a7c9f0d1356f7e04a9c2132eee81d514, type: 3}
   _textColor: {r: 0, g: 0.6, b: 0.05882353, a: 1}
-  element: 3
+  element: 4

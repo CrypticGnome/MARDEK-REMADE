@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b47544976d9994d818ec74436e5528, type: 3}
+  m_Name: Miasmurine
+  m_EditorClassIdentifier: 
+  <displayName>k__BackingField: Miasmurine
+  <displayClass>k__BackingField: 
+  <element>k__BackingField: {fileID: 11400000, guid: b58053569349d314892770b43156bfd2, type: 2}
+  <portrait>k__BackingField: {fileID: 0}
+  <WalkSprites>k__BackingField: {fileID: 0}
+  <BattleModelPrefab>k__BackingField: {fileID: 7763334616494945883, guid: d9547573b597afd40b19f766cff25722, type: 3}
+  <LearnableSkillset>k__BackingField: {fileID: 11400000, guid: bdb91fdccc4422743ae6542c3e4eece4, type: 2}
+  <Stats>k__BackingField:
+    Strength: 10
+    Vitality: 8
+    Spirit: 3
+    Agility: 22
+    Absorbtions:
+      Fire: 0
+      Earth: 50
+      Water: 0
+      Air: -40
+      Light: -100
+      Dark: 30
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+      Divine: 0
+    Resistances:
+      poison: 0
+      sleep: 0
+      paralysis: 0
+      blindness: 0
+      silence: 0
+      numbness: 0
+      curse: 0
+      confusion: 0
+      bleed: 0
+      zombification: 0
+    Attack: 16
+    Defense: 0
+    MagicDefense: 0
+    CritRate: 0
+    Accuracy: 100
+    MaxHPCalc: {fileID: 11400000, guid: 6754a0309aa2a274cb8234da1f54b652, type: 2}
+    MaxMPCalc: {fileID: 11400000, guid: 194054632bb03254199cf38de6c77bf0, type: 2}
+    MaxHP: 102
+    MaxMP: 11
+  <Type>k__BackingField: 2

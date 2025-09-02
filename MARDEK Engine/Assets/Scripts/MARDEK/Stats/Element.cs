@@ -18,6 +18,7 @@ namespace MARDEK.Stats
      }
      public enum ElementID
      {
+          Physical = 0,
           Fire,
           Water,
           Air,
@@ -26,7 +27,6 @@ namespace MARDEK.Stats
           Dark,
           Aether,
           Fig,
-          Physical,
           Thauma,
           Divine
      }

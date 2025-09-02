@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b112895aff932dc45a6662e3c917d84f, type: 3}
   m_Name: Divine
   m_EditorClassIdentifier: 
-  _thinSprite: {fileID: 0}
-  _thickSprite: {fileID: 0}
+  _thinSprite: {fileID: 3286163911610860551, guid: ed7ccdc16f4b6ac4faaa7ce6b88faa9a, type: 3}
+  _thickSprite: {fileID: 3286163911610860551, guid: db17fc397bdc72b46b8218d8024c7777, type: 3}
   _textColor: {r: 1, g: 0.8235294, b: 0.3529412, a: 1}
   element: 10

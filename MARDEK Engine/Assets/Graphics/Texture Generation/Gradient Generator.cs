@@ -14,7 +14,7 @@ namespace MARDEK.Editor
 
           [Tooltip("Input the saving path here. Changing the saving path is recommended incase of updates require deletion of the plugin.")]
           public string savingPath;
-          public string name;
+          public string saveName;
 
           public enum TextureFormat { Png, Jpg };
           [Header("Texture Baker")]
@@ -54,7 +54,7 @@ namespace MARDEK.Editor
                var _gradientTexture = GenerateTexture();
                byte[] _bytes = _gradientTexture.EncodeToPNG();
 
-               string relativePath = $"{savingPath}{name}{saveFormat}";
+               string relativePath = $"{savingPath}{saveName}{saveFormat}";
                string fullPath = Path.GetFullPath(relativePath);
 
                // Ensure directory exists
@@ -71,7 +71,7 @@ namespace MARDEK.Editor
                // Refresh asset database so Unity picks it up
                AssetDatabase.Refresh();
 
-               Debug.Log("<color=#00FF00><b> GradientTexture_" + name + saveFormat + " baked sucessfully. Saved in the following path: " + savingPath + "</b></color>");
+               Debug.Log("<color=#00FF00><b> GradientTexture_" + saveName + saveFormat + " baked sucessfully. Saved in the following path: " + savingPath + "</b></color>");
           }
      }
 }

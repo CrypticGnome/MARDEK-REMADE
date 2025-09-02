@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b47544976d9994d818ec74436e5528, type: 3}
+  m_Name: Fumerat
+  m_EditorClassIdentifier: 
+  <displayName>k__BackingField: Fumerat
+  <displayClass>k__BackingField: 
+  <element>k__BackingField: {fileID: 11400000, guid: 96b7bd01ebbf64840a070d9ed9321b4c, type: 2}
+  <portrait>k__BackingField: {fileID: 0}
+  <WalkSprites>k__BackingField: {fileID: 0}
+  <BattleModelPrefab>k__BackingField: {fileID: 7448525683723561925, guid: 7c0155444dded5448a49991d9ece44c1, type: 3}
+  <LearnableSkillset>k__BackingField: {fileID: 11400000, guid: bf853ba2b8332e945863e7eb17bd16a7, type: 2}
+  <Stats>k__BackingField:
+    Strength: 10
+    Vitality: 8
+    Spirit: 3
+    Agility: 13
+    Absorbtions:
+      Fire: 0
+      Earth: 60
+      Water: 0
+      Air: -80
+      Light: 0
+      Dark: 0
+      Aether: 0
+      Fig: 0
+      Physical: 0
+      Thauma: 0
+      Divine: 0
+    Resistances:
+      poison: 0
+      sleep: 0
+      paralysis: 0
+      blindness: 0
+      silence: 0
+      numbness: 0
+      curse: 0
+      confusion: 0
+      bleed: 0
+      zombification: 0
+    Attack: 3
+    Defense: 0
+    MagicDefense: 0
+    CritRate: 0
+    Accuracy: 100
+    MaxHPCalc: {fileID: 11400000, guid: e935bc66fc6debd418f842228095b3f0, type: 2}
+    MaxMPCalc: {fileID: 11400000, guid: 194054632bb03254199cf38de6c77bf0, type: 2}
+    MaxHP: 1172
+    MaxMP: 1172
+  <Type>k__BackingField: 2

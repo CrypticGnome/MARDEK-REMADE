@@ -5,22 +5,21 @@ namespace MARDEK.Battle
 {
     using CharacterSystem;
      using Stats;
-     using UnityEngine.TextCore.Text;
 
      public class EnemyBattleCharacter : BattleCharacter
      {
-          public EnemyBattleCharacter(CharacterProfile character, Vector3 position)
+          public EnemyBattleCharacter(Character character, Transform parent)
           {
-               Profile = character;
-               VolatileStats = character.Stats;
-               Skillset = character.LearnableSkillset;
-               battleModel = Object.Instantiate(Profile.BattleModelPrefab).GetComponent<BattleModel>();
-               battleModel.SetBattlePosition(position);
-               VolatileStats = new CoreStats(character.Stats);
+               Profile = character.Profile;
+               VolatileStats = Profile.Stats;
+               Skillset = Profile.LearnableSkillset;
+               GameObject prefabInstance = Object.Instantiate(Profile.BattleModelPrefab, parent);
+               battleModel = prefabInstance.GetComponent<BattleModelComponent>();
+               Level = character.Level;
+               VolatileStats = new CoreStats(Profile.Stats);
                BaseStats.CalculateMaxValues(this);
 
-               VolatileStats.MaxHP = VolatileStats.MaxHPCalc.GetMaxHP(this);
-               VolatileStats.MaxMP = VolatileStats.MaxMPCalc.GetMaxMP(this); ;
+               VolatileStats.CalculateMaxValues(this);
                CurrentHP = VolatileStats.MaxHP;
                CurrentMP = VolatileStats.MaxMP;
           }

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Monster Max HP
   m_EditorClassIdentifier: 
   calculatorType: 2
-  constantValue: 0
+  constantValue: 1172
+  levelMultiplier: 28

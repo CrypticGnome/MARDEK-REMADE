@@ -16,6 +16,17 @@ namespace MARDEK.CharacterSystem
           [field: SerializeField] public SpriteAnimationClipList WalkSprites { get; private set; }
           [field: SerializeField] public GameObject BattleModelPrefab { get; private set; }
           [field: SerializeField] public ActionSkillset LearnableSkillset { get; private set; }
-          [field: SerializeField] public CoreStats Stats { get; private set; } 
-    }
+          [field: SerializeField] public CoreStats Stats { get; private set; }
+          [field: SerializeField] public CharacterType Type { get; private set; }
+
+     }
+
+     public enum CharacterType
+     {
+          Humanoid = 0,
+          Undead = 1,
+          Beast = 2,
+          Goblinoid = 3,
+          Ichthyd = 4
+     }
 }

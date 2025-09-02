@@ -51,8 +51,7 @@ namespace MARDEK.Animation
         }
           private void Start()
           {
-               //InitializeFields();
-               if (currentClip is null)
+               if (currentClip is null && (currentClip = ClipList?.GetClipByIndex(0)) == null)
                {
                     Debug.LogWarning($"Null current clip on {name}");
                     enabled = false;

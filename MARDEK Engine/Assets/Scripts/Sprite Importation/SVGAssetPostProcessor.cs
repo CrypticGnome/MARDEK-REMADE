@@ -16,15 +16,26 @@ class SVGStrokeFixer : AssetPostprocessor
           if (!assetPath.EndsWith(".svg")) return;
           string original = File.ReadAllText(assetPath);
 
+          bool assetPathContainsCustomThickness = assetPath.Contains("Thickness");
+          float thickness = MIN_LINE_THICKNESS;
+          if (assetPathContainsCustomThickness)
+          {
+               Match match = Regex.Match(assetPath, @"Thickness(\d+(\.\d+)?)");
+               if (match.Success)
+               {
+                    thickness = float.Parse(match.Groups[1].Value) / 10;
+                    Debug.Log($"<color=green>{assetPath} asset generated with a min line thickness of {thickness}</color>");
+               }
+          }
           var doc = XDocument.Load(assetPath);
           foreach (var el in doc.Descendants())
           {
                var strokeWidth = el.Attribute("stroke-width");
                if (strokeWidth is null || !float.TryParse(strokeWidth.Value, out float w)) continue;
           
-               if (w >= MIN_LINE_THICKNESS) continue;
+               if (w >= thickness) continue;
           
-               el.SetAttributeValue("stroke-width", $"{MIN_LINE_THICKNESS}");
+               el.SetAttributeValue("stroke-width", $"{thickness}");
                
           }
 

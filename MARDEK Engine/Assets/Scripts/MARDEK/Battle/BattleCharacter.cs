@@ -8,16 +8,17 @@ namespace MARDEK.Battle
     using CharacterSystem;
     using MARDEK.Stats;
      using MARDEK.UI;
+     using MARDEK.Animation;
 
      public abstract class BattleCharacter : IActionStats
      {
           public CharacterProfile Profile { get; protected set; }
-          public BattleModel battleModel = null;
+          public BattleModelComponent battleModel = null;
           public ActionSkillset Skillset { get; protected set; }
           public string Name { get { return Profile.displayName; } }
 
           public int CurrentHP { get; set; }
-          public int CurrentMP { get; set ; }
+          public int CurrentMP { get; set; }
           public float ACT { get; set; }
           public CoreStats BaseStats { get { return Profile.Stats; } }
           public CoreStats VolatileStats { get;  set; }
@@ -97,5 +98,21 @@ namespace MARDEK.Battle
                     StatusBuildup.Bleed -= resistances.Bleed + 1;
                // Do not tick zombification
           }
+
+          public Sprite GetBattleIcon()
+          {
+               if (Profile.WalkSprites != null)
+               {
+                    SpriteAnimationClip clip = Profile.WalkSprites.GetClipByDirection(Vector2.down);
+                    if (clip != null)
+                    {
+                         Sprite sprite = clip.GetSprite(0);
+                         if (sprite != null) return sprite;
+                    }
+               }
+               return CharacterTypePortraits.CharacterTypeSprites[Profile.Type];
+          }
+
+
      }
 }

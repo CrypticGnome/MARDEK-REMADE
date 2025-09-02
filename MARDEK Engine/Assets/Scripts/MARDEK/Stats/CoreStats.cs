@@ -1,7 +1,6 @@
 using MARDEK.Battle;
 using System;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
 namespace MARDEK.Stats
 {
@@ -19,10 +18,9 @@ namespace MARDEK.Stats
           public int CritRate;
           public int Accuracy = 100;
           [Space]
-          public MaxHpCalculator MaxHPCalc;
-          public MaxMpCalculator MaxMPCalc;
-          public int MaxHP,
-               MaxMP;
+          [SerializeField] MaxHpCalculator MaxHPCalc;
+          [SerializeField] MaxMpCalculator MaxMPCalc;
+          [HideInInspector] public int MaxHP, MaxMP;
 
           public CoreStats(CoreStats other)
           {
@@ -48,8 +46,11 @@ namespace MARDEK.Stats
           public void CalculateMaxValues(BattleCharacter battleCharacter)
           {
                MaxHP = MaxHPCalc.GetMaxHP(battleCharacter);
-               MaxMP = MaxHPCalc.GetMaxHP(battleCharacter);
+               MaxMP = MaxMPCalc.GetMaxMP(battleCharacter);
           }
+          public int GetMaxHP(CharacterSystem.Character character) => MaxHPCalc.GetMaxHP(character);
+          public int GetMaxMP(CharacterSystem.Character character) => MaxMPCalc.GetMaxMP(character);
+
      }
      [Serializable]
      public class Absorbtions
@@ -117,7 +118,40 @@ namespace MARDEK.Stats
           public int Bleed { get { return bleed; } set { bleed = Math.Clamp(value, 0, int.MaxValue); } }
           public int Zombification { get {  return zombification; } set { zombification =  Math.Clamp(value, 0,int.MaxValue);}}
 
-
+          public int Get(StatusEffect effect)
+          {
+               switch (effect)
+               {
+                    case StatusEffect.Poison: return poison;
+                    case StatusEffect.Sleep: return sleep;
+                    case StatusEffect.Paralysis: return paralysis;
+                    case StatusEffect.Blindness: return blindness;
+                    case StatusEffect.Silence: return silence;
+                    case StatusEffect.Numbness: return numbness;
+                    case StatusEffect.Curse: return curse;
+                    case StatusEffect.Confusion: return confusion;
+                    case StatusEffect.Bleed: return bleed;
+                    case StatusEffect.Zombification: return zombification;
+                    default: throw new ArgumentOutOfRangeException();
+               }
+          }
+          public void Set(StatusEffect effect, int value)
+          {
+               switch (effect)
+               {
+                    case StatusEffect.Poison: poison = value; break;
+                    case StatusEffect.Sleep: sleep = value; break;
+                    case StatusEffect.Paralysis: paralysis= value; break;
+                    case StatusEffect.Blindness: blindness = value; break;
+                    case StatusEffect.Silence: silence = value; break;
+                    case StatusEffect.Numbness: numbness = value; break;
+                    case StatusEffect.Curse: curse = value; break;
+                    case StatusEffect.Confusion: confusion = value; break;
+                    case StatusEffect.Bleed: bleed = value; break;
+                    case StatusEffect.Zombification: zombification = value; break;
+                    default: throw new ArgumentOutOfRangeException();
+               }
+          }
      }
      [Serializable]
      public class ItemStats

@@ -1,27 +1,28 @@
+using MARDEK.Battle;
+using MARDEK.CharacterSystem;
+using MARDEK.Stats;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MARDEK.Stats;
-using MARDEK.CharacterSystem;
-using MARDEK.Battle;
+using UnityEngine.UIElements;
 
 namespace MARDEK.UI
 {
     public class ManaBar : MonoBehaviour
     {
-          [SerializeField] CharacterUI characterUI = null;
           [SerializeField] RectTransform barTransform;
           [SerializeField] TMPro.TMP_Text statText;
-
-          private void Awake()
+          BattleCharacter character;
+          private void OnValidate()
           {
-               characterUI.OnInitialisation += Initialise;
+               barTransform.localScale = new Vector3(1, 1, 1);
           }
-          void Initialise()
+          public void SetCharacter(BattleCharacter character)
           {
-               if (characterUI.character is null)
+               if (character is null)
                     return;
-               characterUI.character.OnStatChanged += UpdateBar;
+               this.character = character;
+               character.OnStatChanged += UpdateBar;
                UpdateBar();
           }
           private void Update()
@@ -33,9 +34,8 @@ namespace MARDEK.UI
           [ContextMenu("Update Bar")]
           void UpdateBar()
           {
-               if (characterUI.character == null)
+               if (character == null)
                     return;
-               BattleCharacter character = characterUI.character;
                var statValue = (float)character.CurrentMP;
                var maxStatValue = (float)character.MaxMP;
                if (statText)

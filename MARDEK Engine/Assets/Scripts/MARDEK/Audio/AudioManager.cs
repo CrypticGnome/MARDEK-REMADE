@@ -1,5 +1,6 @@
-using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace MARDEK.Audio
 {
@@ -24,34 +25,34 @@ namespace MARDEK.Audio
     /// </summary>
     public class AudioManager : MonoBehaviour
     {
-        private static AudioManager instance;
-        private Stack<Music> musicStack = new Stack<Music>();
-        Music currentMusic = null;
+          private static AudioManager instance;
+          private Stack<Music> musicStack = new Stack<Music>();
+          Music currentMusic = null;
 
-        [SerializeField] protected Music defaultMusic;
-        [SerializeField] AudioSource musicAudioSource;
-        [SerializeField] AudioSource effectAudioSource;
+          [SerializeField] protected Music defaultMusic;
+          [SerializeField] AudioSource musicAudioSource;
+          [SerializeField] AudioSource effectAudioSource;
 
-        private void Awake()
-        {
-            if (instance != null)
-            {
-                instance.defaultMusic = defaultMusic;
-                Destroy(gameObject);
-            }
-            else
-            {
-                instance = this;
-                gameObject.transform.parent = null;
-                DontDestroyOnLoad(gameObject);
-            }
-            instance.UpdateCurrentMusic();
-        }
+          private void Awake()
+          {
+              if (instance != null)
+              {
+                  instance.defaultMusic = defaultMusic;
+                  Destroy(gameObject);
+              }
+              else
+              {
+                  instance = this;
+                  gameObject.transform.parent = null;
+                  DontDestroyOnLoad(gameObject);
+              }
+              instance.UpdateCurrentMusic();
+          }
 
-        public static AudioSource GetMusicAudioSource()
-        {
-            return instance.musicAudioSource;
-        }
+          public static AudioSource GetMusicAudioSource()
+          {
+              return instance.musicAudioSource;
+          }
 
           private void UpdateCurrentMusic()
           {
@@ -75,34 +76,59 @@ namespace MARDEK.Audio
                 currentMusic.PlayOnSource(musicAudioSource);
           }
 
-        /// <summary>
-        ///     Pushes a new music on top of the background music stack. The given music will be played right away and
-        ///     stop the current music until PopBackgroundMusic() is called.
-        /// </summary>
-        public static void PushMusic(Music music)
-        {
-            instance.musicStack.Push(music);
-            instance.UpdateCurrentMusic();
-        }
+          /// <summary>
+          ///     Pushes a new music on top of the background music stack. The given music will be played right away and
+          ///     stop the current music until PopBackgroundMusic() is called.
+          /// </summary>
+          public static void PushMusic(Music music)
+          {
+              instance.musicStack.Push(music);
+              instance.UpdateCurrentMusic();
+          }
 
-        /// <summary>
-        ///     Pops the music on top of the background music stack. This will stop the music on top of the stack and
-        ///     start playing the music right below the top (or the root background music if there is only 1 music on the
-        ///     background music stack).
-        /// </summary>
-        public static void PopMusic()
-        {
-            instance.musicStack.Pop();
-            instance.UpdateCurrentMusic();
-        }
+          /// <summary>
+          ///     Pops the music on top of the background music stack. This will stop the music on top of the stack and
+          ///     start playing the music right below the top (or the root background music if there is only 1 music on the
+          ///     background music stack).
+          /// </summary>
+          public static void PopMusic()
+          {
+              instance.musicStack.Pop();
+              instance.UpdateCurrentMusic();
+          }
 
-        /// <summary>
-        ///     Plays the given sound effect on top of the current background music.
-        /// </summary>
-        public static void PlaySoundEffect(AudioObject audio)
-        {
-            if(instance && audio)
-                audio.PlayOnSource(instance.effectAudioSource);
-        }
+          /// <summary>
+          ///     Plays the given sound effect on top of the current background music.
+          /// </summary>
+          public static void PlaySoundEffect(AudioObject audio)
+          {
+              if(instance && audio)
+                  audio.PlayOnSource(instance.effectAudioSource);
+          }
+
+          /// <summary>
+          ///     Plays a collection of audio effects one after another
+          /// </summary>
+          public static void PlayEffectString(ICollection<SoundEffect> soundEffects)
+          {
+               instance.StartCoroutine(PlayEffectString(soundEffects));
+
+               IEnumerator PlayEffectString(ICollection<SoundEffect> soundEffects)
+               {
+                    foreach (SoundEffect soundEffect in soundEffects)
+                    {
+                         #if UNITY_EDITOR
+                         if (soundEffect == null)
+                         {
+                              Debug.LogError($"Trying to play null sound effect called {soundEffect.name}");
+                              continue;
+                         }
+                         #endif
+
+                         soundEffect.PlayOnSource(instance.effectAudioSource);
+                         yield return new WaitUntil(() => !instance.effectAudioSource.isPlaying);
+                    }
+               }
+          }
     }
 }

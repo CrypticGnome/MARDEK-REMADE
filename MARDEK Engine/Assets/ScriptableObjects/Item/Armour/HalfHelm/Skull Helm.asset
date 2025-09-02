@@ -17,7 +17,7 @@ MonoBehaviour:
   _sprite: {fileID: 0}
   _element: {fileID: 0}
   _price: 0
-  _category: {fileID: 0}
+  _category: {fileID: 11400000, guid: dae8caefbcf26a44a954801b232fb279, type: 2}
   statBoosts:
     Attack: 0
     Defense: 0
@@ -33,8 +33,18 @@ MonoBehaviour:
       Fig: 0
       Physical: 0
       Thauma: 0
+      Divine: 0
     Resistances:
-      Sleep: 0
+      poison: 0
+      sleep: 0
+      paralysis: 0
+      blindness: 0
+      silence: 0
+      numbness: 0
+      curse: 0
+      confusion: 0
+      bleed: 0
+      zombification: 0
     Strength: 0
     Vitality: 0
     Spirit: 0

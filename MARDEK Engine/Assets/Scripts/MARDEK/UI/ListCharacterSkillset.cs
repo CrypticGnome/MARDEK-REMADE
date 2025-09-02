@@ -9,12 +9,12 @@ using MARDEK.Battle;
 
 namespace MARDEK.UI
 {
-     public class ListCharacterSkillset : ListActions
+     public class ListCharacterSkillset : ListBattleActions
      {
           ActionSkillset skillsetToShow;
           [SerializeField] TextMeshProUGUI skillsetNameLabel = null;
-          [SerializeField] Image skillsetIcon = null; 
-
+          [SerializeField] Image skillsetIcon = null;
+          [SerializeField] Selectable thisSelectable;
           private void OnEnable()
           {
                BattleManager.OnTurnStart += GetSkillset;
@@ -24,6 +24,7 @@ namespace MARDEK.UI
           {
                BattleManager.OnTurnStart -= GetSkillset;
           }
+
           void GetSkillset()
           {
                BattleCharacter character = BattleManager.characterActing;
@@ -43,6 +44,7 @@ namespace MARDEK.UI
 
           public void SetSlots()
           {
+               if (!thisSelectable.Selected) return;
                ClearSlots();
                GetSkillset();
                if (!skillsetToShow)

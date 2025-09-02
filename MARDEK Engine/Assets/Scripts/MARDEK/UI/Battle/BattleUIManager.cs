@@ -1,8 +1,9 @@
+using MARDEK.Battle;
+using MARDEK.CharacterSystem;
+using MARDEK.Skill;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MARDEK.Battle;
-using MARDEK.CharacterSystem;
 using UnityEngine.Events;
 
 namespace MARDEK.UI
@@ -15,7 +16,7 @@ namespace MARDEK.UI
           [SerializeField] GameObject CharacterInspectionCard;
           [SerializeField] RectTransform actionPicker;
           [SerializeField] UnityEvent OnVictoryUE;
-
+          [SerializeField] BattleCharacterPicker characterPicker;
           public BattleCharacter characterBeingInspected { get; private set; }
 
         private void Awake()
@@ -58,5 +59,6 @@ namespace MARDEK.UI
           {
                OnVictoryUE.Invoke();
           }
+
     }
 }

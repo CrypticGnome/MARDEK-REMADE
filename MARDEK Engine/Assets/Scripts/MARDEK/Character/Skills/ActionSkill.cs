@@ -13,9 +13,20 @@ namespace MARDEK.Skill
      using UnityEditorInternal;
 
      [CreateAssetMenu(menuName = "MARDEK/Skill/ActionSkill")]
-    public class ActionSkill : Skill
+    public class ActionSkill : Skill, IBattleAction
      {
-          [SerializeField] Battle.BattleAction action;
-          public Battle.BattleAction Action { get { return action; } }
+          [field: SerializeField] public int Cost { get; private set; }
+          [SerializeField] BattleAction action;
+          public BattleAction Action { get { return action; } }
+
+          public Sprite ActionIcon => Action.Element.thickSprite;
+
+          public bool TryPerformAction(BattleCharacter user, BattleCharacter target)
+          {
+               if (user.CurrentMP < Cost) return false;
+               action.Apply(user, target);
+               user.CurrentMP -= Cost;
+               return true;
+          }
      }
 }
