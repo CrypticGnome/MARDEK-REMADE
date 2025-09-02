@@ -9,14 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c375ea2ef087174388e96bad2feb1eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c67bdc9ba38ff241a08fd0a5ab3551f, type: 3}
   m_Name: Miasmal Chalice (EARTH)
   m_EditorClassIdentifier: 
-  _displayName: Miasmal Chalice (EARTH)
-  _elementText: Earth
-  _description: A rather morbid ancient artefact, full to the brim with the essence
-    of monsters. It exudes a sense of wisdom.
-  _sprite: {fileID: 21300000, guid: 0319868229c29404f9b5f1c9322d7aaf, type: 3}
-  _element: {fileID: 11400000, guid: 96b7bd01ebbf64840a070d9ed9321b4c, type: 2}
-  _price: -1
-  <SkillsToEquip>k__BackingField: []
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
+  _price: 0

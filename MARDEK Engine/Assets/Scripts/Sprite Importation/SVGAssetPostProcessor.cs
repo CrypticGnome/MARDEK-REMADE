@@ -7,7 +7,7 @@ using UnityEditor;
 using UnityEngine;
 using static UnityEngine.UI.Image;
 
-
+#if UNITY_EDITOR
 class SVGStrokeFixer : AssetPostprocessor
 {
      const float MIN_LINE_THICKNESS = 0.5f;
@@ -52,3 +52,4 @@ class SVGStrokeFixer : AssetPostprocessor
           }
      }
 }
+#endif

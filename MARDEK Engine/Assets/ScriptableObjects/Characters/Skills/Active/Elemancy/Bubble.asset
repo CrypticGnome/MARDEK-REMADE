@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97727b890c81574e9c60256ce51f687, type: 3}
   m_Name: Bubble
   m_EditorClassIdentifier: 
-  <PointsRequiredToMaster>k__BackingField: 6
+  <PointsRequiredToMaster>k__BackingField: 0
   <DisplayName>k__BackingField: Bubble
   <Description>k__BackingField: The target is barraged with bubbles of water, which
     inflicts water damage.
-  <Cost>k__BackingField: 8
+  <Cost>k__BackingField: 6
   action:
     element: {fileID: 11400000, guid: ef2aacb5c0629b644a8e1df0f9abf2fc, type: 2}
     soundEffects:

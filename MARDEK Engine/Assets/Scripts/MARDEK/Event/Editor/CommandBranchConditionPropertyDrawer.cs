@@ -1,8 +1,8 @@
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
 using static MARDEK.Event.CommandBranch;
 
+#if UNITY_EDITOR
 [CustomPropertyDrawer(typeof(CommandBranchCondition))]
 public class CommandBranchConditionPropertyDrawer : PropertyDrawer
 {
@@ -43,3 +43,4 @@ public class CommandBranchConditionPropertyDrawer : PropertyDrawer
           return EditorGUIUtility.singleLineHeight;
      }
 }
+#endif

@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
-using MARDEK.Core;
 using MARDEK.Progress;
 
 namespace MARDEK.Movement
 {
+     #if UNITY_EDITOR
     [RequireComponent(typeof(GridObject))]
+    #endif
     public class SceneWaypoint : MonoBehaviour
     {
         [SerializeField] WaypointEnum thisWaypoint = null;

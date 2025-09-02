@@ -9,15 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c375ea2ef087174388e96bad2feb1eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c67bdc9ba38ff241a08fd0a5ab3551f, type: 3}
   m_Name: Talisman of ONEIROS
   m_EditorClassIdentifier: 
-  _displayName: Talisman of ONEIROS
-  _elementText: Aether
-  _description: A little idol of ONEIROS, the Dreamweaver, which is enchanted to
-    allow even the uninitiated to walk in the Dreamrealm. With it in your possession,
-    any of your allies can use Dream Circles.
-  _sprite: {fileID: 21300000, guid: 75678d9c80a3344499c555280c80b1f3, type: 3}
-  _element: {fileID: 11400000, guid: 1193b067027c3e54a9681752489c5b96, type: 2}
-  _price: -1
-  <SkillsToEquip>k__BackingField: []
+  _displayName: 
+  _description: 
+  _sprite: {fileID: 0}
+  _element: {fileID: 0}
+  _price: 0

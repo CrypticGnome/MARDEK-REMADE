@@ -2,7 +2,7 @@ using UnityEditor;
 using UnityEngine;
 using System.IO;
 using System;
-
+#if UNITY_EDITOR
 namespace MARDEK.Editor
 {
      [CreateAssetMenu(fileName = "GradientAsset", menuName = "Custom/Gradient Generator")]
@@ -75,3 +75,4 @@ namespace MARDEK.Editor
           }
      }
 }
+#endif

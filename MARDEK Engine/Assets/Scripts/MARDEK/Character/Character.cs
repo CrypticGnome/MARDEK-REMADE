@@ -2,13 +2,9 @@ using UnityEngine;
 
 namespace MARDEK.CharacterSystem
 {
-     using Codice.Client.GameUI.Status;
-     using Core;
     using Inventory;
      using Stats;
      using System;
-     using System.Collections;
-     using System.Threading;
 
      [CreateAssetMenu(menuName = "MARDEK/Character/Character")]
      public class Character : ScriptableObject, IActionStats

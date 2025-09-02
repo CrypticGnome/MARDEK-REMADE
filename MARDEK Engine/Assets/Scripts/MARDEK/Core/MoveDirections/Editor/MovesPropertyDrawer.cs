@@ -1,6 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
 namespace MARDEK.Movement
 {
      [CustomPropertyDrawer(typeof(Moves))]
@@ -28,3 +29,4 @@ namespace MARDEK.Movement
           }
      }
 }
+#endif

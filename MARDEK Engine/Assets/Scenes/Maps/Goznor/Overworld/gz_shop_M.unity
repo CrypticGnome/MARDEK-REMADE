@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,13 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
-  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -67,9 +65,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -104,7 +99,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +112,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -148,13 +143,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76455183}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1178651517}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &76455185
 TilemapRenderer:
@@ -173,6 +168,9 @@ TilemapRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -268,13 +266,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86980537}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1178651517}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &86980539
 TilemapRenderer:
@@ -293,6 +291,9 @@ TilemapRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -368,6 +369,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 69186623529443827, guid: 4524198ac264da046815598c35039adc, type: 3}
@@ -499,12 +501,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4524198ac264da046815598c35039adc, type: 3}
 --- !u!1001 &128841216
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2603034590301548656, guid: e6596d43268899347a1a39df54914f58, type: 3}
@@ -560,147 +566,10 @@ PrefabInstance:
       value: Waypoint (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6596d43268899347a1a39df54914f58, type: 3}
---- !u!1 &847096875
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 847096877}
-  - component: {fileID: 847096876}
-  m_Layer: 0
-  m_Name: Importer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &847096876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847096875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 213c65687814b064795eaed6434e2b8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilesetImporter: {fileID: 11400000, guid: 8c547f292acf27344b81decd37ff5923, type: 2}
-  mapInfo: "map = [[17,12,113,12,12,10,27,27,27],[11,11,11,23,22,10,11,11,11],[111,111,111,111,111,10,11,19,11],[11,11,11,11,11,10,11,11,11],[11,11,11,11,11,12,11,11,11],[11,11,11,11,11,11,11,11,11],[11,11,11,11,11,10,10,10,10]];\r\ntileset
-    = \"interior1\";\r\narea = \"gz_shop_M\";\r\nareaname = \"Goznor - Magic Shop\";\r\nambience
-    = null;\r\ndungeon = null;\r\nA_sprites = [{name:\"TRANSPORT_TRIGGER\",model:\"_trigger\",x:7,y:2,triggers:-1,WALKON:true,ExecuteScript:function()\r\n{\r\n  
-    if(!CanEnterDreamrealm())\r\n   {\r\n      return undefined;\r\n   }\r\n   _root.EnterDreamrealm();\r\n  
-    _root.WarpTrans([\"gz_shop_M_dream\",7,2]);\r\n}},{name:\"The Elements\",model:\"object\",x:6,y:0,type:\"examine\",conv:[[\"\",\"Everything
-    and everyone in the world has an innate affinity to at least one of several magical
-    elements. People and spells are all monoelemental, and their Element determines
-    their power, potential, and, in the case of people, their personalities.\"],[\"\",\"There
-    are seven known elements, divided into three distinct groups. There are the Natural
-    Elements, which Nature is composed largely of; there are the Moral Elements,
-    which are born from the essence of free will and the spirit of life and choice;
-    there is also the odd Spiritual element group, which eludes many thaumatologists
-    to this day.\"],[\"\",\"There are four Natural elements - Fire, Water, Air, and
-    Earth - two Moral elements - Dark and Light - and only one known Spiritual element
-    - Ether - though Ether\\'s existence is largely considered mythical.\"],[\"\",\"FIRE
-    is the element of energy and devotion, of passion and strength. Fire people are
-    strong-willed, opinionative, confident and powerful. They\\'re driven, and strive
-    to achieve goals. They can be stubborn.\"],[\"\",\"WATER is the element of intellect,
-    of calmness, of beauty. Water people are often laid-back, and \\'go with the
-    flow\\'. They\\'re often good-looking, intelligent, and perceptive. Many have
-    strong magical power, making ideal Mages or Wizards.\"],[\"\",\"AIR is the element
-    of adventure, of wandering, of drifting, of dreaming. Air people are dreamers,
-    but they\\'re floaty and rarely focused on one thing for long. Many travellers
-    and wanderers and Adventurers are of the Air element, \\'living on the edge of
-    the wind\\'.\"],[\"\",\"EARTH is the element of wisdom, common sense and hardiness.
-    Earth people are usually tough and practical, and most certainly \\'down to Earth\\'.
-    They are wise and understanding, trustworthy, honest and reliable. They can be
-    extremely devoted to a cause or way of life, and are also good at solving puzzles.\"],[\"\",\"LIGHT
-    is the elemental epitome of goodness and justice. People with this element will
-    live to Do Good, helping people whenever they can. They live for others moreso
-    than for themselves. They are the most helpful, kind and caring of elements,
-    and often become Heroes.\"],[\"\",\"DARK is the elemental epitome of evil. Dark
-    people are inherently self-centred and manipulative, often violent. They only
-    do things to benefit themselves, and care little for other people. They are the
-    polar opposites of Light people.\"],[\"\",\"ETHER is still a mystery, as it occurs
-    so rarely as to be considered almost mythical. Not much is written about it,
-    and what is written is not highly reliable.\"],[\"\",\"There are rumours of an
-    eighth element, but that is all they are; rumours. Myths. There\\'s no known
-    evidence to support such claims.\"],[\"\",\"The personality traits mentioned
-    for each element in this book are the most common for those elements, but are
-    by no means the only personalities such people can have. Good-aligned Dark-elemental
-    people are not unheard of (take the Adventurer Bernard Stormkiller, for example).\"],[\"\",\"Being
-    creatures of free will, our destinies are for us to choose, not our inherent
-    elements.\"]]},{name:\"Elemental Compatibility\",model:\"object\",x:7,y:0,type:\"examine\",conv:[[\"\",\"Though
-    the elements all exist in a delicate natural balance, each one has an element
-    that opposes it, an element that it must woefully submit to, by the accord of
-    the Magical Laws Of The Universe.\"],[\"\",\"Fire consumes and feeds on Air,
-    Air whittles away and erodes the Earth, Earth absorbs Water, and Water douses
-    flames. Thus is the cycle of the Natural elements.\"],[\"\",\"The Moral elements,
-    being antipodes of one another, polar opposites, oppose each other in a unique
-    way. Light floods, consumes and thus eradicates the Darkness, but in turn Darkness
-    puts out the light. These two elements are both strong and weak against each
-    other simultaneously.\"],[\"\",\"Not much is known about the other elements\\'
-    traits, if indeed they exist at all. Is Ether strong or weak against anything?
-    We do not know.\"],[\"\",\"Though these elemental traits are most often exploited
-    on the battlefield, they can cause influence in day-to-day life too. A fire-elemental
-    person will inherently (though unwillingly) be more submissive to a water-elemental
-    person, and that water person will be more bossy and demanding around fire people,
-    exuding an unwilling and unconscious dominance. Such is nature.\"]]},{name:\"Elements
-    and Breeding\",model:\"object\",x:8,y:0,type:\"examine\",conv:[[\"\",\"Elemental
-    traits can also come into play when it comes to love and sexual relationships.
-    Your elemental affinity plays a large part in determining who you\\'re attracted
-    to, and how well relationships with others will turn out for you.\"],[\"\",\"Males,
-    being the dominant gender, also like to be the dominant element in relationships;
-    thus they are attracted to females of the element that they are strong against
-    first and foremost. Females, secretly lusting being dominated and ravished, are
-    attracted to men of the element superior to themselves. So such matches work
-    rather well.\"],[\"\",\"People of the same element can also work excellently
-    together; similarity at the most fundamental levels has many times been the cause
-    for a great love blossoming and flourishing.\"],[\"\",\"Such things as have been
-    mentioned apply only to people with Natural elements; for people with a Moral
-    element, different rules apply. Naturally, they are attracted to people of the
-    same element as themselves, but also to any and all of the Natural elements.
-    Because of this, Morally-elemental people have more choice when it comes to finding
-    a partner that\\'s right for them.\"],[\"\",\"A relationship between the two
-    Moral elements - that is, a Light and Dark couple - CANNOT work, both emotionally
-    and physically. The two people will never get along or fall in love, and even
-    if they did, a child could never physically be conceived in such a relationship.\"],[\"\",\"When
-    a child is born to other couples, however, its element is inherited from its
-    parents. In a dominant-element relationship, the child is of the dominant element.
-    In same-element relationships, the child is of the element both parents share.
-    In Moral-Natural relationships, the Moral element takes dominance.\"],[\"\",\"Consider
-    these things when looking for a partner. Asking for someone\\'s element before
-    anything else is a great way of quickly getting an idea of whether anything will
-    happen or not!\"]]},{name:\"Shopkeeper\",model:\"man2\",x:2,y:1,walkspeed:-1,dir:\"s\",elem:\"WATER\",conv:[[\"grin\",\"Heh,
-    sorry lads, but I can\\'t legally sell you any magic until you\\'re a wee bit
-    older! Come back in a few years maybe?\"]]},{name:\"EXIT\",model:\"DOOR0\",x:2,y:7,dest:[\"goznor\",35,21]}];\r\nif(GameData.CHAPTER
-    == 1)\r\n{\r\n   A_sprites.push({name:\"TALKTRIGGER\",model:\"talktrigger\",x:2,y:2,NPC:\"Shopkeeper\",dir:\"s\"});\r\n}\r\nelse\r\n{\r\n  
-    A_sprites.push({name:\"Item Shop\",model:\"shop\",x:2,y:2,SHOP:{name:\"Goznor
-    Magic Shop\",wares:DefaultShops.MAGIC_L1}});\r\n}\r\nareaLoot = [];\r\nfoes =
-    [];\r\nbtlChance = 0;\r\nlevelrange = [1,1];\r\nmusicTrack = !GameData.plotVars.SUNSET?\"Goznor\":\"none\";\r\nAreaSetup({clearmap:1});\r\n"
-  waterTilemap: {fileID: 76455186}
-  waterBackgroundTilemap: {fileID: 86980540}
-  terrainTilemap: {fileID: 1076898754}
-  objectsTilemap: {fileID: 1840068283}
---- !u!4 &847096877
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847096875}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0.02, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1076898750
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,13 +595,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076898750}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1178651517}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1076898753
 TilemapRenderer:
@@ -751,6 +620,9 @@ TilemapRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1290,6 +1162,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178651515}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1300,7 +1173,6 @@ Transform:
   - {fileID: 1076898751}
   - {fileID: 1840068281}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &1178651518
 Tilemap:
@@ -1345,6 +1217,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2603034590301548656, guid: e6596d43268899347a1a39df54914f58, type: 3}
@@ -1400,12 +1273,16 @@ PrefabInstance:
       value: Waypoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6596d43268899347a1a39df54914f58, type: 3}
 --- !u!1001 &1651779288
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3265152173036777289, guid: 53b4e9f23c6e15741adc62672b0cd30f, type: 3}
@@ -1469,6 +1346,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 102900000, guid: aed8ff46ba00ea143af7333f26460bef, type: 3}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53b4e9f23c6e15741adc62672b0cd30f, type: 3}
 --- !u!1 &1840068280
 GameObject:
@@ -1496,13 +1376,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840068280}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1178651517}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1840068282
 TilemapRenderer:
@@ -1521,6 +1401,9 @@ TilemapRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1877,11 +1760,42 @@ TilemapCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840068280}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+  m_UseDelaunayMesh: 0
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 1651779288}
+  - {fileID: 1516283562}
+  - {fileID: 128841216}
+  - {fileID: 1178651517}
+  - {fileID: 109686135}
