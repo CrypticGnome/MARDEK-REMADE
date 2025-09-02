@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86b47544976d9994d818ec74436e5528, type: 3}
-  m_Name: Mardek C2
+  m_Name: Vehrn
   m_EditorClassIdentifier: 
-  <displayName>k__BackingField: Mardek
+  <displayName>k__BackingField: Vehrn
   <displayClass>k__BackingField: 
   <element>k__BackingField: {fileID: 11400000, guid: 57ae7927a13bd1b479f4301ce3b69221, type: 2}
-  <portrait>k__BackingField: {fileID: 11400000, guid: 3b16945a6965f2442988c3ddae5670c0, type: 2}
-  <WalkSprites>k__BackingField: {fileID: 11400000, guid: ded5e2092ad404c41899b0dedb914a79, type: 2}
-  <BattleModelPrefab>k__BackingField: {fileID: 1426953165218317120, guid: 833ffe83cadf07b4b82188780382351f, type: 3}
+  <portrait>k__BackingField: {fileID: 11400000, guid: 453e0710306d79f40901035cb8d3607b, type: 2}
+  <WalkSprites>k__BackingField: {fileID: 11400000, guid: 61b217fcc00cfc44a981caffea82404e, type: 2}
+  <BattleModelPrefab>k__BackingField: {fileID: 1426953165218317120, guid: 2ff7fedef847b6948af416177eea10da, type: 3}
   <LearnableSkillset>k__BackingField: {fileID: 0}
   <Stats>k__BackingField:
     Strength: 17
@@ -54,6 +54,6 @@ MonoBehaviour:
     Accuracy: 100
     MaxHPCalc: {fileID: 11400000, guid: 689fb7d58c51ad8419744587e211860e, type: 2}
     MaxMPCalc: {fileID: 11400000, guid: b430bbf3c625229499a5257b4b7dcb62, type: 2}
-    MaxHP: 285
-    MaxMP: 50
+    MaxHP: 1545
+    MaxMP: 1545
   <Type>k__BackingField: 0

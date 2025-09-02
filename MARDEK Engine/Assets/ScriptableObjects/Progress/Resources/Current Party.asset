@@ -16,4 +16,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6285f002e20157e4189c2544839a454b, type: 2}
   - {fileID: 11400000, guid: 81afa6535e7b00440ad08ba9fa20466d, type: 2}
   - {fileID: 11400000, guid: 1d3799a606b81394db624f89854e2c96, type: 2}
+  - {fileID: 11400000, guid: f3e659ee927a9cc4ab0ba087bf5aa059, type: 2}
   RequiredSetup: []

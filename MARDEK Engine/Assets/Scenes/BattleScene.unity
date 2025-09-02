@@ -649,7 +649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2283703066325925409, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2366661897215308972, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: m_Sprite
@@ -1838,7 +1838,7 @@ PrefabInstance:
     - target: {fileID: 3515709735266948041, guid: fa3fe0d71594de0469974abd74714a00, type: 3}
       propertyPath: defaultMusic
       value: 
-      objectReference: {fileID: 11400000, guid: 3e0be9df471ecf84ba6eb9862571a9dd, type: 2}
+      objectReference: {fileID: 11400000, guid: 9db202407608ef54695f23750ec7149f, type: 2}
     - target: {fileID: 4496280405392308217, guid: fa3fe0d71594de0469974abd74714a00, type: 3}
       propertyPath: m_Name
       value: AudioManager
