@@ -12,8 +12,8 @@ namespace MARDEK.Save
 
         [SerializeField] public string currentScene = default;
         [SerializeField] string _gameName = string.Empty;
-        [SerializeField] public string sceneName { get; private set; } = string.Empty;
-        [SerializeField] public DateTime savedTime { get; private set; } = new DateTime();
+        [SerializeField] public string SceneName = string.Empty;
+        [SerializeField] public DateTime SavedTime = new DateTime();
         
         public string GameName
         {
@@ -34,8 +34,8 @@ namespace MARDEK.Save
             Scene scene = SceneManager.GetActiveScene();
             currentScene = scene.path;
 
-            sceneName = SceneInfo.CurrentSceneInfoDisplayName;
-            savedTime = DateTime.Now;
+            SceneName = SceneInfo.CurrentSceneInfoDisplayName;
+            SavedTime = DateTime.Now;
 
             base.Save();
         }

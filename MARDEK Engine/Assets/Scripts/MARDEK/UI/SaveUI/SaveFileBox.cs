@@ -83,8 +83,8 @@ namespace MARDEK.UI
             }
 
             saveNameLabel.text = gpd.GameName;
-            savedTimeLabel.text = gpd.savedTime.ToString("ddd dd/MMM/yyyy - HH:mmtt", System.Globalization.CultureInfo.InvariantCulture);
-            sceneNameLabel.text = gpd.sceneName;
+            savedTimeLabel.text = gpd.SavedTime.ToString("ddd dd/MMM/yyyy - HH:mmtt", System.Globalization.CultureInfo.InvariantCulture);
+            sceneNameLabel.text = gpd.SceneName;
         }
     }
 }
