@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: sewer_11
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 6346318911325233748, guid: ef6e22046d536ed43b77ff003899f224, type: 3}
+  m_Sprite: {fileID: 1840059084634729652, guid: ef6e22046d536ed43b77ff003899f224, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

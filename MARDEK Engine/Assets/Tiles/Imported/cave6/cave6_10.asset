@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: cave6_10
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -8655818156195654838, guid: a4c430135a33f394b9210ead18f73cc3, type: 3}
+  m_Sprite: {fileID: 6287607311731213131, guid: a4c430135a33f394b9210ead18f73cc3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
