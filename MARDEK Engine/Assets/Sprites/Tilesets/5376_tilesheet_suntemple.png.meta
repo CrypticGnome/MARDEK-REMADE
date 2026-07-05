@@ -4,277 +4,277 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -4400644427685314254
-    second: water
+    second: suntemple_water
   - first:
       213: 7055374874864954388
-    second: water_background
+    second: suntemple_water_background
   - first:
       213: 8283533273962829627
-    second: water_backwall
+    second: suntemple_water_backwall
   - first:
       213: -8655818156195654838
-    second: 10
+    second: suntemple_10
   - first:
       213: 2692228934559545928
-    second: 110
+    second: suntemple_110
   - first:
       213: 6287607311731213131
-    second: 120
+    second: suntemple_120
   - first:
       213: 162189906751378928
-    second: 130
+    second: suntemple_130
   - first:
       213: 7026842539221975203
-    second: 140
+    second: suntemple_140
   - first:
       213: 6346318911325233748
-    second: 11
+    second: suntemple_11
   - first:
       213: 8694305388649107506
-    second: 111
+    second: suntemple_111
   - first:
       213: 2425639911146021689
-    second: 121
+    second: suntemple_121
   - first:
       213: 2551518094793869659
-    second: 131
+    second: suntemple_131
   - first:
       213: -3558287319723886022
-    second: 141
+    second: suntemple_141
   - first:
       213: 1840059084634729652
-    second: 12
+    second: suntemple_12
   - first:
       213: -6908713535308251356
-    second: 112
+    second: suntemple_112
   - first:
       213: 7293906268319233776
-    second: 122
+    second: suntemple_122
   - first:
       213: 7564170298869451445
-    second: 132
+    second: suntemple_132
   - first:
       213: -8344083640052678453
-    second: 142
+    second: suntemple_142
   - first:
       213: 1127223760459724062
-    second: 13
+    second: suntemple_13
   - first:
       213: -4129235289053152723
-    second: 113
+    second: suntemple_113
   - first:
       213: 9174235224718242758
-    second: 123
+    second: suntemple_123
   - first:
       213: -5763829074529255567
-    second: 133
+    second: suntemple_133
   - first:
       213: 246296347441123025
-    second: 143
+    second: suntemple_143
   - first:
       213: 2450565909728410856
-    second: 14
+    second: suntemple_14
   - first:
       213: -5468382029055465884
-    second: 114
+    second: suntemple_114
   - first:
       213: 6312037128003990989
-    second: 124
+    second: suntemple_124
   - first:
       213: 1524157299721021891
-    second: 134
+    second: suntemple_134
   - first:
       213: 183212007095979961
-    second: 144
+    second: suntemple_144
   - first:
       213: -3165705482850905674
-    second: 15
+    second: suntemple_15
   - first:
       213: 6734684633657039821
-    second: 115
+    second: suntemple_115
   - first:
       213: -3713311849071092161
-    second: 125
+    second: suntemple_125
   - first:
       213: -1583898042935591190
-    second: 135
+    second: suntemple_135
   - first:
       213: -2406893295983391241
-    second: 145
+    second: suntemple_145
   - first:
       213: -5774996654182199871
-    second: 16
+    second: suntemple_16
   - first:
       213: -5903299138629098404
-    second: 116
+    second: suntemple_116
   - first:
       213: 3685152125961464965
-    second: 126
+    second: suntemple_126
   - first:
       213: -3505167688332446886
-    second: 136
+    second: suntemple_136
   - first:
       213: 8680213767338256587
-    second: 146
+    second: suntemple_146
   - first:
       213: 4443897450750874535
-    second: 17
+    second: suntemple_17
   - first:
       213: 3021946288986219864
-    second: 127
+    second: suntemple_127
   - first:
       213: -6066770748219408245
-    second: 137
+    second: suntemple_137
   - first:
       213: -3839419028077224407
-    second: 147
+    second: suntemple_147
   - first:
       213: 5661049957185019681
-    second: 18
+    second: suntemple_18
   - first:
       213: -8957284035257282584
-    second: 118
+    second: suntemple_118
   - first:
       213: 821699465916322869
-    second: 128
+    second: suntemple_128
   - first:
       213: 6489610241198286182
-    second: 138
+    second: suntemple_138
   - first:
       213: -9186735260187993544
-    second: 148
+    second: suntemple_148
   - first:
       213: 8474981341611232960
-    second: 19
+    second: suntemple_19
   - first:
       213: -9138037040227770232
-    second: 119
+    second: suntemple_119
   - first:
       213: 6836142153017594085
-    second: 20
+    second: suntemple_20
   - first:
       213: -6167804180273747926
-    second: 220
+    second: suntemple_220
   - first:
       213: 2185498278340178504
-    second: 21
+    second: suntemple_21
   - first:
       213: 863553802706296020
-    second: 221
+    second: suntemple_221
   - first:
       213: 430984766625829748
-    second: 22
+    second: suntemple_22
   - first:
       213: -4227776513080790873
-    second: 222
+    second: suntemple_222
   - first:
       213: -1317986280940093683
-    second: 23
+    second: suntemple_23
   - first:
       213: -1126271621817865780
-    second: 223
+    second: suntemple_223
   - first:
       213: -8326724806951850010
-    second: 24
+    second: suntemple_24
   - first:
       213: 7115231666849958538
-    second: 224
+    second: suntemple_224
   - first:
       213: 8914089594741642868
-    second: 25
+    second: suntemple_25
   - first:
       213: -2376931319762873690
-    second: 225
+    second: suntemple_225
   - first:
       213: 276181914589855336
-    second: 26
+    second: suntemple_26
   - first:
       213: 588497054336764479
-    second: 27
+    second: suntemple_27
   - first:
       213: -540048619370252142
-    second: 28
+    second: suntemple_28
   - first:
       213: -3511060238418154924
-    second: 29
+    second: suntemple_29
   - first:
       213: -6691012767228139306
-    second: 30
+    second: suntemple_30
   - first:
       213: 8251907811329543855
-    second: 31
+    second: suntemple_31
   - first:
       213: -6398567975934360271
-    second: 117
+    second: suntemple_117
   - first:
       213: -201460538643699791
-    second: lava
+    second: suntemple_lava
   - first:
       213: 4392170440827130783
-    second: waterfall
+    second: suntemple_waterfall
   - first:
       213: -8735441677112475752
-    second: 129
+    second: suntemple_129
   - first:
       213: 1641813613071775055
-    second: 139
+    second: suntemple_139
   - first:
       213: -9016710347682217852
-    second: 149
+    second: suntemple_149
   - first:
       213: 3739629566794811945
-    second: 210
+    second: suntemple_210
   - first:
       213: 312411451082320881
-    second: 211
+    second: suntemple_211
   - first:
       213: 7200636335243528347
-    second: 212
+    second: suntemple_212
   - first:
       213: -3977800204531077332
-    second: 213
+    second: suntemple_213
   - first:
       213: 9018316408388942899
-    second: 214
+    second: suntemple_214
   - first:
       213: -2570949691034005900
-    second: 215
+    second: suntemple_215
   - first:
       213: 2791595852367629972
-    second: 216
+    second: suntemple_216
   - first:
       213: 7560987481910819968
-    second: 217
+    second: suntemple_217
   - first:
       213: 8628016325019199391
-    second: 218
+    second: suntemple_218
   - first:
       213: 2294871103751515929
-    second: 219
+    second: suntemple_219
   - first:
       213: -8946788012438720712
-    second: 32
+    second: suntemple_32
   - first:
       213: -3538851436377425636
-    second: 33
+    second: suntemple_33
   - first:
       213: 5837620518785745679
-    second: 34
+    second: suntemple_34
   - first:
       213: 735763825654373507
-    second: 35
+    second: suntemple_35
   - first:
       213: -6766607325196344940
-    second: 36
+    second: suntemple_36
   - first:
       213: 7123294266852565953
-    second: 37
+    second: suntemple_37
   - first:
       213: 1812952166184403864
-    second: 38
+    second: suntemple_38
   - first:
       213: 765628930423093814
-    second: 39
+    second: suntemple_39
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -389,7 +389,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: water
+      name: suntemple_water
       rect:
         serializedVersion: 2
         x: 160
@@ -410,7 +410,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water_background
+      name: suntemple_water_background
       rect:
         serializedVersion: 2
         x: 176
@@ -431,7 +431,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water_backwall
+      name: suntemple_water_backwall
       rect:
         serializedVersion: 2
         x: 192
@@ -452,7 +452,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lava
+      name: suntemple_lava
       rect:
         serializedVersion: 2
         x: 208
@@ -473,7 +473,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterfall
+      name: suntemple_waterfall
       rect:
         serializedVersion: 2
         x: 224
@@ -494,7 +494,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 10
+      name: suntemple_10
       rect:
         serializedVersion: 2
         x: 0
@@ -515,7 +515,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 110
+      name: suntemple_110
       rect:
         serializedVersion: 2
         x: 0
@@ -536,7 +536,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 120
+      name: suntemple_120
       rect:
         serializedVersion: 2
         x: 0
@@ -557,7 +557,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 130
+      name: suntemple_130
       rect:
         serializedVersion: 2
         x: 0
@@ -578,7 +578,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 140
+      name: suntemple_140
       rect:
         serializedVersion: 2
         x: 0
@@ -599,7 +599,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11
+      name: suntemple_11
       rect:
         serializedVersion: 2
         x: 16
@@ -620,7 +620,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 111
+      name: suntemple_111
       rect:
         serializedVersion: 2
         x: 16
@@ -641,7 +641,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 121
+      name: suntemple_121
       rect:
         serializedVersion: 2
         x: 16
@@ -662,7 +662,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 131
+      name: suntemple_131
       rect:
         serializedVersion: 2
         x: 16
@@ -683,7 +683,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 141
+      name: suntemple_141
       rect:
         serializedVersion: 2
         x: 16
@@ -704,7 +704,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 12
+      name: suntemple_12
       rect:
         serializedVersion: 2
         x: 32
@@ -725,7 +725,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 112
+      name: suntemple_112
       rect:
         serializedVersion: 2
         x: 32
@@ -746,7 +746,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 122
+      name: suntemple_122
       rect:
         serializedVersion: 2
         x: 32
@@ -767,7 +767,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 132
+      name: suntemple_132
       rect:
         serializedVersion: 2
         x: 32
@@ -788,7 +788,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 142
+      name: suntemple_142
       rect:
         serializedVersion: 2
         x: 32
@@ -809,7 +809,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13
+      name: suntemple_13
       rect:
         serializedVersion: 2
         x: 48
@@ -830,7 +830,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 113
+      name: suntemple_113
       rect:
         serializedVersion: 2
         x: 48
@@ -851,7 +851,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 123
+      name: suntemple_123
       rect:
         serializedVersion: 2
         x: 48
@@ -872,7 +872,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 133
+      name: suntemple_133
       rect:
         serializedVersion: 2
         x: 48
@@ -893,7 +893,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 143
+      name: suntemple_143
       rect:
         serializedVersion: 2
         x: 48
@@ -914,7 +914,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 14
+      name: suntemple_14
       rect:
         serializedVersion: 2
         x: 64
@@ -935,7 +935,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 114
+      name: suntemple_114
       rect:
         serializedVersion: 2
         x: 64
@@ -956,7 +956,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 124
+      name: suntemple_124
       rect:
         serializedVersion: 2
         x: 64
@@ -977,7 +977,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 134
+      name: suntemple_134
       rect:
         serializedVersion: 2
         x: 64
@@ -998,7 +998,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 144
+      name: suntemple_144
       rect:
         serializedVersion: 2
         x: 64
@@ -1019,7 +1019,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 15
+      name: suntemple_15
       rect:
         serializedVersion: 2
         x: 80
@@ -1040,7 +1040,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 115
+      name: suntemple_115
       rect:
         serializedVersion: 2
         x: 80
@@ -1061,7 +1061,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 125
+      name: suntemple_125
       rect:
         serializedVersion: 2
         x: 80
@@ -1082,7 +1082,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 135
+      name: suntemple_135
       rect:
         serializedVersion: 2
         x: 80
@@ -1103,7 +1103,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 145
+      name: suntemple_145
       rect:
         serializedVersion: 2
         x: 80
@@ -1124,7 +1124,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16
+      name: suntemple_16
       rect:
         serializedVersion: 2
         x: 96
@@ -1145,7 +1145,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 116
+      name: suntemple_116
       rect:
         serializedVersion: 2
         x: 96
@@ -1166,7 +1166,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 126
+      name: suntemple_126
       rect:
         serializedVersion: 2
         x: 96
@@ -1187,7 +1187,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 136
+      name: suntemple_136
       rect:
         serializedVersion: 2
         x: 96
@@ -1208,7 +1208,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 146
+      name: suntemple_146
       rect:
         serializedVersion: 2
         x: 96
@@ -1229,7 +1229,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 17
+      name: suntemple_17
       rect:
         serializedVersion: 2
         x: 112
@@ -1250,7 +1250,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 117
+      name: suntemple_117
       rect:
         serializedVersion: 2
         x: 112
@@ -1271,7 +1271,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 127
+      name: suntemple_127
       rect:
         serializedVersion: 2
         x: 112
@@ -1292,7 +1292,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 137
+      name: suntemple_137
       rect:
         serializedVersion: 2
         x: 112
@@ -1313,7 +1313,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 147
+      name: suntemple_147
       rect:
         serializedVersion: 2
         x: 112
@@ -1334,7 +1334,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 18
+      name: suntemple_18
       rect:
         serializedVersion: 2
         x: 128
@@ -1355,7 +1355,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 118
+      name: suntemple_118
       rect:
         serializedVersion: 2
         x: 128
@@ -1376,7 +1376,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 128
+      name: suntemple_128
       rect:
         serializedVersion: 2
         x: 128
@@ -1397,7 +1397,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 138
+      name: suntemple_138
       rect:
         serializedVersion: 2
         x: 128
@@ -1418,7 +1418,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 148
+      name: suntemple_148
       rect:
         serializedVersion: 2
         x: 128
@@ -1439,7 +1439,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 19
+      name: suntemple_19
       rect:
         serializedVersion: 2
         x: 144
@@ -1460,7 +1460,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 119
+      name: suntemple_119
       rect:
         serializedVersion: 2
         x: 144
@@ -1481,7 +1481,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 129
+      name: suntemple_129
       rect:
         serializedVersion: 2
         x: 144
@@ -1502,7 +1502,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 139
+      name: suntemple_139
       rect:
         serializedVersion: 2
         x: 144
@@ -1523,7 +1523,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 149
+      name: suntemple_149
       rect:
         serializedVersion: 2
         x: 144
@@ -1544,7 +1544,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 20
+      name: suntemple_20
       rect:
         serializedVersion: 2
         x: 160
@@ -1565,7 +1565,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 210
+      name: suntemple_210
       rect:
         serializedVersion: 2
         x: 160
@@ -1586,7 +1586,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 21
+      name: suntemple_21
       rect:
         serializedVersion: 2
         x: 176
@@ -1607,7 +1607,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 211
+      name: suntemple_211
       rect:
         serializedVersion: 2
         x: 176
@@ -1628,7 +1628,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 22
+      name: suntemple_22
       rect:
         serializedVersion: 2
         x: 192
@@ -1649,7 +1649,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 212
+      name: suntemple_212
       rect:
         serializedVersion: 2
         x: 192
@@ -1670,7 +1670,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 23
+      name: suntemple_23
       rect:
         serializedVersion: 2
         x: 208
@@ -1691,7 +1691,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 213
+      name: suntemple_213
       rect:
         serializedVersion: 2
         x: 208
@@ -1712,7 +1712,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 24
+      name: suntemple_24
       rect:
         serializedVersion: 2
         x: 224
@@ -1733,7 +1733,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 214
+      name: suntemple_214
       rect:
         serializedVersion: 2
         x: 224
@@ -1754,7 +1754,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 25
+      name: suntemple_25
       rect:
         serializedVersion: 2
         x: 240
@@ -1775,7 +1775,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 215
+      name: suntemple_215
       rect:
         serializedVersion: 2
         x: 240
@@ -1796,7 +1796,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 26
+      name: suntemple_26
       rect:
         serializedVersion: 2
         x: 256
@@ -1817,7 +1817,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 216
+      name: suntemple_216
       rect:
         serializedVersion: 2
         x: 256
@@ -1838,7 +1838,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 27
+      name: suntemple_27
       rect:
         serializedVersion: 2
         x: 272
@@ -1859,7 +1859,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 217
+      name: suntemple_217
       rect:
         serializedVersion: 2
         x: 272
@@ -1880,7 +1880,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 28
+      name: suntemple_28
       rect:
         serializedVersion: 2
         x: 288
@@ -1901,7 +1901,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 218
+      name: suntemple_218
       rect:
         serializedVersion: 2
         x: 288
@@ -1922,7 +1922,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29
+      name: suntemple_29
       rect:
         serializedVersion: 2
         x: 304
@@ -1943,7 +1943,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 219
+      name: suntemple_219
       rect:
         serializedVersion: 2
         x: 304
@@ -1964,7 +1964,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30
+      name: suntemple_30
       rect:
         serializedVersion: 2
         x: 320
@@ -1985,7 +1985,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 31
+      name: suntemple_31
       rect:
         serializedVersion: 2
         x: 336
@@ -2006,7 +2006,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32
+      name: suntemple_32
       rect:
         serializedVersion: 2
         x: 352
@@ -2027,7 +2027,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 33
+      name: suntemple_33
       rect:
         serializedVersion: 2
         x: 368
@@ -2048,7 +2048,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 34
+      name: suntemple_34
       rect:
         serializedVersion: 2
         x: 384
@@ -2069,7 +2069,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 35
+      name: suntemple_35
       rect:
         serializedVersion: 2
         x: 400
@@ -2090,7 +2090,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 36
+      name: suntemple_36
       rect:
         serializedVersion: 2
         x: 416
@@ -2111,7 +2111,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 37
+      name: suntemple_37
       rect:
         serializedVersion: 2
         x: 432
@@ -2132,7 +2132,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 38
+      name: suntemple_38
       rect:
         serializedVersion: 2
         x: 448
@@ -2153,7 +2153,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 39
+      name: suntemple_39
       rect:
         serializedVersion: 2
         x: 464

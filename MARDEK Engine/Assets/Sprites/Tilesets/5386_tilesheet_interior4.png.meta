@@ -4,100 +4,100 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -4400644427685314254
-    second: water
+    second: interior4_water
   - first:
       213: 7055374874864954388
-    second: water_background
+    second: interior4_water_background
   - first:
       213: 8283533273962829627
-    second: water_backwall
+    second: interior4_water_backwall
   - first:
       213: -8655818156195654838
-    second: 10
+    second: interior4_10
   - first:
       213: 2692228934559545928
-    second: 110
+    second: interior4_110
   - first:
       213: 6346318911325233748
-    second: 11
+    second: interior4_11
   - first:
       213: 8694305388649107506
-    second: 111
+    second: interior4_111
   - first:
       213: 1840059084634729652
-    second: 12
+    second: interior4_12
   - first:
       213: 1127223760459724062
-    second: 13
+    second: interior4_13
   - first:
       213: 2450565909728410856
-    second: 14
+    second: interior4_14
   - first:
       213: -3165705482850905674
-    second: 15
+    second: interior4_15
   - first:
       213: -5774996654182199871
-    second: 16
+    second: interior4_16
   - first:
       213: 4443897450750874535
-    second: 17
+    second: interior4_17
   - first:
       213: 5661049957185019681
-    second: 18
+    second: interior4_18
   - first:
       213: 8474981341611232960
-    second: 19
+    second: interior4_19
   - first:
       213: 6836142153017594085
-    second: 20
+    second: interior4_20
   - first:
       213: 2185498278340178504
-    second: 21
+    second: interior4_21
   - first:
       213: 430984766625829748
-    second: 22
+    second: interior4_22
   - first:
       213: -1317986280940093683
-    second: 23
+    second: interior4_23
   - first:
       213: -8326724806951850010
-    second: 24
+    second: interior4_24
   - first:
       213: 8914089594741642868
-    second: 25
+    second: interior4_25
   - first:
       213: 276181914589855336
-    second: 26
+    second: interior4_26
   - first:
       213: -201460538643699791
-    second: lava
+    second: interior4_lava
   - first:
       213: 4392170440827130783
-    second: waterfall
+    second: interior4_waterfall
   - first:
       213: -6908713535308251356
-    second: 112
+    second: interior4_112
   - first:
       213: -4129235289053152723
-    second: 113
+    second: interior4_113
   - first:
       213: -5468382029055465884
-    second: 114
+    second: interior4_114
   - first:
       213: 6734684633657039821
-    second: 115
+    second: interior4_115
   - first:
       213: -5903299138629098404
-    second: 116
+    second: interior4_116
   - first:
       213: -6398567975934360271
-    second: 117
+    second: interior4_117
   - first:
       213: -8957284035257282584
-    second: 118
+    second: interior4_118
   - first:
       213: -9138037040227770232
-    second: 119
+    second: interior4_119
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -212,7 +212,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: water
+      name: interior4_water
       rect:
         serializedVersion: 2
         x: 160
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water_background
+      name: interior4_water_background
       rect:
         serializedVersion: 2
         x: 176
@@ -254,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water_backwall
+      name: interior4_water_backwall
       rect:
         serializedVersion: 2
         x: 192
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lava
+      name: interior4_lava
       rect:
         serializedVersion: 2
         x: 208
@@ -296,7 +296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterfall
+      name: interior4_waterfall
       rect:
         serializedVersion: 2
         x: 224
@@ -317,7 +317,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 10
+      name: interior4_10
       rect:
         serializedVersion: 2
         x: 0
@@ -338,7 +338,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 110
+      name: interior4_110
       rect:
         serializedVersion: 2
         x: 0
@@ -359,7 +359,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11
+      name: interior4_11
       rect:
         serializedVersion: 2
         x: 16
@@ -380,7 +380,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 111
+      name: interior4_111
       rect:
         serializedVersion: 2
         x: 16
@@ -401,7 +401,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 12
+      name: interior4_12
       rect:
         serializedVersion: 2
         x: 32
@@ -422,7 +422,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 112
+      name: interior4_112
       rect:
         serializedVersion: 2
         x: 32
@@ -443,7 +443,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13
+      name: interior4_13
       rect:
         serializedVersion: 2
         x: 48
@@ -464,7 +464,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 113
+      name: interior4_113
       rect:
         serializedVersion: 2
         x: 48
@@ -485,7 +485,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 14
+      name: interior4_14
       rect:
         serializedVersion: 2
         x: 64
@@ -506,7 +506,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 114
+      name: interior4_114
       rect:
         serializedVersion: 2
         x: 64
@@ -527,7 +527,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 15
+      name: interior4_15
       rect:
         serializedVersion: 2
         x: 80
@@ -548,7 +548,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 115
+      name: interior4_115
       rect:
         serializedVersion: 2
         x: 80
@@ -569,7 +569,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16
+      name: interior4_16
       rect:
         serializedVersion: 2
         x: 96
@@ -590,7 +590,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 116
+      name: interior4_116
       rect:
         serializedVersion: 2
         x: 96
@@ -611,7 +611,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 17
+      name: interior4_17
       rect:
         serializedVersion: 2
         x: 112
@@ -632,7 +632,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 117
+      name: interior4_117
       rect:
         serializedVersion: 2
         x: 112
@@ -653,7 +653,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 18
+      name: interior4_18
       rect:
         serializedVersion: 2
         x: 128
@@ -674,7 +674,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 118
+      name: interior4_118
       rect:
         serializedVersion: 2
         x: 128
@@ -695,7 +695,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 19
+      name: interior4_19
       rect:
         serializedVersion: 2
         x: 144
@@ -716,7 +716,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 119
+      name: interior4_119
       rect:
         serializedVersion: 2
         x: 144
@@ -737,7 +737,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 20
+      name: interior4_20
       rect:
         serializedVersion: 2
         x: 160
@@ -758,7 +758,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 21
+      name: interior4_21
       rect:
         serializedVersion: 2
         x: 176
@@ -779,7 +779,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 22
+      name: interior4_22
       rect:
         serializedVersion: 2
         x: 192
@@ -800,7 +800,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 23
+      name: interior4_23
       rect:
         serializedVersion: 2
         x: 208
@@ -821,7 +821,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 24
+      name: interior4_24
       rect:
         serializedVersion: 2
         x: 224
@@ -842,7 +842,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 25
+      name: interior4_25
       rect:
         serializedVersion: 2
         x: 240
@@ -863,7 +863,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 26
+      name: interior4_26
       rect:
         serializedVersion: 2
         x: 256

@@ -4,49 +4,49 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -4400644427685314254
-    second: water
+    second: dragonlair_water
   - first:
       213: 7055374874864954388
-    second: water_background
+    second: dragonlair_water_background
   - first:
       213: 8283533273962829627
-    second: water_backwall
+    second: dragonlair_water_backwall
   - first:
       213: -8655818156195654838
-    second: 10
+    second: dragonlair_10
   - first:
       213: 6346318911325233748
-    second: 11
+    second: dragonlair_11
   - first:
       213: 1840059084634729652
-    second: 12
+    second: dragonlair_12
   - first:
       213: 1127223760459724062
-    second: 13
+    second: dragonlair_13
   - first:
       213: 2450565909728410856
-    second: 14
+    second: dragonlair_14
   - first:
       213: -3165705482850905674
-    second: 15
+    second: dragonlair_15
   - first:
       213: -5774996654182199871
-    second: 16
+    second: dragonlair_16
   - first:
       213: 4443897450750874535
-    second: 17
+    second: dragonlair_17
   - first:
       213: 5661049957185019681
-    second: 18
+    second: dragonlair_18
   - first:
       213: -201460538643699791
-    second: lava
+    second: dragonlair_lava
   - first:
       213: 4392170440827130783
-    second: waterfall
+    second: dragonlair_waterfall
   - first:
       213: 8474981341611232960
-    second: 19
+    second: dragonlair_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -161,7 +161,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: water
+      name: dragonlair_water
       rect:
         serializedVersion: 2
         x: 160
@@ -182,7 +182,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water_background
+      name: dragonlair_water_background
       rect:
         serializedVersion: 2
         x: 176
@@ -203,7 +203,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water_backwall
+      name: dragonlair_water_backwall
       rect:
         serializedVersion: 2
         x: 192
@@ -224,7 +224,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lava
+      name: dragonlair_lava
       rect:
         serializedVersion: 2
         x: 208
@@ -245,7 +245,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterfall
+      name: dragonlair_waterfall
       rect:
         serializedVersion: 2
         x: 224
@@ -266,7 +266,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 10
+      name: dragonlair_10
       rect:
         serializedVersion: 2
         x: 0
@@ -287,7 +287,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11
+      name: dragonlair_11
       rect:
         serializedVersion: 2
         x: 16
@@ -308,7 +308,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 12
+      name: dragonlair_12
       rect:
         serializedVersion: 2
         x: 32
@@ -329,7 +329,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13
+      name: dragonlair_13
       rect:
         serializedVersion: 2
         x: 48
@@ -350,7 +350,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 14
+      name: dragonlair_14
       rect:
         serializedVersion: 2
         x: 64
@@ -371,7 +371,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 15
+      name: dragonlair_15
       rect:
         serializedVersion: 2
         x: 80
@@ -392,7 +392,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16
+      name: dragonlair_16
       rect:
         serializedVersion: 2
         x: 96
@@ -413,7 +413,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 17
+      name: dragonlair_17
       rect:
         serializedVersion: 2
         x: 112
@@ -434,7 +434,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 18
+      name: dragonlair_18
       rect:
         serializedVersion: 2
         x: 128
@@ -455,7 +455,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 19
+      name: dragonlair_19
       rect:
         serializedVersion: 2
         x: 144

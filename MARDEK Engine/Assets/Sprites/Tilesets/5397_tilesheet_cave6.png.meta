@@ -4,118 +4,118 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -4400644427685314254
-    second: water
+    second: cave6_water
   - first:
       213: 7055374874864954388
-    second: water_background
+    second: cave6_water_background
   - first:
       213: 8283533273962829627
-    second: water_backwall
+    second: cave6_water_backwall
   - first:
       213: -8655818156195654838
-    second: 10
+    second: cave6_10
   - first:
       213: 2692228934559545928
-    second: 110
+    second: cave6_110
   - first:
       213: 6287607311731213131
-    second: 120
+    second: cave6_120
   - first:
       213: 6346318911325233748
-    second: 11
+    second: cave6_11
   - first:
       213: 8694305388649107506
-    second: 111
+    second: cave6_111
   - first:
       213: 2425639911146021689
-    second: 121
+    second: cave6_121
   - first:
       213: 1840059084634729652
-    second: 12
+    second: cave6_12
   - first:
       213: -6908713535308251356
-    second: 112
+    second: cave6_112
   - first:
       213: 7293906268319233776
-    second: 122
+    second: cave6_122
   - first:
       213: 1127223760459724062
-    second: 13
+    second: cave6_13
   - first:
       213: -4129235289053152723
-    second: 113
+    second: cave6_113
   - first:
       213: 9174235224718242758
-    second: 123
+    second: cave6_123
   - first:
       213: 2450565909728410856
-    second: 14
+    second: cave6_14
   - first:
       213: 6312037128003990989
-    second: 124
+    second: cave6_124
   - first:
       213: -3165705482850905674
-    second: 15
+    second: cave6_15
   - first:
       213: 6734684633657039821
-    second: 115
+    second: cave6_115
   - first:
       213: -3713311849071092161
-    second: 125
+    second: cave6_125
   - first:
       213: -5774996654182199871
-    second: 16
+    second: cave6_16
   - first:
       213: -5903299138629098404
-    second: 116
+    second: cave6_116
   - first:
       213: 3685152125961464965
-    second: 126
+    second: cave6_126
   - first:
       213: 4443897450750874535
-    second: 17
+    second: cave6_17
   - first:
       213: -6398567975934360271
-    second: 117
+    second: cave6_117
   - first:
       213: 3021946288986219864
-    second: 127
+    second: cave6_127
   - first:
       213: 5661049957185019681
-    second: 18
+    second: cave6_18
   - first:
       213: -8957284035257282584
-    second: 118
+    second: cave6_118
   - first:
       213: 821699465916322869
-    second: 128
+    second: cave6_128
   - first:
       213: 8474981341611232960
-    second: 19
+    second: cave6_19
   - first:
       213: -9138037040227770232
-    second: 119
+    second: cave6_119
   - first:
       213: 6836142153017594085
-    second: 20
+    second: cave6_20
   - first:
       213: 2185498278340178504
-    second: 21
+    second: cave6_21
   - first:
       213: 430984766625829748
-    second: 22
+    second: cave6_22
   - first:
       213: -5468382029055465884
-    second: 114
+    second: cave6_114
   - first:
       213: -201460538643699791
-    second: lava
+    second: cave6_lava
   - first:
       213: 4392170440827130783
-    second: waterfall
+    second: cave6_waterfall
   - first:
       213: -8735441677112475752
-    second: 129
+    second: cave6_129
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -230,7 +230,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: water
+      name: cave6_water
       rect:
         serializedVersion: 2
         x: 160
@@ -251,7 +251,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water_background
+      name: cave6_water_background
       rect:
         serializedVersion: 2
         x: 176
@@ -272,7 +272,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water_backwall
+      name: cave6_water_backwall
       rect:
         serializedVersion: 2
         x: 192
@@ -293,7 +293,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lava
+      name: cave6_lava
       rect:
         serializedVersion: 2
         x: 208
@@ -314,7 +314,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterfall
+      name: cave6_waterfall
       rect:
         serializedVersion: 2
         x: 224
@@ -335,7 +335,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 10
+      name: cave6_10
       rect:
         serializedVersion: 2
         x: 0
@@ -356,7 +356,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 110
+      name: cave6_110
       rect:
         serializedVersion: 2
         x: 0
@@ -377,7 +377,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 120
+      name: cave6_120
       rect:
         serializedVersion: 2
         x: 0
@@ -398,7 +398,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11
+      name: cave6_11
       rect:
         serializedVersion: 2
         x: 16
@@ -419,7 +419,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 111
+      name: cave6_111
       rect:
         serializedVersion: 2
         x: 16
@@ -440,7 +440,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 121
+      name: cave6_121
       rect:
         serializedVersion: 2
         x: 16
@@ -461,7 +461,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 12
+      name: cave6_12
       rect:
         serializedVersion: 2
         x: 32
@@ -482,7 +482,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 112
+      name: cave6_112
       rect:
         serializedVersion: 2
         x: 32
@@ -503,7 +503,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 122
+      name: cave6_122
       rect:
         serializedVersion: 2
         x: 32
@@ -524,7 +524,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13
+      name: cave6_13
       rect:
         serializedVersion: 2
         x: 48
@@ -545,7 +545,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 113
+      name: cave6_113
       rect:
         serializedVersion: 2
         x: 48
@@ -566,7 +566,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 123
+      name: cave6_123
       rect:
         serializedVersion: 2
         x: 48
@@ -587,7 +587,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 14
+      name: cave6_14
       rect:
         serializedVersion: 2
         x: 64
@@ -608,7 +608,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 114
+      name: cave6_114
       rect:
         serializedVersion: 2
         x: 64
@@ -629,7 +629,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 124
+      name: cave6_124
       rect:
         serializedVersion: 2
         x: 64
@@ -650,7 +650,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 15
+      name: cave6_15
       rect:
         serializedVersion: 2
         x: 80
@@ -671,7 +671,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 115
+      name: cave6_115
       rect:
         serializedVersion: 2
         x: 80
@@ -692,7 +692,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 125
+      name: cave6_125
       rect:
         serializedVersion: 2
         x: 80
@@ -713,7 +713,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16
+      name: cave6_16
       rect:
         serializedVersion: 2
         x: 96
@@ -734,7 +734,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 116
+      name: cave6_116
       rect:
         serializedVersion: 2
         x: 96
@@ -755,7 +755,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 126
+      name: cave6_126
       rect:
         serializedVersion: 2
         x: 96
@@ -776,7 +776,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 17
+      name: cave6_17
       rect:
         serializedVersion: 2
         x: 112
@@ -797,7 +797,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 117
+      name: cave6_117
       rect:
         serializedVersion: 2
         x: 112
@@ -818,7 +818,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 127
+      name: cave6_127
       rect:
         serializedVersion: 2
         x: 112
@@ -839,7 +839,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 18
+      name: cave6_18
       rect:
         serializedVersion: 2
         x: 128
@@ -860,7 +860,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 118
+      name: cave6_118
       rect:
         serializedVersion: 2
         x: 128
@@ -881,7 +881,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 128
+      name: cave6_128
       rect:
         serializedVersion: 2
         x: 128
@@ -902,7 +902,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 19
+      name: cave6_19
       rect:
         serializedVersion: 2
         x: 144
@@ -923,7 +923,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 119
+      name: cave6_119
       rect:
         serializedVersion: 2
         x: 144
@@ -944,7 +944,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 129
+      name: cave6_129
       rect:
         serializedVersion: 2
         x: 144
@@ -965,7 +965,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 20
+      name: cave6_20
       rect:
         serializedVersion: 2
         x: 160
@@ -986,7 +986,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 21
+      name: cave6_21
       rect:
         serializedVersion: 2
         x: 176
@@ -1007,7 +1007,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 22
+      name: cave6_22
       rect:
         serializedVersion: 2
         x: 192
