@@ -1,0 +1,2787 @@
+Assets/Scenes/Maps/Goznor/Overworld/gz_shop_M_dream.unity
+Assets/Scenes/Maps/Goznor/Sewers/sewer1.unity
+Assets/Scenes/Maps/Goznor/Sewers/sewer2.unity
+Assets/Scripts/Input/PlayerControls.cs
+Assets/Sprites/BattleBackgrounds/Dragon's Lair/2133.svg.meta
+Assets/Sprites/BattleBackgrounds/Dragon's Lair/Arch Mask.svg.meta
+Assets/Sprites/BattleBackgrounds/Dragon's Lair/Arch.svg.meta
+Assets/Sprites/BattleBackgrounds/Dragon's Lair/Background.svg.meta
+Assets/Sprites/BattleBackgrounds/Dragon's Lair/shapes/2189.svg.meta
+Assets/Sprites/BattleBackgrounds/Dragon's Lair/shapes/2190.svg.meta
+Assets/Sprites/BattleBackgrounds/Dragon's Lair/shapes/2191.svg.meta
+Assets/Sprites/BattleBackgrounds/Dragon's Lair/shapes/2192.svg.meta
+Assets/Sprites/BattleBackgrounds/Dragon's Lair/shapes/501.svg.meta
+Assets/Sprites/BattleBackgrounds/Dragon's Lair/shapes/Adjustable Light Source.svg.meta
+Assets/Sprites/BattleBackgrounds/Sewer/shapes/2134.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2385.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2387.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2388.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2390.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2391.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2392.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2394.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2395.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2397.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2398.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2400.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2401.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2402.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2404.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2405.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2406.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2407.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2409.svg.meta
+Assets/Sprites/Characters/BattleModels/Deugan/shapes/2410.svg.meta
+Assets/Sprites/Characters/BattleModels/Effects/shapes/Fumerat Acrid Fog.mat
+Assets/Sprites/Characters/BattleModels/Effects/shapes/Fumerat Acrid Fog.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/1065.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/1716.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/1867.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/1884.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/199.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/200.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/201.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/202.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/203.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/204.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/205.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/206.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/207.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/208.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/209.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/210.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/211.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/212.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/213.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/214.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/215.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/216.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/217.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/218.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2189.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2190.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2191.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2192.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2222.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2223.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2224.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2225.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2226.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2227.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2228.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2229.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2230.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2231.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2234.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2235.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2236.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2237.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2238.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2239.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2240.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2241.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2242.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2243.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2244.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2245.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2246.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2247.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2248.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2249.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2250.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2251.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2252.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2253.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2255.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2256.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2257.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2258.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2259.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2260.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2262.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2264.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2266.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2268.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2270.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2272.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2274.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2275.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2276.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2277.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2278.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2279.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2282.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2283.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2284.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2285.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2286.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2287.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2288.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2290.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2291.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2295.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2296.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2297.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2298.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2299.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2300.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2301.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2302.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2303.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2305.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2307.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2308.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2309.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2310.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2313.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2314.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2315.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2316.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2318.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2319.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2320.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2321.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2322.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2323.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2325.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2326.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2327.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2328.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2330.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2331.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2332.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2333.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2335.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2336.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2337.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2338.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2340.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2341.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2342.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2343.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2344.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2346.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2347.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2348.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2349.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2350.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2365.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2366.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2368.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2369.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2370.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2371.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2372.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2373.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2374.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2375.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2376.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2377.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2378.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2379.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2380.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2381.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2382.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2384.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2385.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2387.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2388.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2390.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2391.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2392.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2394.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2395.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2397.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2398.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2400.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2401.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2402.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2404.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2405.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2406.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2407.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2409.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2410.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2428.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2430.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2431.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2432.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2434.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2435.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2436.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2438.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2439.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2441.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2442.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2444.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2445.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2447.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2448.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2449.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2458.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2460.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2463.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2468.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2469.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2470.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2472.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2473.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2475.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2476.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2478.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2479.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2481.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2482.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2484.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2485.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2502.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2503.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2504.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2505.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2506.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2507.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2508.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2510.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2511.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2513.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2514.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2516.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2519.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2522.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2524.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2526.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2527.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2528.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2529.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2530.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2531.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2533.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2534.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2535.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2536.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2538.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2552.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2553.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2555.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2556.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2558.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2560.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2562.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2563.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2565.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2566.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2568.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2569.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2570.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2571.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2572.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2583.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2590.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2592.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2594.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2596.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2598.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2599.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2601.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2603.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2605.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2606.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2607.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2608.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2609.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2610.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2611.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2618.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2620.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2621.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2623.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2625.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2626.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2628.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2630.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2632.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2634.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2635.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2636.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2637.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2650.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2652.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2654.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2656.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2658.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2660.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2662.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2663.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2664.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2665.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2666.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2667.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2669.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2671.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2673.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2674.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2675.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2676.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2677.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2678.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2680.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2681.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2682.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2683.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2684.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2685.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2686.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2687.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2688.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2689.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2695.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2697.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2698.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2699.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2700.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2701.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2702.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2703.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2704.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2705.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2707.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2708.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2710.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2711.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2713.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2715.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2716.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2718.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2719.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2721.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2722.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2724.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2726.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2728.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2729.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2730.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2731.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2736.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2743.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2744.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2745.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2746.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2747.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2748.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2749.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2750.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2751.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2759.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2761.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2762.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2764.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2766.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2768.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2769.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2770.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2772.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2773.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2775.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2777.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2779.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2780.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2781.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2802.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2804.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2805.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2807.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2808.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2810.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2811.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2812.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2813.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2815.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2816.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2818.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2819.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2820.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2822.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2823.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2824.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2825.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2827.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2828.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2829.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2831.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2833.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2840.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2841.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2842.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2843.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2844.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2845.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2846.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2847.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2849.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2850.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2851.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2852.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2854.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2855.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2857.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2858.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2860.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2861.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2863.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2864.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2865.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2867.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2868.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2870.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2871.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2872.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2873.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2875.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2876.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2882.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2884.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2885.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2887.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2889.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2891.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2892.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2894.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2895.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2897.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2898.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2899.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2901.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2902.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2903.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2904.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2923.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2925.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2927.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2929.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2931.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2933.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2934.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2935.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2937.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2939.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2940.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2941.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2942.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2943.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2944.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2945.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2964.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2966.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2968.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2969.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2971.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2972.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2974.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2975.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2977.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2978.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2979.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2981.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2982.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2983.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2984.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2986.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2987.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2988.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2989.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2994.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2996.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2998.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/2999.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3000.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3001.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3002.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3004.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3006.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3008.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3010.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3011.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3013.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3015.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3016.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3017.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3019.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3021.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3023.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3025.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3026.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3028.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3029.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3030.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3031.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3032.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3033.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3034.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3035.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3036.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3037.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3038.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3039.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3040.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3042.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3043.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3045.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3046.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3048.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3050.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3051.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3053.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3054.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3055.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3057.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3058.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3060.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3061.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3062.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3064.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3065.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3067.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3075.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3077.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3079.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3081.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3082.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3084.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3086.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3088.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3090.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3092.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3093.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3095.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3097.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3099.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3101.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3103.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3105.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3106.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3108.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3110.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3111.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3112.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3113.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3115.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3117.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3119.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3124.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3125.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3126.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3127.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3128.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3130.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3131.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3132.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3133.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3134.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3136.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3137.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3138.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3139.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3140.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3142.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3143.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3144.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3145.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3146.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3148.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3149.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3150.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3151.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3152.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3154.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3155.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3156.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3157.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3158.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3160.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3161.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3162.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3163.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3164.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3166.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3167.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3168.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3169.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3170.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3174.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3175.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3176.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3177.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3178.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3179.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3180.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3182.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3183.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3184.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3185.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3186.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3187.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3188.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3190.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3191.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3192.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3193.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3194.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3195.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3196.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3215.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3216.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3217.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3218.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3219.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3220.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3221.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3223.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3224.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3225.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3226.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3227.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3228.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3229.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3231.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3232.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3233.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3234.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3235.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3236.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3237.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3239.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3240.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3241.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3242.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3243.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3244.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3245.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3247.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3248.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3249.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3250.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3251.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3252.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3253.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3262.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3264.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3265.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3266.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3268.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3269.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3270.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3271.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3273.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3274.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3275.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3277.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3285.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3286.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3287.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3289.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3290.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3291.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3292.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3294.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3295.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3296.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3297.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3299.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3300.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3301.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3303.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3304.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3305.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3306.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3308.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3309.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3310.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3312.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3313.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3314.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3315.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3317.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3318.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3319.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3320.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3321.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3328.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3330.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3332.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3333.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3335.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3337.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3338.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3340.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3342.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3343.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3344.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3345.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3350.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3351.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3352.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3353.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3355.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3356.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3357.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3358.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3359.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3360.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3361.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3362.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3363.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3364.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3365.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3367.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3369.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3371.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3372.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3373.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3374.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3375.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3376.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3377.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3378.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3379.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3380.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3391.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3392.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3393.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3394.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3395.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3396.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3398.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3399.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3400.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3401.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3403.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3404.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3405.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3407.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3408.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3409.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3410.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3411.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3413.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3414.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3415.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3416.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3417.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3419.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3420.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3421.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3422.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3423.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3424.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3426.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3427.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3428.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3429.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3430.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3436.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3439.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3440.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3441.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3442.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3443.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3444.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3446.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3447.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3448.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3449.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3450.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3452.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3453.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3454.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3455.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3456.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3458.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3459.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3460.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3461.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3462.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3464.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3465.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3466.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3467.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3468.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3473.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3474.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3475.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3476.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3478.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3479.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3480.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3481.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3499.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3500.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3501.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3503.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3504.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3505.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3507.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3508.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3509.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3511.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3512.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3513.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3515.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3516.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3517.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3519.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3520.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3521.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3523.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3524.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3525.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3537.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3538.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3539.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3540.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3542.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3543.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3544.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3546.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3547.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3548.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3549.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3551.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3552.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3553.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3554.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3556.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3557.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3558.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3559.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3561.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3562.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3563.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3565.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3566.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3567.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3568.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3571.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3572.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3573.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3574.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3576.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3577.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3578.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3579.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3581.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3582.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3583.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3584.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3586.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3587.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3588.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3589.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3591.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3592.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3593.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3594.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3599.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3600.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3602.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3604.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3606.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3646.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3647.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3661.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3662.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3663.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3664.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3665.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3666.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3667.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3668.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3669.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3670.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3671.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3672.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3673.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3674.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3675.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3676.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3677.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3678.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3680.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3681.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3682.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3683.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3684.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3685.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3686.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3687.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3688.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3689.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3690.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3691.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3692.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3693.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3694.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3695.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3696.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3698.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3699.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3700.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3701.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3702.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3703.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3704.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3705.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3706.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3707.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3708.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3709.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3710.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3711.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3712.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3713.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3714.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3716.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3717.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3718.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3719.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3720.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3721.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3722.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3723.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3724.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3725.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3726.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3727.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3728.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3729.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3730.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3732.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3733.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3734.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3735.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3736.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3737.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3738.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3739.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3740.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3741.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3742.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3743.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3744.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3745.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3746.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3747.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3749.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3750.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3751.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3752.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3753.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3754.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3755.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3756.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3757.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3758.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3759.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3760.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3761.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3762.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3763.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3764.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3765.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3767.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3768.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3769.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3770.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3771.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3772.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3773.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3774.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3775.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3776.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3777.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3778.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3779.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3780.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3781.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3782.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3783.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3784.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3785.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3808.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3809.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3810.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3811.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3812.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3814.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3815.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3816.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3823.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3830.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3835.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3839.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3840.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3841.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3842.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3843.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3844.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3845.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3847.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3849.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3851.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3853.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3854.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3856.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3858.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3864.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3876.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3878.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3879.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3917.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3919.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3920.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3922.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3924.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3926.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3928.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3930.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3932.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3934.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3936.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3938.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3955.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3957.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3959.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3961.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3963.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3965.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3967.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3970.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3971.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3972.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3973.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3974.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3975.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3976.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3977.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3995.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/3996.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4036.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4037.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4038.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4041.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4042.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4043.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4052.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4054.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4055.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4056.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4057.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4058.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4059.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4060.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4061.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4068.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4069.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4070.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4071.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4073.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4074.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4075.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4076.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4078.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4079.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4080.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4081.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4082.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4084.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4085.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4086.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4087.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4089.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4090.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4091.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4092.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4094.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4095.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4096.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4097.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4099.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4100.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4101.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4102.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4104.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4105.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4106.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4107.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4109.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4110.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4111.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4112.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4114.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4115.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4116.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4117.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4119.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4120.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4121.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4122.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4133.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4134.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4135.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4136.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4138.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4139.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4140.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4141.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4143.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4144.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4145.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4146.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4152.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4153.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4154.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4155.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4157.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4158.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4159.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/416.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4160.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4162.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4163.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4164.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4165.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4167.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4168.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4169.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4170.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4172.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4220.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4236.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4237.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4238.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4239.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4240.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4241.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4242.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4244.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4245.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4246.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4247.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4248.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4249.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4250.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4270.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4271.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4272.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4274.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4275.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4276.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4278.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4279.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4280.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4282.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4283.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4284.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4286.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4287.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4288.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4290.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4291.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4292.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4294.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4295.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4296.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4298.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4299.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4300.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4302.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4303.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4304.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4309.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4310.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4312.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4313.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4315.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4318.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4320.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4322.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4324.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4326.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4329.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4332.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4334.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4336.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4338.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4341.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4343.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4345.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4348.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4351.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4354.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4357.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4359.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4362.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4363.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4364.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4369.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4371.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4372.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4373.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4375.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4376.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4378.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4379.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4381.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4383.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4384.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4387.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4396.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4397.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4399.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4400.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4401.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4402.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4404.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4405.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4407.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4408.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4410.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4411.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4413.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4414.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4416.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4417.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4418.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4419.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4420.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4421.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4423.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4424.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4425.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4426.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4427.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4432.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4433.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4435.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4436.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4447.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4448.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4449.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4451.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4452.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4453.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4455.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4456.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4457.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4459.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4460.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4461.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4463.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4464.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4465.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4467.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4468.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4469.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4470.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4471.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4476.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4477.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4479.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/448.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4480.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4482.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4483.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4485.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4502.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4503.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4505.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4506.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4508.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4509.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4511.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4512.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4514.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4515.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4517.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4518.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4520.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4521.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4523.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4524.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4526.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4527.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4530.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4531.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4532.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4534.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4535.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4536.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4538.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4539.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4540.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4542.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4543.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4544.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4546.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4547.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4548.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4550.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4551.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4552.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4554.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4555.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4556.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4558.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4559.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4560.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4562.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4563.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4564.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4565.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4567.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4568.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4569.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4572.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4574.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4576.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4578.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4580.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4582.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4584.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4586.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4588.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4590.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4593.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4594.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4595.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4596.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4597.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4599.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4600.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4601.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4602.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4603.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4605.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4606.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4607.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4608.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4609.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4611.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4612.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4613.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4614.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4615.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4617.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4618.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4619.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4620.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4621.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4623.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4624.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4625.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4626.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4627.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4629.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4630.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4631.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4632.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4633.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4635.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4636.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4637.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4638.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4639.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4641.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4642.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4643.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4644.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4645.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4647.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4648.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4649.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4650.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4651.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4653.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4654.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4655.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4656.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4657.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4659.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4660.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4661.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4662.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4663.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4665.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4666.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4667.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4668.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4670.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4671.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4672.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4673.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4674.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4676.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4677.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4678.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4679.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4680.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4682.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4683.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4684.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4685.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4686.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4692.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4693.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4695.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4696.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4698.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4699.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4701.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4702.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4704.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4705.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4707.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4708.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4710.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4711.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4713.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4714.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4717.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4719.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4721.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4722.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4724.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4726.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4728.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4730.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4732.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4734.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4736.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4737.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4738.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4744.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4745.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4747.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4748.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4750.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4752.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4754.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4756.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4757.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4769.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4771.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4773.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4775.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4777.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4779.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4780.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4781.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4783.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4791.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4792.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4794.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4795.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4797.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4798.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4800.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4801.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4803.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4804.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4806.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4807.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4809.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4811.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4812.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4814.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4815.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4827.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4828.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4830.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4832.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4834.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4835.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4836.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4838.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4839.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4841.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4842.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4843.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4845.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4846.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4847.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4848.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4854.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4855.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4857.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4858.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4860.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4861.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4863.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4864.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4866.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4867.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4869.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4870.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4872.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4874.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4875.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4877.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4878.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4880.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4881.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4882.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4883.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4884.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4885.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4886.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4887.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4888.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4889.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4891.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4892.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4893.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4895.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4896.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4897.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4899.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4900.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4901.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4902.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4904.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4905.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4906.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4907.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4908.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4909.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4910.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4911.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4912.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4913.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4914.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4915.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4916.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4917.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4918.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4919.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4920.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4921.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4922.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4923.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4924.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4925.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4926.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4927.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4928.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4929.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/493.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4930.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4931.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4932.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4933.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4934.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4935.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4936.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4937.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4938.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4939.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4940.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4941.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4942.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4943.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4944.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4945.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4946.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4947.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4948.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4949.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4950.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4951.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4952.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4953.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4954.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4955.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4956.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4957.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4958.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4959.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4960.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4961.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4962.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4963.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4965.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4967.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4969.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4971.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4973.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4975.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4977.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4979.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4981.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4983.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4984.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4985.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4987.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4988.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4989.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4990.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4992.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4995.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4997.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/4999.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5001.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5003.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5005.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5007.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5010.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5011.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5013.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5014.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5016.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5018.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5019.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5021.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5023.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5026.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5027.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5029.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5031.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5033.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5035.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5036.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5038.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5040.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5042.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5056.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5058.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5066.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5068.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5069.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5071.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5072.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5073.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5075.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5076.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5077.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5079.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5080.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5081.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5083.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5084.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5086.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5087.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5089.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5090.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5092.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5093.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5095.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5096.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5097.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5099.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5100.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5102.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5105.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5107.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5108.svg.meta
+Assets/Sprites/Characters/BattleModels/Imported Shapes/5110.svg.meta
+Assets/Sprites/Characters/BattleModels/Leg Components/Calf/Female Soldier Thigh.svg.meta
+Assets/Sprites/Characters/BattleModels/Leg Components/Feet/Female Soldier Feet.svg.meta
+Assets/Sprites/Characters/BattleModels/Leg Components/Thigh/Female Soldier Calf.svg.meta
+Assets/Sprites/Characters/BattleModels/Shadow.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_eye_L_7.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_eye_angr_1589.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_eye_blah_deep_1588.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_eye_blue_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_eye_glare_1592.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_eye_green_6.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_eye_grin_1590.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_eye_orange_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_eye_purple_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_eye_red_5.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_eye_susp_1591.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_eye_yellow_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_face_L_7.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_face_black_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_face_blue_21.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_face_orange_19.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_face_purple_18.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_face_red_22.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_face_void_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_face_white_plain_15.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_face_yellow_20.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_torso_L_7.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_torso_Platemail_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_torso_black_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_torso_blue_25.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_torso_moric_beta_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_torso_orange_23.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_torso_purple_22.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_torso_qualna_beta_21.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_torso_red_26.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Annunaki/Anu_torso_yellow_24.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_brow_ark_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_brow_solaar_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_brow_wolf_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_eye_green2_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_eye_green_9.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_eye_mask_1686.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_eye_outline_angr_left_1701.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_eye_outline_angr_right_1702.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_eye_outline_deep_left_1699.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_eye_outline_deep_right_1698.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_eye_outline_grin_left_1705.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_eye_outline_grin_right_1706.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_eye_outline_norm_left_1691.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_eye_outline_norm_right_1693.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_eye_outline_shok_left_1703.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_eye_outline_shok_right_1704.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_eye_solaar_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_eye_wolf_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_face_11.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_face_12.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_face_ark_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_face_solaar_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_face_wolf_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_mouth_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_mouth_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_mouth_solaar_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_torso_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_torso_ark_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_torso_solaar_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Aruan/wlf_torso_wolf_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_9.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_Neon_blue_8.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_black_6.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_blue_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_bluegreen_5.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_brown_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_clave_16.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_gold2_15.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_gold_12.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_green2_13.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_green_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_grey_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_purelight_19.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_purple_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_qualna_21.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_red_11.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_solak_20.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_white_14.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eye_yalort_18.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_eyemask_1060.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_21.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_30.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_Bartholio_36.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_arab_32.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_clave_44.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_emela_26.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_gope_20.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_lonewolf_45.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_manly2_35.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_manly_zombie2_37.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_manly_zombie_38.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_mardek_25.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_middleagedarab_40.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_neegruh_33.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_oldaged_arab_41.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_saul_43.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_steele2_39.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_tchief_31.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_vudu_42.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Human/human_neck_zombie_34.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanChild/child_eyelash_1529.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanChild/child_face_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanChild/child_face_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanChild/child_face_7.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanChild/child_face_deugan_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanChild/child_face_mugbert_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanChild/child_hair_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanChild/child_hair_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanChild/child_hair_9.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanChild/child_hair_deugan_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanChild/child_hair_mugbert_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_30.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_5.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_6.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_7.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_8.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_9.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_aurelia_21.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_black_38.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_blonde_37.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_blue_42.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_brown_35.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_emela_41.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_grey_40.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_kerah_20.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_lilanea_24.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_mousy_36.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_old1_22.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_orange_43.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_princess_23.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_brow_white_39.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_browshadow_1286.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_face_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_face_20.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_face_aalia_26.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_face_arab_39.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_face_emela_30.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_face_fat_37.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_face_middleaged_34.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_face_old1_27.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_face_oldaged_36.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_face_princess_28.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_face_smallnose_32.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_face_zombie_38.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_100.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_101.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_102.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_103.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_104.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_105.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_106.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_107.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_108.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_109.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_11.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_110.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_111.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_112.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_113.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_114.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_115.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_117.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_118.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_119.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_12.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_121.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_122.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_13.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_14.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_15.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_1A_123.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_20.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_21.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_23.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_30.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_5.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_6.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_68.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_69.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_7.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_70.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_71.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_72.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_73.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_74.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_75.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_76.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_77.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_78.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_79.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_8.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_80.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_81.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_82.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_83.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_84.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_85.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_86.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_87.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_88.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_89.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_9.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_90.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_91.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_92.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_93.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_94.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_95.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_96.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_97.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_98.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_99.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_Kerah_19.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_aalia_45.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_aalia_actor_48.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_arabf1_32.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_arabf2_33.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_aurelia_22.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_elwyen2_46.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_elwyen_44.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_emelaG_47.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_emela_42.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_gloria_49.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_lilanea_26.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_luft_31.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_old1_24.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_old_27.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_polly_28.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_priestess_35.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_princess_25.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_shaman2_29.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_shaman3_34.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_sharla_43.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hair_witch_36.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hat_CaptainsHat_6.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hat_Hat_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hat_MpriestHat_7.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hat_NinjaCowl_5.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hat_leatherHelm_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hat_none_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_hat_steelhelm_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_30.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_31.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_32.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_5.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_6.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_7.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_T__27.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_angr_12.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_blah_13.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_cdgr_25.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_deep_15.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_egrn_28.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_embr_24.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_evil1_22.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_evil_23.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_grin_11.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_hurt_14.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_mad_17.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_norm_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_o_O2_33.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_o_O_26.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_psn_20.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_sad_16.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_shok_18.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_smile_21.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_susp_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_29.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_30.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_31.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_32.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_5.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_6.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_7.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_8.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_9.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_T_)_27.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_angr_12.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_blah_13.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_cdgr_25.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_deep_15.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_egrn_28.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_embr_24.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_evil1_22.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_evil_23.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_grin_11.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_hurt_14.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_mad_17.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_norm_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_o_O2_33.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_o_O_26.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_psn_20.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_sad_16.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_shok_18.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_smile_21.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_susp_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zombie_zzz_19.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_mouth_zzz_19.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_25.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_AdventureJacket_14.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_Aeromancer_26.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_AmethystRobe_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_BambooMail_13.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_HempenRobe2_19.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_HempenRobe_8.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_MageRobe_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_MoonstoneRobe_15.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_Ninja-yoroi_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_ReptoidMail_9.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_SpaceUniform_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_Tunic_6.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_WolfLeather_16.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_YalortianRobe_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_aalia_22.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_aalia_actor_31.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_arabf2_29.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_babyblue_21.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_leatherArmour_5.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_luft_27.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_none_7.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_none_arab_28.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_orangedress_24.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_polly_18.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_princess_17.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_shaman2_23.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_shaman3_30.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_soldier_20.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_tropical1_11.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanF/huF_torso_tropical2_12.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_11.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_12.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_14.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_30.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_5.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_6.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_7.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_Ypriest_22.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_a_35.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_b_36.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_bartholio_65.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_bernard_66.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_black_52.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_blonde_51.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_brown_50.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_c_37.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_captain_21.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_clave_62.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_d_38.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_deugan_48.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_deugan_hero_47.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_e_39.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_eric_26.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_f_40.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_g_41.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_girl_55.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_green_61.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_grey_60.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_h_42.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_hermit_57.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_i_43.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_j_44.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_mardek_hero_46.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_monobrow_58.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_old1_27.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_orange_53.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_peregrin_20.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_quillon_23.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_shaman_56.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_tchief_25.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_vehrn_59.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_veneficus_24.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_brow_white_54.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_browshadow_990.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_eyelash_998.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_30.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_31.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_45.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_52.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_56.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_64.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_Deugan_hero_36.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_Ypriest_23.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_ancient_59.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_arab_46.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_bartholio_57.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_captain_22.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_clave_51.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_curator_53.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_eric_27.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_manly2_43.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_manly3_44.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_manly_42.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_manly_zombie2_61.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_manly_zombie_60.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_mardek_20.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_mardek_hero_35.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_middleaged_40.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_middleagedarab_48.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_mugbert_66.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_neegruh_47.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_old1_28.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_oldaged_41.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_oldaged_arab_49.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_peregrin_21.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_quillon_24.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_saul_63.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_soldier_19.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_steele2_62.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_tchief_26.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_veneficus_25.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_vennie_58.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_vudu_50.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_wobblescimitare_65.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_face_zombie_29.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_11.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_12.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_13.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_14.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_15.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_5.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_6.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_7.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_8.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_9.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_Ypriest_58.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_arab1_49.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_arab2_53.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_arabShaman_51.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_arabShaman_galaris_52.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_arabguard_50.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_bald_16.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_bandit_27.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_bartholio_44.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_bernard_46.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_bigbeard_28.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_captain_57.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_curator_76.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_derek_22.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_deugan_hero_36.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_deugan_soldier_38.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_donovan_39.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_donovan_bearded_40.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_dougal_80.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_enki_68.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_eric_62.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_gallovar_31.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_goldknight_74.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_gope_78.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_hermit_67.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_inventor_24.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_jacques_25.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_king_69.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_lonewolf_92.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_luft_48.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_man1_64.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_man3_65.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_mardek_19.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_mardek_hero_35.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_mardek_soldier_37.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_miner_29.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_mugbert_77.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_muriance_42.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_ncaptain_75.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_ncrew_70.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_old1_63.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_peregrin_56.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_quillon_59.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_saucer_73.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_saul_72.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_shaman_66.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_socialfox_23.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_solakianHP_33.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_solakian_32.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_soldier_21.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_steele2_47.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_steele_41.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_tchief_61.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_vehrn_43.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_veneficus_60.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_vennie_45.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_vudu_71.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_hair_zombie_30.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_2_line_1002.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_2_lips_1001.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_3_line_1004.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_3_lips_1003.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_4_line_1006.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_4_lips_1005.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_5_line_1008.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_5_lips_1007.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_6_line_1010.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_6_lips_1009.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_7_line_1012.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_7_lips_1011.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_angr_line_1018.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_angr_lips_1017.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_blah_line_1020.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_blah_lips_1019.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_cdgr_line_1041.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_cdgr_lips_1040.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_cry_line_1047.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_cry_lips_1046.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_deep_line_1024.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_deep_lips_1023.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_evil_line_1039.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_evil_lips_1038.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_fury_line_1054.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_fury_lips_1053.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_grin_line_1016.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_grin_lips_1015.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_hurt_line_1022.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_hurt_lips_1021.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_mad_line_1028.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_mad_lips_1027.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_mesm_line_1056.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_mesm_lips_1055.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_mugb_line_1045.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_mugb_lips_1044.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_ngrin_line_1052.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_ngrin_lips_1051.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_norm_line_1000.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_norm_lips_999.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_o_O_line_1043.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_o_O_lips_1042.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_psn_line_1033.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_psn_lips_1032.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_sad_line_1026.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_sad_lips_1025.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_shok_lips_1029.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_smile_lips_1034.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_smile_lips_1035.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_sour_line_1048.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_susp_line_1014.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_susp_lips_1013.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_zombie_line_1050.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_zombie_lips_1049.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_zzz_line_1031.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_mouth_zzz_lips_1030.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_31.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_49.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_62.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_AdventureJacket_14.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_AmethystRobe_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_BambooMail_13.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_BlackShirt_25.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_Blacksmith_27.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_HempenRobe_8.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_MageRobe_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_MinerClothes_40.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_MoonstoneRobe_16.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_NinevehnGi_33.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_Ninja-yoroi_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_Platemail_15.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_Platemail_gold_55.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_Pyromancer_43.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_ReptoidMail_9.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_SpaceUniformNC_57.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_SpaceUniformN_44.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_SpaceUniform_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_Tunic2_23.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_Tunic_6.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_Tunic_Brown_24.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_Tunic_Cream2_28.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_Tunic_Cream_26.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_Wobblescimitare_59.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_WolfLeather_17.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_YalortianRobe_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_ZombiePlatemail_42.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_arab1_47.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_arab2_48.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_arabShaman_51.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_arabShaman_galaris_60.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_arabguard_50.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_bartholio_37.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_bernard_39.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_clave_56.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_deugan_hero_22.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_gope_64.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_hidearmour_36.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_inventor_30.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_king_34.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_leatherArmour_5.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_lonewolf_61.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_luft_46.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_mardek_hero_21.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_mugbert2_63.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_mugbert_32.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_none_7.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_none_arab_54.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_saucerbrother_53.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_saul_52.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_shaman_29.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_soldier_19.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_steele2_45.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_suit_18.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_tropical1_11.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_tropical2_12.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_vehrn_35.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_vennie_38.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_wideshoulders_58.svg.meta
+Assets/Sprites/Characters/Portrait Parts/HumanM/huM_torso_zombieTunic_41.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eye_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eye_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eye_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eye_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eye_5.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eye_evil_13.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eye_orange_12.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eye_pseudolonewolf_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eye_tattoo_11.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_40.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_41.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_42.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_angrEyeBorder2_1640.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_angrEyeMask_1639.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_deepEyeBorder2_1638.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_deepEyeMask_1637.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_eyeBorder1_1635.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_grinEyeBorder2_1642.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_grinEyeMask_1641.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_normEyeBorder2_1636.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_normEyeMask_1618.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_plwEyeBorder2_1649.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_plwEyeMask_1648.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_shokEyeBorder2_1646.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_shokEyeMask_1645.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_suspEyeBorder2_1644.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_suspEyeMask_1643.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_eyelid_rep_zzzEyeBorder2_1647.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_face_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_face_15.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_face_16.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_face_19.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_face_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_face_20.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_face_21.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_face_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_face_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_face_evil_5.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_face_pseudolonewolf_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_face_sslenck_8.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_face_tattoo_9.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_mouth_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_mouth_evil_12.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_mouth_pseudolonewolf_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_mouth_sslenck_11.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_mouth_tattoo_9.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_neck_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_neck_evil_13.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_neck_pseudolonewolf_10.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_neck_sslenck_12.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_neck_tattoo_11.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_torso_ReptoidMail_2.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_torso_SpiritcasterGarb_1.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_torso_leather2_5.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_torso_leatherarmour_4.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_torso_none_3.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_torso_plw_11.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_torso_robe_7.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Reptoid/Rep_torso_sslenck_6.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Robot/eyes_blue_1721_robot_legion.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Robot/eyes_dead_1724_robot_legion.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Robot/eyes_norm_1719_robot_legion.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Robot/eyes_purple_1722_robot_legion.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Robot/eyes_red_1720_robot_legion.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Robot/eyes_yellow_1723_robot_legion.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Robot/front_details_1726_robot_legion.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Robot/gear_1716_robot_legion.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Robot/torso_1718_robot_legion.svg.meta
+Assets/Sprites/Characters/Portrait Parts/Robot/wires_1715_robot_legion.svg.meta
+Assets/Sprites/Elements/Aether.svg.meta
+Assets/Sprites/Elements/Air.svg.meta
+Assets/Sprites/Elements/Dark.svg.meta
+Assets/Sprites/Elements/Divine.svg.meta
+Assets/Sprites/Elements/Earth.svg.meta
+Assets/Sprites/Elements/Fig.svg.meta
+Assets/Sprites/Elements/Fire.svg.meta
+Assets/Sprites/Elements/Light.svg.meta
+Assets/Sprites/Elements/Physical.svg.meta
+Assets/Sprites/Elements/Thauma.svg.meta
+Assets/Sprites/Elements/Thicksprites/AetherThickness20.svg.meta
+Assets/Sprites/Elements/Thicksprites/AirThickness20.svg.meta
+Assets/Sprites/Elements/Thicksprites/DarkThickness20.svg.meta
+Assets/Sprites/Elements/Thicksprites/DivineThickness20.svg.meta
+Assets/Sprites/Elements/Thicksprites/EarthThickness20.svg.meta
+Assets/Sprites/Elements/Thicksprites/FigThickness20.svg.meta
+Assets/Sprites/Elements/Thicksprites/FireThickness20.svg.meta
+Assets/Sprites/Elements/Thicksprites/LightThickness20.svg.meta
+Assets/Sprites/Elements/Thicksprites/PhysicalThickness20.svg.meta
+Assets/Sprites/Elements/Thicksprites/ThaumaThickness20.svg.meta
+Assets/Sprites/Elements/Thicksprites/WaterThickness20.svg.meta
+Assets/Sprites/Elements/Water.svg.meta
+Assets/Sprites/Encyclopedia/Artefacts/FireCrystal.svg.meta
+Assets/Sprites/Encyclopedia/Artefacts/WaterCrystal.svg.meta
+Assets/Sprites/Music/MusicNoteAll.svg.meta
+Assets/Sprites/Music/MusicNoteArea.svg.meta
+Assets/Sprites/Music/MusicNoteBattle.svg.meta
+Assets/Sprites/Music/MusicNoteCharacter.svg.meta
+Assets/Sprites/Music/MusicNoteDungeon.svg.meta
+Assets/Sprites/Music/MusicNoteJingle.svg.meta
+Assets/Sprites/Music/MusicNoteMiscellaneous.svg.meta
+Assets/Sprites/Music/MusicNoteMood.svg.meta
+Assets/Sprites/StatusEffects/bleed.svg.meta
+Assets/Sprites/StatusEffects/blindness.svg.meta
+Assets/Sprites/StatusEffects/confusion.svg.meta
+Assets/Sprites/StatusEffects/curse.svg.meta
+Assets/Sprites/StatusEffects/numb.svg.meta
+Assets/Sprites/StatusEffects/poison.svg.meta
+Assets/Sprites/StatusEffects/silence.svg.meta
+Assets/Sprites/StatusEffects/sleep.svg.meta
+Assets/Sprites/StatusEffects/stun.svg.meta
+Assets/Sprites/StatusEffects/zombie.svg.meta
+Assets/Sprites/Tilesets/2161_tilesheet_sandcave.png.meta
+Assets/Sprites/Tilesets/2193_tilesheet_volcano.png.meta
+Assets/Sprites/Tilesets/2196_tilesheet_lifewood.png.meta
+Assets/Sprites/Tilesets/5366_tilesheet_warport.png.meta
+Assets/Sprites/Tilesets/5367_tilesheet_underwater.png.meta
+Assets/Sprites/Tilesets/5368_tilesheet_temple_WATER_dead.png.meta
+Assets/Sprites/Tilesets/5369_tilesheet_temple_WATER.png.meta
+Assets/Sprites/Tilesets/5370_tilesheet_temple_FIRE_dead.png.meta
+Assets/Sprites/Tilesets/5371_tilesheet_temple_FIRE.png.meta
+Assets/Sprites/Tilesets/5372_tilesheet_temple_EARTH_dead.png.meta
+Assets/Sprites/Tilesets/5373_tilesheet_temple_EARTH.png.meta
+Assets/Sprites/Tilesets/5374_tilesheet_temple_DARK_dead.png.meta
+Assets/Sprites/Tilesets/5375_tilesheet_temple_DARK.png.meta
+Assets/Sprites/Tilesets/5376_tilesheet_suntemple.png.meta
+Assets/Sprites/Tilesets/5377_tilesheet_sewer.png.meta
+Assets/Sprites/Tilesets/5378_tilesheet_saucer2.png.meta
+Assets/Sprites/Tilesets/5379_tilesheet_saucer.png.meta
+Assets/Sprites/Tilesets/5380_tilesheet_sandcave_interior.png.meta
+Assets/Sprites/Tilesets/5381_tilesheet_rural.png.meta
+Assets/Sprites/Tilesets/5382_tilesheet_monastery_lost.png.meta
+Assets/Sprites/Tilesets/5383_tilesheet_monastery.png.meta
+Assets/Sprites/Tilesets/5384_tilesheet_lifewood_dream.png.meta
+Assets/Sprites/Tilesets/5385_tilesheet_interior6.png.meta
+Assets/Sprites/Tilesets/5386_tilesheet_interior4.png.meta
+Assets/Sprites/Tilesets/5387_tilesheet_interior1_dream.png.meta
+Assets/Sprites/Tilesets/5388_tilesheet_interior1.png.meta
+Assets/Sprites/Tilesets/5389_tilesheet_goldfish.png.meta
+Assets/Sprites/Tilesets/5390_tilesheet_dreamshrine.png.meta
+Assets/Sprites/Tilesets/5391_tilesheet_dragonlair.png.meta
+Assets/Sprites/Tilesets/5392_tilesheet_desert.png.meta
+Assets/Sprites/Tilesets/5393_tilesheet_deadhouse.png.meta
+Assets/Sprites/Tilesets/5394_tilesheet_darkwood_dream.png.meta
+Assets/Sprites/Tilesets/5395_tilesheet_darkwood.png.meta
+Assets/Sprites/Tilesets/5396_tilesheet_citadel.png.meta
+Assets/Sprites/Tilesets/5397_tilesheet_cave6.png.meta
+Assets/Sprites/Tilesets/5398_tilesheet_cave5.png.meta
+Assets/Sprites/Tilesets/5399_tilesheet_cave4.png.meta
+Assets/Sprites/Tilesets/5400_tilesheet_cave2_dream.png.meta
+Assets/Sprites/Tilesets/5401_tilesheet_cave2.png.meta
+Assets/Sprites/Tilesets/5402_tilesheet_cave_aqua.png.meta
+Assets/Sprites/Tilesets/5403_tilesheet_catacombs.png.meta
+Assets/Sprites/Tilesets/5404_tilesheet_castle.png.meta
+Assets/Sprites/Tilesets/5405_tilesheet_astral.png.meta
+Assets/Sprites/Tilesets/5406_tilesheet_aeropolis.png.meta
+Assets/Sprites/UI/Button_Pressed_5450.svg.meta
+Assets/Sprites/UI/Button_Unpressed_5446.svg.meta
+Assets/Sprites/UI/CrystalPointer.svg.meta
+Assets/Sprites/UI/DefIcon.svg.meta
+Assets/Sprites/UI/Dialogue Box.svg.meta
+Assets/Sprites/UI/IconClock.svg.meta
+Assets/Sprites/UI/InGameMenu/ActiveSkill.svg.meta
+Assets/Sprites/UI/InGameMenu/AttackIcon.svg.meta
+Assets/Sprites/UI/InGameMenu/CheckedSkill.svg.meta
+Assets/Sprites/UI/InGameMenu/ItemCountIcon.svg.meta
+Assets/Sprites/UI/InGameMenu/MDefIcon.svg.meta
+Assets/Sprites/UI/InGameMenu/MagicAttackSkill.svg.meta
+Assets/Sprites/UI/InGameMenu/MagicCountIcon.svg.meta
+Assets/Sprites/UI/InGameMenu/MagicDefSkill.svg.meta
+Assets/Sprites/UI/InGameMenu/Mastered.svg.meta
+Assets/Sprites/UI/InGameMenu/MeleeAttackSkill.svg.meta
+Assets/Sprites/UI/InGameMenu/MeleeCountIcon.svg.meta
+Assets/Sprites/UI/InGameMenu/MeleeDefSkill.svg.meta
+Assets/Sprites/UI/InGameMenu/PartyEntryBox_5183.svg.meta
+Assets/Sprites/UI/InGameMenu/PassiveSkillIcon.svg.meta
+Assets/Sprites/UI/InGameMenu/UncheckedSkill.svg.meta
+Assets/Sprites/UI/MapScreen/AreaNameBackground.svg.meta
+Assets/Sprites/UI/MapScreen/AvailableWaypoint.svg.meta
+Assets/Sprites/UI/MapScreen/Belfan.svg.meta
+Assets/Sprites/UI/MapScreen/CurrentWaypoint.svg.meta
+Assets/Sprites/UI/MapScreen/DisabledWaypoint.svg.meta
+Assets/Sprites/UI/MapScreen/GreenWaypoint.svg.meta
+Assets/Sprites/UI/MapScreen/Place Names/Aeropolis.svg.meta
+Assets/Sprites/UI/MapScreen/Place Names/Canonia.svg.meta
+Assets/Sprites/UI/MapScreen/Place Names/CanoniaWoods.svg.meta
+Assets/Sprites/UI/MapScreen/Place Names/CastleGoznor.svg.meta
+Assets/Sprites/UI/MapScreen/Place Names/CrashSite.svg.meta
+Assets/Sprites/UI/MapScreen/Place Names/EasternGlens.svg.meta
+Assets/Sprites/UI/MapScreen/Place Names/HeroesDen.svg.meta
+Assets/Sprites/UI/MapScreen/Place Names/LakeQur.svg.meta
+Assets/Sprites/UI/MapScreen/Place Names/LifeWood.svg.meta
+Assets/Sprites/UI/MapScreen/Place Names/SelectedWorldNameBackground.svg.meta
+Assets/Sprites/UI/MapScreen/Place Names/SoothWood.svg.meta
+Assets/Sprites/UI/MapScreen/Place Names/SunTemple.svg.meta
+Assets/Sprites/UI/MapScreen/Place Names/TaintedGrotto.svg.meta
+Assets/Sprites/UI/MapScreen/WorldMap.svg.meta
+Assets/Sprites/UI/PauseIcon.svg.meta
+Assets/Sprites/UI/PlayIcon.svg.meta
+Assets/Sprites/UI/RightArrow.svg.meta
+Assets/Sprites/UI/SelectCircleOff_5690.svg.meta
+Assets/Sprites/UI/SelectCircleOn_5692.svg.meta
+Assets/Sprites/UI/TitleScreen/Title_5463.svg.meta
+Assets/Tiles/Imported/cave2/cave2_10.asset
+Assets/Tiles/Imported/cave2/cave2_11.asset
+Assets/Tiles/Imported/cave2/cave2_110.asset
+Assets/Tiles/Imported/cave2/cave2_111.asset
+Assets/Tiles/Imported/cave2/cave2_112.asset
+Assets/Tiles/Imported/cave2/cave2_113.asset
+Assets/Tiles/Imported/cave2/cave2_116.asset
+Assets/Tiles/Imported/cave2/cave2_117.asset
+Assets/Tiles/Imported/cave2/cave2_118.asset
+Assets/Tiles/Imported/cave2/cave2_12.asset
+Assets/Tiles/Imported/cave2/cave2_120.asset
+Assets/Tiles/Imported/cave2/cave2_121.asset
+Assets/Tiles/Imported/cave2/cave2_122.asset
+Assets/Tiles/Imported/cave2/cave2_123.asset
+Assets/Tiles/Imported/cave2/cave2_125.asset
+Assets/Tiles/Imported/cave2/cave2_126.asset
+Assets/Tiles/Imported/cave2/cave2_127.asset
+Assets/Tiles/Imported/cave2/cave2_128.asset
+Assets/Tiles/Imported/cave2/cave2_129.asset
+Assets/Tiles/Imported/cave2/cave2_13.asset
+Assets/Tiles/Imported/cave2/cave2_14.asset
+Assets/Tiles/Imported/cave2/cave2_15.asset
+Assets/Tiles/Imported/cave2/cave2_16.asset
+Assets/Tiles/Imported/cave2/cave2_17.asset
+Assets/Tiles/Imported/cave2/cave2_18.asset
+Assets/Tiles/Imported/cave2/cave2_19.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_10.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_11.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_110.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_111.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_112.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_113.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_114.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_116.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_117.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_12.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_120.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_121.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_122.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_123.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_124.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_125.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_126.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_127.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_128.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_13.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_14.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_15.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_16.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_17.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_18.asset
+Assets/Tiles/Imported/cave2_dream/cave2_dream_19.asset
+Assets/Tiles/Imported/cave5/cave5_10.asset
+Assets/Tiles/Imported/cave5/cave5_11.asset
+Assets/Tiles/Imported/cave5/cave5_110.asset
+Assets/Tiles/Imported/cave5/cave5_111.asset
+Assets/Tiles/Imported/cave5/cave5_112.asset
+Assets/Tiles/Imported/cave5/cave5_113.asset
+Assets/Tiles/Imported/cave5/cave5_114.asset
+Assets/Tiles/Imported/cave5/cave5_115.asset
+Assets/Tiles/Imported/cave5/cave5_116.asset
+Assets/Tiles/Imported/cave5/cave5_117.asset
+Assets/Tiles/Imported/cave5/cave5_118.asset
+Assets/Tiles/Imported/cave5/cave5_119.asset
+Assets/Tiles/Imported/cave5/cave5_12.asset
+Assets/Tiles/Imported/cave5/cave5_120.asset
+Assets/Tiles/Imported/cave5/cave5_121.asset
+Assets/Tiles/Imported/cave5/cave5_122.asset
+Assets/Tiles/Imported/cave5/cave5_123.asset
+Assets/Tiles/Imported/cave5/cave5_124.asset
+Assets/Tiles/Imported/cave5/cave5_125.asset
+Assets/Tiles/Imported/cave5/cave5_126.asset
+Assets/Tiles/Imported/cave5/cave5_127.asset
+Assets/Tiles/Imported/cave5/cave5_128.asset
+Assets/Tiles/Imported/cave5/cave5_13.asset
+Assets/Tiles/Imported/cave5/cave5_14.asset
+Assets/Tiles/Imported/cave5/cave5_15.asset
+Assets/Tiles/Imported/cave5/cave5_16.asset
+Assets/Tiles/Imported/cave5/cave5_17.asset
+Assets/Tiles/Imported/cave5/cave5_18.asset
+Assets/Tiles/Imported/cave5/cave5_19.asset
+Assets/Tiles/Imported/cave6/cave6_10.asset
+Assets/Tiles/Imported/cave6/cave6_11.asset
+Assets/Tiles/Imported/cave6/cave6_110.asset
+Assets/Tiles/Imported/cave6/cave6_111.asset
+Assets/Tiles/Imported/cave6/cave6_112.asset
+Assets/Tiles/Imported/cave6/cave6_113.asset
+Assets/Tiles/Imported/cave6/cave6_114.asset
+Assets/Tiles/Imported/cave6/cave6_115.asset
+Assets/Tiles/Imported/cave6/cave6_116.asset
+Assets/Tiles/Imported/cave6/cave6_117.asset
+Assets/Tiles/Imported/cave6/cave6_118.asset
+Assets/Tiles/Imported/cave6/cave6_119.asset
+Assets/Tiles/Imported/cave6/cave6_12.asset
+Assets/Tiles/Imported/cave6/cave6_120.asset
+Assets/Tiles/Imported/cave6/cave6_121.asset
+Assets/Tiles/Imported/cave6/cave6_122.asset
+Assets/Tiles/Imported/cave6/cave6_123.asset
+Assets/Tiles/Imported/cave6/cave6_124.asset
+Assets/Tiles/Imported/cave6/cave6_125.asset
+Assets/Tiles/Imported/cave6/cave6_126.asset
+Assets/Tiles/Imported/cave6/cave6_127.asset
+Assets/Tiles/Imported/cave6/cave6_128.asset
+Assets/Tiles/Imported/cave6/cave6_13.asset
+Assets/Tiles/Imported/cave6/cave6_14.asset
+Assets/Tiles/Imported/cave6/cave6_15.asset
+Assets/Tiles/Imported/cave6/cave6_16.asset
+Assets/Tiles/Imported/cave6/cave6_17.asset
+Assets/Tiles/Imported/cave6/cave6_18.asset
+Assets/Tiles/Imported/cave6/cave6_19.asset
+Assets/Tiles/Imported/cave6/cave6_20.asset
+Assets/Tiles/Imported/interior1_dream/interior1_dream_10.asset
+Assets/Tiles/Imported/interior1_dream/interior1_dream_11.asset
+Assets/Tiles/Imported/interior1_dream/interior1_dream_12.asset
+Assets/Tiles/Imported/interior1_dream/interior1_dream_13.asset
+Assets/Tiles/Imported/interior1_dream/interior1_dream_14.asset
+Assets/Tiles/Imported/interior1_dream/interior1_dream_15.asset
+Assets/Tiles/Imported/saucer/10.asset
+Assets/Tiles/Imported/saucer/11.asset
+Assets/Tiles/Imported/saucer/110.asset
+Assets/Tiles/Imported/saucer/111.asset
+Assets/Tiles/Imported/saucer/112.asset
+Assets/Tiles/Imported/saucer/113.asset
+Assets/Tiles/Imported/saucer/114.asset
+Assets/Tiles/Imported/saucer/115.asset
+Assets/Tiles/Imported/saucer/116.asset
+Assets/Tiles/Imported/saucer/117.asset
+Assets/Tiles/Imported/saucer/118.asset
+Assets/Tiles/Imported/saucer/119.asset
+Assets/Tiles/Imported/saucer/12.asset
+Assets/Tiles/Imported/saucer/120.asset
+Assets/Tiles/Imported/saucer/121.asset
+Assets/Tiles/Imported/saucer/122.asset
+Assets/Tiles/Imported/saucer/123.asset
+Assets/Tiles/Imported/saucer/124.asset
+Assets/Tiles/Imported/saucer/125.asset
+Assets/Tiles/Imported/saucer/126.asset
+Assets/Tiles/Imported/saucer/127.asset
+Assets/Tiles/Imported/saucer/128.asset
+Assets/Tiles/Imported/saucer/129.asset
+Assets/Tiles/Imported/saucer/13.asset
+Assets/Tiles/Imported/saucer/130.asset
+Assets/Tiles/Imported/saucer/131.asset
+Assets/Tiles/Imported/saucer/132.asset
+Assets/Tiles/Imported/saucer/133.asset
+Assets/Tiles/Imported/saucer/134.asset
+Assets/Tiles/Imported/saucer/135.asset
+Assets/Tiles/Imported/saucer/136.asset
+Assets/Tiles/Imported/saucer/137.asset
+Assets/Tiles/Imported/saucer/138.asset
+Assets/Tiles/Imported/saucer/139.asset
+Assets/Tiles/Imported/saucer/14.asset
+Assets/Tiles/Imported/saucer/140.asset
+Assets/Tiles/Imported/saucer/141.asset
+Assets/Tiles/Imported/saucer/142.asset
+Assets/Tiles/Imported/saucer/143.asset
+Assets/Tiles/Imported/saucer/144.asset
+Assets/Tiles/Imported/saucer/145.asset
+Assets/Tiles/Imported/saucer/146.asset
+Assets/Tiles/Imported/saucer/147.asset
+Assets/Tiles/Imported/saucer/148.asset
+Assets/Tiles/Imported/saucer/149.asset
+Assets/Tiles/Imported/saucer/15.asset
+Assets/Tiles/Imported/saucer/150.asset
+Assets/Tiles/Imported/saucer/151.asset
+Assets/Tiles/Imported/saucer/152.asset
+Assets/Tiles/Imported/saucer/153.asset
+Assets/Tiles/Imported/saucer/154.asset
+Assets/Tiles/Imported/saucer/155.asset
+Assets/Tiles/Imported/saucer/156.asset
+Assets/Tiles/Imported/saucer/157.asset
+Assets/Tiles/Imported/saucer/158.asset
+Assets/Tiles/Imported/saucer/159.asset
+Assets/Tiles/Imported/saucer/16.asset
+Assets/Tiles/Imported/saucer/160.asset
+Assets/Tiles/Imported/saucer/161.asset
+Assets/Tiles/Imported/saucer/162.asset
+Assets/Tiles/Imported/saucer/163.asset
+Assets/Tiles/Imported/saucer/164.asset
+Assets/Tiles/Imported/saucer/165.asset
+Assets/Tiles/Imported/saucer/166.asset
+Assets/Tiles/Imported/saucer/167.asset
+Assets/Tiles/Imported/saucer/168.asset
+Assets/Tiles/Imported/saucer/169.asset
+Assets/Tiles/Imported/saucer/17.asset
+Assets/Tiles/Imported/saucer/170.asset
+Assets/Tiles/Imported/saucer/171.asset
+Assets/Tiles/Imported/saucer/172.asset
+Assets/Tiles/Imported/saucer/173.asset
+Assets/Tiles/Imported/saucer/174.asset
+Assets/Tiles/Imported/saucer/175.asset
+Assets/Tiles/Imported/saucer/176.asset
+Assets/Tiles/Imported/saucer/177.asset
+Assets/Tiles/Imported/saucer/178.asset
+Assets/Tiles/Imported/saucer/179.asset
+Assets/Tiles/Imported/saucer/18.asset
+Assets/Tiles/Imported/saucer/180.asset
+Assets/Tiles/Imported/saucer/181.asset
+Assets/Tiles/Imported/saucer/182.asset
+Assets/Tiles/Imported/saucer/183.asset
+Assets/Tiles/Imported/saucer/184.asset
+Assets/Tiles/Imported/saucer/185.asset
+Assets/Tiles/Imported/saucer/186.asset
+Assets/Tiles/Imported/saucer/187.asset
+Assets/Tiles/Imported/saucer/188.asset
+Assets/Tiles/Imported/saucer/189.asset
+Assets/Tiles/Imported/saucer/19.asset
+Assets/Tiles/Imported/saucer/20.asset
+Assets/Tiles/Imported/saucer/210.asset
+Assets/Tiles/Imported/saucer/220.asset
+Assets/Tiles/Imported/saucer/230.asset
+Assets/Tiles/Imported/saucer/saucer_10.asset
+Assets/Tiles/Imported/saucer/saucer_120.asset
+Assets/Tiles/Imported/saucer/saucer_121.asset
+Assets/Tiles/Imported/saucer/saucer_122.asset
+Assets/Tiles/Imported/saucer/saucer_123.asset
+Assets/Tiles/Imported/saucer/saucer_124.asset
+Assets/Tiles/Imported/saucer/saucer_130.asset
+Assets/Tiles/Imported/saucer/saucer_131.asset
+Assets/Tiles/Imported/saucer/saucer_132.asset
+Assets/Tiles/Imported/saucer/saucer_133.asset
+Assets/Tiles/Imported/saucer/saucer_134.asset
+Assets/Tiles/Imported/saucer/saucer_140.asset
+Assets/Tiles/Imported/saucer/saucer_141.asset
+Assets/Tiles/Imported/saucer/saucer_142.asset
+Assets/Tiles/Imported/saucer/saucer_143.asset
+Assets/Tiles/Imported/saucer/saucer_144.asset
+Assets/Tiles/Imported/saucer/saucer_150.asset
+Assets/Tiles/Imported/saucer/saucer_151.asset
+Assets/Tiles/Imported/saucer/saucer_152.asset
+Assets/Tiles/Imported/saucer/saucer_153.asset
+Assets/Tiles/Imported/saucer/saucer_154.asset
+Assets/Tiles/Imported/saucer/saucer_160.asset
+Assets/Tiles/Imported/saucer/saucer_161.asset
+Assets/Tiles/Imported/saucer/saucer_162.asset
+Assets/Tiles/Imported/saucer/saucer_163.asset
+Assets/Tiles/Imported/saucer/saucer_164.asset
+Assets/Tiles/Imported/saucer/saucer_170.asset
+Assets/Tiles/Imported/saucer/saucer_171.asset
+Assets/Tiles/Imported/saucer/saucer_172.asset
+Assets/Tiles/Imported/saucer/saucer_173.asset
+Assets/Tiles/Imported/saucer/saucer_174.asset
+Assets/Tiles/Imported/saucer/saucer_182.asset
+Assets/Tiles/Imported/sewer/sewer_10.asset
+Assets/Tiles/Imported/sewer/sewer_11.asset
+Assets/Tiles/Imported/sewer/sewer_110.asset
+Assets/Tiles/Imported/sewer/sewer_111.asset
+Assets/Tiles/Imported/sewer/sewer_112.asset
+Assets/Tiles/Imported/sewer/sewer_113.asset
+Assets/Tiles/Imported/sewer/sewer_114.asset
+Assets/Tiles/Imported/sewer/sewer_115.asset
+Assets/Tiles/Imported/sewer/sewer_12.asset
+Assets/Tiles/Imported/sewer/sewer_13.asset
+Assets/Tiles/Imported/sewer/sewer_14.asset
+Assets/Tiles/Imported/sewer/sewer_15.asset
+Assets/Tiles/Imported/sewer/sewer_16.asset
+Assets/Tiles/Imported/sewer/sewer_17.asset
+Assets/Tiles/Imported/sewer/sewer_18.asset
+Assets/Tiles/Imported/sewer/sewer_19.asset
+Assets/Tiles/Palettes/Sewer.prefab
+Assets/UniversalRenderPipelineGlobalSettings.asset
+Packages/manifest.json
+Packages/packages-lock.json
+ProjectSettings/EditorBuildSettings.asset
+ProjectSettings/GraphicsSettings.asset
+ProjectSettings/ProjectSettings.asset
+ProjectSettings/ProjectVersion.txt
+ProjectSettings/ShaderGraphSettings.asset
+ProjectSettings/URPProjectSettings.asset

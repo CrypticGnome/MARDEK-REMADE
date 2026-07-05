@@ -4,429 +4,429 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -4400644427685314254
-    second: water
+    second: temple_DARK_water
   - first:
       213: 7055374874864954388
-    second: water_background
+    second: temple_DARK_water_background
   - first:
       213: 8283533273962829627
-    second: water_backwall
+    second: temple_DARK_water_backwall
   - first:
       213: -8655818156195654838
-    second: 10
+    second: temple_DARK_10
   - first:
       213: 2692228934559545928
-    second: 110
+    second: temple_DARK_110
   - first:
       213: 6287607311731213131
-    second: 120
+    second: temple_DARK_120
   - first:
       213: 162189906751378928
-    second: 130
+    second: temple_DARK_130
   - first:
       213: 7026842539221975203
-    second: 140
+    second: temple_DARK_140
   - first:
       213: -3144590571393297090
-    second: 150
+    second: temple_DARK_150
   - first:
       213: 6346318911325233748
-    second: 11
+    second: temple_DARK_11
   - first:
       213: 8694305388649107506
-    second: 111
+    second: temple_DARK_111
   - first:
       213: 2425639911146021689
-    second: 121
+    second: temple_DARK_121
   - first:
       213: 2551518094793869659
-    second: 131
+    second: temple_DARK_131
   - first:
       213: -3558287319723886022
-    second: 141
+    second: temple_DARK_141
   - first:
       213: -1869248515973406079
-    second: 151
+    second: temple_DARK_151
   - first:
       213: 1840059084634729652
-    second: 12
+    second: temple_DARK_12
   - first:
       213: -6908713535308251356
-    second: 112
+    second: temple_DARK_112
   - first:
       213: 7293906268319233776
-    second: 122
+    second: temple_DARK_122
   - first:
       213: 7564170298869451445
-    second: 132
+    second: temple_DARK_132
   - first:
       213: -8344083640052678453
-    second: 142
+    second: temple_DARK_142
   - first:
       213: 1462365499702293984
-    second: 152
+    second: temple_DARK_152
   - first:
       213: 1127223760459724062
-    second: 13
+    second: temple_DARK_13
   - first:
       213: -4129235289053152723
-    second: 113
+    second: temple_DARK_113
   - first:
       213: 9174235224718242758
-    second: 123
+    second: temple_DARK_123
   - first:
       213: -5763829074529255567
-    second: 133
+    second: temple_DARK_133
   - first:
       213: 246296347441123025
-    second: 143
+    second: temple_DARK_143
   - first:
       213: 3117608474565576089
-    second: 153
+    second: temple_DARK_153
   - first:
       213: 2450565909728410856
-    second: 14
+    second: temple_DARK_14
   - first:
       213: -5468382029055465884
-    second: 114
+    second: temple_DARK_114
   - first:
       213: 1524157299721021891
-    second: 134
+    second: temple_DARK_134
   - first:
       213: 183212007095979961
-    second: 144
+    second: temple_DARK_144
   - first:
       213: 4193222730039741841
-    second: 154
+    second: temple_DARK_154
   - first:
       213: -3165705482850905674
-    second: 15
+    second: temple_DARK_15
   - first:
       213: 6734684633657039821
-    second: 115
+    second: temple_DARK_115
   - first:
       213: -1583898042935591190
-    second: 135
+    second: temple_DARK_135
   - first:
       213: -2406893295983391241
-    second: 145
+    second: temple_DARK_145
   - first:
       213: -952682199232832059
-    second: 155
+    second: temple_DARK_155
   - first:
       213: -5774996654182199871
-    second: 16
+    second: temple_DARK_16
   - first:
       213: 4443897450750874535
-    second: 17
+    second: temple_DARK_17
   - first:
       213: -6398567975934360271
-    second: 117
+    second: temple_DARK_117
   - first:
       213: 3021946288986219864
-    second: 127
+    second: temple_DARK_127
   - first:
       213: -6066770748219408245
-    second: 137
+    second: temple_DARK_137
   - first:
       213: -3839419028077224407
-    second: 147
+    second: temple_DARK_147
   - first:
       213: -5307506109448168031
-    second: 157
+    second: temple_DARK_157
   - first:
       213: 700863525252940799
-    second: 167
+    second: temple_DARK_167
   - first:
       213: -3822713577358298166
-    second: 177
+    second: temple_DARK_177
   - first:
       213: -3204314713441666975
-    second: 187
+    second: temple_DARK_187
   - first:
       213: 5661049957185019681
-    second: 18
+    second: temple_DARK_18
   - first:
       213: -8957284035257282584
-    second: 118
+    second: temple_DARK_118
   - first:
       213: 821699465916322869
-    second: 128
+    second: temple_DARK_128
   - first:
       213: 6489610241198286182
-    second: 138
+    second: temple_DARK_138
   - first:
       213: -9186735260187993544
-    second: 148
+    second: temple_DARK_148
   - first:
       213: 6489871585197885851
-    second: 158
+    second: temple_DARK_158
   - first:
       213: -3195476417298603316
-    second: 168
+    second: temple_DARK_168
   - first:
       213: 1768339233626080706
-    second: 178
+    second: temple_DARK_178
   - first:
       213: -8295142853972654705
-    second: 188
+    second: temple_DARK_188
   - first:
       213: 8474981341611232960
-    second: 19
+    second: temple_DARK_19
   - first:
       213: -9138037040227770232
-    second: 119
+    second: temple_DARK_119
   - first:
       213: -8735441677112475752
-    second: 129
+    second: temple_DARK_129
   - first:
       213: 1641813613071775055
-    second: 139
+    second: temple_DARK_139
   - first:
       213: -9016710347682217852
-    second: 149
+    second: temple_DARK_149
   - first:
       213: -5410082502029113031
-    second: 159
+    second: temple_DARK_159
   - first:
       213: -7858491299808530786
-    second: 169
+    second: temple_DARK_169
   - first:
       213: -6841722765060534419
-    second: 179
+    second: temple_DARK_179
   - first:
       213: -1977760837791518271
-    second: 189
+    second: temple_DARK_189
   - first:
       213: -6691012767228139306
-    second: 30
+    second: temple_DARK_30
   - first:
       213: 8251907811329543855
-    second: 31
+    second: temple_DARK_31
   - first:
       213: -201460538643699791
-    second: lava
+    second: temple_DARK_lava
   - first:
       213: 4392170440827130783
-    second: waterfall
+    second: temple_DARK_waterfall
   - first:
       213: -8373222136145620632
-    second: 160
+    second: temple_DARK_160
   - first:
       213: 1701854330767516314
-    second: 170
+    second: temple_DARK_170
   - first:
       213: -3493160027052846601
-    second: 180
+    second: temple_DARK_180
   - first:
       213: -2115457103611978337
-    second: 161
+    second: temple_DARK_161
   - first:
       213: 5932739100274104364
-    second: 171
+    second: temple_DARK_171
   - first:
       213: -554438106920706084
-    second: 181
+    second: temple_DARK_181
   - first:
       213: -7035195994024675113
-    second: 162
+    second: temple_DARK_162
   - first:
       213: -6467276799757248785
-    second: 172
+    second: temple_DARK_172
   - first:
       213: -5341870609494625678
-    second: 182
+    second: temple_DARK_182
   - first:
       213: -5079105962311074511
-    second: 163
+    second: temple_DARK_163
   - first:
       213: -1300805632072158905
-    second: 173
+    second: temple_DARK_173
   - first:
       213: -8905662136806812126
-    second: 183
+    second: temple_DARK_183
   - first:
       213: 6312037128003990989
-    second: 124
+    second: temple_DARK_124
   - first:
       213: 2733946097252187821
-    second: 164
+    second: temple_DARK_164
   - first:
       213: 605696201848019545
-    second: 174
+    second: temple_DARK_174
   - first:
       213: 5281638212969618885
-    second: 184
+    second: temple_DARK_184
   - first:
       213: -3713311849071092161
-    second: 125
+    second: temple_DARK_125
   - first:
       213: 7161397670792433542
-    second: 165
+    second: temple_DARK_165
   - first:
       213: -1724086907042617910
-    second: 175
+    second: temple_DARK_175
   - first:
       213: -3150301486310352595
-    second: 185
+    second: temple_DARK_185
   - first:
       213: -5903299138629098404
-    second: 116
+    second: temple_DARK_116
   - first:
       213: 3685152125961464965
-    second: 126
+    second: temple_DARK_126
   - first:
       213: -3505167688332446886
-    second: 136
+    second: temple_DARK_136
   - first:
       213: 8680213767338256587
-    second: 146
+    second: temple_DARK_146
   - first:
       213: -3213984598705551438
-    second: 156
+    second: temple_DARK_156
   - first:
       213: -6848136828857868286
-    second: 166
+    second: temple_DARK_166
   - first:
       213: 8475284525710512774
-    second: 176
+    second: temple_DARK_176
   - first:
       213: -733222574896515085
-    second: 186
+    second: temple_DARK_186
   - first:
       213: 6836142153017594085
-    second: 20
+    second: temple_DARK_20
   - first:
       213: 3739629566794811945
-    second: 210
+    second: temple_DARK_210
   - first:
       213: -6167804180273747926
-    second: 220
+    second: temple_DARK_220
   - first:
       213: 8298471800516993061
-    second: 230
+    second: temple_DARK_230
   - first:
       213: 2185498278340178504
-    second: 21
+    second: temple_DARK_21
   - first:
       213: 312411451082320881
-    second: 211
+    second: temple_DARK_211
   - first:
       213: 863553802706296020
-    second: 221
+    second: temple_DARK_221
   - first:
       213: -7397664776066113000
-    second: 231
+    second: temple_DARK_231
   - first:
       213: 430984766625829748
-    second: 22
+    second: temple_DARK_22
   - first:
       213: 7200636335243528347
-    second: 212
+    second: temple_DARK_212
   - first:
       213: -4227776513080790873
-    second: 222
+    second: temple_DARK_222
   - first:
       213: 2482586323228808731
-    second: 232
+    second: temple_DARK_232
   - first:
       213: -1317986280940093683
-    second: 23
+    second: temple_DARK_23
   - first:
       213: -3977800204531077332
-    second: 213
+    second: temple_DARK_213
   - first:
       213: -1126271621817865780
-    second: 223
+    second: temple_DARK_223
   - first:
       213: 1994940757356745112
-    second: 233
+    second: temple_DARK_233
   - first:
       213: -8326724806951850010
-    second: 24
+    second: temple_DARK_24
   - first:
       213: 9018316408388942899
-    second: 214
+    second: temple_DARK_214
   - first:
       213: 7115231666849958538
-    second: 224
+    second: temple_DARK_224
   - first:
       213: -1078203913016493803
-    second: 234
+    second: temple_DARK_234
   - first:
       213: 8914089594741642868
-    second: 25
+    second: temple_DARK_25
   - first:
       213: -2570949691034005900
-    second: 215
+    second: temple_DARK_215
   - first:
       213: -2376931319762873690
-    second: 225
+    second: temple_DARK_225
   - first:
       213: -6752338200585653871
-    second: 235
+    second: temple_DARK_235
   - first:
       213: 276181914589855336
-    second: 26
+    second: temple_DARK_26
   - first:
       213: 2791595852367629972
-    second: 216
+    second: temple_DARK_216
   - first:
       213: -609758178335434047
-    second: 226
+    second: temple_DARK_226
   - first:
       213: 8127992217002793755
-    second: 236
+    second: temple_DARK_236
   - first:
       213: 588497054336764479
-    second: 27
+    second: temple_DARK_27
   - first:
       213: 7560987481910819968
-    second: 217
+    second: temple_DARK_217
   - first:
       213: -4405719728687186775
-    second: 227
+    second: temple_DARK_227
   - first:
       213: -4101432685032244580
-    second: 237
+    second: temple_DARK_237
   - first:
       213: -540048619370252142
-    second: 28
+    second: temple_DARK_28
   - first:
       213: 8628016325019199391
-    second: 218
+    second: temple_DARK_218
   - first:
       213: 6698147340294147897
-    second: 228
+    second: temple_DARK_228
   - first:
       213: 8265415928279550358
-    second: 238
+    second: temple_DARK_238
   - first:
       213: -3511060238418154924
-    second: 29
+    second: temple_DARK_29
   - first:
       213: 2294871103751515929
-    second: 219
+    second: temple_DARK_219
   - first:
       213: 5365529030329516596
-    second: 229
+    second: temple_DARK_229
   - first:
       213: -6674396443900270943
-    second: 239
+    second: temple_DARK_239
   - first:
       213: -5126770328913247271
-    second: 310
+    second: temple_DARK_310
   - first:
       213: 2717723488615757018
-    second: 320
+    second: temple_DARK_320
   - first:
       213: 7946168081469297458
-    second: 311
+    second: temple_DARK_311
   - first:
       213: -5202534442311399235
-    second: 321
+    second: temple_DARK_321
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -443,11 +443,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -486,8 +487,10 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -497,9 +500,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -509,9 +513,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -521,9 +526,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -533,13 +539,14 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: water
+      name: temple_DARK_water
       rect:
         serializedVersion: 2
         x: 160
@@ -549,6 +556,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -560,7 +568,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water_background
+      name: temple_DARK_water_background
       rect:
         serializedVersion: 2
         x: 176
@@ -570,6 +578,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -581,7 +590,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water_backwall
+      name: temple_DARK_water_backwall
       rect:
         serializedVersion: 2
         x: 192
@@ -591,6 +600,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -602,7 +612,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lava
+      name: temple_DARK_lava
       rect:
         serializedVersion: 2
         x: 208
@@ -612,6 +622,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -623,7 +634,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterfall
+      name: temple_DARK_waterfall
       rect:
         serializedVersion: 2
         x: 224
@@ -633,6 +644,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -644,7 +656,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 10
+      name: temple_DARK_10
       rect:
         serializedVersion: 2
         x: 0
@@ -654,6 +666,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -665,7 +678,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 110
+      name: temple_DARK_110
       rect:
         serializedVersion: 2
         x: 0
@@ -675,6 +688,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -686,7 +700,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 120
+      name: temple_DARK_120
       rect:
         serializedVersion: 2
         x: 0
@@ -696,6 +710,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -707,7 +722,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 130
+      name: temple_DARK_130
       rect:
         serializedVersion: 2
         x: 0
@@ -717,6 +732,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -728,7 +744,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 140
+      name: temple_DARK_140
       rect:
         serializedVersion: 2
         x: 0
@@ -738,6 +754,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -749,7 +766,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 150
+      name: temple_DARK_150
       rect:
         serializedVersion: 2
         x: 0
@@ -759,6 +776,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -770,7 +788,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 160
+      name: temple_DARK_160
       rect:
         serializedVersion: 2
         x: 0
@@ -780,6 +798,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -791,7 +810,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 170
+      name: temple_DARK_170
       rect:
         serializedVersion: 2
         x: 0
@@ -801,6 +820,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -812,7 +832,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 180
+      name: temple_DARK_180
       rect:
         serializedVersion: 2
         x: 0
@@ -822,6 +842,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -833,7 +854,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11
+      name: temple_DARK_11
       rect:
         serializedVersion: 2
         x: 16
@@ -843,6 +864,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -854,7 +876,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 111
+      name: temple_DARK_111
       rect:
         serializedVersion: 2
         x: 16
@@ -864,6 +886,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -875,7 +898,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 121
+      name: temple_DARK_121
       rect:
         serializedVersion: 2
         x: 16
@@ -885,6 +908,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -896,7 +920,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 131
+      name: temple_DARK_131
       rect:
         serializedVersion: 2
         x: 16
@@ -906,6 +930,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -917,7 +942,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 141
+      name: temple_DARK_141
       rect:
         serializedVersion: 2
         x: 16
@@ -927,6 +952,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -938,7 +964,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 151
+      name: temple_DARK_151
       rect:
         serializedVersion: 2
         x: 16
@@ -948,6 +974,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -959,7 +986,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 161
+      name: temple_DARK_161
       rect:
         serializedVersion: 2
         x: 16
@@ -969,6 +996,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -980,7 +1008,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 171
+      name: temple_DARK_171
       rect:
         serializedVersion: 2
         x: 16
@@ -990,6 +1018,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1001,7 +1030,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 181
+      name: temple_DARK_181
       rect:
         serializedVersion: 2
         x: 16
@@ -1011,6 +1040,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1022,7 +1052,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 12
+      name: temple_DARK_12
       rect:
         serializedVersion: 2
         x: 32
@@ -1032,6 +1062,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1043,7 +1074,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 112
+      name: temple_DARK_112
       rect:
         serializedVersion: 2
         x: 32
@@ -1053,6 +1084,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1064,7 +1096,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 122
+      name: temple_DARK_122
       rect:
         serializedVersion: 2
         x: 32
@@ -1074,6 +1106,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1085,7 +1118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 132
+      name: temple_DARK_132
       rect:
         serializedVersion: 2
         x: 32
@@ -1095,6 +1128,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1106,7 +1140,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 142
+      name: temple_DARK_142
       rect:
         serializedVersion: 2
         x: 32
@@ -1116,6 +1150,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1127,7 +1162,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 152
+      name: temple_DARK_152
       rect:
         serializedVersion: 2
         x: 32
@@ -1137,6 +1172,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1148,7 +1184,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 162
+      name: temple_DARK_162
       rect:
         serializedVersion: 2
         x: 32
@@ -1158,6 +1194,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1169,7 +1206,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 172
+      name: temple_DARK_172
       rect:
         serializedVersion: 2
         x: 32
@@ -1179,6 +1216,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1190,7 +1228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 182
+      name: temple_DARK_182
       rect:
         serializedVersion: 2
         x: 32
@@ -1200,6 +1238,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1211,7 +1250,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13
+      name: temple_DARK_13
       rect:
         serializedVersion: 2
         x: 48
@@ -1221,6 +1260,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1232,7 +1272,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 113
+      name: temple_DARK_113
       rect:
         serializedVersion: 2
         x: 48
@@ -1242,6 +1282,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1253,7 +1294,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 123
+      name: temple_DARK_123
       rect:
         serializedVersion: 2
         x: 48
@@ -1263,6 +1304,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1274,7 +1316,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 133
+      name: temple_DARK_133
       rect:
         serializedVersion: 2
         x: 48
@@ -1284,6 +1326,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1295,7 +1338,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 143
+      name: temple_DARK_143
       rect:
         serializedVersion: 2
         x: 48
@@ -1305,6 +1348,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1316,7 +1360,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 153
+      name: temple_DARK_153
       rect:
         serializedVersion: 2
         x: 48
@@ -1326,6 +1370,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1337,7 +1382,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 163
+      name: temple_DARK_163
       rect:
         serializedVersion: 2
         x: 48
@@ -1347,6 +1392,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1358,7 +1404,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 173
+      name: temple_DARK_173
       rect:
         serializedVersion: 2
         x: 48
@@ -1368,6 +1414,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1379,7 +1426,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 183
+      name: temple_DARK_183
       rect:
         serializedVersion: 2
         x: 48
@@ -1389,6 +1436,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1400,7 +1448,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 14
+      name: temple_DARK_14
       rect:
         serializedVersion: 2
         x: 64
@@ -1410,6 +1458,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1421,7 +1470,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 114
+      name: temple_DARK_114
       rect:
         serializedVersion: 2
         x: 64
@@ -1431,6 +1480,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1442,7 +1492,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 124
+      name: temple_DARK_124
       rect:
         serializedVersion: 2
         x: 64
@@ -1452,6 +1502,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1463,7 +1514,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 134
+      name: temple_DARK_134
       rect:
         serializedVersion: 2
         x: 64
@@ -1473,6 +1524,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1484,7 +1536,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 144
+      name: temple_DARK_144
       rect:
         serializedVersion: 2
         x: 64
@@ -1494,6 +1546,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1505,7 +1558,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 154
+      name: temple_DARK_154
       rect:
         serializedVersion: 2
         x: 64
@@ -1515,6 +1568,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1526,7 +1580,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 164
+      name: temple_DARK_164
       rect:
         serializedVersion: 2
         x: 64
@@ -1536,6 +1590,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1547,7 +1602,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 174
+      name: temple_DARK_174
       rect:
         serializedVersion: 2
         x: 64
@@ -1557,6 +1612,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1568,7 +1624,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 184
+      name: temple_DARK_184
       rect:
         serializedVersion: 2
         x: 64
@@ -1578,6 +1634,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1589,7 +1646,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 15
+      name: temple_DARK_15
       rect:
         serializedVersion: 2
         x: 80
@@ -1599,6 +1656,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1610,7 +1668,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 115
+      name: temple_DARK_115
       rect:
         serializedVersion: 2
         x: 80
@@ -1620,6 +1678,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1631,7 +1690,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 125
+      name: temple_DARK_125
       rect:
         serializedVersion: 2
         x: 80
@@ -1641,6 +1700,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1652,7 +1712,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 135
+      name: temple_DARK_135
       rect:
         serializedVersion: 2
         x: 80
@@ -1662,6 +1722,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1673,7 +1734,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 145
+      name: temple_DARK_145
       rect:
         serializedVersion: 2
         x: 80
@@ -1683,6 +1744,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1694,7 +1756,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 155
+      name: temple_DARK_155
       rect:
         serializedVersion: 2
         x: 80
@@ -1704,6 +1766,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1715,7 +1778,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 165
+      name: temple_DARK_165
       rect:
         serializedVersion: 2
         x: 80
@@ -1725,6 +1788,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1736,7 +1800,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 175
+      name: temple_DARK_175
       rect:
         serializedVersion: 2
         x: 80
@@ -1746,6 +1810,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1757,7 +1822,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 185
+      name: temple_DARK_185
       rect:
         serializedVersion: 2
         x: 80
@@ -1767,6 +1832,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1778,7 +1844,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16
+      name: temple_DARK_16
       rect:
         serializedVersion: 2
         x: 96
@@ -1788,6 +1854,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1799,7 +1866,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 116
+      name: temple_DARK_116
       rect:
         serializedVersion: 2
         x: 96
@@ -1809,6 +1876,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1820,7 +1888,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 126
+      name: temple_DARK_126
       rect:
         serializedVersion: 2
         x: 96
@@ -1830,6 +1898,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1841,7 +1910,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 136
+      name: temple_DARK_136
       rect:
         serializedVersion: 2
         x: 96
@@ -1851,6 +1920,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1862,7 +1932,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 146
+      name: temple_DARK_146
       rect:
         serializedVersion: 2
         x: 96
@@ -1872,6 +1942,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1883,7 +1954,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 156
+      name: temple_DARK_156
       rect:
         serializedVersion: 2
         x: 96
@@ -1893,6 +1964,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1904,7 +1976,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 166
+      name: temple_DARK_166
       rect:
         serializedVersion: 2
         x: 96
@@ -1914,6 +1986,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1925,7 +1998,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 176
+      name: temple_DARK_176
       rect:
         serializedVersion: 2
         x: 96
@@ -1935,6 +2008,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1946,7 +2020,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 186
+      name: temple_DARK_186
       rect:
         serializedVersion: 2
         x: 96
@@ -1956,6 +2030,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1967,7 +2042,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 17
+      name: temple_DARK_17
       rect:
         serializedVersion: 2
         x: 112
@@ -1977,6 +2052,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -1988,7 +2064,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 117
+      name: temple_DARK_117
       rect:
         serializedVersion: 2
         x: 112
@@ -1998,6 +2074,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2009,7 +2086,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 127
+      name: temple_DARK_127
       rect:
         serializedVersion: 2
         x: 112
@@ -2019,6 +2096,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2030,7 +2108,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 137
+      name: temple_DARK_137
       rect:
         serializedVersion: 2
         x: 112
@@ -2040,6 +2118,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2051,7 +2130,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 147
+      name: temple_DARK_147
       rect:
         serializedVersion: 2
         x: 112
@@ -2061,6 +2140,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2072,7 +2152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 157
+      name: temple_DARK_157
       rect:
         serializedVersion: 2
         x: 112
@@ -2082,6 +2162,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2093,7 +2174,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 167
+      name: temple_DARK_167
       rect:
         serializedVersion: 2
         x: 112
@@ -2103,6 +2184,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2114,7 +2196,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 177
+      name: temple_DARK_177
       rect:
         serializedVersion: 2
         x: 112
@@ -2124,6 +2206,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2135,7 +2218,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 187
+      name: temple_DARK_187
       rect:
         serializedVersion: 2
         x: 112
@@ -2145,6 +2228,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2156,7 +2240,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 18
+      name: temple_DARK_18
       rect:
         serializedVersion: 2
         x: 128
@@ -2166,6 +2250,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2177,7 +2262,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 118
+      name: temple_DARK_118
       rect:
         serializedVersion: 2
         x: 128
@@ -2187,6 +2272,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2198,7 +2284,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 128
+      name: temple_DARK_128
       rect:
         serializedVersion: 2
         x: 128
@@ -2208,6 +2294,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2219,7 +2306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 138
+      name: temple_DARK_138
       rect:
         serializedVersion: 2
         x: 128
@@ -2229,6 +2316,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2240,7 +2328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 148
+      name: temple_DARK_148
       rect:
         serializedVersion: 2
         x: 128
@@ -2250,6 +2338,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2261,7 +2350,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 158
+      name: temple_DARK_158
       rect:
         serializedVersion: 2
         x: 128
@@ -2271,6 +2360,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2282,7 +2372,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 168
+      name: temple_DARK_168
       rect:
         serializedVersion: 2
         x: 128
@@ -2292,6 +2382,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2303,7 +2394,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 178
+      name: temple_DARK_178
       rect:
         serializedVersion: 2
         x: 128
@@ -2313,6 +2404,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2324,7 +2416,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 188
+      name: temple_DARK_188
       rect:
         serializedVersion: 2
         x: 128
@@ -2334,6 +2426,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2345,7 +2438,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 19
+      name: temple_DARK_19
       rect:
         serializedVersion: 2
         x: 144
@@ -2355,6 +2448,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2366,7 +2460,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 119
+      name: temple_DARK_119
       rect:
         serializedVersion: 2
         x: 144
@@ -2376,6 +2470,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2387,7 +2482,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 129
+      name: temple_DARK_129
       rect:
         serializedVersion: 2
         x: 144
@@ -2397,6 +2492,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2408,7 +2504,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 139
+      name: temple_DARK_139
       rect:
         serializedVersion: 2
         x: 144
@@ -2418,6 +2514,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2429,7 +2526,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 149
+      name: temple_DARK_149
       rect:
         serializedVersion: 2
         x: 144
@@ -2439,6 +2536,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2450,7 +2548,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 159
+      name: temple_DARK_159
       rect:
         serializedVersion: 2
         x: 144
@@ -2460,6 +2558,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2471,7 +2570,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 169
+      name: temple_DARK_169
       rect:
         serializedVersion: 2
         x: 144
@@ -2481,6 +2580,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2492,7 +2592,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 179
+      name: temple_DARK_179
       rect:
         serializedVersion: 2
         x: 144
@@ -2502,6 +2602,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2513,7 +2614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 189
+      name: temple_DARK_189
       rect:
         serializedVersion: 2
         x: 144
@@ -2523,6 +2624,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2534,7 +2636,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 20
+      name: temple_DARK_20
       rect:
         serializedVersion: 2
         x: 160
@@ -2544,6 +2646,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2555,7 +2658,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 210
+      name: temple_DARK_210
       rect:
         serializedVersion: 2
         x: 160
@@ -2565,6 +2668,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2576,7 +2680,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 220
+      name: temple_DARK_220
       rect:
         serializedVersion: 2
         x: 160
@@ -2586,6 +2690,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2597,7 +2702,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 230
+      name: temple_DARK_230
       rect:
         serializedVersion: 2
         x: 160
@@ -2607,6 +2712,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2618,7 +2724,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 21
+      name: temple_DARK_21
       rect:
         serializedVersion: 2
         x: 176
@@ -2628,6 +2734,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2639,7 +2746,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 211
+      name: temple_DARK_211
       rect:
         serializedVersion: 2
         x: 176
@@ -2649,6 +2756,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2660,7 +2768,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 221
+      name: temple_DARK_221
       rect:
         serializedVersion: 2
         x: 176
@@ -2670,6 +2778,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2681,7 +2790,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 231
+      name: temple_DARK_231
       rect:
         serializedVersion: 2
         x: 176
@@ -2691,6 +2800,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2702,7 +2812,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 22
+      name: temple_DARK_22
       rect:
         serializedVersion: 2
         x: 192
@@ -2712,6 +2822,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2723,7 +2834,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 212
+      name: temple_DARK_212
       rect:
         serializedVersion: 2
         x: 192
@@ -2733,6 +2844,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2744,7 +2856,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 222
+      name: temple_DARK_222
       rect:
         serializedVersion: 2
         x: 192
@@ -2754,6 +2866,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2765,7 +2878,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 232
+      name: temple_DARK_232
       rect:
         serializedVersion: 2
         x: 192
@@ -2775,6 +2888,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2786,7 +2900,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 23
+      name: temple_DARK_23
       rect:
         serializedVersion: 2
         x: 208
@@ -2796,6 +2910,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2807,7 +2922,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 213
+      name: temple_DARK_213
       rect:
         serializedVersion: 2
         x: 208
@@ -2817,6 +2932,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2828,7 +2944,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 223
+      name: temple_DARK_223
       rect:
         serializedVersion: 2
         x: 208
@@ -2838,6 +2954,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2849,7 +2966,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 233
+      name: temple_DARK_233
       rect:
         serializedVersion: 2
         x: 208
@@ -2859,6 +2976,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2870,7 +2988,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 24
+      name: temple_DARK_24
       rect:
         serializedVersion: 2
         x: 224
@@ -2880,6 +2998,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2891,7 +3010,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 214
+      name: temple_DARK_214
       rect:
         serializedVersion: 2
         x: 224
@@ -2901,6 +3020,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2912,7 +3032,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 224
+      name: temple_DARK_224
       rect:
         serializedVersion: 2
         x: 224
@@ -2922,6 +3042,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2933,7 +3054,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 234
+      name: temple_DARK_234
       rect:
         serializedVersion: 2
         x: 224
@@ -2943,6 +3064,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2954,7 +3076,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 25
+      name: temple_DARK_25
       rect:
         serializedVersion: 2
         x: 240
@@ -2964,6 +3086,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2975,7 +3098,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 215
+      name: temple_DARK_215
       rect:
         serializedVersion: 2
         x: 240
@@ -2985,6 +3108,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -2996,7 +3120,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 225
+      name: temple_DARK_225
       rect:
         serializedVersion: 2
         x: 240
@@ -3006,6 +3130,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3017,7 +3142,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 235
+      name: temple_DARK_235
       rect:
         serializedVersion: 2
         x: 240
@@ -3027,6 +3152,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3038,7 +3164,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 26
+      name: temple_DARK_26
       rect:
         serializedVersion: 2
         x: 256
@@ -3048,6 +3174,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3059,7 +3186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 216
+      name: temple_DARK_216
       rect:
         serializedVersion: 2
         x: 256
@@ -3069,6 +3196,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3080,7 +3208,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 226
+      name: temple_DARK_226
       rect:
         serializedVersion: 2
         x: 256
@@ -3090,6 +3218,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3101,7 +3230,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 236
+      name: temple_DARK_236
       rect:
         serializedVersion: 2
         x: 256
@@ -3111,6 +3240,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3122,7 +3252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 27
+      name: temple_DARK_27
       rect:
         serializedVersion: 2
         x: 272
@@ -3132,6 +3262,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3143,7 +3274,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 217
+      name: temple_DARK_217
       rect:
         serializedVersion: 2
         x: 272
@@ -3153,6 +3284,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3164,7 +3296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 227
+      name: temple_DARK_227
       rect:
         serializedVersion: 2
         x: 272
@@ -3174,6 +3306,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3185,7 +3318,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 237
+      name: temple_DARK_237
       rect:
         serializedVersion: 2
         x: 272
@@ -3195,6 +3328,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3206,7 +3340,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 28
+      name: temple_DARK_28
       rect:
         serializedVersion: 2
         x: 288
@@ -3216,6 +3350,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3227,7 +3362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 218
+      name: temple_DARK_218
       rect:
         serializedVersion: 2
         x: 288
@@ -3237,6 +3372,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3248,7 +3384,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 228
+      name: temple_DARK_228
       rect:
         serializedVersion: 2
         x: 288
@@ -3258,6 +3394,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3269,7 +3406,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 238
+      name: temple_DARK_238
       rect:
         serializedVersion: 2
         x: 288
@@ -3279,6 +3416,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3290,7 +3428,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29
+      name: temple_DARK_29
       rect:
         serializedVersion: 2
         x: 304
@@ -3300,6 +3438,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3311,7 +3450,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 219
+      name: temple_DARK_219
       rect:
         serializedVersion: 2
         x: 304
@@ -3321,6 +3460,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3332,7 +3472,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 229
+      name: temple_DARK_229
       rect:
         serializedVersion: 2
         x: 304
@@ -3342,6 +3482,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3353,7 +3494,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 239
+      name: temple_DARK_239
       rect:
         serializedVersion: 2
         x: 304
@@ -3363,6 +3504,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3374,7 +3516,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 30
+      name: temple_DARK_30
       rect:
         serializedVersion: 2
         x: 320
@@ -3384,6 +3526,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.16666667}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3395,7 +3538,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 310
+      name: temple_DARK_310
       rect:
         serializedVersion: 2
         x: 320
@@ -3405,6 +3548,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.16666667}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3416,7 +3560,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 320
+      name: temple_DARK_320
       rect:
         serializedVersion: 2
         x: 320
@@ -3426,6 +3570,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.16666667}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3437,7 +3582,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 31
+      name: temple_DARK_31
       rect:
         serializedVersion: 2
         x: 336
@@ -3447,6 +3592,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.16666667}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3458,7 +3604,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 311
+      name: temple_DARK_311
       rect:
         serializedVersion: 2
         x: 336
@@ -3468,6 +3614,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.16666667}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3479,7 +3626,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 321
+      name: temple_DARK_321
       rect:
         serializedVersion: 2
         x: 336
@@ -3489,6 +3636,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.16666667}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -3500,6 +3648,7 @@ TextureImporter:
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -3509,151 +3658,293 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
-      311: 7946168081469297458
-      146: 8680213767338256587
-      227: -4405719728687186775
-      154: 4193222730039741841
-      19: 8474981341611232960
-      142: -8344083640052678453
-      218: 8628016325019199391
-      144: 183212007095979961
-      30: -6691012767228139306
-      179: -6841722765060534419
-      230: 8298471800516993061
-      water_background: 7055374874864954388
-      110: 2692228934559545928
-      131: 2551518094793869659
-      151: -1869248515973406079
-      143: 246296347441123025
-      170: 1701854330767516314
-      12: 1840059084634729652
-      178: 1768339233626080706
-      116: -5903299138629098404
-      210: 3739629566794811945
-      175: -1724086907042617910
-      213: -3977800204531077332
-      238: 8265415928279550358
-      186: -733222574896515085
-      138: 6489610241198286182
-      236: 8127992217002793755
-      157: -5307506109448168031
-      119: -9138037040227770232
-      162: -7035195994024675113
-      234: -1078203913016493803
-      130: 162189906751378928
-      232: 2482586323228808731
-      133: -5763829074529255567
-      155: -952682199232832059
-      214: 9018316408388942899
-      28: -540048619370252142
-      147: -3839419028077224407
-      212: 7200636335243528347
-      211: 312411451082320881
-      23: -1317986280940093683
-      163: -5079105962311074511
-      216: 2791595852367629972
-      160: -8373222136145620632
-      189: -1977760837791518271
-      226: -609758178335434047
-      29: -3511060238418154924
-      27: 588497054336764479
-      156: -3213984598705551438
-      126: 3685152125961464965
-      180: -3493160027052846601
-      182: -5341870609494625678
-      172: -6467276799757248785
-      16: -5774996654182199871
-      166: -6848136828857868286
-      14: 2450565909728410856
-      lava: -201460538643699791
-      215: -2570949691034005900
-      22: 430984766625829748
-      24: -8326724806951850010
-      235: -6752338200585653871
-      121: 2425639911146021689
-      132: 7564170298869451445
-      223: -1126271621817865780
-      168: -3195476417298603316
-      224: 7115231666849958538
-      149: -9016710347682217852
-      310: -5126770328913247271
-      139: 1641813613071775055
-      158: 6489871585197885851
-      113: -4129235289053152723
-      17: 4443897450750874535
-      15: -3165705482850905674
-      112: -6908713535308251356
-      222: -4227776513080790873
-      173: -1300805632072158905
-      184: 5281638212969618885
-      135: -1583898042935591190
-      125: -3713311849071092161
-      171: 5932739100274104364
-      118: -8957284035257282584
-      18: 5661049957185019681
-      176: 8475284525710512774
-      185: -3150301486310352595
-      122: 7293906268319233776
-      120: 6287607311731213131
-      21: 2185498278340178504
-      174: 605696201848019545
-      26: 276181914589855336
-      220: -6167804180273747926
-      233: 1994940757356745112
-      169: -7858491299808530786
-      188: -8295142853972654705
-      153: 3117608474565576089
-      134: 1524157299721021891
-      124: 6312037128003990989
-      237: -4101432685032244580
-      229: 5365529030329516596
-      140: 7026842539221975203
-      117: -6398567975934360271
-      111: 8694305388649107506
-      217: 7560987481910819968
-      141: -3558287319723886022
-      183: -8905662136806812126
-      239: -6674396443900270943
-      150: -3144590571393297090
-      128: 821699465916322869
-      145: -2406893295983391241
-      148: -9186735260187993544
-      25: 8914089594741642868
-      water: -4400644427685314254
-      31: 8251907811329543855
-      225: -2376931319762873690
-      127: 3021946288986219864
-      320: 2717723488615757018
-      11: 6346318911325233748
-      123: 9174235224718242758
-      219: 2294871103751515929
-      321: -5202534442311399235
-      164: 2733946097252187821
-      115: 6734684633657039821
-      167: 700863525252940799
-      187: -3204314713441666975
-      20: 6836142153017594085
-      181: -554438106920706084
-      165: 7161397670792433542
-      228: 6698147340294147897
-      152: 1462365499702293984
-      13: 1127223760459724062
-      136: -3505167688332446886
-      231: -7397664776066113000
-      water_backwall: 8283533273962829627
-      161: -2115457103611978337
-      159: -5410082502029113031
-      114: -5468382029055465884
-      177: -3822713577358298166
-      waterfall: 4392170440827130783
-      221: 863553802706296020
-      129: -8735441677112475752
       10: -8655818156195654838
+      11: 6346318911325233748
+      110: 2692228934559545928
+      111: 8694305388649107506
+      112: -6908713535308251356
+      113: -4129235289053152723
+      114: -5468382029055465884
+      115: 6734684633657039821
+      116: -5903299138629098404
+      117: -6398567975934360271
+      118: -8957284035257282584
+      119: -9138037040227770232
+      12: 1840059084634729652
+      120: 6287607311731213131
+      121: 2425639911146021689
+      122: 7293906268319233776
+      123: 9174235224718242758
+      124: 6312037128003990989
+      125: -3713311849071092161
+      126: 3685152125961464965
+      127: 3021946288986219864
+      128: 821699465916322869
+      129: -8735441677112475752
+      13: 1127223760459724062
+      130: 162189906751378928
+      131: 2551518094793869659
+      132: 7564170298869451445
+      133: -5763829074529255567
+      134: 1524157299721021891
+      135: -1583898042935591190
+      136: -3505167688332446886
       137: -6066770748219408245
-  spritePackingTag: 
+      138: 6489610241198286182
+      139: 1641813613071775055
+      14: 2450565909728410856
+      140: 7026842539221975203
+      141: -3558287319723886022
+      142: -8344083640052678453
+      143: 246296347441123025
+      144: 183212007095979961
+      145: -2406893295983391241
+      146: 8680213767338256587
+      147: -3839419028077224407
+      148: -9186735260187993544
+      149: -9016710347682217852
+      15: -3165705482850905674
+      150: -3144590571393297090
+      151: -1869248515973406079
+      152: 1462365499702293984
+      153: 3117608474565576089
+      154: 4193222730039741841
+      155: -952682199232832059
+      156: -3213984598705551438
+      157: -5307506109448168031
+      158: 6489871585197885851
+      159: -5410082502029113031
+      16: -5774996654182199871
+      160: -8373222136145620632
+      161: -2115457103611978337
+      162: -7035195994024675113
+      163: -5079105962311074511
+      164: 2733946097252187821
+      165: 7161397670792433542
+      166: -6848136828857868286
+      167: 700863525252940799
+      168: -3195476417298603316
+      169: -7858491299808530786
+      17: 4443897450750874535
+      170: 1701854330767516314
+      171: 5932739100274104364
+      172: -6467276799757248785
+      173: -1300805632072158905
+      174: 605696201848019545
+      175: -1724086907042617910
+      176: 8475284525710512774
+      177: -3822713577358298166
+      178: 1768339233626080706
+      179: -6841722765060534419
+      18: 5661049957185019681
+      180: -3493160027052846601
+      181: -554438106920706084
+      182: -5341870609494625678
+      183: -8905662136806812126
+      184: 5281638212969618885
+      185: -3150301486310352595
+      186: -733222574896515085
+      187: -3204314713441666975
+      188: -8295142853972654705
+      189: -1977760837791518271
+      19: 8474981341611232960
+      20: 6836142153017594085
+      21: 2185498278340178504
+      210: 3739629566794811945
+      211: 312411451082320881
+      212: 7200636335243528347
+      213: -3977800204531077332
+      214: 9018316408388942899
+      215: -2570949691034005900
+      216: 2791595852367629972
+      217: 7560987481910819968
+      218: 8628016325019199391
+      219: 2294871103751515929
+      22: 430984766625829748
+      220: -6167804180273747926
+      221: 863553802706296020
+      222: -4227776513080790873
+      223: -1126271621817865780
+      224: 7115231666849958538
+      225: -2376931319762873690
+      226: -609758178335434047
+      227: -4405719728687186775
+      228: 6698147340294147897
+      229: 5365529030329516596
+      23: -1317986280940093683
+      230: 8298471800516993061
+      231: -7397664776066113000
+      232: 2482586323228808731
+      233: 1994940757356745112
+      234: -1078203913016493803
+      235: -6752338200585653871
+      236: 8127992217002793755
+      237: -4101432685032244580
+      238: 8265415928279550358
+      239: -6674396443900270943
+      24: -8326724806951850010
+      25: 8914089594741642868
+      26: 276181914589855336
+      27: 588497054336764479
+      28: -540048619370252142
+      29: -3511060238418154924
+      30: -6691012767228139306
+      31: 8251907811329543855
+      310: -5126770328913247271
+      311: 7946168081469297458
+      320: 2717723488615757018
+      321: -5202534442311399235
+      lava: -201460538643699791
+      temple_DARK_10: -8655818156195654838
+      temple_DARK_11: 6346318911325233748
+      temple_DARK_110: 2692228934559545928
+      temple_DARK_111: 8694305388649107506
+      temple_DARK_112: -6908713535308251356
+      temple_DARK_113: -4129235289053152723
+      temple_DARK_114: -5468382029055465884
+      temple_DARK_115: 6734684633657039821
+      temple_DARK_116: -5903299138629098404
+      temple_DARK_117: -6398567975934360271
+      temple_DARK_118: -8957284035257282584
+      temple_DARK_119: -9138037040227770232
+      temple_DARK_12: 1840059084634729652
+      temple_DARK_120: 6287607311731213131
+      temple_DARK_121: 2425639911146021689
+      temple_DARK_122: 7293906268319233776
+      temple_DARK_123: 9174235224718242758
+      temple_DARK_124: 6312037128003990989
+      temple_DARK_125: -3713311849071092161
+      temple_DARK_126: 3685152125961464965
+      temple_DARK_127: 3021946288986219864
+      temple_DARK_128: 821699465916322869
+      temple_DARK_129: -8735441677112475752
+      temple_DARK_13: 1127223760459724062
+      temple_DARK_130: 162189906751378928
+      temple_DARK_131: 2551518094793869659
+      temple_DARK_132: 7564170298869451445
+      temple_DARK_133: -5763829074529255567
+      temple_DARK_134: 1524157299721021891
+      temple_DARK_135: -1583898042935591190
+      temple_DARK_136: -3505167688332446886
+      temple_DARK_137: -6066770748219408245
+      temple_DARK_138: 6489610241198286182
+      temple_DARK_139: 1641813613071775055
+      temple_DARK_14: 2450565909728410856
+      temple_DARK_140: 7026842539221975203
+      temple_DARK_141: -3558287319723886022
+      temple_DARK_142: -8344083640052678453
+      temple_DARK_143: 246296347441123025
+      temple_DARK_144: 183212007095979961
+      temple_DARK_145: -2406893295983391241
+      temple_DARK_146: 8680213767338256587
+      temple_DARK_147: -3839419028077224407
+      temple_DARK_148: -9186735260187993544
+      temple_DARK_149: -9016710347682217852
+      temple_DARK_15: -3165705482850905674
+      temple_DARK_150: -3144590571393297090
+      temple_DARK_151: -1869248515973406079
+      temple_DARK_152: 1462365499702293984
+      temple_DARK_153: 3117608474565576089
+      temple_DARK_154: 4193222730039741841
+      temple_DARK_155: -952682199232832059
+      temple_DARK_156: -3213984598705551438
+      temple_DARK_157: -5307506109448168031
+      temple_DARK_158: 6489871585197885851
+      temple_DARK_159: -5410082502029113031
+      temple_DARK_16: -5774996654182199871
+      temple_DARK_160: -8373222136145620632
+      temple_DARK_161: -2115457103611978337
+      temple_DARK_162: -7035195994024675113
+      temple_DARK_163: -5079105962311074511
+      temple_DARK_164: 2733946097252187821
+      temple_DARK_165: 7161397670792433542
+      temple_DARK_166: -6848136828857868286
+      temple_DARK_167: 700863525252940799
+      temple_DARK_168: -3195476417298603316
+      temple_DARK_169: -7858491299808530786
+      temple_DARK_17: 4443897450750874535
+      temple_DARK_170: 1701854330767516314
+      temple_DARK_171: 5932739100274104364
+      temple_DARK_172: -6467276799757248785
+      temple_DARK_173: -1300805632072158905
+      temple_DARK_174: 605696201848019545
+      temple_DARK_175: -1724086907042617910
+      temple_DARK_176: 8475284525710512774
+      temple_DARK_177: -3822713577358298166
+      temple_DARK_178: 1768339233626080706
+      temple_DARK_179: -6841722765060534419
+      temple_DARK_18: 5661049957185019681
+      temple_DARK_180: -3493160027052846601
+      temple_DARK_181: -554438106920706084
+      temple_DARK_182: -5341870609494625678
+      temple_DARK_183: -8905662136806812126
+      temple_DARK_184: 5281638212969618885
+      temple_DARK_185: -3150301486310352595
+      temple_DARK_186: -733222574896515085
+      temple_DARK_187: -3204314713441666975
+      temple_DARK_188: -8295142853972654705
+      temple_DARK_189: -1977760837791518271
+      temple_DARK_19: 8474981341611232960
+      temple_DARK_20: 6836142153017594085
+      temple_DARK_21: 2185498278340178504
+      temple_DARK_210: 3739629566794811945
+      temple_DARK_211: 312411451082320881
+      temple_DARK_212: 7200636335243528347
+      temple_DARK_213: -3977800204531077332
+      temple_DARK_214: 9018316408388942899
+      temple_DARK_215: -2570949691034005900
+      temple_DARK_216: 2791595852367629972
+      temple_DARK_217: 7560987481910819968
+      temple_DARK_218: 8628016325019199391
+      temple_DARK_219: 2294871103751515929
+      temple_DARK_22: 430984766625829748
+      temple_DARK_220: -6167804180273747926
+      temple_DARK_221: 863553802706296020
+      temple_DARK_222: -4227776513080790873
+      temple_DARK_223: -1126271621817865780
+      temple_DARK_224: 7115231666849958538
+      temple_DARK_225: -2376931319762873690
+      temple_DARK_226: -609758178335434047
+      temple_DARK_227: -4405719728687186775
+      temple_DARK_228: 6698147340294147897
+      temple_DARK_229: 5365529030329516596
+      temple_DARK_23: -1317986280940093683
+      temple_DARK_230: 8298471800516993061
+      temple_DARK_231: -7397664776066113000
+      temple_DARK_232: 2482586323228808731
+      temple_DARK_233: 1994940757356745112
+      temple_DARK_234: -1078203913016493803
+      temple_DARK_235: -6752338200585653871
+      temple_DARK_236: 8127992217002793755
+      temple_DARK_237: -4101432685032244580
+      temple_DARK_238: 8265415928279550358
+      temple_DARK_239: -6674396443900270943
+      temple_DARK_24: -8326724806951850010
+      temple_DARK_25: 8914089594741642868
+      temple_DARK_26: 276181914589855336
+      temple_DARK_27: 588497054336764479
+      temple_DARK_28: -540048619370252142
+      temple_DARK_29: -3511060238418154924
+      temple_DARK_30: -6691012767228139306
+      temple_DARK_31: 8251907811329543855
+      temple_DARK_310: -5126770328913247271
+      temple_DARK_311: 7946168081469297458
+      temple_DARK_320: 2717723488615757018
+      temple_DARK_321: -5202534442311399235
+      temple_DARK_lava: -201460538643699791
+      temple_DARK_water: -4400644427685314254
+      temple_DARK_water_background: 7055374874864954388
+      temple_DARK_water_backwall: 8283533273962829627
+      temple_DARK_waterfall: 4392170440827130783
+      water: -4400644427685314254
+      water_background: 7055374874864954388
+      water_backwall: 8283533273962829627
+      waterfall: 4392170440827130783
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
