@@ -253,15 +253,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idle: {fileID: 7400000, guid: ff4ed23f294b70741b70efde52def734, type: 2}
-  moveto: {fileID: 0}
-  strike: {fileID: 0}
-  jumpback: {fileID: 0}
+  moveto: {fileID: 7400000, guid: 40703798302ed08c80e93d6ce5444eb7, type: 2}
+  strike: {fileID: 7400000, guid: 3bf4a49b30d8dd0f6e4f42c9822d0b48, type: 2}
+  jumpback: {fileID: 7400000, guid: aac0ce41325e504536cc9e7357c19895, type: 2}
   hurt: {fileID: 7400000, guid: ec3689074265810418f6a4d49339adf6, type: 2}
-  die: {fileID: 0}
-  dead: {fileID: 0}
-  spellcast: {fileID: 0}
-  useItem: {fileID: 0}
-  victory: {fileID: 0}
+  die: {fileID: 7400000, guid: 70af801521ee5939f0b8581300786bd8, type: 2}
+  dead: {fileID: 7400000, guid: 75946f1da84c32147c2670d23e34fd48, type: 2}
+  spellcast: {fileID: 7400000, guid: acc31e838ae3c8edbd0f61cc0188d1de, type: 2}
+  useItem: {fileID: 7400000, guid: 3335856eb82f2e136384c1eebc4a81bf, type: 2}
+  victory: {fileID: 7400000, guid: ce543497eaa388bed0eba289f2a25d8d, type: 2}
   animation: {fileID: 5547780620332828856}
   transform: {fileID: 1119443235684642514}
   crystalPointerGoToPosition: {fileID: 8600752376040989071}
@@ -1506,6 +1506,14 @@ Animation:
   - {fileID: 7400000, guid: ff4ed23f294b70741b70efde52def734, type: 2}
   - {fileID: 7400000, guid: 3ce11f1278367d947a5eb2834764a2d6, type: 2}
   - {fileID: 7400000, guid: ec3689074265810418f6a4d49339adf6, type: 2}
+  - {fileID: 7400000, guid: 40703798302ed08c80e93d6ce5444eb7, type: 2}
+  - {fileID: 7400000, guid: 3bf4a49b30d8dd0f6e4f42c9822d0b48, type: 2}
+  - {fileID: 7400000, guid: aac0ce41325e504536cc9e7357c19895, type: 2}
+  - {fileID: 7400000, guid: 70af801521ee5939f0b8581300786bd8, type: 2}
+  - {fileID: 7400000, guid: 75946f1da84c32147c2670d23e34fd48, type: 2}
+  - {fileID: 7400000, guid: acc31e838ae3c8edbd0f61cc0188d1de, type: 2}
+  - {fileID: 7400000, guid: 3335856eb82f2e136384c1eebc4a81bf, type: 2}
+  - {fileID: 7400000, guid: ce543497eaa388bed0eba289f2a25d8d, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0

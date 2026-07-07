@@ -286,15 +286,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idle: {fileID: 7400000, guid: fa357f28904bfda4ba44c462c3977c19, type: 2}
-  moveto: {fileID: 0}
-  strike: {fileID: 0}
-  jumpback: {fileID: 0}
+  moveto: {fileID: 7400000, guid: bf2afa1244fd35accb7a8bd83d7b080e, type: 2}
+  strike: {fileID: 7400000, guid: 9edceb2195277bd5923d462db4fe6011, type: 2}
+  jumpback: {fileID: 7400000, guid: ae5540f6be5857ad173afe71b74a2fdc, type: 2}
   hurt: {fileID: 7400000, guid: 7c1fae7d726ac3b4eb919f262a2cfb5e, type: 2}
-  die: {fileID: 0}
-  dead: {fileID: 0}
-  spellcast: {fileID: 0}
-  useItem: {fileID: 0}
-  victory: {fileID: 0}
+  die: {fileID: 7400000, guid: db9a0579ee5c2470e62f4f2c1a8462a1, type: 2}
+  dead: {fileID: 7400000, guid: 512a8ece427d87d4caebc23250b39ebb, type: 2}
+  spellcast: {fileID: 7400000, guid: 30df7f319a839f07844a16fdfa9638d1, type: 2}
+  useItem: {fileID: 7400000, guid: 8bac979b994f110d6c88c1ec5e735c2f, type: 2}
+  victory: {fileID: 7400000, guid: d599c93d986d251cfc2ca131bd5e8228, type: 2}
   animation: {fileID: 5547780620332828856}
   transform: {fileID: 1119443235684642514}
   crystalPointerGoToPosition: {fileID: 1452826362343428566}
@@ -1568,6 +1568,14 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: fa357f28904bfda4ba44c462c3977c19, type: 2}
   - {fileID: 7400000, guid: 7c1fae7d726ac3b4eb919f262a2cfb5e, type: 2}
+  - {fileID: 7400000, guid: bf2afa1244fd35accb7a8bd83d7b080e, type: 2}
+  - {fileID: 7400000, guid: 9edceb2195277bd5923d462db4fe6011, type: 2}
+  - {fileID: 7400000, guid: ae5540f6be5857ad173afe71b74a2fdc, type: 2}
+  - {fileID: 7400000, guid: db9a0579ee5c2470e62f4f2c1a8462a1, type: 2}
+  - {fileID: 7400000, guid: 512a8ece427d87d4caebc23250b39ebb, type: 2}
+  - {fileID: 7400000, guid: 30df7f319a839f07844a16fdfa9638d1, type: 2}
+  - {fileID: 7400000, guid: 8bac979b994f110d6c88c1ec5e735c2f, type: 2}
+  - {fileID: 7400000, guid: d599c93d986d251cfc2ca131bd5e8228, type: 2}
   - {fileID: 7400000, guid: d054993e78763ac42aa647e8c46c2460, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1

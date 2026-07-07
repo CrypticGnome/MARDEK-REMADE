@@ -323,16 +323,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155f0924c8446b546a2a043a61438e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idle: {fileID: 7400000, guid: 227291c00814ad24b9db4fa458b302a8, type: 2}
-  moveto: {fileID: 0}
-  strike: {fileID: 0}
-  jumpback: {fileID: 0}
-  hurt: {fileID: 7400000, guid: a4b6b2b6ddef4cc428240bc225ea0653, type: 2}
-  die: {fileID: 0}
-  dead: {fileID: 0}
-  spellcast: {fileID: 0}
-  useItem: {fileID: 0}
-  victory: {fileID: 0}
+  idle: {fileID: 7400000, guid: 7733b9f3e390ec15da6509a7c968a29b, type: 2}
+  moveto: {fileID: 7400000, guid: a49dd584f04068fe08e2babd46cc704a, type: 2}
+  strike: {fileID: 7400000, guid: d020213f8bfed30ac9462a90c7f9d5ee, type: 2}
+  jumpback: {fileID: 7400000, guid: 996ee567cad6b8ad27869b492914a889, type: 2}
+  hurt: {fileID: 7400000, guid: 7370550190c586bc87d3304a752f5ef0, type: 2}
+  die: {fileID: 7400000, guid: 0e0b931358586a48384c3ca5d224c1e7, type: 2}
+  dead: {fileID: 7400000, guid: 08426b2537fcf17b53e3054d7641fcd1, type: 2}
+  spellcast: {fileID: 7400000, guid: b53d69a0dc0e46dfab1ecbf98fb857c4, type: 2}
+  useItem: {fileID: 7400000, guid: a9e4ad0e318585b85e6ab629a4264336, type: 2}
+  victory: {fileID: 7400000, guid: 5591b7a99f9cb61f1c60cb5be2adb4a2, type: 2}
   animation: {fileID: 5547780620332828856}
   transform: {fileID: 1119443235684642514}
   crystalPointerGoToPosition: {fileID: 335992445152470925}
@@ -1469,10 +1469,18 @@ Animation:
   m_GameObject: {fileID: 7315171882359351003}
   m_Enabled: 1
   serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: 227291c00814ad24b9db4fa458b302a8, type: 2}
+  m_Animation: {fileID: 7400000, guid: 7733b9f3e390ec15da6509a7c968a29b, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 227291c00814ad24b9db4fa458b302a8, type: 2}
-  - {fileID: 7400000, guid: a4b6b2b6ddef4cc428240bc225ea0653, type: 2}
+  - {fileID: 7400000, guid: 7733b9f3e390ec15da6509a7c968a29b, type: 2}
+  - {fileID: 7400000, guid: 7370550190c586bc87d3304a752f5ef0, type: 2}
+  - {fileID: 7400000, guid: a49dd584f04068fe08e2babd46cc704a, type: 2}
+  - {fileID: 7400000, guid: d020213f8bfed30ac9462a90c7f9d5ee, type: 2}
+  - {fileID: 7400000, guid: 996ee567cad6b8ad27869b492914a889, type: 2}
+  - {fileID: 7400000, guid: 0e0b931358586a48384c3ca5d224c1e7, type: 2}
+  - {fileID: 7400000, guid: 08426b2537fcf17b53e3054d7641fcd1, type: 2}
+  - {fileID: 7400000, guid: b53d69a0dc0e46dfab1ecbf98fb857c4, type: 2}
+  - {fileID: 7400000, guid: a9e4ad0e318585b85e6ab629a4264336, type: 2}
+  - {fileID: 7400000, guid: 5591b7a99f9cb61f1c60cb5be2adb4a2, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
