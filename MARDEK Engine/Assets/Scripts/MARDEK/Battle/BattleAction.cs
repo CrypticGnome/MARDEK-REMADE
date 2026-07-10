@@ -14,6 +14,16 @@ namespace MARDEK.Battle
           [SerializeField] SoundEffect[] soundEffects;
           [SerializeReference, SubclassSelector] ActionEffects[] actionEffects;
           public Element Element { get { return element; } }
+          public bool IsMeleeAttack
+          {
+               get
+               {
+                    foreach (var effect in actionEffects)
+                         if (effect is DealMeleeDamageStandard)
+                              return true;
+                    return false;
+               }
+          }
           public void Apply(BattleCharacter user, BattleCharacter target)
           {
                for (int index = 0; index < actionEffects.Length; index++)

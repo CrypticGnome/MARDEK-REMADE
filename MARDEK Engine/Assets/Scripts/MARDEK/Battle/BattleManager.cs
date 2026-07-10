@@ -198,13 +198,19 @@ namespace MARDEK.Battle
                }
 
                instance.state = BattleState.ActionPerforming;
+               var attacker = characterActing;
                action.TryPerformAction(characterActing, target);
                instance.StartCoroutine(PlayAttack());
 
                IEnumerator PlayAttack()
                {
-                    WaitForSeconds waitForAnimationPlaceholder = new WaitForSeconds(1.5f);
-                    yield return waitForAnimationPlaceholder;
+                    var attackerModel = attacker.battleModel;
+                    var targetModel = target.battleModel;
+                    bool isMelee = action is ActionSkill skill && skill.Action.IsMeleeAttack;
+                    if (isMelee && attackerModel != null )
+                         yield return attackerModel.PlayMeleeSequence(targetModel);
+                    else
+                         yield return new WaitForSeconds(1.5f);
                     instance.EndTurn();
                }
           }
