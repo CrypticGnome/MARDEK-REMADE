@@ -184,6 +184,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &530505234494944299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3477301955588968292}
+  m_Layer: 0
+  m_Name: Strike Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3477301955588968292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530505234494944299}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -44.61564, y: 25.694555, z: -0.08497381}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1119443235684642514}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1426953165218317120
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +248,8 @@ Transform:
   - {fileID: 5837510293750954892}
   - {fileID: 162946636511036095}
   - {fileID: 6136541777059094979}
+  - {fileID: 3477301955588968292}
+  - {fileID: 7281913802526466095}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5293038698923263323
@@ -241,11 +274,12 @@ MonoBehaviour:
   spellcast: {fileID: 0}
   useItem: {fileID: 0}
   victory: {fileID: 0}
+  breath: {fileID: 0}
   animation: {fileID: 5547780620332828856}
   transform: {fileID: 1119443235684642514}
   crystalPointerGoToPosition: {fileID: 162946636511036095}
-  strikePoint: {fileID: 0}
-  hitPoint: {fileID: 0}
+  strikePoint: {fileID: 3477301955588968292}
+  hitPoint: {fileID: 7281913802526466095}
   moveToDuration: 0.5
   damageDisplay: {fileID: 4165870072997496594}
 --- !u!1 &1567731161397320632
@@ -340,6 +374,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &2145228553336943295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7281913802526466095}
+  m_Layer: 0
+  m_Name: Receive Melee Strike Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7281913802526466095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145228553336943295}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.112873, y: 25.694555, z: -0.08497381}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1119443235684642514}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2398874231090868501
 GameObject:
   m_ObjectHideFlags: 0

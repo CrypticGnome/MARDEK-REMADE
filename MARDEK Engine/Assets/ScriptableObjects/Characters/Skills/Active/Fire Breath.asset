@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e97727b890c81574e9c60256ce51f687, type: 3}
+  m_Script: {fileID: 11500000, guid: 0df9168702f3f544798919c204d06a49, type: 3}
   m_Name: Fire Breath
   m_EditorClassIdentifier: 
   <Cost>k__BackingField: 0

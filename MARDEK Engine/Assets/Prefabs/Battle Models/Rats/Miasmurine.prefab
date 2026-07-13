@@ -5224,6 +5224,37 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!1 &3488178793511748824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7409100956851462011}
+  m_Layer: 0
+  m_Name: Strike Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7409100956851462011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3488178793511748824}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21.637796, y: 9.141904, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 979944342599019653}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4243328446015015582
 GameObject:
   m_ObjectHideFlags: 0
@@ -5564,6 +5595,37 @@ Transform:
   - {fileID: 8519660446124249886}
   m_Father: {fileID: 6630829357233038501}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6538851822028297181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1125605762718153333}
+  m_Layer: 0
+  m_Name: Receive Melee Strike Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1125605762718153333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538851822028297181}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.9354644, y: 9.141904, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 979944342599019653}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7763334616494945883
 GameObject:
   m_ObjectHideFlags: 0
@@ -5599,6 +5661,8 @@ Transform:
   - {fileID: 5628367700654756258}
   - {fileID: 6630829357233038501}
   - {fileID: 2946508777527755358}
+  - {fileID: 7409100956851462011}
+  - {fileID: 1125605762718153333}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1149794528483951095
@@ -5623,11 +5687,12 @@ MonoBehaviour:
   spellcast: {fileID: 0}
   useItem: {fileID: 0}
   victory: {fileID: 0}
+  breath: {fileID: 0}
   animation: {fileID: 308869589324411901}
   transform: {fileID: 979944342599019653}
   crystalPointerGoToPosition: {fileID: 5628367700654756258}
-  strikePoint: {fileID: 0}
-  hitPoint: {fileID: 0}
+  strikePoint: {fileID: 7409100956851462011}
+  hitPoint: {fileID: 1125605762718153333}
   moveToDuration: 0.5
   damageDisplay: {fileID: 3437604856628585207}
 --- !u!111 &308869589324411901

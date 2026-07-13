@@ -10,24 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2f9201dd349acc4397c69487eb1f1a2, type: 3}
-  m_Name: Power Attack
-  m_EditorClassIdentifier: 
+  m_Name: RotRat_Attack
+  m_EditorClassIdentifier:
   <PointsRequiredToMaster>k__BackingField: 0
-  <DisplayName>k__BackingField: Power Attack
-  <Description>k__BackingField: Attack fiercely. 50% more powerful than an average
-    attack, but less accurate.
+  <DisplayName>k__BackingField: Attack
+  <Description>k__BackingField:
   <Cost>k__BackingField: 0
   action:
-    element: {fileID: 11400000, guid: ce9c718638458254ca7d5945b2b79f0a, type: 2}
-    soundEffects:
-    - {fileID: 11400000, guid: c58966fd900c3844a8cd6dd2c1cb8c98, type: 2}
+    element: {fileID: 11400000, guid: b58053569349d314892770b43156bfd2, type: 2}
+    soundEffects: []
     actionEffects:
-    - rid: 595661094312214603
+    - rid: 1146450213491311872
+    - rid: 6178805624952785920
   references:
     version: 2
     RefIds:
-    - rid: 595661094312214603
+    - rid: 1146450213491311872
       type: {class: DealMeleeDamageStandard, ns: MARDEK.Battle, asm: MARDEK}
       data:
-        motionValue: 1.5
-        AccuracyRating: 0.75
+        motionValue: 1
+        AccuracyRating: 1
+    - rid: 6178805624952785920
+      type: {class: DealStatusDamage, ns: MARDEK.Battle, asm: MARDEK}
+      data:
+        MotionValue: 10
+        StatusEffect: 10

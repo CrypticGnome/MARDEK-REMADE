@@ -1,13 +1,16 @@
+using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace MARDEK.Battle
 {
+    using MARDEK.Skill;
+
     public class BattleModelComponent : MonoBehaviour
     {
           [SerializeField] AnimationClip idle, moveto, strike, jumpback, hurt, die, dead, spellcast, useItem, victory;
-          [SerializeField, HideInInspector] new UnityEngine.Animation animation;
+          [SerializeField] AnimationClip breath;
+          [SerializeField, HideInInspector] UnityEngine.Animation animation;
           [SerializeField, HideInInspector] new Transform transform;
           [SerializeField] Transform crystalPointerGoToPosition;
           [SerializeField] Transform strikePoint;
@@ -33,7 +36,7 @@ namespace MARDEK.Battle
                animation.clip = idle;
                animation.Play(idle.name);
                AnimationState state = animation[idle.name];
-               state.time = Random.Range(0f, state.length);
+               state.time = UnityEngine.Random.Range(0f, state.length);
 
                animation.wrapMode = WrapMode.Loop;
 
@@ -41,6 +44,15 @@ namespace MARDEK.Battle
                foreach (var r in GetComponentsInChildren<SpriteRenderer>())
                     r.sortingLayerID = layer;
           }
+
+          /// <summary>
+          /// Fired by an Animation Event calling OnDamagePoint(), placed on a strike/breath
+          /// clip's timeline at the frame the attack actually connects. The battle flow waits
+          /// for this to apply damage/effects and trigger the target's Hurt animation at that
+          /// exact moment rather than at the start of the attacker's animation.
+          /// </summary>
+          public event Action DamagePoint;
+          public void OnDamagePoint() => DamagePoint?.Invoke();
 
           public void PlayAnimation(BattleAnimationType animType)
           {
@@ -117,11 +129,13 @@ namespace MARDEK.Battle
           }
 
           /// <summary>
-          /// Runs the full melee approach: MoveTo while travelling until this model's
-          /// Strike Point overlaps the target's Hit Point, Strike, then JumpBack while
-          /// returning to the idle position.
+          /// Runs the full melee/breath approach: MoveTo while travelling until this model's
+          /// Strike Point overlaps the target's Hit Point, play the strike clip (applying
+          /// onDamagePoint when the clip's DamagePoint Animation Event fires, or at the end
+          /// of the clip if it doesn't have one authored yet), then JumpBack while returning
+          /// to the idle position.
           /// </summary>
-          public IEnumerator PlayMeleeSequence(BattleModelComponent target)
+          IEnumerator PlayApproachAndStrikeSequence(BattleModelComponent target, AnimationClip strikeClip, Action onDamagePoint)
           {
             Vector3 idlePosition = transform.position;
 
@@ -132,9 +146,9 @@ namespace MARDEK.Battle
             }
 
             yield return MoveWithClip(moveto, idlePosition, attackPosition, moveToDuration);
-               animation.clip = strike;
-               animation.Play(strike.name);
-               yield return new WaitForSeconds(strike.length);
+               animation.clip = strikeClip;
+               animation.Play(strikeClip.name);
+               yield return WaitForDamagePoint(strikeClip.length, onDamagePoint);
                yield return MoveWithClip(jumpback, attackPosition, idlePosition, jumpback.length);
                animation.clip = idle;
                animation.Play(idle.name);
@@ -152,6 +166,69 @@ namespace MARDEK.Battle
                }
           }
 
+          IEnumerator WaitForDamagePoint(float clipLength, Action onDamagePoint)
+          {
+               bool applied = false;
+               void ApplyOnce()
+               {
+                    if (applied) return;
+                    applied = true;
+                    onDamagePoint?.Invoke();
+               }
+
+               DamagePoint += ApplyOnce;
+               float elapsed = 0f;
+               while (!applied && elapsed < clipLength)
+               {
+                    elapsed += Time.deltaTime;
+                    yield return null;
+               }
+               DamagePoint -= ApplyOnce;
+
+               // No DamagePoint Animation Event authored on this clip yet - fall back to
+               // applying at the end of the clip so the action still resolves.
+               ApplyOnce();
+          }
+
+          /// <summary>
+          /// Plays the appropriate animation sequence for the given skill's ActionType:
+          /// Melee/Breath run the full approach-strike-return sequence (with the breath
+          /// clip swapped in for Breath) and invoke applyEffect at the strike's DamagePoint,
+          /// while Spellcast/Item just play their animation in place and apply immediately.
+          /// </summary>
+          public IEnumerator PlayAction(ActionSkill skill, BattleModelComponent target, Action applyEffect)
+          {
+               switch (skill.Action.ActionType)
+               {
+                    case ActionType.Melee:
+                         yield return PlayApproachAndStrikeSequence(target, strike, applyEffect);
+                         break;
+                    case ActionType.Breath:
+                         yield return PlayApproachAndStrikeSequence(target, breath, applyEffect);
+                         break;
+                    case ActionType.Spellcast:
+                         applyEffect?.Invoke();
+                         PlayAnimation(BattleAnimationType.Spellcast);
+                         break;
+                    case ActionType.Item:
+                         applyEffect?.Invoke();
+                         PlayAnimation(BattleAnimationType.UseItem);
+                         break;
+               }
+          }
+
+          /// <summary>
+          /// Plays the Die clip and waits for it to finish - used so a defeated character's
+          /// model can be destroyed only after its death animation has played out.
+          /// </summary>
+          public IEnumerator PlayDeathSequence()
+          {
+               animation.clip = die;
+               animation.Play(die.name);
+               animation.wrapMode = WrapMode.Once;
+               yield return new WaitForSeconds(die.length);
+          }
+
      }
      public enum BattleAnimationType
      {
@@ -166,10 +243,11 @@ namespace MARDEK.Battle
           UseItem,
           Victory
      }
-     public enum AttackType
+     public enum ActionType
     {
           Melee,
           Spellcast,
           Breath,
+          Item,
     }
 }

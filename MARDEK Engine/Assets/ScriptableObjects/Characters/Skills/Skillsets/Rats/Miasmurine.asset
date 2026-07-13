@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5751986cefa50b4096c48199bd6adff, type: 3}
-  m_Name: Dark Rat
-  m_EditorClassIdentifier: 
-  <Description>k__BackingField: 
+  m_Name: Miasmurine
+  m_EditorClassIdentifier:
+  <Description>k__BackingField:
   <Sprite>k__BackingField: {fileID: 0}
   <Skills>k__BackingField:
-  - {fileID: 11400000, guid: 382e7fea33c28f14784293d4852ea186, type: 2}
-  - {fileID: 11400000, guid: f516fb0ae31149d4985e4170efa59e90, type: 2}
+  - {fileID: 11400000, guid: 8a9141530ef245159163c68aa6a5ac3f, type: 2}
+  - {fileID: 11400000, guid: 17190d00380841fcb7cf0dc6fbf319b1, type: 2}

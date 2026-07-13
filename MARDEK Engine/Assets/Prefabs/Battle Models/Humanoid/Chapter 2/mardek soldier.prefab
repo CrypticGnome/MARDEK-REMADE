@@ -346,6 +346,7 @@ MonoBehaviour:
   spellcast: {fileID: 7400000, guid: c4626e378df649676463681edb83b51b, type: 2}
   useItem: {fileID: 7400000, guid: 13b8787bf28201493dd1d569bbc997a2, type: 2}
   victory: {fileID: 7400000, guid: cde190bc08c65c3e239610b1b5a6c432, type: 2}
+  breath: {fileID: 0}
   animation: {fileID: 5547780620332828856}
   transform: {fileID: 1119443235684642514}
   crystalPointerGoToPosition: {fileID: 335992445152470925}
@@ -732,7 +733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6309710828313362139}
   m_Layer: 0
-  m_Name: Hit Point
+  m_Name: Receive Melee Strike Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
