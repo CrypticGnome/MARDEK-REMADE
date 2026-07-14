@@ -15,5 +15,5 @@ MonoBehaviour:
   <Description>k__BackingField: 
   <Sprite>k__BackingField: {fileID: 0}
   <Skills>k__BackingField:
-  - {fileID: 11400000, guid: f16fb62a3389a0e4b9e60e2f144892d9, type: 2}
-  - {fileID: 11400000, guid: 5d52b3e748688914ebed1ea4102cb395, type: 2}
+  - {fileID: 11400000, guid: 3160b0649c2b4259b06f457d64b18880, type: 2}
+  - {fileID: 11400000, guid: c1421c91c80f4622a7a2a3a5800d6fdd, type: 2}

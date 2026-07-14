@@ -16,15 +16,6 @@
       "dependencies": {},
       "url": "https://package.openupm.com"
     },
-    "com.lerozante.appandsysinfoutils": {
-      "version": "https://github.com/LuisEduardoR/com.lerozante.appandsysinfoutils.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.textmeshpro": "3.0.6"
-      },
-      "hash": "795d4920df1e1d16b6afb183d6e28619dd2c9b00"
-    },
     "com.unity.2d.animation": {
       "version": "15.1.0",
       "depth": 0,
@@ -235,14 +226,6 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
-    },
-    "com.unity.textmeshpro": {
-      "version": "5.0.0",
-      "depth": 1,
-      "source": "builtin",
-      "dependencies": {
-        "com.unity.ugui": "2.0.0"
-      }
     },
     "com.unity.timeline": {
       "version": "1.8.12",

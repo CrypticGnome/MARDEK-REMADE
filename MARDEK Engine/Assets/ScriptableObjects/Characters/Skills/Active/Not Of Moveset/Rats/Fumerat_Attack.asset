@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f9201dd349acc4397c69487eb1f1a2, type: 3}
+  m_Name: Fumerat_Attack
+  m_EditorClassIdentifier:
+  <PointsRequiredToMaster>k__BackingField: 0
+  <DisplayName>k__BackingField: Attack
+  <Description>k__BackingField:
+  <Cost>k__BackingField: 0
+  action:
+    element: {fileID: 11400000, guid: 96b7bd01ebbf64840a070d9ed9321b4c, type: 2}
+    soundEffects: []
+    actionEffects:
+    - rid: 6643031692252648448
+  references:
+    version: 2
+    RefIds:
+    - rid: 6643031692252648448
+      type: {class: DealMeleeDamageStandard, ns: MARDEK.Battle, asm: MARDEK}
+      data:
+        motionValue: 1
+        AccuracyRating: 1

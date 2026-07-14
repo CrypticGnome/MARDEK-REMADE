@@ -198,29 +198,38 @@ namespace MARDEK.Battle
                }
 
                instance.state = BattleState.ActionPerforming;
-               action.TryPerformAction(characterActing, target);
+               var attacker = characterActing;
                instance.StartCoroutine(PlayAttack());
 
                IEnumerator PlayAttack()
                {
-                    WaitForSeconds waitForAnimationPlaceholder = new WaitForSeconds(1.5f);
-                    yield return waitForAnimationPlaceholder;
+                    var attackerModel = attacker.battleModel;
+                    var targetModel = target.battleModel;
+
+                    void ApplyAction() => action.TryPerformAction(attacker, target);
+
+                    if (action is ActionSkill skill && attackerModel != null)
+                         yield return attackerModel.PlayAction(skill, targetModel, ApplyAction);
+                    else
+                    {
+                         ApplyAction();
+                         yield return new WaitForSeconds(1.5f);
+                    }
                     instance.EndTurn();
                }
           }
 
-          void EndTurn()
-          {
-               for (int i = EnemyBattleParty.Count - 1; i >= 0; i--)
-               {
-                    var enemy = EnemyBattleParty[i];
-                    var health = enemy.CurrentHP;
-                    if (health > 0)
-                         continue;
+          void EndTurn() => StartCoroutine(EndTurnRoutine());
 
+          IEnumerator EndTurnRoutine()
+          {
+               var deadEnemies = EnemyBattleParty.Where(enemy => enemy.CurrentHP <= 0).ToList();
+               foreach (var enemy in deadEnemies)
                     EnemyBattleParty.Remove(enemy);
-                    Destroy(enemy.battleModel.gameObject);
-               }
+
+               var deathRoutines = deadEnemies.Select(enemy => StartCoroutine(PlayDeathThenDestroy(enemy))).ToList();
+               foreach (var deathRoutine in deathRoutines)
+                    yield return deathRoutine;
 
                for (int i = PlayerBattleParty.Count - 1; i >= 0; i--)
                {
@@ -236,6 +245,12 @@ namespace MARDEK.Battle
                OnTurnEnd?.Invoke();
                instance.characterActionUI.SetActive(false);
                instance.CheckBattleEnd();
+          }
+
+          IEnumerator PlayDeathThenDestroy(BattleCharacter enemy)
+          {
+               yield return enemy.battleModel.PlayDeathSequence();
+               Destroy(enemy.battleModel.gameObject);
           }
           public void SkipCurrentCharacterTurn() => EndTurn();
     

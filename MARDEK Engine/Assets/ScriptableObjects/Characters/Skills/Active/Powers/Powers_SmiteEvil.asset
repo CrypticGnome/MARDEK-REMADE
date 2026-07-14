@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e97727b890c81574e9c60256ce51f687, type: 3}
+  m_Script: {fileID: 11500000, guid: d2f9201dd349acc4397c69487eb1f1a2, type: 3}
   m_Name: Powers_SmiteEvil
   m_EditorClassIdentifier: 
   <Cost>k__BackingField: 15
