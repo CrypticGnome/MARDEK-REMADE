@@ -2,24 +2,24 @@ using UnityEngine;
 
 namespace MARDEK.Audio
 {
-    [CreateAssetMenu(menuName = "MARDEK/Audio/Music")]
-    public class Music : AudioObject
-    {
-        [SerializeField] string _displayName;
-        public string displayName { get { return _displayName; } }
+	[CreateAssetMenu(menuName = "MARDEK/Audio/Music")]
+	public class Music : AudioObject
+	{
+		[SerializeField] string _displayName;
+		public string displayName { get { return _displayName; } }
 
-        [SerializeField] int _id;
-        public int id { get { return _id; } }
+		[SerializeField] int _id;
+		public int id { get { return _id; } }
 
-        public override void PlayOnSource(AudioSource audioSource)
-        {
-            audioSource.clip = clip;
-            audioSource.Play();
-        }
+		public override void PlayOnSource(AudioSource audioSource)
+		{
+			audioSource.clip = clip;
+			audioSource.Play();
+		}
 
-        public AudioClip GetClip()
-        {
-            return clip;
-        }
-    }
+		public AudioClip GetClip()
+		{
+			return clip;
+		}
+	}
 }

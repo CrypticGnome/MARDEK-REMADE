@@ -1,49 +1,46 @@
-using System.Collections.Generic;
-using UnityEngine;
-using MARDEK.Event;
-using MARDEK.Core;
-using System.Collections;
 using System;
+using MARDEK.Event;
+using UnityEngine;
 
 namespace MARDEK.DialogueSystem
 {
-    public class ChoicesCommand : OngoingCommand
-     {
-          [SerializeField] Dialogue choicesDialogue = null;
-          [SerializeField] CommandChain[] commandsByChoice;
-          Action OnDecision = null;
-          bool isOngoing = false;
+	public class ChoicesCommand : OngoingCommand
+	{
+		[SerializeField] Dialogue choicesDialogue = null;
+		[SerializeField] CommandChain[] commandsByChoice;
+		Action OnDecision = null;
+		bool isOngoing = false;
 
-          public override bool IsOngoing()
-          {
-               return isOngoing;
-          }
+		public override bool IsOngoing()
+		{
+			return isOngoing;
+		}
 
-          [ContextMenu("Trigger")]
-          public override void Trigger()
-          {
-               if (isOngoing)
-               {
-                    Debug.LogWarning("Trying to trigger event, but this event is already ongoing");
-                    return;
-               }
-               isOngoing = true;
+		[ContextMenu("Trigger")]
+		public override void Trigger()
+		{
+			if (isOngoing)
+			{
+				Debug.LogWarning("Trying to trigger event, but this event is already ongoing");
+				return;
+			}
+			isOngoing = true;
 
-               ChoicesManager.TriggerChoices(choicesDialogue);
-               ChoicesManager.SetChoices(OnChoice);
-          }
+			ChoicesManager.TriggerChoices(choicesDialogue);
+			ChoicesManager.SetChoices(OnChoice);
+		}
 
-          void OnChoice(int index)
-          {
-               isOngoing = false;
+		void OnChoice(int index)
+		{
+			isOngoing = false;
 
-               if (index >= commandsByChoice.Length)
-               {
-                    Debug.LogWarning("No command given for the chosen index");
-                    return;
-               }
-               CommandChain commands = commandsByChoice[index];
-               commands.Trigger();
-          }
-     }
+			if (index >= commandsByChoice.Length)
+			{
+				Debug.LogWarning("No command given for the chosen index");
+				return;
+			}
+			CommandChain commands = commandsByChoice[index];
+			commands.Trigger();
+		}
+	}
 }

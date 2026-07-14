@@ -1,44 +1,43 @@
-using UnityEngine;
-using MARDEK.Stats;
 using System.Collections.Generic;
-using System;
+using MARDEK.Stats;
+using UnityEngine;
 //using MARDEK.CharacterSystem;
 
 namespace MARDEK.Inventory
 {
-    [CreateAssetMenu(menuName = "MARDEK/Inventory/EquippableItem")]
-    public class EquippableItem : Item
-    {
-        [SerializeField] EquipmentCategory _category;
-        [SerializeField] ItemStats statBoosts;
-        public ItemStats Stats { get { return statBoosts; } }
-          [SerializeField] List<Skill.Skill> grantSkills;
+	[CreateAssetMenu(menuName = "MARDEK/Inventory/EquippableItem")]
+	public class EquippableItem : Item
+	{
+		[SerializeField] EquipmentCategory _category;
+		[SerializeField] ItemStats statBoosts;
+		public ItemStats Stats { get { return statBoosts; } }
+		[SerializeField] List<Skill.Skill> grantSkills;
 
 
-        [SerializeField] string _hitSFX;
-        public string hitSFX { get { return _hitSFX; } }
+		[SerializeField] string _hitSFX;
+		public string hitSFX { get { return _hitSFX; } }
 
-        public EquipmentCategory category { get { return _category; } set{_category=value;} }
+		public EquipmentCategory category { get { return _category; } set { _category = value; } }
 
-        
-        public EquippableItem()
-        {
-        }
 
-        public override bool CanStack()
-        {
-            return false;
-        }
+		public EquippableItem()
+		{
+		}
 
-        override public Color GetInventorySpaceColor()
-        {
-            if (category == null)
-            {
-                    UnityEngine.Debug.LogAssertion($"Null reference exception in {name}");
-                    return Color.red;
-            }
-            return category.color;
-        }
-        
-    }
+		public override bool CanStack()
+		{
+			return false;
+		}
+
+		override public Color GetInventorySpaceColor()
+		{
+			if (category == null)
+			{
+				UnityEngine.Debug.LogAssertion($"Null reference exception in {name}");
+				return Color.red;
+			}
+			return category.color;
+		}
+
+	}
 }

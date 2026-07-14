@@ -1,49 +1,49 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace MARDEK.Inventory
 {
-    [System.Serializable]
-    public class Inventory
-    {
-        [SerializeField] List<InventorySlot> slots = new List<InventorySlot>();
-        public List<InventorySlot> Slots { get { return slots; } }
+	[System.Serializable]
+	public class Inventory
+	{
+		[SerializeField] List<InventorySlot> slots = new List<InventorySlot>();
+		public List<InventorySlot> Slots { get { return slots; } }
 
-        public int CountItem(Item item)
-        {
-            int result = 0;
-            foreach (var slot in slots)
-            {
-                if (!slot.IsEmpty() && slot.currentItem == item) result += slot.amount;
-            }
-            return result;
-        }
+		public int CountItem(Item item)
+		{
+			int result = 0;
+			foreach (var slot in slots)
+			{
+				if (!slot.IsEmpty() && slot.currentItem == item) result += slot.amount;
+			}
+			return result;
+		}
 
-        public bool TryAddItem(Item item, int amount)
-        {
-            // First try to fill slots that already have the right item
-            foreach (var slot in slots)
-            {
-                if (!slot.IsEmpty() && slot.currentItem == item)
-                {
-                    slot.currentAmount += amount;
-                    return true;
-                }
-            }
+		public bool TryAddItem(Item item, int amount)
+		{
+			// First try to fill slots that already have the right item
+			foreach (var slot in slots)
+			{
+				if (!slot.IsEmpty() && slot.currentItem == item)
+				{
+					slot.currentAmount += amount;
+					return true;
+				}
+			}
 
-            // Then try to fill empty slots
-            foreach (var slot in slots)
-            {
-                if (slot.IsEmpty())
-                {
-                    slot.currentItem = item;
-                    slot.currentAmount = amount;
-                    return true;
-                }
-            }
+			// Then try to fill empty slots
+			foreach (var slot in slots)
+			{
+				if (slot.IsEmpty())
+				{
+					slot.currentItem = item;
+					slot.currentAmount = amount;
+					return true;
+				}
+			}
 
-            // If there are no suitable slots, return false and don't take the item
-            return false;
-        }
-    }
+			// If there are no suitable slots, return false and don't take the item
+			return false;
+		}
+	}
 }

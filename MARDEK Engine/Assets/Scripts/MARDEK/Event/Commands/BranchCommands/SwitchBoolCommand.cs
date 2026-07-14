@@ -1,18 +1,17 @@
-using MARDEK.Event;
 using MARDEK.Save;
 using UnityEngine;
 
 namespace MARDEK.Event
 {
-     public class SwitchBoolCommand : Command
-     {
+	public class SwitchBoolCommand : Command
+	{
 
-          [SerializeField] BoolComponent boolObject;
+		[SerializeField] BoolComponent boolObject;
 
-          public override void Trigger()
-          {
-               boolObject.Value = !boolObject.Value;
-          }
+		public override void Trigger()
+		{
+			boolObject.Value = !boolObject.Value;
+		}
 
-     }
+	}
 }

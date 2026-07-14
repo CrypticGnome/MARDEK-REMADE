@@ -1,181 +1,180 @@
 #if UNITY_EDITOR
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
-using UnityEngine;
-using UnityEngine.UIElements;
 using UnityEditor;
 using UnityEditor.UIElements;
+using UnityEngine;
+using UnityEngine.UIElements;
 
 //https://discussions.unity.com/t/abstract-skilllist-that-can-be-edited-in-inspector/948612/15
 [CustomPropertyDrawer(typeof(SubclassSelectorAttribute))]
 public sealed class SubclassSelectorPropertyDrawer : PropertyDrawer
 {
-     #region Overrides
+	#region Overrides
 
-     public override VisualElement CreatePropertyGUI(SerializedProperty property)
-     {
-          var visualElement = new VisualElement();
+	public override VisualElement CreatePropertyGUI(SerializedProperty property)
+	{
+		var visualElement = new VisualElement();
 
-          var propertyField = new PropertyField();
-          propertyField.BindProperty(property);
-          propertyField.label = " ";
+		var propertyField = new PropertyField();
+		propertyField.BindProperty(property);
+		propertyField.label = " ";
 
-          if (property.propertyType != SerializedPropertyType.ManagedReference)
-          {
-               visualElement.Add(propertyField);
-               return visualElement;
-          }
+		if (property.propertyType != SerializedPropertyType.ManagedReference)
+		{
+			visualElement.Add(propertyField);
+			return visualElement;
+		}
 
-          var types = GetTypes(fieldInfo, property);
+		var types = GetTypes(fieldInfo, property);
 
-          Box box = new Box();
-          visualElement.Add(box);
-          #region AssignBox
-          box.style.marginTop = 2;
-          box.style.marginBottom = 2;
-          box.style.paddingTop = 4;
-          box.style.paddingBottom = 4;
-          box.style.paddingLeft = 4;
-          box.style.paddingRight = 4;
-          box.style.borderLeftWidth = 1;
-          box.style.borderRightWidth = 1;
-          box.style.borderTopWidth = 1;
-          box.style.borderBottomWidth = 1;
-          #endregion AssignBox
+		Box box = new Box();
+		visualElement.Add(box);
+		#region AssignBox
+		box.style.marginTop = 2;
+		box.style.marginBottom = 2;
+		box.style.paddingTop = 4;
+		box.style.paddingBottom = 4;
+		box.style.paddingLeft = 4;
+		box.style.paddingRight = 4;
+		box.style.borderLeftWidth = 1;
+		box.style.borderRightWidth = 1;
+		box.style.borderTopWidth = 1;
+		box.style.borderBottomWidth = 1;
+		#endregion AssignBox
 
-          var dropdownField = new TypePopupField(property, types);
-          box.Add(dropdownField);
+		var dropdownField = new TypePopupField(property, types);
+		box.Add(dropdownField);
 
-          box.Add(propertyField);
+		box.Add(propertyField);
 
-          
-          return visualElement;
-     }
 
-     #endregion
+		return visualElement;
+	}
 
-     #region Internal Methods
+	#endregion
 
-     private static bool IsCollection(Type fieldType)
-     {
-          if (fieldType.IsArray == true)
-          {
-               return true;
-          }
+	#region Internal Methods
 
-          if (fieldType.IsGenericType && fieldType.GetGenericTypeDefinition() == typeof(List<>))
-          {
-               return true;
-          }
+	private static bool IsCollection(Type fieldType)
+	{
+		if (fieldType.IsArray == true)
+		{
+			return true;
+		}
 
-          return false;
-     }
+		if (fieldType.IsGenericType && fieldType.GetGenericTypeDefinition() == typeof(List<>))
+		{
+			return true;
+		}
 
-     private static List<Type> GetTypes(FieldInfo fieldInfo, SerializedProperty property)
-     {
-          var value = property.managedReferenceValue;
-          Type currentType = value?.GetType();
+		return false;
+	}
 
-          Type fieldType = fieldInfo.FieldType;
-          Type baseType;
+	private static List<Type> GetTypes(FieldInfo fieldInfo, SerializedProperty property)
+	{
+		var value = property.managedReferenceValue;
+		Type currentType = value?.GetType();
 
-          bool isCollection = IsCollection(fieldType);
+		Type fieldType = fieldInfo.FieldType;
+		Type baseType;
 
-          var types = new List<Type>()
-          {
-               currentType,
-               null
-          };
+		bool isCollection = IsCollection(fieldType);
 
-          if (fieldType.IsAbstract == false && isCollection == false)
-          {
-               types.Add(fieldType);
-          }
+		var types = new List<Type>()
+		  {
+			   currentType,
+			   null
+		  };
 
-          if (isCollection == true)
-          {
-               Type[] genericArguments = fieldType.GetGenericArguments();
-               baseType = genericArguments.Length == 0 ? fieldType.GetElementType() : genericArguments[0];
-               if (baseType.IsAbstract == false)
-               {
-                    types.Add(baseType);
-               }
-          }
-          else
-          {
-               baseType = fieldType;
-          }
+		if (fieldType.IsAbstract == false && isCollection == false)
+		{
+			types.Add(fieldType);
+		}
 
-          var derivedTypes = TypeCache.GetTypesDerivedFrom(baseType);
-          foreach (var derivedType in derivedTypes)
-          {
-               types.Add(derivedType);
-          }
+		if (isCollection == true)
+		{
+			Type[] genericArguments = fieldType.GetGenericArguments();
+			baseType = genericArguments.Length == 0 ? fieldType.GetElementType() : genericArguments[0];
+			if (baseType.IsAbstract == false)
+			{
+				types.Add(baseType);
+			}
+		}
+		else
+		{
+			baseType = fieldType;
+		}
 
-          return types;
-     }
+		var derivedTypes = TypeCache.GetTypesDerivedFrom(baseType);
+		foreach (var derivedType in derivedTypes)
+		{
+			types.Add(derivedType);
+		}
 
-     #endregion
+		return types;
+	}
 
-     #region Internal Types
+	#endregion
 
-     public sealed class TypePopupField : PopupField<Type>
-     {
-          #region Internal Members
+	#region Internal Types
 
-          private readonly SerializedProperty _property;
+	public sealed class TypePopupField : PopupField<Type>
+	{
+		#region Internal Members
 
-          #endregion
+		private readonly SerializedProperty _property;
 
-          public TypePopupField(SerializedProperty property, List<Type> types) : base(property.displayName, types, 0, GetTypeName, GetTypeName)
-          {
-               _property = property;
-               this.RegisterValueChangedCallback(OnValueSelected);
-          }
+		#endregion
 
-          #region Internal Methods
+		public TypePopupField(SerializedProperty property, List<Type> types) : base(property.displayName, types, 0, GetTypeName, GetTypeName)
+		{
+			_property = property;
+			this.RegisterValueChangedCallback(OnValueSelected);
+		}
 
-          private void OnValueSelected(ChangeEvent<Type> changeEvent)
-          {
-               Type selectedType = changeEvent.newValue;
-               if (selectedType == null)
-               {
-                    _property.managedReferenceValue = null;
-                    _property.serializedObject.ApplyModifiedProperties();
-               }
-               else
-               {
-                    var constructor = selectedType.GetConstructor(Type.EmptyTypes);
-                    if (constructor != null)
-                    {
-                         var value = constructor.Invoke(null);
-                         _property.managedReferenceValue = value;
-                         _property.serializedObject.ApplyModifiedProperties();
-                    }
-                    else
-                    {
-                         Debug.LogWarning($"Selected Type {selectedType.Name} does not have a parameterless constructor. Cannot assign instance of type.");
-                    }
-               }
-          }
+		#region Internal Methods
 
-          private static string GetTypeName(Type type)
-          {
-               if (type == null)
-               {
-                    return "Null";
-               }
-               else
-               {
-                    return ObjectNames.NicifyVariableName(type.Name);
-               }
-          }
+		private void OnValueSelected(ChangeEvent<Type> changeEvent)
+		{
+			Type selectedType = changeEvent.newValue;
+			if (selectedType == null)
+			{
+				_property.managedReferenceValue = null;
+				_property.serializedObject.ApplyModifiedProperties();
+			}
+			else
+			{
+				var constructor = selectedType.GetConstructor(Type.EmptyTypes);
+				if (constructor != null)
+				{
+					var value = constructor.Invoke(null);
+					_property.managedReferenceValue = value;
+					_property.serializedObject.ApplyModifiedProperties();
+				}
+				else
+				{
+					Debug.LogWarning($"Selected Type {selectedType.Name} does not have a parameterless constructor. Cannot assign instance of type.");
+				}
+			}
+		}
 
-          #endregion
-     }
+		private static string GetTypeName(Type type)
+		{
+			if (type == null)
+			{
+				return "Null";
+			}
+			else
+			{
+				return ObjectNames.NicifyVariableName(type.Name);
+			}
+		}
 
-     #endregion
+		#endregion
+	}
+
+	#endregion
 }
 #endif

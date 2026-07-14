@@ -1,59 +1,59 @@
-using UnityEngine;
 using MARDEK.Core;
+using UnityEngine;
 
 namespace MARDEK.Movement
 {
-    public class FollowMovementController : MovementController
-    {
-        [SerializeField] Movable followedMovement;
-        bool shouldFollow = false;
-        bool followingAFollower = false;
+	public class FollowMovementController : MovementController
+	{
+		[SerializeField] Movable followedMovement;
+		bool shouldFollow = false;
+		bool followingAFollower = false;
 
-        private void Awake()
-        {
-            if (followedMovement.GetComponent<FollowMovementController>())
-                followingAFollower = true;
-        }
+		private void Awake()
+		{
+			if (followedMovement.GetComponent<FollowMovementController>())
+				followingAFollower = true;
+		}
 
-        private void OnEnable()
-        {
-            if (followedMovement)
-                followedMovement.OnStartMove += OnFollowedMovementMoved;
-        }
+		private void OnEnable()
+		{
+			if (followedMovement)
+				followedMovement.OnStartMove += OnFollowedMovementMoved;
+		}
 
-        private void OnDisable()
-        {
-            if (followedMovement)
-                followedMovement.OnStartMove -= OnFollowedMovementMoved;
-        }
+		private void OnDisable()
+		{
+			if (followedMovement)
+				followedMovement.OnStartMove -= OnFollowedMovementMoved;
+		}
 
-        void OnFollowedMovementMoved()
-        {
-            shouldFollow = true;
-            //assures that follower-follower movement will happen in the same frame.
-            if (followingAFollower)
-                MoveToFollowed();
-        }
+		void OnFollowedMovementMoved()
+		{
+			shouldFollow = true;
+			//assures that follower-follower movement will happen in the same frame.
+			if (followingAFollower)
+				MoveToFollowed();
+		}
 
-        void MoveToFollowed()
-        {
-            Vector2 desiredDelta = followedMovement.lastPosition - (Vector2)transform.position;
-            MoveDirection followDirection = GetMoveDirection(desiredDelta);
-            if (followDirection)
-            {
-                SendDirection(followDirection);
-            }
-        }
+		void MoveToFollowed()
+		{
+			Vector2 desiredDelta = followedMovement.lastPosition - (Vector2)transform.position;
+			MoveDirection followDirection = GetMoveDirection(desiredDelta);
+			if (followDirection)
+			{
+				SendDirection(followDirection);
+			}
+		}
 
-        private void Update()
-        {
-            if (movement.isMoving == false && shouldFollow)
-            {                
-                if (followedMovement.lastPosition.IsApproximately(transform.position))
-                    shouldFollow = false;
-                else
-                    MoveToFollowed();
-            }
-        }
-    }
+		private void Update()
+		{
+			if (movement.isMoving == false && shouldFollow)
+			{
+				if (followedMovement.lastPosition.IsApproximately(transform.position))
+					shouldFollow = false;
+				else
+					MoveToFollowed();
+			}
+		}
+	}
 }
