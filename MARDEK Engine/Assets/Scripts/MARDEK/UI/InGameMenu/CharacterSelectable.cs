@@ -1,47 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using MARDEK.CharacterSystem;
-using UnityEngine.Serialization;
 using TMPro;
+using UnityEngine;
 
 namespace MARDEK.UI
 {
-    using Progress;
-    public class CharacterSelectable : SelectableWithCurrentSelected<CharacterSelectable>
-    {
-        [SerializeField] TextMeshProUGUI characterNameText;
-        [SerializeField] GameObject wrapper;
-          [SerializeField] PartySO party;
-        public Character Character
-        { 
-            get
-            {
-                var index = transform.GetSiblingIndex();
-                if (party is null || party.Count <= index)
-                    return null;
-                return party[index];
-            }
-        }
+	using Progress;
+	public class CharacterSelectable : SelectableWithCurrentSelected<CharacterSelectable>
+	{
+		[SerializeField] TextMeshProUGUI characterNameText;
+		[SerializeField] GameObject wrapper;
+		[SerializeField] PartySO party;
+		public Character Character
+		{
+			get
+			{
+				var index = transform.GetSiblingIndex();
+				if (party is null || party.Count <= index)
+					return null;
+				return party[index];
+			}
+		}
 
-        public override bool IsValid() => Character != null;
+		public override bool IsValid() => Character != null;
 
 
-        private void OnEnable()
-        {
-            if (IsValid())
-            {
-                if (wrapper)
-                    wrapper.SetActive(true);
-                if (characterNameText)
-                    characterNameText.text = Character.Profile.displayName;
-            }
-            else
-            {
-                if (wrapper)
-                    wrapper.SetActive(false);
-            }
-        }
-    }
+		private void OnEnable()
+		{
+			if (IsValid())
+			{
+				if (wrapper)
+					wrapper.SetActive(true);
+				if (characterNameText)
+					characterNameText.text = Character.Profile.displayName;
+			}
+			else
+			{
+				if (wrapper)
+					wrapper.SetActive(false);
+			}
+		}
+	}
 }

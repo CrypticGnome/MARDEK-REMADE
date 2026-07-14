@@ -1,109 +1,109 @@
-using UnityEngine;
 using MARDEK.Core;
+using UnityEngine;
 
 namespace MARDEK.Animation
 {
-    [RequireComponent(typeof(SpriteRenderer))]
-    public class SpriteAnimator : MonoBehaviour
-    {
-        public static SpriteAnimator PlayerSpriteAnimator { get; private set; }
-        [SerializeField] float animationSpeed = 1f;
-        [SerializeField] bool _isAnimating = false;
-        public SpriteAnimationClipList ClipList = null;
-        
-        public bool isAnimating { get { return _isAnimating; } private set { _isAnimating = value; } }
-        public bool currentClipLoops
-        {
-            get
-            {
-                if (currentClip == null)
-                    return false;
-                return currentClip.loop;
-            }
-        }
-        
-        SpriteAnimationClip currentClip = null;
-        [HideInInspector] [SerializeField] SpriteRenderer spriteRenderer = null;
-        float animationRatio = 0f;
+	[RequireComponent(typeof(SpriteRenderer))]
+	public class SpriteAnimator : MonoBehaviour
+	{
+		public static SpriteAnimator PlayerSpriteAnimator { get; private set; }
+		[SerializeField] float animationSpeed = 1f;
+		[SerializeField] bool _isAnimating = false;
+		public SpriteAnimationClipList ClipList = null;
 
-        public void SetAsPlayerAnimator()
-        {
-            PlayerSpriteAnimator = this;
-        }
+		public bool isAnimating { get { return _isAnimating; } private set { _isAnimating = value; } }
+		public bool currentClipLoops
+		{
+			get
+			{
+				if (currentClip == null)
+					return false;
+				return currentClip.loop;
+			}
+		}
 
-        private void OnValidate()
-        {
-            InitializeFields();
-        }
+		SpriteAnimationClip currentClip = null;
+		[HideInInspector][SerializeField] SpriteRenderer spriteRenderer = null;
+		float animationRatio = 0f;
 
-        private void Awake()
-        {
-            
-        }
+		public void SetAsPlayerAnimator()
+		{
+			PlayerSpriteAnimator = this;
+		}
 
-        void InitializeFields()
-        {
-            spriteRenderer = GetComponent<SpriteRenderer>();
-            currentClip = ClipList?.GetClipByIndex(0);
+		private void OnValidate()
+		{
+			InitializeFields();
+		}
 
-            if (currentClip != null && spriteRenderer.sprite == null)
-                    UpdateSprite(0);
-        }
-          private void Start()
-          {
-               if (currentClip is null && (currentClip = ClipList?.GetClipByIndex(0)) == null)
-               {
-                    Debug.LogWarning($"Null current clip on {name}");
-                    enabled = false;
-               }
-          }
-          private void Update()
-          {
-               if (!isAnimating) return;
-               
-               animationRatio += animationSpeed * Time.deltaTime;
-               bool endAnimation = !currentClip.loop && animationRatio > 1;
-               if (endAnimation)
-               {
-                   isAnimating = false;
-                   animationRatio = 0;
-               }
-               else
-               {
-                   UpdateSprite(animationRatio);
-                   if (animationRatio > 1)
-                       animationRatio = 0;
-               }
-          }
+		private void Awake()
+		{
 
-        void UpdateSprite(float _animationRatio)
-        {
-               spriteRenderer.sprite = currentClip.GetSprite(_animationRatio);
-        }
+		}
 
-        public void StopCurrentAnimation(float forceAnimationRatio)
-        {
-            StopCurrentAnimation();
-            animationRatio = forceAnimationRatio;
-            UpdateSprite(animationRatio);
-        }
+		void InitializeFields()
+		{
+			spriteRenderer = GetComponent<SpriteRenderer>();
+			currentClip = ClipList?.GetClipByIndex(0);
 
-        public void StopCurrentAnimation()
-        {
-            isAnimating = false;
-        }
+			if (currentClip != null && spriteRenderer.sprite == null)
+				UpdateSprite(0);
+		}
+		private void Start()
+		{
+			if (currentClip is null && (currentClip = ClipList?.GetClipByIndex(0)) == null)
+			{
+				Debug.LogWarning($"Null current clip on {name}");
+				enabled = false;
+			}
+		}
+		private void Update()
+		{
+			if (!isAnimating) return;
 
-        public void PlayClipByMoveDirectionReference(MoveDirection reference)
-        {
-            if(reference == null)
-            {
-                StopCurrentAnimation(1);
-                return;
-            }
-            SpriteAnimationClip nextClip = ClipList.GetClipByReference(reference);
-            currentClip = nextClip;
-            isAnimating = true;                    
-            animationRatio = 0;
-        }
-    }
+			animationRatio += animationSpeed * Time.deltaTime;
+			bool endAnimation = !currentClip.loop && animationRatio > 1;
+			if (endAnimation)
+			{
+				isAnimating = false;
+				animationRatio = 0;
+			}
+			else
+			{
+				UpdateSprite(animationRatio);
+				if (animationRatio > 1)
+					animationRatio = 0;
+			}
+		}
+
+		void UpdateSprite(float _animationRatio)
+		{
+			spriteRenderer.sprite = currentClip.GetSprite(_animationRatio);
+		}
+
+		public void StopCurrentAnimation(float forceAnimationRatio)
+		{
+			StopCurrentAnimation();
+			animationRatio = forceAnimationRatio;
+			UpdateSprite(animationRatio);
+		}
+
+		public void StopCurrentAnimation()
+		{
+			isAnimating = false;
+		}
+
+		public void PlayClipByMoveDirectionReference(MoveDirection reference)
+		{
+			if (reference == null)
+			{
+				StopCurrentAnimation(1);
+				return;
+			}
+			SpriteAnimationClip nextClip = ClipList.GetClipByReference(reference);
+			currentClip = nextClip;
+			isAnimating = true;
+			animationRatio = 0;
+		}
+	}
 }

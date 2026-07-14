@@ -1,22 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 
 namespace MARDEK.UI
 {
-    public class ItemNameHeader : MonoBehaviour
-    {
-        [SerializeField] TextMeshProUGUI textField;
+	public class ItemNameHeader : MonoBehaviour
+	{
+		[SerializeField] TextMeshProUGUI textField;
 
-        void Update()
-        {
-            var slot = SlotUI.selectedSlot;
-            if (slot != null && slot.item != null)
-                textField.text = $"{slot.item.displayName} x{slot.amount}";
-            else
-                textField.text = string.Empty;
-        }
-    }
+		void Update()
+		{
+			var slot = SlotUI.selectedSlot;
+			if (slot != null && slot.item != null)
+				textField.text = $"{slot.item.displayName} x{slot.amount}";
+			else
+				textField.text = string.Empty;
+		}
+	}
 }

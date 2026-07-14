@@ -1,29 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using MARDEK.Battle;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace MARDEK.UI
 {
-    public class SetCurrentCharacterInfo : MonoBehaviour
-    {
-        [SerializeField] Text nameLabel = null;
-        [SerializeField] Image elementIcon = null;
+	public class SetCurrentCharacterInfo : MonoBehaviour
+	{
+		[SerializeField] Text nameLabel = null;
+		[SerializeField] Image elementIcon = null;
 
-        private void OnEnable()
-        {
-            var character = BattleManager.characterActing;
-            if (character != null)
-            {
-                nameLabel.text = character.Profile.displayName;
-                    elementIcon.sprite = character.Profile.element.thickSprite;
-            }
-            else
-            {
-                nameLabel.text = " - ";
-                    elementIcon.sprite = null;
-            }
-        }
-    }
+		private void OnEnable()
+		{
+			var character = BattleManager.characterActing;
+			if (character != null)
+			{
+				nameLabel.text = character.Profile.displayName;
+				elementIcon.sprite = character.Profile.element.thickSprite;
+			}
+			else
+			{
+				nameLabel.text = " - ";
+				elementIcon.sprite = null;
+			}
+		}
+	}
 }

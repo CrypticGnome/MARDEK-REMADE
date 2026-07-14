@@ -1,25 +1,24 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using MARDEK.Core;
+using UnityEngine;
 
 namespace MARDEK.Animation
 {
-    [System.Serializable]
-    public class SpriteAnimationClip
-    {
-        public MoveDirection indexBySOReference = null;
-        public bool loop { get { return _loop; } }
-        [SerializeField] bool _loop = true;
-        [SerializeField] List<Sprite> spriteSequence = new List<Sprite>();
-        public int Length => spriteSequence.Count;
+	[System.Serializable]
+	public class SpriteAnimationClip
+	{
+		public MoveDirection indexBySOReference = null;
+		public bool loop { get { return _loop; } }
+		[SerializeField] bool _loop = true;
+		[SerializeField] List<Sprite> spriteSequence = new List<Sprite>();
+		public int Length => spriteSequence.Count;
 
-        public Sprite GetSprite(float animationRatio)
-        {
-            int index = Mathf.FloorToInt(spriteSequence.Count * animationRatio);
-               index = Mathf.Clamp(index, 0, spriteSequence.Count - 1);
-            return spriteSequence[index];
-        }
-        public Sprite GetSprite(int index) => spriteSequence[index];
-    }
+		public Sprite GetSprite(float animationRatio)
+		{
+			int index = Mathf.FloorToInt(spriteSequence.Count * animationRatio);
+			index = Mathf.Clamp(index, 0, spriteSequence.Count - 1);
+			return spriteSequence[index];
+		}
+		public Sprite GetSprite(int index) => spriteSequence[index];
+	}
 }

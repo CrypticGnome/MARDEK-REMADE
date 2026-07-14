@@ -3,5 +3,5 @@ using UnityEngine;
 
 public class ConditionComponent : MonoBehaviour
 {
-     [SerializeReference, SubclassSelector] public Condition Condition;
+	[SerializeReference, SubclassSelector] public Condition Condition;
 }

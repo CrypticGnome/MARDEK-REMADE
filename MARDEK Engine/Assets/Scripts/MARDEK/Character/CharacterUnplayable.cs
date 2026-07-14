@@ -1,20 +1,19 @@
-using MARDEK.CharacterSystem;
-using MARDEK.Inventory;
 using System;
+using MARDEK.Inventory;
 using UnityEngine;
 namespace MARDEK.CharacterSystem
 {
-     [CreateAssetMenu(fileName = "CharacterUnplayable", menuName = "Scriptable Objects/CharacterUnplayable")]
-     public class CharacterUnplayable : Character
-     {
-          public ItemDrop[] Drops;
+	[CreateAssetMenu(fileName = "CharacterUnplayable", menuName = "Scriptable Objects/CharacterUnplayable")]
+	public class CharacterUnplayable : Character
+	{
+		public ItemDrop[] Drops;
 
-          [Serializable]
-          public class ItemDrop
-          {
-               public Item Item;
-               public float Chance;
-          }
-     }
+		[Serializable]
+		public class ItemDrop
+		{
+			public Item Item;
+			public float Chance;
+		}
+	}
 
 }

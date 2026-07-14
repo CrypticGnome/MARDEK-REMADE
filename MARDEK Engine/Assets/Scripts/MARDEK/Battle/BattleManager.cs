@@ -1,299 +1,297 @@
-using MARDEK.CharacterSystem;
-using MARDEK.Stats;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using MARDEK.CharacterSystem;
 using UnityEngine;
 
 namespace MARDEK.Battle
 {
-    using Core;
-     using MARDEK.Skill;
-     using MARDEK.UI;
-     using Progress;
+	using MARDEK.Skill;
+	using MARDEK.UI;
+	using Progress;
 
 
-    public class BattleManager : MonoBehaviour
-    {
-          [SerializeField] PartySO playerParty;
-          [SerializeField] GameObject characterActionUI = null;
-          [SerializeField] List<GameObject> enemyPartyPositions = new();
-          [SerializeField] List<GameObject> playerPartyPositions = new();
-          [SerializeField] EncounterSet dummyEncounter;
-          [SerializeField] BattleCharacterPicker characterPicker;
-          [SerializeField] ActionDisplay actionDisplay;
-          public static Encounter Encounter;
-          public static EncounterSet encounter { private get; set; }
-          public static BattleCharacter characterActing { get; private set; }
-          public static BattleAction ActionToPerform;
-          static public List<BattleCharacter> EnemyBattleParty { get; private set; } = new();
-          static public List<BattleCharacter> PlayerBattleParty { get; private set; } = new();
-          public static BattleManager instance;
-          public delegate void TurnEnd();
-          public static event TurnEnd OnTurnEnd;
-          public delegate void TurnStart();
-          public static event TurnEnd OnTurnStart;
-          public BattleState state;
+	public class BattleManager : MonoBehaviour
+	{
+		[SerializeField] PartySO playerParty;
+		[SerializeField] GameObject characterActionUI = null;
+		[SerializeField] List<GameObject> enemyPartyPositions = new();
+		[SerializeField] List<GameObject> playerPartyPositions = new();
+		[SerializeField] EncounterSet dummyEncounter;
+		[SerializeField] BattleCharacterPicker characterPicker;
+		[SerializeField] ActionDisplay actionDisplay;
+		public static Encounter Encounter;
+		public static EncounterSet encounter { private get; set; }
+		public static BattleCharacter characterActing { get; private set; }
+		public static BattleAction ActionToPerform;
+		static public List<BattleCharacter> EnemyBattleParty { get; private set; } = new();
+		static public List<BattleCharacter> PlayerBattleParty { get; private set; } = new();
+		public static BattleManager instance;
+		public delegate void TurnEnd();
+		public static event TurnEnd OnTurnEnd;
+		public delegate void TurnStart();
+		public static event TurnEnd OnTurnStart;
+		public BattleState state;
 
 
-          private void Awake()
-          {
-               instance = this;
-               if (!encounter) encounter = dummyEncounter;
-               InstantiateEncounter();
-               state = BattleState.Idle;
-          }
-
-         
-          private void Start()
-          {
-               OnTurnEnd += WaitForTurn;
-               SetInitialACT();
-               OnTurnEnd?.Invoke();
-          }
-          private void OnDisable()
-          {
-               OnTurnEnd -= WaitForTurn;
-          }
-          void InstantiateEncounter()
-          {
-               List<Character> enemyCharacters = encounter.InstantiateEncounter(out Encounter);
-
-               EnemyBattleParty.Clear();
-               for (int i = 0; i < enemyCharacters.Count; i++)
-               {
-                    EnemyBattleCharacter enemyCharacter = new EnemyBattleCharacter(enemyCharacters[i], enemyPartyPositions[i].transform);
-                    EnemyBattleParty.Add(enemyCharacter);
-               }
-               PlayerBattleParty.Clear();
-               for (int i = 0; i < playerParty.Count; i++)
-               {
-                    HeroBattleCharacter playerCharacter = new HeroBattleCharacter(playerParty[i], playerPartyPositions[i].transform);
-                    PlayerBattleParty.Add(playerCharacter);
-               }
-          }
-          void SetInitialACT()
-          {
-               // Maybe have it so that if you press interact quickly your party gets an initial act bonus?
-               // Sort of like how currently if you press x currentyl you can just skip the battle
-               bool partySurprised = false;
-               List<float> timesToTurn = new List<float>();
-               List<BattleCharacter> allCharacters = new List<BattleCharacter>();
-               allCharacters.AddRange(EnemyBattleParty);
-               allCharacters.AddRange(PlayerBattleParty);
-
-               foreach (BattleCharacter character in EnemyBattleParty)
-                    AddCharacterTime(character, !partySurprised);
-               foreach (BattleCharacter character in PlayerBattleParty)
-                    AddCharacterTime(character, partySurprised);
-
-               float minTime = timesToTurn.Min();
-               int listIndex = 0;
-               GetTempACT(out List<float> tempACT);
-               NormalizeBottomToZero(tempACT);
-               CompressListToCap(tempACT); 
-
-               listIndex = 0;
-               allCharacters.ForEach(character => character.ACT = tempACT[listIndex++]);
+		private void Awake()
+		{
+			instance = this;
+			if (!encounter) encounter = dummyEncounter;
+			InstantiateEncounter();
+			state = BattleState.Idle;
+		}
 
 
-               void AddCharacterTime (BattleCharacter character, bool surprised)
-               {
-                    float speedMultiplier = surprised ? 1 : 2;
-                    speedMultiplier *= Random.Range(0.9f, 1.1f);
-                    float timeToTurn = TurnManager.TimeToTurn(character, speedMultiplier);
-                    timesToTurn.Add(timeToTurn);
-               }
-               void GetTempACT(out List<float> tempACT)
-               {
-                    tempACT = new List<float>();
+		private void Start()
+		{
+			OnTurnEnd += WaitForTurn;
+			SetInitialACT();
+			OnTurnEnd?.Invoke();
+		}
+		private void OnDisable()
+		{
+			OnTurnEnd -= WaitForTurn;
+		}
+		void InstantiateEncounter()
+		{
+			List<Character> enemyCharacters = encounter.InstantiateEncounter(out Encounter);
 
-                    foreach (BattleCharacter battleCharacter in allCharacters)
-                    {
-                         float timeToTurn = timesToTurn[listIndex++];
-                         float temp_act = minTime / timeToTurn * TurnManager.ActResolution;
-                         temp_act += Random.Range(-167, 167);
-                         tempACT.Add(temp_act);
-                    }
-               }
-               void NormalizeBottomToZero(List<float> input)
-               {
-                    float minValue = input.Min();
+			EnemyBattleParty.Clear();
+			for (int i = 0; i < enemyCharacters.Count; i++)
+			{
+				EnemyBattleCharacter enemyCharacter = new EnemyBattleCharacter(enemyCharacters[i], enemyPartyPositions[i].transform);
+				EnemyBattleParty.Add(enemyCharacter);
+			}
+			PlayerBattleParty.Clear();
+			for (int i = 0; i < playerParty.Count; i++)
+			{
+				HeroBattleCharacter playerCharacter = new HeroBattleCharacter(playerParty[i], playerPartyPositions[i].transform);
+				PlayerBattleParty.Add(playerCharacter);
+			}
+		}
+		void SetInitialACT()
+		{
+			// Maybe have it so that if you press interact quickly your party gets an initial act bonus?
+			// Sort of like how currently if you press x currentyl you can just skip the battle
+			bool partySurprised = false;
+			List<float> timesToTurn = new List<float>();
+			List<BattleCharacter> allCharacters = new List<BattleCharacter>();
+			allCharacters.AddRange(EnemyBattleParty);
+			allCharacters.AddRange(PlayerBattleParty);
 
-                    for (int i = 0; i < allCharacters.Count; i++) tempACT[i] -= minValue;
-               }
-               void CompressListToCap(List<float> input)
-               {
-                    float maxValue = input.Max();
-                    float compressionFactor = TurnManager.ActResolution / maxValue;
+			foreach (BattleCharacter character in EnemyBattleParty)
+				AddCharacterTime(character, !partySurprised);
+			foreach (BattleCharacter character in PlayerBattleParty)
+				AddCharacterTime(character, partySurprised);
 
-                    for (int i = 0; i < allCharacters.Count; i++) tempACT[i] *= compressionFactor;
-               }
-          }
+			float minTime = timesToTurn.Min();
+			int listIndex = 0;
+			GetTempACT(out List<float> tempACT);
+			NormalizeBottomToZero(tempACT);
+			CompressListToCap(tempACT);
 
-          void WaitForTurn()
-          {
-               StartCoroutine(WaitForNextTurn());
-               IEnumerator WaitForNextTurn()
-               {
-                    TurnManager.GetTimeToNextTurn(out float timeToTurn, out BattleCharacter nextActor);
-                    TurnManager.GetCharacterACTNextTurn(timeToTurn, out List<float> startACT, out List<float> finalACT);
-                    IEnumerator lerpCharacterACT = TurnManager.LerpCharacterACTs(timeToTurn, startACT, finalACT);
-                    yield return StartCoroutine(lerpCharacterACT);
-                    if (instance.state == BattleState.Concluding)
-                    {
-                         yield break;
-                    }
-                    
+			listIndex = 0;
+			allCharacters.ForEach(character => character.ACT = tempACT[listIndex++]);
 
-                    characterActing = nextActor;
-                    characterActing.ACT -= TurnManager.ActResolution;
 
-                   
-                    OnTurnStart?.Invoke();
-                    if (characterActing.stunned)
-                    {
-                         Debug.Log($"{characterActing.Name} is stunned");
-                         characterActing.TickStatusEffects();
-                         instance.EndTurn();
-                         yield break;
-                    }
+			void AddCharacterTime(BattleCharacter character, bool surprised)
+			{
+				float speedMultiplier = surprised ? 1 : 2;
+				speedMultiplier *= Random.Range(0.9f, 1.1f);
+				float timeToTurn = TurnManager.TimeToTurn(character, speedMultiplier);
+				timesToTurn.Add(timeToTurn);
+			}
+			void GetTempACT(out List<float> tempACT)
+			{
+				tempACT = new List<float>();
 
-                    if (EnemyBattleParty.Contains(characterActing))
-                    {
-                         PerformEnemyMove();
-                         yield break;
-                    }
+				foreach (BattleCharacter battleCharacter in allCharacters)
+				{
+					float timeToTurn = timesToTurn[listIndex++];
+					float temp_act = minTime / timeToTurn * TurnManager.ActResolution;
+					temp_act += Random.Range(-167, 167);
+					tempACT.Add(temp_act);
+				}
+			}
+			void NormalizeBottomToZero(List<float> input)
+			{
+				float minValue = input.Min();
 
-                    characterActionUI.SetActive(true);
-                    state = BattleState.ChoosingAction;
-                    characterActing.TickStatusEffects();
-               }
+				for (int i = 0; i < allCharacters.Count; i++) tempACT[i] -= minValue;
+			}
+			void CompressListToCap(List<float> input)
+			{
+				float maxValue = input.Max();
+				float compressionFactor = TurnManager.ActResolution / maxValue;
 
-               void PerformEnemyMove()
-               {
-                    characterActing.TickStatusEffects();
+				for (int i = 0; i < allCharacters.Count; i++) tempACT[i] *= compressionFactor;
+			}
+		}
 
-                    ActionSkillset enemyMoveset = characterActing.Skillset;
-                    if (enemyMoveset is null)
-                    {
-                         Debug.LogWarning("Enemy moveset is null");
-                         characterActing = null;
-                         instance.characterActionUI.SetActive(false);
-                         return;
-                    }
-                    ActionSkill skill = enemyMoveset.Skills[Random.Range(0, enemyMoveset.Skills.Count)];
-                    Debug.Log($"{characterActing.Name} uses {skill.DisplayName}");
-                    PerformActionToTarget(skill, PlayerBattleParty[Random.Range(0, playerParty.Count)]);
-                    instance.actionDisplay.DisplayAction(skill);
-               }
-          }
-          public static void PerformActionToTarget(IBattleAction action, BattleCharacter target)
-          {
-               if (action is null)
-               {
-                    Debug.LogAssertion("Attempted action was null");
-                    instance.EndTurn();
-                    return;
-               }
+		void WaitForTurn()
+		{
+			StartCoroutine(WaitForNextTurn());
+			IEnumerator WaitForNextTurn()
+			{
+				TurnManager.GetTimeToNextTurn(out float timeToTurn, out BattleCharacter nextActor);
+				TurnManager.GetCharacterACTNextTurn(timeToTurn, out List<float> startACT, out List<float> finalACT);
+				IEnumerator lerpCharacterACT = TurnManager.LerpCharacterACTs(timeToTurn, startACT, finalACT);
+				yield return StartCoroutine(lerpCharacterACT);
+				if (instance.state == BattleState.Concluding)
+				{
+					yield break;
+				}
 
-               instance.state = BattleState.ActionPerforming;
-               var attacker = characterActing;
-               instance.StartCoroutine(PlayAttack());
 
-               IEnumerator PlayAttack()
-               {
-                    var attackerModel = attacker.battleModel;
-                    var targetModel = target.battleModel;
+				characterActing = nextActor;
+				characterActing.ACT -= TurnManager.ActResolution;
 
-                    void ApplyAction() => action.TryPerformAction(attacker, target);
 
-                    if (action is ActionSkill skill && attackerModel != null)
-                         yield return attackerModel.PlayAction(skill, targetModel, ApplyAction);
-                    else
-                    {
-                         ApplyAction();
-                         yield return new WaitForSeconds(1.5f);
-                    }
-                    instance.EndTurn();
-               }
-          }
+				OnTurnStart?.Invoke();
+				if (characterActing.stunned)
+				{
+					Debug.Log($"{characterActing.Name} is stunned");
+					characterActing.TickStatusEffects();
+					instance.EndTurn();
+					yield break;
+				}
 
-          void EndTurn() => StartCoroutine(EndTurnRoutine());
+				if (EnemyBattleParty.Contains(characterActing))
+				{
+					PerformEnemyMove();
+					yield break;
+				}
 
-          IEnumerator EndTurnRoutine()
-          {
-               var deadEnemies = EnemyBattleParty.Where(enemy => enemy.CurrentHP <= 0).ToList();
-               foreach (var enemy in deadEnemies)
-                    EnemyBattleParty.Remove(enemy);
+				characterActionUI.SetActive(true);
+				state = BattleState.ChoosingAction;
+				characterActing.TickStatusEffects();
+			}
 
-               var deathRoutines = deadEnemies.Select(enemy => StartCoroutine(PlayDeathThenDestroy(enemy))).ToList();
-               foreach (var deathRoutine in deathRoutines)
-                    yield return deathRoutine;
+			void PerformEnemyMove()
+			{
+				characterActing.TickStatusEffects();
 
-               for (int i = PlayerBattleParty.Count - 1; i >= 0; i--)
-               {
-                    BattleCharacter hero = PlayerBattleParty[i];
-                    int health = hero.CurrentHP;
-                    if (health <= 0)
-                    {
-                         //die
-                    }
-               }
-               characterActing = null;
-               instance.state = BattleState.Idle;
-               OnTurnEnd?.Invoke();
-               instance.characterActionUI.SetActive(false);
-               instance.CheckBattleEnd();
-          }
+				ActionSkillset enemyMoveset = characterActing.Skillset;
+				if (enemyMoveset is null)
+				{
+					Debug.LogWarning("Enemy moveset is null");
+					characterActing = null;
+					instance.characterActionUI.SetActive(false);
+					return;
+				}
+				ActionSkill skill = enemyMoveset.Skills[Random.Range(0, enemyMoveset.Skills.Count)];
+				Debug.Log($"{characterActing.Name} uses {skill.DisplayName}");
+				PerformActionToTarget(skill, PlayerBattleParty[Random.Range(0, playerParty.Count)]);
+				instance.actionDisplay.DisplayAction(skill);
+			}
+		}
+		public static void PerformActionToTarget(IBattleAction action, BattleCharacter target)
+		{
+			if (action is null)
+			{
+				Debug.LogAssertion("Attempted action was null");
+				instance.EndTurn();
+				return;
+			}
 
-          IEnumerator PlayDeathThenDestroy(BattleCharacter enemy)
-          {
-               yield return enemy.battleModel.PlayDeathSequence();
-               Destroy(enemy.battleModel.gameObject);
-          }
-          public void SkipCurrentCharacterTurn() => EndTurn();
-    
-          void CheckBattleEnd()
-          {
-               bool defeat = PlayerBattleParty.Count == 0;
-               instance.characterActionUI.SetActive(false);
-               if (defeat)
-               {
-                    print("defeat!!");
-                    Debug.LogAssertion("Defeat not implemented yet");
-                    instance.state = BattleState.Concluding;
-               }
-               var victory = EnemyBattleParty.Count == 0;
-               if (victory)
-               {
-                    instance.state = BattleState.Concluding;
-                    StartCoroutine(Victory());
-               }
-          }
+			instance.state = BattleState.ActionPerforming;
+			var attacker = characterActing;
+			instance.StartCoroutine(PlayAttack());
 
-          IEnumerator Victory()
-          {
-               print("victory!!");
-               yield return new WaitForSeconds(1);
-               BattleUIManager.Instance.OnVictory();
+			IEnumerator PlayAttack()
+			{
+				var attackerModel = attacker.battleModel;
+				var targetModel = target.battleModel;
 
-               for (int i = 0; i < playerParty.Count; i++)
-               {
-                    if (playerParty[i] == null) continue;
+				void ApplyAction() => action.TryPerformAction(attacker, target);
 
-                    playerParty[i].CurrentHP = PlayerBattleParty[i].CurrentHP;
-                    playerParty[i].CurrentMP = PlayerBattleParty[i].CurrentMP;
-               }
-               instance.enabled = false;
-          }
+				if (action is ActionSkill skill && attackerModel != null)
+					yield return attackerModel.PlayAction(skill, targetModel, ApplyAction);
+				else
+				{
+					ApplyAction();
+					yield return new WaitForSeconds(1.5f);
+				}
+				instance.EndTurn();
+			}
+		}
 
-          public enum BattleState
-          {
-               Idle,
-               ChoosingAction,
-               ActionPerforming,
-               Concluding
-          }
-    }
+		void EndTurn() => StartCoroutine(EndTurnRoutine());
+
+		IEnumerator EndTurnRoutine()
+		{
+			var deadEnemies = EnemyBattleParty.Where(enemy => enemy.CurrentHP <= 0).ToList();
+			foreach (var enemy in deadEnemies)
+				EnemyBattleParty.Remove(enemy);
+
+			var deathRoutines = deadEnemies.Select(enemy => StartCoroutine(PlayDeathThenDestroy(enemy))).ToList();
+			foreach (var deathRoutine in deathRoutines)
+				yield return deathRoutine;
+
+			for (int i = PlayerBattleParty.Count - 1; i >= 0; i--)
+			{
+				BattleCharacter hero = PlayerBattleParty[i];
+				int health = hero.CurrentHP;
+				if (health <= 0)
+				{
+					//die
+				}
+			}
+			characterActing = null;
+			instance.state = BattleState.Idle;
+			OnTurnEnd?.Invoke();
+			instance.characterActionUI.SetActive(false);
+			instance.CheckBattleEnd();
+		}
+
+		IEnumerator PlayDeathThenDestroy(BattleCharacter enemy)
+		{
+			yield return enemy.battleModel.PlayDeathSequence();
+			Destroy(enemy.battleModel.gameObject);
+		}
+		public void SkipCurrentCharacterTurn() => EndTurn();
+
+		void CheckBattleEnd()
+		{
+			bool defeat = PlayerBattleParty.Count == 0;
+			instance.characterActionUI.SetActive(false);
+			if (defeat)
+			{
+				print("defeat!!");
+				Debug.LogAssertion("Defeat not implemented yet");
+				instance.state = BattleState.Concluding;
+			}
+			var victory = EnemyBattleParty.Count == 0;
+			if (victory)
+			{
+				instance.state = BattleState.Concluding;
+				StartCoroutine(Victory());
+			}
+		}
+
+		IEnumerator Victory()
+		{
+			print("victory!!");
+			yield return new WaitForSeconds(1);
+			BattleUIManager.Instance.OnVictory();
+
+			for (int i = 0; i < playerParty.Count; i++)
+			{
+				if (playerParty[i] == null) continue;
+
+				playerParty[i].CurrentHP = PlayerBattleParty[i].CurrentHP;
+				playerParty[i].CurrentMP = PlayerBattleParty[i].CurrentMP;
+			}
+			instance.enabled = false;
+		}
+
+		public enum BattleState
+		{
+			Idle,
+			ChoosingAction,
+			ActionPerforming,
+			Concluding
+		}
+	}
 }

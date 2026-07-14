@@ -1,14 +1,13 @@
-using MARDEK.Save;
 using System;
-using UnityEngine;
+using MARDEK.Save;
 
 namespace MARDEK.Core.LevelDesign
 {
-     [Serializable]
-     public class LocalBoolCondition : Condition
-     {
-          public override bool Value => BoolCondition.Value;
+	[Serializable]
+	public class LocalBoolCondition : Condition
+	{
+		public override bool Value => BoolCondition.Value;
 
-          public BoolComponent BoolCondition;
-     }
+		public BoolComponent BoolCondition;
+	}
 }
