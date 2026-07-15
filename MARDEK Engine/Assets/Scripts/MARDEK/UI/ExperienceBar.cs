@@ -1,13 +1,13 @@
 using MARDEK.Battle;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace MARDEK.UI
 {
 	public class ExperienceBar : MonoBehaviour
 	{
 		[SerializeField] RectTransform barTransform;
-		[SerializeField] Text statText;
+		[SerializeField] TextMeshProUGUI statText;
 		HeroBattleCharacter character;
 
 		public void SetCharacter(HeroBattleCharacter character)

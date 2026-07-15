@@ -252,6 +252,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1233,6 +1234,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1967,6 +1969,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2219,6 +2222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameLabel: {fileID: 844174297147681357}
+  elementIcon: {fileID: 0}
 --- !u!1 &4787788313630487132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,6 +2326,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2662,7 +2667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 8507430230280346930}
-  text: {fileID: 1527156458849526768}
+  text: {fileID: 0}
 --- !u!1 &5584827460595899563
 GameObject:
   m_ObjectHideFlags: 0
@@ -3194,6 +3199,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -4126,22 +4132,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 115916223587349836}
     m_Modifications:
-    - target: {fileID: 151348980287126760, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
-      value: 1801810542
-      objectReference: {fileID: 0}
-    - target: {fileID: 5599479190598351458, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
-      value: 1801810542
-      objectReference: {fileID: 0}
-    - target: {fileID: 5735960583853891291, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
-      propertyPath: battleManager
-      value: 
-      objectReference: {fileID: 330018440776529925}
-    - target: {fileID: 8391998146774409663, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
-      value: 1801810542
-      objectReference: {fileID: 0}
     - target: {fileID: 5278999910154709324, guid: 84f48fb905607ac48874616e34dd0dd8, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
@@ -4234,6 +4224,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayableCharacterUI (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 151348980287126760, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599479190598351458, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735960583853891291, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
+      propertyPath: battleManager
+      value: 
+      objectReference: {fileID: 330018440776529925}
+    - target: {fileID: 8391998146774409663, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4252,10 +4258,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 115916223587349836}
     m_Modifications:
-    - target: {fileID: 5278999910154709324, guid: 84f48fb905607ac48874616e34dd0dd8, type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6918295655985375097, guid: 84f48fb905607ac48874616e34dd0dd8, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4460,7 +4462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1054030374262003129, guid: 2be0193f34cad304b83630d43e8058c3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -49.999878
+      value: -49.999634
       objectReference: {fileID: 0}
     - target: {fileID: 1198929426848528517, guid: 2be0193f34cad304b83630d43e8058c3, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5096,7 +5098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8207907428439475526, guid: 2be0193f34cad304b83630d43e8058c3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -49.999878
+      value: -49.999634
       objectReference: {fileID: 0}
     - target: {fileID: 8301961251625398968, guid: 2be0193f34cad304b83630d43e8058c3, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5176,22 +5178,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 115916223587349836}
     m_Modifications:
-    - target: {fileID: 151348980287126760, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
-      value: 1801810542
-      objectReference: {fileID: 0}
-    - target: {fileID: 5599479190598351458, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
-      value: 1801810542
-      objectReference: {fileID: 0}
-    - target: {fileID: 5735960583853891291, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
-      propertyPath: battleManager
-      value: 
-      objectReference: {fileID: 330018440776529925}
-    - target: {fileID: 8391998146774409663, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
-      value: 1801810542
-      objectReference: {fileID: 0}
     - target: {fileID: 5278999910154709324, guid: 84f48fb905607ac48874616e34dd0dd8, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
@@ -5283,6 +5269,22 @@ PrefabInstance:
     - target: {fileID: 8139157006349132825, guid: 84f48fb905607ac48874616e34dd0dd8, type: 3}
       propertyPath: m_Name
       value: PlayableCharacterUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 151348980287126760, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599479190598351458, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735960583853891291, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
+      propertyPath: battleManager
+      value: 
+      objectReference: {fileID: 330018440776529925}
+    - target: {fileID: 8391998146774409663, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9269,10 +9271,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5975924055652956916}
     m_Modifications:
-    - target: {fileID: 5278999910154709324, guid: 72862a4cc3613124db49e2ba1ed4cebf, type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6918295655985375097, guid: 72862a4cc3613124db49e2ba1ed4cebf, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9812,6 +9810,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnDefeatUE:
+    m_PersistentCalls:
+      m_Calls: []
   characterPicker: {fileID: 0}
 --- !u!1001 &8948462898531763208
 PrefabInstance:
@@ -10097,22 +10098,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 115916223587349836}
     m_Modifications:
-    - target: {fileID: 151348980287126760, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
-      value: 1801810542
-      objectReference: {fileID: 0}
-    - target: {fileID: 5599479190598351458, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
-      value: 1801810542
-      objectReference: {fileID: 0}
-    - target: {fileID: 5735960583853891291, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
-      propertyPath: battleManager
-      value: 
-      objectReference: {fileID: 330018440776529925}
-    - target: {fileID: 8391998146774409663, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
-      value: 1801810542
-      objectReference: {fileID: 0}
     - target: {fileID: 5278999910154709324, guid: 84f48fb905607ac48874616e34dd0dd8, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
@@ -10204,6 +10189,22 @@ PrefabInstance:
     - target: {fileID: 8139157006349132825, guid: 84f48fb905607ac48874616e34dd0dd8, type: 3}
       propertyPath: m_Name
       value: PlayableCharacterUI (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 151348980287126760, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599479190598351458, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735960583853891291, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
+      propertyPath: battleManager
+      value: 
+      objectReference: {fileID: 330018440776529925}
+    - target: {fileID: 8391998146774409663, guid: 5beaf7fdbf4fefb479c4b306a698e11c, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

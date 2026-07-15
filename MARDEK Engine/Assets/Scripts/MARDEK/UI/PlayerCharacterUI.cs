@@ -1,6 +1,7 @@
 using MARDEK.Animation;
 using MARDEK.Battle;
 using MARDEK.UI;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -11,7 +12,7 @@ public class PlayerCharacterUI : MonoBehaviour, IPointerClickHandler
 	[SerializeField] GameObject basePanel;
 	[SerializeField] Image elementImage;
 	[SerializeField] UISpriteAnimator characterAnimator;
-	[SerializeField] Text characterName;
+	[SerializeField] TextMeshProUGUI characterName;
 	[SerializeField] HealthBar healthBar;
 	[SerializeField] ManaBar manaBar;
 	[SerializeField] ExperienceBar expBar;

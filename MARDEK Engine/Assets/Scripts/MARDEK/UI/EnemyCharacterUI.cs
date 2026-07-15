@@ -1,18 +1,19 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using MARDEK.Battle;
+using TMPro;
 
 namespace MARDEK.UI
 {
-	using Battle;
 	public class EnemyCharacterUI : MonoBehaviour, IPointerClickHandler
 	{
 		public BattleCharacter character { get; private set; }
 		[SerializeField] GameObject basePanel;
 		[SerializeField] EnemyHealthBar healthBar;
-		[SerializeField] Text characterName;
+		[SerializeField] TextMeshProUGUI characterName;
 		[SerializeField] Image elementImage;
-		[SerializeField] Text levelText;
+		[SerializeField] TextMeshProUGUI levelText;
 
 		private void Start()
 		{
@@ -25,7 +26,7 @@ namespace MARDEK.UI
 			healthBar.SetCharacter(character);
 			characterName.text = character.Name;
 			elementImage.sprite = character.Profile.element.thickSprite;
-			levelText.text = "Lv " + character.Level.ToString();
+			levelText.text = $"Lv {character.Level}";
 		}
 
 		void UpdateCharacter()

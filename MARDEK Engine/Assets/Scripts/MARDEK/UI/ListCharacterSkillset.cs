@@ -52,6 +52,12 @@ namespace MARDEK.UI
 
 			foreach (var skill in skillsetToShow.Skills)
 			{
+				if (skill is null)
+				{
+					Debug.LogWarning($"{skillsetToShow.name} has an unassigned skill slot", skillsetToShow);
+					continue;
+				}
+
 				BattleActionSlot slot = new BattleActionSlot(skill);
 
 				SetNextSlot(slot);

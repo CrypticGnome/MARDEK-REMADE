@@ -32,7 +32,8 @@ namespace MARDEK.Battle
 		public static event TurnEnd OnTurnEnd;
 		public delegate void TurnStart();
 		public static event TurnEnd OnTurnStart;
-		public BattleState state;
+		readonly BattleStateMachine stateMachine = new();
+		public BattleState state => stateMachine.CurrentState;
 
 
 		private void Awake()
@@ -40,7 +41,6 @@ namespace MARDEK.Battle
 			instance = this;
 			if (!encounter) encounter = dummyEncounter;
 			InstantiateEncounter();
-			state = BattleState.Idle;
 		}
 
 
@@ -70,6 +70,10 @@ namespace MARDEK.Battle
 				HeroBattleCharacter playerCharacter = new HeroBattleCharacter(playerParty[i], playerPartyPositions[i].transform);
 				PlayerBattleParty.Add(playerCharacter);
 			}
+
+			foreach (BattleCharacter enemy in EnemyBattleParty)
+				if (enemy is EnemyBattleCharacter enemyCharacter)
+					enemyCharacter.ChooseNextAction(PlayerBattleParty);
 		}
 		void SetInitialACT()
 		{
@@ -165,7 +169,7 @@ namespace MARDEK.Battle
 				}
 
 				characterActionUI.SetActive(true);
-				state = BattleState.ChoosingAction;
+				stateMachine.TrySetState(BattleState.ChoosingAction);
 				characterActing.TickStatusEffects();
 			}
 
@@ -173,27 +177,35 @@ namespace MARDEK.Battle
 			{
 				characterActing.TickStatusEffects();
 
-				ActionSkillset enemyMoveset = characterActing.Skillset;
-				if (enemyMoveset is null || enemyMoveset.Skills.Count == 0)
+				if (characterActing is not EnemyBattleCharacter enemyCharacter)
 				{
-					Debug.LogWarning($"{characterActing.Name}'s moveset is null or empty");
+					Debug.LogError($"{characterActing.Name} is acting as an enemy but isn't an EnemyBattleCharacter");
 					characterActing = null;
 					instance.characterActionUI.SetActive(false);
 					instance.EndTurn();
 					return;
 				}
-				ActionSkill skill = enemyMoveset.Skills[Random.Range(0, enemyMoveset.Skills.Count)];
-				if (skill is null)
+
+				ActionSkill skill = enemyCharacter.NextAction;
+				// The queued target may have died since it was chosen, so re-pick if needed.
+				BattleCharacter target = enemyCharacter.NextTarget != null && enemyCharacter.NextTarget.CurrentHP > 0
+					? enemyCharacter.NextTarget
+					: PlayerBattleParty.Where(hero => hero.CurrentHP > 0).OrderBy(_ => Random.value).FirstOrDefault();
+
+				if (skill is null || target is null)
 				{
-					Debug.LogError($"{characterActing.Name}'s moveset '{enemyMoveset.name}' has an unassigned skill slot", enemyMoveset);
 					characterActing = null;
 					instance.characterActionUI.SetActive(false);
 					instance.EndTurn();
 					return;
 				}
+
 				Debug.Log($"{characterActing.Name} uses {skill.DisplayName}");
-				PerformActionToTarget(skill, PlayerBattleParty[Random.Range(0, playerParty.Count)]);
+				PerformActionToTarget(skill, target);
 				instance.actionDisplay.DisplayAction(skill);
+
+				// Immediately queue up this enemy's following attack so one is always ready to show ahead of time.
+				enemyCharacter.ChooseNextAction(PlayerBattleParty);
 			}
 		}
 		public static void PerformActionToTarget(IBattleAction action, BattleCharacter target)
@@ -205,7 +217,7 @@ namespace MARDEK.Battle
 				return;
 			}
 
-			instance.state = BattleState.ActionPerforming;
+			instance.stateMachine.TrySetState(BattleState.ActionPerforming);
 			var attacker = characterActing;
 			instance.StartCoroutine(PlayAttack());
 
@@ -249,7 +261,7 @@ namespace MARDEK.Battle
 				}
 			}
 			characterActing = null;
-			instance.state = BattleState.Idle;
+			instance.stateMachine.TrySetState(BattleState.Idle);
 			OnTurnEnd?.Invoke();
 			instance.characterActionUI.SetActive(false);
 			instance.CheckBattleEnd();
@@ -270,13 +282,13 @@ namespace MARDEK.Battle
 			instance.characterActionUI.SetActive(false);
 			if (defeat)
 			{
-				instance.state = BattleState.Concluding;
+				instance.stateMachine.TrySetState(BattleState.Concluding);
 				StartCoroutine(Defeat());
 			}
 			var victory = EnemyBattleParty.Count == 0;
 			if (victory)
 			{
-				instance.state = BattleState.Concluding;
+				instance.stateMachine.TrySetState(BattleState.Concluding);
 				StartCoroutine(Victory());
 			}
 		}

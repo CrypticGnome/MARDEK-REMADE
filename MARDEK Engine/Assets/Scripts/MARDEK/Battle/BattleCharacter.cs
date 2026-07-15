@@ -6,7 +6,7 @@ namespace MARDEK.Battle
 	using MARDEK.Animation;
 	using MARDEK.Stats;
 
-	public abstract class BattleCharacter : IActionStats
+	public abstract class BattleCharacter
 	{
 		public CharacterProfile Profile { get; protected set; }
 		public BattleModelComponent battleModel = null;

@@ -6,7 +6,7 @@ High-level architecture of MARDEK Engine's turn-based battle system. This is a b
 
 Battles are driven by a central state machine, **`BattleManager`** (`Scripts/MARDEK/Battle/BattleManager.cs`), which cycles through states: `Idle → ChoosingAction → ActionPerforming → Concluding`. On start it spins up an `Encounter`, builds `HeroBattleParty`/`EnemyBattleParty` from the active roster, and hands turn order over to the **`TurnManager`**.
 
-Turn order uses an **ATB (Active Time Battle) system**: each combatant accumulates an `ACT` meter (0–1000) at a rate based on their Agility stat. Whoever fills the meter first acts next. Player turns wait for input through the action UI; enemy turns currently pick a random skill (real enemy AI is a stubbed/unimplemented placeholder).
+Turn order uses an **ATB (Active Time Battle) system**: each combatant accumulates an `ACT` meter (0–1000) at a rate based on their Agility stat. Whoever fills the meter first acts next. Player turns wait for input through the action UI; enemies act out a skill/target chosen ahead of time (see Enemy actions below) — the choice itself is still random (real enemy AI is a stubbed/unimplemented placeholder).
 
 Performing an action flows: **UI selection → `IBattleAction.TryPerformAction` → battle model animation (melee/cast) → effect resolution → turn cleanup**, which removes defeated combatants and checks for battle end.
 
@@ -64,7 +64,9 @@ Targeting is handled entirely in the UI layer, not in the action data. `BattleCh
 
 ### Enemy actions
 
-Enemies use the **identical** pipeline — there's no separate resolution path. `PerformEnemyMove` (inside `BattleManager`'s turn loop) just substitutes random selection for player input: it picks a random `ActionSkill` from the acting enemy's skillset and a random hero target, then calls the same `PerformActionToTarget`. This is also where the earlier-noted "no real AI" gap lives — selection is uniform-random, not strategic.
+Enemies use the **identical** pipeline — there's no separate resolution path. `PerformEnemyMove` (inside `BattleManager`'s turn loop) just substitutes a pre-queued choice for player input, then calls the same `PerformActionToTarget`.
+
+Each `EnemyBattleCharacter` holds `NextAction`/`NextTarget`, populated by `ChooseNextAction` — currently a uniform-random pick of an `ActionSkill` from the enemy's skillset and a living hero target. This is also where the earlier-noted "no real AI" gap lives — selection is uniform-random, not strategic. What's changed is *when* the pick happens: every enemy is queued up once at battle start (`BattleManager.InstantiateEncounter`), and each enemy re-queues its *next* attack immediately after consuming the current one in `PerformEnemyMove` — so a living enemy always has a decided-but-not-yet-executed action, which a future UI can read and display before the enemy acts. If the queued target died in the meantime, `PerformEnemyMove` re-picks a living target at execution time rather than using the stale one.
 
 ### Turn economy
 
