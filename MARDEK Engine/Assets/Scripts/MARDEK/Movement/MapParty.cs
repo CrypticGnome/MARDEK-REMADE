@@ -13,7 +13,7 @@ namespace MARDEK.Movement
 		public static bool Loaded;
 		public static MapParty Instance;
 		static bool forceLoadOnNextAwake = false;
-		[SerializeField, FullSerializer.fsIgnore] List<GameObject> inMapCharacters = new List<GameObject>();
+		[SerializeField, Newtonsoft.Json.JsonIgnore] List<GameObject> inMapCharacters = new List<GameObject>();
 
 		[SerializeField] CharacterPositions positions;
 		[SerializeField] SpriteRenderer[] renderers;

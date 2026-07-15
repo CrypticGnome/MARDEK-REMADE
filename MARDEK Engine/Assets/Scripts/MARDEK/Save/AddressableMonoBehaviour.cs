@@ -6,7 +6,7 @@ namespace MARDEK.Save
 {
 	public class AddressableMonoBehaviour : MonoBehaviour, IAddressableGuid
 	{
-		[SerializeField, FullSerializer.fsIgnore] SaveOptions saveOptions;
+		[SerializeField, Newtonsoft.Json.JsonIgnore] SaveOptions saveOptions;
 		[Serializable]
 		class SaveOptions
 		{
@@ -15,7 +15,7 @@ namespace MARDEK.Save
 			public bool saveOnDisable = true;
 		}
 
-		[SerializeField, HideInInspector, FullSerializer.fsIgnore]
+		[SerializeField, HideInInspector, Newtonsoft.Json.JsonIgnore]
 		private byte[] serializedGuid;
 		Guid guid
 		{

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fumerat
   m_EditorClassIdentifier: 
   isRequired: 0
-  <Profile>k__BackingField: {fileID: 11400000, guid: b17cca557b885ec4c83aab59721f33f3, type: 2}
+  <Profile>k__BackingField: {fileID: 11400000, guid: 40964c6bd8e2a5142958d731bb948ccd, type: 2}
   <ItemsEquipped>k__BackingField:
     MainHand:
       currentItem: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
       canBeEmpty: 0
   <Inventory>k__BackingField:
     slots: []
-  <ActionSkillset>k__BackingField: {fileID: 11400000, guid: bdb91fdccc4422743ae6542c3e4eece4, type: 2}
+  <ActionSkillset>k__BackingField: {fileID: 11400000, guid: bf853ba2b8332e945863e7eb17bd16a7, type: 2}
   attack: 30
   defense: 0
   magicDefense: 0

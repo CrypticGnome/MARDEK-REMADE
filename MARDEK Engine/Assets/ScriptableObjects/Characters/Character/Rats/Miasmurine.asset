@@ -47,7 +47,7 @@ MonoBehaviour:
       canBeEmpty: 0
   <Inventory>k__BackingField:
     slots: []
-  <ActionSkillset>k__BackingField: {fileID: 11400000, guid: bdb91fdccc4422743ae6542c3e4eece4, type: 2}
+  <ActionSkillset>k__BackingField: {fileID: 11400000, guid: 520f206d0fbd97348892f4e3352adb2e, type: 2}
   attack: 30
   defense: 0
   magicDefense: 0
