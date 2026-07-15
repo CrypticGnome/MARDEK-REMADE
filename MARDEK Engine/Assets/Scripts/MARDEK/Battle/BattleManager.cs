@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using MARDEK.CharacterSystem;
+using MARDEK.Save;
 using UnityEngine;
 
 namespace MARDEK.Battle
@@ -173,14 +174,23 @@ namespace MARDEK.Battle
 				characterActing.TickStatusEffects();
 
 				ActionSkillset enemyMoveset = characterActing.Skillset;
-				if (enemyMoveset is null)
+				if (enemyMoveset is null || enemyMoveset.Skills.Count == 0)
 				{
-					Debug.LogWarning("Enemy moveset is null");
+					Debug.LogWarning($"{characterActing.Name}'s moveset is null or empty");
 					characterActing = null;
 					instance.characterActionUI.SetActive(false);
+					instance.EndTurn();
 					return;
 				}
 				ActionSkill skill = enemyMoveset.Skills[Random.Range(0, enemyMoveset.Skills.Count)];
+				if (skill is null)
+				{
+					Debug.LogError($"{characterActing.Name}'s moveset '{enemyMoveset.name}' has an unassigned skill slot", enemyMoveset);
+					characterActing = null;
+					instance.characterActionUI.SetActive(false);
+					instance.EndTurn();
+					return;
+				}
 				Debug.Log($"{characterActing.Name} uses {skill.DisplayName}");
 				PerformActionToTarget(skill, PlayerBattleParty[Random.Range(0, playerParty.Count)]);
 				instance.actionDisplay.DisplayAction(skill);
@@ -254,13 +264,14 @@ namespace MARDEK.Battle
 
 		void CheckBattleEnd()
 		{
-			bool defeat = PlayerBattleParty.Count == 0;
+			// heroes stay in PlayerBattleParty at 0 HP (unlike dead enemies, which are removed), so
+			// defeat is "everyone down" rather than an empty list
+			bool defeat = PlayerBattleParty.Count > 0 && PlayerBattleParty.All(hero => hero.CurrentHP <= 0);
 			instance.characterActionUI.SetActive(false);
 			if (defeat)
 			{
-				print("defeat!!");
-				Debug.LogAssertion("Defeat not implemented yet");
 				instance.state = BattleState.Concluding;
+				StartCoroutine(Defeat());
 			}
 			var victory = EnemyBattleParty.Count == 0;
 			if (victory)
@@ -268,6 +279,21 @@ namespace MARDEK.Battle
 				instance.state = BattleState.Concluding;
 				StartCoroutine(Victory());
 			}
+		}
+
+		IEnumerator Defeat()
+		{
+			print("defeat!!");
+			yield return new WaitForSeconds(1);
+			BattleUIManager.Instance.OnDefeat();
+
+			string lastSavedFile = PlayerPrefs.GetString("lastSavedFile", string.Empty);
+			if (string.IsNullOrEmpty(lastSavedFile))
+			{
+				Debug.LogWarning("Party was defeated but no save file exists to reload");
+				yield break;
+			}
+			SaveSystem.CallGameFileLoaderScene(lastSavedFile);
 		}
 
 		IEnumerator Victory()
