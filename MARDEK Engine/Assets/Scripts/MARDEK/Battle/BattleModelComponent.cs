@@ -34,17 +34,40 @@ namespace MARDEK.Battle
 		// Start is called once before the first execution of Update after the MonoBehaviour is created
 		void Start()
 		{
-			animation.clip = idle;
-			animation.Play(idle.name);
-			AnimationState state = animation[idle.name];
-			state.time = UnityEngine.Random.Range(0f, state.length);
-
-			animation.wrapMode = WrapMode.Loop;
+			if (TryPlayClip(idle))
+			{
+				animation.wrapMode = WrapMode.Loop;
+				AnimationState state = animation[idle.name];
+				state.time = UnityEngine.Random.Range(0f, state.length);
+			}
 
 			var layer = SortingLayer.NameToID($"BattleModel {(int)transform.position.z}");
 			foreach (var r in GetComponentsInChildren<SpriteRenderer>())
 				r.sortingLayerID = layer;
 		}
+
+		/// <summary>
+		/// Plays the given clip, logging (not throwing) if it wasn't assigned in the
+		/// inspector so a missing animation doesn't break the rest of the battle flow.
+		/// </summary>
+		bool TryPlayClip(AnimationClip clip)
+		{
+			try
+			{
+				animation.clip = clip;
+				animation.Play(clip.name);
+				return true;
+			}
+			catch (Exception e)
+			{
+				Debug.LogError($"{name}: BattleModelComponent tried to play an unassigned animation clip - {e.Message}", this);
+				return false;
+			}
+		}
+
+		// Falls back to 0 for an unassigned clip so waits based on clip length resolve
+		// immediately instead of throwing.
+		static float ClipLength(AnimationClip clip) => clip != null ? clip.length : 0f;
 
 		/// <summary>
 		/// Fired by an Animation Event calling OnDamagePoint(), placed on a strike/breath
@@ -62,8 +85,7 @@ namespace MARDEK.Battle
 				default:
 				case BattleAnimationType.Idle:
 				{
-					animation.clip = idle;
-					animation.Play(idle.name);
+					TryPlayClip(idle);
 					break;
 				}
 				case BattleAnimationType.MoveTo:
@@ -88,15 +110,13 @@ namespace MARDEK.Battle
 				}
 				case BattleAnimationType.Die:
 				{
-					animation.clip = die;
-					animation.Play(die.name);
+					TryPlayClip(die);
 					animation.wrapMode = WrapMode.Once;
 					break;
 				}
 				case BattleAnimationType.Dead:
 				{
-					animation.clip = dead;
-					animation.Play(dead.name);
+					TryPlayClip(dead);
 					animation.wrapMode = WrapMode.Loop;
 					break;
 				}
@@ -112,8 +132,7 @@ namespace MARDEK.Battle
 				}
 				case BattleAnimationType.Victory:
 				{
-					animation.clip = victory;
-					animation.Play(victory.name);
+					TryPlayClip(victory);
 					animation.wrapMode = WrapMode.Loop;
 					break;
 				}
@@ -121,11 +140,9 @@ namespace MARDEK.Battle
 
 			IEnumerator PlayClipAndReturnToIdle(AnimationClip clip)
 			{
-				animation.clip = clip;
-				animation.Play(clip.name);
-				yield return new WaitForSeconds(clip.length);
-				animation.clip = idle;
-				animation.Play(idle.name);
+				TryPlayClip(clip);
+				yield return new WaitForSeconds(ClipLength(clip));
+				TryPlayClip(idle);
 			}
 		}
 
@@ -147,17 +164,14 @@ namespace MARDEK.Battle
 			}
 
 			yield return MoveWithClip(moveto, idlePosition, attackPosition, moveToDuration);
-			animation.clip = strikeClip;
-			animation.Play(strikeClip.name);
-			yield return WaitForDamagePoint(strikeClip.length, onDamagePoint);
-			yield return MoveWithClip(jumpback, attackPosition, idlePosition, jumpback.length);
-			animation.clip = idle;
-			animation.Play(idle.name);
+			TryPlayClip(strikeClip);
+			yield return WaitForDamagePoint(ClipLength(strikeClip), onDamagePoint);
+			yield return MoveWithClip(jumpback, attackPosition, idlePosition, ClipLength(jumpback));
+			TryPlayClip(idle);
 
 			IEnumerator MoveWithClip(AnimationClip clip, Vector3 from, Vector3 to, float duration)
 			{
-				animation.clip = clip;
-				animation.Play(clip.name);
+				TryPlayClip(clip);
 				for (float t = 0; t < duration; t += Time.deltaTime)
 				{
 					transform.position = Vector3.Lerp(from, to, t / duration);
@@ -224,10 +238,9 @@ namespace MARDEK.Battle
 		/// </summary>
 		public IEnumerator PlayDeathSequence()
 		{
-			animation.clip = die;
-			animation.Play(die.name);
+			TryPlayClip(die);
 			animation.wrapMode = WrapMode.Once;
-			yield return new WaitForSeconds(die.length);
+			yield return new WaitForSeconds(ClipLength(die));
 		}
 
 	}

@@ -12,6 +12,7 @@ namespace MARDEK.UI
 		[SerializeField] GameObject CharacterInspectionCard;
 		[SerializeField] RectTransform actionPicker;
 		[SerializeField] UnityEvent OnVictoryUE;
+		[SerializeField] UnityEvent OnDefeatUE;
 		[SerializeField] BattleCharacterPicker characterPicker;
 		public BattleCharacter characterBeingInspected { get; private set; }
 
@@ -54,6 +55,10 @@ namespace MARDEK.UI
 		public void OnVictory()
 		{
 			OnVictoryUE.Invoke();
+		}
+		public void OnDefeat()
+		{
+			OnDefeatUE.Invoke();
 		}
 
 	}

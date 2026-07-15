@@ -1,6 +1,7 @@
 using System.Collections.Generic;
-using FullSerializer;
 using MARDEK.Core;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Guid = System.Guid;
 
 namespace MARDEK.Save
@@ -8,37 +9,24 @@ namespace MARDEK.Save
 	[System.Serializable]
 	public class SaveState
 	{
-		public Dictionary<Guid, AddresableSaveWrapper> addressableState = new Dictionary<Guid, AddresableSaveWrapper>();
-		public class AddresableSaveWrapper
-		{
-			public string jsonData = default;
-		}
+		public Dictionary<Guid, JObject> addressableState = new Dictionary<Guid, JObject>();
 
-		public void SaveObject(IAddressableGuid addressable, fsSerializer serializer)
+		public void SaveObject(IAddressableGuid addressable, JsonSerializer serializer)
 		{
 			Guid guid = addressable.GetGuid();
-			if (addressableState.ContainsKey(guid) == false)
-				addressableState.Add(guid, null);
-
-			serializer.TrySerialize(addressable.GetType(), addressable, out fsData data);
-			var json = fsJsonPrinter.CompressedJson(data);
-			var newWrapper = new AddresableSaveWrapper() { jsonData = json };
-			addressableState[guid] = newWrapper;
+			addressableState[guid] = JObject.FromObject(addressable, serializer);
 		}
-		public bool LoadObject(IAddressableGuid addressable, fsSerializer serializer)
+
+		public bool LoadObject(IAddressableGuid addressable, JsonSerializer serializer)
 		{
 			Guid guid = addressable.GetGuid();
-			if (addressableState.ContainsKey(guid))
-			{
-				// Addressable found, override object from json
-				addressableState.TryGetValue(guid, out AddresableSaveWrapper wrappedAddressable);
-				fsJsonParser.Parse(wrappedAddressable.jsonData, out fsData data);
-				var type = addressable.GetType();
-				var obj = addressable as object;
-				serializer.TryDeserialize(data, storageType: type, ref obj);
-				return true;
-			}
-			return false;
+			if (addressableState.TryGetValue(guid, out JObject data) == false || data == null)
+				return false;
+
+			// Addressable found, populate the live object from its saved data
+			using (JsonReader reader = data.CreateReader())
+				serializer.Populate(reader, addressable);
+			return true;
 		}
 	}
 }

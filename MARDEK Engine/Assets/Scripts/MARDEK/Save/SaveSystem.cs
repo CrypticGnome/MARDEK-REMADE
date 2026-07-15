@@ -1,9 +1,11 @@
 using System;
-using System.Text.RegularExpressions;
-using FullSerializer;
+using System.Collections.Generic;
 using MARDEK.Core;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Guid = System.Guid;
 
 #if UNITY_WEBGL && !UNITY_EDITOR
 using System.Runtime.InteropServices;
@@ -35,9 +37,16 @@ namespace MARDEK.Save
 				return path;
 			}
 		}
-		static bool formatSaveFiles = true;
-		const string formatterDataFieldName = "\"jsonData\": ";
-		static fsSerializer serializer = new fsSerializer();
+		static readonly JsonSerializerSettings serializerSettings = new JsonSerializerSettings
+		{
+			ContractResolver = new SaveContractResolver(),
+			Converters = { new GuidReferenceConverter() },
+			ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+			// replace collections/objects on load instead of merging into inspector defaults
+			ObjectCreationHandling = ObjectCreationHandling.Replace,
+			Formatting = Formatting.Indented,
+		};
+		static readonly JsonSerializer serializer = JsonSerializer.Create(serializerSettings);
 		public delegate void SaveCallback();
 		public static event SaveCallback OnBeforeSave = delegate { };
 
@@ -72,10 +81,7 @@ namespace MARDEK.Save
 			PlayerPrefs.SetString("lastSavedFile", fileName);
 
 			OnBeforeSave.Invoke();
-			serializer.TrySerialize(internalSaveState.addressableState, out fsData data);
-			string json = fsJsonPrinter.PrettyJson(data);
-			if (formatSaveFiles)
-				json = FormatSaveFile(json, true);
+			string json = JsonConvert.SerializeObject(internalSaveState.addressableState, serializerSettings);
 			string filePath = System.IO.Path.Combine(persistentPath, $"{fileName}.json");
 			System.IO.File.WriteAllText(filePath, json);
 
@@ -104,76 +110,10 @@ namespace MARDEK.Save
 
 			SaveState resultSaveState = new SaveState();
 			string json = System.IO.File.ReadAllText(filePath);
-			if (formatSaveFiles)
-				json = FormatSaveFile(json, false);
-			fsJsonParser.Parse(json, out fsData data);
-			serializer.TryDeserialize(data, ref resultSaveState.addressableState);
+			var addressableState = JsonConvert.DeserializeObject<Dictionary<Guid, JObject>>(json, serializerSettings);
+			if (addressableState != null)
+				resultSaveState.addressableState = addressableState;
 			return resultSaveState;
-		}
-
-		static string FormatSaveFile(string content, bool isSaving)
-		{
-			string result = default;
-			while (true)
-			{
-				var Separatorindex = content.IndexOf(formatterDataFieldName);
-				if (Separatorindex == -1)
-				{
-					result += content; // append the rest of the string
-					break;
-				}
-
-				string beforeSeparator = content.Substring(0, Separatorindex + formatterDataFieldName.Length);
-				result += beforeSeparator;
-
-				// get json object by outmost pair of balanced curly braces
-				if (isSaving) Separatorindex++; // skip first '\"'
-				string AfterSeparator = content.Substring(Separatorindex + formatterDataFieldName.Length);
-				ParseCurlyBraces(AfterSeparator, out int startIndex, out int endIndex);
-				string json = AfterSeparator.Substring(startIndex, endIndex - startIndex + 1);
-				if (isSaving)
-					result += Regex.Unescape(json); // remove escape characters
-				else
-					result += "\"" + json.Replace("\"", "\\\"") + "\""; // undo Regex.Unescape()
-
-				// update content for next iteration
-				if (isSaving) endIndex++; // skip last '\"'
-				content = AfterSeparator.Substring(endIndex + 1);
-			}
-			return result;
-		}
-		static void ParseCurlyBraces(string content, out int startIndex, out int endIndex)
-		{
-			startIndex = 0;
-			endIndex = content.Length - 1;
-			bool isInsideQuotes = false;
-			int curlyBracesDepth = 0;
-			for (int i = 0; i < content.Length; i++)
-			{
-				if (content[i] == '\"')
-				{
-					isInsideQuotes = !isInsideQuotes;
-					continue;
-				}
-				if (isInsideQuotes)
-					continue;
-
-				if (content[i] == '{')
-				{
-					if (curlyBracesDepth == 0)
-						startIndex = i;
-					curlyBracesDepth++;
-				}
-				else if (content[i] == '}')
-				{
-					curlyBracesDepth--;
-					if (curlyBracesDepth == 0)
-					{
-						endIndex = i;
-						break;
-					}
-				}
-			}
 		}
 	}
 }

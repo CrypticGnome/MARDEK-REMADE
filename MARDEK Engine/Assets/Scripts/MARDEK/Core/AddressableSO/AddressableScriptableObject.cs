@@ -1,11 +1,10 @@
 using System;
-using FullSerializer;
 using UnityEngine;
 
 namespace MARDEK.Core
 {
-	// Comment the following line  to make JSONReader.cs work:
-	[fsObject(Converter = typeof(GuidReferenceConverter))]
+	// Saved by GUID reference, not by value - see GuidReferenceConverter,
+	// registered in SaveSystem's serializer settings
 	public abstract class AddressableScriptableObject : ScriptableObject, IAddressableGuid
 	{
 		public Guid GetGuid()
