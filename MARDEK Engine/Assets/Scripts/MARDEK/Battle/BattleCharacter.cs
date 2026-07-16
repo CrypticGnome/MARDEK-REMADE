@@ -7,10 +7,12 @@ using UnityEngine;
 
 namespace MARDEK.Battle
 {
-	public abstract class BattleCharacter
+	// Lives on the root of a battle-model prefab; the visuals (Animation + sprites) live on
+	// a child, so hiding the model on death keeps this component and its state alive.
+	public abstract class BattleCharacter : MonoBehaviour
 	{
 		public CharacterProfile Profile { get; protected set; }
-		public BattleModelComponent battleModel = null;
+		public BattleModelAnimator battleModel = null;
 		public ActionSkillset Skillset { get; protected set; }
 		public string Name { get { return Profile.displayName; } }
 
@@ -48,8 +50,32 @@ namespace MARDEK.Battle
 		public StatusEffects StatusBuildup = new StatusEffects();
 		public bool stunned;
 
+		private void OnValidate()
+		{
+			if (battleModel == null)
+				battleModel = GetComponentInChildren<BattleModelAnimator>(true);
+		}
 
+		/// <summary>
+		/// Initialises this battle character from the persistent Character it represents.
+		/// Called by BattleManager right after the battle-model prefab is instantiated.
+		/// </summary>
+		public abstract void LoadCharacter(Character character);
 
+		// Setup shared by both LoadCharacter implementations: profile/level, model lookup,
+		// and a fresh VolatileStats copy so battle changes never write into the shared
+		// CharacterProfile asset.
+		protected void InitialiseFrom(Character character)
+		{
+			Profile = character.Profile;
+			Level = character.Level;
+			if (battleModel == null)
+				battleModel = GetComponentInChildren<BattleModelAnimator>(true);
+
+			VolatileStats = new CoreStats(BaseStats);
+			BaseStats.CalculateMaxValues(this);
+			VolatileStats.CalculateMaxValues(this);
+		}
 
 		public float ActBuildRate()
 		{
@@ -87,7 +113,9 @@ namespace MARDEK.Battle
 		// Falls back to a fixed wait when there's no battle model to animate against. If the
 		// target dies as a result, their death animation starts immediately rather than
 		// waiting for the end of the turn, and this waits for whichever finishes later - the
-		// attacker's action animation or the target's death animation.
+		// attacker's action animation or the target's death animation. The death routine runs
+		// on the target, which is safe because Die() only hides the visuals child - the
+		// target's own GameObject stays active.
 		public IEnumerator PerformAction(IBattleAction action, BattleCharacter target)
 		{
 			Coroutine deathRoutine = null;
@@ -96,11 +124,11 @@ namespace MARDEK.Battle
 			{
 				action.TryPerformAction(this, target);
 				if (target.IsDead)
-					deathRoutine = BattleManager.StartRoutine(target.Die());
+					deathRoutine = target.StartCoroutine(target.Die());
 			}
 
 			if (action is ActionSkill skill && battleModel != null)
-				yield return battleModel.PlayAction(skill, target.battleModel, ApplyAction);
+				yield return battleModel.PlayAction(skill.Action.ActionType, target.battleModel, ApplyAction);
 			else
 			{
 				ApplyAction();
@@ -152,7 +180,7 @@ namespace MARDEK.Battle
 		// What happens when this character's HP hits zero. No-op by default - heroes stay
 		// downed in the party rather than being removed (see CheckBattleEnd), and hero death
 		// handling isn't implemented yet (see BattleSystem.md's Notable Gaps). EnemyBattleCharacter
-		// overrides this to play its death animation and destroy the model.
+		// overrides this to play its death animation and hide the model.
 		public virtual IEnumerator Die()
 		{
 			yield break;

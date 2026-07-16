@@ -18,7 +18,9 @@ namespace MARDEK.UI
 		[SerializeField] ActionDisplay actionDisplay;
 		PlayerControls playerControls;
 		static IReadOnlyList<BattleCharacter> Heroes => BattleManager.PlayerBattleParty;
-		static IReadOnlyList<BattleCharacter> Enemies => BattleManager.EnemyBattleParty;
+		// Dead enemies stay in EnemyBattleParty with their model hidden, so exclude them
+		// from target selection. Downed heroes stay selectable (e.g. for future revival).
+		static IReadOnlyList<BattleCharacter> Enemies => BattleManager.EnemyBattleParty.Where(enemy => !enemy.IsDead).ToList();
 
 		/// <summary>
 		/// Used to ensure that the action isn't invoked on a target on the same frame as an action is picked, as they both use the "interact" key
@@ -118,14 +120,14 @@ namespace MARDEK.UI
 		}
 		public void EnableWithAction(IBattleAction action)
 		{
-			// Currently assume that the target is the enemy, may want to pass in a parameter to say which team the action should default to at some point
 			enabledTime = Time.time;
 			lowerBar.SetActive(false);
 
 			gameObject.SetActive(true);
 			this.action = action;
-			EnemiesSelected = true;
-			SelectedCharacter = Enemies[0];
+			// Heals/buffs default to the caster's own team; everything else defaults to the enemy team.
+			EnemiesSelected = !action.Action.TargetsAllies;
+			SelectedCharacter = EnemiesSelected ? Enemies[0] : Heroes[0];
 			SetPosition();
 			turnDisplay.SetActive(false);
 		}
@@ -134,7 +136,7 @@ namespace MARDEK.UI
 		int ClampEnemiesIndex(int index) => Mathf.Clamp(index, 0, Enemies.Count - 1);
 		void SetPosition()
 		{
-			BattleModelComponent target = SelectedCharacter.battleModel;
+			BattleModelAnimator target = SelectedCharacter.battleModel;
 			transform.Set2DPosition(target.CrystalPointerGoToPosition.position);
 			transform.localScale = EnemiesSelected ? new Vector3(-0.1f, 0.1f, 1f) : new Vector3(0.1f, 0.1f, 1f);
 

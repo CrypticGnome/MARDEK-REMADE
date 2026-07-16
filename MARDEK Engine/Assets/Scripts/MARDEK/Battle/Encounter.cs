@@ -7,6 +7,7 @@ namespace MARDEK.Battle
 	[CreateAssetMenu(menuName = "MARDEK/Battle/Encounter")]
 	public class Encounter : ScriptableObject
 	{
+		public EncounterType Type = EncounterType.Standard;
 		public EnemyWithLevelRange[] Enemies;
 		public Item[] UniqueRewards;
 
@@ -17,5 +18,11 @@ namespace MARDEK.Battle
 			public int minLevel = 0;
 			public int maxLevel = 0;
 		}
+	}
+
+	public enum EncounterType
+	{
+		Standard,
+		Grand,
 	}
 }

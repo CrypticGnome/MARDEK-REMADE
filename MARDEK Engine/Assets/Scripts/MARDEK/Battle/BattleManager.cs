@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using MARDEK.Audio;
 using MARDEK.CharacterSystem;
 using MARDEK.Save;
 using UnityEngine;
@@ -18,12 +19,18 @@ namespace MARDEK.Battle
 		[SerializeField] EncounterSet dummyEncounter;
 		[SerializeField] BattleCharacterPicker characterPicker;
 		[SerializeField] ActionDisplay actionDisplay;
+		[SerializeField] AudioClip victoryFanfareStandard;
+		[SerializeField] AudioClip victoryFanfareGrand;
+		[SerializeField] AudioClip gameOverJingle;
 		public static Encounter Encounter;
 		public static EncounterSet encounter { private get; set; }
 		public static BattleCharacter characterActing { get; private set; }
 		public static BattleAction ActionToPerform;
 		static public List<EnemyBattleCharacter> EnemyBattleParty { get; private set; } = new();
 		static public List<HeroBattleCharacter> PlayerBattleParty { get; private set; } = new();
+		// Enemies first, then heroes - TurnManager relies on this order staying consistent
+		// across calls when building its parallel ACT lists.
+		public static IEnumerable<BattleCharacter> AllCombatants => EnemyBattleParty.Concat<BattleCharacter>(PlayerBattleParty);
 		public static BattleManager instance;
 		public delegate void TurnEnd();
 		public static event TurnEnd OnTurnEnd;
@@ -55,19 +62,29 @@ namespace MARDEK.Battle
 
 			EnemyBattleParty.Clear();
 			for (int i = 0; i < enemyCharacters.Count; i++)
-			{
-				EnemyBattleCharacter enemyCharacter = new EnemyBattleCharacter(enemyCharacters[i], enemyPartyPositions[i].transform);
-				EnemyBattleParty.Add(enemyCharacter);
-			}
+				EnemyBattleParty.Add(SpawnBattleCharacter<EnemyBattleCharacter>(enemyCharacters[i], enemyPartyPositions[i].transform));
+
 			PlayerBattleParty.Clear();
 			for (int i = 0; i < playerParty.Count; i++)
-			{
-				HeroBattleCharacter playerCharacter = new HeroBattleCharacter(playerParty[i], playerPartyPositions[i].transform);
-				PlayerBattleParty.Add(playerCharacter);
-			}
+				PlayerBattleParty.Add(SpawnBattleCharacter<HeroBattleCharacter>(playerParty[i], playerPartyPositions[i].transform));
 
 			foreach (var enemy in EnemyBattleParty)
 				enemy.ChooseNextAction(PlayerBattleParty);
+		}
+
+		// Battle-model prefabs carry their BattleCharacter component (added by the
+		// Custom/Ensure Battle Character Components menu item); the runtime AddComponent is
+		// only a fallback for prefabs that haven't been set up yet.
+		static T SpawnBattleCharacter<T>(Character character, Transform positionSlot) where T : BattleCharacter
+		{
+			GameObject prefabInstance = Instantiate(character.Profile.BattleModelPrefab, positionSlot);
+			if (!prefabInstance.TryGetComponent(out T battleCharacter))
+			{
+				Debug.LogWarning($"{character.Profile.displayName}'s battle model prefab has no {typeof(T).Name} - adding one at runtime. Run \"Custom/Ensure Battle Character Components On Battle Models\" to fix the prefab.", prefabInstance);
+				battleCharacter = prefabInstance.AddComponent<T>();
+			}
+			battleCharacter.LoadCharacter(character);
+			return battleCharacter;
 		}
 		void SetInitialACT()
 		{
@@ -75,9 +92,7 @@ namespace MARDEK.Battle
 			// Sort of like how currently if you press x currentyl you can just skip the battle
 			bool partySurprised = false;
 			List<float> timesToTurn = new List<float>();
-			List<BattleCharacter> allCharacters = new List<BattleCharacter>();
-			allCharacters.AddRange(EnemyBattleParty);
-			allCharacters.AddRange(PlayerBattleParty);
+			List<BattleCharacter> allCharacters = AllCombatants.ToList();
 
 			foreach (BattleCharacter character in EnemyBattleParty)
 				AddCharacterTime(character, !partySurprised);
@@ -134,6 +149,9 @@ namespace MARDEK.Battle
 			IEnumerator WaitForNextTurn()
 			{
 				TurnManager.GetTimeToNextTurn(out float timeToTurn, out BattleCharacter nextActor);
+				// No living combatant left to act - the battle is concluding
+				if (nextActor == null)
+					yield break;
 				TurnManager.GetCharacterACTNextTurn(timeToTurn, out List<float> startACT, out List<float> finalACT);
 				IEnumerator lerpCharacterACT = TurnManager.LerpCharacterACTs(timeToTurn, startACT, finalACT);
 				yield return StartCoroutine(lerpCharacterACT);
@@ -159,7 +177,6 @@ namespace MARDEK.Battle
 		}
 		public static void EndCurrentTurn() => instance.EndTurn();
 		public static void DisplayAction(IBattleAction action) => instance.actionDisplay.DisplayAction(action);
-		public static Coroutine StartRoutine(IEnumerator routine) => instance.StartCoroutine(routine);
 		public static void ShowActionUI()
 		{
 			instance.characterActionUI.SetActive(true);
@@ -202,16 +219,16 @@ namespace MARDEK.Battle
 
 		void CheckBattleEnd()
 		{
-			// heroes stay in PlayerBattleParty at 0 HP (unlike dead enemies, which are removed), so
-			// defeat is "everyone down" rather than an empty list
-			bool defeat = PlayerBattleParty.Count > 0 && PlayerBattleParty.All(hero => hero.CurrentHP <= 0);
+			// Dead characters stay in their party lists (an enemy's model is just hidden on
+			// death), so both outcomes are "everyone on that side is dead"
+			bool defeat = PlayerBattleParty.Count > 0 && PlayerBattleParty.All(hero => hero.IsDead);
 			instance.characterActionUI.SetActive(false);
 			if (defeat)
 			{
 				instance.stateMachine.TrySetState(BattleState.Concluding);
 				StartCoroutine(Defeat());
 			}
-			var victory = EnemyBattleParty.Count == 0;
+			var victory = EnemyBattleParty.Count > 0 && EnemyBattleParty.All(enemy => enemy.IsDead);
 			if (victory)
 			{
 				instance.stateMachine.TrySetState(BattleState.Concluding);
@@ -222,6 +239,7 @@ namespace MARDEK.Battle
 		IEnumerator Defeat()
 		{
 			print("defeat!!");
+			PlayLooped(gameOverJingle);
 			yield return new WaitForSeconds(1);
 			BattleUIManager.Instance.OnDefeat();
 
@@ -237,6 +255,7 @@ namespace MARDEK.Battle
 		IEnumerator Victory()
 		{
 			print("victory!!");
+			PlayLooped(Encounter.Type == EncounterType.Grand ? victoryFanfareGrand : victoryFanfareStandard);
 			yield return new WaitForSeconds(1);
 			BattleUIManager.Instance.OnVictory();
 
@@ -244,6 +263,14 @@ namespace MARDEK.Battle
 				battleCharacter.SyncToCharacter();
 
 			instance.enabled = false;
+		}
+
+		static void PlayLooped(AudioClip clip)
+		{
+			AudioSource musicSource = AudioManager.GetMusicAudioSource();
+			musicSource.clip = clip;
+			musicSource.loop = true;
+			musicSource.Play();
 		}
 
 		public enum BattleState

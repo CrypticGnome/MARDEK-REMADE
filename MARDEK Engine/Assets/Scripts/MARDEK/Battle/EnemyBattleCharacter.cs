@@ -7,25 +7,17 @@ namespace MARDEK.Battle
 	using System.Collections;
 	using CharacterSystem;
 	using MARDEK.Skill;
-	using Stats;
 
 	public class EnemyBattleCharacter : BattleCharacter
 	{
 		public ActionSkill NextAction { get; private set; }
 		public BattleCharacter NextTarget { get; private set; }
 
-		public EnemyBattleCharacter(Character character, Transform parent)
+		public override void LoadCharacter(Character character)
 		{
-			Profile = character.Profile;
-			VolatileStats = Profile.Stats;
+			InitialiseFrom(character);
 			Skillset = Profile.LearnableSkillset;
-			GameObject prefabInstance = Object.Instantiate(Profile.BattleModelPrefab, parent);
-			battleModel = prefabInstance.GetComponent<BattleModelComponent>();
-			Level = character.Level;
-			VolatileStats = new CoreStats(Profile.Stats);
-			BaseStats.CalculateMaxValues(this);
 
-			VolatileStats.CalculateMaxValues(this);
 			CurrentHP = VolatileStats.MaxHP;
 			CurrentMP = VolatileStats.MaxMP;
 		}
@@ -91,12 +83,12 @@ namespace MARDEK.Battle
 
 		public override IEnumerator Die()
 		{
-			// Remove immediately so a dying-but-not-yet-destroyed enemy can't still be
-			// picked as a target or acted on for turn order while its death animation plays.
-			BattleManager.EnemyBattleParty.Remove(this);
-
 			yield return battleModel.PlayDeathSequence();
-			Object.Destroy(battleModel.gameObject);
+
+			// Hide only the visuals child - this GameObject stays active, so the dead enemy
+			// remains in EnemyBattleParty as a valid object (turn order, target selection and
+			// the victory check all filter on IsDead instead).
+			battleModel.SetModelActive(false);
 		}
 	}
 }

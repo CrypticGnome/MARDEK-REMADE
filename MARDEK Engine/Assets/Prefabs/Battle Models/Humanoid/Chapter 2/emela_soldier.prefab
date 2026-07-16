@@ -225,6 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1119443235684642514}
   - component: {fileID: 5293038698923263323}
+  - component: {fileID: 2471173757680072963}
   m_Layer: 0
   m_Name: emela_soldier
   m_TagString: Untagged
@@ -282,6 +283,31 @@ MonoBehaviour:
   hitPoint: {fileID: 8193692776374320062}
   moveToDuration: 0.5
   damageDisplay: {fileID: 8516997640020355531}
+--- !u!114 &2471173757680072963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426953165218317120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4666b6c89412c4d86305c412321d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MARDEK::MARDEK.Battle.HeroBattleCharacter
+  battleModel: {fileID: 5293038698923263323}
+  StatusBuildup:
+    poison: 0
+    sleep: 0
+    paralysis: 0
+    blindness: 0
+    silence: 0
+    numbness: 0
+    curse: 0
+    confusion: 0
+    bleed: 0
+    zombification: 0
+  stunned: 0
 --- !u!1 &1515058123518069734
 GameObject:
   m_ObjectHideFlags: 0

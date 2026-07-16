@@ -1,27 +1,17 @@
-using UnityEngine;
-
 namespace MARDEK.Battle
 {
 	using CharacterSystem;
-	using MARDEK.Stats;
 
 	public class HeroBattleCharacter : BattleCharacter
 	{
 		public Character Character { get; private set; }
 		public int Experience { get { return Character.Experience; } private set { Character.Experience = value; } }
-		public HeroBattleCharacter(Character character, Transform parent)
+
+		public override void LoadCharacter(Character character)
 		{
 			Character = character;
-			Level = character.Level;
-			Profile = character.Profile;
 			Skillset = character.ActionSkillset;
-			GameObject prefabInstance = Object.Instantiate(Profile.BattleModelPrefab, parent);
-			battleModel = prefabInstance.GetComponent<BattleModelComponent>();
-
-
-			VolatileStats = new CoreStats(BaseStats);
-			BaseStats.CalculateMaxValues(this);
-			VolatileStats.CalculateMaxValues(this);
+			InitialiseFrom(character);
 
 			CurrentHP = character.CurrentHP;
 			CurrentMP = character.CurrentMP;

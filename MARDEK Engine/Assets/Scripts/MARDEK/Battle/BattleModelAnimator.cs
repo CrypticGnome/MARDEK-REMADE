@@ -1,11 +1,10 @@
 using System;
 using System.Collections;
-using MARDEK.Skill;
 using UnityEngine;
 
 namespace MARDEK.Battle
 {
-	public class BattleModelComponent : MonoBehaviour
+	public class BattleModelAnimator : MonoBehaviour
 	{
 		[SerializeField] AnimationClip idle, moveto, strike, jumpback, hurt, die, dead, spellcast, useItem, victory;
 		[SerializeField] AnimationClip breath;
@@ -60,7 +59,7 @@ namespace MARDEK.Battle
 			}
 			catch (Exception e)
 			{
-				Debug.LogError($"{name}: BattleModelComponent tried to play an unassigned animation clip - {e.Message}", this);
+				Debug.LogError($"{name}: BattleModelAnimator tried to play an unassigned animation clip - {e.Message}", this);
 				return false;
 			}
 		}
@@ -79,7 +78,7 @@ namespace MARDEK.Battle
 		public void OnDamagePoint() => DamagePoint?.Invoke();
 
 		// Always waits out the clip's own length before returning, regardless of type -
-		// callers that don't care can fire-and-forget via BattleManager.StartRoutine(...);
+		// callers that don't care can fire-and-forget via StartCoroutine on this component;
 		// callers that do (e.g. PlayAction) can yield on it directly.
 		public IEnumerator PlayAnimation(BattleAnimationType animType)
 		{
@@ -141,7 +140,7 @@ namespace MARDEK.Battle
 		/// of the clip if it doesn't have one authored yet), then JumpBack while returning
 		/// to the idle position.
 		/// </summary>
-		IEnumerator PlayApproachAndStrikeSequence(BattleModelComponent target, AnimationClip strikeClip, Action onDamagePoint)
+		IEnumerator PlayApproachAndStrikeSequence(BattleModelAnimator target, AnimationClip strikeClip, Action onDamagePoint)
 		{
 			Vector3 idlePosition = transform.position;
 
@@ -194,14 +193,14 @@ namespace MARDEK.Battle
 		}
 
 		/// <summary>
-		/// Plays the appropriate animation sequence for the given skill's ActionType:
+		/// Plays the appropriate animation sequence for the given ActionType:
 		/// Melee/Breath run the full approach-strike-return sequence (with the breath
 		/// clip swapped in for Breath) and invoke applyEffect at the strike's DamagePoint,
 		/// while Spellcast/Item just play their animation in place and apply immediately.
 		/// </summary>
-		public IEnumerator PlayAction(ActionSkill skill, BattleModelComponent target, Action applyEffect)
+		public IEnumerator PlayAction(ActionType actionType, BattleModelAnimator target, Action applyEffect)
 		{
-			switch (skill.Action.ActionType)
+			switch (actionType)
 			{
 				case ActionType.Melee:
 					yield return PlayApproachAndStrikeSequence(target, strike, applyEffect);
@@ -222,13 +221,24 @@ namespace MARDEK.Battle
 
 		/// <summary>
 		/// Plays the Die clip and waits for it to finish - used so a defeated character's
-		/// model can be destroyed only after its death animation has played out.
+		/// model can be hidden only after its death animation has played out.
 		/// </summary>
 		public IEnumerator PlayDeathSequence()
 		{
 			TryPlayClip(die);
 			animation.wrapMode = WrapMode.Once;
 			yield return new WaitForSeconds(ClipLength(die));
+		}
+
+		/// <summary>
+		/// Shows or hides the visual model - the child GameObject holding the Animation
+		/// component and sprites. The prefab root (this component, BattleCharacter) stays
+		/// active, so a dead character remains a valid object in the party lists.
+		/// </summary>
+		public void SetModelActive(bool active)
+		{
+			if (animation != null)
+				animation.gameObject.SetActive(active);
 		}
 
 	}
@@ -244,12 +254,5 @@ namespace MARDEK.Battle
 		Spellcast,
 		UseItem,
 		Victory
-	}
-	public enum ActionType
-	{
-		Melee,
-		Spellcast,
-		Breath,
-		Item,
 	}
 }

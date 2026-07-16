@@ -8,12 +8,12 @@ Battles are driven by a central state machine, **`BattleManager`** (`Scripts/MAR
 
 Turn order uses an **ATB (Active Time Battle) system**: each combatant accumulates an `ACT` meter (0–1000) at a rate based on their Agility stat. Whoever fills the meter first acts next. Player turns wait for input through the action UI; enemies act out a skill/target chosen ahead of time (see Enemy actions below) — the choice itself is still random (real enemy AI is a stubbed/unimplemented placeholder).
 
-Performing an action flows: **UI selection → `IBattleAction.TryPerformAction` → battle model animation (melee/cast) → effect resolution → turn cleanup**, which removes defeated combatants and checks for battle end.
+Performing an action flows: **UI selection → `IBattleAction.TryPerformAction` → battle model animation (melee/cast) → effect resolution → turn cleanup**, which checks for battle end. Defeated combatants stay in their party lists with `IsDead` set (a dead enemy's visual model is hidden, not destroyed); turn order, targeting, and the victory check all filter on `IsDead`.
 
 ## Characters & Stats
 
 - **`Character`** (ScriptableObject) is persistent character data, subclassed into playable heroes and unplayable enemies (enemies carry loot tables).
-- In battle, characters are wrapped as **`BattleCharacter`** (hero/enemy subclasses), holding a runtime copy of stats, current HP/MP, ACT meter, and a link to the visual battle model.
+- In battle, characters are wrapped as **`BattleCharacter`** (hero/enemy subclasses) — a MonoBehaviour on the root of the character's battle-model prefab, initialized from the persistent `Character` via `LoadCharacter`. It holds a runtime copy of stats, current HP/MP, ACT meter, and a link to the `BattleModelAnimator` (visuals live on a "Model" child, so they can be hidden on death while the component stays alive).
 - **`CoreStats`** defines the stat block: STR/VIT/SPI/AGI, Attack/Defense/Magic Defense, elemental absorption, and status resistances. Max HP/MP are computed via pluggable calculator assets.
 - **Status effects** (Poison, Sleep, Paralysis, Blindness, Silence, Confusion, Bleed, etc.) use a buildup-vs-resistance model, ticked each turn.
 
@@ -96,7 +96,7 @@ A few systems are present as scaffolding but not yet functional: enemy AI (falls
 | Battle loop / turns | `Scripts/MARDEK/Battle/BattleManager.cs`, `TurnManager.cs` |
 | Actions & effects | `Scripts/MARDEK/Battle/BattleAction.cs`, `Scripts/MARDEK/Character/Skills/Action Effects/Action Effects.cs` |
 | Battle characters | `Scripts/MARDEK/Battle/BattleCharacter.cs`, `HeroBattleCharacter.cs`, `EnemyBattleCharacter.cs` |
-| Visuals | `Scripts/MARDEK/Battle/BattleModelComponent.cs` |
+| Visuals | `Scripts/MARDEK/Battle/BattleModelAnimator.cs` |
 | Encounters | `Scripts/MARDEK/Battle/Encounter.cs`, `EncounterSet.cs`, `RandomEncounterGenerator.cs` |
 | Character data | `Scripts/MARDEK/Character/Character.cs`, `CharacterPlayable.cs`, `CharacterUnplayable.cs`, `PartySO.cs`, `BattleAI.cs` |
 | Skills | `Scripts/MARDEK/Character/Skills/Skill.cs`, `ActionSkill.cs`, `PassiveSkill.cs`, `ReactionSkill.cs` |

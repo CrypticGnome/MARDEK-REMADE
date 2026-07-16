@@ -418,9 +418,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1044682191}
     - target: {fileID: 330018440776529925, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: gameOverJingle
+      value: 
+      objectReference: {fileID: 8300000, guid: 6eb0f97fa72330f4d90711ce8a307287, type: 3}
+    - target: {fileID: 330018440776529925, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: characterPicker
       value: 
       objectReference: {fileID: 1044682191}
+    - target: {fileID: 330018440776529925, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: victoryFanfareGrand
+      value: 
+      objectReference: {fileID: 8300000, guid: a2cf9b3a1d4168e41bb5e7638a764953, type: 3}
+    - target: {fileID: 330018440776529925, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: victoryFanfareStandard
+      value: 
+      objectReference: {fileID: 8300000, guid: f5baaf222bc83244ea7e25855b9e5863, type: 3}
     - target: {fileID: 330018440776529925, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: 'enemyPartyPositions.Array.data[0]'
       value: 
@@ -467,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 968278963}
     - target: {fileID: 510502719915138634, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -49.999756
+      value: -49.999695
       objectReference: {fileID: 0}
     - target: {fileID: 739853633361910504, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: targetPicker
@@ -1239,7 +1251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8673186173132115637, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -49.999756
+      value: -49.999695
       objectReference: {fileID: 0}
     - target: {fileID: 8888112215848905752, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: m_AnchorMax.y
