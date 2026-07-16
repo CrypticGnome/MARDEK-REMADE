@@ -1,11 +1,12 @@
+using System.Collections;
+using MARDEK.Animation;
+using MARDEK.CharacterSystem;
+using MARDEK.Skill;
+using MARDEK.Stats;
 using UnityEngine;
 
 namespace MARDEK.Battle
 {
-	using CharacterSystem;
-	using MARDEK.Animation;
-	using MARDEK.Stats;
-
 	public abstract class BattleCharacter
 	{
 		public CharacterProfile Profile { get; protected set; }
@@ -57,10 +58,59 @@ namespace MARDEK.Battle
 			return actRate;
 		}
 
-		public void OnTurnStart()
+		// Advances ACT and status effects for the turn about to happen. Returns false if
+		// the character is stunned and can't act this turn.
+		public bool BeginTurn()
 		{
+			ACT -= TurnManager.ActResolution;
 			TickStatusEffects();
+
+			if (stunned)
+			{
+				Debug.Log($"{Name} is stunned");
+				return false;
+			}
+			return true;
 		}
+
+		// What this character does with a turn it's able to take. Base (hero) behavior
+		// shows the action UI and waits for player input; EnemyBattleCharacter overrides
+		// this to dispatch its queued move instead.
+		public virtual IEnumerator TakeAction()
+		{
+			BattleManager.ShowActionUI();
+			yield break;
+		}
+
+		// Plays this character's animation against target and applies the action at the
+		// right moment (melee/breath: at the strike's damage point; spell/item: immediately).
+		// Falls back to a fixed wait when there's no battle model to animate against. If the
+		// target dies as a result, their death animation starts immediately rather than
+		// waiting for the end of the turn, and this waits for whichever finishes later - the
+		// attacker's action animation or the target's death animation.
+		public IEnumerator PerformAction(IBattleAction action, BattleCharacter target)
+		{
+			Coroutine deathRoutine = null;
+
+			void ApplyAction()
+			{
+				action.TryPerformAction(this, target);
+				if (target.IsDead)
+					deathRoutine = BattleManager.StartRoutine(target.Die());
+			}
+
+			if (action is ActionSkill skill && battleModel != null)
+				yield return battleModel.PlayAction(skill, target.battleModel, ApplyAction);
+			else
+			{
+				ApplyAction();
+				yield return new WaitForSeconds(1.5f);
+			}
+
+			if (deathRoutine != null)
+				yield return deathRoutine;
+		}
+
 		public void TickStatusEffects()
 		{
 			StatusEffects resistances = Profile.Stats.Resistances;
@@ -95,6 +145,17 @@ namespace MARDEK.Battle
 			if (StatusBuildup.Bleed > 0)
 				StatusBuildup.Bleed -= resistances.Bleed + 1;
 			// Do not tick zombification
+		}
+
+		public bool IsDead => CurrentHP <= 0;
+
+		// What happens when this character's HP hits zero. No-op by default - heroes stay
+		// downed in the party rather than being removed (see CheckBattleEnd), and hero death
+		// handling isn't implemented yet (see BattleSystem.md's Notable Gaps). EnemyBattleCharacter
+		// overrides this to play its death animation and destroy the model.
+		public virtual IEnumerator Die()
+		{
+			yield break;
 		}
 
 		public Sprite GetBattleIcon()

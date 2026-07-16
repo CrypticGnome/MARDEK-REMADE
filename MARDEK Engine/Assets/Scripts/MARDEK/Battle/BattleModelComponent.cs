@@ -78,70 +78,58 @@ namespace MARDEK.Battle
 		public event Action DamagePoint;
 		public void OnDamagePoint() => DamagePoint?.Invoke();
 
-		public void PlayAnimation(BattleAnimationType animType)
+		// Always waits out the clip's own length before returning, regardless of type -
+		// callers that don't care can fire-and-forget via BattleManager.StartRoutine(...);
+		// callers that do (e.g. PlayAction) can yield on it directly.
+		public IEnumerator PlayAnimation(BattleAnimationType animType)
 		{
 			switch (animType)
 			{
 				default:
 				case BattleAnimationType.Idle:
-				{
-					TryPlayClip(idle);
+					yield return PlayClip(idle);
 					break;
-				}
 				case BattleAnimationType.MoveTo:
-				{
-					StartCoroutine(PlayClipAndReturnToIdle(moveto));
+					yield return PlayClipAndReturnToIdle(moveto);
 					break;
-				}
 				case BattleAnimationType.Strike:
-				{
-					StartCoroutine(PlayClipAndReturnToIdle(strike));
+					yield return PlayClipAndReturnToIdle(strike);
 					break;
-				}
 				case BattleAnimationType.JumpBack:
-				{
-					StartCoroutine(PlayClipAndReturnToIdle(jumpback));
+					yield return PlayClipAndReturnToIdle(jumpback);
 					break;
-				}
 				case BattleAnimationType.Hurt:
-				{
-					StartCoroutine(PlayClipAndReturnToIdle(hurt));
+					yield return PlayClipAndReturnToIdle(hurt);
 					break;
-				}
 				case BattleAnimationType.Die:
-				{
-					TryPlayClip(die);
 					animation.wrapMode = WrapMode.Once;
+					yield return PlayClip(die);
 					break;
-				}
 				case BattleAnimationType.Dead:
-				{
-					TryPlayClip(dead);
 					animation.wrapMode = WrapMode.Loop;
+					yield return PlayClip(dead);
 					break;
-				}
 				case BattleAnimationType.Spellcast:
-				{
-					StartCoroutine(PlayClipAndReturnToIdle(spellcast));
+					yield return PlayClipAndReturnToIdle(spellcast);
 					break;
-				}
 				case BattleAnimationType.UseItem:
-				{
-					StartCoroutine(PlayClipAndReturnToIdle(useItem));
+					yield return PlayClipAndReturnToIdle(useItem);
 					break;
-				}
 				case BattleAnimationType.Victory:
-				{
-					TryPlayClip(victory);
 					animation.wrapMode = WrapMode.Loop;
+					yield return PlayClip(victory);
 					break;
-				}
+			}
+
+			IEnumerator PlayClip(AnimationClip clip)
+			{
+				TryPlayClip(clip);
+				yield return new WaitForSeconds(ClipLength(clip));
 			}
 
 			IEnumerator PlayClipAndReturnToIdle(AnimationClip clip)
 			{
-				TryPlayClip(clip);
-				yield return new WaitForSeconds(ClipLength(clip));
+				yield return PlayClip(clip);
 				TryPlayClip(idle);
 			}
 		}
@@ -223,11 +211,11 @@ namespace MARDEK.Battle
 					break;
 				case ActionType.Spellcast:
 					applyEffect?.Invoke();
-					PlayAnimation(BattleAnimationType.Spellcast);
+					yield return PlayAnimation(BattleAnimationType.Spellcast);
 					break;
 				case ActionType.Item:
 					applyEffect?.Invoke();
-					PlayAnimation(BattleAnimationType.UseItem);
+					yield return PlayAnimation(BattleAnimationType.UseItem);
 					break;
 			}
 		}

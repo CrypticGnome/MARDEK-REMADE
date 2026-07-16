@@ -30,5 +30,14 @@ namespace MARDEK.Battle
 			VolatileStats.Defense = character.Defense;
 			VolatileStats.MagicDefense = character.MagicDefense;
 		}
+
+		// Writes battle HP/MP back to the persistent Character this was built from.
+		// Uses the held reference rather than list-index matching, so it stays correct
+		// even if PlayerBattleParty and the persistent party ever diverge in order/length.
+		public void SyncToCharacter()
+		{
+			Character.CurrentHP = CurrentHP;
+			Character.CurrentMP = CurrentMP;
+		}
 	}
 }

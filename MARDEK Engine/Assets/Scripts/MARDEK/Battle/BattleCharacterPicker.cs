@@ -17,8 +17,8 @@ namespace MARDEK.UI
 		[SerializeField] GameObject turnDisplay;
 		[SerializeField] ActionDisplay actionDisplay;
 		PlayerControls playerControls;
-		static List<BattleCharacter> Heroes => BattleManager.PlayerBattleParty;
-		static List<BattleCharacter> Enemies => BattleManager.EnemyBattleParty;
+		static IReadOnlyList<BattleCharacter> Heroes => BattleManager.PlayerBattleParty;
+		static IReadOnlyList<BattleCharacter> Enemies => BattleManager.EnemyBattleParty;
 
 		/// <summary>
 		/// Used to ensure that the action isn't invoked on a target on the same frame as an action is picked, as they both use the "interact" key

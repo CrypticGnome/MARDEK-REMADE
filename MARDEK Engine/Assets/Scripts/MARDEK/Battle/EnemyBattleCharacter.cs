@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace MARDEK.Battle
 {
+	using System.Collections;
 	using CharacterSystem;
 	using MARDEK.Skill;
 	using Stats;
@@ -65,6 +66,37 @@ namespace MARDEK.Battle
 
 			if (aliveTargets.Count == 0) return null;
 			return aliveTargets[Random.Range(0, aliveTargets.Count)];
+		}
+
+		public override IEnumerator TakeAction()
+		{
+			BattleCharacter target = ResolveTarget();
+			if (NextAction is null || target is null)
+			{
+				BattleManager.EndCurrentTurn();
+				yield break;
+			}
+
+			Debug.Log($"{Name} uses {NextAction.DisplayName}");
+			BattleManager.PerformActionToTarget(NextAction, target);
+			BattleManager.DisplayAction(NextAction);
+
+			// Immediately queue up this enemy's following attack so one is always ready to show ahead of time.
+			ChooseNextAction(BattleManager.PlayerBattleParty);
+		}
+
+		// The queued target may have died since it was chosen, so fall back to a fresh pick.
+		BattleCharacter ResolveTarget() =>
+			NextTarget != null && NextTarget.CurrentHP > 0 ? NextTarget : PickTarget(BattleManager.PlayerBattleParty);
+
+		public override IEnumerator Die()
+		{
+			// Remove immediately so a dying-but-not-yet-destroyed enemy can't still be
+			// picked as a target or acted on for turn order while its death animation plays.
+			BattleManager.EnemyBattleParty.Remove(this);
+
+			yield return battleModel.PlayDeathSequence();
+			Object.Destroy(battleModel.gameObject);
 		}
 	}
 }

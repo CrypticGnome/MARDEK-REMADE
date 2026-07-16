@@ -4,14 +4,11 @@ using System.Linq;
 using MARDEK.CharacterSystem;
 using MARDEK.Save;
 using UnityEngine;
+using MARDEK.UI;
+using MARDEK.Progress;
 
 namespace MARDEK.Battle
 {
-	using MARDEK.Skill;
-	using MARDEK.UI;
-	using Progress;
-
-
 	public class BattleManager : MonoBehaviour
 	{
 		[SerializeField] PartySO playerParty;
@@ -25,8 +22,8 @@ namespace MARDEK.Battle
 		public static EncounterSet encounter { private get; set; }
 		public static BattleCharacter characterActing { get; private set; }
 		public static BattleAction ActionToPerform;
-		static public List<BattleCharacter> EnemyBattleParty { get; private set; } = new();
-		static public List<BattleCharacter> PlayerBattleParty { get; private set; } = new();
+		static public List<EnemyBattleCharacter> EnemyBattleParty { get; private set; } = new();
+		static public List<HeroBattleCharacter> PlayerBattleParty { get; private set; } = new();
 		public static BattleManager instance;
 		public delegate void TurnEnd();
 		public static event TurnEnd OnTurnEnd;
@@ -35,14 +32,12 @@ namespace MARDEK.Battle
 		readonly BattleStateMachine stateMachine = new();
 		public BattleState state => stateMachine.CurrentState;
 
-
 		private void Awake()
 		{
 			instance = this;
 			if (!encounter) encounter = dummyEncounter;
 			InstantiateEncounter();
 		}
-
 
 		private void Start()
 		{
@@ -71,9 +66,8 @@ namespace MARDEK.Battle
 				PlayerBattleParty.Add(playerCharacter);
 			}
 
-			foreach (BattleCharacter enemy in EnemyBattleParty)
-				if (enemy is EnemyBattleCharacter enemyCharacter)
-					enemyCharacter.ChooseNextAction(PlayerBattleParty);
+			foreach (var enemy in EnemyBattleParty)
+				enemy.ChooseNextAction(PlayerBattleParty);
 		}
 		void SetInitialACT()
 		{
@@ -150,64 +144,28 @@ namespace MARDEK.Battle
 
 
 				characterActing = nextActor;
-				characterActing.ACT -= TurnManager.ActResolution;
-
+				bool canAct = characterActing.BeginTurn();
 
 				OnTurnStart?.Invoke();
-				if (characterActing.stunned)
+
+				if (!canAct)
 				{
-					Debug.Log($"{characterActing.Name} is stunned");
-					characterActing.TickStatusEffects();
 					instance.EndTurn();
 					yield break;
 				}
 
-				if (EnemyBattleParty.Contains(characterActing))
-				{
-					PerformEnemyMove();
-					yield break;
-				}
-
-				characterActionUI.SetActive(true);
-				stateMachine.TrySetState(BattleState.ChoosingAction);
-				characterActing.TickStatusEffects();
-			}
-
-			void PerformEnemyMove()
-			{
-				characterActing.TickStatusEffects();
-
-				if (characterActing is not EnemyBattleCharacter enemyCharacter)
-				{
-					Debug.LogError($"{characterActing.Name} is acting as an enemy but isn't an EnemyBattleCharacter");
-					characterActing = null;
-					instance.characterActionUI.SetActive(false);
-					instance.EndTurn();
-					return;
-				}
-
-				ActionSkill skill = enemyCharacter.NextAction;
-				// The queued target may have died since it was chosen, so re-pick if needed.
-				BattleCharacter target = enemyCharacter.NextTarget != null && enemyCharacter.NextTarget.CurrentHP > 0
-					? enemyCharacter.NextTarget
-					: PlayerBattleParty.Where(hero => hero.CurrentHP > 0).OrderBy(_ => Random.value).FirstOrDefault();
-
-				if (skill is null || target is null)
-				{
-					characterActing = null;
-					instance.characterActionUI.SetActive(false);
-					instance.EndTurn();
-					return;
-				}
-
-				Debug.Log($"{characterActing.Name} uses {skill.DisplayName}");
-				PerformActionToTarget(skill, target);
-				instance.actionDisplay.DisplayAction(skill);
-
-				// Immediately queue up this enemy's following attack so one is always ready to show ahead of time.
-				enemyCharacter.ChooseNextAction(PlayerBattleParty);
+				yield return characterActing.TakeAction();
 			}
 		}
+		public static void EndCurrentTurn() => instance.EndTurn();
+		public static void DisplayAction(IBattleAction action) => instance.actionDisplay.DisplayAction(action);
+		public static Coroutine StartRoutine(IEnumerator routine) => instance.StartCoroutine(routine);
+		public static void ShowActionUI()
+		{
+			instance.characterActionUI.SetActive(true);
+			instance.stateMachine.TrySetState(BattleState.ChoosingAction);
+		}
+
 		public static void PerformActionToTarget(IBattleAction action, BattleCharacter target)
 		{
 			if (action is null)
@@ -219,47 +177,20 @@ namespace MARDEK.Battle
 
 			instance.stateMachine.TrySetState(BattleState.ActionPerforming);
 			var attacker = characterActing;
-			instance.StartCoroutine(PlayAttack());
+			instance.StartCoroutine(ResolveAction());
 
-			IEnumerator PlayAttack()
+			IEnumerator ResolveAction()
 			{
-				var attackerModel = attacker.battleModel;
-				var targetModel = target.battleModel;
-
-				void ApplyAction() => action.TryPerformAction(attacker, target);
-
-				if (action is ActionSkill skill && attackerModel != null)
-					yield return attackerModel.PlayAction(skill, targetModel, ApplyAction);
-				else
-				{
-					ApplyAction();
-					yield return new WaitForSeconds(1.5f);
-				}
+				yield return attacker.PerformAction(action, target);
 				instance.EndTurn();
 			}
 		}
 
-		void EndTurn() => StartCoroutine(EndTurnRoutine());
-
-		IEnumerator EndTurnRoutine()
+		// Dying is now handled inline by BattleCharacter.PerformAction as soon as a target's
+		// HP drops to 0, rather than being batched here - by the time EndTurn() runs, any
+		// death from this turn's action has already been fully played out.
+		void EndTurn()
 		{
-			var deadEnemies = EnemyBattleParty.Where(enemy => enemy.CurrentHP <= 0).ToList();
-			foreach (var enemy in deadEnemies)
-				EnemyBattleParty.Remove(enemy);
-
-			var deathRoutines = deadEnemies.Select(enemy => StartCoroutine(PlayDeathThenDestroy(enemy))).ToList();
-			foreach (var deathRoutine in deathRoutines)
-				yield return deathRoutine;
-
-			for (int i = PlayerBattleParty.Count - 1; i >= 0; i--)
-			{
-				BattleCharacter hero = PlayerBattleParty[i];
-				int health = hero.CurrentHP;
-				if (health <= 0)
-				{
-					//die
-				}
-			}
 			characterActing = null;
 			instance.stateMachine.TrySetState(BattleState.Idle);
 			OnTurnEnd?.Invoke();
@@ -267,11 +198,6 @@ namespace MARDEK.Battle
 			instance.CheckBattleEnd();
 		}
 
-		IEnumerator PlayDeathThenDestroy(BattleCharacter enemy)
-		{
-			yield return enemy.battleModel.PlayDeathSequence();
-			Destroy(enemy.battleModel.gameObject);
-		}
 		public void SkipCurrentCharacterTurn() => EndTurn();
 
 		void CheckBattleEnd()
@@ -314,13 +240,9 @@ namespace MARDEK.Battle
 			yield return new WaitForSeconds(1);
 			BattleUIManager.Instance.OnVictory();
 
-			for (int i = 0; i < playerParty.Count; i++)
-			{
-				if (playerParty[i] == null) continue;
+			foreach (HeroBattleCharacter battleCharacter in PlayerBattleParty)
+				battleCharacter.SyncToCharacter();
 
-				playerParty[i].CurrentHP = PlayerBattleParty[i].CurrentHP;
-				playerParty[i].CurrentMP = PlayerBattleParty[i].CurrentMP;
-			}
 			instance.enabled = false;
 		}
 
