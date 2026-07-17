@@ -29,6 +29,15 @@ namespace MARDEK.UI
 			levelText.text = $"Lv {character.Level}";
 		}
 
+		private void Update()
+		{
+			// Dead enemies stay in EnemyBattleParty (their model is hidden, not removed),
+			// so this panel needs its own check rather than relying on UpdateCharacter's
+			// one-time index lookup from Start().
+			if (character != null && character.IsDead)
+				basePanel.SetActive(false);
+		}
+
 		void UpdateCharacter()
 		{
 			basePanel.SetActive(false);

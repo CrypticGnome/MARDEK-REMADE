@@ -9705,6 +9705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerParty: {fileID: 11400000, guid: 2054544f8dc27184587c0b2e27e6d3f5, type: 2}
+  inventory: {fileID: 11400000, guid: cdbea03fde2ff8e4c9762b707936aaac, type: 2}
   characterActionUI: {fileID: 6566202195194959525}
   enemyPartyPositions:
   - {fileID: 0}
@@ -9719,7 +9720,9 @@ MonoBehaviour:
   dummyEncounter: {fileID: 11400000, guid: 540b9b2280941b148b37653b2df7f768, type: 2}
   characterPicker: {fileID: 0}
   actionDisplay: {fileID: 3920322073271325175}
-  state: 0
+  victoryFanfareStandard: {fileID: 0}
+  victoryFanfareGrand: {fileID: 0}
+  gameOverJingle: {fileID: 0}
 --- !u!114 &4129369519186946166
 MonoBehaviour:
   m_ObjectHideFlags: 0

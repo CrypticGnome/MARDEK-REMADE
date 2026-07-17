@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MARDEK.Audio;
 using MARDEK.CharacterSystem;
+using MARDEK.Inventory;
 using MARDEK.Save;
 using UnityEngine;
 using MARDEK.UI;
@@ -13,6 +14,7 @@ namespace MARDEK.Battle
 	public class BattleManager : MonoBehaviour
 	{
 		[SerializeField] PartySO playerParty;
+		[SerializeField] InventorySO inventory;
 		[SerializeField] GameObject characterActionUI = null;
 		[SerializeField] List<GameObject> enemyPartyPositions = new();
 		[SerializeField] List<GameObject> playerPartyPositions = new();
@@ -26,6 +28,9 @@ namespace MARDEK.Battle
 		public static EncounterSet encounter { private get; set; }
 		public static BattleCharacter characterActing { get; private set; }
 		public static BattleAction ActionToPerform;
+		// Gold rewarded by the most recently concluded victory - read by BattleLoot to
+		// display the amount alongside item drops.
+		public static int GoldGained { get; private set; }
 		static public List<EnemyBattleCharacter> EnemyBattleParty { get; private set; } = new();
 		static public List<HeroBattleCharacter> PlayerBattleParty { get; private set; } = new();
 		// Enemies first, then heroes - TurnManager relies on this order staying consistent
@@ -256,6 +261,11 @@ namespace MARDEK.Battle
 		{
 			print("victory!!");
 			PlayLooped(Encounter.Type == EncounterType.Grand ? victoryFanfareGrand : victoryFanfareStandard);
+
+			// Gold is a pending reward, like the loot items - it isn't banked until the
+			// player collects it from the loot screen (see CollectGoldReward).
+			GoldGained = CalculateGoldReward();
+
 			yield return new WaitForSeconds(1);
 			BattleUIManager.Instance.OnVictory();
 
@@ -263,6 +273,30 @@ namespace MARDEK.Battle
 				battleCharacter.SyncToCharacter();
 
 			instance.enabled = false;
+		}
+
+		// Banks the pending gold reward and clears it, so a second collection attempt (e.g.
+		// pressing Get All twice) adds nothing further - matches how collected loot items
+		// have their amounts zeroed.
+		public static void CollectGoldReward()
+		{
+			instance.inventory.Money += GoldGained;
+			GoldGained = 0;
+		}
+
+		// gold = randInt(0, level^2 + randInt(1, 11)) x random(0.5, 1.5), rolled separately
+		// for each defeated enemy and summed.
+		static int CalculateGoldReward()
+		{
+			int total = 0;
+			foreach (EnemyBattleCharacter enemy in EnemyBattleParty)
+			{
+				int upperBound = enemy.Level * enemy.Level + Random.Range(1, 11);
+				int baseGold = Random.Range(0, upperBound);
+				float variance = Random.Range(0.5f, 1.5f);
+				total += (int)(baseGold * variance);
+			}
+			return total;
 		}
 
 		static void PlayLooped(AudioClip clip)

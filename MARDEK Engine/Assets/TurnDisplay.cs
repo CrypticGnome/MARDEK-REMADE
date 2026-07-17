@@ -88,20 +88,13 @@ namespace MARDEK.UI
 		{
 			displayWidth = displayTransform.rect.width;
 
+			// Dead characters stay in their party lists (heroes stay downed, dead enemies
+			// just have their model hidden) rather than being removed, so index-vs-count
+			// alone isn't enough to tell who's still able to take a turn.
 			for (int i = 0; i < heroIcons.Length; i++)
-			{
-				if (i < playerParty.Count)
-					heroIcons[i].SetActive(true);
-				else
-					heroIcons[i].SetActive(false);
-			}
+				heroIcons[i].SetActive(i < playerParty.Count && !playerParty[i].IsDead);
 			for (int i = 0; i < enemyIcons.Length; i++)
-			{
-				if (i < enemyParty.Count)
-					enemyIcons[i].SetActive(true);
-				else
-					enemyIcons[i].SetActive(false);
-			}
+				enemyIcons[i].SetActive(i < enemyParty.Count && !enemyParty[i].IsDead);
 			if (!gameObject.activeSelf)
 				gameObject.SetActive(true);
 			else OnEnable();

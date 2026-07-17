@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using MARDEK.CharacterSystem;
 using MARDEK.Inventory;
+using TMPro;
 using UnityEngine;
 namespace MARDEK.UI
 {
@@ -16,11 +17,13 @@ namespace MARDEK.UI
 		[SerializeField] List<BattleLootEntry> entries;
 		[SerializeField] List<InventorySpace> inventorySpaces;
 		[SerializeField] PartySO party;
+		[SerializeField] TMP_Text gainedMoneyText;
 		void Start()
 		{
 			currentItems.Clear();
 			currentAmounts.Clear();
 			SetLoot(currentItems, currentAmounts);
+			gainedMoneyText.text = $"+ {BattleManager.GoldGained}";
 		}
 
 		void Reset()
@@ -114,6 +117,13 @@ namespace MARDEK.UI
 		{
 			BattleLootSelectable lootSelection = BattleLootSelectable.currentlySelected;
 			lootSelection.Interact(currentItems, currentAmounts);
+
+			if (lootSelection is GetAllButton)
+			{
+				BattleManager.CollectGoldReward();
+				gainedMoneyText.gameObject.SetActive(false);
+			}
+
 			UpdateLoot();
 		}
 	}
