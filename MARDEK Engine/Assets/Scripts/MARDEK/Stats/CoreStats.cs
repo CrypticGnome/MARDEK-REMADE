@@ -98,16 +98,19 @@ namespace MARDEK.Stats
 	public class StatusEffects
 	{
 		[SerializeField]
-		int poison,  // Take damage at the end of your turn  // Old: 5% dmg turn start, 2% out of combat
+		int poison,  // 5% max hp damage at the end of your turn
 			 sleep,         // Immobilised until hit or it wears off
 			 paralysis,     // Skip every other turn
-			 blindness,     // Cannot choose the target, accuracy is reduced // Old: Accuracy is halved
-			 silence,       // Disables magic attacks
-			 numbness,      // Disables physical attacks
-			 curse,         // HOW IS THIS DIFFERENT TO SILENCE?
+			 blindness,     // Accuracy is halved, magic attacks and defensive items can now miss
+			 silence,       // Magic damage reduced to 1/3
+			 numbness,      // Physical damage reduced to 1/3
+			 curse,         // Cannot use skills from skillset
 			 confusion,     // Attack randomly, both allies and enemies
-			 bleed,         //Take damage at the start of your turn // Old: 10% dmg turn start
-			 zombification; // Attack allies with basic attacks, take damage from healing.
+			 bleed,         // 5% Max hp damage at the start of your turn
+			 zombification, // Attack allies with basic attacks, take damage from healing.
+			 berserk,       // Character can only perform their basic attack but strength is doubled
+			 haste,         // Agility is doubled
+			 regen;         // Gain 5% max hp per turn
 
 		public int Poison { get { return poison; } set { poison = Math.Clamp(value, 0, int.MaxValue); } }
 		public int Sleep { get { return sleep; } set { sleep = Math.Clamp(value, 0, int.MaxValue); } }
@@ -119,6 +122,9 @@ namespace MARDEK.Stats
 		public int Confusion { get { return confusion; } set { confusion = Math.Clamp(value, 0, int.MaxValue); } }
 		public int Bleed { get { return bleed; } set { bleed = Math.Clamp(value, 0, int.MaxValue); } }
 		public int Zombification { get { return zombification; } set { zombification = Math.Clamp(value, 0, int.MaxValue); } }
+		public int Berserk { get { return berserk; } set { berserk = Math.Clamp(value, 0, int.MaxValue); } }
+		public int Haste { get { return haste; } set { haste = Math.Clamp(value, 0, int.MaxValue); } }
+		public int Regen { get { return regen; } set { regen = Math.Clamp(value, 0, int.MaxValue); } }
 
 		public int Get(StatusEffect effect)
 		{
@@ -134,6 +140,9 @@ namespace MARDEK.Stats
 				case StatusEffect.Confusion: return confusion;
 				case StatusEffect.Bleed: return bleed;
 				case StatusEffect.Zombification: return zombification;
+				case StatusEffect.Berserk: return berserk;
+				case StatusEffect.Haste: return haste;
+				case StatusEffect.Regen: return regen;
 				default: throw new ArgumentOutOfRangeException();
 			}
 		}
@@ -151,6 +160,9 @@ namespace MARDEK.Stats
 				case StatusEffect.Confusion: confusion = value; break;
 				case StatusEffect.Bleed: bleed = value; break;
 				case StatusEffect.Zombification: zombification = value; break;
+				case StatusEffect.Berserk: berserk = value; break;
+				case StatusEffect.Haste: haste = value; break;
+				case StatusEffect.Regen: regen = value; break;
 				default: throw new ArgumentOutOfRangeException();
 			}
 		}
@@ -166,19 +178,29 @@ namespace MARDEK.Stats
 		public int Accuracy = 100;
 		public int Health, Mana;
 	}
+	// Poison through Zombification keep the integer values they had when this enum still
+	// started with a "None" entry (removed) - several skill assets (e.g. RotRat_Infect)
+	// serialize StatusEffect as a raw int, so reordering/renumbering these silently
+	// reassigns existing skills to a different status. Berserk/Haste/Regen are new and
+	// safe to auto-increment from Zombification.
 	public enum StatusEffect
 	{
-		None,
-		Poison,  // Take damage at the end of your turn  // Old: 5% dmg turn start, 2% out of combat
+	// NEGATIVE
+		Poison = 1,		// 5% max hp damage at the end of your turn
 		Sleep,         // Immobilised until hit or it wears off
 		Paralysis,     // Skip every other turn
-		Blindness,     // Cannot choose the target, accuracy is reduced // Old: Accuracy is halved
-		Silence,       // Disables magic attacks
-		Numbness,      // Disables physical attacks
-		Curse,         // HOW IS THIS DIFFERENT TO SILENCE?
+		Blindness,     // Accuracy is halved, magic attacks and defensive items can now miss
+		Silence,       // Magic damage reduced to 1/3
+		Numbness,      // Physical damage reduced to 1/3
+		Curse,         // Cannot use skills from skillset
 		Confusion,     // Attack randomly, both allies and enemies
-		Bleed,         //Take damage at the start of your turn // Old: 10% dmg turn start
-		Zombification // Attack allies with basic attacks, take damage from healing.
+		Bleed,         // 5% Max hp damage at the start of your turn
+		Zombification,	// Attack allies with basic attacks, take damage from healing.
+
+	// POSITIVE
+		Berserk,	// Character can only perform their basic attack but strength is doubled
+		Haste,		// Agility is doubled
+		Regen,		// Gain 5% max hp per turn
 	}
 }
 

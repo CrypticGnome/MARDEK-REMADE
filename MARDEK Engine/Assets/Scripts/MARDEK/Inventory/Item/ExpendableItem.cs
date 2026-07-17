@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using MARDEK.Battle;
 using UnityEngine;
 
@@ -26,9 +27,9 @@ namespace MARDEK.Inventory
 			return new Color(81f / 255f, 113f / 255f, 217f / 255f);
 		}
 
-		public bool TryPerformAction(BattleCharacter user, BattleCharacter target)
+		public bool TryPerformAction(BattleCharacter user, IReadOnlyList<BattleCharacter> targets)
 		{
-			action.Apply(user, target);
+			action.Apply(user, targets);
 			return true;
 		}
 	}

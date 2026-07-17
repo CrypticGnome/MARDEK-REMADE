@@ -150,6 +150,20 @@ namespace MARDEK.Battle
 				attackPosition = idlePosition + (target.hitPoint.position - strikePoint.position);
 			}
 
+			yield return ApproachStrikeAndReturn(attackPosition, strikeClip, onDamagePoint);
+		}
+
+		// A "targeting all" breath has no single target's hit point to approach - the
+		// attacker instead moves to a fixed formation-centre point on the target side.
+		IEnumerator PlayCenterFieldStrikeSequence(Vector3 centerPosition, AnimationClip strikeClip, Action onDamagePoint)
+		{
+			yield return ApproachStrikeAndReturn(centerPosition, strikeClip, onDamagePoint);
+		}
+
+		IEnumerator ApproachStrikeAndReturn(Vector3 attackPosition, AnimationClip strikeClip, Action onDamagePoint)
+		{
+			Vector3 idlePosition = transform.position;
+
 			yield return MoveWithClip(moveto, idlePosition, attackPosition, moveToDuration);
 			TryPlayClip(strikeClip);
 			yield return WaitForDamagePoint(ClipLength(strikeClip), onDamagePoint);
@@ -193,20 +207,24 @@ namespace MARDEK.Battle
 		}
 
 		/// <summary>
-		/// Plays the appropriate animation sequence for the given ActionType:
-		/// Melee/Breath run the full approach-strike-return sequence (with the breath
-		/// clip swapped in for Breath) and invoke applyEffect at the strike's DamagePoint,
-		/// while Spellcast/Item just play their animation in place and apply immediately.
+		/// Plays the appropriate animation sequence for the given ActionType. Melee always
+		/// approaches singleTarget (multi-target melee isn't supported yet). Breath approaches
+		/// singleTarget when there's one, or moves to allTargetsCenter when targeting everyone
+		/// on a side. Spellcast/Item just play their animation in place and apply immediately,
+		/// so they don't need a target at all - a single applyEffect call handles every target.
 		/// </summary>
-		public IEnumerator PlayAction(ActionType actionType, BattleModelAnimator target, Action applyEffect)
+		public IEnumerator PlayAction(ActionType actionType, BattleModelAnimator singleTarget, Vector3? allTargetsCenter, Action applyEffect)
 		{
 			switch (actionType)
 			{
 				case ActionType.Melee:
-					yield return PlayApproachAndStrikeSequence(target, strike, applyEffect);
+					yield return PlayApproachAndStrikeSequence(singleTarget, strike, applyEffect);
 					break;
 				case ActionType.Breath:
-					yield return PlayApproachAndStrikeSequence(target, breath, applyEffect);
+					if (allTargetsCenter.HasValue)
+						yield return PlayCenterFieldStrikeSequence(allTargetsCenter.Value, breath, applyEffect);
+					else
+						yield return PlayApproachAndStrikeSequence(singleTarget, breath, applyEffect);
 					break;
 				case ActionType.Spellcast:
 					applyEffect?.Invoke();

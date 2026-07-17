@@ -24,6 +24,12 @@ namespace MARDEK.Battle
 		[SerializeField] AudioClip victoryFanfareStandard;
 		[SerializeField] AudioClip victoryFanfareGrand;
 		[SerializeField] AudioClip gameOverJingle;
+		// Fixed points a "targeting all" breath moves to instead of a specific target's hit
+		// point - the centre of whichever side is being hit, not the caster's own side.
+		[SerializeField] Transform enemyFormationCenter;
+		[SerializeField] Transform heroFormationCenter;
+		public static Transform EnemyFormationCenter => instance.enemyFormationCenter;
+		public static Transform HeroFormationCenter => instance.heroFormationCenter;
 		public static Encounter Encounter;
 		public static EncounterSet encounter { private get; set; }
 		public static BattleCharacter characterActing { get; private set; }
@@ -188,7 +194,10 @@ namespace MARDEK.Battle
 			instance.stateMachine.TrySetState(BattleState.ChoosingAction);
 		}
 
-		public static void PerformActionToTarget(IBattleAction action, BattleCharacter target)
+		public static void PerformActionToTarget(IBattleAction action, BattleCharacter target) =>
+			PerformActionToTarget(action, new List<BattleCharacter> { target });
+
+		public static void PerformActionToTarget(IBattleAction action, IReadOnlyList<BattleCharacter> targets)
 		{
 			if (action is null)
 			{
@@ -203,16 +212,19 @@ namespace MARDEK.Battle
 
 			IEnumerator ResolveAction()
 			{
-				yield return attacker.PerformAction(action, target);
+				yield return attacker.PerformAction(action, targets);
 				instance.EndTurn();
 			}
 		}
 
-		// Dying is now handled inline by BattleCharacter.PerformAction as soon as a target's
-		// HP drops to 0, rather than being batched here - by the time EndTurn() runs, any
-		// death from this turn's action has already been fully played out.
+		// Dying from this turn's own action is handled inline by BattleCharacter.PerformAction
+		// as soon as a target's HP drops to 0, rather than being batched here - by the time
+		// EndTurn() runs, that's already been fully played out. End-of-turn status effects
+		// (Poison/Regen) run here instead, since they trigger once the turn is over rather
+		// than as a consequence of an action - and can also cause a death of their own.
 		void EndTurn()
 		{
+			characterActing?.TickEndOfTurnEffects();
 			characterActing = null;
 			instance.stateMachine.TrySetState(BattleState.Idle);
 			OnTurnEnd?.Invoke();

@@ -23,6 +23,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: d8934c054c29c6a4ea1c8a8e6c85ec9e, type: 2}
     actionEffects:
     - rid: 595661094312214604
+    targetScope: 1
+    ActionType: 1
   references:
     version: 2
     RefIds:

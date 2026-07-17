@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace MARDEK.Battle
@@ -7,6 +8,6 @@ namespace MARDEK.Battle
 		public Sprite ActionIcon { get; }
 		public string DisplayName { get; }
 		public BattleAction Action { get; }
-		public abstract bool TryPerformAction(BattleCharacter user, BattleCharacter target);
+		public abstract bool TryPerformAction(BattleCharacter user, IReadOnlyList<BattleCharacter> targets);
 	}
 }

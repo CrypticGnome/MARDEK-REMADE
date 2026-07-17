@@ -323,6 +323,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eec52a339a99574e993c9cc690eb489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &692592178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 692592179}
+  m_Layer: 0
+  m_Name: CentreAttackPoint Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &692592179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692592178}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -228.3, y: -192.6, z: 10.721888}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2119703468}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &942762670
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,9 +461,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1044682191}
     - target: {fileID: 330018440776529925, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: heroFormationCenter
+      value: 
+      objectReference: {fileID: 2018614915}
+    - target: {fileID: 330018440776529925, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: victoryFanfareGrand
       value: 
       objectReference: {fileID: 8300000, guid: a2cf9b3a1d4168e41bb5e7638a764953, type: 3}
+    - target: {fileID: 330018440776529925, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
+      propertyPath: enemyFormationCenter
+      value: 
+      objectReference: {fileID: 692592179}
     - target: {fileID: 330018440776529925, guid: 0aba383be76ec0040a70d6d5e9546adc, type: 3}
       propertyPath: victoryFanfareStandard
       value: 
@@ -1809,6 +1848,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1591433212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1374667812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1374667813}
+  m_Layer: 0
+  m_Name: EnemyPos5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1374667813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374667812}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -307.73026, y: -175, z: 10.721888}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2119703468}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1396922456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2057,6 +2127,7 @@ Transform:
   - {fileID: 1327911665}
   - {fileID: 277324029}
   - {fileID: 1056640758}
+  - {fileID: 2018614915}
   m_Father: {fileID: 196057596}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1824255725 stripped
@@ -2190,6 +2261,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2119703468}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2018614914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2018614915}
+  m_Layer: 0
+  m_Name: CentreAttackPoint Hero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2018614915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018614914}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -242.6, y: -192.6, z: 10.721888}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1591433212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2075320152
 GameObject:
   m_ObjectHideFlags: 0
@@ -2295,6 +2397,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 957178491}
+  - {fileID: 1374667813}
+  - {fileID: 692592179}
   - {fileID: 1030590116}
   - {fileID: 238744017}
   - {fileID: 1937149085}
