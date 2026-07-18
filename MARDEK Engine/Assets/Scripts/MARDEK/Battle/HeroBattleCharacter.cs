@@ -17,7 +17,10 @@ namespace MARDEK.Battle
 		// 5 vs 6 is a 20% swing).
 		const float LevelGapExponentBase = 1.1f;
 
-		public Character Character { get; private set; }
+		// The persistent CharacterPlayable this was spawned from - holds data that's
+		// specific to being a hero (ReactionSkillset, PassiveSkillset) rather than something
+		// every BattleCharacter needs.
+		public CharacterPlayable Character { get; private set; }
 
 		// Fired with the raw amount just added, regardless of whether that same grant also
 		// triggered a level-up - PlayerCharacterUI.IncreaseExperience listens for this.
@@ -92,7 +95,10 @@ namespace MARDEK.Battle
 
 		public override void LoadCharacter(Character character)
 		{
-			Character = character;
+			Character = character as CharacterPlayable;
+			if (Character == null)
+				Debug.LogWarning($"{character.Profile.displayName} is used as a hero but isn't a CharacterPlayable - reaction/passive skillsets will be unavailable", character);
+
 			Skillset = character.ActionSkillset;
 			InitialiseFrom(character);
 

@@ -1,7 +1,7 @@
 using UnityEngine;
 namespace MARDEK.CharacterSystem
 {
-	[CreateAssetMenu(fileName = "CharacterUnplayable", menuName = "MARDEK/Character/Playable Character")]
+	[CreateAssetMenu(fileName = "CharacterPlayable", menuName = "MARDEK/Character/Playable Character")]
 
 	public class CharacterPlayable : Character
 	{

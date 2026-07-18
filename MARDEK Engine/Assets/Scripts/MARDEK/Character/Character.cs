@@ -3,8 +3,8 @@ using UnityEngine;
 namespace MARDEK.CharacterSystem
 {
 	using System;
-	using Inventory;
-	using Stats;
+	using MARDEK.Inventory;
+	using MARDEK.Stats;
 
 	[CreateAssetMenu(menuName = "MARDEK/Character/Character")]
 	public class Character : ScriptableObject
@@ -12,15 +12,11 @@ namespace MARDEK.CharacterSystem
 		[SerializeField] public bool isRequired;
 		[field: SerializeField] public CharacterProfile Profile { get; private set; }
 		[field: SerializeField] public EquippedItems ItemsEquipped { get; private set; }
-		[field: SerializeField] public Inventory Inventory { get; private set; }
+		[field: SerializeField] public Inventory Inventory { get; private set; } = new Inventory();
 		public CoreStats BaseStats { get { return Profile.Stats; } }
 		[field: SerializeField] public ActionSkillset ActionSkillset { get; private set; }
 		public delegate void StatChanged();
 		public event StatChanged OnStatChanged;
-		public Character()
-		{
-			Inventory = new Inventory();
-		}
 
 		[SerializeField] int attack;
 		public int Attack
