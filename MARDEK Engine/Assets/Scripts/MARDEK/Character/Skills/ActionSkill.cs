@@ -1,16 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using MARDEK.Battle;
 
 namespace MARDEK.Skill
 {
-	using System.Linq;
-	using MARDEK.Battle;
-
 	public abstract class ActionSkill : Skill, IBattleAction
 	{
 		[field: SerializeField] public int Cost { get; private set; }
 		[SerializeField] BattleAction action;
-		public BattleAction Action { get { return action; } }
+		public BattleAction Action => action;
 
 		public Sprite ActionIcon => Action.Element.thickSprite;
 

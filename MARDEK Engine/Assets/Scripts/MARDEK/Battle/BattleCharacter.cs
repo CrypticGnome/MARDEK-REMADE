@@ -54,9 +54,9 @@ namespace MARDEK.Battle
 		}
 
 		public StatusEffects StatusBuildup = new StatusEffects();
-		public bool stunned;
+		private bool isStunned;
 
-		private void OnValidate()
+		public virtual void OnValidate()
 		{
 			if (battleModel == null)
 				battleModel = GetComponentInChildren<BattleModelAnimator>(true);
@@ -75,8 +75,6 @@ namespace MARDEK.Battle
 		{
 			Profile = character.Profile;
 			Level = character.Level;
-			if (battleModel == null)
-				battleModel = GetComponentInChildren<BattleModelAnimator>(true);
 
 			VolatileStats = new CoreStats(BaseStats);
 			BaseStats.CalculateMaxValues(this);
@@ -102,7 +100,7 @@ namespace MARDEK.Battle
 				Debug.Log($"{Name} is asleep");
 				return false;
 			}
-			if (stunned)
+			if (isStunned)
 			{
 				Debug.Log($"{Name} is stunned");
 				return false;
@@ -185,13 +183,13 @@ namespace MARDEK.Battle
 
 			if (StatusBuildup.Paralysis > 0)
 			{
-				stunned = !stunned;
+				isStunned = !isStunned;
 				StatusBuildup.Paralysis -= resistances.Paralysis + 1;
 				Debug.Log($"{Profile.displayName} is paralysed and has {StatusBuildup.Paralysis} paralysis build up");
 
 			}
 			else
-				stunned = false;
+				isStunned = false;
 
 			if (StatusBuildup.Blindness > 0)
 				StatusBuildup.Blindness -= resistances.Blindness + 1;
@@ -285,7 +283,5 @@ namespace MARDEK.Battle
 			}
 			return CharacterTypePortraits.CharacterTypeSprites[Profile.Type];
 		}
-
-
 	}
 }

@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Linq;
 using MARDEK.Animation;
@@ -38,6 +37,9 @@ public class PlayerCharacterUI : MonoBehaviour, IPointerClickHandler
 		elementImage.sprite = character.Profile.element.thinSprite;
 		characterAnimator.ClipList = character.Profile.WalkSprites;
 		characterAnimator.gameObject.SetActive(true);
+
+		character.OnExperienceGained += IncreaseExperience;
+		character.OnLeveledUp += IncreaseLevel;
 	}
 
 	void UpdateCharacter()
@@ -74,13 +76,20 @@ public class PlayerCharacterUI : MonoBehaviour, IPointerClickHandler
 
 	private IEnumerator PlayExperienceText(string text)
 	{
+		const float FadeOutTime = 0.5f;
 		expRewardText.enabled = true;
 		expRewardText.text = text;
+		expRewardText.alpha = 1;
 		float time = 0;
-		while (time < expRewardBounce.keys.Last().time)
+		float animationDuration = expRewardBounce.keys.Last().time;
+		while (time < animationDuration)
 		{
 			expRewardRectTrandform.position = new Vector3(0,expRewardBounce.Evaluate(time),0);
+			float fadeOutStrength = (FadeOutTime - (animationDuration - time)) / FadeOutTime;
+			expRewardText.alpha = 1 - Mathf.Clamp01(fadeOutStrength);
+
 			yield return null;
+			time += Time.deltaTime;
 		}
 		expRewardText.enabled = false;
 		expRewardText.text = null;

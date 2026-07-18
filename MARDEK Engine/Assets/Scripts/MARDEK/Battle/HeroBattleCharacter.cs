@@ -1,3 +1,4 @@
+using System;
 using MARDEK.CharacterSystem;
 using UnityEngine;
 
@@ -17,6 +18,13 @@ namespace MARDEK.Battle
 
 		public Character Character { get; private set; }
 
+		// Fired with the raw amount just added, regardless of whether that same grant also
+		// triggered a level-up - PlayerCharacterUI.IncreaseExperience listens for this.
+		public event Action<int> OnExperienceGained;
+		// Fired after Level/Character.Level are updated - PlayerCharacterUI.IncreaseLevel
+		// listens for this.
+		public event Action OnLeveledUp;
+
 		// Level-up is a side effect of the setter so every source of xp (kill, assist,
 		// skill-use) gets it automatically. Excess xp beyond the threshold is discarded
 		// rather than carried over, and only one level is gained per grant even if the
@@ -27,7 +35,11 @@ namespace MARDEK.Battle
 			get => Character.Experience;
 			private set
 			{
+				int gained = value - Character.Experience;
 				Character.Experience = value;
+				if (gained != 0)
+					OnExperienceGained?.Invoke(gained);
+
 				if (Character.Experience >= MaxExperience)
 				{
 					Character.Experience = 0;
@@ -43,6 +55,7 @@ namespace MARDEK.Battle
 			Level++;
 			Character.Level = Level;
 			Debug.Log($"{Name} reached level {Level}!");
+			OnLeveledUp?.Invoke();
 		}
 
 		// Called when this hero lands the killing blow on an enemy - they get the enemy's

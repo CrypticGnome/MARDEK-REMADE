@@ -1,15 +1,15 @@
 
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+using MARDEK.CharacterSystem;
+using MARDEK.Skill;
 
 namespace MARDEK.Battle
 {
-	using System.Collections;
-	using CharacterSystem;
-	using MARDEK.Skill;
-
 	public class EnemyBattleCharacter : BattleCharacter
 	{
+		[SerializeField] Transform model;
 		public ActionSkill NextAction { get; private set; }
 		public BattleCharacter NextTarget { get; private set; }
 
@@ -18,6 +18,29 @@ namespace MARDEK.Battle
 		// every BattleCharacter needs.
 		public CharacterUnplayable Character { get; private set; }
 		public int ExperienceReward => Character != null ? Character.ExperienceReward : 0;
+
+		public override void OnValidate()
+		{
+			base.OnValidate();
+
+			if (model is null)
+			{
+				var childTranforms = GetComponentsInChildren<Transform>();
+
+				foreach (var childTransform in childTranforms)
+				{
+					if (childTransform.gameObject.name != "Model") continue;
+
+					model = childTransform;
+					break;
+				}
+			}
+
+			if (model is null)
+			{
+				UnityEngine.Debug.LogError($"EnemyBattleCharacter {Name} must have a child transform called \"Model\".");
+			}
+		}
 
 		public override void LoadCharacter(Character character)
 		{
@@ -95,10 +118,7 @@ namespace MARDEK.Battle
 		{
 			yield return battleModel.PlayDeathSequence();
 
-			// Hide only the visuals child - this GameObject stays active, so the dead enemy
-			// remains in EnemyBattleParty as a valid object (turn order, target selection and
-			// the victory check all filter on IsDead instead).
-			battleModel.SetModelActive(false);
+			model.gameObject.SetActive(false);
 		}
 	}
 }

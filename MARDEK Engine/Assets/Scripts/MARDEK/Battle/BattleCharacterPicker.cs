@@ -133,11 +133,9 @@ namespace MARDEK.UI
 				PositionIndex = EnemiesSelected ? ClampEnemiesIndex(PositionIndex - 1) : ClampHeroesIndex(PositionIndex - 1);
 			}
 
-
 			SelectedCharacter = EnemiesSelected ?
 				 Enemies.OrderByDescending(e => e.battleModel.transform.position.y).ElementAt(PositionIndex) :
 				 Heroes.OrderByDescending(e => e.battleModel.transform.position.y).ElementAt(PositionIndex);
-
 
 			SetPosition();
 		}
@@ -188,7 +186,6 @@ namespace MARDEK.UI
 			BattleModelAnimator target = SelectedCharacter.battleModel;
 			transform.Set2DPosition(target.CrystalPointerGoToPosition.position);
 			transform.localScale = EnemiesSelected ? new Vector3(-0.1f, 0.1f, 1f) : new Vector3(0.1f, 0.1f, 1f);
-
 		}
 
 		void ShowAllTargetPointers(IReadOnlyList<BattleCharacter> targets)

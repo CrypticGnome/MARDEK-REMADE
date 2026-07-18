@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using MARDEK.Audio;
+using MARDEK.Stats;
+
 namespace MARDEK.Battle
 {
-	using System;
-	using MARDEK.Audio;
-	using MARDEK.Stats;
+
 	[Serializable]
 	public class BattleAction
 	{

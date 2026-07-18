@@ -5960,7 +5960,10 @@ MonoBehaviour:
     confusion: 0
     bleed: 0
     zombification: 0
-  stunned: 0
+    berserk: 0
+    haste: 0
+    regen: 0
+  model: {fileID: 2273403663520413421}
 --- !u!1001 &1396330910022255247
 PrefabInstance:
   m_ObjectHideFlags: 0

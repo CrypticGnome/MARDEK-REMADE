@@ -119,7 +119,6 @@ namespace MARDEK.Battle
 			listIndex = 0;
 			allCharacters.ForEach(character => character.ACT = tempACT[listIndex++]);
 
-
 			void AddCharacterTime(BattleCharacter character, bool surprised)
 			{
 				float speedMultiplier = surprised ? 1 : 2;
@@ -170,7 +169,6 @@ namespace MARDEK.Battle
 				{
 					yield break;
 				}
-
 
 				characterActing = nextActor;
 				bool canAct = characterActing.BeginTurn();

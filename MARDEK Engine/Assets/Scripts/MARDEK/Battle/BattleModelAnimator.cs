@@ -13,7 +13,6 @@ namespace MARDEK.Battle
 		[SerializeField] Transform crystalPointerGoToPosition;
 		[SerializeField] Transform strikePoint;
 		[SerializeField] Transform hitPoint;
-		[SerializeField] float moveToDuration = 0.5f;
 		[SerializeField] DamageDisplay damageDisplay;
 		public DamageDisplay DamageDisplay => damageDisplay;
 		public Transform CrystalPointerGoToPosition => crystalPointerGoToPosition;
@@ -163,19 +162,20 @@ namespace MARDEK.Battle
 		IEnumerator ApproachStrikeAndReturn(Vector3 attackPosition, AnimationClip strikeClip, Action onDamagePoint)
 		{
 			Vector3 idlePosition = transform.position;
-
-			yield return MoveWithClip(moveto, idlePosition, attackPosition, moveToDuration);
+			
+			yield return MoveWithClip(moveto, idlePosition, attackPosition);
 			TryPlayClip(strikeClip);
 			yield return WaitForDamagePoint(ClipLength(strikeClip), onDamagePoint);
-			yield return MoveWithClip(jumpback, attackPosition, idlePosition, ClipLength(jumpback));
+			yield return MoveWithClip(jumpback, attackPosition, idlePosition);
 			TryPlayClip(idle);
 
-			IEnumerator MoveWithClip(AnimationClip clip, Vector3 from, Vector3 to, float duration)
+			IEnumerator MoveWithClip(AnimationClip clip, Vector3 from, Vector3 to)
 			{
 				TryPlayClip(clip);
+				float duration = ClipLength(clip);
 				for (float t = 0; t < duration; t += Time.deltaTime)
 				{
-					transform.position = Vector3.Lerp(from, to, t / duration);
+					transform.position = Vector3.Slerp(from, to, t / duration);
 					yield return null;
 				}
 				transform.position = to;
@@ -247,18 +247,6 @@ namespace MARDEK.Battle
 			animation.wrapMode = WrapMode.Once;
 			yield return new WaitForSeconds(ClipLength(die));
 		}
-
-		/// <summary>
-		/// Shows or hides the visual model - the child GameObject holding the Animation
-		/// component and sprites. The prefab root (this component, BattleCharacter) stays
-		/// active, so a dead character remains a valid object in the party lists.
-		/// </summary>
-		public void SetModelActive(bool active)
-		{
-			if (animation != null)
-				animation.gameObject.SetActive(active);
-		}
-
 	}
 	public enum BattleAnimationType
 	{
