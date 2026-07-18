@@ -1,11 +1,80 @@
+using MARDEK.CharacterSystem;
+using UnityEngine;
+
 namespace MARDEK.Battle
 {
-	using CharacterSystem;
-
 	public class HeroBattleCharacter : BattleCharacter
 	{
+		// TODO: flat for now - no level-scaling/formula yet.
+		const int SkillUseExperience = 20;
+
+		// exp = baseReward * base^(enemyLevel - killerLevel) - a level advantage/disadvantage
+		// is worth a constant percentage per level regardless of how high the levels
+		// involved are, unlike a raw level ratio (which flattens out at high levels: a
+		// level 51 enemy vs a level 50 killer is only a 2% swing, the same +1 gap at level
+		// 5 vs 6 is a 20% swing).
+		const float LevelGapExponentBase = 1.1f;
+
 		public Character Character { get; private set; }
-		public int Experience { get { return Character.Experience; } private set { Character.Experience = value; } }
+
+		// Level-up is a side effect of the setter so every source of xp (kill, assist,
+		// skill-use) gets it automatically. Excess xp beyond the threshold is discarded
+		// rather than carried over, and only one level is gained per grant even if the
+		// amount would cross more than one threshold - matches the spec literally; revisit
+		// if a single huge reward should ever chain multiple level-ups.
+		public int Experience
+		{
+			get => Character.Experience;
+			private set
+			{
+				Character.Experience = value;
+				if (Character.Experience >= MaxExperience)
+				{
+					Character.Experience = 0;
+					LevelUp();
+				}
+			}
+		}
+
+		public int MaxExperience => Level * 1000;
+
+		void LevelUp()
+		{
+			Level++;
+			Character.Level = Level;
+			Debug.Log($"{Name} reached level {Level}!");
+		}
+
+		// Called when this hero lands the killing blow on an enemy - they get the enemy's
+		// ExperienceReward scaled by the level gap (or the flat skill-use amount, whichever
+		// is bigger - see ActionSkill.TryPerformAction, which skips its own skill-use grant
+		// on a kill so this doesn't double up), every other hero in the party gets half of
+		// that same amount for free.
+		public void GrantKillExperience(int baseReward, int enemyLevel)
+		{
+			int scaledKillReward = ScaleRewardByLevelGap(baseReward, enemyLevel - Level);
+			int killReward = Mathf.Max(scaledKillReward, SkillUseExperience);
+
+			Experience += killReward;
+			int assistReward = killReward / 2;
+			foreach (HeroBattleCharacter hero in BattleManager.PlayerBattleParty)
+				if (hero != this)
+					hero.Experience += assistReward;
+		}
+
+		static int ScaleRewardByLevelGap(int baseReward, int levelGap)
+		{
+			// Intentionally not clamped so you can't farm xp in low level areas and to make levelling up a new hero
+			// to the same level as the rest of your party as quick and easy as possible.
+			float multiplier = Mathf.Pow(LevelGapExponentBase, levelGap);
+			return Mathf.RoundToInt(baseReward * multiplier);
+		}
+
+		// Called on every successful ActionSkill use (including basic Attack, which is just
+		// an ActionSkill with Cost = 0) that doesn't kill anyone - not on failed attempts
+		// (e.g. insufficient MP), not on items (which aren't ActionSkills), and not on a
+		// kill (GrantKillExperience already takes the max against this same flat amount).
+		public void GrantSkillUseExperience() => Experience += SkillUseExperience;
 
 		public override void LoadCharacter(Character character)
 		{

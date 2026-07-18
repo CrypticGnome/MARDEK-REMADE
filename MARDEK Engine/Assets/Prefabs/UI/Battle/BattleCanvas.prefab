@@ -4258,6 +4258,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 115916223587349836}
     m_Modifications:
+    - target: {fileID: 24878479878294553, guid: 84f48fb905607ac48874616e34dd0dd8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 24878479878294553, guid: 84f48fb905607ac48874616e34dd0dd8, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 24878479878294553, guid: 84f48fb905607ac48874616e34dd0dd8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 24878479878294553, guid: 84f48fb905607ac48874616e34dd0dd8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6918295655985375097, guid: 84f48fb905607ac48874616e34dd0dd8, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -9723,6 +9739,8 @@ MonoBehaviour:
   victoryFanfareStandard: {fileID: 0}
   victoryFanfareGrand: {fileID: 0}
   gameOverJingle: {fileID: 0}
+  enemyFormationCenter: {fileID: 0}
+  heroFormationCenter: {fileID: 0}
 --- !u!114 &4129369519186946166
 MonoBehaviour:
   m_ObjectHideFlags: 0

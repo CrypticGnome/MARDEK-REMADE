@@ -119,13 +119,22 @@ namespace MARDEK.CharacterSystem
 		public StatusEffects StatusBuildup;
 		public int Level;
 		public int Experience;
-		public Character Clone(int level)
+		// Virtual so CharacterUnplayable can return a clone that's still a
+		// CharacterUnplayable, carrying over its own fields (Drops, ExperienceReward) -
+		// otherwise EncounterSet.InstantiateEncounter's clone would silently downgrade to a
+		// plain Character and lose them.
+		public virtual Character Clone(int level)
 		{
 			var clone = CreateInstance<Character>();
+			CopyBaseFieldsTo(clone, level);
+			return clone;
+		}
+
+		protected void CopyBaseFieldsTo(Character clone, int level)
+		{
 			clone.Profile = Profile;
 			clone.Level = level;
 			clone.ActionSkillset = Profile.LearnableSkillset;
-			return clone;
 		}
 		public void TickStatusEffects()
 		{

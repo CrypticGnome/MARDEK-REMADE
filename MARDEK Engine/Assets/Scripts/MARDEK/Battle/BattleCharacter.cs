@@ -135,8 +135,13 @@ namespace MARDEK.Battle
 			{
 				action.TryPerformAction(this, targets);
 				foreach (BattleCharacter target in targets)
-					if (target.IsDead)
-						deathRoutines.Add(target.StartCoroutine(target.Die()));
+				{
+					if (!target.IsDead) continue;
+
+					deathRoutines.Add(target.StartCoroutine(target.Die()));
+					if (this is HeroBattleCharacter killer && target is EnemyBattleCharacter enemy)
+						killer.GrantKillExperience(enemy.ExperienceReward, enemy.Level);
+				}
 			}
 
 			if (action is ActionSkill skill && battleModel != null)

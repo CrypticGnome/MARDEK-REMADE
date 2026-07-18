@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace MARDEK.Skill
 {
+	using System.Linq;
 	using MARDEK.Battle;
 
 	public abstract class ActionSkill : Skill, IBattleAction
@@ -31,6 +32,13 @@ namespace MARDEK.Skill
 
 			action.Apply(user, targets, targetingAll ? 0.5f : 1f);
 			user.CurrentMP -= cost;
+
+			// Only grants the flat skill-use amount if nothing died - a kill instead grants
+			// the max of this same amount and the kill reward (see GrantKillExperience), so
+			// granting both here would double-count it.
+			if (user is HeroBattleCharacter hero && !targets.Any(target => target.IsDead))
+				hero.GrantSkillUseExperience();
+
 			return true;
 		}
 	}

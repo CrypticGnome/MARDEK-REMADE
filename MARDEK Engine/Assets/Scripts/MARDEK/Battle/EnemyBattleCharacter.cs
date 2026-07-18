@@ -13,8 +13,18 @@ namespace MARDEK.Battle
 		public ActionSkill NextAction { get; private set; }
 		public BattleCharacter NextTarget { get; private set; }
 
+		// The persistent CharacterUnplayable this was spawned from - holds data that's
+		// specific to being an enemy (loot Drops, ExperienceReward) rather than something
+		// every BattleCharacter needs.
+		public CharacterUnplayable Character { get; private set; }
+		public int ExperienceReward => Character != null ? Character.ExperienceReward : 0;
+
 		public override void LoadCharacter(Character character)
 		{
+			Character = character as CharacterUnplayable;
+			if (Character == null)
+				Debug.LogWarning($"{character.Profile.displayName} is used as an enemy but isn't a CharacterUnplayable - loot drops and experience reward will be unavailable", character);
+
 			InitialiseFrom(character);
 			Skillset = Profile.LearnableSkillset;
 
