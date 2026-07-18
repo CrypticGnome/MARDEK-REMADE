@@ -1,4 +1,5 @@
 using System;
+using MARDEK.Animation;
 using MARDEK.CharacterSystem;
 using UnityEngine;
 
@@ -110,6 +111,12 @@ namespace MARDEK.Battle
 		{
 			Character.CurrentHP = CurrentHP;
 			Character.CurrentMP = CurrentMP;
+		}
+
+		public override Sprite[] GetBattleIcons()
+		{
+			SpriteAnimationClip clip = Profile.WalkSprites.GetClipByDirection(Vector2.down);
+			return new Sprite[] { clip.GetSprite(0), clip.GetSprite(1) };
 		}
 	}
 }

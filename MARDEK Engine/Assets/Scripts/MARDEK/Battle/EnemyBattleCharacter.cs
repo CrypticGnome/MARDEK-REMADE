@@ -1,9 +1,9 @@
 
-using System.Collections.Generic;
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using MARDEK.CharacterSystem;
 using MARDEK.Skill;
+using UnityEngine;
 
 namespace MARDEK.Battle
 {
@@ -119,6 +119,11 @@ namespace MARDEK.Battle
 			yield return battleModel.PlayDeathSequence();
 
 			model.gameObject.SetActive(false);
+		}
+
+		public override Sprite[] GetBattleIcons()
+		{
+			return new Sprite[] { CharacterTypePortraits.CharacterTypeSprites[Profile.Type] };
 		}
 	}
 }

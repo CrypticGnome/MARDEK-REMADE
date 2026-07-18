@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using MARDEK.Animation;
 using MARDEK.CharacterSystem;
 using MARDEK.Skill;
 using MARDEK.Stats;
@@ -270,18 +269,7 @@ namespace MARDEK.Battle
 			yield break;
 		}
 
-		public Sprite GetBattleIcon()
-		{
-			if (Profile.WalkSprites != null)
-			{
-				SpriteAnimationClip clip = Profile.WalkSprites.GetClipByDirection(Vector2.down);
-				if (clip != null)
-				{
-					Sprite sprite = clip.GetSprite(0);
-					if (sprite != null) return sprite;
-				}
-			}
-			return CharacterTypePortraits.CharacterTypeSprites[Profile.Type];
-		}
+		public abstract Sprite[] GetBattleIcons();
+	
 	}
 }

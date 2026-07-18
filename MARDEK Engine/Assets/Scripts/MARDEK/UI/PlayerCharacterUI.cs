@@ -49,7 +49,7 @@ public class PlayerCharacterUI : MonoBehaviour, IPointerClickHandler
 
 		if (index < BattleManager.PlayerBattleParty.Count)
 		{
-			character = (HeroBattleCharacter)BattleManager.PlayerBattleParty[index];
+			character = BattleManager.PlayerBattleParty[index];
 			basePanel.SetActive(true);
 		}
 		else

@@ -13,6 +13,8 @@ namespace MARDEK.UI
 		[SerializeField, HideInInspector] Image[] heroImages = new Image[4], enemyImages = new Image[5];
 		[SerializeField] RectTransform displayTransform;
 
+		private List<Sprite[]> heroAnimations;
+
 		List<HeroBattleCharacter> playerParty => BattleManager.PlayerBattleParty;
 		List<EnemyBattleCharacter> enemyParty => BattleManager.EnemyBattleParty;
 		float displayWidth;
@@ -49,11 +51,16 @@ namespace MARDEK.UI
 			SetTurnDisplay();
 			StartCoroutine(UpdateDisplay());
 
+			heroAnimations = new List<Sprite[]>();
+
 			for (int i = 0; i < playerParty.Count; i++)
-				heroImages[i].sprite = playerParty[i].GetBattleIcon();
+			{
+				heroAnimations.Add(playerParty[i].GetBattleIcons());
+				heroImages[i].sprite = heroAnimations[i][0];
+			}
 
 			for (int i = 0; i < enemyParty.Count; i++)
-				enemyImages[i].sprite = enemyParty[i].GetBattleIcon();
+				enemyImages[i].sprite = enemyParty[i].GetBattleIcons()[0];
 
 			IEnumerator UpdateDisplay()
 			{
@@ -82,6 +89,16 @@ namespace MARDEK.UI
 		{
 			BattleManager.OnTurnEnd -= TrackDisplay;
 		}
+
+		private void Update()
+		{
+			int walkIndex = (int)Time.time % 2;
+			for(int i = 0; i < playerParty.Count; i++)
+			{
+				heroImages[i].sprite = heroAnimations[i][walkIndex];
+			}
+		}
+
 		[ContextMenu("Set display")]
 		void TrackDisplay()
 		{
@@ -95,8 +112,6 @@ namespace MARDEK.UI
 			if (!gameObject.activeSelf)
 				gameObject.SetActive(true);
 			else OnEnable();
-
 		}
-
 	}
 }

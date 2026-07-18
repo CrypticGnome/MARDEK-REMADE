@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace MARDEK.Battle
@@ -169,16 +170,17 @@ namespace MARDEK.Battle
 			yield return MoveWithClip(jumpback, attackPosition, idlePosition);
 			TryPlayClip(idle);
 
-			IEnumerator MoveWithClip(AnimationClip clip, Vector3 from, Vector3 to)
+			IEnumerator MoveWithClip(AnimationClip clip, Vector3 start, Vector3 end)
 			{
 				TryPlayClip(clip);
 				float duration = ClipLength(clip);
 				for (float t = 0; t < duration; t += Time.deltaTime)
 				{
-					transform.position = Vector3.Slerp(from, to, t / duration);
+					float slerpedTime = 1 - math.cos((t / duration) * math.PI);
+					transform.position = Vector3.Lerp(start, end, slerpedTime);
 					yield return null;
 				}
-				transform.position = to;
+				transform.position = end;
 			}
 		}
 
