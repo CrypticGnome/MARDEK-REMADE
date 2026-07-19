@@ -1,11 +1,11 @@
 using System;
 using System.Collections;
-using MARDEK.Skill;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace MARDEK.Battle
 {
-	public class BattleModelComponent : MonoBehaviour
+	public class BattleModelAnimator : MonoBehaviour
 	{
 		[SerializeField] AnimationClip idle, moveto, strike, jumpback, hurt, die, dead, spellcast, useItem, victory;
 		[SerializeField] AnimationClip breath;
@@ -14,7 +14,6 @@ namespace MARDEK.Battle
 		[SerializeField] Transform crystalPointerGoToPosition;
 		[SerializeField] Transform strikePoint;
 		[SerializeField] Transform hitPoint;
-		[SerializeField] float moveToDuration = 0.5f;
 		[SerializeField] DamageDisplay damageDisplay;
 		public DamageDisplay DamageDisplay => damageDisplay;
 		public Transform CrystalPointerGoToPosition => crystalPointerGoToPosition;
@@ -60,7 +59,7 @@ namespace MARDEK.Battle
 			}
 			catch (Exception e)
 			{
-				Debug.LogError($"{name}: BattleModelComponent tried to play an unassigned animation clip - {e.Message}", this);
+				Debug.LogError($"{name}: BattleModelAnimator tried to play an unassigned animation clip - {e.Message}", this);
 				return false;
 			}
 		}
@@ -78,70 +77,58 @@ namespace MARDEK.Battle
 		public event Action DamagePoint;
 		public void OnDamagePoint() => DamagePoint?.Invoke();
 
-		public void PlayAnimation(BattleAnimationType animType)
+		// Always waits out the clip's own length before returning, regardless of type -
+		// callers that don't care can fire-and-forget via StartCoroutine on this component;
+		// callers that do (e.g. PlayAction) can yield on it directly.
+		public IEnumerator PlayAnimation(BattleAnimationType animType)
 		{
 			switch (animType)
 			{
 				default:
 				case BattleAnimationType.Idle:
-				{
-					TryPlayClip(idle);
+					yield return PlayClip(idle);
 					break;
-				}
 				case BattleAnimationType.MoveTo:
-				{
-					StartCoroutine(PlayClipAndReturnToIdle(moveto));
+					yield return PlayClipAndReturnToIdle(moveto);
 					break;
-				}
 				case BattleAnimationType.Strike:
-				{
-					StartCoroutine(PlayClipAndReturnToIdle(strike));
+					yield return PlayClipAndReturnToIdle(strike);
 					break;
-				}
 				case BattleAnimationType.JumpBack:
-				{
-					StartCoroutine(PlayClipAndReturnToIdle(jumpback));
+					yield return PlayClipAndReturnToIdle(jumpback);
 					break;
-				}
 				case BattleAnimationType.Hurt:
-				{
-					StartCoroutine(PlayClipAndReturnToIdle(hurt));
+					yield return PlayClipAndReturnToIdle(hurt);
 					break;
-				}
 				case BattleAnimationType.Die:
-				{
-					TryPlayClip(die);
 					animation.wrapMode = WrapMode.Once;
+					yield return PlayClip(die);
 					break;
-				}
 				case BattleAnimationType.Dead:
-				{
-					TryPlayClip(dead);
 					animation.wrapMode = WrapMode.Loop;
+					yield return PlayClip(dead);
 					break;
-				}
 				case BattleAnimationType.Spellcast:
-				{
-					StartCoroutine(PlayClipAndReturnToIdle(spellcast));
+					yield return PlayClipAndReturnToIdle(spellcast);
 					break;
-				}
 				case BattleAnimationType.UseItem:
-				{
-					StartCoroutine(PlayClipAndReturnToIdle(useItem));
+					yield return PlayClipAndReturnToIdle(useItem);
 					break;
-				}
 				case BattleAnimationType.Victory:
-				{
-					TryPlayClip(victory);
 					animation.wrapMode = WrapMode.Loop;
+					yield return PlayClip(victory);
 					break;
-				}
+			}
+
+			IEnumerator PlayClip(AnimationClip clip)
+			{
+				TryPlayClip(clip);
+				yield return new WaitForSeconds(ClipLength(clip));
 			}
 
 			IEnumerator PlayClipAndReturnToIdle(AnimationClip clip)
 			{
-				TryPlayClip(clip);
-				yield return new WaitForSeconds(ClipLength(clip));
+				yield return PlayClip(clip);
 				TryPlayClip(idle);
 			}
 		}
@@ -153,7 +140,7 @@ namespace MARDEK.Battle
 		/// of the clip if it doesn't have one authored yet), then JumpBack while returning
 		/// to the idle position.
 		/// </summary>
-		IEnumerator PlayApproachAndStrikeSequence(BattleModelComponent target, AnimationClip strikeClip, Action onDamagePoint)
+		IEnumerator PlayApproachAndStrikeSequence(BattleModelAnimator target, AnimationClip strikeClip, Action onDamagePoint)
 		{
 			Vector3 idlePosition = transform.position;
 
@@ -163,21 +150,37 @@ namespace MARDEK.Battle
 				attackPosition = idlePosition + (target.hitPoint.position - strikePoint.position);
 			}
 
-			yield return MoveWithClip(moveto, idlePosition, attackPosition, moveToDuration);
+			yield return ApproachStrikeAndReturn(attackPosition, strikeClip, onDamagePoint);
+		}
+
+		// A "targeting all" breath has no single target's hit point to approach - the
+		// attacker instead moves to a fixed formation-centre point on the target side.
+		IEnumerator PlayCenterFieldStrikeSequence(Vector3 centerPosition, AnimationClip strikeClip, Action onDamagePoint)
+		{
+			yield return ApproachStrikeAndReturn(centerPosition, strikeClip, onDamagePoint);
+		}
+
+		IEnumerator ApproachStrikeAndReturn(Vector3 attackPosition, AnimationClip strikeClip, Action onDamagePoint)
+		{
+			Vector3 idlePosition = transform.position;
+			
+			yield return MoveWithClip(moveto, idlePosition, attackPosition);
 			TryPlayClip(strikeClip);
 			yield return WaitForDamagePoint(ClipLength(strikeClip), onDamagePoint);
-			yield return MoveWithClip(jumpback, attackPosition, idlePosition, ClipLength(jumpback));
+			yield return MoveWithClip(jumpback, attackPosition, idlePosition);
 			TryPlayClip(idle);
 
-			IEnumerator MoveWithClip(AnimationClip clip, Vector3 from, Vector3 to, float duration)
+			IEnumerator MoveWithClip(AnimationClip clip, Vector3 start, Vector3 end)
 			{
 				TryPlayClip(clip);
+				float duration = ClipLength(clip);
 				for (float t = 0; t < duration; t += Time.deltaTime)
 				{
-					transform.position = Vector3.Lerp(from, to, t / duration);
+					float slerpedTime = 1 - math.cos((t / duration) * math.PI);
+					transform.position = Vector3.Lerp(start, end, slerpedTime);
 					yield return null;
 				}
-				transform.position = to;
+				transform.position = end;
 			}
 		}
 
@@ -206,35 +209,39 @@ namespace MARDEK.Battle
 		}
 
 		/// <summary>
-		/// Plays the appropriate animation sequence for the given skill's ActionType:
-		/// Melee/Breath run the full approach-strike-return sequence (with the breath
-		/// clip swapped in for Breath) and invoke applyEffect at the strike's DamagePoint,
-		/// while Spellcast/Item just play their animation in place and apply immediately.
+		/// Plays the appropriate animation sequence for the given ActionType. Melee always
+		/// approaches singleTarget (multi-target melee isn't supported yet). Breath approaches
+		/// singleTarget when there's one, or moves to allTargetsCenter when targeting everyone
+		/// on a side. Spellcast/Item just play their animation in place and apply immediately,
+		/// so they don't need a target at all - a single applyEffect call handles every target.
 		/// </summary>
-		public IEnumerator PlayAction(ActionSkill skill, BattleModelComponent target, Action applyEffect)
+		public IEnumerator PlayAction(ActionType actionType, BattleModelAnimator singleTarget, Vector3? allTargetsCenter, Action applyEffect)
 		{
-			switch (skill.Action.ActionType)
+			switch (actionType)
 			{
 				case ActionType.Melee:
-					yield return PlayApproachAndStrikeSequence(target, strike, applyEffect);
+					yield return PlayApproachAndStrikeSequence(singleTarget, strike, applyEffect);
 					break;
 				case ActionType.Breath:
-					yield return PlayApproachAndStrikeSequence(target, breath, applyEffect);
+					if (allTargetsCenter.HasValue)
+						yield return PlayCenterFieldStrikeSequence(allTargetsCenter.Value, breath, applyEffect);
+					else
+						yield return PlayApproachAndStrikeSequence(singleTarget, breath, applyEffect);
 					break;
 				case ActionType.Spellcast:
 					applyEffect?.Invoke();
-					PlayAnimation(BattleAnimationType.Spellcast);
+					yield return PlayAnimation(BattleAnimationType.Spellcast);
 					break;
 				case ActionType.Item:
 					applyEffect?.Invoke();
-					PlayAnimation(BattleAnimationType.UseItem);
+					yield return PlayAnimation(BattleAnimationType.UseItem);
 					break;
 			}
 		}
 
 		/// <summary>
 		/// Plays the Die clip and waits for it to finish - used so a defeated character's
-		/// model can be destroyed only after its death animation has played out.
+		/// model can be hidden only after its death animation has played out.
 		/// </summary>
 		public IEnumerator PlayDeathSequence()
 		{
@@ -242,7 +249,6 @@ namespace MARDEK.Battle
 			animation.wrapMode = WrapMode.Once;
 			yield return new WaitForSeconds(ClipLength(die));
 		}
-
 	}
 	public enum BattleAnimationType
 	{
@@ -256,12 +262,5 @@ namespace MARDEK.Battle
 		Spellcast,
 		UseItem,
 		Victory
-	}
-	public enum ActionType
-	{
-		Melee,
-		Spellcast,
-		Breath,
-		Item,
 	}
 }

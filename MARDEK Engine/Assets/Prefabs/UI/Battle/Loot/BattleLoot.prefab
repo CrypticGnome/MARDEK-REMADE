@@ -2041,6 +2041,7 @@ MonoBehaviour:
   - {fileID: 1427875386264135420}
   - {fileID: 6455210449868383641}
   party: {fileID: 11400000, guid: 2054544f8dc27184587c0b2e27e6d3f5, type: 2}
+  gainedMoneyText: {fileID: 4576561902684946313}
 --- !u!1 &4917723936307252224
 GameObject:
   m_ObjectHideFlags: 0
@@ -3360,6 +3361,7 @@ GameObject:
   - component: {fileID: 5998137210360374806}
   - component: {fileID: 4629680584298702663}
   - component: {fileID: 7275129390446628028}
+  - component: {fileID: 8280849878152082150}
   m_Layer: 0
   m_Name: CurrentMoney
   m_TagString: Untagged
@@ -3485,6 +3487,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8280849878152082150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8280849878152082148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35dba1028aff7e4aad9d2fcee0e2ec0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  text: {fileID: 7275129390446628028}
+  inventory: {fileID: 11400000, guid: cdbea03fde2ff8e4c9762b707936aaac, type: 2}
 --- !u!1 &8335721369347728141
 GameObject:
   m_ObjectHideFlags: 0
@@ -5397,10 +5413,6 @@ PrefabInstance:
     - target: {fileID: 4837570114180952971, guid: e1873c1582d196142a9c20d397a26f90, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7873450140729236962, guid: e1873c1582d196142a9c20d397a26f90, type: 3}
-      propertyPath: getAll
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

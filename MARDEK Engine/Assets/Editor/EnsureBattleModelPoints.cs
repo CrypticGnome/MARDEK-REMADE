@@ -4,7 +4,7 @@ using UnityEngine;
 using MARDEK.Battle;
 
 // Ensures every battle-model prefab has a "Receive Melee Strike Point" and a "Strike Point"
-// child transform wired into its BattleModelComponent, matching the convention set by
+// child transform wired into its BattleModelAnimator, matching the convention set by
 // "mardek soldier" (both are plain Transform-only GameObjects parented directly under the
 // model's root transform).
 //
@@ -46,7 +46,7 @@ public static class EnsureBattleModelPoints
           {
                EditorUtility.ClearProgressBar();
           }
-          Debug.Log($"Ensured battle model points: {created} prefab(s) got new points, {renamed} renamed only, {unchanged} already correct, {skipped} skipped (no BattleModelComponent)");
+          Debug.Log($"Ensured battle model points: {created} prefab(s) got new points, {renamed} renamed only, {unchanged} already correct, {skipped} skipped (no BattleModelAnimator)");
      }
 
      enum Result { Created, RenamedOnly, Unchanged, Skipped }
@@ -56,7 +56,7 @@ public static class EnsureBattleModelPoints
           GameObject root = PrefabUtility.LoadPrefabContents(path);
           try
           {
-               var model = root.GetComponentInChildren<BattleModelComponent>();
+               var model = root.GetComponentInChildren<BattleModelAnimator>();
                if (model == null)
                     return Result.Skipped;
 

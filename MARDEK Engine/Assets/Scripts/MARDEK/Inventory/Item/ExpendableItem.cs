@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using MARDEK.Battle;
 using UnityEngine;
 
@@ -26,9 +27,11 @@ namespace MARDEK.Inventory
 			return new Color(81f / 255f, 113f / 255f, 217f / 255f);
 		}
 
-		public bool TryPerformAction(BattleCharacter user, BattleCharacter target)
+		public bool TryPerformAction(BattleCharacter user, IReadOnlyList<BattleCharacter> targets, ReactionModifiers reactionModifiers)
 		{
-			action.Apply(user, target);
+			// Items are excluded from the reaction system - reactionModifiers is always
+			// neutral here, but still threaded through for a uniform ApplyEffect signature.
+			action.Apply(user, targets, 1f, reactionModifiers);
 			return true;
 		}
 	}

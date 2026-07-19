@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 using static MARDEK.Battle.BattleManager;
@@ -10,6 +9,10 @@ namespace MARDEK.Battle
 	{
 		public static float MaxTimeBetweenTurns = 2f;
 		public const float ActResolution = 1000f;
+
+		// The ACT lists built by GetCharacterACTNextTurn and consumed here are parallel to
+		// AllCombatants, which always iterates enemies first then heroes - dead characters
+		// are included (with frozen ACT) to keep the indices aligned.
 		public static IEnumerator LerpCharacterACTs(float timeToTurn, List<float> startACT, List<float> finalACT)
 		{
 			if (timeToTurn <= 0)
@@ -24,12 +27,7 @@ namespace MARDEK.Battle
 				}
 				int listIndex = 0;
 				waitCompletion = Mathf.Clamp01(timer / timeToTurn);
-				foreach (BattleCharacter character in EnemyBattleParty)
-				{
-					character.ACT = Mathf.Lerp(startACT[listIndex], finalACT[listIndex], waitCompletion);
-					listIndex++;
-				}
-				foreach (BattleCharacter character in PlayerBattleParty)
+				foreach (BattleCharacter character in AllCombatants)
 				{
 					character.ACT = Mathf.Lerp(startACT[listIndex], finalACT[listIndex], waitCompletion);
 					listIndex++;
@@ -38,47 +36,48 @@ namespace MARDEK.Battle
 				timer += Time.deltaTime;
 			}
 		}
+
+		// Dead characters stay in their party lists but never get another turn. Returns a
+		// null nextActor when no one is left alive (the battle is concluding).
 		public static void GetTimeToNextTurn(out float timeToTurn, out BattleCharacter nextActor)
 		{
-			List<float> timeToTurnList = new List<float>();
-			List<BattleCharacter> characterList = new List<BattleCharacter>();
-			foreach (BattleCharacter character in EnemyBattleParty)
+			timeToTurn = float.MaxValue;
+			nextActor = null;
+			foreach (BattleCharacter character in AllCombatants)
 			{
+				if (character.IsDead)
+					continue;
 				float characterTimeToTurn = TimeToTurn(character, 1);
-				timeToTurnList.Add(characterTimeToTurn);
-				characterList.Add(character);
+				if (characterTimeToTurn < timeToTurn)
+				{
+					timeToTurn = characterTimeToTurn;
+					nextActor = character;
+				}
 			}
-			foreach (BattleCharacter character in PlayerBattleParty)
-			{
-				float characterTimeToTurn = TimeToTurn(character, 1);
-				timeToTurnList.Add(characterTimeToTurn);
-				characterList.Add(character);
-			}
-			timeToTurn = timeToTurnList.Min();
-			int minIndex = timeToTurnList.IndexOf(timeToTurn);
-			nextActor = characterList[minIndex];
+			if (nextActor == null)
+				timeToTurn = 0;
 		}
+
 		public static void GetCharacterACTNextTurn(float timeToTurn, out List<float> startACT, out List<float> finalACT)
 		{
 			startACT = new List<float>();
 			finalACT = new List<float>();
-			foreach (BattleCharacter character in EnemyBattleParty)
+			foreach (BattleCharacter character in AllCombatants)
 			{
 				startACT.Add(character.ACT);
 
-				float actRate = character.ActBuildRate();
-				float characterACT = character.ACT + actRate * timeToTurn / MaxTimeBetweenTurns;
-				finalACT.Add(characterACT);
-			}
-			foreach (BattleCharacter character in PlayerBattleParty)
-			{
-				startACT.Add(character.ACT);
+				// Dead characters keep their ACT frozen instead of building toward a turn
+				if (character.IsDead)
+				{
+					finalACT.Add(character.ACT);
+					continue;
+				}
 
 				float actRate = character.ActBuildRate();
-				float characterACT = character.ACT + actRate * timeToTurn / MaxTimeBetweenTurns;
-				finalACT.Add(characterACT);
+				finalACT.Add(character.ACT + actRate * timeToTurn / MaxTimeBetweenTurns);
 			}
 		}
+
 		public static float TimeToTurn(BattleCharacter character, float speedMultiplier)
 		{
 			float actRate = character.ActBuildRate();

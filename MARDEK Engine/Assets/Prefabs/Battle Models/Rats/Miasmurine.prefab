@@ -5637,6 +5637,7 @@ GameObject:
   - component: {fileID: 979944342599019653}
   - component: {fileID: 1149794528483951095}
   - component: {fileID: 308869589324411901}
+  - component: {fileID: 6159259446923733744}
   m_Layer: 0
   m_Name: Miasmurine
   m_TagString: Untagged
@@ -5713,6 +5714,31 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &6159259446923733744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7763334616494945883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d788f93d6be4d24da281507d0a332a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MARDEK::MARDEK.Battle.EnemyBattleCharacter
+  battleModel: {fileID: 1149794528483951095}
+  StatusBuildup:
+    poison: 0
+    sleep: 0
+    paralysis: 0
+    blindness: 0
+    silence: 0
+    numbness: 0
+    curse: 0
+    confusion: 0
+    bleed: 0
+    zombification: 0
+  stunned: 0
 --- !u!1 &7846622617128209928
 GameObject:
   m_ObjectHideFlags: 0

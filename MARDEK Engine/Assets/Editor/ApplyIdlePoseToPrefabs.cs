@@ -49,7 +49,7 @@ public static class ApplyIdlePoseToPrefabs
           GameObject root = PrefabUtility.LoadPrefabContents(path);
           try
           {
-               var model = root.GetComponentInChildren<BattleModelComponent>();
+               var model = root.GetComponentInChildren<BattleModelAnimator>();
                if (model == null)
                     return Result.Skipped;
 

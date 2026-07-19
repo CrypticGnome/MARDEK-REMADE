@@ -7,7 +7,7 @@ namespace MARDEK.Battle
 	[Serializable]
 	public abstract class ActionEffects
 	{
-		public abstract void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element);
+		public abstract void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element, float efficacyMultiplier, ReactionModifiers reactionModifiers);
 
 		protected int CalculateDamageStandard(float finalAttack, float defense, float powerStat, int level, float varianceDecimal)
 		{
@@ -29,6 +29,18 @@ namespace MARDEK.Battle
 		{
 			int elementalAbsorbtion = character.Absorbtions.GetAbsorbtion(element.ElementID);
 			return 1 - (float)elementalAbsorbtion / 100;
+		}
+
+		// accuracyMultiplier lets a skill/attack be innately less reliable than the user's
+		// base Accuracy (e.g. DealMeleeDamageStandard's AccuracyRating). Blindness halves
+		// the user's effective Accuracy on top of that.
+		protected bool RollHit(BattleCharacter user, float accuracyMultiplier = 1f)
+		{
+			float accuracy = user.Accuracy;
+			if (user.StatusBuildup.Blindness > 0)
+				accuracy *= 0.5f;
+			float hitChance = Mathf.Clamp01(accuracy / 100f * accuracyMultiplier);
+			return UnityEngine.Random.value <= hitChance;
 		}
 
 		protected float LevelDamageMultiplier(int level)
@@ -63,7 +75,7 @@ namespace MARDEK.Battle
 	{
 		public float motionValue;
 		public float AccuracyRating = 1;
-		public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element)
+		public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element, float efficacyMultiplier, ReactionModifiers reactionModifiers)
 		{
 			if (element is null)
 			{
@@ -71,9 +83,7 @@ namespace MARDEK.Battle
 				return;
 			}
 
-			// Should implement evasion
-			bool attackMissed = UnityEngine.Random.Range(0, 1) > AccuracyRating;
-			if (attackMissed)
+			if (!RollHit(user, AccuracyRating * reactionModifiers.AccuracyMultiplier))
 			{
 				Debug.Log($"{user.Profile.displayName} misses {target.Profile.displayName}");
 				return;
@@ -87,12 +97,11 @@ namespace MARDEK.Battle
 				 powerStat: user.Strength,
 				 level: user.Level,
 				 varianceDecimal: 0.1f);
+			damage = (int)(damage * efficacyMultiplier * user.PhysicalDamageMultiplier * reactionModifiers.DamageMultiplier
+				* reactionModifiers.GetElementalDamageMultiplier(element.ElementID));
+			damage = Mathf.Max(0, damage - Mathf.RoundToInt(reactionModifiers.FlatDamageReduction));
 
-			target.CurrentHP -= damage;
-			target.CurrentHP = Mathf.Clamp(target.CurrentHP, 0, target.MaxHP);
-
-			target.battleModel.DamageDisplay.DisplayHPChange(-damage);
-			target.battleModel.PlayAnimation(BattleAnimationType.Hurt);
+			target.TakeDamage(damage);
 			Debug.Log($"{user.Profile.displayName} targets {target.Profile.displayName} for {damage} damage");
 		}
 	}
@@ -100,7 +109,7 @@ namespace MARDEK.Battle
 	public class DealMagicDamageStandard : ActionEffects
 	{
 		public float motionValue;
-		public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element)
+		public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element, float efficacyMultiplier, ReactionModifiers reactionModifiers)
 		{
 			float elementalVulnerability = GetElementalVulnerabilty(target, element);
 
@@ -109,6 +118,16 @@ namespace MARDEK.Battle
 				Debug.LogAssertion("Element cannot be null in a damage effect");
 				return;
 			}
+
+			// Magic normally always hits - Blindness (or an active accuracy/evasion
+			// reaction, e.g. a defender's Evasion bonus) is what introduces a miss chance.
+			bool shouldRollMiss = user.StatusBuildup.Blindness > 0 || reactionModifiers.AccuracyMultiplier != 1f;
+			if (shouldRollMiss && !RollHit(user, reactionModifiers.AccuracyMultiplier))
+			{
+				Debug.Log($"{user.Profile.displayName} misses {target.Profile.displayName}");
+				return;
+			}
+
 			float finalAttack = user.Attack * motionValue * elementalVulnerability;
 
 			int damage = CalculateDamageStandard(
@@ -117,11 +136,11 @@ namespace MARDEK.Battle
 				 powerStat: user.Spirit,
 				 level: user.Level,
 				 varianceDecimal: 0.1f);
+			damage = (int)(damage * efficacyMultiplier * user.MagicDamageMultiplier * reactionModifiers.DamageMultiplier
+				* reactionModifiers.GetElementalDamageMultiplier(element.ElementID));
+			damage = Mathf.Max(0, damage - Mathf.RoundToInt(reactionModifiers.FlatDamageReduction));
 
-			target.CurrentHP -= damage;
-			target.CurrentHP = Mathf.Clamp(target.CurrentHP, 0, target.MaxHP);
-			target.battleModel.DamageDisplay.DisplayHPChange(-damage);
-			target.battleModel.PlayAnimation(BattleAnimationType.Hurt);
+			target.TakeDamage(damage);
 
 			Debug.Log($"{user.Profile.displayName} targets {target.Profile.displayName} for {damage} damage");
 		}
@@ -130,14 +149,16 @@ namespace MARDEK.Battle
 	public class DefaultHeal : ActionEffects
 	{
 		public float numeratorMotionValue, denominatorMotionValue;
-		public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element)
+		public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element, float efficacyMultiplier, ReactionModifiers reactionModifiers)
 		{
 			float elementalVulnerability = GetElementalVulnerabilty(target, element);
 
 			int heal = (int)((numeratorMotionValue + target.MagicDefense) * user.Spirit * user.Level / denominatorMotionValue);
 
-			if (target.Profile.Type == CharacterSystem.CharacterType.Undead)
+			if (target.Profile.Type == CharacterSystem.CharacterType.Undead || target.StatusBuildup.Zombification > 0)
 				heal *= -1;
+
+			heal = (int)(heal * efficacyMultiplier);
 
 			target.CurrentHP = Mathf.Clamp(target.CurrentHP + heal, 0, target.MaxHP);
 			target.battleModel.DamageDisplay.DisplayHPChange(heal);
@@ -147,9 +168,9 @@ namespace MARDEK.Battle
 	public class ManaHeal : ActionEffects
 	{
 		public float MotionValue;
-		public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element)
+		public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element, float efficacyMultiplier, ReactionModifiers reactionModifiers)
 		{
-			int manaHeal = (int)MotionValue;
+			int manaHeal = (int)(MotionValue * efficacyMultiplier);
 			target.CurrentMP += manaHeal;
 			target.battleModel.DamageDisplay.DisplayMPChange(manaHeal);
 
@@ -158,9 +179,9 @@ namespace MARDEK.Battle
 	public class ConstHeal : ActionEffects
 	{
 		public float MotionValue;
-		public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element)
+		public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element, float efficacyMultiplier, ReactionModifiers reactionModifiers)
 		{
-			int heal = (int)MotionValue;
+			int heal = (int)(MotionValue * efficacyMultiplier);
 			target.CurrentHP += heal;
 			target.battleModel.DamageDisplay.DisplayHPChange(heal);
 		}
@@ -169,11 +190,18 @@ namespace MARDEK.Battle
 	{
 		public int MotionValue;
 		public StatusEffect StatusEffect;
-		public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element)
+		public override void ApplyEffect(BattleCharacter user, BattleCharacter target, Element element, float efficacyMultiplier, ReactionModifiers reactionModifiers)
 		{
+			if (reactionModifiers.ResistedStatuses.Contains(StatusEffect))
+			{
+				Debug.Log($"{target.Profile.displayName} resists {StatusEffect}");
+				return;
+			}
+
 			int resistance = target.Resistances.Get(StatusEffect);
 			int currentBuildUp = target.StatusBuildup.Get(StatusEffect);
-			target.StatusBuildup.Set(StatusEffect, currentBuildUp + MotionValue);
+			int buildupAmount = (int)(MotionValue * efficacyMultiplier);
+			target.StatusBuildup.Set(StatusEffect, currentBuildUp + buildupAmount);
 
 		}
 	}

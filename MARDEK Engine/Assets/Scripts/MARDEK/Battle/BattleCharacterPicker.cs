@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MARDEK.Battle;
 using MARDEK.Core;
+using MARDEK.Skill;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,8 +18,12 @@ namespace MARDEK.UI
 		[SerializeField] GameObject turnDisplay;
 		[SerializeField] ActionDisplay actionDisplay;
 		PlayerControls playerControls;
-		static List<BattleCharacter> Heroes => BattleManager.PlayerBattleParty;
-		static List<BattleCharacter> Enemies => BattleManager.EnemyBattleParty;
+		static IReadOnlyList<BattleCharacter> Heroes => BattleManager.PlayerBattleParty;
+		// Dead enemies stay in EnemyBattleParty with their model hidden, so exclude them
+		// from target selection. Downed heroes stay individually selectable (e.g. for future
+		// revival), but are excluded from "heal all" - there's no resurrection mechanic yet.
+		static IReadOnlyList<BattleCharacter> Enemies => BattleManager.EnemyBattleParty.Where(enemy => !enemy.IsDead).ToList();
+		static IReadOnlyList<BattleCharacter> HealableHeroes => Heroes.Where(hero => !hero.IsDead).ToList();
 
 		/// <summary>
 		/// Used to ensure that the action isn't invoked on a target on the same frame as an action is picked, as they both use the "interact" key
@@ -26,8 +31,15 @@ namespace MARDEK.UI
 		float enabledTime;
 		static int PositionIndex;
 		public static bool EnemiesSelected;
+		// Whether the armed action is currently targeting everyone on the selected side
+		// rather than just SelectedCharacter.
+		public static bool TargetingAll { get; private set; }
 		public static BattleCharacter SelectedCharacter { get; private set; }
 		IBattleAction action;
+
+		// Pooled clones of crystalPointerRenderer, one per eligible target, shown instead of
+		// the single pointer while TargetingAll is active.
+		readonly List<SpriteRenderer> allTargetPointers = new();
 
 		int frameTimer;
 		const int WaitForFramesToInitialise = 1;
@@ -78,40 +90,78 @@ namespace MARDEK.UI
 			if (!enabled)
 				return;
 
+			// AllOnly actions have nothing to navigate - the pointer stays locked over every
+			// eligible target on the side TargetsAllies already fixed.
+			if (action.Action.TargetScope == TargetScope.AllOnly)
+				return;
+
 			var value = context.ReadValue<Vector2>();
 			if (value.Equals(Vector2.zero)) return;
+
+			bool supportsAllToggle = action.Action.TargetScope == TargetScope.SingleOrAll;
 
 			// Handle horizontal input
 			if (value.x == -1 && !EnemiesSelected)
 			{
 				EnemiesSelected = true;
+				TargetingAll = false;
 				PositionIndex = ClampEnemiesIndex(PositionIndex);
 			}
 			else if (value.x == 1 && EnemiesSelected)
 			{
 				EnemiesSelected = false;
+				TargetingAll = false;
 				PositionIndex = ClampHeroesIndex(PositionIndex);
 			}
+			// Pressing further into the side already being viewed toggles targeting everyone
+			// on it instead of doing nothing - only offered when there's more than one
+			// eligible target, so it's never a no-op stand-in for single-select.
+			else if (value.x == -1 && EnemiesSelected && supportsAllToggle && Enemies.Count > 1)
+				TargetingAll = !TargetingAll;
+			else if (value.x == 1 && !EnemiesSelected && supportsAllToggle && HealableHeroes.Count > 1)
+				TargetingAll = !TargetingAll;
 
-			// Handle verticle input (ordered from top to bottom)
-			int previousIndex = PositionIndex;
+			// Handle verticle input (ordered from top to bottom) - moving the cursor always
+			// means picking someone specific, so it cancels targeting-all.
 			if (value.y == -1)
+			{
+				TargetingAll = false;
 				PositionIndex = EnemiesSelected ? ClampEnemiesIndex(PositionIndex + 1) : ClampHeroesIndex(PositionIndex + 1);
+			}
 			else if (value.y == 1)
+			{
+				TargetingAll = false;
 				PositionIndex = EnemiesSelected ? ClampEnemiesIndex(PositionIndex - 1) : ClampHeroesIndex(PositionIndex - 1);
-
+			}
 
 			SelectedCharacter = EnemiesSelected ?
 				 Enemies.OrderByDescending(e => e.battleModel.transform.position.y).ElementAt(PositionIndex) :
 				 Heroes.OrderByDescending(e => e.battleModel.transform.position.y).ElementAt(PositionIndex);
-
 
 			SetPosition();
 		}
 		public void InvokeActionOnTarget()
 		{
 			if (Time.time == enabledTime) return;
-			BattleManager.PerformActionToTarget(action, SelectedCharacter);
+
+			// Only ActionSkills get an offense reaction window (items are excluded), only the
+			// acting hero's own offensive reaction skills are eligible, and only the list
+			// matching whether this action deals physical or magic damage (neither for a
+			// heal/buff/status-only action, which gets no reaction window at all).
+			IReadOnlyList<OffensiveReactionSkill> offensiveSkills = null;
+			if (action is ActionSkill && BattleManager.characterActing is HeroBattleCharacter actingHero && actingHero.Character != null)
+			{
+				if (action.Action.IsPhysicalAttack)
+					offensiveSkills = actingHero.Character.PhysicalAttackReactions;
+				else if (action.Action.IsMagicAttack)
+					offensiveSkills = actingHero.Character.MagicAttackReactions;
+			}
+
+			if (TargetingAll)
+				BattleManager.PerformActionToTarget(action, EnemiesSelected ? Enemies : HealableHeroes, offensiveSkills);
+			else
+				BattleManager.PerformActionToTarget(action, SelectedCharacter, offensiveSkills);
+
 			actionDisplay.DisplayAction(action);
 			gameObject.SetActive(false);
 
@@ -124,8 +174,10 @@ namespace MARDEK.UI
 
 			gameObject.SetActive(true);
 			this.action = action;
-			EnemiesSelected = true;
-			SelectedCharacter = Enemies[0];
+			TargetingAll = action.Action.TargetScope == TargetScope.AllOnly;
+			// Heals/buffs default to the caster's own team; everything else defaults to the enemy team.
+			EnemiesSelected = !action.Action.TargetsAllies;
+			SelectedCharacter = EnemiesSelected ? Enemies[0] : Heroes[0];
 			SetPosition();
 			turnDisplay.SetActive(false);
 		}
@@ -134,10 +186,34 @@ namespace MARDEK.UI
 		int ClampEnemiesIndex(int index) => Mathf.Clamp(index, 0, Enemies.Count - 1);
 		void SetPosition()
 		{
-			BattleModelComponent target = SelectedCharacter.battleModel;
+			crystalPointerRenderer.gameObject.SetActive(!TargetingAll);
+
+			if (TargetingAll)
+			{
+				ShowAllTargetPointers(EnemiesSelected ? Enemies : HealableHeroes);
+				return;
+			}
+
+			foreach (SpriteRenderer pointer in allTargetPointers)
+				pointer.gameObject.SetActive(false);
+
+			BattleModelAnimator target = SelectedCharacter.battleModel;
 			transform.Set2DPosition(target.CrystalPointerGoToPosition.position);
 			transform.localScale = EnemiesSelected ? new Vector3(-0.1f, 0.1f, 1f) : new Vector3(0.1f, 0.1f, 1f);
+		}
 
+		void ShowAllTargetPointers(IReadOnlyList<BattleCharacter> targets)
+		{
+			while (allTargetPointers.Count < targets.Count)
+				allTargetPointers.Add(Instantiate(crystalPointerRenderer, pointersPoint));
+
+			for (int i = 0; i < allTargetPointers.Count; i++)
+			{
+				bool active = i < targets.Count;
+				allTargetPointers[i].gameObject.SetActive(active);
+				if (active)
+					allTargetPointers[i].transform.position = targets[i].battleModel.CrystalPointerGoToPosition.position;
+			}
 		}
 	}
 }

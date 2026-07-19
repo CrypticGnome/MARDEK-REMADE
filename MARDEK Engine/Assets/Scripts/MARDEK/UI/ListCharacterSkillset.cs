@@ -44,6 +44,15 @@ namespace MARDEK.UI
 			if (!thisSelectable.Selected) return;
 			ClearSlots();
 			GetSkillset();
+
+			// Cursed characters can't use skills from their skillset - leave the list empty.
+			// Basic Attack and items are separate UI paths and stay available.
+			if (BattleManager.characterActing.StatusBuildup.Curse > 0)
+			{
+				UpdateLayout();
+				return;
+			}
+
 			if (!skillsetToShow)
 			{
 				Debug.LogWarning("No skillset to show");
@@ -52,6 +61,12 @@ namespace MARDEK.UI
 
 			foreach (var skill in skillsetToShow.Skills)
 			{
+				if (skill is null)
+				{
+					Debug.LogWarning($"{skillsetToShow.name} has an unassigned skill slot", skillsetToShow);
+					continue;
+				}
+
 				BattleActionSlot slot = new BattleActionSlot(skill);
 
 				SetNextSlot(slot);

@@ -3,24 +3,20 @@ using UnityEngine;
 namespace MARDEK.CharacterSystem
 {
 	using System;
-	using Inventory;
-	using Stats;
+	using MARDEK.Inventory;
+	using MARDEK.Stats;
 
 	[CreateAssetMenu(menuName = "MARDEK/Character/Character")]
-	public class Character : ScriptableObject, IActionStats
+	public class Character : ScriptableObject
 	{
 		[SerializeField] public bool isRequired;
 		[field: SerializeField] public CharacterProfile Profile { get; private set; }
 		[field: SerializeField] public EquippedItems ItemsEquipped { get; private set; }
-		[field: SerializeField] public Inventory Inventory { get; private set; }
+		[field: SerializeField] public Inventory Inventory { get; private set; } = new Inventory();
 		public CoreStats BaseStats { get { return Profile.Stats; } }
 		[field: SerializeField] public ActionSkillset ActionSkillset { get; private set; }
 		public delegate void StatChanged();
 		public event StatChanged OnStatChanged;
-		public Character()
-		{
-			Inventory = new Inventory();
-		}
 
 		[SerializeField] int attack;
 		public int Attack
@@ -54,10 +50,6 @@ namespace MARDEK.CharacterSystem
 				}
 				return defense;
 			}
-			set
-			{
-				throw new NotImplementedException();
-			}
 		}
 		[SerializeField] int magicDefense;
 		public int MagicDefense
@@ -73,10 +65,6 @@ namespace MARDEK.CharacterSystem
 					magicDefense += item.Stats.MagicDefense;
 				}
 				return magicDefense;
-			}
-			set
-			{
-				throw new NotImplementedException();
 			}
 		}
 		[SerializeField] int _currentHP;
@@ -116,25 +104,33 @@ namespace MARDEK.CharacterSystem
 		public int MaxMP { get { return BaseStats.GetMaxMP(this); } }
 
 
-		public Absorbtions Absorbtions { get => BaseStats.Absorbtions; set => throw new NotImplementedException(); }
-		public StatusEffects Resistances { get => BaseStats.Resistances; set => throw new NotImplementedException(); }
-		public int Agility { get => BaseStats.Agility; set => throw new NotImplementedException(); }
-		public float ACT { get; set; }
-		public int Accuracy { get => BaseStats.Accuracy; set => throw new NotImplementedException(); }
-		public int CritRate { get => BaseStats.CritRate; set => throw new NotImplementedException(); }
-		public int Strength { get => BaseStats.Strength; set => throw new NotImplementedException(); }
-		public int Vitality { get => BaseStats.Vitality; set => throw new NotImplementedException(); }
-		public int Spirit { get => BaseStats.Spirit; set => throw new NotImplementedException(); }
+		public Absorbtions Absorbtions => BaseStats.Absorbtions;
+		public StatusEffects Resistances => BaseStats.Resistances;
+		public int Agility => BaseStats.Agility;
+		public int Accuracy => BaseStats.Accuracy;
+		public int CritRate => BaseStats.CritRate;
+		public int Strength => BaseStats.Strength;
+		public int Vitality => BaseStats.Vitality;
+		public int Spirit => BaseStats.Spirit;
 		public StatusEffects StatusBuildup;
 		public int Level;
 		public int Experience;
-		public Character Clone(int level)
+		// Virtual so CharacterUnplayable can return a clone that's still a
+		// CharacterUnplayable, carrying over its own fields (Drops, ExperienceReward) -
+		// otherwise EncounterSet.InstantiateEncounter's clone would silently downgrade to a
+		// plain Character and lose them.
+		public virtual Character Clone(int level)
 		{
 			var clone = CreateInstance<Character>();
+			CopyBaseFieldsTo(clone, level);
+			return clone;
+		}
+
+		protected void CopyBaseFieldsTo(Character clone, int level)
+		{
 			clone.Profile = Profile;
 			clone.Level = level;
 			clone.ActionSkillset = Profile.LearnableSkillset;
-			return clone;
 		}
 		public void TickStatusEffects()
 		{

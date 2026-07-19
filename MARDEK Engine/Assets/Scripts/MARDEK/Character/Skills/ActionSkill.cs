@@ -1,14 +1,15 @@
+using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using MARDEK.Battle;
 
 namespace MARDEK.Skill
 {
-	using MARDEK.Battle;
-
 	public abstract class ActionSkill : Skill, IBattleAction
 	{
 		[field: SerializeField] public int Cost { get; private set; }
 		[SerializeField] BattleAction action;
-		public BattleAction Action { get { return action; } }
+		public BattleAction Action => action;
 
 		public Sprite ActionIcon => Action.Element.thickSprite;
 
@@ -19,11 +20,24 @@ namespace MARDEK.Skill
 			action.ActionType = ActionType;
 		}
 
-		public bool TryPerformAction(BattleCharacter user, BattleCharacter target)
+		// Hitting every target on a side costs double and halves each target's efficacy -
+		// determined purely by target count, so a SingleOrAll/AllOnly action that only has
+		// one eligible target left is charged the normal single-target price.
+		public bool TryPerformAction(BattleCharacter user, IReadOnlyList<BattleCharacter> targets, ReactionModifiers reactionModifiers)
 		{
-			if (user.CurrentMP < Cost) return false;
-			action.Apply(user, target);
-			user.CurrentMP -= Cost;
+			bool targetingAll = targets.Count > 1;
+			int cost = targetingAll ? Cost * 2 : Cost;
+			if (user.CurrentMP < cost) return false;
+
+			action.Apply(user, targets, targetingAll ? 0.5f : 1f, reactionModifiers);
+			user.CurrentMP -= cost;
+
+			// Only grants the flat skill-use amount if nothing died - a kill instead grants
+			// the max of this same amount and the kill reward (see GrantKillExperience), so
+			// granting both here would double-count it.
+			if (user is HeroBattleCharacter hero && !targets.Any(target => target.IsDead))
+				hero.GrantSkillUseExperience();
+
 			return true;
 		}
 	}

@@ -1,13 +1,13 @@
 using MARDEK.Battle;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace MARDEK.UI
 {
 	public class ExperienceBar : MonoBehaviour
 	{
 		[SerializeField] RectTransform barTransform;
-		[SerializeField] Text statText;
+		[SerializeField] TextMeshProUGUI statText;
 		HeroBattleCharacter character;
 
 		public void SetCharacter(HeroBattleCharacter character)
@@ -31,7 +31,7 @@ namespace MARDEK.UI
 				return;
 
 			var statValue = (float)character.Experience;
-			var maxStatValue = 100;
+			var maxStatValue = (float)character.MaxExperience;
 			if (statText)
 				statText.text = "Lv " + character.Level.ToString();
 			if (barTransform)
