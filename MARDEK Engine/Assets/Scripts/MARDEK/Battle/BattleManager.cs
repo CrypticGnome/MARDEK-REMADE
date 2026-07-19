@@ -5,6 +5,7 @@ using MARDEK.Audio;
 using MARDEK.CharacterSystem;
 using MARDEK.Inventory;
 using MARDEK.Save;
+using MARDEK.Skill;
 using UnityEngine;
 using MARDEK.UI;
 using MARDEK.Progress;
@@ -24,6 +25,15 @@ namespace MARDEK.Battle
 		[SerializeField] AudioClip victoryFanfareStandard;
 		[SerializeField] AudioClip victoryFanfareGrand;
 		[SerializeField] AudioClip gameOverJingle;
+		[SerializeField] ReactionBar reactionBar;
+		// Placeholder timing until real skill data drives these per-reaction.
+		static readonly ReactionBar.ReactionParams DefaultReactionParams = new ReactionBar.ReactionParams
+		{
+			RelativeWidth = 0.1f,
+			TimeToCross = 1.5f,
+			ReactionRelativePosition = 0.5f,
+			DelaySeconds = 0.3f,
+		};
 		// Fixed points a "targeting all" breath moves to instead of a specific target's hit
 		// point - the centre of whichever side is being hit, not the caster's own side.
 		[SerializeField] Transform enemyFormationCenter;
@@ -192,10 +202,19 @@ namespace MARDEK.Battle
 			instance.stateMachine.TrySetState(BattleState.ChoosingAction);
 		}
 
-		public static void PerformActionToTarget(IBattleAction action, BattleCharacter target) =>
-			PerformActionToTarget(action, new List<BattleCharacter> { target });
+		// offensiveSkills/defensiveSkills are mutually exclusive in practice - the caller
+		// already knows who's attacking and who's being targeted, so it gathers whichever
+		// side's reaction skills are eligible (or leaves both null, e.g. for items) before
+		// calling this. Only one reaction window (if any) plays per action. IReadOnlyList
+		// (not List) so a concrete List<PhysicalAttackReactionSkill> etc. from
+		// CharacterPlayable can be passed in directly - List<T> is invariant in C#, but
+		// IReadOnlyList<T> is covariant.
+		public static void PerformActionToTarget(IBattleAction action, BattleCharacter target,
+			IReadOnlyList<OffensiveReactionSkill> offensiveSkills = null, IReadOnlyList<DefensiveReactionSkill> defensiveSkills = null) =>
+			PerformActionToTarget(action, new List<BattleCharacter> { target }, offensiveSkills, defensiveSkills);
 
-		public static void PerformActionToTarget(IBattleAction action, IReadOnlyList<BattleCharacter> targets)
+		public static void PerformActionToTarget(IBattleAction action, IReadOnlyList<BattleCharacter> targets,
+			IReadOnlyList<OffensiveReactionSkill> offensiveSkills = null, IReadOnlyList<DefensiveReactionSkill> defensiveSkills = null)
 		{
 			if (action is null)
 			{
@@ -210,9 +229,28 @@ namespace MARDEK.Battle
 
 			IEnumerator ResolveAction()
 			{
-				yield return attacker.PerformAction(action, targets);
+				ReactionModifiers reactionModifiers = new ReactionModifiers();
+
+				if (offensiveSkills != null && offensiveSkills.Count > 0)
+					yield return PlayReactionAndApply(offensiveSkills, reactionModifiers);
+				else if (defensiveSkills != null && defensiveSkills.Count > 0)
+					yield return PlayReactionAndApply(defensiveSkills, reactionModifiers);
+
+				yield return attacker.PerformAction(action, targets, reactionModifiers);
 				instance.EndTurn();
 			}
+		}
+
+		// Plays the reaction bar once; on success, every eligible skill applies its effect to
+		// the shared modifiers - there's no selection UI yet, so a hero with several matching
+		// reaction skills has all of them fire together.
+		static IEnumerator PlayReactionAndApply<T>(IReadOnlyList<T> skills, ReactionModifiers reactionModifiers) where T : ReactionSkill
+		{
+			bool success = false;
+			yield return instance.reactionBar.PlayReaction(DefaultReactionParams, result => success = result);
+			if (success)
+				foreach (T skill in skills)
+					skill.Apply(reactionModifiers);
 		}
 
 		// Dying from this turn's own action is handled inline by BattleCharacter.PerformAction

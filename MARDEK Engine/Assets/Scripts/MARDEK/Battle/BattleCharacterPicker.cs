@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MARDEK.Battle;
 using MARDEK.Core;
+using MARDEK.Skill;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -143,10 +144,23 @@ namespace MARDEK.UI
 		{
 			if (Time.time == enabledTime) return;
 
+			// Only ActionSkills get an offense reaction window (items are excluded), only the
+			// acting hero's own offensive reaction skills are eligible, and only the list
+			// matching whether this action deals physical or magic damage (neither for a
+			// heal/buff/status-only action, which gets no reaction window at all).
+			IReadOnlyList<OffensiveReactionSkill> offensiveSkills = null;
+			if (action is ActionSkill && BattleManager.characterActing is HeroBattleCharacter actingHero && actingHero.Character != null)
+			{
+				if (action.Action.IsPhysicalAttack)
+					offensiveSkills = actingHero.Character.PhysicalAttackReactions;
+				else if (action.Action.IsMagicAttack)
+					offensiveSkills = actingHero.Character.MagicAttackReactions;
+			}
+
 			if (TargetingAll)
-				BattleManager.PerformActionToTarget(action, EnemiesSelected ? Enemies : HealableHeroes);
+				BattleManager.PerformActionToTarget(action, EnemiesSelected ? Enemies : HealableHeroes, offensiveSkills);
 			else
-				BattleManager.PerformActionToTarget(action, SelectedCharacter);
+				BattleManager.PerformActionToTarget(action, SelectedCharacter, offensiveSkills);
 
 			actionDisplay.DisplayAction(action);
 			gameObject.SetActive(false);

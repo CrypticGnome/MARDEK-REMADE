@@ -18,8 +18,8 @@ namespace MARDEK.Battle
 		const float LevelGapExponentBase = 1.1f;
 
 		// The persistent CharacterPlayable this was spawned from - holds data that's
-		// specific to being a hero (ReactionSkillset, PassiveSkillset) rather than something
-		// every BattleCharacter needs.
+		// specific to being a hero (OffensiveReactions/DefensiveReactions, PassiveSkillset)
+		// rather than something every BattleCharacter needs.
 		public CharacterPlayable Character { get; private set; }
 
 		// Fired with the raw amount just added, regardless of whether that same grant also

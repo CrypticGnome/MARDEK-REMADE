@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e926f53c4efbed945ad3f5f9fd8e0d5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b59e0c2031d0ad4e9bd972e9d389b2b, type: 3}
   m_Name: The Dragon
   m_EditorClassIdentifier: 
   isRequired: 0
@@ -24,8 +24,6 @@ MonoBehaviour:
   <Inventory>k__BackingField:
     slots: []
   <ActionSkillset>k__BackingField: {fileID: 11400000, guid: bdb91fdccc4422743ae6542c3e4eece4, type: 2}
-  <ReactionSkillset>k__BackingField: {fileID: 0}
-  <PassiveSkillset>k__BackingField: {fileID: 0}
   attack: 0
   defense: 0
   magicDefense: 0
@@ -33,3 +31,4 @@ MonoBehaviour:
   _currentMP: 0
   Level: 0
   Experience: 0
+  Drops: []

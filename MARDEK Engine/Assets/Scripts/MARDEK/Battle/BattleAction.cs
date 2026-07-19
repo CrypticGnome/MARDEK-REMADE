@@ -24,14 +24,25 @@ namespace MARDEK.Battle
 		public bool TargetsAllies => Array.Exists(actionEffects, effect =>
 			effect is DefaultHeal or ManaHeal or ConstHeal);
 
+		// Used by BattleCharacterPicker/EnemyBattleCharacter to decide which pair of
+		// reaction lists (physical vs magic) are eligible for this action. Neither is true
+		// for actions with no damage effect (heals, buffs, status-only) - those don't get a
+		// reaction window at all.
+		public bool IsPhysicalAttack => Array.Exists(actionEffects, effect => effect is DealMeleeDamageStandard);
+		public bool IsMagicAttack => Array.Exists(actionEffects, effect => effect is DealMagicDamageStandard);
+
 		// efficacyMultiplier scales every effect applied to every target - used to halve
 		// per-target output when a SingleOrAll/AllOnly action is used against everyone on a
-		// side instead of a single target. Sound plays once regardless of target count.
-		public void Apply(BattleCharacter user, IReadOnlyList<BattleCharacter> targets, float efficacyMultiplier = 1f)
+		// side instead of a single target. reactionModifiers carries whatever a successful
+		// reaction-bar hit contributed (see ReactionModifiers) - defaults to a fresh, neutral
+		// instance so callers that don't care about reactions (e.g. items) don't need one.
+		// Sound plays once regardless of target count.
+		public void Apply(BattleCharacter user, IReadOnlyList<BattleCharacter> targets, float efficacyMultiplier = 1f, ReactionModifiers reactionModifiers = null)
 		{
+			reactionModifiers ??= new ReactionModifiers();
 			foreach (BattleCharacter target in targets)
 				for (int index = 0; index < actionEffects.Length; index++)
-					actionEffects[index].ApplyEffect(user, target, element, efficacyMultiplier);
+					actionEffects[index].ApplyEffect(user, target, element, efficacyMultiplier, reactionModifiers);
 			AudioManager.PlayEffectString(soundEffects);
 		}
 	}

@@ -103,7 +103,20 @@ namespace MARDEK.Battle
 			}
 
 			Debug.Log($"{Name} uses {NextAction.DisplayName}");
-			BattleManager.PerformActionToTarget(NextAction, target);
+
+			// Only the targeted hero's own defensive reaction skills are eligible (enemies
+			// don't get a reaction window of their own), and only the list matching whether
+			// the incoming attack is physical or magic (neither for a non-damaging action).
+			IReadOnlyList<DefensiveReactionSkill> defensiveSkills = null;
+			if (target is HeroBattleCharacter targetedHero && targetedHero.Character != null)
+			{
+				if (NextAction.Action.IsPhysicalAttack)
+					defensiveSkills = targetedHero.Character.PhysicalDefenseReactions;
+				else if (NextAction.Action.IsMagicAttack)
+					defensiveSkills = targetedHero.Character.MagicDefenseReactions;
+			}
+
+			BattleManager.PerformActionToTarget(NextAction, target, null, defensiveSkills);
 			BattleManager.DisplayAction(NextAction);
 
 			// Immediately queue up this enemy's following attack so one is always ready to show ahead of time.

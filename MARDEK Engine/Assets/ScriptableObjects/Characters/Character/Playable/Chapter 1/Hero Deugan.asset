@@ -392,5 +392,8 @@ MonoBehaviour:
     zombification: 0
   Level: 50
   Experience: 0
-  <ReactionSkillset>k__BackingField: {fileID: 0}
+  <PhysicalAttackReactions>k__BackingField: []
+  <MagicAttackReactions>k__BackingField: []
+  <PhysicalDefenseReactions>k__BackingField: []
+  <MagicDefenseReactions>k__BackingField: []
   <PassiveSkillset>k__BackingField: {fileID: 0}

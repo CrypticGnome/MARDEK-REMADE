@@ -124,13 +124,13 @@ namespace MARDEK.Battle
 		// whichever finishes later - the attacker's action animation or the targets' death
 		// animations. Death routines run on the targets themselves, which is safe because
 		// Die() only hides the visuals child - the target's own GameObject stays active.
-		public IEnumerator PerformAction(IBattleAction action, IReadOnlyList<BattleCharacter> targets)
+		public IEnumerator PerformAction(IBattleAction action, IReadOnlyList<BattleCharacter> targets, ReactionModifiers reactionModifiers)
 		{
 			List<Coroutine> deathRoutines = new();
 
 			void ApplyAction()
 			{
-				action.TryPerformAction(this, targets);
+				action.TryPerformAction(this, targets, reactionModifiers);
 				foreach (BattleCharacter target in targets)
 				{
 					if (!target.IsDead) continue;
